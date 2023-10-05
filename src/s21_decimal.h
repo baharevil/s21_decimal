@@ -63,6 +63,7 @@ typedef struct s21_decimal_suite {
 */
 
 void s21_decimal_suite_init(s21_decimal_suite *);
+void s21_decimal_suite_destroy(s21_decimal_suite *);
 void s21_dec_init(s21_decimal*);
 void s21_dec_destroy(s21_decimal*);
 void s21_dec_resize(s21_decimal*, s21_size_t);
