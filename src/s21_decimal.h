@@ -5,11 +5,11 @@
 #include <stdint.h>
 #include <limits.h>
 
-typedef struct uint128_t {
-  uint32_t value[4];
-} uint128_t;
+typedef struct mantissa {
+  char *data;
+} mantissa;
 
-typedef struct dec_bits {
+typedef struct exponent {
 #if __BYTE_ORDER == __BIG_ENDIAN
   uint8_t sign : 1;
   uint8_t empty1 : 7;
@@ -22,26 +22,41 @@ typedef struct dec_bits {
   uint8_t empty1 : 7;
   uint8_t sign : 1;
 #endif /* Little endian.  */
-} dec_bits;
+} exponent;
 
-typedef union s21_decimal {
-  uint128_t i;
-  // Structure with a access over three int_32 blocks
-  struct {
-    uint32_t block0;
-    uint32_t block1;
-    uint32_t block2;
-    dec_bits bits;
-  } blocks;
-  // Parallel structure with access over int_32 single array
-  struct {
-    uint32_t array[2];
-    dec_bits bits;
-  } array;
+typedef struct s21_decimal {
+#if __BYTE_ORDER == __BIG_ENDIAN
+  mantissa mantissa;
+  union {
+    uint32_t exp_raw;
+    exponent exp;
+  };
+
+#endif /* Big endian.  */
+#if __BYTE_ORDER == __LITTLE_ENDIAN
+  union {
+    uint32_t exp_raw;
+    exponent exp;
+  };
+  mantissa mantissa;
+#endif /* Little endian.  */
 } s21_decimal;
 
-// 79,228,162,514,264,337,593,543,950,335
+typedef struct decimal_suite {
+  size_t size;
+  s21_decimal value;
 
+  void (*init)(s21_decimal*);
+  void (*resize)(s21_decimal*, size_t);
+  void (*normalize)(s21_decimal);
+
+  int (*is_normal)(s21_decimal);
+  int (*is_zero)(s21_decimal);
+  int (*id_inf)(s21_decimal);
+
+  int (*dec_to_int)(s21_decimal, int*);
+  int (*dec_to_float)(s21_decimal, float*);
+} decimal_suite;
 /*
     Арифметические операторы.
     Функции возвращают код ошибки:
