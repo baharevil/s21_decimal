@@ -24,7 +24,8 @@ void bin_print(unsigned int length, void *pointer, int options) {
 
 int main() {
 
-  
+  s21_decimal_suite dec;
+  dec.init(&dec.value);
 
   return 0;
 }

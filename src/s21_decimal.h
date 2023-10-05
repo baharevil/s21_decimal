@@ -1,9 +1,13 @@
 #ifndef S21_DECIMAL_H
 #define S21_DECIMAL_H
 
+
 #include <bits/endian.h>
 #include <stdint.h>
 #include <limits.h>
+
+#define S21_NULL 0x0
+typedef unsigned long s21_size_t;
 
 typedef struct mantissa {
   char *data;
@@ -42,12 +46,12 @@ typedef struct s21_decimal {
 #endif /* Little endian.  */
 } s21_decimal;
 
-typedef struct decimal_suite {
-  size_t size;
+typedef struct s21_decimal_suite {
+  s21_size_t size;
   s21_decimal value;
 
   void (*init)(s21_decimal*);
-  void (*resize)(s21_decimal*, size_t);
+  void (*resize)(s21_decimal*, s21_size_t);
   void (*normalize)(s21_decimal);
 
   int (*is_normal)(s21_decimal);
@@ -56,7 +60,19 @@ typedef struct decimal_suite {
 
   int (*dec_to_int)(s21_decimal, int*);
   int (*dec_to_float)(s21_decimal, float*);
-} decimal_suite;
+  int (*int_to_dec)(s21_decimal, int*);
+  int (*float_to_dec)(s21_decimal, float*);
+} s21_decimal_suite;
+
+/*
+    Функции для служебного пользования
+*/
+
+void s21_dec_init(s21_decimal*);
+void s21_dec_resize(s21_decimal*, s21_size_t);
+
+
+
 /*
     Арифметические операторы.
     Функции возвращают код ошибки:
