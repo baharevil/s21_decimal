@@ -23,9 +23,9 @@ void bin_print(unsigned int length, void *pointer, int options) {
 }
 
 int main() {
-
-  s21_decimal_suite dec;
-  dec.init(&dec.value);
-
+  s21_decimal_suite suite = {0};
+  s21_decimal_suite_init(&suite);
+  suite.resize(&suite.value, 100);
+  suite.destroy(&suite.value);
   return 0;
 }

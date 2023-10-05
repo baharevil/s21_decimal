@@ -30,19 +30,12 @@ typedef struct exponent {
 
 typedef struct s21_decimal {
 #if __BYTE_ORDER == __BIG_ENDIAN
+  exponent exp;
   mantissa mantissa;
-  union {
-    uint32_t exp_raw;
-    exponent exp;
-  };
-
 #endif /* Big endian.  */
 #if __BYTE_ORDER == __LITTLE_ENDIAN
-  union {
-    uint32_t exp_raw;
-    exponent exp;
-  };
   mantissa mantissa;
+  exponent exp;
 #endif /* Little endian.  */
 } s21_decimal;
 
@@ -51,6 +44,7 @@ typedef struct s21_decimal_suite {
   s21_decimal value;
 
   void (*init)(s21_decimal*);
+  void (*destroy)(s21_decimal*);
   void (*resize)(s21_decimal*, s21_size_t);
   void (*normalize)(s21_decimal);
 
@@ -68,7 +62,9 @@ typedef struct s21_decimal_suite {
     Функции для служебного пользования
 */
 
+void s21_decimal_suite_init(s21_decimal_suite *);
 void s21_dec_init(s21_decimal*);
+void s21_dec_destroy(s21_decimal*);
 void s21_dec_resize(s21_decimal*, s21_size_t);
 
 
