@@ -3,5 +3,9 @@
 #include <stdlib.h>
 
 void s21_dec_init(s21_decimal* dec) {
-    dec->data = calloc(sizeof(char), 1);
+    unsigned char *temp = calloc(sizeof(char), 1);
+    if (temp) {
+        dec->data = temp;
+        dec->size = 1;
+    }
 }

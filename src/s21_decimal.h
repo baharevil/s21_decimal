@@ -9,16 +9,20 @@
 #define S21_NULL 0x0
 typedef unsigned long s21_size_t;
 
+typedef struct s21_uint96_t{
+    uint32_t value[3];
+} s21_uint96_t;
+    
 typedef struct s21_decimal {
 #if __BYTE_ORDER == __BIG_ENDIAN
   uint8_t sign : 1;
   uint8_t empty1 : 7;
   uint8_t exponent : 8;
   uint16_t size : 16;
-  char *data;
+  unsigned char *data;
 #endif /* Big endian.  */
 #if __BYTE_ORDER == __LITTLE_ENDIAN
-  char *data;
+  unsigned char *data;
   uint16_t size : 16;
   uint8_t exponent : 8;
   uint8_t empty1 : 7;
@@ -33,6 +37,7 @@ typedef struct s21_decimal {
 void s21_dec_init(s21_decimal*);
 void s21_dec_destroy(s21_decimal*);
 void s21_dec_resize(s21_decimal*);
+unsigned char * s21_dec_end(s21_decimal* dec);
 
 /*
     Арифметические операторы.
