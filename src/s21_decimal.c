@@ -13,9 +13,11 @@ s21_uint96_t add_uint96_v1(s21_uint96_t x, s21_uint96_t y)
     /* Start from LSB */
     while(i--)
     {
-        uint64_t tmp = (uint64_t)x.value[i] + y.value[i] + carry;    
+        // Считаем в 64 битной точности
+        uint64_t tmp = (uint64_t)(x.value[i] + y.value[i] + carry);
+        // Записываем в 32 бита отбрасывая хвост в 32 бита
         result.value[i] = (uint32_t)tmp;
-        /* Remember the carry */
+        /* Запоминаем перенос (хвост) */
         carry = tmp >> 32;
     }
     return result;
@@ -67,24 +69,67 @@ void bin_print(unsigned int length, void *pointer, int options) {
 }
 
 int main() {
-  s21_decimal dec = {0};
-  s21_dec_init(&dec);
-  printf("%p\n", dec.data);
-  void *p_end = s21_dec_end(&dec);
-  printf("%p\n", p_end);
-  s21_dec_resize(&dec);
-  printf("%p\n", p_end);
+  // Вариант 2 - "Все число сразу"
+  unsigned int c1 = 255;
+  bin_print(sizeof(unsigned int) * 8, &c1, 1);
+  unsigned int c2 = 80;
+  bin_print(sizeof(unsigned int) * 8, &c2, 1);
+  unsigned int carry = 0;
+  unsigned int result = 0;
 
-  s21_uint96_t x = {{0x0FFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF}};
-  s21_uint96_t y = {{0x00, 0x00, 0xFF}};
-  s21_uint96_t r1 = add_uint96_v1(x, y);
-  s21_uint96_t r2 = add_uint96_v2(x, y);
+    /*Запоминаем обинаковые биты*/
+    carry	= c1 & c2;
+    bin_print(sizeof(unsigned int) * 8, &carry, 1);
 
-  print_uint96("x", x);
-  print_uint96("y", y);
-  print_uint96("result", r1);
-  print_uint96("result", r2);
-  // printf("%d\n", *(unsigned char *)p_end);
-  s21_dec_destroy(&dec);
+    /*В результате пишем только неодинаковые биты, одинаковые не пишем*/
+    result = c1 ^ c2;
+    bin_print(sizeof(unsigned int) * 8, &result, 1);
+
+    /*Вместо одинаковых битов пишем единицы, но слева*/
+    result |= (carry << 1);
+    bin_print(sizeof(unsigned int) * 8, &result, 1);
+
+  printf("result: %d\n", result);
+
+  // Вариант 1 - "В столбик"
+  // unsigned char c1 = 254;
+  // unsigned char c2 = 1;
+  // unsigned char result = 0;
+  // unsigned char carry = 0;
+  // unsigned char mask = 1;
+  // unsigned char one_bit_c1 = 0;
+  // unsigned char one_bit_c2 = 0;
+  // unsigned char rank = 0;
+  // while (c1 | c2) {
+  //   carry = 0;
+  //   printf("     mask: ");
+  //   bin_print(8, &mask, 0);
+  //   printf("       c1: ");
+  //   bin_print(8, &c1, 0);
+  //   printf("       c2: ");
+  //   bin_print(8, &c2, 0);
+
+  //   printf("c1 & mask: ");
+  //   one_bit_c1 = c1 & mask;
+  //   bin_print(8, &one_bit_c1, 0);
+
+  //   printf("c2 & mask: ");
+  //   one_bit_c2 = c2 & mask;
+  //   bin_print(8, &one_bit_c2, 0);
+
+  //   carry = (one_bit_c1 & one_bit_c2);
+  //   printf("    carry: ");
+  //   bin_print(8, &carry, 0);
+  //   result += (one_bit_c1 | one_bit_c2) << rank;
+  //   result += (carry << rank);
+  //   printf("   result: ");
+  //   bin_print(8, &result, 0);
+  //   c1 = c1 >> 1;
+  //   c2 = c2 >> 1;
+  //   printf("\n");
+  //   rank++;
+  // }
+  // printf("   result: %d\n", result);
+
   return 0;
 }
