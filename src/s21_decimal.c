@@ -3,6 +3,8 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+#include <limits.h>
 
 
 s21_uint96_t add_uint96_v1(s21_uint96_t x, s21_uint96_t y)
@@ -69,37 +71,50 @@ void bin_print(unsigned int length, void *pointer, int options) {
 }
 
 int main() {
+  // s21_decimal d = {0};
+  
   // Вариант 2 - "Все число сразу"
-  unsigned int c1 = 255;
-  bin_print(sizeof(unsigned int) * 8, &c1, 1);
-  unsigned int c2 = 80;
-  bin_print(sizeof(unsigned int) * 8, &c2, 1);
-  unsigned int carry = 0;
-  unsigned int result = 0;
 
-    /*Запоминаем обинаковые биты*/
-    carry	= c1 & c2;
-    bin_print(sizeof(unsigned int) * 8, &carry, 1);
+  unsigned summand = 15;
+  printf("  summand: ");
+  bin_print(32, &summand, 1);
 
-    /*В результате пишем только неодинаковые биты, одинаковые не пишем*/
-    result = c1 ^ c2;
-    bin_print(sizeof(unsigned int) * 8, &result, 1);
+  unsigned addend = 1; 
+  printf("   addend: ");
+  bin_print(32, &addend, 1);
+  
+  /*Перенос.*/
+	unsigned carry = 0x00;
 
-    /*Вместо одинаковых битов пишем единицы, но слева*/
-    result |= (carry << 1);
-    bin_print(sizeof(unsigned int) * 8, &result, 1);
+	/*Итерировать до тех пор, пока не закончится перенос на старший разряд.*/
+	while(addend != 0x00) {
+		/*Выставить флаг под разрядами с установленными битами.*/
+    carry = (summand & addend);
+    printf("    carry: ");
+    bin_print(32, &carry, 1);
 
-  printf("result: %d\n", result);
+		/*Снять с первого слагаемого биты, разряд по которым уже учтен.*/
+		summand	= summand ^ addend;
+    printf("summand_a: ");
+    bin_print(32, &summand, 1);
+
+    /*Перенос переводится в старший разряд.*/
+		addend = (carry << 1);
+    printf(" addend_a: ");
+    bin_print(32, &addend, 1);
+	}
+
+  printf("result: %u\n", summand);
 
   // Вариант 1 - "В столбик"
-  // unsigned char c1 = 254;
-  // unsigned char c2 = 1;
-  // unsigned char result = 0;
-  // unsigned char carry = 0;
-  // unsigned char mask = 1;
-  // unsigned char one_bit_c1 = 0;
-  // unsigned char one_bit_c2 = 0;
-  // unsigned char rank = 0;
+  // unsigned c1 = 255;
+  // unsigned c2 = 255;
+  // unsigned result = 0;
+  // unsigned carry = 0;
+  // unsigned mask = 1;
+  // unsigned one_bit_c1 = 0;
+  // unsigned one_bit_c2 = 0;
+  // unsigned rank = 0;
   // while (c1 | c2) {
   //   carry = 0;
   //   printf("     mask: ");

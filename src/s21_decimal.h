@@ -19,10 +19,10 @@ typedef struct s21_decimal {
   uint8_t empty1 : 7;
   uint8_t exponent : 8;
   uint16_t size : 16;
-  unsigned char *data;
+  s21_uint96_t value;
 #endif /* Big endian.  */
 #if __BYTE_ORDER == __LITTLE_ENDIAN
-  unsigned char *data;
+  s21_uint96_t value;
   uint16_t size : 16;
   uint8_t exponent : 8;
   uint8_t empty1 : 7;
