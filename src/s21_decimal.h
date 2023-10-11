@@ -34,10 +34,7 @@ typedef struct s21_decimal {
     Функции для служебного пользования
 */
 
-void s21_dec_init(s21_decimal*);
-void s21_dec_destroy(s21_decimal*);
-void s21_dec_resize(s21_decimal*);
-unsigned char * s21_dec_end(s21_decimal* dec);
+
 
 /*
     Арифметические операторы.
