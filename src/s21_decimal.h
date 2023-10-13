@@ -1,29 +1,28 @@
 #ifndef S21_DECIMAL_H
 #define S21_DECIMAL_H
 
-
 #include <bits/endian.h>
-#include <stdint.h>
 #include <limits.h>
+#include <stdint.h>
 
 #define S21_NULL 0x0
 typedef unsigned long s21_size_t;
 
-typedef struct s21_uint96_t{
-    uint32_t value[3];
+typedef struct s21_uint96_t {
+  uint32_t bits[3];
 } s21_uint96_t;
-    
+
 typedef struct s21_decimal {
 #if __BYTE_ORDER == __BIG_ENDIAN
   uint8_t sign : 1;
   uint8_t empty1 : 7;
   uint8_t exponent : 8;
-  uint16_t size : 16;
+  uint16_t empty0 : 16;
   s21_uint96_t value;
 #endif /* Big endian.  */
 #if __BYTE_ORDER == __LITTLE_ENDIAN
   s21_uint96_t value;
-  uint16_t size : 16;
+  uint16_t empty0 : 16;
   uint8_t exponent : 8;
   uint8_t empty1 : 7;
   uint8_t sign : 1;
@@ -33,8 +32,6 @@ typedef struct s21_decimal {
 /*
     Функции для служебного пользования
 */
-
-
 
 /*
     Арифметические операторы.

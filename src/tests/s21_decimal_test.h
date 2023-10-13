@@ -3,6 +3,4 @@
 
 #include <check.h>
 
-
-
 #endif
