@@ -29,10 +29,27 @@ typedef struct s21_decimal {
 #endif /* Little endian.  */
 } s21_decimal;
 
+typedef struct s21_decimal_lazy {
+#if __BYTE_ORDER == __BIG_ENDIAN
+  uint8_t sign : 1;
+  uint8_t empty1 : 7;
+  uint8_t exponent : 8;
+  uint16_t size : 16;
+  uint8_t *value;
+#endif /* Big endian.  */
+#if __BYTE_ORDER == __LITTLE_ENDIAN
+  uint8_t *value;
+  uint16_t size : 16;
+  uint8_t exponent : 8;
+  uint8_t empty1 : 7;
+  uint8_t sign : 1;
+#endif /* Little endian.  */
+} s21_decimal_lazy;
+
 /*
     Функции для служебного пользования
 */
-
+void bin_print(unsigned int length, void *pointer, int options);
 /*
     Арифметические операторы.
     Функции возвращают код ошибки:
@@ -51,6 +68,8 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2,
 int s21_div(s21_decimal value_1, s21_decimal value_2,
             s21_decimal *result);  // -
 
+int s21_add_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+            s21_decimal_lazy *result);
 /*
     Операторы сравнение.
     Возвращаемое значение:

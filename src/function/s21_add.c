@@ -1,5 +1,9 @@
 #include "s21_decimal.h"
 
+#include <stdlib.h>
+// Временно
+#include <stdio.h>
+
 /*
     Арифметические операторы. Сумма.
     Функции возвращают код ошибки:
@@ -23,6 +27,23 @@ s21_uint96_t s21_add_uint96_v1(s21_uint96_t x, s21_uint96_t y) {
     /* Запоминаем перенос (хвост) */
     carry = tmp >> 32;
   }
+  return result;
+}
+
+uint16_t s21_add_uint8_t(uint8_t x, uint8_t y) {
+  uint16_t add = y;
+  uint16_t carry = 0;
+  uint16_t result = x;
+
+  while (add) {
+    carry = result & add;
+    bin_print(8, &carry, 0);
+    result = result ^ add;
+    bin_print(8, &result, 0);
+    add = carry << 1;
+    bin_print(8, &add, 0);
+  }
+  printf("\n");
   return result;
 }
 
@@ -60,6 +81,30 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
 
   result->value = s21_add_uint96_v2(value_1.value, value_2.value);
+
+  return error;
+}
+
+int s21_add_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2, s21_decimal_lazy *result) {
+  int error = 0;
+
+  uint16_t size = (value_1.size > value_2.size) * value_1.size + (value_1.size <= value_2.size) * value_2.size;
+
+  if (result->size < size) {
+    result->value = realloc(result->value, sizeof(uint8_t) * size);
+    result->size = size;
+  }
+  
+  uint16_t carry = 0;
+  uint16_t res = 0;
+
+  while (size--) {
+    value_1.size = (value_1.size > 0) * value_1.size - 1 + (value_1.size == 0) * 0;
+    value_2.size = (value_2.size > 0) * value_2.size - 1 + (value_2.size == 0) * 0;
+    res = s21_add_uint8_t(*(value_1.value + value_1.size), *(value_2.value + value_2.size)) + carry;
+    *(result->value + size) = (uint8_t)res;
+    carry = res >> 8;
+  }
 
   return error;
 }
