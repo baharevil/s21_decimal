@@ -31,15 +31,14 @@ s21_uint96_t s21_add_uint96_v1(s21_uint96_t x, s21_uint96_t y) {
 }
 
 uint16_t s21_add_uint8_t(uint8_t x, uint8_t y) {
-  uint16_t carry = x & y;
-  uint16_t xor = x ^ y;
-  uint16_t result = 0;
+  uint16_t add = y;
+  uint16_t carry = 0;
+  uint16_t result = x;
 
-  while (carry || xor) {
-    carry <<= 1;
-    result = xor | carry;
-    carry &= xor;
-    xor ^= carry;
+  while (add) {
+    carry = result & add;
+    result = result ^ add;
+    add = carry << 1;
   }
   return result;
 }
