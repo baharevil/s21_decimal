@@ -31,19 +31,16 @@ s21_uint96_t s21_add_uint96_v1(s21_uint96_t x, s21_uint96_t y) {
 }
 
 uint16_t s21_add_uint8_t(uint8_t x, uint8_t y) {
-  uint16_t add = y;
-  uint16_t carry = 0;
-  uint16_t result = x;
+  uint16_t carry = x & y;
+  uint16_t xor = x ^ y;
+  uint16_t result = 0;
 
-  while (add) {
-    carry = result & add;
-    bin_print(8, &carry, 0);
-    result = result ^ add;
-    bin_print(8, &result, 0);
-    add = carry << 1;
-    bin_print(8, &add, 0);
+  while (carry || xor) {
+    carry <<= 1;
+    result = xor | carry;
+    carry &= xor;
+    xor ^= carry;
   }
-  printf("\n");
   return result;
 }
 
