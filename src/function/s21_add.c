@@ -1,6 +1,6 @@
-#include "s21_decimal.h"
-
 #include <stdlib.h>
+
+#include "s21_decimal.h"
 // Временно
 #include <stdio.h>
 
@@ -64,7 +64,7 @@ s21_uint96_t s21_add_uint96_v2(s21_uint96_t x, s21_uint96_t y) {
     carry = s21_add_uint32_t(&x.bits[i], &y.bits[i]);
     if (carry)
       carry = s21_add_uint32_t(
-          &y.bits[(i - 1 >= 0) * (i - 1) + (i - 1 < 0) * 0], &carry);
+          &y.bits[(i - 1 >= 0) * (i - 1)], &carry);
   }
   result = x;
   return result;
@@ -72,7 +72,7 @@ s21_uint96_t s21_add_uint96_v2(s21_uint96_t x, s21_uint96_t y) {
 
 // Здесь на выбор есть 2 функции: Простая и рабочая s21_add_uint96_v1() и
 // полностью бинарная s21_add_uint96_v2()
-//TODO: Перенос carry между 
+// TODO: Перенос carry между
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
 
@@ -81,23 +81,29 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   return error;
 }
 
-int s21_add_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2, s21_decimal_lazy *result) {
+int s21_add_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+                 s21_decimal_lazy *result) {
   int error = 0;
 
-  uint16_t size = (value_1.size > value_2.size) * value_1.size + (value_1.size <= value_2.size) * value_2.size;
+  uint16_t size = (value_1.size > value_2.size) * value_1.size +
+                  (value_1.size <= value_2.size) * value_2.size;
 
   if (result->size < size) {
     result->value = realloc(result->value, sizeof(uint8_t) * size);
     result->size = size;
   }
-  
+
   uint16_t carry = 0;
   uint16_t res = 0;
 
   while (size--) {
-    value_1.size = (value_1.size > 0) * value_1.size - 1 + (value_1.size == 0) * 0;
-    value_2.size = (value_2.size > 0) * value_2.size - 1 + (value_2.size == 0) * 0;
-    res = s21_add_uint8_t(*(value_1.value + value_1.size), *(value_2.value + value_2.size)) + carry;
+    value_1.size =
+        (value_1.size > 0) * value_1.size - 1 + (value_1.size == 0) * 0;
+    value_2.size =
+        (value_2.size > 0) * value_2.size - 1 + (value_2.size == 0) * 0;
+    res = s21_add_uint8_t(*(value_1.value + value_1.size),
+                          *(value_2.value + value_2.size)) +
+          carry;
     *(result->value + size) = (uint8_t)res;
     carry = res >> 8;
   }
