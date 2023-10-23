@@ -1,8 +1,7 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 #include "s21_decimal.h"
-// Временно
-#include <stdio.h>
 
 /*
     Арифметические операторы. Сумма.
@@ -51,7 +50,8 @@ uint32_t s21_add_uint32_t(uint32_t *x, uint32_t *y) {
     *x = *x ^ *y;
     *y = carry << 1;
   }
-  carry >>= 32;
+  // ^ commit
+  carry >>= 31;
   return (uint32_t)carry;
 }
 
@@ -62,9 +62,10 @@ s21_uint96_t s21_add_uint96_v2(s21_uint96_t x, s21_uint96_t y) {
 
   while (i--) {
     carry = s21_add_uint32_t(&x.bits[i], &y.bits[i]);
+    // TODO: заменить на while
     if (carry)
-      carry = s21_add_uint32_t(
-          &y.bits[(i - 1 >= 0) * (i - 1)], &carry);
+      // TODO: сдвиг на 1 вправо если i == 0 и carry == 1
+      carry = s21_add_uint32_t(&y.bits[(i - 1 >= 0) * (i - 1)], &carry);
   }
   result = x;
   return result;
@@ -72,11 +73,11 @@ s21_uint96_t s21_add_uint96_v2(s21_uint96_t x, s21_uint96_t y) {
 
 // Здесь на выбор есть 2 функции: Простая и рабочая s21_add_uint96_v1() и
 // полностью бинарная s21_add_uint96_v2()
-// TODO: Перенос carry между
+// TODO: normalize 2 value
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
 
-  result->value = s21_add_uint96_v2(value_1.value, value_2.value);
+  result->mantissa = s21_add_uint96_v2(value_1.mantissa, value_2.mantissa);
 
   return error;
 }

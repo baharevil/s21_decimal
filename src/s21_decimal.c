@@ -26,16 +26,16 @@ void bin_print(unsigned int length, void* pointer, int options) {
   int last = rem ? full : 0;
 
   /*
-    size: длинна строки с учетом пробелов 
-    index: точка записи бит в строку 
+    size: длинна строки с учетом пробелов
+    index: точка записи бит в строку
     space: нужно ли вставлять пробел
   */
   int size = length + !!options * (full - 1), index = size - 8, space = 0;
   // Для корректного вывода бит
-  char *tmp = calloc(size + 1, sizeof(char));
+  char* tmp = calloc(size + 1, sizeof(char));
   // ptr: чтобы не потерять начало строки
-  char *ptr = tmp;
- 
+  char* ptr = tmp;
+
   for (int i = 0; i < loops; i++) {
     /*
       j: маска для вывода
@@ -55,18 +55,113 @@ void bin_print(unsigned int length, void* pointer, int options) {
 
   printf("%s\n", tmp);
   if (tmp) free(tmp);
+}
 
+void s21_decimal_print(s21_decimal value, char* str) {
+  // кол-во бит в 1 элементе
+  size_t size = sizeof(value.mantissa.bits[0]) * CHAR_BIT;
+  // определяем кол-во элементов
+  size_t count = sizeof(value.mantissa.bits) / sizeof(value.mantissa.bits[0]);
+
+  printf("\n\x1b[4;34m%s\x1b[0m", str);
+
+  printf("\n\x1b[1;33m%s\x1b[0m", "sign & exp: ");
+  bin_print(sizeof(uint32_t) * CHAR_BIT, &value.exponent, 1);
+  
+  for (size_t i = count; i != 0; i--) {
+    printf("\x1b[1;33m%8s%lu]: \x1b[0m", "bits[", i - 1);
+    bin_print(size, &value.mantissa.bits[i - 1], 1);
+  }
+}
+
+void s21_decimal_right_shift(s21_decimal* value, uint32_t shift) {
+  // старшие и младшие биты
+  uint32_t senior_bits = 0, junior_bits = 0;
+  // кол-во бит в 1 элементе
+  size_t size = sizeof(value->mantissa.bits[0]) * CHAR_BIT;
+  // определяем кол-во элементов
+  size_t count = sizeof(value->mantissa.bits) / sizeof(value->mantissa.bits[0]);
+
+  // максимально допустимый сдвиг == size * count - 1 бит
+  // если больше, то ничего не должно произойти
+  if (shift > size * count - 1) return;
+
+  // Пока сдвиг больше кол-ва бит в 1 элементе младшие биты должны равняться старшим
+  while (shift >= size) {
+    for (size_t i = 0; i != count - 1; i++)
+      value->mantissa.bits[i] = value->mantissa.bits[i + 1];
+    // Самые старшие зануляем
+    value->mantissa.bits[count - 1] = 0;
+    shift -= size;
+  }
+
+  // Если сдвиг еще остался, то производим точечный перевод бит
+  for (size_t i = count; (i != 0) && shift; i--) {
+    // запомнили младшие биты
+    junior_bits = value->mantissa.bits[i - 1] << (size - shift);
+    // сдвинули и записали приходящие биты
+    value->mantissa.bits[i - 1] = value->mantissa.bits[i - 1] >> shift | senior_bits;
+    senior_bits = junior_bits;
+  }
+}
+
+void s21_decimal_left_shift(s21_decimal* value, uint32_t shift) {
+  // старшие и младшие биты
+  uint32_t senior_bits = 0, junior_bits = 0;
+  // кол-во бит в 1 элементе
+  size_t size = sizeof(value->mantissa.bits[0]) * CHAR_BIT;
+  // определяем кол-во элементов
+  size_t count = sizeof(value->mantissa.bits) / sizeof(value->mantissa.bits[0]);
+
+  // максимально допустимый сдвиг == 95 бит
+  // если больше, то ничего не должно произойти
+  if (shift > size * count - 1) return;
+
+  // Пока сдвиг больше кол-ва бит в 1 элементе старшие биты должны равняться младгим
+  while (shift >= size) {
+    for (size_t i = count - 1; i != 0; i--)
+      value->mantissa.bits[i] = value->mantissa.bits[i - 1];
+    // Самые младшие зануляем
+    value->mantissa.bits[0] = 0;
+    shift -= size;
+  }
+
+  // Если сдвиг еще остался, то производим точечный перевод бит
+  for (size_t i = 0; i != count && shift; i++) {
+    // запомнили старшие биты
+    senior_bits = value->mantissa.bits[i] >> (size - shift);
+    // сдвинули и записали приходящие биты
+    value->mantissa.bits[i] = value->mantissa.bits[i] << shift | junior_bits;
+    junior_bits = senior_bits;
+  }
 }
 
 int main() {
-  int x = 0; 
-  x += 1 << 31;
-  x += 1 << 23;
-  x += 1 << 15;
-  x += 1 << 7;
+  s21_decimal value_1 = {{{0x0, 0x80000000, 0x1}}, {0}};
+  s21_decimal value_2 = {{{0, 0xfffffff, 0xabcdef}}, {0}};
+  s21_decimal result = {0};
+  uint32_t shift = 0;
 
-  printf("%s%d\n%4s", "10: ", x, "2: ");
-  bin_print(sizeof(int) * CHAR_BIT, &x, 1);
+  printf("\n\x1b[7m1. add two decimal\x1b[0m\n");
+  printf("code error: %d", s21_add(value_1, value_2, &result));
+
+  s21_decimal_print(value_1, "value_1");
+  s21_decimal_print(value_2, "value_2");
+  s21_decimal_print(result, "result");
+  
+  shift = 72;
+  printf("\n\x1b[7m2. decimal right shift on %u bits\x1b[0m", shift);
+  s21_decimal_right_shift(&result, shift);
+  s21_decimal_print(result, "result");
+
+  shift = 16;
+  printf("\n\x1b[7m2. decimal left shift on %u bits\x1b[0m", shift);
+  s21_decimal_left_shift(&result, 16);
+  s21_decimal_print(result, "result");
+
+  printf("\nsize s21_decimal_lazy: %lu\n", sizeof(s21_decimal_lazy) * CHAR_BIT);
+  printf("size      s21_decimal: %lu\n", sizeof(s21_decimal) * CHAR_BIT);
+
 
   // s21_decimal_lazy x  = {0};
   // s21_decimal_lazy y  = {0};

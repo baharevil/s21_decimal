@@ -12,20 +12,33 @@ typedef struct s21_uint96_t {
   uint32_t bits[3];
 } s21_uint96_t;
 
-typedef struct s21_decimal {
+union s21_exponent {
+  uint32_t exp;
+
+  struct {
 #if __BYTE_ORDER == __BIG_ENDIAN
-  uint8_t sign : 1;
-  uint8_t empty1 : 7;
-  uint8_t exponent : 8;
-  uint16_t empty0 : 16;
-  s21_uint96_t value;
+    uint8_t sign : 1;
+    uint8_t empty1 : 7;
+    uint8_t exponent : 8;
+    uint16_t empty0 : 16;
 #endif /* Big endian.  */
 #if __BYTE_ORDER == __LITTLE_ENDIAN
-  s21_uint96_t value;
-  uint16_t empty0 : 16;
-  uint8_t exponent : 8;
-  uint8_t empty1 : 7;
-  uint8_t sign : 1;
+    uint16_t empty0 : 16;
+    uint8_t exponent : 8;
+    uint8_t empty1 : 7;
+    uint8_t sign : 1;
+#endif /* Little endian.  */
+  } bits;
+};
+
+typedef struct s21_decimal {
+#if __BYTE_ORDER == __BIG_ENDIAN
+  union s21_exponent exponent;
+  s21_uint96_t mantissa;
+#endif /* Big endian.  */
+#if __BYTE_ORDER == __LITTLE_ENDIAN
+  s21_uint96_t mantissa;
+  union s21_exponent exponent;
 #endif /* Little endian.  */
 } s21_decimal;
 
