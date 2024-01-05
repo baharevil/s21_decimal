@@ -137,30 +137,11 @@ void s21_decimal_left_shift(s21_decimal* value, uint32_t shift) {
 }
 
 int main() {
-  s21_decimal value_1 = {{{0x0, 0x80000000, 0x1}}, {0}};
-  s21_decimal value_2 = {{{0, 0xfffffff, 0xabcdef}}, {0}};
-  s21_decimal result = {0};
-  uint32_t shift = 0;
+  s21_decimal value_1 = {{{0x00000001, 0x00000000, 0x00000000}}, {0}};
+  // s21_decimal value_2 = {{{0, 0xfffffff, 0xabcdef}}, {0}};
+  // s21_decimal result = {0};
 
-  printf("\n\x1b[7m1. add two decimal\x1b[0m\n");
-  printf("code error: %d", s21_add(value_1, value_2, &result));
-
-  s21_decimal_print(value_1, "value_1");
-  s21_decimal_print(value_2, "value_2");
-  s21_decimal_print(result, "result");
-  
-  shift = 72;
-  printf("\n\x1b[7m2. decimal right shift on %u bits\x1b[0m", shift);
-  s21_decimal_right_shift(&result, shift);
-  s21_decimal_print(result, "result");
-
-  shift = 16;
-  printf("\n\x1b[7m2. decimal left shift on %u bits\x1b[0m", shift);
-  s21_decimal_left_shift(&result, 16);
-  s21_decimal_print(result, "result");
-
-  printf("\nsize s21_decimal_lazy: %lu\n", sizeof(s21_decimal_lazy) * CHAR_BIT);
-  printf("size      s21_decimal: %lu\n", sizeof(s21_decimal) * CHAR_BIT);
+  printf("%d\n", s21_search_msb(&value_1));
 
 
   // s21_decimal_lazy x  = {0};

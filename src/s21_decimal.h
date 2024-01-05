@@ -63,6 +63,9 @@ typedef struct s21_decimal_lazy {
     Функции для служебного пользования
 */
 void bin_print(unsigned int length, void *pointer, int options);
+
+unsigned s21_search_msb(s21_decimal *decimal);
+
 /*
     Арифметические операторы.
     Функции возвращают код ошибки:
