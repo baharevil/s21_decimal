@@ -8,13 +8,13 @@
 #define S21_NULL 0x0
 typedef unsigned long s21_size_t;
 
-typedef struct s21_uint96_t {
+typedef union s21_uint96_t {
   uint32_t bits[3];
+  uint8_t bytes[12];
 } s21_uint96_t;
 
-union s21_exponent {
-  uint32_t exp;
-
+typedef union {
+  uint32_t raw;
   struct {
 #if __BYTE_ORDER == __BIG_ENDIAN
     uint8_t sign : 1;
@@ -29,16 +29,16 @@ union s21_exponent {
     uint8_t sign : 1;
 #endif /* Little endian.  */
   } bits;
-};
+} s21_exponent;
 
 typedef struct s21_decimal {
 #if __BYTE_ORDER == __BIG_ENDIAN
-  union s21_exponent exponent;
+  s21_exponent exponent;
   s21_uint96_t mantissa;
 #endif /* Big endian.  */
 #if __BYTE_ORDER == __LITTLE_ENDIAN
   s21_uint96_t mantissa;
-  union s21_exponent exponent;
+  s21_exponent exponent;
 #endif /* Little endian.  */
 } s21_decimal;
 
@@ -64,7 +64,18 @@ typedef struct s21_decimal_lazy {
 */
 void bin_print(unsigned int length, void *pointer, int options);
 
-unsigned s21_search_msb(s21_decimal *decimal);
+/*
+Функция поиска старшего значащего бита (Most Significant Bit) в числе
+s21_decimal Возвращает целочисленное количество байт от старшего значащего бита
+до конца мантиссы, т.е. реальный размер в байтах.
+*/
+uint8_t s21_search_msb(s21_decimal *decimal);
+
+/*Функция копирования обычного числа s21_decimal в s21_decimal_lazy*/
+uint8_t s21_dec_to_lazy_cp(s21_decimal *from, s21_decimal_lazy *to);
+
+/*Функция приведения мантиссы числа s21_decimal_lazy к заданной экспоненте*/
+uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
 
 /*
     Арифметические операторы.

@@ -67,7 +67,7 @@ void s21_decimal_print(s21_decimal value, char* str) {
 
   printf("\n\x1b[1;33m%s\x1b[0m", "sign & exp: ");
   bin_print(sizeof(uint32_t) * CHAR_BIT, &value.exponent, 1);
-  
+
   for (size_t i = count; i != 0; i--) {
     printf("\x1b[1;33m%8s%lu]: \x1b[0m", "bits[", i - 1);
     bin_print(size, &value.mantissa.bits[i - 1], 1);
@@ -86,7 +86,8 @@ void s21_decimal_right_shift(s21_decimal* value, uint32_t shift) {
   // если больше, то ничего не должно произойти
   if (shift > size * count - 1) return;
 
-  // Пока сдвиг больше кол-ва бит в 1 элементе младшие биты должны равняться старшим
+  // Пока сдвиг больше кол-ва бит в 1 элементе младшие биты должны равняться
+  // старшим
   while (shift >= size) {
     for (size_t i = 0; i != count - 1; i++)
       value->mantissa.bits[i] = value->mantissa.bits[i + 1];
@@ -100,7 +101,8 @@ void s21_decimal_right_shift(s21_decimal* value, uint32_t shift) {
     // запомнили младшие биты
     junior_bits = value->mantissa.bits[i - 1] << (size - shift);
     // сдвинули и записали приходящие биты
-    value->mantissa.bits[i - 1] = value->mantissa.bits[i - 1] >> shift | senior_bits;
+    value->mantissa.bits[i - 1] =
+        value->mantissa.bits[i - 1] >> shift | senior_bits;
     senior_bits = junior_bits;
   }
 }
@@ -117,7 +119,8 @@ void s21_decimal_left_shift(s21_decimal* value, uint32_t shift) {
   // если больше, то ничего не должно произойти
   if (shift > size * count - 1) return;
 
-  // Пока сдвиг больше кол-ва бит в 1 элементе старшие биты должны равняться младгим
+  // Пока сдвиг больше кол-ва бит в 1 элементе старшие биты должны равняться
+  // младгим
   while (shift >= size) {
     for (size_t i = count - 1; i != 0; i--)
       value->mantissa.bits[i] = value->mantissa.bits[i - 1];
@@ -137,12 +140,11 @@ void s21_decimal_left_shift(s21_decimal* value, uint32_t shift) {
 }
 
 int main() {
-  s21_decimal value_1 = {{{0x00000001, 0x00000000, 0x00000000}}, {0}};
+  s21_decimal value_1 = {{{0x00000001, 0x00000000, 0x00000000}}, {4}};
   // s21_decimal value_2 = {{{0, 0xfffffff, 0xabcdef}}, {0}};
   // s21_decimal result = {0};
 
   printf("%d\n", s21_search_msb(&value_1));
-
 
   // s21_decimal_lazy x  = {0};
   // s21_decimal_lazy y  = {0};
