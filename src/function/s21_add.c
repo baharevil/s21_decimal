@@ -90,7 +90,7 @@ int s21_add_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
                   (value_1.size <= value_2.size) * value_2.size;
 
   if (result->size < size) {
-    result->value = realloc(result->value, sizeof(uint8_t) * size);
+    result->mantissa = realloc(result->mantissa, sizeof(uint8_t) * size);
     result->size = size;
   }
 
@@ -102,10 +102,10 @@ int s21_add_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
         (value_1.size > 0) * value_1.size - 1 + (value_1.size == 0) * 0;
     value_2.size =
         (value_2.size > 0) * value_2.size - 1 + (value_2.size == 0) * 0;
-    res = s21_add_uint8_t(*(value_1.value + value_1.size),
-                          *(value_2.value + value_2.size)) +
+    res = s21_add_uint8_t(*(value_1.mantissa + value_1.size),
+                          *(value_2.mantissa + value_2.size)) +
           carry;
-    *(result->value + size) = (uint8_t)res;
+    *(result->mantissa + size) = (uint8_t)res;
     carry = res >> 8;
   }
 

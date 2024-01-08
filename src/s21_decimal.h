@@ -74,6 +74,9 @@ uint8_t s21_search_msb(s21_decimal *decimal);
 /*Функция копирования обычного числа s21_decimal в s21_decimal_lazy*/
 uint8_t s21_dec_to_lazy_cp(s21_decimal *src, s21_decimal_lazy *dest);
 
+/*Функция умножения s21_decimal_lazy на число 10*/
+uint8_t s21_mul_lazy_to_10(s21_decimal_lazy *lazy);
+
 /*Функция приведения мантиссы числа s21_decimal_lazy к заданной экспоненте*/
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
 

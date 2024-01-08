@@ -148,26 +148,13 @@ int main() {
   // s21_decimal_lazy y  = {0};
   s21_decimal_lazy result = {0};
 
-  // x.size = 3;
-  // x.value = calloc(sizeof(uint8_t), x.size);
-  // *(x.value + 0) = 1;
-  // *(x.value + 1) = 2;
-  // *(x.value + 2) = 0xff;
-
-  // y.size = 3;
-  // y.value = calloc(sizeof(uint8_t), y.size);
-  // *(y.value + 0) = 1;
-  // *(y.value + 1) = 2;
-  // *(y.value + 2) = 0xff;
-
-  // s21_add_lazy(x, y, &result);
-
   s21_dec_to_lazy_cp(&value_1, &result);
+  s21_mul_lazy_to_10(&result);
   s21_decimal_lazy_print(result);
 
   // free (x.value);
   // free (y.value);
-  free (result.mantissa);
+  free(result.mantissa);
 
   return 0;
 }
