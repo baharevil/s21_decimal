@@ -1,7 +1,7 @@
 #ifndef S21_DECIMAL_H
 #define S21_DECIMAL_H
 
-#include <bits/endian.h>
+#include <endian.h>
 #include <limits.h>
 #include <stdint.h>
 
@@ -48,10 +48,10 @@ typedef struct s21_decimal_lazy {
   uint8_t empty1 : 7;
   uint8_t exponent : 8;
   uint16_t size : 16;
-  uint8_t *value;
+  uint8_t *mantissa;
 #endif /* Big endian.  */
 #if __BYTE_ORDER == __LITTLE_ENDIAN
-  uint8_t *value;
+  uint8_t *mantissa;
   uint16_t size : 16;
   uint8_t exponent : 8;
   uint8_t empty1 : 7;
@@ -66,13 +66,13 @@ void bin_print(unsigned int length, void *pointer, int options);
 
 /*
 Функция поиска старшего значащего бита (Most Significant Bit) в числе
-s21_decimal Возвращает целочисленное количество байт от старшего значащего бита
+s21_decimal. Возвращает целочисленное количество байт от старшего значащего бита
 до конца мантиссы, т.е. реальный размер в байтах.
 */
 uint8_t s21_search_msb(s21_decimal *decimal);
 
 /*Функция копирования обычного числа s21_decimal в s21_decimal_lazy*/
-uint8_t s21_dec_to_lazy_cp(s21_decimal *from, s21_decimal_lazy *to);
+uint8_t s21_dec_to_lazy_cp(s21_decimal *src, s21_decimal_lazy *dest);
 
 /*Функция приведения мантиссы числа s21_decimal_lazy к заданной экспоненте*/
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);

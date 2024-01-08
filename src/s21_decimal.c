@@ -13,7 +13,7 @@ void print_uint96(char* str, s21_uint96_t x) {
 void s21_decimal_lazy_print(s21_decimal_lazy x) {
   uint16_t size = 0;
   while (size < x.size) {
-    printf("%hhu ", *(x.value + size));
+    printf("%hhu ", *(x.mantissa + size));
     size++;
   }
   printf("\n");
@@ -140,15 +140,13 @@ void s21_decimal_left_shift(s21_decimal* value, uint32_t shift) {
 }
 
 int main() {
-  s21_decimal value_1 = {{{0x00000001, 0x00000000, 0x00000000}}, {4}};
+  s21_decimal value_1 = {{{0xffffffff, 0xffffffff, 0xffffffff}}, {4}};
   // s21_decimal value_2 = {{{0, 0xfffffff, 0xabcdef}}, {0}};
   // s21_decimal result = {0};
 
-  printf("%d\n", s21_search_msb(&value_1));
-
   // s21_decimal_lazy x  = {0};
   // s21_decimal_lazy y  = {0};
-  // s21_decimal_lazy result = {0};
+  s21_decimal_lazy result = {0};
 
   // x.size = 3;
   // x.value = calloc(sizeof(uint8_t), x.size);
@@ -164,27 +162,12 @@ int main() {
 
   // s21_add_lazy(x, y, &result);
 
-  // s21_decimal_lazy_print(result);
+  s21_dec_to_lazy_cp(&value_1, &result);
+  s21_decimal_lazy_print(result);
 
   // free (x.value);
   // free (y.value);
-  // free (result.value);
-
-  // s21_decimal x = {0};
-  // s21_decimal y = {0};
-  // s21_decimal result = {0};
-
-  // *(x.value.bits + 0) = 1;
-  // *(x.value.bits + 1) = 2;
-  // *(x.value.bits + 2) = 0xffffffff;
-
-  // *(y.value.bits + 0) = 1;
-  // *(y.value.bits + 1) = 2;
-  // *(y.value.bits + 2) = 0xffffffff;
-
-  // s21_add(x, y, &result);
-
-  // print_uint96("result: ", result.value);
+  free (result.mantissa);
 
   return 0;
 }
