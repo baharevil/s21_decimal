@@ -17,10 +17,6 @@ uint8_t s21_search_msb(s21_decimal *decimal) {
   size_t bytes_max = sizeof(decimal->mantissa.bytes);
   size_t byte = 0;
 
-  // Проверка на пустой decimal, пока выключено
-  // if (s21_decimal_is_null(decimal))
-  //    result = -1;
-
   // Указатель на последний байт в массиве
   uint8_t *ptr = (decimal->mantissa.bytes + bytes_max - 1);
   uint8_t mask = 0;

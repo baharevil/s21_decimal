@@ -67,15 +67,24 @@ void bin_print(unsigned int length, void *pointer, int options);
 /*
 Функция поиска старшего значащего бита (Most Significant Bit) в числе
 s21_decimal. Возвращает целочисленное количество байт от старшего значащего бита
-до конца мантиссы, т.е. реальный размер в байтах.
+до начала мантиссы, т.е. реальный размер в байтах.
 */
 uint8_t s21_search_msb(s21_decimal *decimal);
+
+/*Функция определения пуст стандартный decimal или нет. 0 - не пуст, 1 - пуст*/
+uint8_t s21_decimal_is_null(s21_decimal *decimal);
 
 /*Функция копирования обычного числа s21_decimal в s21_decimal_lazy*/
 uint8_t s21_dec_to_lazy_cp(s21_decimal *src, s21_decimal_lazy *dest);
 
+/*Функция копирования числа s21_decimal_lazy в s21_decimal_lazy*/
+uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
+
 /*Функция умножения s21_decimal_lazy на число 10*/
 uint8_t s21_mul_lazy_to_10(s21_decimal_lazy *lazy);
+
+/*Функция деления s21_decimal_lazy на число 10*/
+uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy);
 
 /*Функция приведения мантиссы числа s21_decimal_lazy к заданной экспоненте*/
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
@@ -100,6 +109,16 @@ int s21_div(s21_decimal value_1, s21_decimal value_2,
 
 int s21_add_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
                  s21_decimal_lazy *result);
+
+int s21_sub_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+                 s21_decimal_lazy *result);
+
+int s21_mul_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+                 s21_decimal_lazy *result);
+
+int s21_div_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+                 s21_decimal_lazy *result);
+
 /*
     Операторы сравнение.
     Возвращаемое значение:
