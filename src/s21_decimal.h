@@ -13,7 +13,7 @@ typedef union s21_uint96_t {
   uint8_t bytes[12];
 } s21_uint96_t;
 
-typedef union {
+typedef union s21_exponent {
   uint32_t raw;
   struct {
 #if __BYTE_ORDER == __BIG_ENDIAN
@@ -31,15 +31,29 @@ typedef union {
   } bits;
 } s21_exponent;
 
-typedef struct s21_decimal {
+// typedef struct s21_decimal {
+// #if __BYTE_ORDER == __BIG_ENDIAN
+//   s21_exponent exponent;
+//   s21_uint96_t mantissa;
+// #endif /* Big endian.  */
+// #if __BYTE_ORDER == __LITTLE_ENDIAN
+//   s21_uint96_t mantissa;
+//   s21_exponent exponent;
+// #endif /* Little endian.  */
+// } s21_decimal;
+
+typedef union s21_decimal {
+  int bits[4];
+  struct {
 #if __BYTE_ORDER == __BIG_ENDIAN
-  s21_exponent exponent;
-  s21_uint96_t mantissa;
+    s21_exponent exponent;
+    s21_uint96_t mantissa;
 #endif /* Big endian.  */
 #if __BYTE_ORDER == __LITTLE_ENDIAN
-  s21_uint96_t mantissa;
-  s21_exponent exponent;
+    s21_uint96_t mantissa;
+    s21_exponent exponent;
 #endif /* Little endian.  */
+  };
 } s21_decimal;
 
 typedef struct s21_decimal_lazy {
