@@ -17,24 +17,23 @@ void s21_decimal_lazy_print(s21_decimal_lazy* x) {
 }
 
 int main() {
-  // s21_decimal value_1 = {{{0x00000111, 0x00000000, 0x00000000}},
-  // {0x801c0000}};
-  s21_decimal value_1 = {{0x0000001a, 0x00000000, 0x00000000, 0x00090000}};
-  // s21_decimal value_2 = {{{0, 0xfffffff, 0xabcdef}}, {0}};
+  s21_decimal value_1 = {{0x0000ffff, 0x00000000, 0x00000000, 0x00000000}};
+  s21_decimal value_2 = {{0x0000000f, 0x00000000, 0x00000000, 0x00000000}};
   // s21_decimal result = {0};
 
-  // s21_decimal_lazy x  = {0};
-  // s21_decimal_lazy y  = {0};
-  // s21_search_msb(&value_1);
+  s21_decimal_lazy x  = {0};
+  s21_decimal_lazy y  = {0};
   s21_decimal_lazy result = {0};
-  s21_dec_to_lazy_cp(&value_1, &result);
+  s21_dec_to_lazy_cp(&value_1, &x);
+  s21_dec_to_lazy_cp(&value_2, &y);
   // s21_lazy_to_lazy_cp(&x, &result);
 
+  // s21_decimal_lazy_print(&result);
+  // s21_lazy_normalization(&result, 12);
+  s21_add_lazy(&x, &y, &result);
   s21_decimal_lazy_print(&result);
-  s21_lazy_normalization(&result, 12);
-  s21_decimal_lazy_print(&result);
-  // free (x.mantissa);
-  // free (y.value);
+  free (x.mantissa);
+  free (y.mantissa);
   free(result.mantissa);
 
   return 0;

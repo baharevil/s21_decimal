@@ -121,16 +121,16 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2,
 int s21_div(s21_decimal value_1, s21_decimal value_2,
             s21_decimal *result);  // -
 
-int s21_add_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
 
-int s21_sub_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
 
-int s21_mul_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
 
-int s21_div_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
 
 /*

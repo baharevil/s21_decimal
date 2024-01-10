@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 #include "s21_decimal.h"
@@ -13,44 +12,43 @@
     3 - деление на 0
 */
 
-uint16_t s21_add_uint8_t(uint8_t x, uint8_t y) {
-  uint16_t add = y;
-  uint16_t carry = 0;
-  uint16_t result = x;
-
-  while (add) {
-    carry = result & add;
-    result = result ^ add;
-    add = carry << 1;
-  }
-  return result;
-}
-
-int s21_add_lazy(s21_decimal_lazy value_1, s21_decimal_lazy value_2,
+int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   int error = 0;
 
-  uint16_t size = (value_1.size > value_2.size) * value_1.size +
-                  (value_1.size <= value_2.size) * value_2.size;
+  uint16_t size = (value_1->size > value_2->size) * value_1->size +
+                  (value_1->size <= value_2->size) * value_2->size;
 
   if (result->size < size) {
     result->mantissa = realloc(result->mantissa, sizeof(uint8_t) * size);
     result->size = size;
   }
 
-  uint16_t carry = 0;
-  uint16_t res = 0;
+  uint16_t res = 0, carry = 0;
+  uint8_t count = 0, v1 = 0, v2 = 0;
 
-  while (size--) {
-    value_1.size =
-        (value_1.size > 0) * value_1.size - 1 + (value_1.size == 0) * 0;
-    value_2.size =
-        (value_2.size > 0) * value_2.size - 1 + (value_2.size == 0) * 0;
-    res = s21_add_uint8_t(*(value_1.mantissa + value_1.size),
-                          *(value_2.mantissa + value_2.size)) +
-          carry;
-    *(result->mantissa + size) = (uint8_t)res;
+  while (count < size) {
+    if (value_1->size >= count)
+      v1 = *(value_1->mantissa + count);
+    if (value_2->size >= count)
+      v2 = *(value_2->mantissa + count);
+
+    res = v1 + v2 + carry;
+    *(result->mantissa + count) = (uint8_t)res;
     carry = res >> 8;
+    count++;
+    v1 = v2 = 0;
+  }
+
+  // Если остался перенос, доаллоцируем себе массив
+  if (carry) {
+    result->size++;
+    uint8_t *temp = realloc(result->mantissa, result->size);
+    if (temp) {
+      result->mantissa = temp;
+      result->mantissa[result->size - 1] = carry;
+    } else
+      error = 1;
   }
 
   return error;
