@@ -17,8 +17,8 @@ void s21_decimal_lazy_print(s21_decimal_lazy* x) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0x000001ff, 0x00000000, 0x00000000, 0x00000000}};
-  s21_decimal value_2 = {{0x000001ff, 0x00000000, 0x00000000, 0x00000000}};
+  s21_decimal value_1 = {{0x00000000, 0x00000000, 0xffff0000, 0x00000000}};
+  s21_decimal value_2 = {{0x00000000, 0xffff0000, 0x00000000, 0x00000000}};
   // s21_decimal result = {0};
 
   s21_decimal_lazy x  = {0};

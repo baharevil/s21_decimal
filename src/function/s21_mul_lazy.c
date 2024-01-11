@@ -21,14 +21,20 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
  if (!error) {
     uint16_t res = 0;
     uint8_t carry = 0;
+    s21_decimal_lazy tmp = {0}, empty = {0};
+    s21_lazy_to_lazy_cp(result, &tmp);
+    s21_lazy_to_lazy_cp(result, &empty);
+
     while (i < value_1->size) {
         while (j < value_2->size) {
-            res = (uint16_t) *(result->mantissa + i + j) + *(value_1->mantissa + i) * *(value_2->mantissa + j);
+            res = (uint16_t) *(value_1->mantissa + i) * *(value_2->mantissa + j) + carry;
             carry =  res >> sizeof(uint8_t) * CHAR_BIT;
-            *(result->mantissa + i + j + 1) += carry;
-            *(result->mantissa + i + j) = (uint8_t) res;
+            *(tmp.mantissa + i + j) = (uint8_t) res;
+            *(tmp.mantissa + i + j + 1) = carry;
             j++;
         }
+        s21_add_lazy(&tmp, result, result);
+        s21_lazy_to_lazy_cp(&empty, &tmp);
         j = carry = 0;
         i++;
     }

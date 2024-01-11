@@ -17,10 +17,10 @@ uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest) {
         dest->exponent = src->exponent;
         dest->size = src->size;
         dest->mantissa = temp;
-        memcpy(dest->mantissa, src->mantissa, dest->size);
       } else
         result = 1;
     }
+    memcpy(dest->mantissa, src->mantissa, dest->size);
   }
 
   return result;
