@@ -13,7 +13,7 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp) {
   if (!result) {
     // Напраление изменения стпени. Если 1 -> увеличиваем, -1 -> уменьшаем
     int8_t direction = (exp > lazy->exponent) - (exp < lazy->exponent);
-    // Временное переменная чтобы не испортить оригенал
+    // Временное переменная чтобы не испортить оригинал
     s21_decimal_lazy tmp_value = {0};
 
     // Проверяем что все норм скопировалось
@@ -32,7 +32,7 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp) {
       free(tmp_value.mantissa);
       tmp_value.mantissa = NULL;
     } else
-      result = -1;
+      result = 1;
 
     if (tmp_value.mantissa != NULL) free(tmp_value.mantissa);
   }

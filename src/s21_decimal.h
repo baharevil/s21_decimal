@@ -31,17 +31,6 @@ typedef union s21_exponent {
   } bits;
 } s21_exponent;
 
-// typedef struct s21_decimal {
-// #if __BYTE_ORDER == __BIG_ENDIAN
-//   s21_exponent exponent;
-//   s21_uint96_t mantissa;
-// #endif /* Big endian.  */
-// #if __BYTE_ORDER == __LITTLE_ENDIAN
-//   s21_uint96_t mantissa;
-//   s21_exponent exponent;
-// #endif /* Little endian.  */
-// } s21_decimal;
-
 typedef union s21_decimal {
   int bits[4];
   struct {
