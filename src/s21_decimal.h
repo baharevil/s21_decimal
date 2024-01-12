@@ -101,6 +101,8 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
     2 - число слишком мало или равно отрицательной бесконечности
     3 - деление на 0
 */
+typedef enum arifmetic_error { arifm_ok = 0, inf, zero, div_by_0 } arifmetic_error;
+
 int s21_add(s21_decimal value_1, s21_decimal value_2,
             s21_decimal *result);  // -
 int s21_sub(s21_decimal value_1, s21_decimal value_2,
@@ -129,6 +131,9 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     0 - FALSE
     1 - TRUE
 */
+
+typedef enum comparison_error { false = 0, true } comparison_error;
+
 int s21_is_less(s21_decimal, s21_decimal);              // -
 int s21_is_less_or_equal(s21_decimal, s21_decimal);     // -
 int s21_is_greater(s21_decimal, s21_decimal);           // -
@@ -143,6 +148,9 @@ int s21_is_not_equal(s21_decimal, s21_decimal);         // -
     0 - OK
     1 - ошибка конвертации
 */
+
+typedef enum converter_error { conv_ok = 0, conv_false } converter_error;
+
 int s21_from_int_to_decimal(int src, s21_decimal *dst);      // -
 int s21_from_float_to_decimal(float src, s21_decimal *dst);  // -
 int s21_from_decimal_to_int(s21_decimal src, int *dst);      // -
@@ -155,6 +163,9 @@ int s21_from_decimal_to_float(s21_decimal src, float *dst);  // -
     0 - OK
     1 - ошибка вычисления
 */
+
+typedef enum other_error { ok = 0, calc_error } other_error;
+
 int s21_floor(s21_decimal value, s21_decimal *result);     // -
 int s21_round(s21_decimal value, s21_decimal *result);     // -
 int s21_truncate(s21_decimal value, s21_decimal *result);  // -
