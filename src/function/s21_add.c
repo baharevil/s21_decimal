@@ -12,44 +12,25 @@
     3 - деление на 0
 */
 
-int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
-                 s21_decimal_lazy *result) {
+int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
 
-  uint16_t size = (value_1->size > value_2->size) * value_1->size +
-                  (value_1->size <= value_2->size) * value_2->size;
+  s21_decimal_lazy lazy1, lazy2, res;
 
-  if (result->size < size) {
-    result->mantissa = realloc(result->mantissa, sizeof(uint8_t) * size);
-    result->size = size;
-  }
+  s21_lazy_init(&lazy1);
+  s21_lazy_init(&lazy2);
+  s21_lazy_init(&res);
 
-  uint16_t res = 0, carry = 0;
-  uint8_t count = 0, v1 = 0, v2 = 0;
+  s21_dec_to_lazy_cp(&value_1, &lazy1);
+  s21_dec_to_lazy_cp(&value_2, &lazy2);
 
-  while (count < size) {
-    if (value_1->size >= count)
-      v1 = *(value_1->mantissa + count);
-    if (value_2->size >= count)
-      v2 = *(value_2->mantissa + count);
+  error = s21_add_lazy(&lazy1, &lazy2, &res);
 
-    res = v1 + v2 + carry;
-    *(result->mantissa + count) = (uint8_t)res;
-    carry = res >> 8;
-    count++;
-    v1 = v2 = 0;
-  }
+  //Нужна функция обратного копирования s21_lazy_to_dec()
+  // s21_lazy_to_dec(&res, result);
 
-  // Если остался перенос, доаллоцируем себе массив
-  if (carry) {
-    result->size++;
-    uint8_t *temp = realloc(result->mantissa, result->size);
-    if (temp) {
-      result->mantissa = temp;
-      result->mantissa[result->size - 1] = carry;
-    } else
-      error = 1;
-  }
+  if (lazy1.mantissa) free(lazy1.mantissa);
+  if (lazy2.mantissa) free(lazy2.mantissa);
 
   return error;
 }

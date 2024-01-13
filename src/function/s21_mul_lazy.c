@@ -15,8 +15,8 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     result->mantissa = temp;
     result->size = value_1->size + value_2->size;
     memset(result->mantissa, 0, result->size);
-    error = !!(s21_lazy_to_lazy_cp(result, &tmp) +
-               s21_lazy_to_lazy_cp(result, &empty));
+    error = (s21_lazy_to_lazy_cp(result, &tmp) |
+             s21_lazy_to_lazy_cp(result, &empty));
   } else
     error = 1;
 
@@ -33,8 +33,8 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
         carry = res >> sizeof(uint8_t) * CHAR_BIT;
         *(tmp.mantissa + i + j + 1) = carry;
       }
-      error = !!(s21_add_lazy(&tmp, result, result) +
-                 s21_lazy_to_lazy_cp(&empty, &tmp));
+      error = (s21_add_lazy(&tmp, result, result) |
+               s21_lazy_to_lazy_cp(&empty, &tmp));
       carry = 0;
     }
 

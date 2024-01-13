@@ -77,6 +77,12 @@ uint8_t s21_search_msb(s21_decimal *decimal);
 /*Функция определения пуст стандартный decimal или нет. 0 - не пуст, 1 - пуст*/
 uint8_t s21_decimal_is_null(s21_decimal *decimal);
 
+/*Функция инициализации s21_decimal_lazy*/
+uint8_t s21_lazy_init(s21_decimal_lazy *lazy);
+
+/*Функция обнуления числа s21_decimal_lazy*/
+uint8_t s21_lazy_zeroing(s21_decimal_lazy *lazy, uint16_t size);
+
 /*Функция копирования обычного числа s21_decimal в s21_decimal_lazy*/
 uint8_t s21_dec_to_lazy_cp(s21_decimal *src, s21_decimal_lazy *dest);
 
@@ -101,7 +107,12 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
     2 - число слишком мало или равно отрицательной бесконечности
     3 - деление на 0
 */
-typedef enum arifmetic_error { arifm_ok = 0, inf, zero, div_by_0 } arifmetic_error;
+typedef enum arifmetic_error {
+  arifm_ok = 0,
+  inf,
+  zero,
+  div_by_0
+} arifmetic_error;
 
 int s21_add(s21_decimal value_1, s21_decimal value_2,
             s21_decimal *result);  // -
