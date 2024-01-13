@@ -18,8 +18,8 @@ void s21_decimal_lazy_print(s21_decimal_lazy* x) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0x0000ffff, 0x00000000, 0x0000, 0x00000000}};
-  s21_decimal value_2 = {{0x0000ffff, 0x0000, 0x00000000, 0x00000000}};
+  s21_decimal value_1 = {{0x10000000, 0x00000000, 0x00000000, 0x00000000}};
+  s21_decimal value_2 = {{0x00000001, 0x00000000, 0x00000000, 0x00000000}};
   // s21_decimal result = {0};
 
   s21_decimal_lazy x = {0};
@@ -39,6 +39,8 @@ int main() {
   free(x.mantissa);
   free(y.mantissa);
   free(result.mantissa);
+
+  printf("Equal?: %d\n", s21_lazy_is_equal(&value_1, &value_2));
 
   return 0;
 }
