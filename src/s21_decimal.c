@@ -22,8 +22,8 @@ int main() {
   s21_decimal value_2 = {{0x00000052, 0x00000002, 0x1, 0x00000000}};
   value_1.exponent.bits.sign = 0x0;
   value_2.exponent.bits.sign = 0x0;
-  value_1.exponent.bits.exponent = 12;
-  value_2.exponent.bits.exponent = 11;
+  value_1.exponent.bits.exponent = 13;
+  value_2.exponent.bits.exponent = 14;
 
 
   // s21_decimal result = {0};
@@ -47,6 +47,9 @@ int main() {
   free(result.mantissa);
 
   printf("Equal?: %d\n", s21_lazy_is_equal(&value_1, &value_2));
+  printf("less?: %d\n", s21_is_less(value_1, value_2));
+  printf("less ro equal?: %d\n", s21_is_less_or_equal(value_1, value_2));
+  printf("greater?: %d\n", s21_is_greater(value_1, value_2));
 
   return 0;
 }
