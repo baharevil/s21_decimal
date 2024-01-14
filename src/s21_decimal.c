@@ -18,11 +18,11 @@ void s21_decimal_lazy_print(s21_decimal_lazy* x) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0x00000052, 0x00000002, 0x1, 0x00000000}};
+  s21_decimal value_1 = {{0x00000002, 0x00000002, 0x1, 0x00000000}};
   s21_decimal value_2 = {{0x00000052, 0x00000002, 0x1, 0x00000000}};
   value_1.exponent.bits.sign = 0x0;
   value_2.exponent.bits.sign = 0x0;
-  value_1.exponent.bits.exponent = 13;
+  value_1.exponent.bits.exponent = 14;
   value_2.exponent.bits.exponent = 14;
 
 
@@ -48,8 +48,11 @@ int main() {
 
   printf("Equal?: %d\n", s21_lazy_is_equal(&value_1, &value_2));
   printf("less?: %d\n", s21_is_less(value_1, value_2));
-  printf("less ro equal?: %d\n", s21_is_less_or_equal(value_1, value_2));
+  printf("less or equal?: %d\n", s21_is_less_or_equal(value_1, value_2));
   printf("greater?: %d\n", s21_is_greater(value_1, value_2));
+  printf("greater or equal?: %d\n", s21_is_greater_or_equal(value_1, value_2));
+  printf("equal?: %d\n", s21_is_equal(value_1, value_2));
+  printf("not equal?: %d\n", s21_is_not_equal(value_1, value_2));
 
   return 0;
 }
