@@ -98,7 +98,7 @@ uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy);
 /*Функция приведения мантиссы числа s21_decimal_lazy к заданной экспоненте*/
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
 
-/*Функция сравнения*/
+/*Функция сравнения числа s21_decimal*/
 int s21_lazy_is_equal(s21_decimal *value_1, s21_decimal *value_2);
 
 
