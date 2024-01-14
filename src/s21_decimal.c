@@ -18,8 +18,14 @@ void s21_decimal_lazy_print(s21_decimal_lazy* x) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0x10000000, 0x00000000, 0x00000000, 0x00000000}};
-  s21_decimal value_2 = {{0x00000001, 0x00000000, 0x00000000, 0x00000000}};
+  s21_decimal value_1 = {{0x00000052, 0x00000002, 0x1, 0x00000000}};
+  s21_decimal value_2 = {{0x00000052, 0x00000002, 0x1, 0x00000000}};
+  value_1.exponent.bits.sign = 0x0;
+  value_2.exponent.bits.sign = 0x0;
+  value_1.exponent.bits.exponent = 12;
+  value_2.exponent.bits.exponent = 11;
+
+
   // s21_decimal result = {0};
 
   s21_decimal_lazy x = {0};
