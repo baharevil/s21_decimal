@@ -25,7 +25,6 @@ int main() {
   value_1.exponent.bits.exponent = 14;
   value_2.exponent.bits.exponent = 14;
 
-
   // s21_decimal result = {0};
 
   s21_decimal_lazy x = {0};
