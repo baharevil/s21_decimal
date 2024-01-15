@@ -86,6 +86,9 @@ uint8_t s21_lazy_zeroing(s21_decimal_lazy *lazy, uint16_t size);
 /*Функция копирования обычного числа s21_decimal в s21_decimal_lazy*/
 uint8_t s21_dec_to_lazy_cp(s21_decimal *src, s21_decimal_lazy *dest);
 
+/*Функция копирования s21_decimal_lazy в обычное число s21_decimal*/
+uint8_t s21_lazy_to_dec(s21_decimal_lazy *src, s21_decimal *dest);
+
 /*Функция копирования числа s21_decimal_lazy в s21_decimal_lazy*/
 uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
 

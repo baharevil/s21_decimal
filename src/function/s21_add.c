@@ -26,8 +26,9 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   error = s21_add_lazy(&lazy1, &lazy2, &res);
 
-  // Нужна функция обратного копирования s21_lazy_to_dec()
-  //  s21_lazy_to_dec(&res, result);
+  // Функция обратного копирования s21_lazy_to_dec()
+  // копирует только 12 байт или менее, в зависимости от размера src->size
+  s21_lazy_to_dec(&res, result);
 
   if (lazy1.mantissa) free(lazy1.mantissa);
   if (lazy2.mantissa) free(lazy2.mantissa);
