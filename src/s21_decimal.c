@@ -17,9 +17,19 @@ void s21_decimal_lazy_print(s21_decimal_lazy* x) {
   printf(" exp: %u\n", x->exponent);
 }
 
+void s21_decimal_print(s21_decimal* x) {
+  uint8_t size = 0;
+  while (size < sizeof(x->mantissa.bytes)) {
+    printf("%hhx ", *(x->mantissa.bytes + size));
+    size++;
+  }
+  printf(" exp: %u\n", x->exponent.bits.exponent);
+}
+
 int main() {
   s21_decimal value_1 = {{0x00000002, 0x00000002, 0x1, 0x00000000}};
   s21_decimal value_2 = {{0x00000052, 0x00000002, 0x1, 0x00000000}};
+  s21_decimal dec_result = {0};
   value_1.exponent.bits.sign = 0x0;
   value_2.exponent.bits.sign = 0x0;
   value_1.exponent.bits.exponent = 14;
@@ -41,6 +51,10 @@ int main() {
   s21_decimal_lazy_print(&x);
   s21_decimal_lazy_print(&y);
   s21_decimal_lazy_print(&result);
+
+  s21_lazy_to_dec(&result, &dec_result);
+  s21_decimal_print(&dec_result);
+
   free(x.mantissa);
   free(y.mantissa);
   free(result.mantissa);

@@ -10,12 +10,14 @@ uint8_t s21_lazy_to_dec(s21_decimal_lazy *src, s21_decimal *dest) {
   result = (!src || !dest || !src->mantissa);
 
   if (!result) {
+    uint8_t end = sizeof(dest->mantissa.bytes);
     uint8_t size = src->size * (src->size <= sizeof(dest->mantissa.bytes)) +
                    sizeof(dest->mantissa.bytes) *
                        (src->size > sizeof(dest->mantissa.bytes));
     dest->exponent.bits.sign = src->sign;
     dest->exponent.bits.exponent = src->exponent;
-    result = (memcpy(dest->mantissa.bytes, src->mantissa, size) == NULL);
+    result = (memcpy(dest->mantissa.bytes + end - size,
+                     src->mantissa + src->size - size, size) == NULL);
   }
   return result;
 }
