@@ -7,18 +7,12 @@
 int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   int error = 0;
-  uint8_t *temp = NULL;
-  s21_decimal_lazy tmp = {0}, empty = {0};
+  uint16_t result_size = value_1->size + value_2->size;
+  s21_decimal_lazy tmp;
+  error |= s21_lazy_init(&tmp);
 
-  temp = realloc(result->mantissa, value_1->size + value_2->size);
-  if (temp != NULL) {
-    result->mantissa = temp;
-    result->size = value_1->size + value_2->size;
-    memset(result->mantissa, 0, result->size);
-    error = (s21_lazy_to_lazy_cp(result, &tmp) |
-             s21_lazy_to_lazy_cp(result, &empty));
-  } else
-    error = 1;
+  error |= s21_lazy_zeroing(&tmp, result_size);
+  error |= s21_lazy_zeroing(result, result_size);
 
   if (!error) {
     uint16_t res = 0;
@@ -33,15 +27,14 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
         carry = res >> sizeof(uint8_t) * CHAR_BIT;
         *(tmp.mantissa + i + j + 1) = carry;
       }
-      error = (s21_add_lazy(&tmp, result, result) |
-               s21_lazy_to_lazy_cp(&empty, &tmp));
+      error |= s21_add_lazy(&tmp, result, result);
+      error |= s21_lazy_zeroing(&tmp, result_size);
       carry = 0;
     }
 
     result->exponent = value_1->exponent + value_2->exponent;
 
     if (tmp.mantissa != NULL) free(tmp.mantissa);
-    if (empty.mantissa != NULL) free(empty.mantissa);
   }
 
   return error;
