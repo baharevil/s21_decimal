@@ -38,6 +38,8 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       carry = 0;
     }
 
+    result->exponent = value_1->exponent + value_2->exponent;
+
     if (tmp.mantissa != NULL) free(tmp.mantissa);
     if (empty.mantissa != NULL) free(empty.mantissa);
   }

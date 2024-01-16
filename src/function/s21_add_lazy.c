@@ -11,7 +11,23 @@
     2 - число слишком мало или равно отрицательной бесконечности
     3 - деление на 0
 */
+uint16_t s21_add_lazy_light(uint8_t *v1, uint8_t *v2, uint8_t *result,
+                            uint8_t size) {
+  uint8_t count = 0;
+  uint16_t res = 0, carry = 0;
 
+  while (count < size) {
+    res = *(v1 + count) + *(v2 + count) + carry;
+    *(result + count) = (uint8_t)res;
+    carry = res >> sizeof(uint8_t) * CHAR_BIT;
+    count++;
+    v1 = v2 = 0;
+  }
+
+  return carry;
+}
+
+// TODO: вынести сложение uint8_t отдельно
 int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   int error = 0;
@@ -21,6 +37,15 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
 
   if (result->size != size) {
     s21_lazy_zeroing(result, size);
+  }
+
+  // Нормализация значений + запомнаем значение экспоненты
+  if (value_1->exponent > value_2->exponent) {
+    result->exponent = value_1->exponent;
+    s21_lazy_normalization(value_2, value_1->exponent);
+  } else {
+    result->exponent = value_2->exponent;
+    s21_lazy_normalization(value_1, value_2->exponent);
   }
 
   uint16_t res = 0, carry = 0;
