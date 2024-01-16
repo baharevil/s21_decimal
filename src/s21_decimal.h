@@ -83,6 +83,9 @@ uint8_t s21_lazy_init(s21_decimal_lazy *lazy);
 /*Функция обнуления числа s21_decimal_lazy*/
 uint8_t s21_lazy_zeroing(s21_decimal_lazy *lazy, uint16_t size);
 
+/*Функция приведения размера мантиссы к параметру size*/
+uint8_t s21_lazy_resize(s21_decimal_lazy **lazy);
+
 /*Функция копирования обычного числа s21_decimal в s21_decimal_lazy*/
 uint8_t s21_dec_to_lazy_cp(s21_decimal *src, s21_decimal_lazy *dest);
 

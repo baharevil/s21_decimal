@@ -19,9 +19,8 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   uint16_t size = (value_1->size > value_2->size) * value_1->size +
                   (value_1->size <= value_2->size) * value_2->size;
 
-  if (result->size < size) {
-    result->mantissa = realloc(result->mantissa, sizeof(uint8_t) * size);
-    result->size = size;
+  if (result->size != size) {
+    s21_lazy_zeroing(result, size);
   }
 
   uint16_t res = 0, carry = 0;
@@ -41,9 +40,7 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   // Если остался перенос, доаллоцируем себе массив
   if (carry) {
     result->size++;
-    uint8_t *temp = realloc(result->mantissa, result->size);
-    if (temp) {
-      result->mantissa = temp;
+    if (s21_lazy_resize(&result) == 0) {
       result->mantissa[result->size - 1] = carry;
     } else
       error = 1;
