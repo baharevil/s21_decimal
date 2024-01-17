@@ -3,12 +3,14 @@
 
 #include "s21_decimal.h"
 
+//! BUG: 42 ошибки по valgrind'у
 int s21_lazy_is_equal(s21_decimal *value_1, s21_decimal *value_2) {
   int result;
 
   if (value_1->exponent.bits.sign == value_2->exponent.bits.sign) {
     int exp_min = 2;
     uint8_t exp = value_1->exponent.bits.exponent;
+    
     if (value_1->exponent.bits.exponent < value_2->exponent.bits.exponent) {
       exp = value_2->exponent.bits.exponent;
       exp_min = 1;
@@ -24,12 +26,18 @@ int s21_lazy_is_equal(s21_decimal *value_1, s21_decimal *value_2) {
       s21_lazy_normalization(&value_1_l, exp);
     else
       s21_lazy_normalization(&value_2_l, exp);
+
     result = memcmp(value_1_l.mantissa, value_2_l.mantissa, value_1_l.size);
+    
     if (value_1_l.mantissa != NULL) free(value_1_l.mantissa);
     if (value_2_l.mantissa != NULL) free(value_2_l.mantissa);
-  } else if (value_1->exponent.bits.sign < value_2->exponent.bits.sign) {
+  } 
+  
+  else if (value_1->exponent.bits.sign < value_2->exponent.bits.sign) {
     result = 1;
-  } else {
+  } 
+  
+  else {
     result = -1;
   }
   return result;

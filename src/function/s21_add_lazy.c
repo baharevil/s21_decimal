@@ -2,16 +2,6 @@
 
 #include "s21_decimal.h"
 
-/*
-    Арифметические операторы. Сумма.
-    Функции возвращают код ошибки:
-
-    0 - OK
-    1 - число слишком велико или равно бесконечности
-    2 - число слишком мало или равно отрицательной бесконечности
-    3 - деление на 0
-*/
-
 // Работает только при равных размерах
 uint16_t s21_add_uint8_t(uint8_t *v1, uint8_t *v2, uint8_t *result,
                          uint8_t size) {
@@ -27,6 +17,16 @@ uint16_t s21_add_uint8_t(uint8_t *v1, uint8_t *v2, uint8_t *result,
 
   return carry;
 }
+
+/*
+    Арифметические операторы. Сумма.
+    Функции возвращают код ошибки:
+
+    0 - OK
+    1 - число слишком велико или равно бесконечности
+    2 - число слишком мало или равно отрицательной бесконечности
+    3 - деление на 0
+*/
 
 // TODO: коды ошибок
 int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
@@ -50,6 +50,8 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   uint16_t res = 0, carry = 0;
   uint8_t count = 0, v1 = 0, v2 = 0;
 
+  //! BUG: выход за границы массива.
+  // Одно из решений - выровнить размеры и вызвать s21_add_uint8_t()
   while (count < size) {
     if (count <= value_1->size) v1 = *(value_1->mantissa + count);
     if (count <= value_2->size) v2 = *(value_2->mantissa + count);

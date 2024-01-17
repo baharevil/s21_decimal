@@ -13,6 +13,7 @@
 */
 
 // TODO: коды ошибок
+//! BUG: обработка знака
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
 
@@ -33,6 +34,8 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   if (lazy1.mantissa) free(lazy1.mantissa);
   if (lazy2.mantissa) free(lazy2.mantissa);
+  if (res.mantissa) free(res.mantissa);
+
 
   return error;
 }

@@ -32,6 +32,7 @@ void s21_inverse(s21_decimal_lazy *value) {
 }
 
 // TODO: коды ошибок
+// TODO: -0
 int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   // Возвращаемое значение
