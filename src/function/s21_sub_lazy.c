@@ -39,19 +39,6 @@ void s21_inverse(s21_decimal_lazy *value) {
     *((*value).mantissa + size) = ~*((*value).mantissa + size);
 }
 
-// resize и зануление с сохранением старого значения
-int s21_resize_and_set(s21_decimal_lazy *ptr, uint8_t size) {
-  int error = 0;
-  uint16_t tmp_size = 0;
-
-  tmp_size = ptr->size;
-  ptr->size = size;
-  error |= s21_lazy_resize(&ptr);
-  memset((ptr->mantissa + tmp_size), 0, size - tmp_size);
-
-  return error;
-}
-
 int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   // Возвращаемое значение
@@ -100,11 +87,11 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       ptr = value_1;
 
     // Увеличиваем
-    error |= s21_resize_and_set(ptr, size);
+    error |= s21_lazy_resize(ptr, size);
 
     // Увеличиваем и единицу
     ptr = &lazy_one;
-    error |= s21_resize_and_set(ptr, size);
+    error |= s21_lazy_resize(ptr, size);
 
     if (result->size != size) s21_lazy_zeroing(result, size);
   }

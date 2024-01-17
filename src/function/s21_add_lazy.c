@@ -64,8 +64,7 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
 
   // Если остался перенос, доаллоцируем себе массив
   if (carry) {
-    result->size++;
-    if (s21_lazy_resize(&result) == 0) {
+    if (s21_lazy_resize(result, result->size + 1) == 0) {
       result->mantissa[result->size - 1] = carry;
     } else
       error = 1;
