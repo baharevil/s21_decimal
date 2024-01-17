@@ -8,9 +8,6 @@ int s21_memrevcmp(const void *s1, const void *s2, uint16_t size) {
 
     if (size == 0) size = 12;
 
-    s1_ptr += size;
-    s2_ptr += size;
-
     while (size > 0 && !result) {
       if (*(s1_ptr + size - 1) > *(s2_ptr + size - 1))
         result = 1;
