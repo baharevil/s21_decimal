@@ -13,6 +13,26 @@
     3 - деление на 0
 */
 
+int8_t s21_decimal_lazy_cmp(s21_decimal_lazy *value_1,
+                            s21_decimal_lazy *value_2) {
+  int8_t result = 0;
+
+  if (value_1->size == value_2->size) {
+    uint16_t count = value_1->size - 1;
+    while (count > 0) {
+      if (*(value_1->mantissa + count) != *(value_2->mantissa + count))
+        result = (*(value_1->mantissa + count) > *(value_2->mantissa + count)) -
+                 (*(value_1->mantissa + count) < *(value_2->mantissa + count));
+      count--;
+    }
+
+  } else {
+    result = (value_1->size > value_2->size) - (value_1->size < value_2->size);
+  }
+
+  return result;
+}
+
 // инверсия бит
 void s21_inverse(s21_decimal_lazy *value) {
   for (uint16_t size = 0; size < value->size; size++)
@@ -100,8 +120,8 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       Но если ему дать, напрмер, числа v1 = 0х100 & v2 = 0x1,
       то получим отрицательное число (v1 < v2).
     */
-    int8_t cmp = memcmp(value_1->mantissa, value_2->mantissa, value_1->size);
-    cmp = (cmp > 0) - (cmp < 0);
+    // int8_t cmp = memcmp(value_1->mantissa, value_2->mantissa, value_1->size);
+    int8_t cmp = s21_decimal_lazy_cmp(value_1, value_2);
 
     // если слева "+", а справа "-", то это просто сложение (5 - (-1) = 5 + 1)
     if (value_1->sign == 0 && value_2->sign == 1)
