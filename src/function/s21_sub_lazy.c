@@ -18,11 +18,11 @@ int8_t s21_decimal_lazy_cmp(s21_decimal_lazy *value_1,
   int8_t result = 0;
 
   if (value_1->size == value_2->size) {
-    uint16_t count = value_1->size - 1;
+    uint16_t count = value_1->size;
     while (count > 0) {
-      if (*(value_1->mantissa + count) != *(value_2->mantissa + count))
-        result = (*(value_1->mantissa + count) > *(value_2->mantissa + count)) -
-                 (*(value_1->mantissa + count) < *(value_2->mantissa + count));
+      if (*(value_1->mantissa + count - 1) != *(value_2->mantissa + count - 1))
+        result = (*(value_1->mantissa + count - 1) > *(value_2->mantissa + count - 1)) -
+                 (*(value_1->mantissa + count - 1) < *(value_2->mantissa + count - 1));
       count--;
     }
 
