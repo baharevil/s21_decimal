@@ -3,16 +3,7 @@
 
 #include "s21_decimal.h"
 
-/*
-    Арифметические операторы. Сумма.
-    Функции возвращают код ошибки:
-
-    0 - OK
-    1 - число слишком велико или равно бесконечности
-    2 - число слишком мало или равно отрицательной бесконечности
-    3 - деление на 0
-*/
-
+// TODO: Вынести в s21_decimal.h + *.с
 int8_t s21_decimal_lazy_cmp(s21_decimal_lazy *value_1,
                             s21_decimal_lazy *value_2) {
   int8_t result = 0;
@@ -21,14 +12,15 @@ int8_t s21_decimal_lazy_cmp(s21_decimal_lazy *value_1,
     uint16_t count = value_1->size;
     while (count > 0) {
       if (*(value_1->mantissa + count - 1) != *(value_2->mantissa + count - 1))
-        result = (*(value_1->mantissa + count - 1) > *(value_2->mantissa + count - 1)) -
-                 (*(value_1->mantissa + count - 1) < *(value_2->mantissa + count - 1));
+        result = (*(value_1->mantissa + count - 1) >
+                  *(value_2->mantissa + count - 1)) -
+                 (*(value_1->mantissa + count - 1) <
+                  *(value_2->mantissa + count - 1));
       count--;
     }
 
-  } else {
+  } else
     result = (value_1->size > value_2->size) - (value_1->size < value_2->size);
-  }
 
   return result;
 }
@@ -39,6 +31,7 @@ void s21_inverse(s21_decimal_lazy *value) {
     *((*value).mantissa + size) = ~*((*value).mantissa + size);
 }
 
+// TODO: коды ошибок
 int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   // Возвращаемое значение
@@ -99,15 +92,6 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   // Рассчет
   if (!error) {
     // Сравниваем нормализованные мантиссы (size у них одинаковый)
-    // ! Вот тут баг, memcmp врет. Нужна функция сравнения s21_decimal_lazy
-    /*
-      Если ему дать, напрмер, числа v1 = 0х10 & v2 = 0x1,
-      то получим положительное число (v1 > v2).
-
-      Но если ему дать, напрмер, числа v1 = 0х100 & v2 = 0x1,
-      то получим отрицательное число (v1 < v2).
-    */
-    // int8_t cmp = memcmp(value_1->mantissa, value_2->mantissa, value_1->size);
     int8_t cmp = s21_decimal_lazy_cmp(value_1, value_2);
 
     // если слева "+", а справа "-", то это просто сложение (5 - (-1) = 5 + 1)
@@ -123,48 +107,31 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       result->sign = 1;
     }
 
-    // TODO: изменить 2 низних условия, они не логичены
     // Метод через дополнительный код
-    // пример случаев: (5 - 1) или (-1 - (-5) == -1 + 5)
-    else if ((cmp == 1 && value_1->sign == value_2->sign) ||
-             (cmp == -1 && value_1->sign != value_2->sign)) {
-      s21_decimal_lazy *ptr = NULL;
-
-      if (value_1->sign == value_2->sign)
-        ptr = value_2;
-      else
-        ptr = value_1;
-
-      s21_inverse(ptr);
-      s21_add_uint8_t(ptr->mantissa, lazy_one.mantissa, ptr->mantissa,
-                      ptr->size);
+    // пример случаев: (5 - 1) или (-5 - (-1) == -5 + 1)
+    else if (cmp == 1) {
+      s21_inverse(value_2);
+      s21_add_uint8_t(value_2->mantissa, lazy_one.mantissa, value_2->mantissa,
+                      value_2->size);
       s21_add_uint8_t(value_1->mantissa, value_2->mantissa, result->mantissa,
                       value_1->size);
 
       result->exponent = value_1->exponent;
       result->size = value_1->size;
-      result->sign = 0;
+      result->sign = value_1->sign;
     }
 
     // метод через инверсию
-    // пример случаев: (1 - 5) или (-5 - (-1) == -5 + 1)
-    else if ((cmp == -1 && value_1->sign == value_2->sign) ||
-             (cmp == 1 && value_1->sign != value_2->sign)) {
-      s21_decimal_lazy *ptr = NULL;
-
-      if (value_1->sign == value_2->sign)
-        ptr = value_2;
-      else
-        ptr = value_1;
-
-      s21_inverse(ptr);
+    // пример случаев: (1 - 5) или (-1 - (-5) == -1 + 5)
+    else if (cmp == -1) {
+      s21_inverse(value_2);
       s21_add_uint8_t(value_1->mantissa, value_2->mantissa, result->mantissa,
                       value_1->size);
       s21_inverse(result);
 
       result->exponent = value_1->exponent;
       result->size = value_1->size;
-      result->sign = 1;
+      result->sign = !value_1->sign;
     }
 
     else {

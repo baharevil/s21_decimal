@@ -3,7 +3,7 @@
 #include "s21_decimal.h"
 
 /*
-    Арифметические операторы. Сумма.
+    Арифметические операторы. Вычитание.
     Функции возвращают код ошибки:
 
     0 - OK
@@ -13,7 +13,7 @@
 */
 
 // TODO: коды ошибок
-int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
+int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
 
   s21_decimal_lazy lazy1, lazy2, res;
@@ -25,7 +25,7 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   s21_dec_to_lazy_cp(&value_1, &lazy1);
   s21_dec_to_lazy_cp(&value_2, &lazy2);
 
-  error = s21_add_lazy(&lazy1, &lazy2, &res);
+  error = s21_sub_lazy(&lazy1, &lazy2, &res);
 
   // Функция обратного копирования s21_lazy_to_dec()
   // копирует только 12 байт или менее, в зависимости от размера src->size

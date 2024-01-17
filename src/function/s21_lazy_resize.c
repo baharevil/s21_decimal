@@ -16,11 +16,9 @@ uint8_t s21_lazy_resize(s21_decimal_lazy *lazy, uint16_t new_size) {
     result = (temp == NULL);
     if (!result) {
       lazy->mantissa = temp;
-      if (diff > 0)
-        memset((lazy->mantissa + lazy->size), 0, diff);
+      if (diff > 0) memset((lazy->mantissa + lazy->size), 0, diff);
       lazy->size = new_size;
     }
-      
   }
 
   return result;

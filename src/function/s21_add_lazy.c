@@ -28,6 +28,7 @@ uint16_t s21_add_uint8_t(uint8_t *v1, uint8_t *v2, uint8_t *result,
   return carry;
 }
 
+// TODO: коды ошибок
 int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   int error = 0;
@@ -35,9 +36,7 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   uint16_t size = (value_1->size > value_2->size) * value_1->size +
                   (value_1->size <= value_2->size) * value_2->size;
 
-  if (result->size != size) {
-    s21_lazy_zeroing(result, size);
-  }
+  if (result->size != size) s21_lazy_zeroing(result, size);
 
   // Нормализация значений + запомнаем значение экспоненты
   if (value_1->exponent > value_2->exponent) {

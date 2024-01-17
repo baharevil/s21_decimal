@@ -29,11 +29,10 @@ void s21_decimal_print(s21_decimal* x) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0x00000001, 0x0, 0x0, 0x00000000}};
-  s21_decimal value_2 = {{0x00000001, 0x0, 0x0, 0x00000000}};
+  s21_decimal value_1 = {{0x00000000, 0x1, 0x0, 0x80000000}};
+  s21_decimal value_2 = {{0x00000005, 0x0, 0x0, 0x80000000}};
   s21_decimal dec_result = {0};
   value_2.exponent.bits.exponent = 2;
-  // s21_decimal result = {0};
 
   s21_decimal_lazy x = {0};
   s21_decimal_lazy y = {0};
