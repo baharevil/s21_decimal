@@ -14,5 +14,5 @@ uint8_t s21_lazy_zeroing(s21_decimal_lazy *lazy, uint16_t size) {
     lazy->exponent = 0;
     memset(lazy->mantissa, 0, size);
   }
-  return (temp != NULL);
+  return (temp == NULL);
 }
