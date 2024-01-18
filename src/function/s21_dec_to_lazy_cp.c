@@ -13,11 +13,12 @@ uint8_t s21_dec_to_lazy_cp(s21_decimal *src, s21_decimal_lazy *dest) {
     uint8_t *temp = NULL;
     uint16_t size = s21_search_msb(src);
     
-    // size может быть == 0 если мантисса == 0
-    if (size != 0){
-      temp = realloc(dest->mantissa, sizeof(uint8_t) * size);
-      result = (temp == NULL);
-    } 
+    // size не может быть == 0 если мантисса == 0
+    // Для хранения пустого s21_decimal нужен 1 байт содержащий 0
+    if (!size) size = 1;
+
+    temp = realloc(dest->mantissa, sizeof(uint8_t) * size);
+    result = (temp == NULL);
 
     if (temp != NULL) {
       dest->sign = src->exponent.bits.sign;

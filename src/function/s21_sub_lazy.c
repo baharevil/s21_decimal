@@ -3,28 +3,6 @@
 
 #include "s21_decimal.h"
 
-// TODO: Вынести в s21_decimal.h + *.с
-int8_t s21_decimal_lazy_cmp(s21_decimal_lazy *value_1,
-                            s21_decimal_lazy *value_2) {
-  int8_t result = 0;
-
-  if (value_1->size == value_2->size) {
-    uint16_t count = value_1->size;
-    while (count > 0) {
-      if (*(value_1->mantissa + count - 1) != *(value_2->mantissa + count - 1))
-        result = (*(value_1->mantissa + count - 1) >
-                  *(value_2->mantissa + count - 1)) -
-                 (*(value_1->mantissa + count - 1) <
-                  *(value_2->mantissa + count - 1));
-      count--;
-    }
-
-  } else
-    result = (value_1->size > value_2->size) - (value_1->size < value_2->size);
-
-  return result;
-}
-
 // инверсия бит
 void s21_inverse(s21_decimal_lazy *value) {
   for (uint16_t size = 0; size < value->size; size++)
@@ -93,7 +71,7 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   // Рассчет
   if (!error) {
     // Сравниваем нормализованные мантиссы (size у них одинаковый)
-    int8_t cmp = s21_decimal_lazy_cmp(value_1, value_2);
+    int8_t cmp = s21_memrevcmp(value_1->mantissa, value_2->mantissa, result->size);
 
     // если слева "+", а справа "-", то это просто сложение (5 - (-1) = 5 + 1)
     if (value_1->sign == 0 && value_2->sign == 1)
