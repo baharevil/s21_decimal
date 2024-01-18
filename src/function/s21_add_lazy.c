@@ -53,8 +53,8 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   //! BUG: выход за границы массива.
   // Одно из решений - выровнить размеры и вызвать s21_add_uint8_t()
   while (count < size) {
-    if (count <= value_1->size) v1 = *(value_1->mantissa + count);
-    if (count <= value_2->size) v2 = *(value_2->mantissa + count);
+    if (count < value_1->size) v1 = *(value_1->mantissa + count);
+    if (count < value_2->size) v2 = *(value_2->mantissa + count);
 
     res = v1 + v2 + carry;
     *(result->mantissa + count) = (uint8_t)res;

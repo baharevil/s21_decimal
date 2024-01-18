@@ -65,7 +65,6 @@ typedef struct s21_decimal_lazy {
 /*
     Функции для служебного пользования
 */
-void bin_print(unsigned int length, void *pointer, int options);
 
 /*
 Функция поиска старшего значащего бита (Most Significant Bit) в числе
