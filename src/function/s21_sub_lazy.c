@@ -74,15 +74,16 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     int8_t cmp = s21_memrevcmp(value_1->mantissa, value_2->mantissa, result->size);
 
     // если слева "+", а справа "-", то это просто сложение (5 - (-1) = 5 + 1)
-    if (value_1->sign == 0 && value_2->sign == 1)
-      s21_add_uint8_t(value_1->mantissa, value_2->mantissa, result->mantissa,
-                      value_1->size);
+    if (value_1->sign == 0 && value_2->sign == 1) {
+      value_2->sign = 0;
+      s21_add_lazy(value_1, value_2, result);
+    }
 
     // если слева "-", а справа "+", то это "отрицательное" сложение (-5 - 1 =
     // -6)
     else if (value_1->sign == 1 && value_2->sign == 0) {
-      s21_add_uint8_t(value_1->mantissa, value_2->mantissa, result->mantissa,
-                      value_1->size);
+      value_2->sign = value_1->sign = 0;
+      s21_add_lazy(value_1, value_2, result);
       result->sign = 1;
     }
 
@@ -114,7 +115,9 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     }
 
     else {
-      result->exponent = result->sign = 0;
+      result->exponent = 0;
+      result->sign = value_1->sign;
+      if (result->size != 1) error |= s21_lazy_resize(result, 1);
     }
   }
 

@@ -29,11 +29,11 @@ void s21_decimal_print(s21_decimal* x) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
-  s21_decimal value_2 = {{0x0, 0x0, 0x0, 0x80000000}};
+  s21_decimal value_1 = {{0x0, 0x0, 0x0, 0x80000000}};
+  s21_decimal value_2 = {{0x0, 0x0, 0x0, 0x00000000}};
   s21_decimal dec_result = {0};
 
-  s21_add(value_1, value_2, &dec_result);
+  s21_sub(value_1, value_2, &dec_result);
   s21_decimal_print(&dec_result);
 
   // s21_decimal_lazy x = {0};

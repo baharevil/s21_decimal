@@ -33,6 +33,7 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   if (lazy1.mantissa) free(lazy1.mantissa);
   if (lazy2.mantissa) free(lazy2.mantissa);
+  if (res.mantissa) free(res.mantissa);
 
   return error;
 }
