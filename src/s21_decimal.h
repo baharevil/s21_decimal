@@ -107,7 +107,11 @@ uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy);
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
 
 /*Функция сравнения числа s21_decimal*/
-int s21_lazy_is_equal(s21_decimal *value_1, s21_decimal *value_2);
+int s21_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
+
+/*Функция конвертирует число s21_decimal в s21_decimal_lazy*/
+s21_decimal_lazy s21_decimal_to_lazy(s21_decimal value);
+
 
 /*
     Арифметические операторы.

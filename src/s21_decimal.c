@@ -29,12 +29,12 @@ void s21_decimal_print(s21_decimal* x) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0x0, 0x0, 0x0, 0x80000000}};
-  s21_decimal value_2 = {{0x0, 0x0, 0x0, 0x00000000}};
-  s21_decimal dec_result = {0};
+  s21_decimal value_1 = {{0x00000123, 0x00000000, 0x00000000, 0x00030000}};
+  s21_decimal value_2 = {{0x00000123, 0x00000000, 0x00000000, 0x001A0000}};
+  // s21_decimal dec_result = {0};
 
-  s21_sub(value_1, value_2, &dec_result);
-  s21_decimal_print(&dec_result);
+  // s21_sub(value_1, value_2, &dec_result);
+  // s21_decimal_print(&dec_result);
 
   // s21_decimal_lazy x = {0};
   // s21_decimal_lazy y = {0};
@@ -64,14 +64,19 @@ int main() {
   // free(x.mantissa);
   // free(y.mantissa);
   // free(result.mantissa);
+  s21_decimal_lazy value_1_l = s21_decimal_to_lazy(value_1);
+  s21_decimal_lazy value_2_l = s21_decimal_to_lazy(value_2);
 
-  // printf("Equal?: %d\n", s21_lazy_is_equal(&value_1, &value_2));
-  // printf("less?: %d\n", s21_is_less(value_1, value_2));
-  // printf("less or equal?: %d\n", s21_is_less_or_equal(value_1, value_2));
-  // printf("greater?: %d\n", s21_is_greater(value_1, value_2));
-  // printf("greater or equal?: %d\n", s21_is_greater_or_equal(value_1,
-  // value_2)); printf("equal?: %d\n", s21_is_equal(value_1, value_2));
-  // printf("not equal?: %d\n", s21_is_not_equal(value_1, value_2));
+  s21_decimal_print(&value_1);
+  s21_decimal_print(&value_2);
+
+  printf("Equal?: %d\n", s21_equal_lazy(&value_1_l, &value_2_l));
+  printf("less?: %d\n", s21_is_less(value_1, value_2));
+  printf("less or equal?: %d\n", s21_is_less_or_equal(value_1, value_2));
+  printf("greater?: %d\n", s21_is_greater(value_1, value_2));
+  printf("greater or equal?: %d\n", s21_is_greater_or_equal(value_1, value_2));
+  printf("equal?: %d\n", s21_is_equal(value_1, value_2));
+  printf("not equal?: %d\n", s21_is_not_equal(value_1, value_2));
 
   return 0;
 }
