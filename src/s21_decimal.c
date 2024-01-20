@@ -29,19 +29,19 @@ void s21_decimal_print(s21_decimal* x) {
 }
 
 int main() {
-
-  s21_decimal value_1 = {{0x10111010, 0x0, 0x0, 0x00000000}};
-  s21_decimal value_2 = {{0x00010000, 0x0, 0x0, 0x00000000}};
+  s21_decimal value_1 = {{0xf, 0xfff, 0xabcde, 0x00000000}};
+  s21_decimal value_2 = {{0x0, 0x1, 0xfff, 0x00000000}};
   s21_decimal dec_result = {0};
 
   // Найди отличия в результатах:
   //----------------- Ver1 -------------------
-  // s21_sub(value_1, value_2, &dec_result);
+  s21_sub(value_1, value_2, &dec_result);
+  s21_decimal_print(&dec_result);
 
   //----------------- Ver2 -------------------
   s21_decimal *lvalue = NULL, *rvalue = NULL;
 
-  if(s21_is_less_or_equal(value_1, value_2)) {
+  if (s21_is_less_or_equal(value_1, value_2)) {
     lvalue = &value_2;
     rvalue = &value_1;
     dec_result.exponent.bits.sign = 1;
@@ -52,10 +52,10 @@ int main() {
 
   uint8_t carry = 0;
   uint16_t res = 0;
-  for (size_t i = 0; i < (size_t) sizeof(s21_uint96_t); i++) {
-      res = lvalue->mantissa.bytes[i] - rvalue->mantissa.bytes[i] - carry;
-      dec_result.mantissa.bytes[i] = (uint8_t) res;
-      carry = ((res >> sizeof(uint8_t) * CHAR_BIT) > 0);
+  for (size_t i = 0; i < (size_t)sizeof(s21_uint96_t); i++) {
+    res = lvalue->mantissa.bytes[i] - rvalue->mantissa.bytes[i] - carry;
+    dec_result.mantissa.bytes[i] = (uint8_t)res;
+    carry = ((res >> sizeof(uint8_t) * CHAR_BIT) > 0);
   }
   //------------------------------------------
 
@@ -99,8 +99,8 @@ int main() {
   // printf("less?: %d\n", s21_is_less(value_1, value_2));
   // printf("less or equal?: %d\n", s21_is_less_or_equal(value_1, value_2));
   // printf("greater?: %d\n", s21_is_greater(value_1, value_2));
-  // printf("greater or equal?: %d\n", s21_is_greater_or_equal(value_1, value_2));
-  // printf("equal?: %d\n", s21_is_equal(value_1, value_2));
+  // printf("greater or equal?: %d\n", s21_is_greater_or_equal(value_1,
+  // value_2)); printf("equal?: %d\n", s21_is_equal(value_1, value_2));
   // printf("not equal?: %d\n", s21_is_not_equal(value_1, value_2));
 
   return 0;
