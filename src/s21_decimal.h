@@ -62,58 +62,11 @@ typedef struct s21_decimal_lazy {
 #endif /* Little endian.  */
 } s21_decimal_lazy;
 
-/*
-    Функции для служебного пользования
-*/
+/*!
+  @defgroup ArifmeticOperators Арифметические операторы
+  @brief Модуль арифметических операций над s21_decimal
 
-/*
-Функция поиска старшего значащего бита (Most Significant Bit) в числе
-s21_decimal. Возвращает целочисленное количество байт от старшего значащего бита
-до начала мантиссы, т.е. реальный размер в байтах.
-*/
-uint8_t s21_search_msb(s21_decimal *decimal);
-
-/*Функция создана и работает приближено к memcmp(), но реверсивно*/
-int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
-
-/*Функция определения пуст стандартный decimal или нет. 0 - не пуст, 1 - пуст*/
-uint8_t s21_decimal_is_null(s21_decimal *decimal);
-
-/*Функция инициализации s21_decimal_lazy*/
-uint8_t s21_lazy_init(s21_decimal_lazy *lazy);
-
-/*Функция обнуления числа s21_decimal_lazy*/
-uint8_t s21_lazy_zeroing(s21_decimal_lazy *lazy, uint16_t size);
-
-/*Функция приведения размера мантиссы к параметру new_size*/
-uint8_t s21_lazy_resize(s21_decimal_lazy *lazy, uint16_t new_size);
-
-/*Функция копирования обычного числа s21_decimal в s21_decimal_lazy*/
-uint8_t s21_dec_to_lazy_cp(s21_decimal *src, s21_decimal_lazy *dest);
-
-/*Функция копирования s21_decimal_lazy в обычное число s21_decimal*/
-uint8_t s21_lazy_to_dec(s21_decimal_lazy *src, s21_decimal *dest);
-
-/*Функция копирования числа s21_decimal_lazy в s21_decimal_lazy*/
-uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
-
-/*Функция умножения s21_decimal_lazy на число 10*/
-uint8_t s21_mul_lazy_to_10(s21_decimal_lazy *lazy);
-
-/*Функция деления s21_decimal_lazy на число 10*/
-uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy);
-
-/*Функция приведения мантиссы числа s21_decimal_lazy к заданной экспоненте*/
-uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
-
-/*Функция сравнения числа s21_decimal*/
-int s21_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
-
-
-/*
-    Арифметические операторы.
-    Функции возвращают код ошибки:
-
+  @return Функции возвращают код ошибки:
     0 - OK
     1 - число слишком велико или равно бесконечности
     2 - число слишком мало или равно отрицательной бесконечности
@@ -122,42 +75,35 @@ int s21_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 typedef enum arifmetic_error {
   arifm_ok = 0,
   inf,
-  zero,
+  min_inf,
   div_by_0
 } arifmetic_error;
 
-int s21_add(s21_decimal value_1, s21_decimal value_2,
-            s21_decimal *result);  // -
-int s21_sub(s21_decimal value_1, s21_decimal value_2,
-            s21_decimal *result);  // -
-int s21_mul(s21_decimal value_1, s21_decimal value_2,
-            s21_decimal *result);  // -
-int s21_div(s21_decimal value_1, s21_decimal value_2,
-            s21_decimal *result);  // -
-
-uint16_t s21_add_uint8_t(uint8_t *v1, uint8_t *v2, uint8_t *result,
-                         uint8_t size);
-
+int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
-
 int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
-
 int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
-
 int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
+uint16_t s21_add_uint8_t(uint8_t *v1, uint8_t *v2, uint8_t *result,
+                         uint8_t size);
+uint8_t s21_mul_lazy_to_10(s21_decimal_lazy *lazy);
+uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy);
 
-/*
-    Операторы сравнение.
-    Возвращаемое значение:
+/*!
+  @defgroup ComparisonOperators Операторы сравнение
+  @brief Модуль функций сравнения значений s21_decimal
 
+  @return Функции возвращают код ошибки:
     0 - FALSE
     1 - TRUE
 */
-
 typedef enum comparison_error { false = 0, true } comparison_error;
 
 int s21_is_less(s21_decimal, s21_decimal);              // -
@@ -166,35 +112,62 @@ int s21_is_greater(s21_decimal, s21_decimal);           // -
 int s21_is_greater_or_equal(s21_decimal, s21_decimal);  // -
 int s21_is_equal(s21_decimal, s21_decimal);             // -
 int s21_is_not_equal(s21_decimal, s21_decimal);         // -
+int s21_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
+uint8_t s21_decimal_is_null(s21_decimal *decimal);
 
-/*
-    Преобразователи.
-    Возвращаемое значение - код ошибки:
+/*!
+  @defgroup ConverterOperators Преобразователи
+  @brief Конвертация s21_decimal в другой тип
 
+  @return Функции возвращают код ошибки:
     0 - OK
     1 - ошибка конвертации
-*/
 
+  @bug А зачем функция s21_decimal_to_lazy ?
+*/
 typedef enum converter_error { conv_ok = 0, conv_false } converter_error;
 
 int s21_from_int_to_decimal(int src, s21_decimal *dst);      // -
 int s21_from_float_to_decimal(float src, s21_decimal *dst);  // -
 int s21_from_decimal_to_int(s21_decimal src, int *dst);      // -
 int s21_from_decimal_to_float(s21_decimal src, float *dst);  // -
+uint8_t s21_from_decimal_to_lazy(s21_decimal *src, s21_decimal_lazy *dest);
+uint8_t s21_from_lazy_to_decomal(s21_decimal_lazy *src, s21_decimal *dest);
+s21_decimal_lazy s21_decimal_to_lazy(s21_decimal value);
 
-/*
-    Другие функции.
-    Возвращаемое значение - код ошибки:
 
+/*!
+  @defgroup AnotherFunction Другие функции
+  @brief Модуль других функций над s21_decimal
+
+  @return Функции возвращают код ошибки:
     0 - OK
     1 - ошибка вычисления
 */
-
-typedef enum other_error { ok = 0, calc_error } other_error;
+typedef enum another_error { ok = 0, calc_error } other_error;
 
 int s21_floor(s21_decimal value, s21_decimal *result);     // -
+int s21_negate(s21_decimal value, s21_decimal *result);    // -
 int s21_round(s21_decimal value, s21_decimal *result);     // -
 int s21_truncate(s21_decimal value, s21_decimal *result);  // -
-int s21_negate(s21_decimal value, s21_decimal *result);    // -
+
+
+/*!
+  @defgroup Support Функции для служебного пользования
+  @brief Вспомогательные функции
+
+  @return Функции возвращают код ошибки:
+    0 - OK
+    1 - ошибка
+
+  @bug Задвоение функций. s21_lazy_zeroing & s21_lazy_resize
+*/
+uint8_t s21_lazy_init(s21_decimal_lazy *lazy);
+uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
+uint8_t s21_lazy_resize(s21_decimal_lazy *lazy, uint16_t new_size);
+uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
+uint8_t s21_lazy_zeroing(s21_decimal_lazy *lazy, uint16_t size);
+int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
+uint8_t s21_search_msb(s21_decimal *decimal);
 
 #endif

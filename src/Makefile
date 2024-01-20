@@ -1,37 +1,52 @@
-OS 				:= $(shell uname -s)
-CC 				= gcc
-# Отключил -pedantic. Компилятор с ним не хотел компилиться
-CFLAGS 			= -Wall -Werror -Wextra -std=c11 -I.
+OS 					:= $(shell uname -s)
+CC 					= gcc
+CFLAGS 			= -Wall -Werror -Wextra -std=c11 -I. -pedantic
 DEBUG 			= -g
+VALFLAGS		= --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all --track-origins=yes -s
 LDFLAGS 		:= $(if $(filter Linux, $(OS)),$(shell pkg-config --libs check),-lcheck)
 OPEN_CMD 		:= $(if $(filter Linux, $(OS)),xdg-open,open)
 
 project_name 	= s21_decimal
 report_dir		= gcovr-report
-func_dir 		= function
-test_dir 		= .
+func_dir 			= function
+test_dir 			= .
 
-lib_name 		:= $(addsuffix .a, $(project_name))
+lib_name 			:= $(addsuffix .a, $(project_name))
 test_lib_name	:= $(addprefix  $(test_dir)/, $(addsuffix _test.a, $(project_name)))
-dirs_for_obj	:= $(func_dir) $(test_dir)
-obj_list 		:= $(patsubst %.c, %.o, $(wildcard $(addsuffix /*.c, $(dirs_for_obj))))
+import				= $(test_lib_name) $(lib_name)
+
+find_command		= find $(1) -iname "*.c"
+depenc_command	= $(filter $(1)/%.o, $(obj_list))
+
+func_source			:= $(shell $(call find_command, $(func_dir)))
+test_source_1		= $(shell $(call find_command, $(test_dir)))
+test_source_2		:= $(filter-out $(test_dir)/$(func_dir)/%.c $(test_dir)/tests/%.c, $(shell $(call find_command, $(test_dir))))
+obj_list 				:=  $(patsubst %.c, %.o, $(func_source) $(if $(filter ., $(test_dir)), $(test_source_2), $(test_source_1)))
+
 
 all: $(lib_name)
 
+
+#---- BASIC ----#
 .PHONY: test
-test: $(test_lib_name) $(lib_name) 
+test: $(import)
 	$(CC) -o $@ -pipe -L. $(addprefix -l:, $^) $(LDFLAGS)
-	@$(if $(filter valgrind, $(val)), $(val) --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all --track-origins=yes -s) ./$@
+	@$(if $(filter valgrind, $(val)), $(val) $(VALFLAGS)) ./$@
 
-$(lib_name): $(filter $(func_dir)/%.o, $(obj_list))
-	ar crs $@ $^
-
-$(test_lib_name): $(filter $(test_dir)/%.o, $(obj_list))
+$(lib_name): $(call depenc_command, $(func_dir))
+$(test_lib_name): $(call depenc_command, $(test_dir))
+%.a:
 	ar csr $@ $?
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(if $(filter $(func_dir)/%.c, $^),$(GCOVFLAGS)) $(DEBUG) -c $^ -o $@
 
+valgrind: val = valgrind
+valgrind: test
+
+
+#---- REPORT ----#
+.PHONY: doc
 gcov_report: GCOVFLAGS = -fprofile-arcs -ftest-coverage
 gcov_report: LDFLAGS += -lgcov
 gcov_report: clean_gcov test
@@ -44,28 +59,35 @@ gcov_open:
 deps:
 	pip install gcovr
 
-valgrind: val = valgrind
-valgrind: test
+doc:
+	doxygen doc/doc_config
+	$(OPEN_CMD) doc/html/index.html
 
-.PHONY: clang-n
+
+#---- CLANG-FORMAT ----#
+.PHONY: clang-n clang-i
 clang-n:
 	find . -iname '*.h' -o -iname '*.c' | xargs clang-format -n -style=file:../materials/linters/.clang-format
 
-.PHONY: clang-i
 clang-i:
 	find . -iname '*.h' -o -iname '*.c' | xargs clang-format -i -style=file:../materials/linters/.clang-format
 
-.PHONY: clean
+
+#---- CLEAN ----#
+.PHONY: clean clean_gcov
 clean:
-	@rm -rf $(lib_name) $(test_lib_name) test
 	@rm -rf $(report_dir)
+	@rm -rf $(lib_name) $(test_lib_name) test
 	@rm -rf $(obj_list) $(addsuffix /*.gcda, $(func_dir)) $(addsuffix /*.gcno, $(func_dir))
 
-.PHONY: clean_gcov
 clean_gcov:
 	@rm -rf $(report_dir) 
 	@rm -rf $(filter $(func_dir)/%.o, $(obj_list)) $(addsuffix /*.gcda, $(func_dir)) $(addsuffix /*.gcno, $(func_dir))
 
+clean_doc:
+	@rm -rf doc/html doc/latex
+
+#---- MAN ----#
 .DEFAULT_GOAL := man
 man:
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
