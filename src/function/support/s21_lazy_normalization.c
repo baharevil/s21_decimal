@@ -32,8 +32,9 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp) {
 
   if (!error) {
     // Выбор необходимой функции для нормализации
-    uint8_t (*func)(s21_decimal_lazy *) =
-        (direction > 0) ? s21_mul_lazy_to_10 : s21_div_lazy_to_10;
+    uint8_t (*func)(s21_decimal_lazy *) = (uint8_t(*)(s21_decimal_lazy *))(
+        (direction >= 0) * (long)s21_mul_lazy_to_10 +
+        (direction < 0) * (long)s21_div_lazy_to_10);
 
     // Нормализация
     while (tmp_value.exponent != exp) error = func(&tmp_value);

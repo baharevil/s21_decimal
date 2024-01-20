@@ -75,7 +75,7 @@ clang-i:
 
 #---- CLEAN ----#
 .PHONY: clean clean_gcov
-clean:
+clean: clean_doc
 	@rm -rf $(report_dir)
 	@rm -rf $(lib_name) $(test_lib_name) test
 	@rm -rf $(obj_list) $(addsuffix /*.gcda, $(func_dir)) $(addsuffix /*.gcno, $(func_dir))
