@@ -33,6 +33,10 @@ int s21_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
 
     result = s21_memrevcmp(value_1->mantissa, value_2->mantissa, size);
 
+    if (value_1->sign && value_2->sign) {
+      result = result * -1;
+    }
+
   } else if (value_1->sign < value_2->sign) {
     result = 1;
   } else {
