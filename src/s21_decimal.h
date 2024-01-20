@@ -135,7 +135,6 @@ uint8_t s21_from_decimal_to_lazy(s21_decimal *src, s21_decimal_lazy *dest);
 uint8_t s21_from_lazy_to_decomal(s21_decimal_lazy *src, s21_decimal *dest);
 s21_decimal_lazy s21_decimal_to_lazy(s21_decimal value);
 
-
 /*!
   @defgroup AnotherFunction Другие функции
   @brief Модуль других функций над s21_decimal
@@ -150,7 +149,6 @@ int s21_floor(s21_decimal value, s21_decimal *result);     // -
 int s21_negate(s21_decimal value, s21_decimal *result);    // -
 int s21_round(s21_decimal value, s21_decimal *result);     // -
 int s21_truncate(s21_decimal value, s21_decimal *result);  // -
-
 
 /*!
   @defgroup Support Функции для служебного пользования
