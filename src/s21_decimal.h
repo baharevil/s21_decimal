@@ -158,6 +158,7 @@ int s21_truncate(s21_decimal value, s21_decimal *result);  // -
 
   @bug Задвоение функций. s21_lazy_zeroing & s21_lazy_resize
 */
+/// @todo удалить s21_lazy_zeroing 
 uint8_t s21_lazy_init(s21_decimal_lazy *lazy);
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
 uint8_t s21_lazy_resize(s21_decimal_lazy *lazy, uint16_t new_size);
