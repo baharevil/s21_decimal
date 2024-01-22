@@ -112,7 +112,7 @@ int s21_is_greater(s21_decimal, s21_decimal);           // -
 int s21_is_greater_or_equal(s21_decimal, s21_decimal);  // -
 int s21_is_equal(s21_decimal, s21_decimal);             // -
 int s21_is_not_equal(s21_decimal, s21_decimal);         // -
-int s21_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
+int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_decimal_is_null(s21_decimal *decimal);
 
 /*!
@@ -122,8 +122,6 @@ uint8_t s21_decimal_is_null(s21_decimal *decimal);
   @return Функции возвращают код ошибки:
     0 - OK
     1 - ошибка конвертации
-
-  @bug А зачем функция s21_decimal_to_lazy ?
 */
 typedef enum converter_error { conv_ok = 0, conv_false } converter_error;
 
