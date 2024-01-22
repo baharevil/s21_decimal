@@ -43,8 +43,46 @@ uint16_t s21_add_uint8_t(uint8_t *v1, uint8_t *v2, uint8_t *result,
 int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   int error = 0;
+  
+  // Первичная валидация
+  error |= (value_1 == NULL || value_1->mantissa == NULL);
+  error |= (value_2 == NULL || value_2->mantissa == NULL);
 
-  //----------------- Ver1 -------------------
+  //----------------- Ver2 -------------------
+  int8_t is_normal = 0;
+  uint16_t carry = 0;
+  is_normal = s21_is_normal_lazy(value_1, value_2);
+
+  if (!error) {
+    // нормализация по экспоненте и размеру
+    if (is_normal == 0) {
+      error |= s21_lazy_normalize_greater(value_1, value_2);
+      error |= s21_lazy_upsize(value_1, value_2);
+    }
+
+    // нормализация по размеру
+    else if (is_normal == 1) {
+      error |= s21_lazy_upsize(value_1, value_2);
+    }
+
+    // 2 - нормализованы и выровняны по размеру
+    else
+      error = (is_normal != 2);
+  }
+
+  if (!error) {
+    if (result->size != value_1->size) s21_lazy_resize(result, value_1->size);
+
+    carry = s21_add_uint8_t(value_1->mantissa, value_2->mantissa,
+                            result->mantissa, result->size);
+  }
+
+  if (carry != 0) {
+    error |= s21_lazy_resize(result, result->size + 1);
+    if (!error) result->mantissa[result->size - 1] = carry;
+  }
+
+    //----------------- Ver1 -------------------
   // uint16_t size = (value_1->size > value_2->size) * value_1->size +
   //                 (value_1->size <= value_2->size) * value_2->size;
 
@@ -82,42 +120,11 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   //   }
 
   //   // Если остался перенос, доаллоцируем себе массив
-  // if (carry) {
-  //   error |= s21_lazy_resize(result, result->size + 1);
-  //   if (!error) result->mantissa[result->size - 1] = carry;
+  //   if (carry) {
+  //     error |= s21_lazy_resize(result, result->size + 1);
+  //     if (!error) result->mantissa[result->size - 1] = carry;
+  //   }
   // }
-  // }
-  //----------------- Ver2 -------------------
-  int8_t is_normal = 0;
-  uint16_t carry = 0;
-  is_normal = s21_is_normal_lazy(value_1, value_2);
-
-  // нормализация по экспоненте и размеру
-  if (is_normal == 0) {
-    s21_lazy_normalize_greater(value_1, value_2);
-    s21_lazy_upsize(value_1, value_2);
-  }
-
-  // нормализация по размеру
-  else if (is_normal == 1) {
-    s21_lazy_upsize(value_1, value_2);
-  }
-
-  // 2 - нормализованы и выровняны по размеру
-  else
-    error = (is_normal != 2);
-
-  if (!error) {
-    if (result->size != value_1->size) s21_lazy_resize(result, value_1->size);
-
-    carry = s21_add_uint8_t(value_1->mantissa, value_2->mantissa,
-                            result->mantissa, result->size);
-  }
-
-  if (carry != 0) {
-    error |= s21_lazy_resize(result, result->size + 1);
-    if (!error) result->mantissa[result->size - 1] = carry;
-  }
   //------------------------------------------
 
   return error;
