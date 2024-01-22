@@ -14,7 +14,7 @@
   @param[in] *dst Указатель на s21_decimal
   @return 0 - ок, 1 - ошибка
 */
-uint8_t s21_from_lazy_to_decomal(s21_decimal_lazy *src, s21_decimal *dest) {
+uint8_t s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
   uint8_t result = 0;
 
   result = (!src || !dest || !src->mantissa);

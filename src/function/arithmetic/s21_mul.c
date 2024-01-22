@@ -19,12 +19,12 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   s21_decimal_lazy lazy1, lazy2, res;
 
-  s21_lazy_init(&lazy1);
-  s21_lazy_init(&lazy2);
-  s21_lazy_init(&res);
+  s21_lazy_init(&lazy1, &value_1);
+  s21_lazy_init(&lazy2, &value_2);
+  s21_lazy_init(&res, NULL);
 
-  s21_from_decimal_to_lazy(&value_1, &lazy1);
-  s21_from_decimal_to_lazy(&value_2, &lazy2);
+  // s21_from_decimal_to_lazy(&value_1, &lazy1);
+  // s21_from_decimal_to_lazy(&value_2, &lazy2);
 
   error = s21_mul_lazy(&lazy1, &lazy2, &res);
 

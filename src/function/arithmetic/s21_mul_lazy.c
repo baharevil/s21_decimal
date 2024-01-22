@@ -20,10 +20,10 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   int error = 0;
   uint16_t result_size = value_1->size + value_2->size;
   s21_decimal_lazy tmp;
-  error |= s21_lazy_init(&tmp);
+  error |= s21_lazy_init(&tmp, NULL);
 
-  error |= s21_lazy_zeroing(&tmp, result_size);
-  error |= s21_lazy_zeroing(result, result_size);
+  error |= s21_lazy_resize(&tmp, result_size);
+  error |= s21_lazy_resize(result, result_size);
 
   if (!error) {
     uint16_t res = 0;
@@ -39,11 +39,13 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
         *(tmp.mantissa + i + j + 1) = carry;
       }
       error |= s21_add_lazy(&tmp, result, result);
-      error |= s21_lazy_zeroing(&tmp, result_size);
+      error |= s21_lazy_resize(&tmp, result_size);
       carry = 0;
     }
 
     result->exponent = value_1->exponent + value_2->exponent;
+    result->sign =
+        (value_1->sign && !value_2->sign) | (value_2->sign && !value_1->sign);
 
     if (tmp.mantissa != NULL) free(tmp.mantissa);
   }

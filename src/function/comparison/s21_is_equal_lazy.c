@@ -4,7 +4,7 @@
 
 /*!
   @ingroup ComparisonOperators Операторы сравнение
-  @brief value_1 == value_2 
+  @brief value_1 == value_2
 
   @param[in] *value_1,*value_2 Сравниваемые значения s21_decimal_lazy
   @return Код ошибки: 0 - FALSE, 1 - TRUE

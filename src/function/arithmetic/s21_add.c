@@ -19,12 +19,9 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   s21_decimal_lazy lazy1, lazy2, res;
 
-  s21_lazy_init(&lazy1);
-  s21_lazy_init(&lazy2);
-  s21_lazy_init(&res);
-
-  s21_from_decimal_to_lazy(&value_1, &lazy1);
-  s21_from_decimal_to_lazy(&value_2, &lazy2);
+  s21_lazy_init(&lazy1, &value_1);
+  s21_lazy_init(&lazy2, &value_2);
+  s21_lazy_init(&res, NULL);
 
   error = s21_add_lazy(&lazy1, &lazy2, &res);
 

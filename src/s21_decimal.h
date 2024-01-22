@@ -125,12 +125,12 @@ uint8_t s21_is_null(s21_decimal *decimal);
 */
 typedef enum converter_error { conv_ok = 0, conv_false } converter_error;
 
-int s21_from_int_to_decimal(int src, s21_decimal *dst);      // -
+int s21_from_int_to_decimal(int src, s21_decimal *dst);      // +
 int s21_from_float_to_decimal(float src, s21_decimal *dst);  // -
 int s21_from_decimal_to_int(s21_decimal src, int *dst);      // -
 int s21_from_decimal_to_float(s21_decimal src, float *dst);  // -
 uint8_t s21_from_decimal_to_lazy(s21_decimal *src, s21_decimal_lazy *dest);
-uint8_t s21_from_lazy_to_decomal(s21_decimal_lazy *src, s21_decimal *dest);
+uint8_t s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest);
 s21_decimal_lazy s21_decimal_to_lazy(s21_decimal value);
 
 /*!
@@ -158,8 +158,9 @@ int s21_truncate(s21_decimal value, s21_decimal *result);  // -
 
   @bug Задвоение функций. s21_lazy_zeroing & s21_lazy_resize
 */
-/// @todo удалить s21_lazy_zeroing 
-uint8_t s21_lazy_init(s21_decimal_lazy *lazy);
+/// @todo удалить s21_lazy_zeroing
+// uint8_t s21_lazy_init(s21_decimal_lazy *lazy);
+uint8_t s21_lazy_init(s21_decimal_lazy *lazy, s21_decimal *decimal);
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
 uint8_t s21_lazy_resize(s21_decimal_lazy *lazy, uint16_t new_size);
 uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
