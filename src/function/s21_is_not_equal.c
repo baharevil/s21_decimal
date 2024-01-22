@@ -6,7 +6,7 @@ int s21_is_not_equal(s21_decimal value_1, s21_decimal value_2) {
   int result = 0;
 
   s21_decimal_lazy value_l_1;
-  s21_decimal_lazy value_l_2;  
+  s21_decimal_lazy value_l_2;
 
   s21_lazy_init(&value_l_1);
   s21_lazy_init(&value_l_2);
