@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include "s21_decimal.h"
 
 /*!
@@ -5,6 +7,8 @@
   @brief Деструктор s21_decimal_lazy
 
   @param[in] *lazy Адрес s21_decimal_lazy
-
-  @return Код ошибки: 0 - OK, 1 - ERROR
 */
+void s21_lazy_destroy(s21_decimal_lazy *lazy) {
+  lazy->exponent = lazy->sign = lazy->size = 0;
+  if (lazy->mantissa != NULL) free(lazy->mantissa);
+}

@@ -27,7 +27,6 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   // Возвращаемое значение
   int error = 0;
   int8_t is_normal = 0;
-  
 
   // создание lazy_one (это просто 1 записанная в форме decimal)
   s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
@@ -40,8 +39,8 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   if (!error) {
     is_normal = s21_is_normal_lazy(value_1, value_2);
     error |= s21_lazy_init(&lazy_one, &one);
-  } 
-  
+  }
+
   // нормализация + выравнивание размеров
   if (is_normal == 0) {
     error |= s21_lazy_normalize_greater(value_1, value_2);
