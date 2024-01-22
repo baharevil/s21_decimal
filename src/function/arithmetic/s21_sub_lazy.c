@@ -26,54 +26,35 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   // Возвращаемое значение
   int error = 0;
+  int8_t is_normal = 0;
+  
+
+  // создание lazy_one (это просто 1 записанная в форме decimal)
+  s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
+  s21_decimal_lazy lazy_one = {0};
 
   // Первичная валидация
   error |= (value_1 == NULL || value_1->mantissa == NULL);
   error |= (value_2 == NULL || value_2->mantissa == NULL);
 
-  // создание lazy_one (это просто 1 записанная в форме decimal)
-  s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
-  s21_decimal_lazy lazy_one;
-
-  if (!error) error |= s21_lazy_init(&lazy_one, &one);
-  // error |= s21_from_decimal_to_lazy(&one, &lazy_one);
-
-  // нормализация + выравнивание размеров
   if (!error) {
-    s21_decimal_lazy *ptr = NULL;
-    uint16_t size = 0;
-    uint8_t exp = 0;
+    is_normal = s21_is_normal_lazy(value_1, value_2);
+    error |= s21_lazy_init(&lazy_one, &one);
+  } 
+  
+  // нормализация + выравнивание размеров
+  if (is_normal == 0) {
+    error |= s21_lazy_normalize_greater(value_1, value_2);
+    error |= s21_lazy_upsize(value_1, value_2);
+  }
 
-    // На сколько нормализовывать
-    exp = (value_1->exponent > value_2->exponent) * value_1->exponent +
-          (value_1->exponent <= value_2->exponent) * value_2->exponent;
+  else if (is_normal == 1)
+    error |= s21_lazy_upsize(value_1, value_2);
 
-    // Выбор что будем номрмализовывать
-    ptr = (s21_decimal_lazy *)((value_1->exponent > value_2->exponent) *
-                                   (long)value_2 +
-                               (value_1->exponent <= value_2->exponent) *
-                                   (long)value_1);
-
-    // Нормализуем
-    error |= s21_lazy_normalization(ptr, exp);
-
-    // На сколько увеличить размер
-    size = (value_1->size > value_2->size) * value_1->size +
-           (value_1->size <= value_2->size) * value_2->size;
-
-    // Выбор что будем увеличивать
-    ptr =
-        (s21_decimal_lazy *)((value_1->size > value_2->size) * (long)value_2 +
-                             (value_1->size <= value_2->size) * (long)value_1);
-
-    // Увеличиваем
-    error |= s21_lazy_resize(ptr, size);
-
-    // Увеличиваем и единицу
-    ptr = &lazy_one;
-    error |= s21_lazy_resize(ptr, size);
-
-    if (result->size != size) s21_lazy_zeroing(result, size);
+  // Увеличиваем и единицу
+  if (!error) {
+    error |= s21_lazy_upsize(&lazy_one, value_1);
+    if (result->size != value_1->size) s21_lazy_zeroing(result, value_1->size);
   }
 
   // Рассчет
@@ -106,7 +87,6 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                       value_1->size);
 
       result->exponent = value_1->exponent;
-      result->size = value_1->size;
       result->sign = value_1->sign;
     }
 
@@ -119,7 +99,6 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       s21_inverse(result);
 
       result->exponent = value_1->exponent;
-      result->size = value_1->size;
       result->sign = !value_1->sign;
     }
 

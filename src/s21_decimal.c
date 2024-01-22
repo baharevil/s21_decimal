@@ -28,23 +28,27 @@ void s21_decimal_print(s21_decimal *x) {
   printf(" sign: %u\n", x->exponent.bits.sign);
 }
 
+int foo (uint8_t (*func)(s21_decimal_lazy *)){
+  return func == s21_mul_lazy_to_10;
+}
+
 int main() {
-  s21_decimal value_1 = {{0x00000005, 0x0, 0x0, 0x80000000}};
-  s21_decimal value_2 = {{0x00000002, 0x0, 0x0, 0x80000000}};
+  s21_decimal value_1 = {{0x0000000a, 0x0, 0x0, 0x80000000}};
+  s21_decimal value_2 = {{0x000000a0, 0x0, 0x0, 0x80000000}};
   s21_decimal dec_result = {0};
 
-  s21_add(value_1, value_2, &dec_result);
-  printf("add res: ");
-  s21_decimal_print(&dec_result);
+  printf("cmp: %d\n", foo(s21_div_lazy_to_10));
+  printf("cmp: %d\n", foo(s21_mul_lazy_to_10));
 
-  s21_mul(value_1, value_2, &dec_result);
-  printf("mul res: ");
-  s21_decimal_print(&dec_result);
+  printf("value_1: ");
+  s21_decimal_print(&value_1);
+  printf("value_2: ");
+  s21_decimal_print(&value_2);
 
   // Найди отличия в результатах:
   //----------------- Ver1 -------------------
   s21_sub(value_1, value_2, &dec_result);
-  printf("sub ver_1: ");
+  printf("\nsub ver_1: ");
   s21_decimal_print(&dec_result);
 
   //----------------- Ver2 -------------------

@@ -114,6 +114,7 @@ int s21_is_equal(s21_decimal, s21_decimal);             // -
 int s21_is_not_equal(s21_decimal, s21_decimal);         // -
 int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_is_null(s21_decimal *decimal);
+int8_t s21_is_normal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 
 /*!
   @defgroup ConverterOperators Преобразователи
@@ -162,7 +163,11 @@ int s21_truncate(s21_decimal value, s21_decimal *result);  // -
 // uint8_t s21_lazy_init(s21_decimal_lazy *lazy);
 uint8_t s21_lazy_init(s21_decimal_lazy *lazy, s21_decimal *decimal);
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
+uint8_t s21_lazy_normalize_greater(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
+uint8_t s21_lazy_normalize_less(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_lazy_resize(s21_decimal_lazy *lazy, uint16_t new_size);
+uint8_t s21_lazy_upsize(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
+uint8_t s21_lazy_downsize(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
 uint8_t s21_lazy_zeroing(s21_decimal_lazy *lazy, uint16_t size);
 int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
