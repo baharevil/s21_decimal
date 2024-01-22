@@ -8,7 +8,7 @@
 
 /*!
   @ingroup ComparisonOperators Операторы сравнение
-  @brief Равны ли значения s21_decimal_lazy
+  @brief value_1 == value_2
 
   @param[in] *value_1,*value_2 Сравниваемые значения
   @return Код ошибки: 0 - FALSE, 1 - TRUE

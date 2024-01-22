@@ -33,6 +33,14 @@ int main() {
   s21_decimal value_2 = {{0x00000002, 0x0, 0x0, 0x80000000}};
   s21_decimal dec_result = {0};
 
+  s21_add(value_1, value_2, &dec_result);
+  printf("add res: ");
+  s21_decimal_print(&dec_result);
+
+  s21_mul(value_1, value_2, &dec_result);
+  printf("mul res: ");
+  s21_decimal_print(&dec_result);
+
   // Найди отличия в результатах:
   //----------------- Ver1 -------------------
   s21_sub(value_1, value_2, &dec_result);
@@ -57,22 +65,13 @@ int main() {
     dec_result.exponent.bits.sign = 1;
   }
 
-  // if (s21_is_less_or_equal(value_1, value_2)) {
-  //   lvalue = &value_2;
-  //   rvalue = &value_1;
-  //   dec_result.exponent.bits.sign = 1;
-  // } else {
-  //   lvalue = &value_1;
-  //   rvalue = &value_2;
-  // }
-
-  // uint8_t carry = 0;
-  // uint16_t res = 0;
-  // for (size_t i = 0; i < (size_t)sizeof(s21_uint96_t); i++) {
-  //   res = lvalue->mantissa.bytes[i] - rvalue->mantissa.bytes[i] - carry;
-  //   dec_result.mantissa.bytes[i] = (uint8_t)res;
-  //   carry = ((res >> sizeof(uint8_t) * CHAR_BIT) > 0);
-  // }
+  uint8_t carry = 0;
+  uint16_t res = 0;
+  for (size_t i = 0; i < (size_t)sizeof(s21_uint96_t); i++) {
+    res = lvalue->mantissa.bytes[i] - rvalue->mantissa.bytes[i] - carry;
+    dec_result.mantissa.bytes[i] = (uint8_t)res;
+    carry = ((res >> sizeof(uint8_t) * CHAR_BIT) > 0);
+  }
   //------------------------------------------
 
   printf("sub ver_2: ");

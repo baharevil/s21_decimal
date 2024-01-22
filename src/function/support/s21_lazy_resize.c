@@ -19,8 +19,7 @@ uint8_t s21_lazy_resize(s21_decimal_lazy *lazy, uint16_t new_size) {
 
   // if (lazy == NULL || lazy->mantissa == NULL || new_size < 1 ||
   //     new_size > UINT16_MAX - 1)
-  if (lazy == NULL || new_size < 1 || new_size > UINT16_MAX - 1)
-    result = 1;
+  if (lazy == NULL || new_size < 1 || new_size > UINT16_MAX - 1) result = 1;
 
   if (!result) {
     uint8_t *temp = realloc(lazy->mantissa, sizeof(uint8_t) * new_size);

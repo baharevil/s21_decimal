@@ -17,11 +17,8 @@ int s21_is_greater_or_equal(s21_decimal value_1, s21_decimal value_2) {
   s21_decimal_lazy value_l_1;
   s21_decimal_lazy value_l_2;
 
-  s21_lazy_init(&value_l_1);
-  s21_lazy_init(&value_l_2);
-
-  s21_dec_to_lazy_cp(&value_1, &value_l_1);
-  s21_dec_to_lazy_cp(&value_2, &value_l_2);
+  s21_lazy_init(&value_l_1, &value_1);
+  s21_lazy_init(&value_l_2, &value_2);
 
   if (s21_equal_lazy(&value_l_1, &value_l_2) > 0 ||
       s21_equal_lazy(&value_l_1, &value_l_2) == 0)

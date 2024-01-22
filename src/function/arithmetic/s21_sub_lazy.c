@@ -35,10 +35,8 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
   s21_decimal_lazy lazy_one;
 
-  if (!error) {
-    error |= s21_lazy_init(&lazy_one);
-    error |= s21_from_decimal_to_lazy(&one, &lazy_one);
-  }
+  if (!error) error |= s21_lazy_init(&lazy_one, &one);
+  // error |= s21_from_decimal_to_lazy(&one, &lazy_one);
 
   // нормализация + выравнивание размеров
   if (!error) {
@@ -51,10 +49,10 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
           (value_1->exponent <= value_2->exponent) * value_2->exponent;
 
     // Выбор что будем номрмализовывать
-    if (value_1->exponent > value_2->exponent)
-      ptr = value_2;
-    else
-      ptr = value_1;
+    ptr = (s21_decimal_lazy *)((value_1->exponent > value_2->exponent) *
+                                   (long)value_2 +
+                               (value_1->exponent <= value_2->exponent) *
+                                   (long)value_1);
 
     // Нормализуем
     error |= s21_lazy_normalization(ptr, exp);
@@ -64,10 +62,9 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
            (value_1->size <= value_2->size) * value_2->size;
 
     // Выбор что будем увеличивать
-    if (value_1->size > value_2->size)
-      ptr = value_2;
-    else
-      ptr = value_1;
+    ptr =
+        (s21_decimal_lazy *)((value_1->size > value_2->size) * (long)value_2 +
+                             (value_1->size <= value_2->size) * (long)value_1);
 
     // Увеличиваем
     error |= s21_lazy_resize(ptr, size);
@@ -134,5 +131,6 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   }
 
   if (lazy_one.mantissa != NULL) free(lazy_one.mantissa);
+
   return error;
 }
