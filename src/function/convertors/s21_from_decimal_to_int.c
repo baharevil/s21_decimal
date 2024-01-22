@@ -11,6 +11,9 @@
 int s21_from_decimal_to_int(s21_decimal src, int *dst) {
   int status = conv_ok;
   if (dst != S21_NULL) {
+    // Нормализовать (привести) децимал к экспоненте = 0
+    // проверить входит ли число в INT32_MAX - ??
+    //
     if (!((src.mantissa.bytes[0] >> 31) & 1)) {
       if (src.exponent.bits.sign)
         *dst = ~src.mantissa.bytes[0] + 1;
