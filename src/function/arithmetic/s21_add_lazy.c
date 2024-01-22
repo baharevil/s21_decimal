@@ -108,7 +108,7 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     error = (is_normal != 2);
 
   if (!error) {
-    if (result->size != value_1->size) s21_lazy_resize(result, value_1);
+    if (result->size != value_1->size) s21_lazy_resize(result, value_1->size);
 
     carry = s21_add_uint8_t(value_1->mantissa, value_2->mantissa,
                             result->mantissa, result->size);
