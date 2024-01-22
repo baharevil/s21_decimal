@@ -29,26 +29,14 @@ void s21_decimal_print(s21_decimal *x) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0x0000000a, 0x0, 0x0, 0x80000000}};
-  s21_decimal value_2 = {{0x000000a0, 0x0, 0x0, 0x80000000}};
+  s21_decimal value_1 = {{0x00000005, 0x0, 0x0, 0x80000000}};
+  s21_decimal value_2 = {{0x00000002, 0x0, 0x0, 0x80000000}};
   s21_decimal dec_result = {0};
-
-  printf("value_1: ");
-  s21_decimal_print(&value_1);
-  printf("value_2: ");
-  s21_decimal_print(&value_2);
-
-  s21_mul(value_1, value_2, &dec_result);
-  printf("\n mul: ");
-  s21_decimal_print(&dec_result);
-
-  printf("\n s21_decimal_lazy: %lu", sizeof(s21_decimal_lazy));
-  printf("\n s21_decimal: %lu", sizeof(s21_decimal));
 
   // Найди отличия в результатах:
   //----------------- Ver1 -------------------
   s21_sub(value_1, value_2, &dec_result);
-  printf("\nsub ver_1: ");
+  printf("sub ver_1: ");
   s21_decimal_print(&dec_result);
 
   //----------------- Ver2 -------------------
@@ -66,6 +54,12 @@ int main() {
       s21_is_less_or_equal(value_2, null)) {
     value_1.exponent.bits.sign = 0;
     value_2.exponent.bits.sign = 0;
+    dec_result.exponent.bits.sign = 1;
+  }
+
+  if (s21_is_less_or_equal(value_1, value_2)) {
+    lvalue = &value_2;
+    rvalue = &value_1;
     dec_result.exponent.bits.sign = 1;
   }
 
