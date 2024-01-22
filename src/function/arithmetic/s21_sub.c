@@ -25,7 +25,7 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   error = s21_sub_lazy(&lazy1, &lazy2, &res);
 
-  s21_from_lazy_to_decomal(&res, result);
+  s21_from_lazy_to_decimal(&res, result);
 
   if (lazy1.mantissa) free(lazy1.mantissa);
   if (lazy2.mantissa) free(lazy2.mantissa);
