@@ -28,6 +28,9 @@ uint8_t s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
     dest->exponent.bits.exponent = src->exponent;
     result = (memcpy(dest->mantissa.bytes, src->mantissa + src->size - size,
                      size) == NULL);
+    
+    if (!result && size != dec_size)
+      memset(dest->mantissa.bytes + size, 0, dec_size - size);                      
   }
   return result;
 }

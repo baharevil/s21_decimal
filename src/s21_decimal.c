@@ -38,9 +38,13 @@ int main() {
   printf("value_2: ");
   s21_decimal_print(&value_2);
 
-  s21_add(value_1, value_2, &dec_result);
-  printf("\nadd: ");
+  s21_mul(value_1, value_2, &dec_result);
+  printf("\n mul: ");
   s21_decimal_print(&dec_result);
+
+  printf("\n s21_decimal_lazy: %lu", sizeof(s21_decimal_lazy));
+  printf("\n s21_decimal: %lu", sizeof(s21_decimal));
+
 
   // Найди отличия в результатах:
   //----------------- Ver1 -------------------
