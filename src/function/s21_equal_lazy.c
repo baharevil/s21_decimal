@@ -13,11 +13,6 @@ int s21_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
     if (value_1->exponent == value_2->exponent) {
       uint16_t size;
 
-      if (value_1->exponent != 0) {
-        s21_lazy_normalization(value_1, value_1->exponent);
-        s21_lazy_normalization(value_2, value_1->exponent);
-      }
-
       if (value_1->size > value_2->size) {
         size = value_1->size;
         s21_lazy_resize(value_2, size);
