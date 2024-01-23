@@ -14,8 +14,10 @@ uint8_t s21_lazy_upsize(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
   uint16_t new_size = 0;
   s21_decimal_lazy *ptr = NULL;
 
-  ptr = (s21_decimal_lazy *)((value_1->size > value_2->size) * (uintptr_t)value_2 +
-                             (value_1->size < value_2->size) * (uintptr_t)value_1);
+  ptr = (s21_decimal_lazy *)((value_1->size > value_2->size) *
+                                 (uintptr_t)value_2 +
+                             (value_1->size < value_2->size) *
+                                 (uintptr_t)value_1);
 
   new_size = (value_1->size > value_2->size) * value_1->size +
              (value_1->size <= value_2->size) * value_2->size;

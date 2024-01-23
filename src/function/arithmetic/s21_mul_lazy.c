@@ -19,11 +19,13 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   int error = 0;
   uint16_t result_size = value_1->size + value_2->size;
-  s21_decimal_lazy tmp;
+  s21_decimal_lazy tmp = {0}, tmp_res = {0};
   error |= s21_lazy_init(&tmp, NULL);
+  error |= s21_lazy_init(&tmp_res, NULL);
+  error |= s21_lazy_resize(&tmp_res, result_size);
 
   error |= s21_lazy_resize(&tmp, result_size);
-  error |= s21_lazy_resize(result, result_size);
+  // error |= s21_lazy_resize(result, result_size);
 
   if (!error) {
     uint16_t res = 0;
@@ -38,7 +40,7 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
         carry = res >> sizeof(uint8_t) * CHAR_BIT;
         *(tmp.mantissa + i + j + 1) = carry;
       }
-      error |= s21_add_lazy(&tmp, result, result);
+      error |= s21_add_lazy(&tmp, &tmp_res, &tmp_res);
       error |= s21_lazy_resize(&tmp, result_size);
       carry = 0;
     }
@@ -47,8 +49,11 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     result->sign =
         (value_1->sign && !value_2->sign) | (value_2->sign && !value_1->sign);
 
-    if (tmp.mantissa != NULL) free(tmp.mantissa);
+    if (!error) s21_lazy_to_lazy_cp(&tmp_res, result);
   }
+
+  s21_lazy_destroy(&tmp);
+  s21_lazy_destroy(&tmp_res);
 
   return error;
 }

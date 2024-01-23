@@ -35,10 +35,20 @@ int main() {
 
   // Найди отличия в результатах:
   //----------------- Ver1 -------------------
-  s21_sub(value_1, value_2, &dec_result);
-  printf("sub ver_1: ");
-  s21_decimal_print(&dec_result);
 
+  s21_decimal_lazy lazy_1 = {0}, lazy_2 = {0}, lazy_res = {0};
+  s21_lazy_init(&lazy_1, &value_1);
+  s21_lazy_init(&lazy_2, &value_2);
+  s21_lazy_init(&lazy_res, &dec_result);
+
+  s21_div_lazy(&lazy_1, &lazy_2, &lazy_res);
+
+  printf("div ver_1: ");
+  s21_decimal_lazy_print(&lazy_res);
+
+  s21_lazy_destroy(&lazy_1);
+  s21_lazy_destroy(&lazy_2);
+  s21_lazy_destroy(&lazy_res);
   //----------------- Ver2 -------------------
   // s21_decimal *lvalue = NULL, *rvalue = NULL;
   // s21_decimal null = {0};

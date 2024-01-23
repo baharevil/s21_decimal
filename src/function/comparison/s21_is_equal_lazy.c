@@ -5,10 +5,10 @@
   @brief value_1 == value_2
 
   @param[in] *value_1,*value_2 Сравниваемые значения
-  @return 
-  -1: value_1 < value_2, 
+  @return
+  -1: value_1 < value_2,
   0: value_1 == value_2
-  1: value_1 > value_2, 
+  1: value_1 > value_2,
 */
 int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
   int result = 0;
@@ -19,7 +19,7 @@ int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
     result |= s21_lazy_to_lazy_cp(value_2, &rvalue);
 
     int8_t is_normal = s21_is_normal_lazy(&lvalue, &rvalue);
-    
+
     if (is_normal == 0) {
       s21_lazy_normalize_greater(&lvalue, &rvalue);
       s21_lazy_upsize(&lvalue, &rvalue);
@@ -35,7 +35,7 @@ int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
 
     s21_lazy_destroy(&lvalue);
     s21_lazy_destroy(&rvalue);
-  } else 
+  } else
     result = (value_2->sign) - (value_1->sign);
 
   return result;

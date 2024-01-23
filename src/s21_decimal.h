@@ -114,6 +114,7 @@ int s21_is_equal(s21_decimal, s21_decimal);             // -
 int s21_is_not_equal(s21_decimal, s21_decimal);         // -
 int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_is_null(s21_decimal *decimal);
+uint8_t s21_is_null_lazy(s21_decimal_lazy *lazy);
 int8_t s21_is_normal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 
 /*!
