@@ -1,13 +1,6 @@
 #include <stdlib.h>
-#include <string.h>
 
 #include "s21_decimal.h"
-
-// инверсия бит
-void s21_inverse(s21_decimal_lazy *value) {
-  for (uint16_t size = 0; size < value->size; size++)
-    *((*value).mantissa + size) = ~*((*value).mantissa + size);
-}
 
 /*!
   @ingroup ArifmeticOperators Арифметические операторы
@@ -24,91 +17,79 @@ void s21_inverse(s21_decimal_lazy *value) {
 */
 int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
-  // Возвращаемое значение
-  int error = 0;
-  int8_t is_normal = 0;
-
-  // создание lazy_one (это просто 1 записанная в форме decimal)
-  s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
-  s21_decimal_lazy lazy_one = {0};
+  int8_t error = 0, done = 0;
+  s21_decimal_lazy lvalue, rvalue, null;
+  error |= s21_lazy_init(&lvalue, NULL);
+  error |= s21_lazy_init(&rvalue, NULL);
+  error |= s21_lazy_init(&null, NULL);
 
   // Первичная валидация
   error |= (value_1 == NULL || value_1->mantissa == NULL);
   error |= (value_2 == NULL || value_2->mantissa == NULL);
 
   if (!error) {
-    is_normal = s21_is_normal_lazy(value_1, value_2);
-    error |= s21_lazy_init(&lazy_one, &one);
-  }
-
-  // нормализация + выравнивание размеров
-  if (is_normal == 0) {
-    error |= s21_lazy_normalize_greater(value_1, value_2);
-    error |= s21_lazy_upsize(value_1, value_2);
-  }
-
-  else if (is_normal == 1)
-    error |= s21_lazy_upsize(value_1, value_2);
-
-  // Увеличиваем и единицу
-  if (!error) {
-    error |= s21_lazy_upsize(&lazy_one, value_1);
-    if (result->size != value_1->size) s21_lazy_resize(result, value_1->size);
-  }
-
-  // Рассчет
-  if (!error) {
-    // Сравниваем нормализованные мантиссы (size у них одинаковый)
-    int8_t cmp =
-        s21_memrevcmp(value_1->mantissa, value_2->mantissa, result->size);
-
-    // если слева "+", а справа "-", то это просто сложение (5 - (-1) = 5 + 1)
-    if (value_1->sign == 0 && value_2->sign == 1) {
-      value_2->sign = 0;
-      s21_add_lazy(value_1, value_2, result);
+    int8_t normal = s21_is_normal_lazy(&lvalue, &rvalue);
+    
+    if (normal == 0) {
+      error |= s21_lazy_normalize_greater(&lvalue, &rvalue);
+      error |= s21_lazy_upsize(&lvalue, &rvalue);
     }
 
-    // если слева "-", а справа "+", то это "отрицательное" сложение (-5 - 1 =
-    // -6)
-    else if (value_1->sign == 1 && value_2->sign == 0) {
-      value_2->sign = value_1->sign = 0;
-      s21_add_lazy(value_1, value_2, result);
+    else if (normal == 1) {
+      error |= s21_lazy_upsize(&lvalue, &rvalue);
+    }
+
+    // 2 - нормализованы и выровняны по размеру
+    else
+      error |= (normal != 2);
+  }
+
+  //Сравнения
+  if (!error) {
+    int8_t subzero1 = s21_is_equal_lazy(value_1, &null);
+    int8_t subzero2 = s21_is_equal_lazy(value_2, &null);
+    // Если слева "+", а справа "-", то это просто сложение (5 - (-1) = 5 + 1)
+    if (subzero1 >= 0 && subzero2 < 0) {
+      value_2->sign = 0;
+      error |= s21_add_lazy(value_1, value_2, result);
+      done++;
+    }
+    // Если слева "-", а справа "+", то это "отрицательное" сложение (-5 - 1 = -6)
+    else if (subzero1 < 0 && subzero2 >= 0) {
+      value_1->sign = 0;
+      result->sign = 1;
+      error |= s21_add_lazy(value_1, value_2, result);
+      done++;
+    }
+    // Если оба меньше (-5 - (-1) = -4)
+    else if (subzero1 < 0 && subzero2 < 0) {
+      value_1->sign = 0;
+      value_2->sign = 0;
       result->sign = 1;
     }
+  }
 
-    // Метод через дополнительный код
-    // пример случаев: (5 - 1) или (-5 - (-1) == -5 + 1)
-    else if (cmp == 1) {
-      s21_inverse(value_2);
-      s21_add_uint8_t(value_2->mantissa, lazy_one.mantissa, value_2->mantissa,
-                      value_2->size);
-      s21_add_uint8_t(value_1->mantissa, value_2->mantissa, result->mantissa,
-                      value_1->size);
-
-      result->exponent = value_1->exponent;
-      result->sign = value_1->sign;
-    }
-
-    // метод через инверсию
-    // пример случаев: (1 - 5) или (-1 - (-5) == -1 + 5)
-    else if (cmp == -1) {
-      s21_inverse(value_2);
-      s21_add_uint8_t(value_1->mantissa, value_2->mantissa, result->mantissa,
-                      value_1->size);
-      s21_inverse(result);
-
-      result->exponent = value_1->exponent;
-      result->sign = !value_1->sign;
-    }
-
-    else {
-      result->exponent = 0;
-      result->sign = value_1->sign;
-      if (result->size != 1) error |= s21_lazy_resize(result, 1);
+  //Сравнение на то, что уменьшаемое меньше вычитаемого
+  if (!error && !done) {
+    if ((s21_is_equal_lazy(value_1, value_2) == -1)) {
+    error |= s21_lazy_to_lazy_cp(value_2, &lvalue);
+    error |= s21_lazy_to_lazy_cp(value_1, &rvalue);
+    result->sign = 0;
+    } else {
+    error |= s21_lazy_to_lazy_cp(value_1, &lvalue);
+    error |= s21_lazy_to_lazy_cp(value_2, &rvalue);
     }
   }
 
-  if (lazy_one.mantissa != NULL) free(lazy_one.mantissa);
+  if (!error && !done) {
+    uint8_t carry = 0;
+    uint16_t res = 0;
+    for (size_t i = 0; i < (size_t)sizeof(s21_uint96_t); i++) {
+      res = lvalue.mantissa[i] - rvalue.mantissa[i] - carry;
+      result->mantissa[i] = (uint8_t)res;
+      carry = ((res >> sizeof(uint8_t) * CHAR_BIT) > 0);
+    }
+  }
 
   return error;
 }
