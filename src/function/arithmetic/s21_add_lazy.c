@@ -43,7 +43,7 @@ uint16_t s21_add_uint8_t(uint8_t *v1, uint8_t *v2, uint8_t *result,
 int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   int error = 0;
-  
+
   // Первичная валидация
   error |= (value_1 == NULL || value_1->mantissa == NULL);
   error |= (value_2 == NULL || value_2->mantissa == NULL);
@@ -82,7 +82,7 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     if (!error) result->mantissa[result->size - 1] = carry;
   }
 
-    //----------------- Ver1 -------------------
+  //----------------- Ver1 -------------------
   // uint16_t size = (value_1->size > value_2->size) * value_1->size +
   //                 (value_1->size <= value_2->size) * value_2->size;
 
