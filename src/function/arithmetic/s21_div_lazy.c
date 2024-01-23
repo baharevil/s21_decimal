@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include "s21_decimal.h"
 
 /*!
@@ -9,5 +11,5 @@
 
   @param[in] *value_1,*value_2 Делимое и делитель
   @param[in] *result Указатель на результат
-  @return Код ошибки: 0 - ОК, 1 - ошибка
+  @return Код ошибки: 0 - ОК, 1 - ошибка, 2 - деление на 0
 */

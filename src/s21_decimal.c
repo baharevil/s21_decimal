@@ -45,7 +45,6 @@ int main() {
   printf("\n s21_decimal_lazy: %lu", sizeof(s21_decimal_lazy));
   printf("\n s21_decimal: %lu", sizeof(s21_decimal));
 
-
   // Найди отличия в результатах:
   //----------------- Ver1 -------------------
   s21_sub(value_1, value_2, &dec_result);

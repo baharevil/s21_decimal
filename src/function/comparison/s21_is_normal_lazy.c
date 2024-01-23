@@ -16,11 +16,15 @@
 */
 int8_t s21_is_normal_lazy(s21_decimal_lazy *value_1,
                           s21_decimal_lazy *value_2) {
-  int8_t result = 0;
+  int8_t error = 0;
 
-  // Если экспоненты не равны, размеры мы проверять не должны
-  if (value_1->exponent == value_2->exponent)
-    result = 1 + (value_1->size == value_2->size);
+  error = (value_1 == NULL || value_2 == NULL);
 
-  return result;
+  if (!error) {
+    // Если экспоненты не равны, размеры мы проверять не должны
+    if (value_1->exponent == value_2->exponent)
+      error = 1 + (value_1->size == value_2->size);
+  }
+
+  return error;
 }
