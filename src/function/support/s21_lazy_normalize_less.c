@@ -18,9 +18,9 @@ uint8_t s21_lazy_normalize_less(s21_decimal_lazy *value_1,
         (value_1->exponent <= value_2->exponent) * value_1->exponent;
 
   ptr = (s21_decimal_lazy *)((value_1->exponent > value_2->exponent) *
-                                 (long)value_1 +
+                                 (uintptr_t)value_1 +
                              (value_1->exponent < value_2->exponent) *
-                                 (long)value_2);
+                                 (uintptr_t)value_2);
 
   if (ptr != NULL) error |= s21_lazy_normalization(ptr, exp);
 

@@ -40,8 +40,8 @@ int main() {
   s21_decimal_print(&dec_result);
 
   //----------------- Ver2 -------------------
-  s21_decimal *lvalue = NULL, *rvalue = NULL;
-  s21_decimal null = {0};
+  // s21_decimal *lvalue = NULL, *rvalue = NULL;
+  // s21_decimal null = {0};
 
   /// @bug неправельный результат при выражени -5 - 2
   /*
@@ -50,30 +50,30 @@ int main() {
     который не равен 0.
   */
 
-  if (s21_is_less_or_equal(value_1, null) &&
-      s21_is_less_or_equal(value_2, null)) {
-    value_1.exponent.bits.sign = 0;
-    value_2.exponent.bits.sign = 0;
-    dec_result.exponent.bits.sign = 1;
-  }
+  // if (s21_is_less_or_equal(value_1, null) &&
+  //     s21_is_less_or_equal(value_2, null)) {
+  //   value_1.exponent.bits.sign = 0;
+  //   value_2.exponent.bits.sign = 0;
+  //   dec_result.exponent.bits.sign = 1;
+  // }
 
-  if (s21_is_less_or_equal(value_1, value_2)) {
-    lvalue = &value_2;
-    rvalue = &value_1;
-    dec_result.exponent.bits.sign = 1;
-  }
+  // if (s21_is_less_or_equal(value_1, value_2)) {
+  //   lvalue = &value_2;
+  //   rvalue = &value_1;
+  //   dec_result.exponent.bits.sign = 1;
+  // }
 
-  uint8_t carry = 0;
-  uint16_t res = 0;
-  for (size_t i = 0; i < (size_t)sizeof(s21_uint96_t); i++) {
-    res = lvalue->mantissa.bytes[i] - rvalue->mantissa.bytes[i] - carry;
-    dec_result.mantissa.bytes[i] = (uint8_t)res;
-    carry = ((res >> sizeof(uint8_t) * CHAR_BIT) > 0);
-  }
-  //------------------------------------------
+  // uint8_t carry = 0;
+  // uint16_t res = 0;
+  // for (size_t i = 0; i < (size_t)sizeof(s21_uint96_t); i++) {
+  //   res = lvalue->mantissa.bytes[i] - rvalue->mantissa.bytes[i] - carry;
+  //   dec_result.mantissa.bytes[i] = (uint8_t)res;
+  //   carry = ((res >> sizeof(uint8_t) * CHAR_BIT) > 0);
+  // }
+  // //------------------------------------------
 
-  printf("sub ver_2: ");
-  s21_decimal_print(&dec_result);
+  // printf("sub ver_2: ");
+  // s21_decimal_print(&dec_result);
 
   return 0;
 }

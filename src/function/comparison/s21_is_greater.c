@@ -1,7 +1,5 @@
 #include "s21_decimal.h"
 
-/// @bug ошибка по valgrind. Необходима отчистка мантиссы s21_decimal_lazy
-
 /*!
   @ingroup ComparisonOperators Операторы сравнение
   @brief value_1 > value_2
@@ -20,8 +18,8 @@ int s21_is_greater(s21_decimal value_1, s21_decimal value_2) {
 
   if (s21_is_equal_lazy(&value_l_1, &value_l_2) > 0) result = 1;
 
-  if (value_l_1.mantissa != NULL) free(value_l_1.mantissa);
-  if (value_l_2.mantissa != NULL) free(value_l_2.mantissa);
+  s21_lazy_destroy(&value_l_1);
+  s21_lazy_destroy(&value_l_2);
 
   return result;
 }

@@ -53,7 +53,7 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   // Увеличиваем и единицу
   if (!error) {
     error |= s21_lazy_upsize(&lazy_one, value_1);
-    if (result->size != value_1->size) s21_lazy_zeroing(result, value_1->size);
+    if (result->size != value_1->size) s21_lazy_resize(result, value_1->size);
   }
 
   // Рассчет

@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include "s21_decimal.h"
-
-/// @bug Несобирается из-за строки 29. некорректное сравнение
 
 /*!
   @ingroup ComparisonOperators Операторы сравнение
@@ -13,7 +7,7 @@
   @param[in] *value_1,*value_2 Сравниваемые значения
   @return Код ошибки: 0 - FALSE, 1 - TRUE
 */
-int s21_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
+int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
   int result;
 
   if (value_1->sign == value_2->sign) {

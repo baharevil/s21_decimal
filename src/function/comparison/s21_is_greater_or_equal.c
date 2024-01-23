@@ -1,8 +1,4 @@
-#include <stdlib.h>
-
 #include "s21_decimal.h"
-
-/// @bug ошибка по valgrind. Необходима отчистка мантиссы s21_decimal_lazy
 
 /*!
   @ingroup ComparisonOperators Операторы сравнение
@@ -20,12 +16,10 @@ int s21_is_greater_or_equal(s21_decimal value_1, s21_decimal value_2) {
   s21_lazy_init(&value_l_1, &value_1);
   s21_lazy_init(&value_l_2, &value_2);
 
-  if (s21_equal_lazy(&value_l_1, &value_l_2) > 0 ||
-      s21_equal_lazy(&value_l_1, &value_l_2) == 0)
-    result = 1;
+  result = (s21_is_equal_lazy(&value_l_1, &value_l_2) >= 0);
 
-  if (value_l_1.mantissa != NULL) free(value_l_1.mantissa);
-  if (value_l_2.mantissa != NULL) free(value_l_2.mantissa);
+  s21_lazy_destroy(&value_l_1);
+  s21_lazy_destroy(&value_l_2);
 
   return result;
 }
