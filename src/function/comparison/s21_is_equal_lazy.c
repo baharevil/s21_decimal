@@ -10,7 +10,6 @@
   0: value_1 == value_2
   1: value_1 > value_2, 
 */
-
 int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
   int result = 0;
 
@@ -34,6 +33,8 @@ int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
 
     if (value_1->sign && value_2->sign) result *= -1;
 
+    s21_lazy_destroy(&lvalue);
+    s21_lazy_destroy(&rvalue);
   } else 
     result = (value_2->sign) - (value_1->sign);
 
