@@ -5,40 +5,37 @@
   @brief value_1 == value_2
 
   @param[in] *value_1,*value_2 Сравниваемые значения
-  @return Код ошибки: 0 - FALSE, 1 - TRUE
+  @return 
+  -1: value_1 < value_2, 
+  0: value_1 == value_2
+  1: value_1 > value_2, 
 */
+
 int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
-  int result;
+  int result = 0;
 
   if (value_1->sign == value_2->sign) {
-    if (value_1->exponent == value_2->exponent) {
-      uint16_t size;
+    s21_decimal_lazy lvalue = {0}, rvalue = {0};
+    result |= s21_lazy_to_lazy_cp(value_1, &lvalue);
+    result |= s21_lazy_to_lazy_cp(value_2, &rvalue);
 
-    if (value_1->size > value_2->size) {
-      size = value_1->size;
-      s21_lazy_resize(value_2, size);
-    } else if (value_1->size < value_2->size) {
-      size = value_2->size;
-      s21_lazy_resize(value_1, size);
-    } else if (value_1->size == value_2->size) {
-      size = value_1->size;
+    int8_t is_normal = s21_is_normal_lazy(&lvalue, &rvalue);
+    
+    if (is_normal == 0) {
+      s21_lazy_normalize_greater(&lvalue, &rvalue);
+      s21_lazy_upsize(&lvalue, &rvalue);
     }
 
-      result = s21_memrevcmp(value_1->mantissa, value_2->mantissa, size);
-
-      if (value_1->sign && value_2->sign) {
-        result = result * -1;
-      }
-
-    } else if (value_1->exponent > value_2->exponent) {
-      result = -1;
-    } else {
-      result = 1;
+    else if (is_normal == 1) {
+      s21_lazy_upsize(&lvalue, &rvalue);
     }
-  } else if (value_1->sign < value_2->sign) {
-    result = 1;
-  } else {
-    result = -1;
-  }
+
+    result = s21_memrevcmp(lvalue.mantissa, rvalue.mantissa, lvalue.size);
+
+    if (value_1->sign && value_2->sign) result *= -1;
+
+  } else 
+    result = (value_2->sign) - (value_1->sign);
+
   return result;
 }
