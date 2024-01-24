@@ -33,6 +33,7 @@ int s21_from_decimal_to_int(s21_decimal src, int *dst) {
       else
         *dst = src.mantissa.bytes[0];
     }
-  }
+  } else
+    status = conv_false;
   return status;
 }
