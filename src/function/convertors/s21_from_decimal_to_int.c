@@ -11,6 +11,7 @@
 int s21_from_decimal_to_int(s21_decimal src, int *dst) {
   int status = conv_ok;
   if (dst != S21_NULL) {
+    // если экспонента не нулевая отбрасываем остаток делением на 10
     while (src.exponent.bits.exponent > 0) {
       s21_decimal tmp10 = {0};
       s21_decimal tmp = {0};
@@ -18,14 +19,16 @@ int s21_from_decimal_to_int(s21_decimal src, int *dst) {
       s21_div(src, tmp10, &tmp);
       src = tmp;
     }
+    // проверяем знак
     if (!src.exponent.bits.sign) {
+      // проверяем влазит ли положительный инт
       if (src.mantissa.bits > INT32_MAX)
         status = conv_false;
       else
         *dst = src.mantissa.bytes[0];
     } else {
-      src.mantissa.bytes[0] = ~src.mantissa.bytes[0] + 1;
-      if (src.mantissa.bits > INT32_MIN)
+      // проверяем влазит ли отрицательный инт
+      if (src.mantissa.bits > INT32_MAX - 1)
         status = conv_false;
       else
         *dst = src.mantissa.bytes[0];
