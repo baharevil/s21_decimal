@@ -32,20 +32,24 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   if (!error) {
     int8_t subzero1 = s21_is_equal_lazy(value_1, &null);
     int8_t subzero2 = s21_is_equal_lazy(value_2, &null);
+
     // Если слева "+", а справа "-", то это просто сложение (5 - (-1) = 5 + 1)
     if (subzero1 >= 0 && subzero2 < 0) {
       value_2->sign = 0;
       error |= s21_add_lazy(value_1, value_2, result);
       done++;
     }
+
     // Если слева "-", а справа "+", то это "отрицательное" сложение (-5 - 1 =
     // -6)
+    /// @bug Изменять знак у value_2
     else if (subzero1 < 0 && subzero2 >= 0) {
       value_1->sign = 0;
       result->sign = 1;
       error |= s21_add_lazy(value_1, value_2, result);
       done++;
     }
+
     // Если оба меньше (-5 - (-1) = -4)
     else if (subzero1 < 0 && subzero2 < 0) {
       value_1->sign = 0;

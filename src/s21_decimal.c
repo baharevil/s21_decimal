@@ -29,7 +29,7 @@ void s21_decimal_print(s21_decimal *x) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0x00000005, 0x0, 0x0, 0x80000000}};
+  s21_decimal value_1 = {{0x00010000, 0x0, 0x0, 0x80000000}};
   s21_decimal value_2 = {{0x00000002, 0x0, 0x0, 0x80000000}};
   s21_decimal dec_result = {0};
 

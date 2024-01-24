@@ -18,7 +18,7 @@ int8_t s21_is_normal_lazy(s21_decimal_lazy *value_1,
                           s21_decimal_lazy *value_2) {
   int8_t error = 0;
 
-  error = (value_1 == NULL || value_2 == NULL);
+  error = -(value_1 == NULL || value_2 == NULL);
 
   if (!error) {
     // Если экспоненты не равны, размеры мы проверять не должны
