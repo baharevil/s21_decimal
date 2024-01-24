@@ -2,17 +2,30 @@
 
 #include "s21_decimal.h"
 
-/// @todo дока
 
+/// @todo дока
+/*
+  @bug 
+  Большие наклодные разходы. Разбить на деление по разрядно.
+  При деление 79,228,162,514,264,337,593,543,950,335 на 1 будет 
+  79,228,162,514,264,337,593,543,950,335 вызовов функции вычитания и сложения.
+  При переводе на поразрядное деление ---> 126.
+*/ 
 int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                       s21_decimal_lazy *result) {
   int error = 0;
 
+  error |= (value_1 != NULL || value_1->mantissa != NULL);
+  error |= (value_2 != NULL || value_2->mantissa != NULL);
+  error |= (result != NULL || result->mantissa != NULL);
+
   if (!error) {
     s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
-    s21_decimal_lazy lazy_one = {0};
+    s21_decimal_lazy lazy_one = {0}, tmp = {0};
 
     error |= s21_lazy_init(&lazy_one, &one);
+    error |= s21_lazy_resize(&tmp, value_1->size);
+
     lazy_one.exponent = result->exponent;
 
     while (!error && (s21_is_equal_lazy(value_1, value_2) >= 0)) {
@@ -21,6 +34,7 @@ int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     }
 
     s21_lazy_destroy(&lazy_one);
+    s21_lazy_destroy(&tmp);
   }
 
   return error;
