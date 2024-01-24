@@ -11,24 +11,25 @@
 int s21_from_decimal_to_int(s21_decimal src, int *dst) {
   int status = conv_ok;
   if (dst != S21_NULL) {
-    // Нормализовать (привести) децимал к экспоненте = 0
-    // проверить входит ли число в INT32_MAX - ??
-    //
-    if (!((src.mantissa.bytes[0] >> 31) & 1)) {
-      if (src.exponent.bits.sign)
-        *dst = ~src.mantissa.bytes[0] + 1;
+    while (src.exponent.bits.exponent > 0) {
+      s21_decimal tmp10 = {0};
+      s21_decimal tmp = {0};
+      s21_from_int_to_decimal(10, &tmp10);
+      s21_div(src, tmp10, &tmp);
+      src = tmp;
+    }
+    if (!src.exponent.bits.sign) {
+      if (src.mantissa.bits > INT32_MAX)
+        status = conv_false;
       else
         *dst = src.mantissa.bytes[0];
-
-    } else
-      status = conv_false;
-    // if (src < 0) {
-    //   dst->exponent.bits.sign = 1;
-    //   src = ~src + 1;
-    // }
-    // dst->mantissa.bytes[0] = src;
-
-  } else
-    status = conv_false;
+    } else {
+      src.mantissa.bytes[0] = ~src.mantissa.bytes[0] + 1;
+      if (src.mantissa.bits > INT32_MIN)
+        status = conv_false;
+      else
+        *dst = src.mantissa.bytes[0];
+    }
+  }
   return status;
 }
