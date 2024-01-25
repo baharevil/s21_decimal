@@ -31,7 +31,7 @@ int s21_from_decimal_to_int(s21_decimal src, int *dst) {
       if (src.mantissa.bits > INT32_MAX - 1)
         status = conv_false;
       else
-        *dst = src.mantissa.bytes[0];
+        *dst = !src.mantissa.bytes[0] + 1;
     }
   } else
     status = conv_false;
