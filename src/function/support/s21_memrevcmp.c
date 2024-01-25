@@ -11,8 +11,12 @@
 
   @param[in] *s1,*s2 const void
   @param[in] size объем памяти
-  @return 1: s1 > s2, -1: s1 < s2, 0: s1 == s2
-  @warning Если size == 0, проверит 12 байт
+
+  @return -1: s1 < s2,
+  @return 0: s1 == s2
+  @return 1: s1 > s2,
+
+  @note Если size == 0, проверит 12 байт
   @warning Работает только при одинаковых размерах участков памяти
 */
 int s21_memrevcmp(const void *s1, const void *s2, uint16_t size) {

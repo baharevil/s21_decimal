@@ -175,6 +175,7 @@ uint8_t s21_lazy_upsize(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_lazy_downsize(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
 uint8_t s21_search_msb(s21_decimal *decimal);
+uint8_t s21_search_msb_lazy(s21_decimal_lazy *lazy);
 int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
 
 #endif

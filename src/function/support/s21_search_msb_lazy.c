@@ -4,7 +4,7 @@
 
 /*!
   @ingroup Support Функции для служебного пользования
-  @brief Поиск MSB (Most Significant Bit) в s21_decimal
+  @brief Поиск MSB (Most Significant Bit) в s21_decimal_lazy
 
   Функция поиска старшего значащего бита (Most Significant Bit) в числе
   s21_decimal Возвращает целочисленное количество байт от старшего значащего
@@ -13,18 +13,18 @@
   @param[in] *decimal Адрес значения
   @return Размер мантиссы в байтах
 */
-uint8_t s21_search_msb(s21_decimal *decimal) {
+uint8_t s21_search_msb_lazy(s21_decimal_lazy *lazy) {
   int result = 0;
 
   // счетчик бит в байте
   int8_t bit_count = 0;
 
   // определяем кол-во элементов в массиве
-  size_t bytes_max = sizeof(decimal->mantissa.bytes);
+  size_t bytes_max = lazy->size;
   size_t byte = 0;
 
   // Указатель на последний байт в массиве
-  uint8_t *ptr = (decimal->mantissa.bytes + bytes_max - 1);
+  uint8_t *ptr = (lazy->mantissa + bytes_max - 1);
   uint8_t mask = 0;
 
   // Идем от последнего байта назад

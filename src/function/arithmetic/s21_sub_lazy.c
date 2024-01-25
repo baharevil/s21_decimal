@@ -2,6 +2,8 @@
 
 #include "s21_decimal.h"
 
+/// @todo 1 - tmp & use lvalue & rvalue
+
 /*!
   @ingroup ArifmeticOperators Арифметические операторы
   @brief Функция вычитания s21_decimal_lazy.
@@ -19,64 +21,73 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   int8_t error = 0, done = 0;
   s21_decimal_lazy lvalue = {0}, rvalue = {0}, null = {0};
-
-  error |= s21_lazy_init(&lvalue, NULL);
-  error |= s21_lazy_init(&rvalue, NULL);
-  error |= s21_lazy_init(&null, NULL);
+  s21_decimal_lazy tmp_v1 = {0}, tmp_v2 = {0};
 
   // Первичная валидация
   error |= (value_1 == NULL || value_1->mantissa == NULL);
   error |= (value_2 == NULL || value_2->mantissa == NULL);
 
-  //Сравнения
+  error |= s21_lazy_init(&null, NULL);
+  error |= s21_lazy_init(&lvalue, NULL);
+  error |= s21_lazy_init(&rvalue, NULL);
+
   if (!error) {
-    int8_t subzero1 = s21_is_equal_lazy(value_1, &null);
-    int8_t subzero2 = s21_is_equal_lazy(value_2, &null);
+    error |= s21_lazy_to_lazy_cp(value_1, &tmp_v1);
+    error |= s21_lazy_to_lazy_cp(value_2, &tmp_v2);
+  }
+
+  // Сравнения
+  if (!error) {
+    int8_t subzero1 = s21_is_equal_lazy(&tmp_v1, &null);
+    int8_t subzero2 = s21_is_equal_lazy(&tmp_v2, &null);
 
     // Если слева "+", а справа "-", то это просто сложение (5 - (-1) = 5 + 1)
     if (subzero1 >= 0 && subzero2 < 0) {
-      value_2->sign = 0;
-      error |= s21_add_lazy(value_1, value_2, result);
+      tmp_v2.sign = 0;
+      error |= s21_add_lazy(&tmp_v1, &tmp_v2, result);
       done++;
     }
 
-    // Если слева "-", а справа "+", то это "отрицательное" сложение (-5 - 1 =
-    // -6)
-    /// @bug Изменять знак у value_2
+    // Если слева "-", а справа "+", то это "отрицательное" сложение
+    // (-5 - 1 = -6)
     else if (subzero1 < 0 && subzero2 >= 0) {
-      value_1->sign = 0;
-      result->sign = 1;
-      error |= s21_add_lazy(value_1, value_2, result);
+      tmp_v2.sign = 1;
+      error |= s21_add_lazy(&tmp_v1, &tmp_v2, result);
       done++;
     }
 
     // Если оба меньше (-5 - (-1) = -4)
-    else if (subzero1 < 0 && subzero2 < 0) {
-      value_1->sign = 0;
-      value_2->sign = 0;
-      result->sign = 1;
-    }
+    // Если оба меньше (-1 - (-5) = 4)
+    else
+      tmp_v1.sign = tmp_v2.sign = 0;
   }
 
-  //Сравнение на то, что уменьшаемое меньше вычитаемого
+  // Сравнение на то, что уменьшаемое меньше вычитаемого
+  /// @bug нужна оптимизация елси менять на передачу по значению
   if (!error && !done) {
-    if ((s21_is_equal_lazy(value_1, value_2) == -1)) {
-      error |= s21_lazy_to_lazy_cp(value_2, &lvalue);
-      error |= s21_lazy_to_lazy_cp(value_1, &rvalue);
-    } else {
-      error |= s21_lazy_to_lazy_cp(value_1, &lvalue);
-      error |= s21_lazy_to_lazy_cp(value_2, &rvalue);
+    if ((s21_is_equal_lazy(&tmp_v1, &tmp_v2) == -1)) {
+      error |= s21_lazy_to_lazy_cp(&tmp_v2, &lvalue);
+      error |= s21_lazy_to_lazy_cp(&tmp_v1, &rvalue);
+      result->sign = !value_1->sign;
+    }
+
+    else {
+      error |= s21_lazy_to_lazy_cp(&tmp_v1, &lvalue);
+      error |= s21_lazy_to_lazy_cp(&tmp_v2, &rvalue);
+      result->sign = value_1->sign;
     }
   }
 
-  if (!error) {
+  if (!error && !done) {
     int8_t normal = s21_is_normal_lazy(&lvalue, &rvalue);
 
+    // Не нормализованы и не выравнены
     if (normal == 0) {
       error |= s21_lazy_normalize_greater(&lvalue, &rvalue);
       error |= s21_lazy_upsize(&lvalue, &rvalue);
     }
 
+    // Нормализованы, но не выравнены
     else if (normal == 1) {
       error |= s21_lazy_upsize(&lvalue, &rvalue);
     }
@@ -84,11 +95,14 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     // 2 - нормализованы и выровняны по размеру
     else
       error |= (normal != 2);
+
+    if (result->size != lvalue.size) s21_lazy_resize(result, lvalue.size);
   }
 
   if (!error && !done) {
     uint8_t carry = 0;
     uint16_t res = 0;
+
     for (size_t i = 0; i < result->size; i++) {
       res = lvalue.mantissa[i] - rvalue.mantissa[i] - carry;
       result->mantissa[i] = (uint8_t)res;
@@ -96,9 +110,11 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     }
   }
 
+  s21_lazy_destroy(&null);
   s21_lazy_destroy(&lvalue);
   s21_lazy_destroy(&rvalue);
-  s21_lazy_destroy(&null);
+  s21_lazy_destroy(&tmp_v1);
+  s21_lazy_destroy(&tmp_v2);
 
   return error;
 }

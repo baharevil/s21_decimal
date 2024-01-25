@@ -1,8 +1,8 @@
-#include <stdint.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stddef.h>
 
 #include "s21_decimal.h"
+
+/// @todo передача по значению для облегчения работы функций
 
 /*!
   @ingroup ArifmeticOperators Арифметические операторы
@@ -18,14 +18,20 @@
 int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
   int error = 0;
-  uint16_t result_size = value_1->size + value_2->size;
+  uint16_t result_size = 0;
   s21_decimal_lazy tmp = {0}, tmp_res = {0};
-  error |= s21_lazy_init(&tmp, NULL);
-  error |= s21_lazy_init(&tmp_res, NULL);
-  error |= s21_lazy_resize(&tmp_res, result_size);
 
-  error |= s21_lazy_resize(&tmp, result_size);
-  // error |= s21_lazy_resize(result, result_size);
+  error |= (value_1 == NULL) || (value_1->mantissa == NULL);
+  error |= (value_2 == NULL) || (value_2->mantissa == NULL);
+  error |= (result == NULL) || (result->mantissa == NULL);
+
+  if (!error) {
+    result_size = value_1->size + value_2->size;
+    error |= s21_lazy_init(&tmp, NULL);
+    error |= s21_lazy_init(&tmp_res, NULL);
+    error |= s21_lazy_resize(&tmp_res, result_size);
+    error |= s21_lazy_resize(result, result_size);
+  }
 
   if (!error) {
     uint16_t res = 0;
@@ -38,6 +44,7 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
         *(tmp.mantissa + i + j) = (uint8_t)res;
 
         carry = res >> sizeof(uint8_t) * CHAR_BIT;
+        if (i + j + 1 >= tmp.size) s21_lazy_resize(&tmp, tmp.size + 1);
         *(tmp.mantissa + i + j + 1) = carry;
       }
       error |= s21_add_lazy(&tmp, &tmp_res, &tmp_res);
@@ -45,11 +52,10 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       carry = 0;
     }
 
-    result->exponent = value_1->exponent + value_2->exponent;
-    result->sign =
-        (value_1->sign && !value_2->sign) | (value_2->sign && !value_1->sign);
-
     if (!error) s21_lazy_to_lazy_cp(&tmp_res, result);
+
+    result->exponent = value_1->exponent + value_2->exponent;
+    // result->sign = (value_1->sign != value_2->sign);
   }
 
   s21_lazy_destroy(&tmp);

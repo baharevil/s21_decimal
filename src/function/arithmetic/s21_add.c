@@ -27,7 +27,7 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   // Функция обратного копирования s21_from_lazy_to_decimal()
   // копирует только 12 байт или менее, в зависимости от размера src->size
-  s21_from_lazy_to_decimal(&res, result);
+  if (!error) s21_from_lazy_to_decimal(&res, result);
 
   s21_lazy_destroy(&lazy1);
   s21_lazy_destroy(&lazy2);

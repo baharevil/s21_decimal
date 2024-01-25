@@ -1,9 +1,8 @@
-#include <stdint.h>
-#include <stdlib.h>
+#include <stddef.h>
 
 #include "s21_decimal.h"
 
-/// @todo Сделать оберткой над s21_div_lazy()
+/// @todo Сырое - тесты
 
 /*!
   @ingroup ArifmeticOperators Арифметические операторы
@@ -14,20 +13,18 @@
   @return Код ошибки: 0 - ОК, 1 - ошибка
 */
 uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy) {
-  uint8_t result = 0;
-  uint16_t count = 0;
-  uint16_t *tmp = NULL;
+  uint8_t error = 0;
 
-  // Грязно. Тащу по половине байта, при этом выхожу за границу мантиссы.
-  // Переделать.
-  while (count < lazy->size) {
-    tmp = (uint16_t *)(lazy->mantissa + count);
-    *(lazy->mantissa + count) = *tmp / 16;
-    count++;
+  error = (lazy == NULL || lazy->mantissa == NULL);
+
+  if (!error) {
+    s21_decimal ten = {{0xa, 0x0, 0x0, 0x00010000}};
+    s21_decimal_lazy l_ten = {0};
+
+    s21_lazy_init(&l_ten, &ten);
+    error = s21_div_lazy(lazy, &l_ten, lazy);
+    s21_lazy_destroy(&l_ten);
   }
 
-  // Уменьшаем экспоненту на 1, снаружи этого делать не надо
-  if (!result) lazy->exponent -= (lazy->exponent > 0);
-
-  return result;
+  return error;
 }
