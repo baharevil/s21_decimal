@@ -32,9 +32,12 @@ void s21_decimal_print(s21_decimal *x, char *str) {
 }
 
 int main() {
-  // s21_decimal value_1 = {{0x00000000, 0x0, 0x2, 0x80000000}};
+  s21_decimal value_1 = {{0xfff, 0x0, 0x0, 0x0}};
+  value_1.exponent.bits.exponent = 1;
   // s21_decimal value_2 = {{0x00000001, 0x0, 0x0, 0x80000000}};
-  // s21_decimal dec_result = {0};
+  s21_decimal_print(&value_1, "value_1: ");
+
+  s21_decimal dec_result = {0};
 
   // s21_add(value_1, value_2, &dec_result);
   // s21_decimal_print(&dec_result, "add: ");
@@ -47,14 +50,10 @@ int main() {
 
   // s21_div(value_1, value_2, &dec_result);
   // s21_decimal_print(&dec_result, "div: ");
+  
+  s21_truncate(value_1, &dec_result);
 
-  float a = 2147483647;
-  int b = (int)a;
-
-  printf("INT_MAX:  %d\n", INT32_MAX);
-
-  printf("a:        %f\n", a);
-  printf("b:       %d\n", b);
+  s21_decimal_print(&dec_result, "result: ");
 
   return 0;
 }

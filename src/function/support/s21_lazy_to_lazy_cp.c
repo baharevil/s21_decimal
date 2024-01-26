@@ -15,7 +15,6 @@
 uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest) {
   uint8_t error = 0;
   uint16_t size = 0;
-  uint8_t *temp = NULL;
 
   error = (!src || !dest);
 

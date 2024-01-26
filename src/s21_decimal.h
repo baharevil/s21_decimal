@@ -159,10 +159,7 @@ int s21_truncate(s21_decimal value, s21_decimal *result);  // -
   @return Функции возвращают код ошибки:
     0 - OK
     1 - ошибка
-
-  @bug Задвоение функций. s21_lazy_zeroing & s21_lazy_resize
 */
-/// @todo удалить s21_lazy_zeroing
 uint8_t s21_lazy_init(s21_decimal_lazy *lazy, s21_decimal *decimal);
 void s21_lazy_destroy(s21_decimal_lazy *lazy);
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
@@ -177,5 +174,6 @@ uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
 uint8_t s21_search_msb(s21_decimal *decimal);
 uint8_t s21_search_msb_lazy(s21_decimal_lazy *lazy);
 int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
+uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
 
 #endif
