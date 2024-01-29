@@ -19,14 +19,16 @@ uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy) {
 
   if (!error) {
     s21_decimal ten = {{0xa, 0x0, 0x0, 0x00010000}};
-    s21_decimal_lazy l_ten = {0}, result = {0};
+    s21_decimal_lazy ten_lazy = {0}, result = {0};
 
-    s21_lazy_init(&l_ten, &ten);
-    s21_lazy_init(&result, NULL);
+    error |= s21_lazy_init(&ten_lazy, &ten);
+    error |= s21_lazy_init(&result, NULL);
+    result.exponent = ten_lazy.exponent = lazy->exponent;
 
-    error |= s21_div_lazy_core(lazy, &l_ten, &result);
+    error |= s21_div_lazy_core(lazy, &ten_lazy, &result);
+    result.exponent--;
     error |= s21_lazy_to_lazy_cp(&result, lazy);
-    s21_lazy_destroy(&l_ten);
+    s21_lazy_destroy(&ten_lazy);
     s21_lazy_destroy(&result);
   }
 
