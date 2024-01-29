@@ -21,13 +21,8 @@ uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result) {
             result->mantissa == NULL);
 
   if (!error) {
-    int32_t size = s21_search_msb_lazy(value) - value->exponent;
-    result->sign = value->sign;
-    result->exponent = value->exponent;
-    if (size > 0) {
-      error |= s21_lazy_resize(result, size);
-      error |= (memcpy(result->mantissa, value->mantissa + value->size - size, size) == NULL);
-    }
+    error |= s21_lazy_to_lazy_cp(value, result);
+    error |= s21_lazy_normalization(result, 0);
   }
 
   return error;

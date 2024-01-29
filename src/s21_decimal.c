@@ -32,7 +32,7 @@ void s21_decimal_print(s21_decimal *x, char *str) {
 }
 
 int main() {
-  s21_decimal value_1 = {{0xfff, 0x0, 0x0, 0x0}};
+  s21_decimal value_1 = {{0xff, 0x0, 0x0, 0x0}};
   value_1.exponent.bits.exponent = 1;
   // s21_decimal value_2 = {{0x00000001, 0x0, 0x0, 0x80000000}};
   s21_decimal_print(&value_1, "value_1: ");

@@ -26,19 +26,17 @@ int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   if (!error) {
     // Необходимо для инкрементации
     s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
-    s21_decimal_lazy lazy_one = {0}, tmp = {0};
+    s21_decimal_lazy lazy_one = {0};
 
     error |= s21_lazy_init(&lazy_one, &one);
-    error |= s21_lazy_resize(&tmp, value_1->size);
     lazy_one.exponent = result->exponent;
 
     while (!error && (s21_is_equal_lazy(value_1, value_2) >= 0)) {
       error |= s21_sub_lazy(value_1, value_2, value_1);
       error |= s21_add_lazy(result, &lazy_one, result);
     }
-
+    
     s21_lazy_destroy(&lazy_one);
-    s21_lazy_destroy(&tmp);
   }
 
   return error;

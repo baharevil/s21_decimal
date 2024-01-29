@@ -42,12 +42,7 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp) {
     error |= s21_lazy_to_lazy_cp(&tmp_value, lazy);
   }
 
-  if (!error) {
-    free(tmp_value.mantissa);
-    tmp_value.mantissa = NULL;
-  }
-
-  if (tmp_value.mantissa != NULL) free(tmp_value.mantissa);
+  s21_lazy_destroy(&tmp_value);
 
   return error;
 }

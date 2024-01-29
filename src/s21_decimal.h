@@ -95,6 +95,8 @@ uint16_t s21_add_uint8_t(uint8_t *v1, uint8_t *v2, uint8_t *result,
                          uint8_t size);
 uint8_t s21_mul_lazy_to_10(s21_decimal_lazy *lazy);
 uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy);
+int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
+                      s21_decimal_lazy *result);
 
 /*!
   @defgroup ComparisonOperators Операторы сравнение
