@@ -177,5 +177,6 @@ uint8_t s21_search_msb(s21_decimal *decimal);
 uint8_t s21_search_msb_lazy(s21_decimal_lazy *lazy);
 int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
 uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
+uint8_t s21_round_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
 
 #endif

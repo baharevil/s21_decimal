@@ -13,38 +13,46 @@
 
 uint8_t s21_round_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result) {
   uint8_t error = 0;
-  uint8_t number_five = 5;
-  uint8_t number_two = 2;
-  uint8_t number_one = 1;
+  s21_decimal five_dec = {{0x5, 0x0, 0x0, 0x0}};
+  s21_decimal two_dec = {{0x2, 0x0, 0x0, 0x0}};
+  s21_decimal one_dec = {{0x1, 0x0, 0x0, 0x0}};
+  s21_decimal zero_dec = {{0x0, 0x0, 0x0, 0x0}};
+  s21_decimal_lazy unit, fractional, tmp, five, two, one, zero;
 
-  error |= (value == NULL || value->mantissa == NULL || result == NULL ||
-            result->mantissa == NULL);
+  s21_lazy_init(&five, &five_dec);
+  s21_lazy_init(&two, &two_dec);
+  s21_lazy_init(&one, &one_dec);
+  s21_lazy_init(&zero, &zero_dec);
+  s21_lazy_init(&unit, &zero_dec);  
+  s21_lazy_init(&fractional, &zero_dec);
+  s21_lazy_init(&tmp, &zero_dec);
+
+  error |= (value == NULL || value->mantissa == NULL);
 
   if (!error) {
-    s21_decimal_lazy zero;
     if (value->exponent > 0) {
-      s21_decimal_lazy unit, fractional, tmp;
-      s21_decimal_lazy five;
-      five.mantissa = &number_five;
-      s21_decimal_lazy two;
-      two.mantissa = &number_two;
-      s21_decimal_lazy one;
-      one.mantissa = &number_one;
       error |= s21_truncate_lazy(value, &unit);
       error |= s21_lazy_to_lazy_cp(value, &tmp);
       error |= s21_lazy_normalization(&tmp, 1);
       error |= s21_sub_lazy(&tmp, &unit, &fractional);
       s21_lazy_destroy(&tmp);
+      s21_lazy_init(&tmp, &zero_dec);
       error |= s21_lazy_normalization(&fractional, 0);
       if (!s21_is_null_lazy(&unit)) {
         if (s21_is_equal_lazy(&fractional, &five) == 0||1) {
           error |= s21_div_lazy(&unit, &two, &tmp);
-          if (!tmp.mantissa) error |= s21_add_lazy(&unit, &one, result);
-        } 
+          if (!tmp.exponent) error |= s21_add_lazy(&unit, &one, result);
+        }
       }
-      if (!result) error |= s21_lazy_to_lazy_cp(&unit, result);
-    } else error |= s21_lazy_to_lazy_cp(&zero, result);
+      if (!result->exponent) error |= s21_lazy_to_lazy_cp(&unit, result);
+    } else error |= s21_lazy_to_lazy_cp(value, result);
   if (value->sign > 0) result->sign = value->sign;
   }
+      s21_lazy_destroy(&five);
+      s21_lazy_destroy(&two);
+      s21_lazy_destroy(&one);
+      s21_lazy_destroy(&zero);
+      s21_lazy_destroy(&unit);
+      s21_lazy_destroy(&fractional);
   return error;
 }
