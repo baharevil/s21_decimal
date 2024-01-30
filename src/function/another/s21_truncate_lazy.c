@@ -13,7 +13,6 @@
   @param[in] result Указатель на результат
   @return 0 - OK 1 - ошибка вычисления
 */
-
 uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result) {
   uint8_t error = 0;
 
