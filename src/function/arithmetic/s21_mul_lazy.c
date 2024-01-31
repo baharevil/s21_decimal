@@ -21,9 +21,8 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   uint16_t result_size = 0;
   s21_decimal_lazy tmp = {0}, tmp_res = {0};
 
-  error |= (value_1 == NULL) || (value_1->mantissa == NULL);
-  error |= (value_2 == NULL) || (value_2->mantissa == NULL);
-  error |= (result == NULL) || (result->mantissa == NULL);
+  error |= s21_is_valid("%lp%lp%lp", value_1, value_2, result);
+
 
   if (!error) {
     result_size = value_1->size + value_2->size;
@@ -55,7 +54,7 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     if (!error) s21_lazy_to_lazy_cp(&tmp_res, result);
 
     result->exponent = value_1->exponent + value_2->exponent;
-    // result->sign = (value_1->sign != value_2->sign);
+    result->sign = (value_1->sign != value_2->sign);
   }
 
   s21_lazy_destroy(&tmp);

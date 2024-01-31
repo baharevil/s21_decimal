@@ -3,6 +3,7 @@
 
 #include <endian.h>
 #include <limits.h>
+#include <stdarg.h>
 #include <stdint.h>
 
 #define S21_NULL 0x0
@@ -71,6 +72,7 @@ typedef struct s21_decimal_lazy {
     1 - число слишком велико или равно бесконечности
     2 - число слишком мало или равно отрицательной бесконечности
     3 - деление на 0
+    4 - неккоректные входные параметры
 */
 typedef enum arifmetic_error {
   arifm_ok = 0,
@@ -97,6 +99,8 @@ uint8_t s21_mul_lazy_to_10(s21_decimal_lazy *lazy);
 uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy);
 int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                       s21_decimal_lazy *result);
+int s21_mod_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
+                 s21_decimal_lazy *result);
 
 /*!
   @defgroup ComparisonOperators Операторы сравнение
@@ -105,6 +109,7 @@ int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   @return Функции возвращают код ошибки:
     0 - FALSE
     1 - TRUE
+    4 - неккоректные входные параметры
 */
 typedef enum comparison_error { false = 0, true } comparison_error;
 
@@ -118,6 +123,7 @@ int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_is_null(s21_decimal *decimal);
 uint8_t s21_is_null_lazy(s21_decimal_lazy *lazy);
 int8_t s21_is_normal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
+uint8_t s21_is_valid(char *format, ...);
 
 /*!
   @defgroup ConverterOperators Преобразователи
@@ -126,8 +132,7 @@ int8_t s21_is_normal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
   @return Функции возвращают код ошибки:
     0 - OK
     1 - ошибка конвертации
-
-  @bug А зачем функция s21_decimal_to_lazy ?
+    4 - неккоректные входные параметры
 */
 typedef enum converter_error { conv_ok = 0, conv_false } converter_error;
 
@@ -137,7 +142,6 @@ int s21_from_decimal_to_int(s21_decimal src, int *dst);      // -
 int s21_from_decimal_to_float(s21_decimal src, float *dst);  // -
 uint8_t s21_from_decimal_to_lazy(s21_decimal *src, s21_decimal_lazy *dest);
 uint8_t s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest);
-s21_decimal_lazy s21_decimal_to_lazy(s21_decimal value);
 
 /*!
   @defgroup AnotherFunction Другие функции
@@ -146,6 +150,7 @@ s21_decimal_lazy s21_decimal_to_lazy(s21_decimal value);
   @return Функции возвращают код ошибки:
     0 - OK
     1 - ошибка вычисления
+    4 - неккоректные входные параметры
 */
 typedef enum another_error { ok = 0, calc_error } other_error;
 
@@ -153,6 +158,7 @@ int s21_floor(s21_decimal value, s21_decimal *result);     // -
 int s21_negate(s21_decimal value, s21_decimal *result);    // -
 int s21_round(s21_decimal value, s21_decimal *result);     // -
 int s21_truncate(s21_decimal value, s21_decimal *result);  // -
+uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
 
 /*!
   @defgroup Support Функции для служебного пользования
@@ -161,20 +167,25 @@ int s21_truncate(s21_decimal value, s21_decimal *result);  // -
   @return Функции возвращают код ошибки:
     0 - OK
     1 - ошибка
+    4 - неккоректные входные параметры
 */
 uint8_t s21_lazy_init(s21_decimal_lazy *lazy, s21_decimal *decimal);
 void s21_lazy_destroy(s21_decimal_lazy *lazy);
+
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp);
 uint8_t s21_lazy_normalize_greater(s21_decimal_lazy *value_1,
                                    s21_decimal_lazy *value_2);
 uint8_t s21_lazy_normalize_less(s21_decimal_lazy *value_1,
                                 s21_decimal_lazy *value_2);
+
 uint8_t s21_lazy_resize(s21_decimal_lazy *lazy, uint16_t new_size);
 uint8_t s21_lazy_upsize(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_lazy_downsize(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
-uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
+
 uint8_t s21_search_msb(s21_decimal *decimal);
 uint8_t s21_search_msb_lazy(s21_decimal_lazy *lazy);
+
+uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
 int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
 uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
 uint8_t s21_round_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);

@@ -16,15 +16,17 @@
 */
 int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
-
   s21_decimal_lazy lazy1, lazy2, res;
 
-  s21_lazy_init(&lazy1, &value_1);
-  s21_lazy_init(&lazy2, &value_2);
-  s21_lazy_init(&res, NULL);
+  error |= s21_is_valid("%p%p%p", &value_1, &value_2, result);
 
-  error = s21_mul_lazy(&lazy1, &lazy2, &res);
+  if (!error) {
+    error |= s21_lazy_init(&lazy1, &value_1);
+    error |= s21_lazy_init(&lazy2, &value_2);
+    error |= s21_lazy_init(&res, NULL);
+  }
 
+  if (!error) error = s21_mul_lazy(&lazy1, &lazy2, &res);
   if (!error) s21_from_lazy_to_decimal(&res, result);
 
   s21_lazy_destroy(&lazy1);
