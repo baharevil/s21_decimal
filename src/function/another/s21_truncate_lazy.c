@@ -21,7 +21,9 @@ uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result) {
 
   if (!error) {
     error |= s21_lazy_to_lazy_cp(value, result);
+    result->sign = 0;
     error |= s21_lazy_normalization(result, 0);
+    result->sign = value->sign;
   }
 
   return error;

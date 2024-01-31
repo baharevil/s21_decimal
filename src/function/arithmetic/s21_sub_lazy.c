@@ -97,6 +97,7 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       error |= (normal != 2);
 
     if (result->size != lvalue.size) s21_lazy_resize(result, lvalue.size);
+    if (result->exponent != lvalue.exponent) result->exponent = lvalue.exponent;
   }
 
   if (!error && !done) {
