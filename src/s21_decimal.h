@@ -79,10 +79,10 @@ typedef enum arifmetic_error {
   div_by_0
 } arifmetic_error;
 
-int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
-int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
-int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
-int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); // +
+int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); // +
+int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); // +
+int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); // +
 int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
 int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
@@ -108,12 +108,12 @@ int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
 */
 typedef enum comparison_error { false = 0, true } comparison_error;
 
-int s21_is_less(s21_decimal, s21_decimal);              // -
-int s21_is_less_or_equal(s21_decimal, s21_decimal);     // -
-int s21_is_greater(s21_decimal, s21_decimal);           // -
-int s21_is_greater_or_equal(s21_decimal, s21_decimal);  // -
-int s21_is_equal(s21_decimal, s21_decimal);             // -
-int s21_is_not_equal(s21_decimal, s21_decimal);         // -
+int s21_is_less(s21_decimal, s21_decimal);              // +
+int s21_is_less_or_equal(s21_decimal, s21_decimal);     // +
+int s21_is_greater(s21_decimal, s21_decimal);           // +
+int s21_is_greater_or_equal(s21_decimal, s21_decimal);  // +
+int s21_is_equal(s21_decimal, s21_decimal);             // +
+int s21_is_not_equal(s21_decimal, s21_decimal);         // +
 int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2);
 uint8_t s21_is_null(s21_decimal *decimal);
 uint8_t s21_is_null_lazy(s21_decimal_lazy *lazy);
@@ -151,8 +151,10 @@ typedef enum another_error { ok = 0, calc_error } other_error;
 
 int s21_floor(s21_decimal value, s21_decimal *result);     // -
 int s21_negate(s21_decimal value, s21_decimal *result);    // -
-int s21_round(s21_decimal value, s21_decimal *result);     // -
-int s21_truncate(s21_decimal value, s21_decimal *result);  // -
+int s21_round(s21_decimal value, s21_decimal *result);     // +
+uint8_t s21_round_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
+int s21_truncate(s21_decimal value, s21_decimal *result);  // +
+uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
 
 /*!
   @defgroup Support Функции для служебного пользования
@@ -176,7 +178,5 @@ uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
 uint8_t s21_search_msb(s21_decimal *decimal);
 uint8_t s21_search_msb_lazy(s21_decimal_lazy *lazy);
 int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
-uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
-uint8_t s21_round_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
 
 #endif
