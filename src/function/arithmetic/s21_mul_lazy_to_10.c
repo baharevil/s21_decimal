@@ -14,7 +14,7 @@ uint8_t s21_mul_lazy_to_10(s21_decimal_lazy *lazy) {
   uint8_t error = 0, carry = 0;
   uint16_t count = 0, tmp = 0;
 
-  error = (lazy == NULL || lazy->mantissa == NULL);
+  error |= !s21_lazy_ptr_is_valid(lazy);
 
   // Идем по существующим байтам и умножаем их с переносом старших бит
   while (!error && count < lazy->size) {

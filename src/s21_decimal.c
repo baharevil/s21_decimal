@@ -31,44 +31,51 @@ void s21_decimal_print(s21_decimal *x, char *str) {
   printf(" sign: %u\n", x->exponent.bits.sign);
 }
 
-int main() {
-  // s21_decimal value_1 = {{0xff, 0x0, 0x0, 0x0}};
-  // value_1.exponent.bits.exponent = 1;
-  s21_decimal value_2 = {{39, 0x0, 0x0, 0x80010000}};
-  s21_decimal_print(&value_2, "value_2: ");
+// Исслеованеи по бэктрейсу
+#include <execinfo.h>
 
-  s21_decimal dec_result = {0};
+void handler(char *caller) {
+  void *array[10];
+  size_t size;
+  printf("Stack Trace Start for %s\n", caller);
+  size = backtrace(array, 10);
+  backtrace_symbols_fd(array, size, 2);
+  printf("Stack Trace End\n");
+}
+
+void car() {
+  handler("car()");
+  printf("Continue Execution");
+}
+void baz() { car(); }
+
+void bar() { baz(); }
+void foo() { bar(); }
+
+int main() {
+  // s21_decimal value_1 = {{0xf, 0x0, 0x0, 0x80000000}};
+  // s21_decimal value_2 = {{0xf, 0x0, 0x0, 0x80010000}};
+  // s21_decimal dec_result = {0};
 
   // s21_add(value_1, value_2, &dec_result);
   // s21_decimal_print(&dec_result, "add: ");
 
-  // s21_mul(value_1, value_2, &dec_result);
-  // s21_decimal_print(&dec_result, "mul: ");
+  // s21_truncate(dec_result, &dec_result);
+  // s21_decimal_print(&dec_result, "add: ");
 
-  // s21_sub(value_1, value_2, &dec_result);
-  // s21_decimal_print(&dec_result, "sub: ");
-
-  // s21_div(value_1, value_2, &dec_result);
-  // s21_decimal_print(&dec_result, "div: ");
-
-  s21_decimal_lazy value_l;
-  s21_decimal_lazy value_rounded;
-
-  s21_lazy_init(&value_l, &value_2);
-  s21_lazy_init(&value_rounded, NULL);
-
-  s21_round_lazy(&value_l, &value_rounded);
-  s21_negate_lazy(&value_rounded);
-
-  // s21_truncate(value_1, &dec_result);
-
-  // s21_decimal_print(&dec_result, "result: ");
-
-  // s21_decimal_lazy_print(&value_rounded);
-
-  s21_from_lazy_to_decimal(&value_rounded, &dec_result);
-
+  //2583 - A17
+  //1010 0001 0111
+  //258 - 1 02
+  //1 0000 0010
+  s21_decimal value_2 = {{0x00000A17, 0x0, 0x0, 0x00010000}}; 
+  s21_decimal_print(&value_2, "value_2: "); 
+  s21_decimal dec_result = {0}; 
+  s21_decimal_lazy value_l; 
+  s21_decimal_lazy value_rounded; 
+  s21_lazy_init(&value_l, &value_2); 
+  s21_lazy_init(&value_rounded, NULL); 
+  s21_truncate_lazy(&value_l, &value_rounded); 
+  s21_from_lazy_to_decimal(&value_rounded, &dec_result); 
   s21_decimal_print(&dec_result, "result: ");
-
   return 0;
 }

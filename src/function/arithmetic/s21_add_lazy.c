@@ -28,8 +28,6 @@ uint16_t s21_add_uint8_t(uint8_t *v1, uint8_t *v2, uint8_t *result,
   return carry;
 }
 
-/// @todo передача по значению для облегчения работы функций
-
 /*!
   @ingroup ArifmeticOperators Арифметические операторы
   @brief Функция сложения двух s21_decimal_lazy.
@@ -49,10 +47,10 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   int error = 0;
 
   // Первичная валидация
-  error |= (value_1 == NULL || value_1->mantissa == NULL);
-  error |= (value_2 == NULL || value_2->mantissa == NULL);
+  error |= !s21_lazy_ptr_is_valid(value_1);
+  error |= !s21_lazy_ptr_is_valid(value_2);
+  error |= !s21_lazy_ptr_is_valid(result);
 
-  //----------------- Ver2 -------------------
   int8_t is_normal = 0;
   uint16_t carry = 0;
   s21_decimal_lazy lvalue = {0}, rvalue = {0};
@@ -90,6 +88,7 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
 
     if (!error) {
       if (result->size != lvalue.size) s21_lazy_resize(result, lvalue.size);
+      if (result->exponent != lvalue.exponent) result->exponent = lvalue.exponent;
 
       carry = s21_add_uint8_t(lvalue.mantissa, rvalue.mantissa,
                               result->mantissa, result->size);

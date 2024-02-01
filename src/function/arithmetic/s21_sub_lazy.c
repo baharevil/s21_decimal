@@ -22,60 +22,59 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   int8_t error = 0, done = 0;
   s21_decimal_lazy lvalue = {0}, rvalue = {0}, null = {0};
   s21_decimal_lazy tmp_v1 = {0}, tmp_v2 = {0};
+  s21_decimal_lazy tmp = {0};
+
 
   // Первичная валидация
-  error |= (value_1 == NULL || value_1->mantissa == NULL);
-  error |= (value_2 == NULL || value_2->mantissa == NULL);
+  error |= !s21_lazy_ptr_is_valid(value_1);
+  error |= !s21_lazy_ptr_is_valid(value_2);
+  error |= !s21_lazy_ptr_is_valid(result);
 
   error |= s21_lazy_init(&null, NULL);
   error |= s21_lazy_init(&lvalue, NULL);
   error |= s21_lazy_init(&rvalue, NULL);
 
   if (!error) {
-    error |= s21_lazy_to_lazy_cp(value_1, &tmp_v1);
-    error |= s21_lazy_to_lazy_cp(value_2, &tmp_v2);
+    error |= s21_lazy_to_lazy_cp(value_1, &lvalue);
+    error |= s21_lazy_to_lazy_cp(value_2, &rvalue);
   }
 
   // Сравнения
   if (!error) {
-    int8_t subzero1 = s21_is_equal_lazy(&tmp_v1, &null);
-    int8_t subzero2 = s21_is_equal_lazy(&tmp_v2, &null);
+    int8_t subzero1 = s21_is_equal_lazy(&lvalue, &null);
+    int8_t subzero2 = s21_is_equal_lazy(&rvalue, &null);
 
     // Если слева "+", а справа "-", то это просто сложение (5 - (-1) = 5 + 1)
     if (subzero1 >= 0 && subzero2 < 0) {
-      tmp_v2.sign = 0;
-      error |= s21_add_lazy(&tmp_v1, &tmp_v2, result);
+      rvalue.sign = 0;
+      error |= s21_add_lazy(&lvalue, &rvalue, result);
       done++;
     }
 
     // Если слева "-", а справа "+", то это "отрицательное" сложение
     // (-5 - 1 = -6)
     else if (subzero1 < 0 && subzero2 >= 0) {
-      tmp_v2.sign = 1;
-      error |= s21_add_lazy(&tmp_v1, &tmp_v2, result);
+      rvalue.sign = 1;
+      error |= s21_add_lazy(&lvalue, &rvalue, result);
       done++;
     }
 
     // Если оба меньше (-5 - (-1) = -4)
     // Если оба меньше (-1 - (-5) = 4)
     else
-      tmp_v1.sign = tmp_v2.sign = 0;
+      lvalue.sign = rvalue.sign = 0;
   }
 
   // Сравнение на то, что уменьшаемое меньше вычитаемого
-  /// @bug нужна оптимизация елси менять на передачу по значению
   if (!error && !done) {
-    if ((s21_is_equal_lazy(&tmp_v1, &tmp_v2) == -1)) {
-      error |= s21_lazy_to_lazy_cp(&tmp_v2, &lvalue);
-      error |= s21_lazy_to_lazy_cp(&tmp_v1, &rvalue);
+    if ((s21_is_equal_lazy(&lvalue, &rvalue) == -1)) {
+      error |= s21_lazy_to_lazy_cp(&lvalue, &tmp);
+      error |= s21_lazy_to_lazy_cp(&rvalue, &lvalue);
+      error |= s21_lazy_to_lazy_cp(&tmp, &rvalue);
       result->sign = !value_1->sign;
     }
-
-    else {
-      error |= s21_lazy_to_lazy_cp(&tmp_v1, &lvalue);
-      error |= s21_lazy_to_lazy_cp(&tmp_v2, &rvalue);
+    else
       result->sign = value_1->sign;
-    }
   }
 
   if (!error && !done) {
