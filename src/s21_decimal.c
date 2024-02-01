@@ -53,29 +53,33 @@ void bar() { baz(); }
 void foo() { bar(); }
 
 int main() {
-  // s21_decimal value_1 = {{0xf, 0x0, 0x0, 0x80000000}};
-  // s21_decimal value_2 = {{0xf, 0x0, 0x0, 0x80010000}};
-  // s21_decimal dec_result = {0};
+  s21_decimal value_2 = {{45, 0x0, 0x0, 0x80010000}};
+  s21_decimal_print(&value_2, "value_2: ");
+  s21_decimal dec_result = {0};
 
-  // s21_add(value_1, value_2, &dec_result);
-  // s21_decimal_print(&dec_result, "add: ");
+  // s21_div(value_1, value_2, &dec_result);
+  // s21_decimal_print(&dec_result, "div: ");
 
-  // s21_truncate(dec_result, &dec_result);
-  // s21_decimal_print(&dec_result, "add: ");
+  s21_decimal_lazy value_l;
+  s21_decimal_lazy value_rounded;
 
-  //2583 - A17
-  //1010 0001 0111
-  //258 - 1 02
-  //1 0000 0010
-  s21_decimal value_2 = {{0x00000A17, 0x0, 0x0, 0x00010000}}; 
-  s21_decimal_print(&value_2, "value_2: "); 
-  s21_decimal dec_result = {0}; 
-  s21_decimal_lazy value_l; 
-  s21_decimal_lazy value_rounded; 
-  s21_lazy_init(&value_l, &value_2); 
-  s21_lazy_init(&value_rounded, NULL); 
-  s21_truncate_lazy(&value_l, &value_rounded); 
-  s21_from_lazy_to_decimal(&value_rounded, &dec_result); 
+  s21_lazy_init(&value_l, &value_2);
+  s21_lazy_init(&value_rounded, NULL);
+
+  s21_round_lazy(&value_l, &value_rounded);
+
+  // s21_truncate(value_1, &dec_result);
+
+  // s21_decimal_print(&dec_result, "result: ");
+
+  // s21_decimal_lazy_print(&value_rounded);
+
+  s21_from_lazy_to_decimal(&value_rounded, &dec_result);
+
   s21_decimal_print(&dec_result, "result: ");
+
+  s21_lazy_destroy(&value_l);
+  s21_lazy_destroy(&value_rounded);
+
   return 0;
 }

@@ -18,36 +18,34 @@ uint8_t s21_round_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result) {
   s21_decimal one_dec = {{0x1, 0x0, 0x0, 0x0}};
   s21_decimal_lazy fractional, tmp, five, two, one;
 
-  s21_lazy_init(&five, &five_dec);
-  s21_lazy_init(&two, &two_dec);
-  s21_lazy_init(&one, &one_dec);
-  s21_lazy_init(&fractional, NULL);
-  s21_lazy_init(&tmp, NULL);
-
   error |= (value == NULL || value->mantissa == NULL);
 
-  if (!error) {
-    if (value->exponent > 0) {
-      error |= s21_truncate_lazy(value, result);
-      error |= s21_lazy_to_lazy_cp(value, &tmp);
-      error |= s21_lazy_normalization(&tmp, 1);
-      if (value->sign) {
-        result->sign = 0;
-        tmp.sign = 0;
-      }
-      error |= s21_sub_lazy(&tmp, result, &fractional);
-      s21_lazy_destroy(&tmp);
-      s21_lazy_init(&tmp, NULL);
-      if (!s21_is_null_lazy(result)) {
-        if (s21_is_equal_lazy(&fractional, &five) != -1) {
-          error |= s21_div_lazy(result, &two, &tmp);
-          if (!tmp.exponent) error |= s21_add_lazy(result, &one, result);
-        }
-      }
-    } else
-      error |= s21_lazy_to_lazy_cp(value, result);
+  error |= s21_lazy_init(&five, &five_dec);
+  error |= s21_lazy_init(&two, &two_dec);
+  error |= s21_lazy_init(&one, &one_dec);
+  error |= s21_lazy_init(&fractional, NULL);
+  error |= s21_lazy_init(&tmp, NULL);
+
+  if (!error && value->exponent > 0)
+    error |= s21_truncate_lazy(value, result);
+  else
+    error |= s21_lazy_to_lazy_cp(value, result);
+
+  if (!s21_is_null_lazy(result)) {
+    if (!error) error |= s21_lazy_to_lazy_cp(value, &tmp);
+    if (!error) error |= s21_lazy_normalization(&tmp, 1);
+    if (!error) error |= s21_sub_lazy(&tmp, result, &fractional);
+    five.sign = one.sign = value->sign;
+
+    s21_lazy_destroy(&tmp);
+    error |= s21_lazy_init(&tmp, NULL);
   }
-  if (value->sign) result->sign = 1;
+
+  if (!error && s21_is_equal_lazy(&fractional, &five) >= 0) {
+    error |= s21_div_lazy(result, &two, &tmp);
+    if (tmp.exponent) error |= s21_add_lazy(result, &one, result);
+  }
+
   s21_lazy_destroy(&five);
   s21_lazy_destroy(&two);
   s21_lazy_destroy(&one);
