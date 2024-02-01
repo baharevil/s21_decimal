@@ -88,7 +88,8 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
 
     if (!error) {
       if (result->size != lvalue.size) s21_lazy_resize(result, lvalue.size);
-      if (result->exponent != lvalue.exponent) result->exponent = lvalue.exponent;
+      if (result->exponent != lvalue.exponent)
+        result->exponent = lvalue.exponent;
 
       carry = s21_add_uint8_t(lvalue.mantissa, rvalue.mantissa,
                               result->mantissa, result->size);

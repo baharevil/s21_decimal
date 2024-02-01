@@ -24,7 +24,6 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   s21_decimal_lazy tmp_v1 = {0}, tmp_v2 = {0};
   s21_decimal_lazy tmp = {0};
 
-
   // Первичная валидация
   error |= !s21_lazy_ptr_is_valid(value_1);
   error |= !s21_lazy_ptr_is_valid(value_2);
@@ -72,8 +71,7 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       error |= s21_lazy_to_lazy_cp(&rvalue, &lvalue);
       error |= s21_lazy_to_lazy_cp(&tmp, &rvalue);
       result->sign = !value_1->sign;
-    }
-    else
+    } else
       result->sign = value_1->sign;
   }
 
