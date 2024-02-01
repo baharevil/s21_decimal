@@ -47,7 +47,9 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   int error = 0;
 
   // Первичная валидация
-  error |= s21_is_valid("%lp%lp%lp", value_1, value_2, result);
+  error |= !s21_lazy_ptr_is_valid(value_1);
+  error |= !s21_lazy_ptr_is_valid(value_2);
+  error |= !s21_lazy_ptr_is_valid(result);
 
   int8_t is_normal = 0;
   uint16_t carry = 0;

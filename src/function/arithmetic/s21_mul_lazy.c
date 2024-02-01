@@ -21,8 +21,9 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   uint16_t result_size = 0;
   s21_decimal_lazy tmp = {0}, tmp_res = {0};
 
-  error |= s21_is_valid("%lp%lp%lp", value_1, value_2, result);
-
+  error |= !s21_lazy_ptr_is_valid(value_1);
+  error |= !s21_lazy_ptr_is_valid(value_2);
+  error |= !s21_lazy_ptr_is_valid(result);
 
   if (!error) {
     result_size = value_1->size + value_2->size;

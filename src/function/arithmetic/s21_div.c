@@ -16,7 +16,9 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
   s21_decimal_lazy lazy1, lazy2, res;
 
-  error |= s21_is_valid("%p%p%p", &value_1, &value_2, result);
+  error |= !s21_decimal_ptr_is_valid(&value_1);
+  error |= !s21_decimal_ptr_is_valid(&value_2);
+  error |= !s21_decimal_ptr_is_valid(result);
 
   if (!error) {
     error |= s21_lazy_init(&lazy1, &value_1);

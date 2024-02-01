@@ -26,7 +26,9 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
 
 
   // Первичная валидация
-  error |= s21_is_valid("%lp%lp%lp", value_1, value_2, result);
+  error |= !s21_lazy_ptr_is_valid(value_1);
+  error |= !s21_lazy_ptr_is_valid(value_2);
+  error |= !s21_lazy_ptr_is_valid(result);
 
   error |= s21_lazy_init(&null, NULL);
   error |= s21_lazy_init(&lvalue, NULL);

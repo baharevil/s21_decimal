@@ -20,7 +20,9 @@ int s21_mod_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   s21_decimal_lazy carry = {0}, divider = {0}, res_temp = {0};
 
   // Первичная валидация
-  error |= s21_is_valid("%lp%lp%lp", value_1, value_2, result);
+  error |= !s21_lazy_ptr_is_valid(value_1);
+  error |= !s21_lazy_ptr_is_valid(value_2);
+  error |= !s21_lazy_ptr_is_valid(result);
 
   // Вторичная валидация
   if (!error && s21_is_null_lazy(value_2)) error = 2;

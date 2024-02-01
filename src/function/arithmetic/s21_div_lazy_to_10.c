@@ -17,7 +17,7 @@ uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy) {
   s21_decimal_lazy ten_lazy = {0};
   s21_decimal_lazy result = {0};
 
-  error = s21_is_valid("%lp", lazy);
+  error |= !s21_lazy_ptr_is_valid(lazy);
 
   if (!error) {
     error |= s21_lazy_init(&ten_lazy, &ten);
