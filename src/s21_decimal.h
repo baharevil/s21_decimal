@@ -162,6 +162,7 @@ uint8_t s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest);
 typedef enum another_error { ok = 0, calc_error } other_error;
 
 int s21_floor(s21_decimal value, s21_decimal *result);   // -
+int s21_floor_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
 int s21_negate(s21_decimal value, s21_decimal *result);  // -
 uint8_t s21_negate_lazy(s21_decimal_lazy *value);        // +
 int s21_round(s21_decimal value, s21_decimal *result);   // +
