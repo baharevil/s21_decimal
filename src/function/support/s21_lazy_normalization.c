@@ -25,7 +25,6 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp) {
   error = (lazy == NULL);
 
   if (!error) {
-    
     direction = (exp > lazy->exponent) - (exp < lazy->exponent);
     // Проверяем что все норм скопировалось
     error |= s21_lazy_to_lazy_cp(lazy, &tmp_value);

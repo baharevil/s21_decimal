@@ -31,7 +31,10 @@ uint8_t s21_round_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result) {
       error |= s21_truncate_lazy(value, result);
       error |= s21_lazy_to_lazy_cp(value, &tmp);
       error |= s21_lazy_normalization(&tmp, 1);
-      if (value->sign) {result->sign = 0; tmp.sign = 0;}
+      if (value->sign) {
+        result->sign = 0;
+        tmp.sign = 0;
+      }
       error |= s21_sub_lazy(&tmp, result, &fractional);
       s21_lazy_destroy(&tmp);
       s21_lazy_init(&tmp, NULL);
@@ -41,12 +44,13 @@ uint8_t s21_round_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result) {
           if (!tmp.exponent) error |= s21_add_lazy(result, &one, result);
         }
       }
-    } else error |= s21_lazy_to_lazy_cp(value, result);
+    } else
+      error |= s21_lazy_to_lazy_cp(value, result);
   }
   if (value->sign) result->sign = 1;
-      s21_lazy_destroy(&five);
-      s21_lazy_destroy(&two);
-      s21_lazy_destroy(&one);
-      s21_lazy_destroy(&fractional);
+  s21_lazy_destroy(&five);
+  s21_lazy_destroy(&two);
+  s21_lazy_destroy(&one);
+  s21_lazy_destroy(&fractional);
   return error;
 }

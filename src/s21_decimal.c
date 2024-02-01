@@ -34,7 +34,7 @@ void s21_decimal_print(s21_decimal *x, char *str) {
 int main() {
   // s21_decimal value_1 = {{0xff, 0x0, 0x0, 0x0}};
   // value_1.exponent.bits.exponent = 1;
-  s21_decimal value_2 = {{0x000004D2, 0x0, 0x0, 0x80030000}};
+  s21_decimal value_2 = {{39, 0x0, 0x0, 0x80010000}};
   s21_decimal_print(&value_2, "value_2: ");
 
   s21_decimal dec_result = {0};
@@ -55,9 +55,11 @@ int main() {
   s21_decimal_lazy value_rounded;
 
   s21_lazy_init(&value_l, &value_2);
+  s21_lazy_init(&value_rounded, NULL);
 
   s21_round_lazy(&value_l, &value_rounded);
-  
+  s21_negate_lazy(&value_rounded);
+
   // s21_truncate(value_1, &dec_result);
 
   // s21_decimal_print(&dec_result, "result: ");

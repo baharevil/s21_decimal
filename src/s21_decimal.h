@@ -79,10 +79,14 @@ typedef enum arifmetic_error {
   div_by_0
 } arifmetic_error;
 
-int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); // +
-int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); // +
-int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); // +
-int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); // +
+int s21_add(s21_decimal value_1, s21_decimal value_2,
+            s21_decimal *result);  // +
+int s21_sub(s21_decimal value_1, s21_decimal value_2,
+            s21_decimal *result);  // +
+int s21_mul(s21_decimal value_1, s21_decimal value_2,
+            s21_decimal *result);  // +
+int s21_div(s21_decimal value_1, s21_decimal value_2,
+            s21_decimal *result);  // +
 int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result);
 int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
@@ -149,9 +153,10 @@ s21_decimal_lazy s21_decimal_to_lazy(s21_decimal value);
 */
 typedef enum another_error { ok = 0, calc_error } other_error;
 
-int s21_floor(s21_decimal value, s21_decimal *result);     // -
-int s21_negate(s21_decimal value, s21_decimal *result);    // -
-int s21_round(s21_decimal value, s21_decimal *result);     // +
+int s21_floor(s21_decimal value, s21_decimal *result);   // -
+int s21_negate(s21_decimal value, s21_decimal *result);  // -
+uint8_t s21_negate_lazy(s21_decimal_lazy *value);        // +
+int s21_round(s21_decimal value, s21_decimal *result);   // +
 uint8_t s21_round_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);
 int s21_truncate(s21_decimal value, s21_decimal *result);  // +
 uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result);

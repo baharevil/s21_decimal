@@ -35,7 +35,7 @@ int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       error |= s21_sub_lazy(value_1, value_2, value_1);
       error |= s21_add_lazy(result, &lazy_one, result);
     }
-    
+
     s21_lazy_destroy(&lazy_one);
   }
 
