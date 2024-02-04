@@ -31,7 +31,21 @@ void run_tests_s21_add(void) {
   }
 }
 
+void run_tests_s21_is_equal(void) {
+  printf("\x1b[4;36m TEST S21_IS_EQUAL \x1b[0m");
+  Suite *list_cases[] = {equal_suite0(),
+                         // add_suite2(), add_suite3(), add_suite4(),
+                         // add_suite5(), add_suite6(), add_suite7(),
+                         // add_suite8(), add_suite9(), add_suite1(),
+                         NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
+
+
 int main(void) {
-  run_tests_s21_add();
+  run_tests_s21_is_equal();
   return 0;
 }
