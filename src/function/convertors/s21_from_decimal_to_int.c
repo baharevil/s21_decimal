@@ -21,7 +21,8 @@ int s21_from_decimal_to_int(s21_decimal src, int *dst) {
     error |= s21_truncate(src, &tmp);
   }
   if (!error) {
-    // провека остуствия значимых чисел в старшей мантиссе и помещаемся ли в знаковый INT
+    // провека остуствия значимых чисел в старшей мантиссе и помещаемся ли в
+    // знаковый INT
     if (tmp.mantissa.bits[0] <= INT32_MAX && tmp.mantissa.bits[1] == 0 &&
         tmp.mantissa.bits[2] == 0) {
       // копируем или копируем с инверсией, в зависимости от знака

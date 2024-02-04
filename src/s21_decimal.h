@@ -141,9 +141,10 @@ int s21_lazy_ptr_is_valid(const void *lazy);
 typedef enum converter_error { conv_ok = 0, conv_false } converter_error;
 
 int s21_from_int_to_decimal(int src, s21_decimal *dst);      // +
-int s21_from_float_to_decimal(float src, s21_decimal *dst);  // -
-int s21_from_decimal_to_int(s21_decimal src, int *dst);      // -
+int s21_from_float_to_decimal(float src, s21_decimal *dst);  // +
+int s21_from_decimal_to_int(s21_decimal src, int *dst);      // +
 int s21_from_decimal_to_float(s21_decimal src, float *dst);  // -
+uint8_t s21_from_int_to_lazy(int src, s21_decimal_lazy *dst);
 uint8_t s21_from_decimal_to_lazy(s21_decimal *src, s21_decimal_lazy *dest);
 uint8_t s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest);
 

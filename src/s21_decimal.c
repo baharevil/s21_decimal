@@ -55,13 +55,14 @@ void foo() { bar(); }
 int main() {
   // s21_decimal value_1 = {{0xff, 0x0, 0x0, 0x0}};
   // value_1.exponent.bits.exponent = 1;
-  s21_decimal value_2 = {{0x7fffffff, 0x0, 0x0, 0x00000000}};
+  s21_decimal value_2 = {{0x0, 0x0, 0x0, 0x00000000}};
   s21_decimal_print(&value_2, "value_2: ");
 
-  int i = 0, error = 0;
-  error = s21_from_decimal_to_int(value_2, &i);
+  float f = -12.34;
+  int error = 0;
+  error = s21_from_float_to_decimal(f, &value_2);
 
-  printf("%d\n", i);
+  s21_decimal_print(&value_2, "result: ");
   printf("%d\n", error);
 
   return 0;
