@@ -34,39 +34,14 @@ void s21_decimal_print(s21_decimal *x, char *str) {
 int main() {
   // s21_decimal value_1 = {{0xff, 0x0, 0x0, 0x0}};
   // value_1.exponent.bits.exponent = 1;
-  s21_decimal value_2 = {{0x000004D2, 0x0, 0x0, 0x80030000}};
+  s21_decimal value_2 = {{0x7fffffff, 0x0, 0x0, 0x00000000}};
   s21_decimal_print(&value_2, "value_2: ");
 
-  s21_decimal dec_result = {0};
+  int i = 0, error = 0;
+  error = s21_from_decimal_to_int(value_2, &i);
 
-  // s21_add(value_1, value_2, &dec_result);
-  // s21_decimal_print(&dec_result, "add: ");
-
-  // s21_mul(value_1, value_2, &dec_result);
-  // s21_decimal_print(&dec_result, "mul: ");
-
-  // s21_sub(value_1, value_2, &dec_result);
-  // s21_decimal_print(&dec_result, "sub: ");
-
-  // s21_div(value_1, value_2, &dec_result);
-  // s21_decimal_print(&dec_result, "div: ");
-
-  s21_decimal_lazy value_l;
-  s21_decimal_lazy value_rounded;
-
-  s21_lazy_init(&value_l, &value_2);
-
-  s21_round_lazy(&value_l, &value_rounded);
-  
-  // s21_truncate(value_1, &dec_result);
-
-  // s21_decimal_print(&dec_result, "result: ");
-
-  // s21_decimal_lazy_print(&value_rounded);
-
-  s21_from_lazy_to_decimal(&value_rounded, &dec_result);
-
-  s21_decimal_print(&dec_result, "result: ");
+  printf("%d\n", i);
+  printf("%d\n", error);
 
   return 0;
 }

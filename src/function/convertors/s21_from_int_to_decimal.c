@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 #include "s21_decimal.h"
 
 /*!
@@ -10,7 +12,7 @@
 */
 int s21_from_int_to_decimal(int src, s21_decimal *dst) {
   int status = conv_ok;
-  if (dst != S21_NULL) {
+  if (dst != NULL) {
     if (src < 0) {
       dst->exponent.bits.sign = 1;
       src = ~src + 1;

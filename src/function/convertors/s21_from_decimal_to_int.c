@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 #include "s21_decimal.h"
 
 /*!
@@ -9,36 +11,26 @@
   @return 0 - конвертация успешна, 1 - ошибка конвертации
 */
 int s21_from_decimal_to_int(s21_decimal src, int *dst) {
-  int status = conv_ok;
-  if (dst != S21_NULL) {
+  int error = conv_ok;
+  s21_decimal tmp = {0};
+
+  if (!dst) error = conv_false;
+
+  if (!error) {
     // если экспонента не нулевая отбрасываем остаток делением на 10
-    while (src.exponent.bits.exponent > 0) {
-      s21_decimal tmp10 = {0};
-      s21_decimal tmp = {0};
-      s21_from_int_to_decimal(10, &tmp10);
-      s21_div(src, tmp10, &tmp);
-      src = tmp;
-      src.exponent.bits.exponent--;
+    error |= s21_truncate(src, &tmp);
+  }
+  if (!error) {
+    // провека остуствия значимых чисел в старшей мантиссе и помещаемся ли в знаковый INT
+    if (tmp.mantissa.bits[0] <= INT32_MAX && tmp.mantissa.bits[1] == 0 &&
+        tmp.mantissa.bits[2] == 0) {
+      // копируем или копируем с инверсией, в зависимости от знака
+      if (tmp.exponent.bits.sign)
+        *dst = ~tmp.mantissa.bits[0] + 1;
+      else
+        *dst = tmp.mantissa.bits[0];
     }
-    // провека остуствия значимых чисел в старшей мантиссе
-    if (src.mantissa.bits[1] == 0 && src.mantissa.bits[2] == 0) {
-      // проверяем знак
-      if (!src.exponent.bits.sign) {
-        // проверяем влазит ли положительный инт
-        if (src.mantissa.bits[0] <= INT32_MAX)
-          *dst = src.mantissa.bits[0];
-        else
-          status = conv_false;
-      } else {
-        // проверяем влазит ли отрицательный инт
-        if (src.mantissa.bits[0] < INT32_MAX)
-          *dst = !src.mantissa.bits[0] + 1;
-        else
-          status = conv_false;
-      }
-    } else
-      status = conv_false;
   } else
-    status = conv_false;
-  return status;
+    error = conv_false;
+  return error;
 }

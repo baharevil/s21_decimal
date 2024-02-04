@@ -5,9 +5,6 @@
 #include <limits.h>
 #include <stdint.h>
 
-#define S21_NULL 0x0
-typedef unsigned long s21_size_t;
-
 typedef union s21_uint96_t {
   uint32_t bits[3];
   uint8_t bytes[12];

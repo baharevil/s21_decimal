@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 #include "s21_decimal.h"
 
 /*!
@@ -14,8 +16,8 @@
 int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
   int result = 0;
 
-  result = -2 * (value_1 == S21_NULL || value_1->mantissa == S21_NULL);
-  result = -2 * (value_2 == S21_NULL || value_2->mantissa == S21_NULL);
+  result = -2 * (value_1 == NULL || value_1->mantissa == NULL);
+  result = -2 * (value_2 == NULL || value_2->mantissa == NULL);
 
   if (!result && value_1->sign == value_2->sign) {
     s21_decimal_lazy lvalue = {0}, rvalue = {0};
