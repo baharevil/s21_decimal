@@ -25,15 +25,12 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp) {
   error = (lazy == NULL);
 
   if (!error) {
-    
     direction = (exp > lazy->exponent) - (exp < lazy->exponent);
     // Проверяем что все норм скопировалось
     error |= s21_lazy_to_lazy_cp(lazy, &tmp_value);
   }
 
   if (!error) {
-    // Обработка знака
-    tmp_value.sign = 0;
     // Выбор необходимой функции для нормализации
     uint8_t (*func)(s21_decimal_lazy *) = (uint8_t(*)(s21_decimal_lazy *))(
         (direction >= 0) * (uintptr_t)s21_mul_lazy_to_10 +
@@ -41,11 +38,10 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp) {
 
     // Нормализация
     while (tmp_value.exponent != exp) error = func(&tmp_value);
-    // Возвращаем знак на место
-    tmp_value.sign = lazy->sign;
-    // Заменяем исходник новым значением
-    error |= s21_lazy_to_lazy_cp(&tmp_value, lazy);
   }
+
+  // Заменяем исходник новым значением
+  if (!error) error |= s21_lazy_to_lazy_cp(&tmp_value, lazy);
 
   s21_lazy_destroy(&tmp_value);
 

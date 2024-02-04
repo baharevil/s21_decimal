@@ -10,20 +10,13 @@
   @param[in] result Указатель на результат
   @return 0 - OK 1 - ошибка вычисления
 */
-int s21_negate(s21_decimal value, s21_decimal *result) {
-  int error = ok;
+uint8_t s21_negate_lazy(s21_decimal_lazy *value) {
+  uint8_t error = 0;
 
-  error |= (result == NULL);
+  error |= (value == NULL || value->mantissa == NULL);
 
   if (!error) {
-    s21_decimal_lazy lazy_result;
-  if (!error)
-    error |= s21_lazy_init(&lazy_result, &value);
-  if (!error)
-    error |= s21_negate_lazy(&lazy_result);
-  if (!error)
-    error |= s21_from_lazy_to_decimal(&lazy_result, result);
-  s21_lazy_destroy(&lazy_result);
+    value->sign = !value->sign;
   }
 
   return error;

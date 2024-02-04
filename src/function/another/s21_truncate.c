@@ -1,6 +1,6 @@
-#include "s21_decimal.h"
-
 #include <stddef.h>
+
+#include "s21_decimal.h"
 
 /*!
   @ingroup AnotherFunction Другие функции

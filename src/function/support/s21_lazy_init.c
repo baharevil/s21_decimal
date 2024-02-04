@@ -21,6 +21,7 @@ uint8_t s21_lazy_init(s21_decimal_lazy *lazy, s21_decimal *decimal) {
   if (!error) {
     lazy->sign = 0;
     lazy->size = 0;
+    lazy->empty1 = 0;
     lazy->exponent = 0;
     lazy->mantissa = NULL;
     error |= s21_lazy_resize(lazy, 1);

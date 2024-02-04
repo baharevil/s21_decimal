@@ -16,8 +16,8 @@
 uint8_t s21_truncate_lazy(s21_decimal_lazy *value, s21_decimal_lazy *result) {
   uint8_t error = 0;
 
-  error |= (value == NULL || value->mantissa == NULL || result == NULL ||
-            result->mantissa == NULL);
+  error |= !s21_lazy_ptr_is_valid(value);
+  error |= !s21_lazy_ptr_is_valid(result);
 
   if (!error) {
     error |= s21_lazy_to_lazy_cp(value, result);
