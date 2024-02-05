@@ -32,6 +32,7 @@ void run_tests_s21_add(void);
 
 // S21_IS_EQUAL_TEST
 Suite *equal_suite0(void);
+Suite *equal_suite1(void);
 
 
 #endif
