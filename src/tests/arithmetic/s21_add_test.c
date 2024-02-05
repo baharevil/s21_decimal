@@ -43544,7 +43544,7 @@ Suite *add_suite0(void) {
 }
 
 void test_add(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check) {
-  s21_decimal result;
+  s21_decimal result = {0};
   int code = s21_add(decimal1, decimal2, &result);
 
 #if defined(__DEBUG)
@@ -43568,7 +43568,7 @@ void test_add(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check) {
 }
 
 void test_add_fail(s21_decimal decimal1, s21_decimal decimal2, int check) {
-  s21_decimal result;
+  s21_decimal result = {0};
   int code = s21_add(decimal1, decimal2, &result);
 
 #if defined(__DEBUG)
