@@ -191,7 +191,7 @@ Suite *less_suite0(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("\x1b[1;33m-=S21_IS_less_0=-\x1b[0m");
+  s = suite_create("\x1b[1;33m-=S21_IS_LESS_0=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_less_fail_manual1);
   tcase_add_test(tc_core, test_less_fail_manual2);
@@ -830,7 +830,7 @@ Suite *less_suite1(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("\x1b[1;33m-=s21_is_less_1=-\x1b[0m");
+  s = suite_create("\x1b[1;33m-=S21_IS_LESS_1=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_is_less1);
   tcase_add_test(tc_core, test_is_less2);

@@ -33,7 +33,9 @@ void run_tests_s21_add(void);
 Suite *equal_suite0(void);
 Suite *equal_suite1(void);
 
-
+// S21_IS_NOT_EQUALTEST
+Suite *not_equal_suite0(void);
+Suite *not_equal_suite1(void);
 
 // S21_IS_GREATER_TEST
 Suite *greater_suite0(void);
@@ -50,5 +52,6 @@ Suite *less_suite1(void);
 // S21_IS_LESS_OR_EQUALTEST
 Suite *less_or_equal_suite0(void);
 Suite *less_or_equal_suite1(void);
+
 
 #endif

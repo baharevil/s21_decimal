@@ -191,7 +191,7 @@ Suite *greater_or_equal_suite0(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("\x1b[1;33m-=s21_is_greater_or_equal_or_equal_0=-\x1b[0m");
+  s = suite_create("\x1b[1;33m-=S21_IS_GREATER_OR_EQUAL_0=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_greater_or_equal_fail_manual1);
   tcase_add_test(tc_core, test_greater_or_equal_fail_manual2);
@@ -830,7 +830,7 @@ Suite *greater_or_equal_suite1(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("\x1b[1;33m-=s21_is_greater_or_equal_or_equal_1=-\x1b[0m");
+  s = suite_create("\x1b[1;33m-=S21_IS_GREATER_OR_EQUAL_1=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_is_greater_or_equal1);
   tcase_add_test(tc_core, test_is_greater_or_equal2);
