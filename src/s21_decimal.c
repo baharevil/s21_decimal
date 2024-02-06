@@ -53,17 +53,21 @@ void bar() { baz(); }
 void foo() { bar(); }
 
 int main() {
-  // s21_decimal value_1 = {{0xff, 0x0, 0x0, 0x0}};
-  // value_1.exponent.bits.exponent = 1;
-  s21_decimal value_2 = {{0x0, 0x0, 0x0, 0x00000000}};
-  s21_decimal_print(&value_2, "value_2: ");
+  // 79228162514264337593543950335
+  s21_decimal decimal1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
+  // -649244002.20841517182548587502
+  s21_decimal decimal2 = {{0x122233EE, 0x5675EBE6, 0xD1C83484, 0x80140000}};
+  // 79228162514264337592894706333
+  s21_decimal check = {{0xD94D529D, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
 
-  float f = -12.34;
+  s21_decimal result = {{0}};
   int error = 0;
-  error = s21_from_float_to_decimal(f, &value_2);
 
-  s21_decimal_print(&value_2, "result: ");
-  printf("%d\n", error);
+  error = s21_add(decimal1, decimal2, &result);
+
+  printf("\nerror: %d", error);
+  s21_decimal_print(&result, "result: ");
+  s21_decimal_print(&check, " check: ");
 
   return 0;
 }

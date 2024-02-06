@@ -16,10 +16,9 @@ int s21_from_decimal_to_int(s21_decimal src, int *dst) {
 
   if (!dst) error = conv_false;
 
-  if (!error) {
-    // если экспонента не нулевая отбрасываем остаток делением на 10
-    error |= s21_truncate(src, &tmp);
-  }
+  // если экспонента не нулевая отбрасываем остаток делением на 10
+  if (!error && src.exponent.bits.exponent) error |= s21_truncate(src, &tmp);
+
   if (!error) {
     // провека остуствия значимых чисел в старшей мантиссе и помещаемся ли в
     // знаковый INT
@@ -30,8 +29,8 @@ int s21_from_decimal_to_int(s21_decimal src, int *dst) {
         *dst = ~tmp.mantissa.bits[0] + 1;
       else
         *dst = tmp.mantissa.bits[0];
-    }
-  } else
-    error = conv_false;
+    } else
+      error = conv_false;
+  }
   return error;
 }

@@ -47,9 +47,11 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
         if (i + j + 1 >= tmp.size) s21_lazy_resize(&tmp, tmp.size + 1);
         *(tmp.mantissa + i + j + 1) = carry;
       }
-      error |= s21_add_lazy(&tmp, &tmp_res, &tmp_res);
-      error |= s21_lazy_resize(&tmp, result_size);
       carry = 0;
+      error |= s21_add_lazy(&tmp, &tmp_res, &tmp_res);
+      s21_lazy_destroy(&tmp);
+      error |= s21_lazy_init(&tmp, NULL);
+      if (!error) error |= s21_lazy_resize(&tmp, result_size);
     }
 
     if (!error) s21_lazy_to_lazy_cp(&tmp_res, result);

@@ -27,6 +27,7 @@ uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest) {
   if (!error) {
     dest->sign = src->sign;
     dest->exponent = src->exponent;
+    dest->empty1 = src->empty1;
     memcpy(dest->mantissa, src->mantissa, dest->size);
   }
 

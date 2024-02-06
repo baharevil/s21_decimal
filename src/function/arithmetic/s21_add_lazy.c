@@ -55,8 +55,15 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   uint16_t carry = 0;
   s21_decimal_lazy lvalue = {0}, rvalue = {0};
 
-  if (value_1->sign != value_2->sign)
-    s21_sub_lazy(value_1, value_2, result);
+  if (value_1->sign != value_2->sign) {
+    int8_t direction = value_1->sign - value_2->sign;
+    value_1->sign = value_2->sign = 0;
+
+    if (direction == 1)
+      error = s21_sub_lazy(value_2, value_1, result);
+    else
+      error = s21_sub_lazy(value_1, value_2, result);
+  }
 
   else {
     error |= s21_lazy_init(&lvalue, NULL);

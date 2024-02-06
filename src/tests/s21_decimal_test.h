@@ -25,7 +25,6 @@ void test_add(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
 void test_add_fail(s21_decimal decimal1, s21_decimal decimal2, int check);
 void run_tests_s21_add(void);
 
-
 /**************************************************************************
                     Compare
  *************************************************************************/
@@ -33,6 +32,5 @@ void run_tests_s21_add(void);
 // S21_IS_EQUAL_TEST
 Suite *equal_suite0(void);
 Suite *equal_suite1(void);
-
 
 #endif

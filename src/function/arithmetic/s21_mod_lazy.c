@@ -67,7 +67,7 @@ int s21_mod_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   if (!error) {
     error = s21_lazy_to_lazy_cp(&res_temp, result);
     result->sign = (value_1->sign != value_2->sign);
-    res_temp.exponent += exp_res;
+    result->exponent += exp_res;
   }
 
   // Уничножение переменных

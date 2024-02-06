@@ -29,6 +29,13 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   }
 
   if (!error) error = s21_mul_lazy(&lazy1, &lazy2, &res);
+
+  if (!error && res.exponent > lazy1.exponent)
+    error = s21_round_lazy(&res, &res);
+  if (!error) error = s21_aritmetic_error(&res);
+  if (!error && res.exponent != lazy1.exponent)
+    s21_lazy_normalization(&res, lazy1.exponent);
+
   if (!error) s21_from_lazy_to_decimal(&res, result);
 
   s21_lazy_destroy(&lazy1);

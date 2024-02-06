@@ -17,16 +17,13 @@ int s21_floor(s21_decimal value, s21_decimal *result) {
   error |= (result == NULL);
 
   if (!error) {
-  s21_decimal_lazy lazy_result;
+    s21_decimal_lazy lazy_result;
 
-  if (!error)
-    error |= s21_lazy_init(&lazy_result, &value);
-  if (!error)
-    error |= s21_floor_lazy(&lazy_result, &lazy_result);
-  if (!error)
-    error |= s21_from_lazy_to_decimal(&lazy_result, result);
-  
-  s21_lazy_destroy(&lazy_result);
+    if (!error) error |= s21_lazy_init(&lazy_result, &value);
+    if (!error) error |= s21_floor_lazy(&lazy_result, &lazy_result);
+    if (!error) error |= s21_from_lazy_to_decimal(&lazy_result, result);
+
+    s21_lazy_destroy(&lazy_result);
   }
 
   return error;

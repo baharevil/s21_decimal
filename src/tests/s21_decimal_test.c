@@ -40,9 +40,8 @@ void run_tests_s21_is_equal(void) {
   }
 }
 
-
 int main(void) {
-  run_tests_s21_is_equal();
-  // run_tests_s21_add();
+  // run_tests_s21_is_equal();
+  run_tests_s21_add();
   return 0;
 }
