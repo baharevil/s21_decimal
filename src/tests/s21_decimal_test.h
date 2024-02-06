@@ -43,5 +43,8 @@ Suite *greater_suite1(void);
 Suite *greater_or_equal_suite0(void);
 Suite *greater_or_equal_suite1(void);
 
+// S21_IS_LESS_TEST
+Suite *less_suite0(void);
+Suite *less_suite1(void);
 
 #endif

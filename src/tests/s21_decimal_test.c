@@ -58,12 +58,20 @@ void run_tests_s21_is_greater_or_equal(void) {
   }
 }
 
-
+void run_tests_s21_is_less(void) {
+  printf("\n\x1b[4;36m TEST S21_IS_LESS \x1b[0m\n");
+  Suite *list_cases[] = {less_suite0(), less_suite1(), NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
 
 int main(void) {
   run_tests_s21_is_equal();
   run_tests_s21_is_greater();
   run_tests_s21_is_greater_or_equal();
+  run_tests_s21_is_less();
   // run_tests_s21_add();
 
   return 0;
