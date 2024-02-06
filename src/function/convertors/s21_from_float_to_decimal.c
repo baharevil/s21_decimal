@@ -3,12 +3,24 @@
 
 #include "s21_decimal.h"
 
+/*!
+  @ingroup ConverterOperators Преобразователи
+  @brief Конвертирование числа из float в decimal
+
+  @param[in] src Входящее число float
+  @param[in] *dst Указатель на decimal
+  @return 0 - конвертация успешна, 1 - ошибка конвертации
+  @version 3
+*/
 int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   int error = conv_ok;
-  float src_copy = 0, round = 0, div = 0;
+  int exp = 0;
   s21_decimal_lazy tmp = {0}, result = {0};
 
-  error |= (dst == NULL);
+  error |= !s21_decimal_ptr_is_valid(dst);
+
+  // Превышение порядка e+28. Не понятно как работает.
+  error |= ((uint8_t) exp2f(src) > 155);
 
   if (!error) error |= !s21_decimal_is_valid(dst);
 
@@ -17,43 +29,59 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   if (!error) error |= s21_lazy_init(&result, NULL);
 
   if (!error) {
-    src_copy = src;
-    // Установка знаков
-    if (src_copy < 0) {
-      tmp.sign++;
-      src_copy *= -1;
+    // Обработка знаков
+    if (src < 0) {
+      result.sign = tmp.sign = 1;
+      src *= -1;
     }
-    // Разделяем float на целую и дробную части
-    div = modff(src_copy, &round);
-
-    // Копируем целую часть в decimal
-    error |= s21_from_int_to_lazy((int)round, &tmp);
-    error |= s21_add_lazy(&tmp, &result, &result);
-  }
-
-  // Если есть дробная часть
-  if (!error && div) {
-    // Для фильтрации шума вида 0.12340001527257
-    float epsilon = 1e-4;
-    uint8_t size = 28, exp = 0;
-
-    // Считаем разряды целой части
-    while (round > 1) {
-      round /= 10;
-      size--;
-    }
-
-    // Домножаем дробную часть и суммируем с результатом
-    for (uint8_t i = 0; !error && div > epsilon && i < size; i++, exp++) {
-      error |= s21_mul_lazy_to_10(&result);
+    // Получаем мантиссу и порядок
+    double mantissa = frexpf(src, &exp);
+    // Место сброса целых чисел мантиссы
+    double devnull = 0;
+    // Мантисса всегда exp == 1
+    result.exponent = 1;
+    
+    // Переводим мантиссу в результат, экспонента считается сама
+    while (!error && mantissa) {
+      mantissa *= 10.0;
       tmp.exponent = result.exponent;
-      div = modff(div * 10, &round);
-      error |= s21_from_int_to_lazy((int)round, &tmp);
+      error |= s21_from_int_to_lazy((int) mantissa, &tmp);
+      mantissa = modf(mantissa, &devnull);
       error |= s21_add_lazy(&tmp, &result, &result);
+      error |= s21_mul_lazy_to_10(&result);
     }
-    s21_from_lazy_to_decimal(&result, dst);
+    error |= s21_div_lazy_to_10(&result);
+  }
+  
+  if (!error) {
+    s21_decimal_lazy two = {0};
+    error |= s21_lazy_init(&two, NULL);
+    // Новый способ объявлять числа)
+    error |= s21_from_int_to_lazy(2, &two);
+    error |= s21_from_int_to_lazy(2, &tmp);
+
+    // Обработка знаков
+    two.sign = tmp.sign;
+
+    // Порядок считаем целыми
+    two.exponent = tmp.exponent = 0;
+
+    // Возводим 2 в степень exp
+    // Начинаем с --exp, потому что 2^1 уже захардкодили
+    while (!error && --exp)
+      s21_mul_lazy(&tmp, &two, &tmp);
+    
+    // Умножаем мантиссу на порядок в результате
+    error |= s21_mul_lazy(&result, &tmp, &result);
+
+    //! @todo Здесь должно быть округление до 7ми значащих цифр
+    error |= s21_from_lazy_to_decimal(&result, dst);
+  
+    // Освобождаем память    
+    s21_lazy_destroy(&two);
   }
 
+  // Освобождаем память
   s21_lazy_destroy(&tmp);
   s21_lazy_destroy(&result);
 
