@@ -33,4 +33,11 @@ void run_tests_s21_add(void);
 Suite *equal_suite0(void);
 Suite *equal_suite1(void);
 
+
+
+// S21_IS_GREATER_TEST
+Suite *greater_suite0(void);
+Suite *greater_suite1(void);
+
+
 #endif

@@ -40,8 +40,19 @@ void run_tests_s21_is_equal(void) {
   }
 }
 
+void run_tests_s21_is_greater(void) {
+  printf("\x1b[4;36m TEST S21_IS_GREATER \x1b[0m");
+  Suite *list_cases[] = {greater_suite0(), greater_suite1(), NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
+
 int main(void) {
-  // run_tests_s21_is_equal();
-  run_tests_s21_add();
+  run_tests_s21_is_equal();
+  run_tests_s21_is_greater();
+  // run_tests_s21_add();
+
   return 0;
 }
