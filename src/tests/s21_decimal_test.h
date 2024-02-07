@@ -33,7 +33,7 @@ void run_tests_s21_add(void);
 Suite *equal_suite0(void);
 Suite *equal_suite1(void);
 
-// S21_IS_NOT_EQUALTEST
+// S21_IS_NOT_EQUAL_TEST
 Suite *not_equal_suite0(void);
 Suite *not_equal_suite1(void);
 
@@ -49,9 +49,21 @@ Suite *greater_or_equal_suite1(void);
 Suite *less_suite0(void);
 Suite *less_suite1(void);
 
-// S21_IS_LESS_OR_EQUALTEST
+// S21_IS_LESS_OR_EQUAL_TEST
 Suite *less_or_equal_suite0(void);
 Suite *less_or_equal_suite1(void);
 
+
+// S21_IS_LESS_OR_EQUAL_TEST
+Suite *less_or_equal_suite0(void);
+Suite *less_or_equal_suite1(void);
+
+/**************************************************************************
+                    another
+ *************************************************************************/
+
+// S21_ROUND_TEST
+Suite *round_suite0(void);
+// Suite *round_suite1(void);
 
 #endif

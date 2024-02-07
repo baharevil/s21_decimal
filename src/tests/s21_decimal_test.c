@@ -85,14 +85,26 @@ void run_tests_s21_is_less_or_equal(void) {
   }
 }
 
+
+
+void run_tests_s21_round(void) {
+  printf("\n\x1b[4;36m TEST S21_ROUND \x1b[0m\n");
+  Suite *list_cases[] = {round_suite0(),NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
+
 int main(void) {
+  run_tests_s21_round();
   run_tests_s21_is_equal();
   run_tests_s21_is_not_equal();
   run_tests_s21_is_greater();
   run_tests_s21_is_greater_or_equal();
   run_tests_s21_is_less();
   run_tests_s21_is_less_or_equal();
-  // run_tests_s21_add();
+  run_tests_s21_add();
 
   return 0;
 }
