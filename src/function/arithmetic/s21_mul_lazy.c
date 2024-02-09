@@ -54,10 +54,10 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       if (!error) error |= s21_lazy_resize(&tmp, result_size);
     }
 
-    if (!error) s21_lazy_to_lazy_cp(&tmp_res, result);
+    tmp_res.exponent = value_1->exponent + value_2->exponent;
+    tmp_res.sign = (value_1->sign != value_2->sign);
 
-    result->exponent = value_1->exponent + value_2->exponent;
-    result->sign = (value_1->sign != value_2->sign);
+    if (!error) s21_lazy_to_lazy_cp(&tmp_res, result);
   }
 
   s21_lazy_destroy(&tmp);

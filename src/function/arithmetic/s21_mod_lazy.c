@@ -19,6 +19,12 @@ int s21_mod_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   s21_decimal_lazy lazy_rank = {0}, tmp_v1 = {0};
   s21_decimal_lazy carry = {0}, divider = {0}, res_temp = {0};
 
+  s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
+  s21_decimal five = {{0x5, 0x0, 0x0, 0x10000}};
+
+  s21_decimal_lazy lazy_five = {0};
+  s21_decimal_lazy lazy_one = {0};
+
   // Первичная валидация
   error |= !s21_lazy_ptr_is_valid(value_1);
   error |= !s21_lazy_ptr_is_valid(value_2);
@@ -34,6 +40,8 @@ int s21_mod_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     error |= s21_lazy_init(&res_temp, NULL);
     error |= s21_lazy_init(&lazy_rank, &rank);
     error |= s21_lazy_to_lazy_cp(value_1, &tmp_v1);
+    error |= s21_lazy_init(&lazy_one, &one);
+    error |= s21_lazy_init(&lazy_five, &five);
   }
 
   // Подсчет экспоненты
@@ -63,18 +71,32 @@ int s21_mod_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       error |= s21_div_lazy_core(&carry, &divider, &res_temp);
   }
 
-  // Копирование результата + Расчет знака и эксп.
   if (!error) {
-    error = s21_lazy_to_lazy_cp(&res_temp, result);
-    result->sign = (value_1->sign != value_2->sign);
-    result->exponent += exp_res;
+    res_temp.exponent += exp_res;
+    res_temp.sign = (value_1->sign != value_2->sign);
   }
+
+  if (!error) error = s21_mul_lazy(&res_temp, value_2, &carry);
+  if (!error) error = s21_sub_lazy(value_1, &carry, &carry);
+  // if (!error) {
+  //   carry.exponent = lazy_five.exponent = value_1->exponent;
+  // }
+
+  if (!error && s21_is_equal_lazy(&carry, &lazy_five) >= 0) {
+    lazy_one.exponent = res_temp.exponent;
+    error |= s21_add_lazy(&res_temp, &lazy_one, &res_temp);
+  }
+
+  // Копирование результата
+  if (!error) error = s21_lazy_to_lazy_cp(&res_temp, result);
 
   // Уничножение переменных
   s21_lazy_destroy(&tmp_v1);
   s21_lazy_destroy(&carry);
   s21_lazy_destroy(&divider);
   s21_lazy_destroy(&res_temp);
+  s21_lazy_destroy(&lazy_one);
+  s21_lazy_destroy(&lazy_five);
   s21_lazy_destroy(&lazy_rank);
 
   return error;

@@ -196,4 +196,7 @@ uint8_t s21_search_msb_lazy(s21_decimal_lazy *lazy);
 uint8_t s21_lazy_to_lazy_cp(s21_decimal_lazy *src, s21_decimal_lazy *dest);
 int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
 
+int s21_lazy_left_shift(s21_decimal_lazy *value, s21_decimal_lazy *result,
+                        uint32_t shift);
+
 #endif

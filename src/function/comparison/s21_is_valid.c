@@ -10,6 +10,7 @@ int s21_decimal_is_valid(const void *decimal) {
 
 int s21_decimal_ptr_is_valid(const void *decimal) {
   return !(((s21_decimal *)decimal == NULL) ||
+           ((s21_decimal *)decimal)->exponent.bits.exponent > 28 ||
            ((s21_decimal *)decimal)->exponent.bits.empty0 ||
            ((s21_decimal *)decimal)->exponent.bits.empty1);
 }

@@ -13,8 +13,7 @@
 uint8_t s21_from_int_to_lazy(int src, s21_decimal_lazy *dst) {
   int error = conv_ok;
   // Валидируем реквизиты
-  if (!s21_decimal_ptr_is_valid(dst))
-    error = conv_false;
+  if (!s21_decimal_ptr_is_valid(dst)) error = conv_false;
   // Изменяем размер к 1 int (4 байта)
   if (!error) error |= s21_lazy_resize(dst, 4);
   // Обрабатываем знаки

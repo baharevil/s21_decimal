@@ -20,7 +20,7 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   error |= !s21_decimal_ptr_is_valid(dst);
 
   // Превышение порядка e+28. Не понятно как работает.
-  error |= ((uint8_t) exp2f(src) > 155);
+  error |= ((uint8_t)exp2f(src) > 155);
 
   if (!error) error |= !s21_decimal_is_valid(dst);
 
@@ -40,19 +40,19 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
     double devnull = 0;
     // Мантисса всегда exp == 1
     result.exponent = 1;
-    
+
     // Переводим мантиссу в результат, экспонента считается сама
     while (!error && mantissa) {
       mantissa *= 10.0;
       tmp.exponent = result.exponent;
-      error |= s21_from_int_to_lazy((int) mantissa, &tmp);
+      error |= s21_from_int_to_lazy((int)mantissa, &tmp);
       mantissa = modf(mantissa, &devnull);
       error |= s21_add_lazy(&tmp, &result, &result);
       error |= s21_mul_lazy_to_10(&result);
     }
     error |= s21_div_lazy_to_10(&result);
   }
-  
+
   if (!error) {
     s21_decimal_lazy two = {0};
     error |= s21_lazy_init(&two, NULL);
@@ -68,16 +68,15 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
 
     // Возводим 2 в степень exp
     // Начинаем с --exp, потому что 2^1 уже захардкодили
-    while (!error && --exp)
-      s21_mul_lazy(&tmp, &two, &tmp);
-    
+    while (!error && --exp) s21_mul_lazy(&tmp, &two, &tmp);
+
     // Умножаем мантиссу на порядок в результате
     error |= s21_mul_lazy(&result, &tmp, &result);
 
     //! @todo Здесь должно быть округление до 7ми значащих цифр
     error |= s21_from_lazy_to_decimal(&result, dst);
-  
-    // Освобождаем память    
+
+    // Освобождаем память
     s21_lazy_destroy(&two);
   }
 

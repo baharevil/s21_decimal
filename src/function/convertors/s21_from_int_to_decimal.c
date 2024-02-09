@@ -17,7 +17,7 @@ int s21_from_int_to_decimal(int src, s21_decimal *dst) {
       dst->exponent.bits.sign = 1;
       src = ~src + 1;
     }
-    dst->mantissa.bytes[0] = src;
+    dst->mantissa.bits[0] = src;
   } else
     status = conv_false;
   return status;

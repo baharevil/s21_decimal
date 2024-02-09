@@ -17,33 +17,57 @@
 uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp) {
   uint8_t error = 0;
   // Временное переменная чтобы не испортить оригинал
+  s21_decimal ten = {{0xa, 0x0, 0x0, 0x10000}};
   s21_decimal_lazy tmp_value = {0};
+  s21_decimal_lazy l_ten = {0};
   // Напраление изменения стпени. Если 1 -> увеличиваем, -1 -> уменьшаем
-  int8_t direction = 0;
+  int8_t direction = 0, res_exp = 0;
 
   // Первичная проверка
   error = (lazy == NULL);
 
   if (!error) {
     direction = (exp > lazy->exponent) - (exp < lazy->exponent);
+    res_exp = (direction >= 0) * (exp - lazy->exponent) +
+              (direction < 0) * (-exp + lazy->exponent);
     // Проверяем что все норм скопировалось
     error |= s21_lazy_to_lazy_cp(lazy, &tmp_value);
+    error |= s21_lazy_init(&l_ten, &ten);
   }
+
+  /// @version 2
+  while (!error && l_ten.exponent * 2 <= res_exp)
+    error |= s21_mul_lazy(&l_ten, &l_ten, &l_ten);
+
+  while (!error && l_ten.exponent < res_exp)
+    error |= s21_mul_lazy_to_10(&l_ten);
+
+  if (!error && res_exp == 0) error |= s21_div_lazy_to_10(&l_ten);
 
   if (!error) {
-    // Выбор необходимой функции для нормализации
-    uint8_t (*func)(s21_decimal_lazy *) = (uint8_t(*)(s21_decimal_lazy *))(
-        (direction >= 0) * (uintptr_t)s21_mul_lazy_to_10 +
-        (direction < 0) * (uintptr_t)s21_div_lazy_to_10);
+    int (*func)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *) =
+        ((int (*)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *))(
+            (direction >= 0) * (uintptr_t)s21_mul_lazy +
+            (direction < 0) * (uintptr_t)s21_mod_lazy));
 
-    // Нормализация
-    while (tmp_value.exponent != exp) error = func(&tmp_value);
+    error |= func(&tmp_value, &l_ten, &tmp_value);
   }
+  /// @version 1
+  // if (!error) {
+  // // Выбор необходимой функции для нормализации
+  // uint8_t (*func)(s21_decimal_lazy *) = (uint8_t(*)(s21_decimal_lazy *))(
+  //     (direction >= 0) * (uintptr_t)s21_mul_lazy_to_10 +
+  //     (direction < 0) * (uintptr_t)s21_div_lazy_to_10);
+
+  // // Нормализация
+  // while (tmp_value.exponent != exp) error = func(&tmp_value);
+  // }
 
   // Заменяем исходник новым значением
   if (!error) error |= s21_lazy_to_lazy_cp(&tmp_value, lazy);
 
   s21_lazy_destroy(&tmp_value);
+  s21_lazy_destroy(&l_ten);
 
   return error;
 }
