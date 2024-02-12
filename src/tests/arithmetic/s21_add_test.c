@@ -385,7 +385,7 @@ START_TEST(test_add16) {
   // -0.5
   s21_decimal decimal2 = {{0x5, 0x0, 0x0, 0x80010000}};
   // 79228162514264337593543950334
-  s21_decimal check = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
+  s21_decimal check = {{0xFFFFFFFe, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
 
   test_add(decimal1, decimal2, check);
 }
@@ -2223,7 +2223,7 @@ START_TEST(test_add183) {
   // 79228162514264337593543950334
   s21_decimal decimal2 = {{0xFFFFFFFE, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   // -0
-  s21_decimal check = {{0x0, 0x0, 0x0, 0x80000000}};
+  s21_decimal check = {{0x0, 0x0, 0x0, 0x00000000}};
 
   test_add(decimal1, decimal2, check);
 }

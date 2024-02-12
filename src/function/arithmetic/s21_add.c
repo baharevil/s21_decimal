@@ -34,13 +34,9 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   if (!error) error = s21_add_lazy(&lazy1, &lazy2, &res);
 
-  /// @bug поправить округление
-  if (!error) {
-    if (res.exponent > 28)
-      error = s21_round_lazy(&res, &res);
-    else
-      error = s21_lazy_normalization(&res, lazy1.exponent);
-  }
+  /// @todo сделать резайз с округлением
+  if (!error && res.size > 12)
+    error = s21_lazy_normalization(&res, lazy1.exponent);
 
   if (!error) error = s21_aritmetic_error(&res);
   if (!error) s21_from_lazy_to_decimal(&res, result);

@@ -28,10 +28,7 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   if (!error) error = s21_div_lazy(&lazy1, &lazy2, &res);
 
-  // !
-  // if (!error && res.exponent > 28)
-  //   error = s21_round_lazy(&res, &res);
-  // if (!error) error = s21_aritmetic_error(&res);
+  /// @todo Округление
 
   if (!error) s21_from_lazy_to_decimal(&res, result);
 

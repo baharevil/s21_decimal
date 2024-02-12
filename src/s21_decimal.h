@@ -198,5 +198,6 @@ int s21_memrevcmp(const void *s1, const void *s2, uint16_t size);
 
 int s21_lazy_left_shift(s21_decimal_lazy *value, s21_decimal_lazy *result,
                         uint32_t shift);
+int s21_lazy_ranking(s21_decimal_lazy *value, int *res);
 
 #endif

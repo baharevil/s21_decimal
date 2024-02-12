@@ -24,43 +24,32 @@ int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   error |= !s21_lazy_ptr_is_valid(result);
 
   if (!error) {
-    /// @version 1
-    // Необходимо для инкрементации
-    // s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
-    // s21_decimal_lazy lazy_one = {0};
-
-    // error |= s21_lazy_init(&lazy_one, &one);
-    // lazy_one.exponent = result->exponent;
-
-    // while (!error && (s21_is_equal_lazy(value_1, value_2) >= 0)) {
-    //   error |= s21_sub_lazy(value_1, value_2, value_1);
-    //   error |= s21_add_lazy(result, &lazy_one, result);
-    // }
-    // s21_lazy_destroy(&lazy_one);
-
-    /// @version 2
-    s21_decimal_lazy lazy_two = {0}, lazy_one = {0}, tmp = {0};
+    // Инициализация переменых
+    s21_decimal_lazy lazy_two = {0}, lazy_one = {0}, tmp = {0}, tmp_res = {0};
     error |= s21_from_int_to_lazy(1, &lazy_one);
     error |= s21_from_int_to_lazy(2, &lazy_two);
     error |= s21_lazy_init(&tmp, NULL);
+    error |= s21_lazy_init(&tmp_res, NULL);
     error |= s21_lazy_upsize(value_1, value_2);
 
+    // Рассчет через битовый сдвиг
     if (!error) {
       lazy_one.exponent = result->exponent;
       int64_t i = value_2->size * sizeof(*value_2->mantissa) * CHAR_BIT - 1;
-
       while (i >= 0) {
         s21_lazy_left_shift(value_2, &tmp, i);
         if (s21_is_equal_lazy(value_1, &tmp) >= 0) {
           s21_sub_lazy(value_1, &tmp, value_1);
           s21_lazy_left_shift(&lazy_one, &tmp, i);
-          s21_add_lazy(result, &tmp, result);
+          s21_add_lazy(&tmp_res, &tmp, &tmp_res);
         }
         --i;
       }
     }
+    if (!error) error |= s21_lazy_to_lazy_cp(&tmp_res, result);
 
     s21_lazy_destroy(&tmp);
+    s21_lazy_destroy(&tmp_res);
     s21_lazy_destroy(&lazy_one);
     s21_lazy_destroy(&lazy_two);
   }
@@ -85,12 +74,7 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   int error = 0;
 
   s21_decimal ten = {{0xa, 0x0, 0x0, 0x0}};
-  s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
-  s21_decimal five = {{0x5, 0x0, 0x0, 0x0}};
-
   s21_decimal_lazy lazy_ten = {0};
-  s21_decimal_lazy lazy_one = {0};
-  s21_decimal_lazy lazy_five = {0};
   s21_decimal_lazy carry = {0}, divider = {0}, res_temp = {0};
 
   // Первичная валидация
@@ -107,8 +91,6 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     error |= s21_lazy_init(&divider, NULL);
     error |= s21_lazy_init(&res_temp, NULL);
     error |= s21_lazy_init(&lazy_ten, &ten);
-    error |= s21_lazy_init(&lazy_one, &one);
-    error |= s21_lazy_init(&lazy_five, &five);
   }
 
   // Расчет целой части от деления
@@ -135,10 +117,7 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     error |= s21_div_lazy_core(&carry, &divider, &res_temp);
   }
 
-  if (!error && s21_is_equal_lazy(&carry, &lazy_five) >= 0) {
-    lazy_one.exponent = res_temp.exponent;
-    error |= s21_add_lazy(&res_temp, &lazy_one, &res_temp);
-  }
+  /// @todo Округление
 
   // Копирование результата + Расчет знака
   if (!error) {
@@ -150,8 +129,6 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   s21_lazy_destroy(&carry);
   s21_lazy_destroy(&divider);
   s21_lazy_destroy(&res_temp);
-  s21_lazy_destroy(&lazy_one);
-  s21_lazy_destroy(&lazy_five);
   s21_lazy_destroy(&lazy_ten);
 
   return error;

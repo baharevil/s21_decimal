@@ -76,7 +76,7 @@ int s21_lazy_left_shift(s21_decimal_lazy* value, s21_decimal_lazy* result,
   size_t size = sizeof(*value->mantissa) * CHAR_BIT;
   if (!error) error = s21_lazy_to_lazy_cp(value, &res);
 
-  size_t resize = (int)round((shift + 1) / size);
+  size_t resize = (int)round((2 * shift + 1) / size);
   resize = (resize > res.size) * resize + (resize <= res.size) * res.size;
   if (!error) error = s21_lazy_resize(&res, resize * 2);
 

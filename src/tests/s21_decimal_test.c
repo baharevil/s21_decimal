@@ -20,8 +20,8 @@ void run_testcase(Suite *testcase) {
 
 void run_tests_s21_add(void) {
   printf("\n\x1b[4;36m TEST S21_ADD \x1b[0m\n");
-  Suite *list_cases[] = {add_suite0(), add_suite1(),
-                         //  add_suite2(), add_suite3(), add_suite4(),
+  Suite *list_cases[] = {add_suite0(), add_suite1(), add_suite2(), add_suite3(),
+                         add_suite4(),
                          //  add_suite5(), add_suite6(), add_suite7(),
                          //  add_suite8(), add_suite9(),
                          NULL};
