@@ -105,17 +105,17 @@ int main() {
   быть
     --------------------------------------------------------
   */
-
-  // -0
-  s21_decimal decimal1 = {{0x0, 0x0, 0x0, 0x80000000}};
-  // 0.0000000000000000000000000000
-  s21_decimal decimal2 = {{0x0, 0x0, 0x0, 0x1C0000}};
-  // 0.0000000000000000000000000000
-  s21_decimal check = {{0x0, 0x0, 0x0, 0x1C0000}};
+  // 1.2640938749860586450804312205
+  s21_decimal decimal1 = {{0x1888888D, 0xBE250261, 0x28D856E6, 0x1C0000}};
+  // 2
+  s21_decimal decimal2 = {{0x2, 0x0, 0x0, 0x0}};
+  // 0.6320469374930293225402156102
+  // 0.6320469374930293225402156102
+  s21_decimal check = {{0x8C444446, 0x5F128130, 0x146C2B73, 0x1C0000}};
   s21_decimal result = {{0}};
 
   int error = 0;
-  error = s21_add(decimal1, decimal2, &result);
+  error = s21_div(decimal1, decimal2, &result);
 
   printf("error: %d\n", error);
   s21_decimal_print(&result, "result: ");

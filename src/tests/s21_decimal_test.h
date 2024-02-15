@@ -25,6 +25,32 @@ void test_add(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
 void test_add_fail(s21_decimal decimal1, s21_decimal decimal2, int check);
 void run_tests_s21_add(void);
 
+// S21_DIV_TEST
+Suite *div_suite0(void);
+Suite *div_suite1(void);
+Suite *div_suite2(void);
+Suite *div_suite3(void);
+Suite *div_suite4(void);
+Suite *div_suite5(void);
+Suite *div_suite6(void);
+Suite *div_suite7(void);
+Suite *div_suite8(void);
+Suite *div_suite9(void);
+Suite *div_suite10(void);
+Suite *div_suite11(void);
+Suite *div_suite12(void);
+Suite *div_suite13(void);
+Suite *div_suite14(void);
+Suite *div_suite15(void);
+Suite *div_suite16(void);
+Suite *div_suite17(void);
+Suite *div_suite18(void);
+
+void test_div(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
+void test_div_fail1(s21_decimal decimal1, s21_decimal decimal2, int code_check);
+void test_div_fail2(s21_decimal decimal1, s21_decimal decimal2, s21_decimal decimal_check, int code_check);
+void run_tests_s21_div(void);
+
 /**************************************************************************
                     Compare
  *************************************************************************/

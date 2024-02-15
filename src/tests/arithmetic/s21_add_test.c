@@ -1,8 +1,6 @@
-// #include <stdio.h>
 #include <stddef.h>
 
 #include "../s21_decimal_test.h"
-// #include "s21_decimal.h"
 
 START_TEST(test_add_fail_manual1) {
   // 792281625.14264337593543950335

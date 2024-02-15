@@ -16,15 +16,11 @@
 */
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
-  s21_decimal_lazy lazy1, lazy2, res;
+  s21_decimal_lazy lazy1 = {0}, lazy2 = {0}, res = {0};
 
   error |= !s21_decimal_ptr_is_valid(&value_1);
   error |= !s21_decimal_ptr_is_valid(&value_2);
   if (!error) error |= (result == NULL);
-
-  /// @bug заглушка
-  /// @todo не забыть убрать
-  if (error) return -1;
 
   if (!error) {
     error |= s21_lazy_init(&lazy1, &value_1);
@@ -33,12 +29,6 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   }
 
   if (!error) error = s21_add_lazy(&lazy1, &lazy2, &res);
-
-  // /// @todo сделать резайз с округлением
-  // if (!error && res.size > 12)
-  //   error = s21_lazy_normalization(&res, lazy1.exponent);
-
-  // if (!error) error = s21_aritmetic_error(&res);
   if (!error) error = s21_from_lazy_to_decimal(&res, result);
 
   s21_lazy_destroy(&lazy1);

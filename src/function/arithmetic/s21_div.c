@@ -14,7 +14,7 @@
 */
 int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int error = 0;
-  s21_decimal_lazy lazy1, lazy2, res;
+  s21_decimal_lazy lazy1 = {0}, lazy2 = {0}, res = {0};
 
   error |= !s21_decimal_ptr_is_valid(&value_1);
   error |= !s21_decimal_ptr_is_valid(&value_2);
