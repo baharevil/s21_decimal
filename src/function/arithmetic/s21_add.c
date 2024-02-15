@@ -34,12 +34,12 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   if (!error) error = s21_add_lazy(&lazy1, &lazy2, &res);
 
-  /// @todo сделать резайз с округлением
-  if (!error && res.size > 12)
-    error = s21_lazy_normalization(&res, lazy1.exponent);
+  // /// @todo сделать резайз с округлением
+  // if (!error && res.size > 12)
+  //   error = s21_lazy_normalization(&res, lazy1.exponent);
 
-  if (!error) error = s21_aritmetic_error(&res);
-  if (!error) s21_from_lazy_to_decimal(&res, result);
+  // if (!error) error = s21_aritmetic_error(&res);
+  if (!error) error = s21_from_lazy_to_decimal(&res, result);
 
   s21_lazy_destroy(&lazy1);
   s21_lazy_destroy(&lazy2);

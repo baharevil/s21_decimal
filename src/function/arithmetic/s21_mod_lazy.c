@@ -66,8 +66,6 @@ int s21_mod_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     }
   }
 
-  /// @todo Округление
-
   if (!error) {
     res_temp.exponent += exp_res;
     res_temp.sign = (value_1->sign != value_2->sign);

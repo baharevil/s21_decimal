@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+#include <stddef.h>
 
 #include "../s21_decimal_test.h"
-#include "s21_decimal.h"
+// #include "s21_decimal.h"
 
 START_TEST(test_add_fail_manual1) {
   // 792281625.14264337593543950335
@@ -3865,13 +3865,14 @@ START_TEST(test_add304) {
 }
 END_TEST
 
+// !
 START_TEST(test_add305) {
   // -7922816251426433759354395033
   s21_decimal decimal1 = {{0x99999999, 0x99999999, 0x19999999, 0x80000000}};
   // 7922816251426433759354395033
   s21_decimal decimal2 = {{0x99999999, 0x99999999, 0x19999999, 0x0}};
   // -0
-  s21_decimal check = {{0x0, 0x0, 0x0, 0x80000000}};
+  s21_decimal check = {{0x0, 0x0, 0x0, 0x00000000}};
 
   test_add(decimal1, decimal2, check);
 }

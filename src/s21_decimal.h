@@ -146,7 +146,7 @@ int s21_from_decimal_to_int(s21_decimal src, int *dst);      // +
 int s21_from_decimal_to_float(s21_decimal src, float *dst);  // -
 uint8_t s21_from_int_to_lazy(int src, s21_decimal_lazy *dst);
 uint8_t s21_from_decimal_to_lazy(s21_decimal *src, s21_decimal_lazy *dest);
-uint8_t s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest);
+int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest);
 
 /*!
   @defgroup AnotherFunction Другие функции
