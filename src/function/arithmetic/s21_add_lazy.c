@@ -55,25 +55,32 @@ int s21_add_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   uint16_t carry = 0;
   s21_decimal_lazy lvalue = {0}, rvalue = {0};
 
-  if (value_1->sign != value_2->sign) {
-    int8_t direction = value_1->sign - value_2->sign;
-    value_1->sign = value_2->sign = 0;
+  if (!error) {
+    error |= s21_lazy_init(&lvalue, NULL);
+    error |= s21_lazy_init(&rvalue, NULL);
+  }
+
+  if (!error) {
+    error |= s21_lazy_to_lazy_cp(value_1, &lvalue);
+    error |= s21_lazy_to_lazy_cp(value_2, &rvalue);
+  }
+
+  if (lvalue.sign != rvalue.sign) {
+    int8_t direction = lvalue.sign - rvalue.sign;
+    lvalue.sign = rvalue.sign = 0;
 
     if (direction == 1)
-      error = s21_sub_lazy(value_2, value_1, result);
+      error = s21_sub_lazy(&rvalue, &lvalue, result);
     else
-      error = s21_sub_lazy(value_1, value_2, result);
+      error = s21_sub_lazy(&lvalue, &rvalue, result);
+
+    // !
+    if (!s21_is_equal_lazy(&lvalue, &rvalue))
+      result->sign = value_1->sign * (lvalue.exponent >= rvalue.exponent) +
+                     value_2->sign * (lvalue.exponent < rvalue.exponent);
   }
 
   else {
-    error |= s21_lazy_init(&lvalue, NULL);
-    error |= s21_lazy_init(&rvalue, NULL);
-
-    if (!error) {
-      error |= s21_lazy_to_lazy_cp(value_1, &lvalue);
-      error |= s21_lazy_to_lazy_cp(value_2, &rvalue);
-    }
-
     if (!error) {
       is_normal = s21_is_normal_lazy(&lvalue, &rvalue);
 

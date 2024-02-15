@@ -15,7 +15,7 @@
   @return 0 - ок, 1 - ошибка
 */
 int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
-  int error = 0, cmp = -1, rank = 0;
+  int error = 0, cmp = -1;  //, rank = 0;
 
   uint8_t dec_size = 0, size = 0;
   s21_decimal_lazy carry = {0}, tmp_v = {0};
@@ -70,13 +70,13 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
     // вычесляем остаток
     error = s21_sub_lazy(src, &tmp_v, &carry);
     // считаем разряды
-    if (!error) error |= s21_lazy_ranking(&carry, &rank);
+    // if (!error) error |= s21_lazy_ranking(&carry, &rank);
 
     // выравниваем lazy_five
-    while (!error && tmp_v.exponent && lazy_five.exponent < rank)
-      error |= s21_mul_lazy_to_10(&lazy_five);
+    // while (!error && tmp_v.exponent && lazy_five.exponent < rank)
+    //   error |= s21_mul_lazy_to_10(&lazy_five);
 
-    if (tmp_v.exponent) lazy_five.exponent = carry.exponent;
+    if (tmp_v.exponent) lazy_five.exponent = tmp_v.exponent + 1;
     lazy_one.exponent = tmp_v.exponent;
     lazy_one.sign = tmp_v.sign;
     carry.sign = 0;

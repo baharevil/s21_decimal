@@ -1,27 +1,27 @@
-OS 								:= $(shell uname -s)
-CC 								= gcc
-CFLAGS 						= -Wall -Werror -Wextra -std=c11 -I. -pedantic
-DEBUG 						= -g
-VALFLAGS					= --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all --track-origins=yes -s
-LDFLAGS 					:= $(if $(filter Linux, $(OS)),$(shell pkg-config --libs check),-lcheck)
-OPEN_CMD 					:= $(if $(filter Linux, $(OS)),xdg-open,open)
+OS 					:= $(shell uname -s)
+CC 					= gcc
+CFLAGS 				= -Wall -Werror -Wextra -std=c11 -I. -pedantic
+DEBUG 				= -g
+VALFLAGS			= --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all --track-origins=yes -s
+LDFLAGS 			:= $(if $(filter Linux, $(OS)),$(shell pkg-config --libs check),-lcheck)
+OPEN_CMD 			:= $(if $(filter Linux, $(OS)),xdg-open,open)
 
-project_name 			= s21_decimal
-report_dir				= gcovr-report
-func_dir 					= function
-test_dir 					= tests
+project_name 		= s21_decimal
+report_dir			= gcovr-report
+func_dir 			= function
+test_dir 			= tests
 
-lib_name 					:= $(addsuffix .a, $(project_name))
-test_lib_name			:= $(addprefix  $(test_dir)/, $(addsuffix _test.a, $(project_name)))
-import						= $(test_lib_name) $(lib_name)
+lib_name 			:= $(addsuffix .a, $(project_name))
+test_lib_name		:= $(addprefix  $(test_dir)/, $(addsuffix _test.a, $(project_name)))
+import				= $(test_lib_name) $(lib_name)
 
-find_command			= find $(1) -iname "*.c"
+find_command		= find $(1) -iname "*.c"
 depenc_command		= $(filter $(1)/%.o, $(obj_list))
 
-func_source				:= $(shell $(call find_command, $(func_dir)))
-test_source_1			= $(shell $(call find_command, $(test_dir)))
-test_source_2			:= $(filter-out $(test_dir)/$(func_dir)/%.c $(test_dir)/tests/%.c, $(shell $(call find_command, $(test_dir))))
-obj_list 					:=  $(patsubst %.c, %.o, $(func_source) $(if $(filter ., $(test_dir)), $(test_source_2), $(test_source_1)))
+func_source			:= $(shell $(call find_command, $(func_dir)))
+test_source_1		= $(shell $(call find_command, $(test_dir)))
+test_source_2		:= $(filter-out $(test_dir)/$(func_dir)/%.c $(test_dir)/tests/%.c, $(shell $(call find_command, $(test_dir))))
+obj_list 			:=  $(patsubst %.c, %.o, $(func_source) $(if $(filter ., $(test_dir)), $(test_source_2), $(test_source_1)))
 
 
 all: $(lib_name)
