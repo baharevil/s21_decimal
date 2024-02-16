@@ -47,8 +47,9 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
     error |= s21_lazy_normalization(&tmp_v, tmp_v.exponent - 1);
 
   // check error
-  if (!error) error = (tmp_v.size > dec_size);
-
+  if (!error && (tmp_v.size > dec_size)) {
+    error = inf + tmp_v.sign;
+  }
   /*
     Если tmp_v.exponent != 0, значит работаем с дробной частью
     и нужно выравнять значение 5 в нужный ранг.
@@ -69,13 +70,6 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
   if (!error && tmp_v.exponent != src->exponent) {
     // вычесляем остаток
     error = s21_sub_lazy(src, &tmp_v, &carry);
-    // считаем разряды
-    // if (!error) error |= s21_lazy_ranking(&carry, &rank);
-
-    // выравниваем lazy_five
-    // while (!error && tmp_v.exponent && lazy_five.exponent < rank)
-    //   error |= s21_mul_lazy_to_10(&lazy_five);
-
     if (tmp_v.exponent) lazy_five.exponent = tmp_v.exponent + 1;
     lazy_one.exponent = tmp_v.exponent;
     lazy_one.sign = tmp_v.sign;
@@ -83,23 +77,25 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
   }
 
   // compare
-  if (!error) cmp = s21_is_equal_lazy(&carry, &lazy_five);
+  if (!error) {
+    cmp = s21_is_equal_lazy(&carry, &lazy_five);
 
-  // Если cmp == 0, значит банковское окргление
-  if (!error && cmp == 0) {
-    error |= s21_div_lazy(&tmp_v, &lazy_two, &carry);
-    if (carry.exponent != tmp_v.exponent)
+    // Если cmp == 0, значит банковское окргление
+    if (cmp == 0) {
+      error |= s21_div_lazy(&tmp_v, &lazy_two, &carry);
+      if (carry.exponent != tmp_v.exponent)
+        error |= s21_add_lazy(&tmp_v, &lazy_one, &tmp_v);
+    }
+
+    // Если cmp == 1, значит математическое окргление
+    else if (cmp == 1) {
       error |= s21_add_lazy(&tmp_v, &lazy_one, &tmp_v);
-  }
+    }
 
-  // Если cmp == 1, значит математическое окргление
-  else if (cmp == 1) {
-    error |= s21_add_lazy(&tmp_v, &lazy_one, &tmp_v);
+    // Иначе проверям на код ошибки
+    else
+      error = (cmp == -2);
   }
-
-  // Иначе проверям на код ошибки
-  else
-    error = (cmp == -2);
 
   // check to inf or -inf
   if (!error) error = s21_aritmetic_error(&tmp_v);
