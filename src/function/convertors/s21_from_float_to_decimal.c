@@ -54,11 +54,12 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   }
 
   if (!error) {
+    int8_t direction = (exp > 0) - (exp < 0);
     s21_decimal_lazy two = {0};
     error |= s21_lazy_init(&two, NULL);
     // Новый способ объявлять числа)
     error |= s21_from_int_to_lazy(2, &two);
-    error |= s21_from_int_to_lazy(2, &tmp);
+    error |= s21_from_int_to_lazy(1, &tmp);
 
     // Обработка знаков
     two.sign = tmp.sign;
@@ -66,18 +67,53 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
     // Порядок считаем целыми
     two.exponent = tmp.exponent = 0;
 
+    if (!error && exp < 0) {
+      exp *= -1;
+    }
+
     // Возводим 2 в степень exp
-    // Начинаем с --exp, потому что 2^1 уже захардкодили
-    while (!error && --exp) s21_mul_lazy(&tmp, &two, &tmp);
+    while (!error && (exp-- > 0)) error |= s21_mul_lazy(&tmp, &two, &tmp);
 
-    // Умножаем мантиссу на порядок в результате
-    error |= s21_mul_lazy(&result, &tmp, &result);
+    int (*func)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *) =
+    ((int (*)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *))(
+        (direction >= 0) * (uintptr_t)s21_mul_lazy +
+    //! @bug Функция деления не растит остаток
+        (direction < 0) * (uintptr_t)s21_div_lazy));
 
-    //! @todo Здесь должно быть округление до 7ми значащих цифр
-    error |= s21_from_lazy_to_decimal(&result, dst);
+    // Умножаем/делим мантиссу на порядок в результате
+    error |= func(&result, &tmp, &result);
 
     // Освобождаем память
     s21_lazy_destroy(&two);
+  }
+  
+  // Сначала проверяем то, что у нас получилось на +-inf
+  if (!error) {
+    s21_decimal_lazy null = {0};
+    s21_lazy_init(&null, NULL);
+
+    error = s21_aritmetic_error(&result);
+
+    if (error == min_inf) {
+      s21_from_lazy_to_decimal(&null, dst);
+    }
+
+    if (error != arifm_ok)
+      error = conv_false;
+    
+    s21_lazy_destroy(&null);
+  }
+  
+  // А потом округляем стандартно (в т.ч. банковским, правильно ли это?)
+  if (!error) {
+    // uint16_t exp = result.exponent;
+    result.exponent = 8;
+    error |= s21_round_lazy(&result, &result);
+    result.exponent = 7;
+  }
+  
+  if (!error) {
+    error = s21_from_lazy_to_decimal(&result, dst);
   }
 
   // Освобождаем память
