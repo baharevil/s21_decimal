@@ -14,6 +14,7 @@ START_TEST(test_truncate_fail1) {
 
   ck_assert_int_eq(code, calc_error);
 }
+END_TEST
 
 START_TEST(test_truncate_fail2) {
   // степень 154 (показатель степени должен быть от 0 до 28)
@@ -118,6 +119,7 @@ START_TEST(test_truncate_ok1) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok2) {
   // -79228162514264337593543950335
@@ -128,6 +130,7 @@ START_TEST(test_truncate_ok2) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok3) {
   // 7922816251426433759354395033.5
@@ -137,6 +140,7 @@ START_TEST(test_truncate_ok3) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok4) {
   // -7922816251426433759354395033.5
@@ -147,6 +151,7 @@ START_TEST(test_truncate_ok4) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok5) {
   // 792281625142643375935439503.35
@@ -156,6 +161,7 @@ START_TEST(test_truncate_ok5) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok6) {
   // -792281625142643375935439503.35
@@ -165,6 +171,7 @@ START_TEST(test_truncate_ok6) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok7) {
   // 79228162514264337593543950.335
@@ -174,6 +181,7 @@ START_TEST(test_truncate_ok7) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok8) {
   // -79228162514264337593543950.335
@@ -183,6 +191,7 @@ START_TEST(test_truncate_ok8) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok9) {
   // 7922816251426433759354395.0335
@@ -192,6 +201,7 @@ START_TEST(test_truncate_ok9) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok10) {
   // -7922816251426433759354395.0335
@@ -201,6 +211,7 @@ START_TEST(test_truncate_ok10) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok11) {
   // 792281625142643375935439.50335
@@ -210,6 +221,7 @@ START_TEST(test_truncate_ok11) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok12) {
   // -792281625142643375935439.50335
@@ -219,6 +231,7 @@ START_TEST(test_truncate_ok12) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok13) {
   // 79228162514264337593543.950335
@@ -228,6 +241,7 @@ START_TEST(test_truncate_ok13) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok14) {
   // -79228162514264337593543.950335
@@ -237,6 +251,7 @@ START_TEST(test_truncate_ok14) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok15) {
   // 7922816251426433759354.3950335
@@ -246,6 +261,7 @@ START_TEST(test_truncate_ok15) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok16) {
   // -7922816251426433759354.3950335
@@ -255,6 +271,7 @@ START_TEST(test_truncate_ok16) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok17) {
   // 792281625142643375935.43950335
@@ -264,6 +281,7 @@ START_TEST(test_truncate_ok17) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok18) {
   // -792281625142643375935.43950335
@@ -273,6 +291,7 @@ START_TEST(test_truncate_ok18) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok19) {
   // 79228162514264337593.543950335
@@ -282,6 +301,7 @@ START_TEST(test_truncate_ok19) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok20) {
   // -79228162514264337593.543950335
@@ -291,6 +311,7 @@ START_TEST(test_truncate_ok20) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok21) {
   // 7922816251426433759.3543950335
@@ -300,6 +321,7 @@ START_TEST(test_truncate_ok21) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok22) {
   // -7922816251426433759.3543950335
@@ -309,6 +331,7 @@ START_TEST(test_truncate_ok22) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok23) {
   // 792281625142643375.93543950335
@@ -318,6 +341,7 @@ START_TEST(test_truncate_ok23) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok24) {
   // -792281625142643375.93543950335
@@ -327,6 +351,7 @@ START_TEST(test_truncate_ok24) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok25) {
   // 79228162514264337.593543950335
@@ -336,6 +361,7 @@ START_TEST(test_truncate_ok25) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok26) {
   // -79228162514264337.593543950335
@@ -345,6 +371,7 @@ START_TEST(test_truncate_ok26) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok27) {
   // 7922816251426433.7593543950335
@@ -354,6 +381,7 @@ START_TEST(test_truncate_ok27) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok28) {
   // -7922816251426433.7593543950335
@@ -363,6 +391,7 @@ START_TEST(test_truncate_ok28) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok29) {
   // 792281625142643.37593543950335
@@ -372,6 +401,7 @@ START_TEST(test_truncate_ok29) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok30) {
   // -792281625142643.37593543950335
@@ -381,6 +411,7 @@ START_TEST(test_truncate_ok30) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok31) {
   // 79228162514264.337593543950335
@@ -390,6 +421,7 @@ START_TEST(test_truncate_ok31) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok32) {
   // -79228162514264.337593543950335
@@ -399,6 +431,7 @@ START_TEST(test_truncate_ok32) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok33) {
   // 7922816251426.4337593543950335
@@ -408,6 +441,7 @@ START_TEST(test_truncate_ok33) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok34) {
   // -7922816251426.4337593543950335
@@ -417,6 +451,7 @@ START_TEST(test_truncate_ok34) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok35) {
   // 792281625142.64337593543950335
@@ -426,6 +461,7 @@ START_TEST(test_truncate_ok35) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok36) {
   // -792281625142.64337593543950335
@@ -435,6 +471,7 @@ START_TEST(test_truncate_ok36) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok37) {
   // 79228162514.264337593543950335
@@ -444,6 +481,7 @@ START_TEST(test_truncate_ok37) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok38) {
   // -79228162514.264337593543950335
@@ -453,6 +491,7 @@ START_TEST(test_truncate_ok38) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok39) {
   // 7922816251.4264337593543950335
@@ -462,6 +501,7 @@ START_TEST(test_truncate_ok39) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok40) {
   // -7922816251.4264337593543950335
@@ -471,6 +511,7 @@ START_TEST(test_truncate_ok40) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok41) {
   // 792281625.14264337593543950335
@@ -480,6 +521,7 @@ START_TEST(test_truncate_ok41) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok42) {
   // -792281625.14264337593543950335
@@ -489,6 +531,7 @@ START_TEST(test_truncate_ok42) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok43) {
   // 79228162.514264337593543950335
@@ -498,6 +541,7 @@ START_TEST(test_truncate_ok43) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok44) {
   // -79228162.514264337593543950335
@@ -507,6 +551,7 @@ START_TEST(test_truncate_ok44) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok45) {
   // 7922816.2514264337593543950335
@@ -516,6 +561,7 @@ START_TEST(test_truncate_ok45) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok46) {
   // -7922816.2514264337593543950335
@@ -525,6 +571,7 @@ START_TEST(test_truncate_ok46) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok47) {
   // 792281.62514264337593543950335
@@ -534,6 +581,7 @@ START_TEST(test_truncate_ok47) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok48) {
   // -792281.62514264337593543950335
@@ -543,6 +591,7 @@ START_TEST(test_truncate_ok48) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok49) {
   // 79228.162514264337593543950335
@@ -552,6 +601,7 @@ START_TEST(test_truncate_ok49) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok50) {
   // -79228.162514264337593543950335
@@ -561,6 +611,7 @@ START_TEST(test_truncate_ok50) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok51) {
   // 7922.8162514264337593543950335
@@ -570,6 +621,7 @@ START_TEST(test_truncate_ok51) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok52) {
   // -7922.8162514264337593543950335
@@ -579,6 +631,7 @@ START_TEST(test_truncate_ok52) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok53) {
   // 792.28162514264337593543950335
@@ -588,6 +641,7 @@ START_TEST(test_truncate_ok53) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok54) {
   // -792.28162514264337593543950335
@@ -597,6 +651,7 @@ START_TEST(test_truncate_ok54) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok55) {
   // 79.228162514264337593543950335
@@ -606,6 +661,7 @@ START_TEST(test_truncate_ok55) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok56) {
   // -79.228162514264337593543950335
@@ -615,6 +671,7 @@ START_TEST(test_truncate_ok56) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok57) {
   // 7.9228162514264337593543950335
@@ -624,6 +681,7 @@ START_TEST(test_truncate_ok57) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok58) {
   // -7.9228162514264337593543950335
@@ -633,6 +691,7 @@ START_TEST(test_truncate_ok58) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok59) {
   // 79228162514264337593543950334
@@ -642,6 +701,7 @@ START_TEST(test_truncate_ok59) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok60) {
   // -79228162514264337593543950334
@@ -652,6 +712,7 @@ START_TEST(test_truncate_ok60) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok61) {
   // 7922816251426433759354395033.4
@@ -661,6 +722,7 @@ START_TEST(test_truncate_ok61) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok62) {
   // -7922816251426433759354395033.4
@@ -671,6 +733,7 @@ START_TEST(test_truncate_ok62) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok63) {
   // 792281625142643375935439503.34
@@ -680,6 +743,7 @@ START_TEST(test_truncate_ok63) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok64) {
   // -792281625142643375935439503.34
@@ -689,6 +753,7 @@ START_TEST(test_truncate_ok64) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok65) {
   // 79228162514264337593543950.334
@@ -698,6 +763,7 @@ START_TEST(test_truncate_ok65) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok66) {
   // -79228162514264337593543950.334
@@ -707,6 +773,7 @@ START_TEST(test_truncate_ok66) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok67) {
   // 7922816251426433759354395.0334
@@ -716,6 +783,7 @@ START_TEST(test_truncate_ok67) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok68) {
   // -7922816251426433759354395.0334
@@ -725,6 +793,7 @@ START_TEST(test_truncate_ok68) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok69) {
   // 792281625142643375935439.50334
@@ -734,6 +803,7 @@ START_TEST(test_truncate_ok69) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok70) {
   // -792281625142643375935439.50334
@@ -743,6 +813,7 @@ START_TEST(test_truncate_ok70) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok71) {
   // 79228162514264337593543.950334
@@ -752,6 +823,7 @@ START_TEST(test_truncate_ok71) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok72) {
   // -79228162514264337593543.950334
@@ -761,6 +833,7 @@ START_TEST(test_truncate_ok72) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok73) {
   // 7922816251426433759354.3950334
@@ -770,6 +843,7 @@ START_TEST(test_truncate_ok73) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok74) {
   // -7922816251426433759354.3950334
@@ -779,6 +853,7 @@ START_TEST(test_truncate_ok74) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok75) {
   // 792281625142643375935.43950334
@@ -788,6 +863,7 @@ START_TEST(test_truncate_ok75) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok76) {
   // -792281625142643375935.43950334
@@ -797,6 +873,7 @@ START_TEST(test_truncate_ok76) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok77) {
   // 79228162514264337593.543950334
@@ -806,6 +883,7 @@ START_TEST(test_truncate_ok77) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok78) {
   // -79228162514264337593.543950334
@@ -815,6 +893,7 @@ START_TEST(test_truncate_ok78) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok79) {
   // 7922816251426433759.3543950334
@@ -824,6 +903,7 @@ START_TEST(test_truncate_ok79) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok80) {
   // -7922816251426433759.3543950334
@@ -833,6 +913,7 @@ START_TEST(test_truncate_ok80) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok81) {
   // 792281625142643375.93543950334
@@ -842,6 +923,7 @@ START_TEST(test_truncate_ok81) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok82) {
   // -792281625142643375.93543950334
@@ -851,6 +933,7 @@ START_TEST(test_truncate_ok82) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok83) {
   // 79228162514264337.593543950334
@@ -860,6 +943,7 @@ START_TEST(test_truncate_ok83) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok84) {
   // -79228162514264337.593543950334
@@ -869,6 +953,7 @@ START_TEST(test_truncate_ok84) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok85) {
   // 7922816251426433.7593543950334
@@ -878,6 +963,7 @@ START_TEST(test_truncate_ok85) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok86) {
   // -7922816251426433.7593543950334
@@ -887,6 +973,7 @@ START_TEST(test_truncate_ok86) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok87) {
   // 792281625142643.37593543950334
@@ -896,6 +983,7 @@ START_TEST(test_truncate_ok87) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok88) {
   // -792281625142643.37593543950334
@@ -905,6 +993,7 @@ START_TEST(test_truncate_ok88) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok89) {
   // 79228162514264.337593543950334
@@ -914,6 +1003,7 @@ START_TEST(test_truncate_ok89) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok90) {
   // -79228162514264.337593543950334
@@ -923,6 +1013,7 @@ START_TEST(test_truncate_ok90) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok91) {
   // 7922816251426.4337593543950334
@@ -932,6 +1023,7 @@ START_TEST(test_truncate_ok91) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok92) {
   // -7922816251426.4337593543950334
@@ -941,6 +1033,7 @@ START_TEST(test_truncate_ok92) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok93) {
   // 792281625142.64337593543950334
@@ -950,6 +1043,7 @@ START_TEST(test_truncate_ok93) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok94) {
   // -792281625142.64337593543950334
@@ -959,6 +1053,7 @@ START_TEST(test_truncate_ok94) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok95) {
   // 79228162514.264337593543950334
@@ -968,6 +1063,7 @@ START_TEST(test_truncate_ok95) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok96) {
   // -79228162514.264337593543950334
@@ -977,6 +1073,7 @@ START_TEST(test_truncate_ok96) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok97) {
   // 7922816251.4264337593543950334
@@ -986,6 +1083,7 @@ START_TEST(test_truncate_ok97) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok98) {
   // -7922816251.4264337593543950334
@@ -995,6 +1093,7 @@ START_TEST(test_truncate_ok98) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok99) {
   // 792281625.14264337593543950334
@@ -1004,6 +1103,7 @@ START_TEST(test_truncate_ok99) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok100) {
   // -792281625.14264337593543950334
@@ -1013,6 +1113,7 @@ START_TEST(test_truncate_ok100) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok101) {
   // 79228162.514264337593543950334
@@ -1022,6 +1123,7 @@ START_TEST(test_truncate_ok101) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok102) {
   // -79228162.514264337593543950334
@@ -1031,6 +1133,7 @@ START_TEST(test_truncate_ok102) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok103) {
   // 7922816.2514264337593543950334
@@ -1040,6 +1143,7 @@ START_TEST(test_truncate_ok103) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok104) {
   // -7922816.2514264337593543950334
@@ -1049,6 +1153,7 @@ START_TEST(test_truncate_ok104) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok105) {
   // 792281.62514264337593543950334
@@ -1058,6 +1163,7 @@ START_TEST(test_truncate_ok105) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok106) {
   // -792281.62514264337593543950334
@@ -1067,6 +1173,7 @@ START_TEST(test_truncate_ok106) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok107) {
   // 79228.162514264337593543950334
@@ -1076,6 +1183,7 @@ START_TEST(test_truncate_ok107) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok108) {
   // -79228.162514264337593543950334
@@ -1085,6 +1193,7 @@ START_TEST(test_truncate_ok108) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok109) {
   // 7922.8162514264337593543950334
@@ -1094,6 +1203,7 @@ START_TEST(test_truncate_ok109) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok110) {
   // -7922.8162514264337593543950334
@@ -1103,6 +1213,7 @@ START_TEST(test_truncate_ok110) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok111) {
   // 792.28162514264337593543950334
@@ -1112,6 +1223,7 @@ START_TEST(test_truncate_ok111) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok112) {
   // -792.28162514264337593543950334
@@ -1121,6 +1233,7 @@ START_TEST(test_truncate_ok112) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok113) {
   // 79.228162514264337593543950334
@@ -1130,6 +1243,7 @@ START_TEST(test_truncate_ok113) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok114) {
   // -79.228162514264337593543950334
@@ -1139,6 +1253,7 @@ START_TEST(test_truncate_ok114) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok115) {
   // 7.9228162514264337593543950334
@@ -1148,6 +1263,7 @@ START_TEST(test_truncate_ok115) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok116) {
   // -7.9228162514264337593543950334
@@ -1157,6 +1273,7 @@ START_TEST(test_truncate_ok116) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok117) {
   // 52818775009509558395695966890
@@ -1166,6 +1283,7 @@ START_TEST(test_truncate_ok117) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok118) {
   // -52818775009509558395695966890
@@ -1176,6 +1294,7 @@ START_TEST(test_truncate_ok118) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok119) {
   // 5281877500950955839569596689.0
@@ -1185,6 +1304,7 @@ START_TEST(test_truncate_ok119) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok120) {
   // -5281877500950955839569596689.0
@@ -1195,6 +1315,7 @@ START_TEST(test_truncate_ok120) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok121) {
   // 5281877500950955.8395695966890
@@ -1204,6 +1325,7 @@ START_TEST(test_truncate_ok121) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok122) {
   // -5281877500950955.8395695966890
@@ -1213,6 +1335,7 @@ START_TEST(test_truncate_ok122) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok123) {
   // 5.2818775009509558395695966890
@@ -1222,6 +1345,7 @@ START_TEST(test_truncate_ok123) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok124) {
   // -5.2818775009509558395695966890
@@ -1231,6 +1355,7 @@ START_TEST(test_truncate_ok124) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok125) {
   // 52818775009509558392832655360
@@ -1240,6 +1365,7 @@ START_TEST(test_truncate_ok125) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok126) {
   // -52818775009509558392832655360
@@ -1249,6 +1375,7 @@ START_TEST(test_truncate_ok126) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok127) {
   // 5281877500950955839283265536.0
@@ -1258,6 +1385,7 @@ START_TEST(test_truncate_ok127) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok128) {
   // -5281877500950955839283265536.0
@@ -1267,6 +1395,7 @@ START_TEST(test_truncate_ok128) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok129) {
   // 5281877500950955.8392832655360
@@ -1276,6 +1405,7 @@ START_TEST(test_truncate_ok129) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok130) {
   // -5281877500950955.8392832655360
@@ -1285,6 +1415,7 @@ START_TEST(test_truncate_ok130) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok131) {
   // 5.2818775009509558392832655360
@@ -1294,6 +1425,7 @@ START_TEST(test_truncate_ok131) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok132) {
   // -5.2818775009509558392832655360
@@ -1303,6 +1435,7 @@ START_TEST(test_truncate_ok132) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok133) {
   // 52818774997211729016086244010
@@ -1312,6 +1445,7 @@ START_TEST(test_truncate_ok133) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok134) {
   // -52818774997211729016086244010
@@ -1321,6 +1455,7 @@ START_TEST(test_truncate_ok134) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok135) {
   // 5281877499721172901608624401.0
@@ -1330,6 +1465,7 @@ START_TEST(test_truncate_ok135) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok136) {
   // -5281877499721172901608624401.0
@@ -1339,6 +1475,7 @@ START_TEST(test_truncate_ok136) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok137) {
   // 5281877499721172.9016086244010
@@ -1348,6 +1485,7 @@ START_TEST(test_truncate_ok137) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok138) {
   // -5281877499721172.9016086244010
@@ -1357,6 +1495,7 @@ START_TEST(test_truncate_ok138) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok139) {
   // 5.2818774997211729016086244010
@@ -1366,6 +1505,7 @@ START_TEST(test_truncate_ok139) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok140) {
   // -5.2818774997211729016086244010
@@ -1375,6 +1515,7 @@ START_TEST(test_truncate_ok140) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok141) {
   // 52818774997211729013222932480
@@ -1384,6 +1525,7 @@ START_TEST(test_truncate_ok141) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok142) {
   // -52818774997211729013222932480
@@ -1393,6 +1535,7 @@ START_TEST(test_truncate_ok142) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok143) {
   // 5281877499721172901322293248.0
@@ -1402,6 +1545,7 @@ START_TEST(test_truncate_ok143) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok144) {
   // -5281877499721172901322293248.0
@@ -1411,6 +1555,7 @@ START_TEST(test_truncate_ok144) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok145) {
   // 5281877499721172.9013222932480
@@ -1420,6 +1565,7 @@ START_TEST(test_truncate_ok145) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok146) {
   // -5281877499721172.9013222932480
@@ -1429,6 +1575,7 @@ START_TEST(test_truncate_ok146) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok147) {
   // 5.2818774997211729013222932480
@@ -1438,6 +1585,7 @@ START_TEST(test_truncate_ok147) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok148) {
   // -5.2818774997211729013222932480
@@ -1447,6 +1595,7 @@ START_TEST(test_truncate_ok148) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok149) {
   // 12297829382473034410
@@ -1456,6 +1605,7 @@ START_TEST(test_truncate_ok149) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok150) {
   // -12297829382473034410
@@ -1465,6 +1615,7 @@ START_TEST(test_truncate_ok150) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok151) {
   // 1229782938247303441.0
@@ -1474,6 +1625,7 @@ START_TEST(test_truncate_ok151) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok152) {
   // -1229782938247303441.0
@@ -1483,6 +1635,7 @@ START_TEST(test_truncate_ok152) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok153) {
   // 122978293.82473034410
@@ -1492,6 +1645,7 @@ START_TEST(test_truncate_ok153) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok154) {
   // -122978293.82473034410
@@ -1501,6 +1655,7 @@ START_TEST(test_truncate_ok154) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok155) {
   // 1.2297829382473034410
@@ -1510,6 +1665,7 @@ START_TEST(test_truncate_ok155) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok156) {
   // -1.2297829382473034410
@@ -1519,6 +1675,7 @@ START_TEST(test_truncate_ok156) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok157) {
   // 12297829379609722880
@@ -1528,6 +1685,7 @@ START_TEST(test_truncate_ok157) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok158) {
   // -12297829379609722880
@@ -1537,6 +1695,7 @@ START_TEST(test_truncate_ok158) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok159) {
   // 1229782937960972288.0
@@ -1546,6 +1705,7 @@ START_TEST(test_truncate_ok159) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok160) {
   // -1229782937960972288.0
@@ -1555,6 +1715,7 @@ START_TEST(test_truncate_ok160) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok161) {
   // 122978293.79609722880
@@ -1564,6 +1725,7 @@ START_TEST(test_truncate_ok161) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok162) {
   // -122978293.79609722880
@@ -1573,6 +1735,7 @@ START_TEST(test_truncate_ok162) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok163) {
   // 1.2297829379609722880
@@ -1582,6 +1745,7 @@ START_TEST(test_truncate_ok163) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok164) {
   // -1.2297829379609722880
@@ -1591,6 +1755,7 @@ START_TEST(test_truncate_ok164) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok165) {
   // 2863311530
@@ -1600,6 +1765,7 @@ START_TEST(test_truncate_ok165) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok166) {
   // -2863311530
@@ -1609,6 +1775,7 @@ START_TEST(test_truncate_ok166) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok167) {
   // 286331153.0
@@ -1618,6 +1785,7 @@ START_TEST(test_truncate_ok167) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok168) {
   // -286331153.0
@@ -1627,6 +1795,7 @@ START_TEST(test_truncate_ok168) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok169) {
   // 286331.1530
@@ -1636,6 +1805,7 @@ START_TEST(test_truncate_ok169) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok170) {
   // -286331.1530
@@ -1645,6 +1815,7 @@ START_TEST(test_truncate_ok170) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok171) {
   // 2.863311530
@@ -1654,6 +1825,7 @@ START_TEST(test_truncate_ok171) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok172) {
   // -2.863311530
@@ -1663,6 +1835,7 @@ START_TEST(test_truncate_ok172) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok173) {
   // 26409387504754779197847983445
@@ -1672,6 +1845,7 @@ START_TEST(test_truncate_ok173) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok174) {
   // -26409387504754779197847983445
@@ -1682,6 +1856,7 @@ START_TEST(test_truncate_ok174) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok175) {
   // 2640938750475477919784798344.5
@@ -1691,6 +1866,7 @@ START_TEST(test_truncate_ok175) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok176) {
   // -2640938750475477919784798344.5
@@ -1700,6 +1876,7 @@ START_TEST(test_truncate_ok176) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok177) {
   // 2640938750475477.9197847983445
@@ -1709,6 +1886,7 @@ START_TEST(test_truncate_ok177) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok178) {
   // -2640938750475477.9197847983445
@@ -1718,6 +1896,7 @@ START_TEST(test_truncate_ok178) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok179) {
   // 2.6409387504754779197847983445
@@ -1727,6 +1906,7 @@ START_TEST(test_truncate_ok179) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok180) {
   // -2.6409387504754779197847983445
@@ -1736,6 +1916,7 @@ START_TEST(test_truncate_ok180) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok181) {
   // 26409387504754779196416327680
@@ -1745,6 +1926,7 @@ START_TEST(test_truncate_ok181) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok182) {
   // -26409387504754779196416327680
@@ -1754,6 +1936,7 @@ START_TEST(test_truncate_ok182) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok183) {
   // 2640938750475477919641632768.0
@@ -1763,6 +1946,7 @@ START_TEST(test_truncate_ok183) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok184) {
   // -2640938750475477919641632768.0
@@ -1772,6 +1956,7 @@ START_TEST(test_truncate_ok184) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok185) {
   // 2640938750475477.9196416327680
@@ -1781,6 +1966,7 @@ START_TEST(test_truncate_ok185) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok186) {
   // -2640938750475477.9196416327680
@@ -1790,6 +1976,7 @@ START_TEST(test_truncate_ok186) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok187) {
   // 2.6409387504754779196416327680
@@ -1799,6 +1986,7 @@ START_TEST(test_truncate_ok187) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok188) {
   // -2.6409387504754779196416327680
@@ -1808,6 +1996,7 @@ START_TEST(test_truncate_ok188) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok189) {
   // 26409387498605864508043122005
@@ -1817,6 +2006,7 @@ START_TEST(test_truncate_ok189) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok190) {
   // -26409387498605864508043122005
@@ -1826,6 +2016,7 @@ START_TEST(test_truncate_ok190) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok191) {
   // 2640938749860586450804312200.5
@@ -1835,6 +2026,7 @@ START_TEST(test_truncate_ok191) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok192) {
   // -2640938749860586450804312200.5
@@ -1844,6 +2036,7 @@ START_TEST(test_truncate_ok192) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok193) {
   // 2640938749860586.4508043122005
@@ -1853,6 +2046,7 @@ START_TEST(test_truncate_ok193) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok194) {
   // -2640938749860586.4508043122005
@@ -1862,6 +2056,7 @@ START_TEST(test_truncate_ok194) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok195) {
   // 2.6409387498605864508043122005
@@ -1871,6 +2066,7 @@ START_TEST(test_truncate_ok195) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok196) {
   // -2.6409387498605864508043122005
@@ -1880,6 +2076,7 @@ START_TEST(test_truncate_ok196) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok197) {
   // 26409387498605864506611466240
@@ -1889,6 +2086,7 @@ START_TEST(test_truncate_ok197) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok198) {
   // -26409387498605864506611466240
@@ -1898,6 +2096,7 @@ START_TEST(test_truncate_ok198) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok199) {
   // 2640938749860586450661146624.0
@@ -1907,6 +2106,7 @@ START_TEST(test_truncate_ok199) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok200) {
   // -2640938749860586450661146624.0
@@ -1916,6 +2116,7 @@ START_TEST(test_truncate_ok200) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok201) {
   // 2640938749860586.4506611466240
@@ -1925,6 +2126,7 @@ START_TEST(test_truncate_ok201) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok202) {
   // -2640938749860586.4506611466240
@@ -1934,6 +2136,7 @@ START_TEST(test_truncate_ok202) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok203) {
   // 2.6409387498605864506611466240
@@ -1943,6 +2146,7 @@ START_TEST(test_truncate_ok203) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok204) {
   // -2.6409387498605864506611466240
@@ -1952,6 +2156,7 @@ START_TEST(test_truncate_ok204) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok205) {
   // 6148914691236517205
@@ -1961,6 +2166,7 @@ START_TEST(test_truncate_ok205) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok206) {
   // -6148914691236517205
@@ -1970,6 +2176,7 @@ START_TEST(test_truncate_ok206) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok207) {
   // 614891469123651720.5
@@ -1979,6 +2186,7 @@ START_TEST(test_truncate_ok207) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok208) {
   // -614891469123651720.5
@@ -1988,6 +2196,7 @@ START_TEST(test_truncate_ok208) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok209) {
   // 6148914.691236517205
@@ -1997,6 +2206,7 @@ START_TEST(test_truncate_ok209) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok210) {
   // -6148914.691236517205
@@ -2006,6 +2216,7 @@ START_TEST(test_truncate_ok210) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok211) {
   // 6.148914691236517205
@@ -2015,6 +2226,7 @@ START_TEST(test_truncate_ok211) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok212) {
   // -6.148914691236517205
@@ -2024,6 +2236,7 @@ START_TEST(test_truncate_ok212) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok213) {
   // 6148914689804861440
@@ -2033,6 +2246,7 @@ START_TEST(test_truncate_ok213) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok214) {
   // -6148914689804861440
@@ -2042,6 +2256,7 @@ START_TEST(test_truncate_ok214) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok215) {
   // 614891468980486144.0
@@ -2051,6 +2266,7 @@ START_TEST(test_truncate_ok215) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok216) {
   // -614891468980486144.0
@@ -2060,6 +2276,7 @@ START_TEST(test_truncate_ok216) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok217) {
   // 6148914.689804861440
@@ -2069,6 +2286,7 @@ START_TEST(test_truncate_ok217) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok218) {
   // -6148914.689804861440
@@ -2078,6 +2296,7 @@ START_TEST(test_truncate_ok218) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok219) {
   // 6.148914689804861440
@@ -2087,6 +2306,7 @@ START_TEST(test_truncate_ok219) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok220) {
   // -6.148914689804861440
@@ -2096,6 +2316,7 @@ START_TEST(test_truncate_ok220) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok221) {
   // 1431655765
@@ -2105,6 +2326,7 @@ START_TEST(test_truncate_ok221) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok222) {
   // -1431655765
@@ -2114,6 +2336,7 @@ START_TEST(test_truncate_ok222) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok223) {
   // 143165576.5
@@ -2123,6 +2346,7 @@ START_TEST(test_truncate_ok223) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok224) {
   // -143165576.5
@@ -2132,6 +2356,7 @@ START_TEST(test_truncate_ok224) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok225) {
   // 143165.5765
@@ -2141,6 +2366,7 @@ START_TEST(test_truncate_ok225) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok226) {
   // -143165.5765
@@ -2150,6 +2376,7 @@ START_TEST(test_truncate_ok226) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok227) {
   // 1.431655765
@@ -2159,6 +2386,7 @@ START_TEST(test_truncate_ok227) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok228) {
   // -1.431655765
@@ -2168,6 +2396,7 @@ START_TEST(test_truncate_ok228) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok229) {
   // 18446744078004518913
@@ -2177,6 +2406,7 @@ START_TEST(test_truncate_ok229) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok230) {
   // -18446744078004518913
@@ -2186,6 +2416,7 @@ START_TEST(test_truncate_ok230) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok231) {
   // 1844674407800451891.3
@@ -2195,6 +2426,7 @@ START_TEST(test_truncate_ok231) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok232) {
   // -1844674407800451891.3
@@ -2204,6 +2436,7 @@ START_TEST(test_truncate_ok232) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok233) {
   // 184467440780.04518913
@@ -2213,6 +2446,7 @@ START_TEST(test_truncate_ok233) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok234) {
   // -184467440780.04518913
@@ -2222,6 +2456,7 @@ START_TEST(test_truncate_ok234) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok235) {
   // 1.8446744078004518913
@@ -2231,6 +2466,7 @@ START_TEST(test_truncate_ok235) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok236) {
   // -1.8446744078004518913
@@ -2240,6 +2476,7 @@ START_TEST(test_truncate_ok236) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok237) {
   // 18446744078004518912
@@ -2249,6 +2486,7 @@ START_TEST(test_truncate_ok237) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok238) {
   // -18446744078004518912
@@ -2258,6 +2496,7 @@ START_TEST(test_truncate_ok238) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok239) {
   // 1844674407800451891.2
@@ -2267,6 +2506,7 @@ START_TEST(test_truncate_ok239) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok240) {
   // -1844674407800451891.2
@@ -2276,6 +2516,7 @@ START_TEST(test_truncate_ok240) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok241) {
   // 18446744078.004518912
@@ -2285,6 +2526,7 @@ START_TEST(test_truncate_ok241) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok242) {
   // -18446744078.004518912
@@ -2294,6 +2536,7 @@ START_TEST(test_truncate_ok242) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok243) {
   // 1.8446744078004518912
@@ -2303,6 +2546,7 @@ START_TEST(test_truncate_ok243) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok244) {
   // -1.8446744078004518912
@@ -2312,6 +2556,7 @@ START_TEST(test_truncate_ok244) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok245) {
   // 18446744073709551617
@@ -2321,6 +2566,7 @@ START_TEST(test_truncate_ok245) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok246) {
   // -18446744073709551617
@@ -2330,6 +2576,7 @@ START_TEST(test_truncate_ok246) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok247) {
   // 1844674407370955161.7
@@ -2339,6 +2586,7 @@ START_TEST(test_truncate_ok247) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok248) {
   // -1844674407370955161.7
@@ -2348,6 +2596,7 @@ START_TEST(test_truncate_ok248) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok249) {
   // 1844674407.3709551617
@@ -2357,6 +2606,7 @@ START_TEST(test_truncate_ok249) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok250) {
   // -1844674407.3709551617
@@ -2366,6 +2616,7 @@ START_TEST(test_truncate_ok250) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok251) {
   // 1.8446744073709551617
@@ -2375,6 +2626,7 @@ START_TEST(test_truncate_ok251) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok252) {
   // -1.8446744073709551617
@@ -2384,6 +2636,7 @@ START_TEST(test_truncate_ok252) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok253) {
   // 18446744073709551616
@@ -2393,6 +2646,7 @@ START_TEST(test_truncate_ok253) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok254) {
   // -18446744073709551616
@@ -2402,6 +2656,7 @@ START_TEST(test_truncate_ok254) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok255) {
   // 1844674407370955161.6
@@ -2411,6 +2666,7 @@ START_TEST(test_truncate_ok255) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok256) {
   // -1844674407370955161.6
@@ -2420,6 +2676,7 @@ START_TEST(test_truncate_ok256) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok257) {
   // 184467440.73709551616
@@ -2429,6 +2686,7 @@ START_TEST(test_truncate_ok257) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok258) {
   // -184467440.73709551616
@@ -2438,6 +2696,7 @@ START_TEST(test_truncate_ok258) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok259) {
   // 1.8446744073709551616
@@ -2447,6 +2706,7 @@ START_TEST(test_truncate_ok259) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok260) {
   // -1.8446744073709551616
@@ -2456,6 +2716,7 @@ START_TEST(test_truncate_ok260) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok261) {
   // 4294967297
@@ -2465,6 +2726,7 @@ START_TEST(test_truncate_ok261) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok262) {
   // -4294967297
@@ -2474,6 +2736,7 @@ START_TEST(test_truncate_ok262) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok263) {
   // 429496729.7
@@ -2483,6 +2746,7 @@ START_TEST(test_truncate_ok263) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok264) {
   // -429496729.7
@@ -2492,6 +2756,7 @@ START_TEST(test_truncate_ok264) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok265) {
   // 42949672.97
@@ -2501,6 +2766,7 @@ START_TEST(test_truncate_ok265) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok266) {
   // -42949672.97
@@ -2510,6 +2776,7 @@ START_TEST(test_truncate_ok266) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok267) {
   // 429496.7297
@@ -2519,6 +2786,7 @@ START_TEST(test_truncate_ok267) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok268) {
   // -429496.7297
@@ -2528,6 +2796,7 @@ START_TEST(test_truncate_ok268) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok269) {
   // 4.294967297
@@ -2537,6 +2806,7 @@ START_TEST(test_truncate_ok269) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok270) {
   // -4.294967297
@@ -2546,6 +2816,7 @@ START_TEST(test_truncate_ok270) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok271) {
   // 42.94967297
@@ -2555,6 +2826,7 @@ START_TEST(test_truncate_ok271) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok272) {
   // -42.94967297
@@ -2564,6 +2836,7 @@ START_TEST(test_truncate_ok272) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok273) {
   // 4294967296
@@ -2573,6 +2846,7 @@ START_TEST(test_truncate_ok273) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok274) {
   // -4294967296
@@ -2582,6 +2856,7 @@ START_TEST(test_truncate_ok274) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok275) {
   // 429496729.6
@@ -2591,6 +2866,7 @@ START_TEST(test_truncate_ok275) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok276) {
   // -429496729.6
@@ -2600,6 +2876,7 @@ START_TEST(test_truncate_ok276) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok277) {
   // 42949672.96
@@ -2609,6 +2886,7 @@ START_TEST(test_truncate_ok277) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok278) {
   // -42949672.96
@@ -2618,6 +2896,7 @@ START_TEST(test_truncate_ok278) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok279) {
   // 4294967.296
@@ -2627,6 +2906,7 @@ START_TEST(test_truncate_ok279) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok280) {
   // -4294967.296
@@ -2636,6 +2916,7 @@ START_TEST(test_truncate_ok280) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok281) {
   // 4.294967296
@@ -2645,6 +2926,7 @@ START_TEST(test_truncate_ok281) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok282) {
   // -4.294967296
@@ -2654,6 +2936,7 @@ START_TEST(test_truncate_ok282) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok283) {
   // 42.94967296
@@ -2663,6 +2946,7 @@ START_TEST(test_truncate_ok283) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok284) {
   // -42.94967296
@@ -2672,6 +2956,7 @@ START_TEST(test_truncate_ok284) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok285) {
   // 1
@@ -2681,6 +2966,7 @@ START_TEST(test_truncate_ok285) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok286) {
   // -1
@@ -2690,6 +2976,7 @@ START_TEST(test_truncate_ok286) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok287) {
   // 0.1
@@ -2699,6 +2986,7 @@ START_TEST(test_truncate_ok287) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok288) {
   // -0.1
@@ -2708,6 +2996,7 @@ START_TEST(test_truncate_ok288) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok289) {
   // 0.0000000000001
@@ -2717,6 +3006,7 @@ START_TEST(test_truncate_ok289) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok290) {
   // -0.0000000000001
@@ -2726,6 +3016,7 @@ START_TEST(test_truncate_ok290) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok291) {
   // 0.00000000000001
@@ -2735,6 +3026,7 @@ START_TEST(test_truncate_ok291) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok292) {
   // -0.00000000000001
@@ -2744,6 +3036,7 @@ START_TEST(test_truncate_ok292) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok293) {
   // 0.000000000000000000000000001
@@ -2753,6 +3046,7 @@ START_TEST(test_truncate_ok293) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok294) {
   // -0.000000000000000000000000001
@@ -2762,6 +3056,7 @@ START_TEST(test_truncate_ok294) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok295) {
   // 0.0000000000000000000000000001
@@ -2771,6 +3066,7 @@ START_TEST(test_truncate_ok295) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok296) {
   // -0.0000000000000000000000000001
@@ -2780,6 +3076,7 @@ START_TEST(test_truncate_ok296) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok297) {
   // 39614081266355540835774234624
@@ -2789,6 +3086,7 @@ START_TEST(test_truncate_ok297) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok298) {
   // -39614081266355540835774234624
@@ -2799,6 +3097,7 @@ START_TEST(test_truncate_ok298) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok299) {
   // 3961408126635554083577423462.4
@@ -2808,6 +3107,7 @@ START_TEST(test_truncate_ok299) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok300) {
   // -3961408126635554083577423462.4
@@ -2817,6 +3117,7 @@ START_TEST(test_truncate_ok300) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok301) {
   // 39614081266355.540835774234624
@@ -2826,6 +3127,7 @@ START_TEST(test_truncate_ok301) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok302) {
   // -39614081266355.540835774234624
@@ -2835,6 +3137,7 @@ START_TEST(test_truncate_ok302) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok303) {
   // 3.9614081266355540835774234624
@@ -2844,6 +3147,7 @@ START_TEST(test_truncate_ok303) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok304) {
   // -3.9614081266355540835774234624
@@ -2853,6 +3157,7 @@ START_TEST(test_truncate_ok304) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok305) {
   // 39614081266355540833626750976
@@ -2862,6 +3167,7 @@ START_TEST(test_truncate_ok305) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok306) {
   // -39614081266355540833626750976
@@ -2871,6 +3177,7 @@ START_TEST(test_truncate_ok306) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok307) {
   // 3961408126635554083362675097.6
@@ -2880,6 +3187,7 @@ START_TEST(test_truncate_ok307) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok308) {
   // -3961408126635554083362675097.6
@@ -2889,6 +3197,7 @@ START_TEST(test_truncate_ok308) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok309) {
   // 3961408126635554.0833626750976
@@ -2898,6 +3207,7 @@ START_TEST(test_truncate_ok309) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok310) {
   // -3961408126635554.0833626750976
@@ -2907,6 +3217,7 @@ START_TEST(test_truncate_ok310) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok311) {
   // 3.9614081266355540833626750976
@@ -2916,6 +3227,7 @@ START_TEST(test_truncate_ok311) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok312) {
   // -3.9614081266355540833626750976
@@ -2925,6 +3237,7 @@ START_TEST(test_truncate_ok312) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok313) {
   // 39614081257132168798919458816
@@ -2934,6 +3247,7 @@ START_TEST(test_truncate_ok313) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok314) {
   // -39614081257132168798919458816
@@ -2943,6 +3257,7 @@ START_TEST(test_truncate_ok314) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok315) {
   // 3961408125713216879891945881.6
@@ -2952,6 +3267,7 @@ START_TEST(test_truncate_ok315) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok316) {
   // -3961408125713216879891945881.6
@@ -2961,6 +3277,7 @@ START_TEST(test_truncate_ok316) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok317) {
   // 39614081257132168.798919458816
@@ -2970,6 +3287,7 @@ START_TEST(test_truncate_ok317) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok318) {
   // -39614081257132168.798919458816
@@ -2979,6 +3297,7 @@ START_TEST(test_truncate_ok318) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok319) {
   // 3.9614081257132168798919458816
@@ -2988,6 +3307,7 @@ START_TEST(test_truncate_ok319) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok320) {
   // -3.9614081257132168798919458816
@@ -2997,6 +3317,7 @@ START_TEST(test_truncate_ok320) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok321) {
   // 39614081257132168796771975168
@@ -3006,6 +3327,7 @@ START_TEST(test_truncate_ok321) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok322) {
   // -39614081257132168796771975168
@@ -3015,6 +3337,7 @@ START_TEST(test_truncate_ok322) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok323) {
   // 3961408125713216879677197516.8
@@ -3024,6 +3347,7 @@ START_TEST(test_truncate_ok323) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok324) {
   // -3961408125713216879677197516.8
@@ -3033,6 +3357,7 @@ START_TEST(test_truncate_ok324) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok325) {
   // 396140812571321687.96771975168
@@ -3042,6 +3367,7 @@ START_TEST(test_truncate_ok325) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok326) {
   // -396140812571321687.96771975168
@@ -3051,6 +3377,7 @@ START_TEST(test_truncate_ok326) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok327) {
   // 3.9614081257132168796771975168
@@ -3060,6 +3387,7 @@ START_TEST(test_truncate_ok327) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok328) {
   // -3.9614081257132168796771975168
@@ -3069,6 +3397,7 @@ START_TEST(test_truncate_ok328) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok329) {
   // 9223372039002259456
@@ -3078,6 +3407,7 @@ START_TEST(test_truncate_ok329) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok330) {
   // -9223372039002259456
@@ -3087,6 +3417,7 @@ START_TEST(test_truncate_ok330) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok331) {
   // 922337203900225945.6
@@ -3096,6 +3427,7 @@ START_TEST(test_truncate_ok331) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok332) {
   // -922337203900225945.6
@@ -3105,6 +3437,7 @@ START_TEST(test_truncate_ok332) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok333) {
   // 922337203900.2259456
@@ -3114,6 +3447,7 @@ START_TEST(test_truncate_ok333) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok334) {
   // -922337203900.2259456
@@ -3123,6 +3457,7 @@ START_TEST(test_truncate_ok334) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok335) {
   // 9.223372039002259456
@@ -3132,6 +3467,7 @@ START_TEST(test_truncate_ok335) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok336) {
   // -9.223372039002259456
@@ -3141,6 +3477,7 @@ START_TEST(test_truncate_ok336) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok337) {
   // 9223372036854775808
@@ -3150,6 +3487,7 @@ START_TEST(test_truncate_ok337) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok338) {
   // -9223372036854775808
@@ -3159,6 +3497,7 @@ START_TEST(test_truncate_ok338) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok339) {
   // 922337203685477580.8
@@ -3168,6 +3507,7 @@ START_TEST(test_truncate_ok339) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok340) {
   // -922337203685477580.8
@@ -3177,6 +3517,7 @@ START_TEST(test_truncate_ok340) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok341) {
   // 92233720368.54775808
@@ -3186,6 +3527,7 @@ START_TEST(test_truncate_ok341) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok342) {
   // -92233720368.54775808
@@ -3195,6 +3537,7 @@ START_TEST(test_truncate_ok342) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok343) {
   // 9.223372036854775808
@@ -3204,6 +3547,7 @@ START_TEST(test_truncate_ok343) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok344) {
   // -9.223372036854775808
@@ -3213,6 +3557,7 @@ START_TEST(test_truncate_ok344) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok345) {
   // 2147483648
@@ -3222,6 +3567,7 @@ START_TEST(test_truncate_ok345) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok346) {
   // -2147483648
@@ -3231,6 +3577,7 @@ START_TEST(test_truncate_ok346) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok347) {
   // 214748364.8
@@ -3240,6 +3587,7 @@ START_TEST(test_truncate_ok347) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok348) {
   // -214748364.8
@@ -3249,6 +3597,7 @@ START_TEST(test_truncate_ok348) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok349) {
   // 21474836.48
@@ -3258,6 +3607,7 @@ START_TEST(test_truncate_ok349) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok350) {
   // -21474836.48
@@ -3267,6 +3617,7 @@ START_TEST(test_truncate_ok350) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok351) {
   // 214748.3648
@@ -3276,6 +3627,7 @@ START_TEST(test_truncate_ok351) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok352) {
   // -214748.3648
@@ -3285,6 +3637,7 @@ START_TEST(test_truncate_ok352) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok353) {
   // 21.47483648
@@ -3294,6 +3647,7 @@ START_TEST(test_truncate_ok353) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok354) {
   // -21.47483648
@@ -3303,6 +3657,7 @@ START_TEST(test_truncate_ok354) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok355) {
   // 2.147483648
@@ -3312,6 +3667,7 @@ START_TEST(test_truncate_ok355) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok356) {
   // -2.147483648
@@ -3321,6 +3677,7 @@ START_TEST(test_truncate_ok356) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok357) {
   // 156064767562212695305426944
@@ -3330,6 +3687,7 @@ START_TEST(test_truncate_ok357) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok358) {
   // -156064767562212695305426944
@@ -3339,6 +3697,7 @@ START_TEST(test_truncate_ok358) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok359) {
   // 15606476756221269530542694.4
@@ -3348,6 +3707,7 @@ START_TEST(test_truncate_ok359) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok360) {
   // -15606476756221269530542694.4
@@ -3357,6 +3717,7 @@ START_TEST(test_truncate_ok360) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok361) {
   // 1560647.67562212695305426944
@@ -3366,6 +3727,7 @@ START_TEST(test_truncate_ok361) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok362) {
   // -1560647.67562212695305426944
@@ -3375,6 +3737,7 @@ START_TEST(test_truncate_ok362) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok363) {
   // 1.56064767562212695305426944
@@ -3384,6 +3747,7 @@ START_TEST(test_truncate_ok363) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok364) {
   // -1.56064767562212695305426944
@@ -3393,6 +3757,7 @@ START_TEST(test_truncate_ok364) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok365) {
   // 156064767562212695296966656
@@ -3402,6 +3767,7 @@ START_TEST(test_truncate_ok365) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok366) {
   // -156064767562212695296966656
@@ -3411,6 +3777,7 @@ START_TEST(test_truncate_ok366) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok367) {
   // 15606476756221269529696665.6
@@ -3420,6 +3787,7 @@ START_TEST(test_truncate_ok367) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok368) {
   // -15606476756221269529696665.6
@@ -3429,6 +3797,7 @@ START_TEST(test_truncate_ok368) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok369) {
   // 15606476756221269529696.6656
@@ -3438,6 +3807,7 @@ START_TEST(test_truncate_ok369) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok370) {
   // -15606476756221269529696.6656
@@ -3447,6 +3817,7 @@ START_TEST(test_truncate_ok370) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok371) {
   // 1.56064767562212695296966656
@@ -3456,6 +3827,7 @@ START_TEST(test_truncate_ok371) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok372) {
   // -1.56064767562212695296966656
@@ -3465,6 +3837,7 @@ START_TEST(test_truncate_ok372) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok373) {
   // 156064767525876035030685696
@@ -3474,6 +3847,7 @@ START_TEST(test_truncate_ok373) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok374) {
   // -156064767525876035030685696
@@ -3483,6 +3857,7 @@ START_TEST(test_truncate_ok374) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok375) {
   // 15606476752587603503068569.6
@@ -3492,6 +3867,7 @@ START_TEST(test_truncate_ok375) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok376) {
   // -15606476752587603503068569.6
@@ -3501,6 +3877,7 @@ START_TEST(test_truncate_ok376) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok377) {
   // 1560647675258760.35030685696
@@ -3510,6 +3887,7 @@ START_TEST(test_truncate_ok377) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok378) {
   // -1560647675258760.35030685696
@@ -3519,6 +3897,7 @@ START_TEST(test_truncate_ok378) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok379) {
   // 1.56064767525876035030685696
@@ -3528,6 +3907,7 @@ START_TEST(test_truncate_ok379) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok380) {
   // -1.56064767525876035030685696
@@ -3537,6 +3917,7 @@ START_TEST(test_truncate_ok380) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok381) {
   // 156064767525876035022225408
@@ -3546,6 +3927,7 @@ START_TEST(test_truncate_ok381) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok382) {
   // -156064767525876035022225408
@@ -3555,6 +3937,7 @@ START_TEST(test_truncate_ok382) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok383) {
   // 15606476752587603502222540.8
@@ -3564,6 +3947,7 @@ START_TEST(test_truncate_ok383) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok384) {
   // -15606476752587603502222540.8
@@ -3573,6 +3957,7 @@ START_TEST(test_truncate_ok384) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok385) {
   // 15606476.7525876035022225408
@@ -3582,6 +3967,7 @@ START_TEST(test_truncate_ok385) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok386) {
   // -15606476.7525876035022225408
@@ -3591,6 +3977,7 @@ START_TEST(test_truncate_ok386) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok387) {
   // 1.56064767525876035022225408
@@ -3600,6 +3987,7 @@ START_TEST(test_truncate_ok387) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok388) {
   // -1.56064767525876035022225408
@@ -3609,6 +3997,7 @@ START_TEST(test_truncate_ok388) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok389) {
   // 36336660283201536
@@ -3618,6 +4007,7 @@ START_TEST(test_truncate_ok389) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok390) {
   // -36336660283201536
@@ -3627,6 +4017,7 @@ START_TEST(test_truncate_ok390) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok391) {
   // 3633666028320153.6
@@ -3636,6 +4027,7 @@ START_TEST(test_truncate_ok391) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok392) {
   // -3633666028320153.6
@@ -3645,6 +4037,7 @@ START_TEST(test_truncate_ok392) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok393) {
   // 363366602.83201536
@@ -3654,6 +4047,7 @@ START_TEST(test_truncate_ok393) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok394) {
   // -363366602.83201536
@@ -3663,6 +4057,7 @@ START_TEST(test_truncate_ok394) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok395) {
   // 3.6336660283201536
@@ -3672,6 +4067,7 @@ START_TEST(test_truncate_ok395) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok396) {
   // -3.6336660283201536
@@ -3681,6 +4077,7 @@ START_TEST(test_truncate_ok396) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok397) {
   // 36336660274741248
@@ -3690,6 +4087,7 @@ START_TEST(test_truncate_ok397) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok398) {
   // -36336660274741248
@@ -3699,6 +4097,7 @@ START_TEST(test_truncate_ok398) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok399) {
   // 3633666027474124.8
@@ -3708,6 +4107,7 @@ START_TEST(test_truncate_ok399) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok400) {
   // -3633666027474124.8
@@ -3717,6 +4117,7 @@ START_TEST(test_truncate_ok400) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok401) {
   // 363366602747412.48
@@ -3726,6 +4127,7 @@ START_TEST(test_truncate_ok401) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok402) {
   // -363366602747412.48
@@ -3735,6 +4137,7 @@ START_TEST(test_truncate_ok402) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok403) {
   // 363366602.74741248
@@ -3744,6 +4147,7 @@ START_TEST(test_truncate_ok403) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok404) {
   // -363366602.74741248
@@ -3753,6 +4157,7 @@ START_TEST(test_truncate_ok404) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok405) {
   // 36.336660274741248
@@ -3762,6 +4167,7 @@ START_TEST(test_truncate_ok405) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok406) {
   // -36.336660274741248
@@ -3771,6 +4177,7 @@ START_TEST(test_truncate_ok406) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok407) {
   // 3.6336660274741248
@@ -3780,6 +4187,7 @@ START_TEST(test_truncate_ok407) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok408) {
   // -3.6336660274741248
@@ -3789,6 +4197,7 @@ START_TEST(test_truncate_ok408) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok409) {
   // 8460288
@@ -3798,6 +4207,7 @@ START_TEST(test_truncate_ok409) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok410) {
   // -8460288
@@ -3807,6 +4217,7 @@ START_TEST(test_truncate_ok410) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok411) {
   // 846028.8
@@ -3816,6 +4227,7 @@ START_TEST(test_truncate_ok411) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok412) {
   // -846028.8
@@ -3825,6 +4237,7 @@ START_TEST(test_truncate_ok412) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok413) {
   // 84602.88
@@ -3834,6 +4247,7 @@ START_TEST(test_truncate_ok413) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok414) {
   // -84602.88
@@ -3843,6 +4257,7 @@ START_TEST(test_truncate_ok414) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok415) {
   // 8460.288
@@ -3852,6 +4267,7 @@ START_TEST(test_truncate_ok415) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok416) {
   // -8460.288
@@ -3861,6 +4277,7 @@ START_TEST(test_truncate_ok416) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok417) {
   // 84.60288
@@ -3870,6 +4287,7 @@ START_TEST(test_truncate_ok417) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok418) {
   // -84.60288
@@ -3879,6 +4297,7 @@ START_TEST(test_truncate_ok418) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok419) {
   // 8.460288
@@ -3888,6 +4307,7 @@ START_TEST(test_truncate_ok419) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok420) {
   // -8.460288
@@ -3897,6 +4317,7 @@ START_TEST(test_truncate_ok420) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok421) {
   // 79228162514264337593543950335
@@ -3906,6 +4327,7 @@ START_TEST(test_truncate_ok421) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok422) {
   // -79228162514264337593543950335
@@ -3916,6 +4338,7 @@ START_TEST(test_truncate_ok422) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok423) {
   // 7922816251426433759354395033.5
@@ -3925,6 +4348,7 @@ START_TEST(test_truncate_ok423) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok424) {
   // -7922816251426433759354395033.5
@@ -3935,6 +4359,7 @@ START_TEST(test_truncate_ok424) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok425) {
   // 792281625142.64337593543950335
@@ -3944,6 +4369,7 @@ START_TEST(test_truncate_ok425) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok426) {
   // -792281625142.64337593543950335
@@ -3953,6 +4379,7 @@ START_TEST(test_truncate_ok426) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok427) {
   // 7.9228162514264337593543950335
@@ -3962,6 +4389,7 @@ START_TEST(test_truncate_ok427) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok428) {
   // -7.9228162514264337593543950335
@@ -3971,6 +4399,7 @@ START_TEST(test_truncate_ok428) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok429) {
   // 79228162514264337589248983040
@@ -3980,6 +4409,7 @@ START_TEST(test_truncate_ok429) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok430) {
   // -79228162514264337589248983040
@@ -3989,6 +4419,7 @@ START_TEST(test_truncate_ok430) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok431) {
   // 7922816251426433758924898304.0
@@ -3998,6 +4429,7 @@ START_TEST(test_truncate_ok431) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok432) {
   // -7922816251426433758924898304.0
@@ -4008,6 +4440,7 @@ START_TEST(test_truncate_ok432) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok433) {
   // 79228162514264.337589248983040
@@ -4017,6 +4450,7 @@ START_TEST(test_truncate_ok433) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok434) {
   // -79228162514264.337589248983040
@@ -4026,6 +4460,7 @@ START_TEST(test_truncate_ok434) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok435) {
   // 7.9228162514264337589248983040
@@ -4035,6 +4470,7 @@ START_TEST(test_truncate_ok435) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok436) {
   // -7.9228162514264337589248983040
@@ -4044,6 +4480,7 @@ START_TEST(test_truncate_ok436) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok437) {
   // 79228162495817593524129366015
@@ -4053,6 +4490,7 @@ START_TEST(test_truncate_ok437) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok438) {
   // -79228162495817593524129366015
@@ -4062,6 +4500,7 @@ START_TEST(test_truncate_ok438) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok439) {
   // 7922816249581759352412936601.5
@@ -4071,6 +4510,7 @@ START_TEST(test_truncate_ok439) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok440) {
   // -7922816249581759352412936601.5
@@ -4081,6 +4521,7 @@ START_TEST(test_truncate_ok440) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok441) {
   // 792281624958.17593524129366015
@@ -4090,6 +4531,7 @@ START_TEST(test_truncate_ok441) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok442) {
   // -792281624958.17593524129366015
@@ -4099,6 +4541,7 @@ START_TEST(test_truncate_ok442) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok443) {
   // 7.9228162495817593524129366015
@@ -4108,6 +4551,7 @@ START_TEST(test_truncate_ok443) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok444) {
   // -7.9228162495817593524129366015
@@ -4117,6 +4561,7 @@ START_TEST(test_truncate_ok444) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok445) {
   // 79228162495817593519834398720
@@ -4126,6 +4571,7 @@ START_TEST(test_truncate_ok445) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok446) {
   // -79228162495817593519834398720
@@ -4135,6 +4581,7 @@ START_TEST(test_truncate_ok446) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok447) {
   // 7922816249581759351983439872.0
@@ -4144,6 +4591,7 @@ START_TEST(test_truncate_ok447) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok448) {
   // -7922816249581759351983439872.0
@@ -4153,6 +4601,7 @@ START_TEST(test_truncate_ok448) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok449) {
   // 79228162495.817593519834398720
@@ -4162,6 +4611,7 @@ START_TEST(test_truncate_ok449) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok450) {
   // -79228162495.817593519834398720
@@ -4171,6 +4621,7 @@ START_TEST(test_truncate_ok450) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok451) {
   // 7.9228162495817593519834398720
@@ -4180,6 +4631,7 @@ START_TEST(test_truncate_ok451) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok452) {
   // -7.9228162495817593519834398720
@@ -4189,6 +4641,7 @@ START_TEST(test_truncate_ok452) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok453) {
   // 18446744073709551615
@@ -4198,6 +4651,7 @@ START_TEST(test_truncate_ok453) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok454) {
   // -18446744073709551615
@@ -4207,6 +4661,7 @@ START_TEST(test_truncate_ok454) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok455) {
   // 1844674407370955161.5
@@ -4216,6 +4671,7 @@ START_TEST(test_truncate_ok455) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok456) {
   // -1844674407370955161.5
@@ -4225,6 +4681,7 @@ START_TEST(test_truncate_ok456) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok457) {
   // 18446744073709551.615
@@ -4234,6 +4691,7 @@ START_TEST(test_truncate_ok457) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok458) {
   // -18446744073709551.615
@@ -4243,6 +4701,7 @@ START_TEST(test_truncate_ok458) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok459) {
   // 184467440.73709551615
@@ -4252,6 +4711,7 @@ START_TEST(test_truncate_ok459) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok460) {
   // -184467440.73709551615
@@ -4261,6 +4721,7 @@ START_TEST(test_truncate_ok460) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok461) {
   // 184.46744073709551615
@@ -4270,6 +4731,7 @@ START_TEST(test_truncate_ok461) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok462) {
   // -184.46744073709551615
@@ -4279,6 +4741,7 @@ START_TEST(test_truncate_ok462) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok463) {
   // 1.8446744073709551615
@@ -4288,6 +4751,7 @@ START_TEST(test_truncate_ok463) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok464) {
   // -1.8446744073709551615
@@ -4297,6 +4761,7 @@ START_TEST(test_truncate_ok464) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok465) {
   // 18446744069414584320
@@ -4306,6 +4771,7 @@ START_TEST(test_truncate_ok465) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok466) {
   // -18446744069414584320
@@ -4315,6 +4781,7 @@ START_TEST(test_truncate_ok466) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok467) {
   // 1844674406941458432.0
@@ -4324,6 +4791,7 @@ START_TEST(test_truncate_ok467) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok468) {
   // -1844674406941458432.0
@@ -4333,6 +4801,7 @@ START_TEST(test_truncate_ok468) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok469) {
   // 18446744069414584.320
@@ -4342,6 +4811,7 @@ START_TEST(test_truncate_ok469) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok470) {
   // -18446744069414584.320
@@ -4351,6 +4821,7 @@ START_TEST(test_truncate_ok470) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok471) {
   // 18446744069.414584320
@@ -4360,6 +4831,7 @@ START_TEST(test_truncate_ok471) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok472) {
   // -18446744069.414584320
@@ -4369,6 +4841,7 @@ START_TEST(test_truncate_ok472) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok473) {
   // 184.46744069414584320
@@ -4378,6 +4851,7 @@ START_TEST(test_truncate_ok473) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok474) {
   // -184.46744069414584320
@@ -4387,6 +4861,7 @@ START_TEST(test_truncate_ok474) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok475) {
   // 1.8446744069414584320
@@ -4396,6 +4871,7 @@ START_TEST(test_truncate_ok475) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok476) {
   // -1.8446744069414584320
@@ -4405,6 +4881,7 @@ START_TEST(test_truncate_ok476) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok477) {
   // 4294967295
@@ -4414,6 +4891,7 @@ START_TEST(test_truncate_ok477) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok478) {
   // -4294967295
@@ -4423,6 +4901,7 @@ START_TEST(test_truncate_ok478) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok479) {
   // 429496729.5
@@ -4432,6 +4911,7 @@ START_TEST(test_truncate_ok479) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok480) {
   // -429496729.5
@@ -4441,6 +4921,7 @@ START_TEST(test_truncate_ok480) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok481) {
   // 42949672.95
@@ -4450,6 +4931,7 @@ START_TEST(test_truncate_ok481) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok482) {
   // -42949672.95
@@ -4459,6 +4941,7 @@ START_TEST(test_truncate_ok482) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok483) {
   // 42949.67295
@@ -4468,6 +4951,7 @@ START_TEST(test_truncate_ok483) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok484) {
   // -42949.67295
@@ -4477,6 +4961,7 @@ START_TEST(test_truncate_ok484) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok485) {
   // 42.94967295
@@ -4486,6 +4971,7 @@ START_TEST(test_truncate_ok485) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok486) {
   // -42.94967295
@@ -4495,6 +4981,7 @@ START_TEST(test_truncate_ok486) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok487) {
   // 4.294967295
@@ -4504,6 +4991,7 @@ START_TEST(test_truncate_ok487) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok488) {
   // -4.294967295
@@ -4513,6 +5001,7 @@ START_TEST(test_truncate_ok488) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok489) {
   // 1.0
@@ -4522,6 +5011,7 @@ START_TEST(test_truncate_ok489) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok490) {
   // -1.0
@@ -4531,6 +5021,7 @@ START_TEST(test_truncate_ok490) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok491) {
   // 1.00
@@ -4540,6 +5031,7 @@ START_TEST(test_truncate_ok491) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok492) {
   // -1.00
@@ -4549,6 +5041,7 @@ START_TEST(test_truncate_ok492) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok493) {
   // 1.000
@@ -4558,6 +5051,7 @@ START_TEST(test_truncate_ok493) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok494) {
   // -1.000
@@ -4567,6 +5061,7 @@ START_TEST(test_truncate_ok494) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok495) {
   // 1.0000000000
@@ -4576,6 +5071,7 @@ START_TEST(test_truncate_ok495) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok496) {
   // -1.0000000000
@@ -4585,6 +5081,7 @@ START_TEST(test_truncate_ok496) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok497) {
   // 1.0000000000000000
@@ -4594,6 +5091,7 @@ START_TEST(test_truncate_ok497) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok498) {
   // -1.0000000000000000
@@ -4603,6 +5101,7 @@ START_TEST(test_truncate_ok498) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok499) {
   // 1.00000000000000000000000
@@ -4612,6 +5111,7 @@ START_TEST(test_truncate_ok499) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok500) {
   // -1.00000000000000000000000
@@ -4621,6 +5121,7 @@ START_TEST(test_truncate_ok500) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok501) {
   // 1.000000000000000000000000000
@@ -4630,6 +5131,7 @@ START_TEST(test_truncate_ok501) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok502) {
   // -1.000000000000000000000000000
@@ -4639,6 +5141,7 @@ START_TEST(test_truncate_ok502) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok503) {
   // 1.0000000000000000000000000000
@@ -4648,6 +5151,7 @@ START_TEST(test_truncate_ok503) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok504) {
   // -1.0000000000000000000000000000
@@ -4657,6 +5161,7 @@ START_TEST(test_truncate_ok504) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok505) {
   // 1.1
@@ -4666,6 +5171,7 @@ START_TEST(test_truncate_ok505) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok506) {
   // -1.1
@@ -4675,6 +5181,7 @@ START_TEST(test_truncate_ok506) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok507) {
   // 12.12
@@ -4684,6 +5191,7 @@ START_TEST(test_truncate_ok507) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok508) {
   // -12.12
@@ -4693,6 +5201,7 @@ START_TEST(test_truncate_ok508) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok509) {
   // 123.123
@@ -4702,6 +5211,7 @@ START_TEST(test_truncate_ok509) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok510) {
   // -123.123
@@ -4711,6 +5221,7 @@ START_TEST(test_truncate_ok510) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok511) {
   // 1234.1234
@@ -4720,6 +5231,7 @@ START_TEST(test_truncate_ok511) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok512) {
   // -1234.1234
@@ -4729,6 +5241,7 @@ START_TEST(test_truncate_ok512) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok513) {
   // 12345.12345
@@ -4738,6 +5251,7 @@ START_TEST(test_truncate_ok513) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok514) {
   // -12345.12345
@@ -4747,6 +5261,7 @@ START_TEST(test_truncate_ok514) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok515) {
   // 123456.123456
@@ -4756,6 +5271,7 @@ START_TEST(test_truncate_ok515) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok516) {
   // -123456.123456
@@ -4765,6 +5281,7 @@ START_TEST(test_truncate_ok516) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok517) {
   // 1234567.1234567
@@ -4774,6 +5291,7 @@ START_TEST(test_truncate_ok517) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok518) {
   // -1234567.1234567
@@ -4783,6 +5301,7 @@ START_TEST(test_truncate_ok518) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok519) {
   // 1234567890.1234567890
@@ -4792,6 +5311,7 @@ START_TEST(test_truncate_ok519) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok520) {
   // -1234567890.1234567890
@@ -4801,6 +5321,7 @@ START_TEST(test_truncate_ok520) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok521) {
   // 12345678901234.12345678901234
@@ -4810,6 +5331,7 @@ START_TEST(test_truncate_ok521) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok522) {
   // -12345678901234.12345678901234
@@ -4819,6 +5341,7 @@ START_TEST(test_truncate_ok522) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok523) {
   // 99
@@ -4828,6 +5351,7 @@ START_TEST(test_truncate_ok523) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok524) {
   // -99
@@ -4837,6 +5361,7 @@ START_TEST(test_truncate_ok524) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok525) {
   // 9.9
@@ -4846,6 +5371,7 @@ START_TEST(test_truncate_ok525) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok526) {
   // -9.9
@@ -4855,6 +5381,7 @@ START_TEST(test_truncate_ok526) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok527) {
   // 99.99
@@ -4864,6 +5391,7 @@ START_TEST(test_truncate_ok527) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok528) {
   // -99.99
@@ -4873,6 +5401,7 @@ START_TEST(test_truncate_ok528) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok529) {
   // 999.999
@@ -4882,6 +5411,7 @@ START_TEST(test_truncate_ok529) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok530) {
   // -999.999
@@ -4891,6 +5421,7 @@ START_TEST(test_truncate_ok530) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok531) {
   // 9999.9999
@@ -4900,6 +5431,7 @@ START_TEST(test_truncate_ok531) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok532) {
   // -9999.9999
@@ -4909,6 +5441,7 @@ START_TEST(test_truncate_ok532) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok533) {
   // 99999.99999
@@ -4918,6 +5451,7 @@ START_TEST(test_truncate_ok533) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok534) {
   // -99999.99999
@@ -4927,6 +5461,7 @@ START_TEST(test_truncate_ok534) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok535) {
   // 999999.999999
@@ -4936,6 +5471,7 @@ START_TEST(test_truncate_ok535) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok536) {
   // -999999.999999
@@ -4945,6 +5481,7 @@ START_TEST(test_truncate_ok536) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok537) {
   // 9999999.9999999
@@ -4954,6 +5491,7 @@ START_TEST(test_truncate_ok537) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok538) {
   // -9999999.9999999
@@ -4963,6 +5501,7 @@ START_TEST(test_truncate_ok538) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok539) {
   // 99999999.99999999
@@ -4972,6 +5511,7 @@ START_TEST(test_truncate_ok539) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok540) {
   // -99999999.99999999
@@ -4981,6 +5521,7 @@ START_TEST(test_truncate_ok540) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok541) {
   // 999999999.999999999
@@ -4990,6 +5531,7 @@ START_TEST(test_truncate_ok541) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok542) {
   // -999999999.999999999
@@ -4999,6 +5541,7 @@ START_TEST(test_truncate_ok542) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok543) {
   // 9999999999.9999999999
@@ -5008,6 +5551,7 @@ START_TEST(test_truncate_ok543) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok544) {
   // -9999999999.9999999999
@@ -5017,6 +5561,7 @@ START_TEST(test_truncate_ok544) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok545) {
   // 9
@@ -5026,6 +5571,7 @@ START_TEST(test_truncate_ok545) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok546) {
   // -9
@@ -5035,6 +5581,7 @@ START_TEST(test_truncate_ok546) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok547) {
   // 0.9
@@ -5044,6 +5591,7 @@ START_TEST(test_truncate_ok547) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok548) {
   // -0.9
@@ -5053,6 +5601,7 @@ START_TEST(test_truncate_ok548) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok549) {
   // 0.99
@@ -5062,6 +5611,7 @@ START_TEST(test_truncate_ok549) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok550) {
   // -0.99
@@ -5071,6 +5621,7 @@ START_TEST(test_truncate_ok550) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok551) {
   // 0.999
@@ -5080,6 +5631,7 @@ START_TEST(test_truncate_ok551) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok552) {
   // -0.999
@@ -5089,6 +5641,7 @@ START_TEST(test_truncate_ok552) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok553) {
   // 0.9999
@@ -5098,6 +5651,7 @@ START_TEST(test_truncate_ok553) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok554) {
   // -0.9999
@@ -5107,6 +5661,7 @@ START_TEST(test_truncate_ok554) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok555) {
   // 0.99999
@@ -5116,6 +5671,7 @@ START_TEST(test_truncate_ok555) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok556) {
   // -0.99999
@@ -5125,6 +5681,7 @@ START_TEST(test_truncate_ok556) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok557) {
   // 0.999999
@@ -5134,6 +5691,7 @@ START_TEST(test_truncate_ok557) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok558) {
   // -0.999999
@@ -5143,6 +5701,7 @@ START_TEST(test_truncate_ok558) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok559) {
   // 0.9999999
@@ -5152,6 +5711,7 @@ START_TEST(test_truncate_ok559) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok560) {
   // -0.9999999
@@ -5161,6 +5721,7 @@ START_TEST(test_truncate_ok560) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok561) {
   // 0.99999999
@@ -5170,6 +5731,7 @@ START_TEST(test_truncate_ok561) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok562) {
   // -0.99999999
@@ -5179,6 +5741,7 @@ START_TEST(test_truncate_ok562) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok563) {
   // 0.999999999
@@ -5188,6 +5751,7 @@ START_TEST(test_truncate_ok563) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok564) {
   // -0.999999999
@@ -5197,6 +5761,7 @@ START_TEST(test_truncate_ok564) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok565) {
   // 0.9999999999
@@ -5206,6 +5771,7 @@ START_TEST(test_truncate_ok565) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok566) {
   // -0.9999999999
@@ -5215,6 +5781,7 @@ START_TEST(test_truncate_ok566) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok567) {
   // 0.99999999999999999999
@@ -5224,6 +5791,7 @@ START_TEST(test_truncate_ok567) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok568) {
   // -0.99999999999999999999
@@ -5233,6 +5801,7 @@ START_TEST(test_truncate_ok568) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok569) {
   // -0
@@ -5242,6 +5811,7 @@ START_TEST(test_truncate_ok569) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok570) {
   // 0
@@ -5251,6 +5821,7 @@ START_TEST(test_truncate_ok570) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok571) {
   // -0.0
@@ -5260,6 +5831,7 @@ START_TEST(test_truncate_ok571) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok572) {
   // 0.0
@@ -5269,6 +5841,7 @@ START_TEST(test_truncate_ok572) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok573) {
   // -0.00
@@ -5278,6 +5851,7 @@ START_TEST(test_truncate_ok573) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok574) {
   // 0.00
@@ -5287,6 +5861,7 @@ START_TEST(test_truncate_ok574) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok575) {
   // -0.00000000000000
@@ -5296,6 +5871,7 @@ START_TEST(test_truncate_ok575) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok576) {
   // 0.00000000000000
@@ -5305,6 +5881,7 @@ START_TEST(test_truncate_ok576) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok577) {
   // -0.000000000000000000000000000
@@ -5314,6 +5891,7 @@ START_TEST(test_truncate_ok577) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok578) {
   // 0.000000000000000000000000000
@@ -5323,6 +5901,7 @@ START_TEST(test_truncate_ok578) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok579) {
   // -0.0000000000000000000000000000
@@ -5332,6 +5911,7 @@ START_TEST(test_truncate_ok579) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok580) {
   // 0.0000000000000000000000000000
@@ -5341,6 +5921,7 @@ START_TEST(test_truncate_ok580) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok581) {
   // 0.5
@@ -5350,6 +5931,7 @@ START_TEST(test_truncate_ok581) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok582) {
   // -0.5
@@ -5359,6 +5941,7 @@ START_TEST(test_truncate_ok582) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok583) {
   // 0.49
@@ -5368,6 +5951,7 @@ START_TEST(test_truncate_ok583) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok584) {
   // -0.49
@@ -5377,6 +5961,7 @@ START_TEST(test_truncate_ok584) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok585) {
   // 0.51
@@ -5386,6 +5971,7 @@ START_TEST(test_truncate_ok585) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok586) {
   // -0.51
@@ -5395,6 +5981,7 @@ START_TEST(test_truncate_ok586) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok587) {
   // 0.49999999
@@ -5404,6 +5991,7 @@ START_TEST(test_truncate_ok587) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok588) {
   // -0.49999999
@@ -5413,6 +6001,7 @@ START_TEST(test_truncate_ok588) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok589) {
   // 0.4999999999999999999999999999
@@ -5422,6 +6011,7 @@ START_TEST(test_truncate_ok589) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok590) {
   // -0.4999999999999999999999999999
@@ -5431,6 +6021,7 @@ START_TEST(test_truncate_ok590) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok591) {
   // 0.5000000000000000000000000001
@@ -5440,6 +6031,7 @@ START_TEST(test_truncate_ok591) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok592) {
   // -0.5000000000000000000000000001
@@ -5449,6 +6041,7 @@ START_TEST(test_truncate_ok592) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok593) {
   // 0.5000000000000000000000000000
@@ -5458,6 +6051,7 @@ START_TEST(test_truncate_ok593) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok594) {
   // -0.5000000000000000000000000000
@@ -5467,6 +6061,7 @@ START_TEST(test_truncate_ok594) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok595) {
   // 0.99
@@ -5476,6 +6071,7 @@ START_TEST(test_truncate_ok595) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok596) {
   // -0.99
@@ -5485,6 +6081,7 @@ START_TEST(test_truncate_ok596) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok597) {
   // 0.999999999
@@ -5494,6 +6091,7 @@ START_TEST(test_truncate_ok597) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok598) {
   // -0.999999999
@@ -5503,6 +6101,7 @@ START_TEST(test_truncate_ok598) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok599) {
   // 0.9999999999999999999999999999
@@ -5512,6 +6111,7 @@ START_TEST(test_truncate_ok599) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok600) {
   // -0.9999999999999999999999999999
@@ -5521,6 +6121,7 @@ START_TEST(test_truncate_ok600) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok601) {
   // 1.0000000000000000000000000001
@@ -5530,6 +6131,7 @@ START_TEST(test_truncate_ok601) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok602) {
   // -1.0000000000000000000000000001
@@ -5539,6 +6141,7 @@ START_TEST(test_truncate_ok602) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok603) {
   // 1.5
@@ -5548,6 +6151,7 @@ START_TEST(test_truncate_ok603) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok604) {
   // -1.5
@@ -5557,6 +6161,7 @@ START_TEST(test_truncate_ok604) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok605) {
   // 1.49
@@ -5566,6 +6171,7 @@ START_TEST(test_truncate_ok605) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok606) {
   // -1.49
@@ -5575,6 +6181,7 @@ START_TEST(test_truncate_ok606) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok607) {
   // 1.51
@@ -5584,6 +6191,7 @@ START_TEST(test_truncate_ok607) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok608) {
   // -1.51
@@ -5593,6 +6201,7 @@ START_TEST(test_truncate_ok608) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok609) {
   // 1.49999999
@@ -5602,6 +6211,7 @@ START_TEST(test_truncate_ok609) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok610) {
   // -1.49999999
@@ -5611,6 +6221,7 @@ START_TEST(test_truncate_ok610) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok611) {
   // 1.4999999999999999999999999999
@@ -5620,6 +6231,7 @@ START_TEST(test_truncate_ok611) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok612) {
   // -1.4999999999999999999999999999
@@ -5629,6 +6241,7 @@ START_TEST(test_truncate_ok612) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok613) {
   // 1.5000000000000000000000000001
@@ -5638,6 +6251,7 @@ START_TEST(test_truncate_ok613) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok614) {
   // -1.5000000000000000000000000001
@@ -5647,6 +6261,7 @@ START_TEST(test_truncate_ok614) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok615) {
   // 1.5000000000000000000000000000
@@ -5656,6 +6271,7 @@ START_TEST(test_truncate_ok615) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok616) {
   // -1.5000000000000000000000000000
@@ -5665,6 +6281,7 @@ START_TEST(test_truncate_ok616) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok617) {
   // 1.999999
@@ -5674,6 +6291,7 @@ START_TEST(test_truncate_ok617) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok618) {
   // -1.999999
@@ -5683,6 +6301,7 @@ START_TEST(test_truncate_ok618) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok619) {
   // 1.9999999999999999999999999999
@@ -5692,6 +6311,7 @@ START_TEST(test_truncate_ok619) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok620) {
   // -1.9999999999999999999999999999
@@ -5701,6 +6321,7 @@ START_TEST(test_truncate_ok620) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok621) {
   // -266941714756791.52183429237321
@@ -5710,6 +6331,7 @@ START_TEST(test_truncate_ok621) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok622) {
   // 266941714756791.52183429237321
@@ -5719,6 +6341,7 @@ START_TEST(test_truncate_ok622) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok623) {
   // -46960056670852786250.795934849
@@ -5728,6 +6351,7 @@ START_TEST(test_truncate_ok623) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok624) {
   // 46960056670852786250.795934849
@@ -5737,6 +6361,7 @@ START_TEST(test_truncate_ok624) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok625) {
   // -39035551429407350648.902038660
@@ -5746,6 +6371,7 @@ START_TEST(test_truncate_ok625) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok626) {
   // 39035551429407350648.902038660
@@ -5755,6 +6381,7 @@ START_TEST(test_truncate_ok626) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok627) {
   // -156188534286541526.29046515296
@@ -5764,6 +6391,7 @@ START_TEST(test_truncate_ok627) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok628) {
   // 156188534286541526.29046515296
@@ -5773,6 +6401,7 @@ START_TEST(test_truncate_ok628) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok629) {
   // -75354719223747528150736506502
@@ -5783,6 +6412,7 @@ START_TEST(test_truncate_ok629) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok630) {
   // 75354719223747528150736506502
@@ -5792,6 +6422,7 @@ START_TEST(test_truncate_ok630) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok631) {
   // -3071351928282730536705047.957
@@ -5801,6 +6432,7 @@ START_TEST(test_truncate_ok631) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok632) {
   // 3071351928282730536705047.957
@@ -5810,6 +6442,7 @@ START_TEST(test_truncate_ok632) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok633) {
   // -0.4947822874665463685948194392
@@ -5819,6 +6452,7 @@ START_TEST(test_truncate_ok633) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok634) {
   // 0.4947822874665463685948194392
@@ -5828,6 +6462,7 @@ START_TEST(test_truncate_ok634) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok635) {
   // 41459894.399358875701956665198
@@ -5837,6 +6472,7 @@ START_TEST(test_truncate_ok635) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok636) {
   // -41459894.399358875701956665198
@@ -5846,6 +6482,7 @@ START_TEST(test_truncate_ok636) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok637) {
   // 49615947948359865.452433138409
@@ -5855,6 +6492,7 @@ START_TEST(test_truncate_ok637) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok638) {
   // -49615947948359865.452433138409
@@ -5864,6 +6502,7 @@ START_TEST(test_truncate_ok638) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok639) {
   // 253271738.98557048037773125308
@@ -5873,6 +6512,7 @@ START_TEST(test_truncate_ok639) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok640) {
   // -253271738.98557048037773125308
@@ -5882,6 +6522,7 @@ START_TEST(test_truncate_ok640) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok641) {
   // 5528975858153100.1041203977407
@@ -5891,6 +6532,7 @@ START_TEST(test_truncate_ok641) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok642) {
   // -5528975858153100.1041203977407
@@ -5900,6 +6542,7 @@ START_TEST(test_truncate_ok642) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok643) {
   // -5.7805461566572706217380351777
@@ -5909,6 +6552,7 @@ START_TEST(test_truncate_ok643) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok644) {
   // 5.7805461566572706217380351777
@@ -5918,6 +6562,7 @@ START_TEST(test_truncate_ok644) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok645) {
   // 7261683041080.8093076399111682
@@ -5927,6 +6572,7 @@ START_TEST(test_truncate_ok645) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok646) {
   // -7261683041080.8093076399111682
@@ -5936,6 +6582,7 @@ START_TEST(test_truncate_ok646) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok647) {
   // 24776303122033447770816286.38
@@ -5945,6 +6592,7 @@ START_TEST(test_truncate_ok647) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok648) {
   // -24776303122033447770816286.38
@@ -5954,6 +6602,7 @@ START_TEST(test_truncate_ok648) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok649) {
   // -16147060102123047.386547400165
@@ -5963,6 +6612,7 @@ START_TEST(test_truncate_ok649) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok650) {
   // 16147060102123047.386547400165
@@ -5972,6 +6622,7 @@ START_TEST(test_truncate_ok650) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok651) {
   // 16081854264805611805207457.179
@@ -5981,6 +6632,7 @@ START_TEST(test_truncate_ok651) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok652) {
   // -16081854264805611805207457.179
@@ -5990,6 +6642,7 @@ START_TEST(test_truncate_ok652) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok653) {
   // -47272908019365.604962359108246
@@ -5999,6 +6652,7 @@ START_TEST(test_truncate_ok653) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok654) {
   // 47272908019365.604962359108246
@@ -6008,6 +6662,7 @@ START_TEST(test_truncate_ok654) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok655) {
   // -535361813494433.00124043911254
@@ -6017,6 +6672,7 @@ START_TEST(test_truncate_ok655) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok656) {
   // 535361813494433.00124043911254
@@ -6026,6 +6682,7 @@ START_TEST(test_truncate_ok656) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok657) {
   // 71834920.442223181339412694690
@@ -6035,6 +6692,7 @@ START_TEST(test_truncate_ok657) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok658) {
   // -71834920.442223181339412694690
@@ -6044,6 +6702,7 @@ START_TEST(test_truncate_ok658) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok659) {
   // 46201527064793117.819442135052
@@ -6053,6 +6712,7 @@ START_TEST(test_truncate_ok659) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok660) {
   // -46201527064793117.819442135052
@@ -6062,6 +6722,7 @@ START_TEST(test_truncate_ok660) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok661) {
   // -62.390443406050225756958504838
@@ -6071,6 +6732,7 @@ START_TEST(test_truncate_ok661) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok662) {
   // 62.390443406050225756958504838
@@ -6080,6 +6742,7 @@ START_TEST(test_truncate_ok662) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok663) {
   // 9808310768275773633671140903
@@ -6089,6 +6752,7 @@ START_TEST(test_truncate_ok663) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok664) {
   // -9808310768275773633671140903
@@ -6099,6 +6763,7 @@ START_TEST(test_truncate_ok664) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok665) {
   // 285.75367348799914688751734686
@@ -6108,6 +6773,7 @@ START_TEST(test_truncate_ok665) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok666) {
   // -285.75367348799914688751734686
@@ -6117,6 +6783,7 @@ START_TEST(test_truncate_ok666) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok667) {
   // -294337633.23167245972108598632
@@ -6126,6 +6793,7 @@ START_TEST(test_truncate_ok667) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok668) {
   // 294337633.23167245972108598632
@@ -6135,6 +6803,7 @@ START_TEST(test_truncate_ok668) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok669) {
   // -199389824762093573248565729.89
@@ -6144,6 +6813,7 @@ START_TEST(test_truncate_ok669) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok670) {
   // 199389824762093573248565729.89
@@ -6153,6 +6823,7 @@ START_TEST(test_truncate_ok670) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok671) {
   // 24926833321041066052322067.634
@@ -6162,6 +6833,7 @@ START_TEST(test_truncate_ok671) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok672) {
   // -24926833321041066052322067.634
@@ -6171,6 +6843,7 @@ START_TEST(test_truncate_ok672) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok673) {
   // -74598258212432518399940479.216
@@ -6180,6 +6853,7 @@ START_TEST(test_truncate_ok673) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok674) {
   // 74598258212432518399940479.216
@@ -6189,6 +6863,7 @@ START_TEST(test_truncate_ok674) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok675) {
   // -40611103467088.081458801075149
@@ -6198,6 +6873,7 @@ START_TEST(test_truncate_ok675) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok676) {
   // 40611103467088.081458801075149
@@ -6207,6 +6883,7 @@ START_TEST(test_truncate_ok676) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok677) {
   // -2.6024178308480731804266209026
@@ -6216,6 +6893,7 @@ START_TEST(test_truncate_ok677) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok678) {
   // 2.6024178308480731804266209026
@@ -6225,6 +6903,7 @@ START_TEST(test_truncate_ok678) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok679) {
   // 411936538322804235.39096857465
@@ -6234,6 +6913,7 @@ START_TEST(test_truncate_ok679) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok680) {
   // -411936538322804235.39096857465
@@ -6243,6 +6923,7 @@ START_TEST(test_truncate_ok680) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok681) {
   // -57.808791587198779581129071039
@@ -6252,6 +6933,7 @@ START_TEST(test_truncate_ok681) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok682) {
   // 57.808791587198779581129071039
@@ -6261,6 +6943,7 @@ START_TEST(test_truncate_ok682) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok683) {
   // -62951289.164843933254142541677
@@ -6270,6 +6953,7 @@ START_TEST(test_truncate_ok683) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok684) {
   // 62951289.164843933254142541677
@@ -6279,6 +6963,7 @@ START_TEST(test_truncate_ok684) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok685) {
   // -12324957495.166324975666774143
@@ -6288,6 +6973,7 @@ START_TEST(test_truncate_ok685) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok686) {
   // 12324957495.166324975666774143
@@ -6297,6 +6983,7 @@ START_TEST(test_truncate_ok686) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok687) {
   // -7257576754613577.3740212465972
@@ -6306,6 +6993,7 @@ START_TEST(test_truncate_ok687) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok688) {
   // 7257576754613577.3740212465972
@@ -6315,6 +7003,7 @@ START_TEST(test_truncate_ok688) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok689) {
   // -1232742343418612582408.7288995
@@ -6324,6 +7013,7 @@ START_TEST(test_truncate_ok689) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok690) {
   // 1232742343418612582408.7288995
@@ -6333,6 +7023,7 @@ START_TEST(test_truncate_ok690) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok691) {
   // -35174237327632.627971939180419
@@ -6342,6 +7033,7 @@ START_TEST(test_truncate_ok691) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok692) {
   // 35174237327632.627971939180419
@@ -6351,6 +7043,7 @@ START_TEST(test_truncate_ok692) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok693) {
   // -13.612136755406679224635471243
@@ -6360,6 +7053,7 @@ START_TEST(test_truncate_ok693) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok694) {
   // 13.612136755406679224635471243
@@ -6369,6 +7063,7 @@ START_TEST(test_truncate_ok694) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok695) {
   // -202291388542142794.90509854007
@@ -6378,6 +7073,7 @@ START_TEST(test_truncate_ok695) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok696) {
   // 202291388542142794.90509854007
@@ -6387,6 +7083,7 @@ START_TEST(test_truncate_ok696) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok697) {
   // -34795.191025063591749094056934
@@ -6396,6 +7093,7 @@ START_TEST(test_truncate_ok697) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok698) {
   // 34795.191025063591749094056934
@@ -6405,6 +7103,7 @@ START_TEST(test_truncate_ok698) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok699) {
   // -1920082581912058322107263659.7
@@ -6414,6 +7113,7 @@ START_TEST(test_truncate_ok699) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok700) {
   // 1920082581912058322107263659.7
@@ -6423,6 +7123,7 @@ START_TEST(test_truncate_ok700) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok701) {
   // -4855095355.4870004223861095893
@@ -6432,6 +7133,7 @@ START_TEST(test_truncate_ok701) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok702) {
   // 4855095355.4870004223861095893
@@ -6441,6 +7143,7 @@ START_TEST(test_truncate_ok702) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok703) {
   // 39971257349617087819.386393374
@@ -6450,6 +7153,7 @@ START_TEST(test_truncate_ok703) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok704) {
   // -39971257349617087819.386393374
@@ -6459,6 +7163,7 @@ START_TEST(test_truncate_ok704) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok705) {
   // 428647.37957423972876277859943
@@ -6468,6 +7173,7 @@ START_TEST(test_truncate_ok705) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok706) {
   // -428647.37957423972876277859943
@@ -6477,6 +7183,7 @@ START_TEST(test_truncate_ok706) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok707) {
   // 54812.333974318938565362456710
@@ -6486,6 +7193,7 @@ START_TEST(test_truncate_ok707) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok708) {
   // -54812.333974318938565362456710
@@ -6495,6 +7203,7 @@ START_TEST(test_truncate_ok708) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok709) {
   // 2206203.1322878209706824613417
@@ -6504,6 +7213,7 @@ START_TEST(test_truncate_ok709) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok710) {
   // -2206203.1322878209706824613417
@@ -6513,6 +7223,7 @@ START_TEST(test_truncate_ok710) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok711) {
   // 6288177403562580986674.470776
@@ -6522,6 +7233,7 @@ START_TEST(test_truncate_ok711) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok712) {
   // -6288177403562580986674.470776
@@ -6531,6 +7243,7 @@ START_TEST(test_truncate_ok712) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok713) {
   // 8451506.032239598045622617686
@@ -6540,6 +7253,7 @@ START_TEST(test_truncate_ok713) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok714) {
   // -8451506.032239598045622617686
@@ -6549,6 +7263,7 @@ START_TEST(test_truncate_ok714) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok715) {
   // 7770.8380291459007967954723539
@@ -6558,6 +7273,7 @@ START_TEST(test_truncate_ok715) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok716) {
   // -7770.8380291459007967954723539
@@ -6567,6 +7283,7 @@ START_TEST(test_truncate_ok716) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok717) {
   // -3.2879532166044124591016647703
@@ -6576,6 +7293,7 @@ START_TEST(test_truncate_ok717) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok718) {
   // 3.2879532166044124591016647703
@@ -6585,6 +7303,7 @@ START_TEST(test_truncate_ok718) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok719) {
   // -612734861108.88116523880872121
@@ -6594,6 +7313,7 @@ START_TEST(test_truncate_ok719) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok720) {
   // 612734861108.88116523880872121
@@ -6603,6 +7323,7 @@ START_TEST(test_truncate_ok720) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok721) {
   // 2619179011288566074118613.8498
@@ -6612,6 +7333,7 @@ START_TEST(test_truncate_ok721) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok722) {
   // -2619179011288566074118613.8498
@@ -6621,6 +7343,7 @@ START_TEST(test_truncate_ok722) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok723) {
   // -49201250269138105646152.84170
@@ -6630,6 +7353,7 @@ START_TEST(test_truncate_ok723) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok724) {
   // 49201250269138105646152.84170
@@ -6639,6 +7363,7 @@ START_TEST(test_truncate_ok724) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok725) {
   // 807850117980773387502851.9201
@@ -6648,6 +7373,7 @@ START_TEST(test_truncate_ok725) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok726) {
   // -807850117980773387502851.9201
@@ -6657,6 +7383,7 @@ START_TEST(test_truncate_ok726) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok727) {
   // 13075303383249419419197.768264
@@ -6666,6 +7393,7 @@ START_TEST(test_truncate_ok727) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok728) {
   // -13075303383249419419197.768264
@@ -6675,6 +7403,7 @@ START_TEST(test_truncate_ok728) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok729) {
   // 305553932278903.3566526031604
@@ -6684,6 +7413,7 @@ START_TEST(test_truncate_ok729) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok730) {
   // -305553932278903.3566526031604
@@ -6693,6 +7423,7 @@ START_TEST(test_truncate_ok730) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok731) {
   // 789517492628.1382151257360128
@@ -6702,6 +7433,7 @@ START_TEST(test_truncate_ok731) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok732) {
   // -789517492628.1382151257360128
@@ -6711,6 +7443,7 @@ START_TEST(test_truncate_ok732) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok733) {
   // 520.98892143226430055697618810
@@ -6720,6 +7453,7 @@ START_TEST(test_truncate_ok733) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok734) {
   // -520.98892143226430055697618810
@@ -6729,6 +7463,7 @@ START_TEST(test_truncate_ok734) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok735) {
   // 5335647229141514076083373419
@@ -6738,6 +7473,7 @@ START_TEST(test_truncate_ok735) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok736) {
   // -5335647229141514076083373419
@@ -6747,6 +7483,7 @@ START_TEST(test_truncate_ok736) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok737) {
   // -5269067624756.5685405230173482
@@ -6756,6 +7493,7 @@ START_TEST(test_truncate_ok737) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok738) {
   // 5269067624756.5685405230173482
@@ -6765,6 +7503,7 @@ START_TEST(test_truncate_ok738) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok739) {
   // 50370.946653331974089137155142
@@ -6774,6 +7513,7 @@ START_TEST(test_truncate_ok739) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok740) {
   // -50370.946653331974089137155142
@@ -6783,6 +7523,7 @@ START_TEST(test_truncate_ok740) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok741) {
   // -39808071435301.069481000861696
@@ -6792,6 +7533,7 @@ START_TEST(test_truncate_ok741) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok742) {
   // 39808071435301.069481000861696
@@ -6801,6 +7543,7 @@ START_TEST(test_truncate_ok742) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok743) {
   // -6944785102.0189124291010957144
@@ -6810,6 +7553,7 @@ START_TEST(test_truncate_ok743) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok744) {
   // 6944785102.0189124291010957144
@@ -6819,6 +7563,7 @@ START_TEST(test_truncate_ok744) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok745) {
   // 4876.9765302457221224033822431
@@ -6828,6 +7573,7 @@ START_TEST(test_truncate_ok745) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok746) {
   // -4876.9765302457221224033822431
@@ -6837,6 +7583,7 @@ START_TEST(test_truncate_ok746) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok747) {
   // 38430574975851.465588425424939
@@ -6846,6 +7593,7 @@ START_TEST(test_truncate_ok747) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok748) {
   // -38430574975851.465588425424939
@@ -6855,6 +7603,7 @@ START_TEST(test_truncate_ok748) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok749) {
   // -260282670.14621516841317671392
@@ -6864,6 +7613,7 @@ START_TEST(test_truncate_ok749) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok750) {
   // 260282670.14621516841317671392
@@ -6873,6 +7623,7 @@ START_TEST(test_truncate_ok750) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok751) {
   // -6887260106024034614364.5102815
@@ -6882,6 +7633,7 @@ START_TEST(test_truncate_ok751) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok752) {
   // 6887260106024034614364.5102815
@@ -6891,6 +7643,7 @@ START_TEST(test_truncate_ok752) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok753) {
   // -380.65590194416679159224018009
@@ -6900,6 +7653,7 @@ START_TEST(test_truncate_ok753) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok754) {
   // 380.65590194416679159224018009
@@ -6909,6 +7663,7 @@ START_TEST(test_truncate_ok754) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok755) {
   // -504455714.16095311079688355170
@@ -6918,6 +7673,7 @@ START_TEST(test_truncate_ok755) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok756) {
   // 504455714.16095311079688355170
@@ -6927,6 +7683,7 @@ START_TEST(test_truncate_ok756) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok757) {
   // 47012.147086725297949511471129
@@ -6936,6 +7693,7 @@ START_TEST(test_truncate_ok757) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok758) {
   // -47012.147086725297949511471129
@@ -6945,6 +7703,7 @@ START_TEST(test_truncate_ok758) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok759) {
   // 309292422894071.68958464124693
@@ -6954,6 +7713,7 @@ START_TEST(test_truncate_ok759) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok760) {
   // -309292422894071.68958464124693
@@ -6963,6 +7723,7 @@ START_TEST(test_truncate_ok760) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok761) {
   // -13557.48242636311603474486618
@@ -6972,6 +7733,7 @@ START_TEST(test_truncate_ok761) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok762) {
   // 13557.48242636311603474486618
@@ -6981,6 +7743,7 @@ START_TEST(test_truncate_ok762) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok763) {
   // 581040608149733468071159010.54
@@ -6990,6 +7753,7 @@ START_TEST(test_truncate_ok763) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok764) {
   // -581040608149733468071159010.54
@@ -6999,6 +7763,7 @@ START_TEST(test_truncate_ok764) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok765) {
   // 6650079295467296275893.2037512
@@ -7008,6 +7773,7 @@ START_TEST(test_truncate_ok765) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok766) {
   // -6650079295467296275893.2037512
@@ -7017,6 +7783,7 @@ START_TEST(test_truncate_ok766) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok767) {
   // 3876998283126537628464742.730
@@ -7026,6 +7793,7 @@ START_TEST(test_truncate_ok767) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok768) {
   // -3876998283126537628464742.730
@@ -7035,6 +7803,7 @@ START_TEST(test_truncate_ok768) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok769) {
   // -2488374584.6537690054351341755
@@ -7044,6 +7813,7 @@ START_TEST(test_truncate_ok769) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok770) {
   // 2488374584.6537690054351341755
@@ -7053,6 +7823,7 @@ START_TEST(test_truncate_ok770) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok771) {
   // 631388327.34610388938233863979
@@ -7062,6 +7833,7 @@ START_TEST(test_truncate_ok771) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok772) {
   // -631388327.34610388938233863979
@@ -7071,6 +7843,7 @@ START_TEST(test_truncate_ok772) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok773) {
   // 490313345051877317.49910477884
@@ -7080,6 +7853,7 @@ START_TEST(test_truncate_ok773) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok774) {
   // -490313345051877317.49910477884
@@ -7089,6 +7863,7 @@ START_TEST(test_truncate_ok774) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok775) {
   // 7399558963281379318747941834.0
@@ -7098,6 +7873,7 @@ START_TEST(test_truncate_ok775) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok776) {
   // -7399558963281379318747941834.0
@@ -7108,6 +7884,7 @@ START_TEST(test_truncate_ok776) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok777) {
   // -711300023027061339459.46304405
@@ -7117,6 +7894,7 @@ START_TEST(test_truncate_ok777) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok778) {
   // 711300023027061339459.46304405
@@ -7126,6 +7904,7 @@ START_TEST(test_truncate_ok778) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok779) {
   // -5758716207661318.6524150240174
@@ -7135,6 +7914,7 @@ START_TEST(test_truncate_ok779) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok780) {
   // 5758716207661318.6524150240174
@@ -7144,6 +7924,7 @@ START_TEST(test_truncate_ok780) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok781) {
   // -2713346964786.2917814654046546
@@ -7153,6 +7934,7 @@ START_TEST(test_truncate_ok781) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok782) {
   // 2713346964786.2917814654046546
@@ -7162,6 +7944,7 @@ START_TEST(test_truncate_ok782) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok783) {
   // 4088.7059877696056513844016961
@@ -7171,6 +7954,7 @@ START_TEST(test_truncate_ok783) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok784) {
   // -4088.7059877696056513844016961
@@ -7180,6 +7964,7 @@ START_TEST(test_truncate_ok784) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok785) {
   // -544877045371251950855.88389726
@@ -7189,6 +7974,7 @@ START_TEST(test_truncate_ok785) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok786) {
   // 544877045371251950855.88389726
@@ -7198,6 +7984,7 @@ START_TEST(test_truncate_ok786) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok787) {
   // 640.54359113916691841515532019
@@ -7207,6 +7994,7 @@ START_TEST(test_truncate_ok787) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok788) {
   // -640.54359113916691841515532019
@@ -7216,6 +8004,7 @@ START_TEST(test_truncate_ok788) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok789) {
   // -64199.95646232162295742484387
@@ -7225,6 +8014,7 @@ START_TEST(test_truncate_ok789) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok790) {
   // 64199.95646232162295742484387
@@ -7234,6 +8024,7 @@ START_TEST(test_truncate_ok790) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok791) {
   // 7241693877823998707461377.1399
@@ -7243,6 +8034,7 @@ START_TEST(test_truncate_ok791) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok792) {
   // -7241693877823998707461377.1399
@@ -7252,6 +8044,7 @@ START_TEST(test_truncate_ok792) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok793) {
   // 340092298838133065713413431.55
@@ -7261,6 +8054,7 @@ START_TEST(test_truncate_ok793) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok794) {
   // -340092298838133065713413431.55
@@ -7270,6 +8064,7 @@ START_TEST(test_truncate_ok794) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok795) {
   // 7860217056166936.1547572157701
@@ -7279,6 +8074,7 @@ START_TEST(test_truncate_ok795) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok796) {
   // -7860217056166936.1547572157701
@@ -7288,6 +8084,7 @@ START_TEST(test_truncate_ok796) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok797) {
   // 17003137.880497999854043554299
@@ -7297,6 +8094,7 @@ START_TEST(test_truncate_ok797) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok798) {
   // -17003137.880497999854043554299
@@ -7306,6 +8104,7 @@ START_TEST(test_truncate_ok798) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok799) {
   // -130942957069629.91021111813845
@@ -7315,6 +8114,7 @@ START_TEST(test_truncate_ok799) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok800) {
   // 130942957069629.91021111813845
@@ -7324,6 +8124,7 @@ START_TEST(test_truncate_ok800) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok801) {
   // -6502518431535349962462293.0448
@@ -7333,6 +8134,7 @@ START_TEST(test_truncate_ok801) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok802) {
   // 6502518431535349962462293.0448
@@ -7342,6 +8144,7 @@ START_TEST(test_truncate_ok802) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok803) {
   // -3860487893915558457133201.4297
@@ -7351,6 +8154,7 @@ START_TEST(test_truncate_ok803) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok804) {
   // 3860487893915558457133201.4297
@@ -7360,6 +8164,7 @@ START_TEST(test_truncate_ok804) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok805) {
   // 60970242.113574415958975083452
@@ -7369,6 +8174,7 @@ START_TEST(test_truncate_ok805) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok806) {
   // -60970242.113574415958975083452
@@ -7378,6 +8184,7 @@ START_TEST(test_truncate_ok806) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok807) {
   // 732859.21963115647556997768621
@@ -7387,6 +8194,7 @@ START_TEST(test_truncate_ok807) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok808) {
   // -732859.21963115647556997768621
@@ -7396,6 +8204,7 @@ START_TEST(test_truncate_ok808) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok809) {
   // -7990988617988.929590982520088
@@ -7405,6 +8214,7 @@ START_TEST(test_truncate_ok809) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok810) {
   // 7990988617988.929590982520088
@@ -7414,6 +8224,7 @@ START_TEST(test_truncate_ok810) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok811) {
   // -629732036071010.3593388206036
@@ -7423,6 +8234,7 @@ START_TEST(test_truncate_ok811) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok812) {
   // 629732036071010.3593388206036
@@ -7432,6 +8244,7 @@ START_TEST(test_truncate_ok812) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok813) {
   // -2365801001343141679.2714469085
@@ -7441,6 +8254,7 @@ START_TEST(test_truncate_ok813) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok814) {
   // 2365801001343141679.2714469085
@@ -7450,6 +8264,7 @@ START_TEST(test_truncate_ok814) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok815) {
   // 158805.02766637839457762309828
@@ -7459,6 +8274,7 @@ START_TEST(test_truncate_ok815) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok816) {
   // -158805.02766637839457762309828
@@ -7468,6 +8284,7 @@ START_TEST(test_truncate_ok816) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok817) {
   // -167524058463706.31935815128302
@@ -7477,6 +8294,7 @@ START_TEST(test_truncate_ok817) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok818) {
   // 167524058463706.31935815128302
@@ -7486,6 +8304,7 @@ START_TEST(test_truncate_ok818) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok819) {
   // -971581975960439387923990646.0
@@ -7495,6 +8314,7 @@ START_TEST(test_truncate_ok819) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok820) {
   // 971581975960439387923990646.0
@@ -7504,6 +8324,7 @@ START_TEST(test_truncate_ok820) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok821) {
   // -786362372182026.77806592482505
@@ -7513,6 +8334,7 @@ START_TEST(test_truncate_ok821) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok822) {
   // 786362372182026.77806592482505
@@ -7522,6 +8344,7 @@ START_TEST(test_truncate_ok822) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok823) {
   // 244097.69181926947401891784707
@@ -7531,6 +8354,7 @@ START_TEST(test_truncate_ok823) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok824) {
   // -244097.69181926947401891784707
@@ -7540,6 +8364,7 @@ START_TEST(test_truncate_ok824) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok825) {
   // 35409.347409640456946703615398
@@ -7549,6 +8374,7 @@ START_TEST(test_truncate_ok825) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok826) {
   // -35409.347409640456946703615398
@@ -7558,6 +8384,7 @@ START_TEST(test_truncate_ok826) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok827) {
   // 239291059607740827681383951.72
@@ -7567,6 +8394,7 @@ START_TEST(test_truncate_ok827) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok828) {
   // -239291059607740827681383951.72
@@ -7576,6 +8404,7 @@ START_TEST(test_truncate_ok828) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok829) {
   // -36263327930.935127110992980040
@@ -7585,6 +8414,7 @@ START_TEST(test_truncate_ok829) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok830) {
   // 36263327930.935127110992980040
@@ -7594,6 +8424,7 @@ START_TEST(test_truncate_ok830) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok831) {
   // 4402319.8163019714694947126247
@@ -7603,6 +8434,7 @@ START_TEST(test_truncate_ok831) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok832) {
   // -4402319.8163019714694947126247
@@ -7612,6 +8444,7 @@ START_TEST(test_truncate_ok832) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok833) {
   // 45.602930314978790404623034823
@@ -7621,6 +8454,7 @@ START_TEST(test_truncate_ok833) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok834) {
   // -45.602930314978790404623034823
@@ -7630,6 +8464,7 @@ START_TEST(test_truncate_ok834) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok835) {
   // -7738531089539939505646.6888003
@@ -7639,6 +8474,7 @@ START_TEST(test_truncate_ok835) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok836) {
   // 7738531089539939505646.6888003
@@ -7648,6 +8484,7 @@ START_TEST(test_truncate_ok836) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok837) {
   // -5.9127748877194748868522895457
@@ -7657,6 +8494,7 @@ START_TEST(test_truncate_ok837) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok838) {
   // 5.9127748877194748868522895457
@@ -7666,6 +8504,7 @@ START_TEST(test_truncate_ok838) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok839) {
   // 6.3442555241844984960560207195
@@ -7675,6 +8514,7 @@ START_TEST(test_truncate_ok839) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok840) {
   // -6.3442555241844984960560207195
@@ -7684,6 +8524,7 @@ START_TEST(test_truncate_ok840) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok841) {
   // -1804229841954947685681.6303734
@@ -7693,6 +8534,7 @@ START_TEST(test_truncate_ok841) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok842) {
   // 1804229841954947685681.6303734
@@ -7702,6 +8544,7 @@ START_TEST(test_truncate_ok842) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok843) {
   // -7553595651741659146282.2922847
@@ -7711,6 +8554,7 @@ START_TEST(test_truncate_ok843) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok844) {
   // 7553595651741659146282.2922847
@@ -7720,6 +8564,7 @@ START_TEST(test_truncate_ok844) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok845) {
   // -54527927312271750347.57087187
@@ -7729,6 +8574,7 @@ START_TEST(test_truncate_ok845) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok846) {
   // 54527927312271750347.57087187
@@ -7738,6 +8584,7 @@ START_TEST(test_truncate_ok846) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok847) {
   // -12150.20845622572224394963689
@@ -7747,6 +8594,7 @@ START_TEST(test_truncate_ok847) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok848) {
   // 12150.20845622572224394963689
@@ -7756,6 +8604,7 @@ START_TEST(test_truncate_ok848) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok849) {
   // 104010.38018264226050965919081
@@ -7765,6 +8614,7 @@ START_TEST(test_truncate_ok849) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok850) {
   // -104010.38018264226050965919081
@@ -7774,6 +8624,7 @@ START_TEST(test_truncate_ok850) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok851) {
   // -61806780207463409555865382696
@@ -7783,6 +8634,7 @@ START_TEST(test_truncate_ok851) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok852) {
   // 61806780207463409555865382696
@@ -7792,6 +8644,7 @@ START_TEST(test_truncate_ok852) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok853) {
   // 122759072632126419.00700163884
@@ -7801,6 +8654,7 @@ START_TEST(test_truncate_ok853) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok854) {
   // -122759072632126419.00700163884
@@ -7810,6 +8664,7 @@ START_TEST(test_truncate_ok854) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok855) {
   // -6485764085.8178633710750605247
@@ -7819,6 +8674,7 @@ START_TEST(test_truncate_ok855) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok856) {
   // 6485764085.8178633710750605247
@@ -7828,6 +8684,7 @@ START_TEST(test_truncate_ok856) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok857) {
   // 3347722203533514902.1148401243
@@ -7837,6 +8694,7 @@ START_TEST(test_truncate_ok857) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok858) {
   // -3347722203533514902.1148401243
@@ -7846,6 +8704,7 @@ START_TEST(test_truncate_ok858) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok859) {
   // -3289395.2036847977279873663004
@@ -7855,6 +8714,7 @@ START_TEST(test_truncate_ok859) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok860) {
   // 3289395.2036847977279873663004
@@ -7864,6 +8724,7 @@ START_TEST(test_truncate_ok860) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok861) {
   // 69183197916081615266045.563433
@@ -7873,6 +8734,7 @@ START_TEST(test_truncate_ok861) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok862) {
   // -69183197916081615266045.563433
@@ -7882,6 +8744,7 @@ START_TEST(test_truncate_ok862) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok863) {
   // 76328328034632120992739.111181
@@ -7891,6 +8754,7 @@ START_TEST(test_truncate_ok863) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok864) {
   // -76328328034632120992739.111181
@@ -7900,6 +8764,7 @@ START_TEST(test_truncate_ok864) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok865) {
   // 12448788256183369169.320376237
@@ -7909,6 +8774,7 @@ START_TEST(test_truncate_ok865) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok866) {
   // -12448788256183369169.320376237
@@ -7918,6 +8784,7 @@ START_TEST(test_truncate_ok866) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok867) {
   // 753963951791421.55467706815489
@@ -7927,6 +8794,7 @@ START_TEST(test_truncate_ok867) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok868) {
   // -753963951791421.55467706815489
@@ -7936,6 +8804,7 @@ START_TEST(test_truncate_ok868) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok869) {
   // 6480372573928216122405764989.1
@@ -7945,6 +8814,7 @@ START_TEST(test_truncate_ok869) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok870) {
   // -6480372573928216122405764989.1
@@ -7955,6 +8825,7 @@ START_TEST(test_truncate_ok870) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok871) {
   // 4572254.1899722384062691353906
@@ -7964,6 +8835,7 @@ START_TEST(test_truncate_ok871) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok872) {
   // -4572254.1899722384062691353906
@@ -7973,6 +8845,7 @@ START_TEST(test_truncate_ok872) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok873) {
   // -345161.14410578869020763193979
@@ -7982,6 +8855,7 @@ START_TEST(test_truncate_ok873) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok874) {
   // 345161.14410578869020763193979
@@ -7991,6 +8865,7 @@ START_TEST(test_truncate_ok874) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok875) {
   // 50429634736526.162547632971430
@@ -8000,6 +8875,7 @@ START_TEST(test_truncate_ok875) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok876) {
   // -50429634736526.162547632971430
@@ -8009,6 +8885,7 @@ START_TEST(test_truncate_ok876) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok877) {
   // 786266368920244579849.57867333
@@ -8018,6 +8895,7 @@ START_TEST(test_truncate_ok877) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok878) {
   // -786266368920244579849.57867333
@@ -8027,6 +8905,7 @@ START_TEST(test_truncate_ok878) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok879) {
   // -70354330.770699352347035833627
@@ -8036,6 +8915,7 @@ START_TEST(test_truncate_ok879) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok880) {
   // 70354330.770699352347035833627
@@ -8045,6 +8925,7 @@ START_TEST(test_truncate_ok880) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok881) {
   // 3199202773272639757482094925.0
@@ -8054,6 +8935,7 @@ START_TEST(test_truncate_ok881) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok882) {
   // -3199202773272639757482094925.0
@@ -8063,6 +8945,7 @@ START_TEST(test_truncate_ok882) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok883) {
   // -40905223811365.808665282468924
@@ -8072,6 +8955,7 @@ START_TEST(test_truncate_ok883) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok884) {
   // 40905223811365.808665282468924
@@ -8081,6 +8965,7 @@ START_TEST(test_truncate_ok884) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok885) {
   // -33993419581626574542.451117846
@@ -8090,6 +8975,7 @@ START_TEST(test_truncate_ok885) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok886) {
   // 33993419581626574542.451117846
@@ -8099,6 +8985,7 @@ START_TEST(test_truncate_ok886) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok887) {
   // 4448910377678692130752120666.0
@@ -8108,6 +8995,7 @@ START_TEST(test_truncate_ok887) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok888) {
   // -4448910377678692130752120666.0
@@ -8117,6 +9005,7 @@ START_TEST(test_truncate_ok888) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok889) {
   // 637017010368834.79965395348973
@@ -8126,6 +9015,7 @@ START_TEST(test_truncate_ok889) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok890) {
   // -637017010368834.79965395348973
@@ -8135,6 +9025,7 @@ START_TEST(test_truncate_ok890) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok891) {
   // -57811743339213.591939430350552
@@ -8144,6 +9035,7 @@ START_TEST(test_truncate_ok891) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok892) {
   // 57811743339213.591939430350552
@@ -8153,6 +9045,7 @@ START_TEST(test_truncate_ok892) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok893) {
   // -11498512.811109767264928991729
@@ -8162,6 +9055,7 @@ START_TEST(test_truncate_ok893) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok894) {
   // 11498512.811109767264928991729
@@ -8171,6 +9065,7 @@ START_TEST(test_truncate_ok894) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok895) {
   // -14102872957.647293453368283329
@@ -8180,6 +9075,7 @@ START_TEST(test_truncate_ok895) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok896) {
   // 14102872957.647293453368283329
@@ -8189,6 +9085,7 @@ START_TEST(test_truncate_ok896) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok897) {
   // 41048374758929.149792405675377
@@ -8198,6 +9095,7 @@ START_TEST(test_truncate_ok897) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok898) {
   // -41048374758929.149792405675377
@@ -8207,6 +9105,7 @@ START_TEST(test_truncate_ok898) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok899) {
   // -720793929767.28293899347776970
@@ -8216,6 +9115,7 @@ START_TEST(test_truncate_ok899) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok900) {
   // 720793929767.28293899347776970
@@ -8225,6 +9125,7 @@ START_TEST(test_truncate_ok900) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok901) {
   // -44695.084556180290727291020516
@@ -8234,6 +9135,7 @@ START_TEST(test_truncate_ok901) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok902) {
   // 44695.084556180290727291020516
@@ -8243,6 +9145,7 @@ START_TEST(test_truncate_ok902) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok903) {
   // -1141185806608147989549485001.3
@@ -8252,6 +9155,7 @@ START_TEST(test_truncate_ok903) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok904) {
   // 1141185806608147989549485001.3
@@ -8261,6 +9165,7 @@ START_TEST(test_truncate_ok904) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok905) {
   // 24829304391831779.089448608560
@@ -8270,6 +9175,7 @@ START_TEST(test_truncate_ok905) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok906) {
   // -24829304391831779.089448608560
@@ -8279,6 +9185,7 @@ START_TEST(test_truncate_ok906) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok907) {
   // -47057575530.034748665849808844
@@ -8288,6 +9195,7 @@ START_TEST(test_truncate_ok907) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok908) {
   // 47057575530.034748665849808844
@@ -8297,6 +9205,7 @@ START_TEST(test_truncate_ok908) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok909) {
   // -3990171400214.5306527660314474
@@ -8306,6 +9215,7 @@ START_TEST(test_truncate_ok909) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok910) {
   // 3990171400214.5306527660314474
@@ -8315,6 +9225,7 @@ START_TEST(test_truncate_ok910) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok911) {
   // -635702.03068075127396474794002
@@ -8324,6 +9235,7 @@ START_TEST(test_truncate_ok911) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok912) {
   // 635702.03068075127396474794002
@@ -8333,6 +9245,7 @@ START_TEST(test_truncate_ok912) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok913) {
   // -2965322884195773.8603550583975
@@ -8342,6 +9255,7 @@ START_TEST(test_truncate_ok913) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok914) {
   // 2965322884195773.8603550583975
@@ -8351,6 +9265,7 @@ START_TEST(test_truncate_ok914) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok915) {
   // 71421535667212420368501785.757
@@ -8360,6 +9275,7 @@ START_TEST(test_truncate_ok915) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok916) {
   // -71421535667212420368501785.757
@@ -8369,6 +9285,7 @@ START_TEST(test_truncate_ok916) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok917) {
   // 45894075307089895587689075894
@@ -8378,6 +9295,7 @@ START_TEST(test_truncate_ok917) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok918) {
   // -45894075307089895587689075894
@@ -8388,6 +9306,7 @@ START_TEST(test_truncate_ok918) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok919) {
   // 11549041300792984442846624.701
@@ -8397,6 +9316,7 @@ START_TEST(test_truncate_ok919) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok920) {
   // -11549041300792984442846624.701
@@ -8406,6 +9326,7 @@ START_TEST(test_truncate_ok920) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok921) {
   // 3868178560416445951548906324.9
@@ -8415,6 +9336,7 @@ START_TEST(test_truncate_ok921) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok922) {
   // -3868178560416445951548906324.9
@@ -8424,6 +9346,7 @@ START_TEST(test_truncate_ok922) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok923) {
   // 462.2812693187983787751156123
@@ -8433,6 +9356,7 @@ START_TEST(test_truncate_ok923) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok924) {
   // -462.2812693187983787751156123
@@ -8442,6 +9366,7 @@ START_TEST(test_truncate_ok924) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok925) {
   // -6106473585214808641306672862.1
@@ -8452,6 +9377,7 @@ START_TEST(test_truncate_ok925) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok926) {
   // 6106473585214808641306672862.1
@@ -8461,6 +9387,7 @@ START_TEST(test_truncate_ok926) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok927) {
   // -71527403.306590228972749010169
@@ -8470,6 +9397,7 @@ START_TEST(test_truncate_ok927) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok928) {
   // 71527403.306590228972749010169
@@ -8479,6 +9407,7 @@ START_TEST(test_truncate_ok928) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok929) {
   // -5427402.144732988837980698062
@@ -8488,6 +9417,7 @@ START_TEST(test_truncate_ok929) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok930) {
   // 5427402.144732988837980698062
@@ -8497,6 +9427,7 @@ START_TEST(test_truncate_ok930) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok931) {
   // -49150370758757995.342982852978
@@ -8506,6 +9437,7 @@ START_TEST(test_truncate_ok931) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok932) {
   // 49150370758757995.342982852978
@@ -8515,6 +9447,7 @@ START_TEST(test_truncate_ok932) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok933) {
   // 5.9888417924979915056088571532
@@ -8524,6 +9457,7 @@ START_TEST(test_truncate_ok933) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok934) {
   // -5.9888417924979915056088571532
@@ -8533,6 +9467,7 @@ START_TEST(test_truncate_ok934) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok935) {
   // 381941456013399816.1760830076
@@ -8542,6 +9477,7 @@ START_TEST(test_truncate_ok935) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok936) {
   // -381941456013399816.1760830076
@@ -8551,6 +9487,7 @@ START_TEST(test_truncate_ok936) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok937) {
   // 334.27223597397331922005375883
@@ -8560,6 +9497,7 @@ START_TEST(test_truncate_ok937) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok938) {
   // -334.27223597397331922005375883
@@ -8569,6 +9507,7 @@ START_TEST(test_truncate_ok938) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok939) {
   // 6.7668061652939652428342690999
@@ -8578,6 +9517,7 @@ START_TEST(test_truncate_ok939) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok940) {
   // -6.7668061652939652428342690999
@@ -8587,6 +9527,7 @@ START_TEST(test_truncate_ok940) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok941) {
   // 1005349422549639641243141.1387
@@ -8596,6 +9537,7 @@ START_TEST(test_truncate_ok941) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok942) {
   // -1005349422549639641243141.1387
@@ -8605,6 +9547,7 @@ START_TEST(test_truncate_ok942) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok943) {
   // 62684478506.498238040661008496
@@ -8614,6 +9557,7 @@ START_TEST(test_truncate_ok943) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok944) {
   // -62684478506.498238040661008496
@@ -8623,6 +9567,7 @@ START_TEST(test_truncate_ok944) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok945) {
   // 98797402767855785.54234257786
@@ -8632,6 +9577,7 @@ START_TEST(test_truncate_ok945) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok946) {
   // -98797402767855785.54234257786
@@ -8641,6 +9587,7 @@ START_TEST(test_truncate_ok946) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok947) {
   // 70557390526677147131472.43838
@@ -8650,6 +9597,7 @@ START_TEST(test_truncate_ok947) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok948) {
   // -70557390526677147131472.43838
@@ -8659,6 +9607,7 @@ START_TEST(test_truncate_ok948) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok949) {
   // 452402542153273821354364046.73
@@ -8668,6 +9617,7 @@ START_TEST(test_truncate_ok949) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok950) {
   // -452402542153273821354364046.73
@@ -8677,6 +9627,7 @@ START_TEST(test_truncate_ok950) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok951) {
   // 42285747225241820622276182653
@@ -8686,6 +9637,7 @@ START_TEST(test_truncate_ok951) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok952) {
   // -42285747225241820622276182653
@@ -8696,6 +9648,7 @@ START_TEST(test_truncate_ok952) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok953) {
   // -47849309205370266051597.978112
@@ -8705,6 +9658,7 @@ START_TEST(test_truncate_ok953) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok954) {
   // 47849309205370266051597.978112
@@ -8714,6 +9668,7 @@ START_TEST(test_truncate_ok954) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok955) {
   // 453042873546342.80144151556929
@@ -8723,6 +9678,7 @@ START_TEST(test_truncate_ok955) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok956) {
   // -453042873546342.80144151556929
@@ -8732,6 +9688,7 @@ START_TEST(test_truncate_ok956) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok957) {
   // 65563.112026918587097899474717
@@ -8741,6 +9698,7 @@ START_TEST(test_truncate_ok957) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok958) {
   // -65563.112026918587097899474717
@@ -8750,6 +9708,7 @@ START_TEST(test_truncate_ok958) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok959) {
   // 79391517851711148.93603726620
@@ -8759,6 +9718,7 @@ START_TEST(test_truncate_ok959) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok960) {
   // -79391517851711148.93603726620
@@ -8768,6 +9728,7 @@ START_TEST(test_truncate_ok960) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok961) {
   // 49733.070445912071342869291705
@@ -8777,6 +9738,7 @@ START_TEST(test_truncate_ok961) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok962) {
   // -49733.070445912071342869291705
@@ -8786,6 +9748,7 @@ START_TEST(test_truncate_ok962) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok963) {
   // 47413990817182800891.909327339
@@ -8795,6 +9758,7 @@ START_TEST(test_truncate_ok963) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok964) {
   // -47413990817182800891.909327339
@@ -8804,6 +9768,7 @@ START_TEST(test_truncate_ok964) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok965) {
   // 13981151453979215016714553.523
@@ -8813,6 +9778,7 @@ START_TEST(test_truncate_ok965) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok966) {
   // -13981151453979215016714553.523
@@ -8822,6 +9788,7 @@ START_TEST(test_truncate_ok966) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok967) {
   // -5671181123985878517.1846217190
@@ -8831,6 +9798,7 @@ START_TEST(test_truncate_ok967) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok968) {
   // 5671181123985878517.1846217190
@@ -8840,6 +9808,7 @@ START_TEST(test_truncate_ok968) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok969) {
   // -7651852239.3104965872505107888
@@ -8849,6 +9818,7 @@ START_TEST(test_truncate_ok969) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok970) {
   // 7651852239.3104965872505107888
@@ -8858,6 +9828,7 @@ START_TEST(test_truncate_ok970) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok971) {
   // -71279019.726424361383177488252
@@ -8867,6 +9838,7 @@ START_TEST(test_truncate_ok971) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok972) {
   // 71279019.726424361383177488252
@@ -8876,6 +9848,7 @@ START_TEST(test_truncate_ok972) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok973) {
   // -1524464602519225.4304725847807
@@ -8885,6 +9858,7 @@ START_TEST(test_truncate_ok973) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok974) {
   // 1524464602519225.4304725847807
@@ -8894,6 +9868,7 @@ START_TEST(test_truncate_ok974) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok975) {
   // -4112404922164367367959469802.3
@@ -8903,6 +9878,7 @@ START_TEST(test_truncate_ok975) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok976) {
   // 4112404922164367367959469802.3
@@ -8912,6 +9888,7 @@ START_TEST(test_truncate_ok976) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok977) {
   // 588327375911.70192866597291002
@@ -8921,6 +9898,7 @@ START_TEST(test_truncate_ok977) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok978) {
   // -588327375911.70192866597291002
@@ -8930,6 +9908,7 @@ START_TEST(test_truncate_ok978) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok979) {
   // 1326414.3905826205208417040854
@@ -8939,6 +9918,7 @@ START_TEST(test_truncate_ok979) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok980) {
   // -1326414.3905826205208417040854
@@ -8948,6 +9928,7 @@ START_TEST(test_truncate_ok980) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok981) {
   // 2631657715385.7351169018527905
@@ -8957,6 +9938,7 @@ START_TEST(test_truncate_ok981) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok982) {
   // -2631657715385.7351169018527905
@@ -8966,6 +9948,7 @@ START_TEST(test_truncate_ok982) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok983) {
   // 689.27400548748914643429529690
@@ -8975,6 +9958,7 @@ START_TEST(test_truncate_ok983) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok984) {
   // -689.27400548748914643429529690
@@ -8984,6 +9968,7 @@ START_TEST(test_truncate_ok984) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok985) {
   // -717674.18781717802580592043923
@@ -8993,6 +9978,7 @@ START_TEST(test_truncate_ok985) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok986) {
   // 717674.18781717802580592043923
@@ -9002,6 +9988,7 @@ START_TEST(test_truncate_ok986) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok987) {
   // -42736233681331513899.701761624
@@ -9011,6 +9998,7 @@ START_TEST(test_truncate_ok987) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok988) {
   // 42736233681331513899.701761624
@@ -9020,6 +10008,7 @@ START_TEST(test_truncate_ok988) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok989) {
   // -25122818.502141309977210905272
@@ -9029,6 +10018,7 @@ START_TEST(test_truncate_ok989) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok990) {
   // 25122818.502141309977210905272
@@ -9038,6 +10028,7 @@ START_TEST(test_truncate_ok990) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok991) {
   // 35309188505043.582404850638318
@@ -9047,6 +10038,7 @@ START_TEST(test_truncate_ok991) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok992) {
   // -35309188505043.582404850638318
@@ -9056,6 +10048,7 @@ START_TEST(test_truncate_ok992) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok993) {
   // -165413317373479362487407.22632
@@ -9065,6 +10058,7 @@ START_TEST(test_truncate_ok993) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok994) {
   // 165413317373479362487407.22632
@@ -9074,6 +10068,7 @@ START_TEST(test_truncate_ok994) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok995) {
   // 75389544484508693574716540007
@@ -9083,6 +10078,7 @@ START_TEST(test_truncate_ok995) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok996) {
   // -75389544484508693574716540007
@@ -9093,6 +10089,7 @@ START_TEST(test_truncate_ok996) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok997) {
   // 6.0228662402377230580891410460
@@ -9102,6 +10099,7 @@ START_TEST(test_truncate_ok997) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok998) {
   // -6.0228662402377230580891410460
@@ -9111,6 +10109,7 @@ START_TEST(test_truncate_ok998) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok999) {
   // 706029870798.23896706115814720
@@ -9120,6 +10119,7 @@ START_TEST(test_truncate_ok999) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1000) {
   // -706029870798.23896706115814720
@@ -9129,6 +10129,7 @@ START_TEST(test_truncate_ok1000) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1001) {
   // -2743733667457.649596996030498
@@ -9138,6 +10139,7 @@ START_TEST(test_truncate_ok1001) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1002) {
   // 2743733667457.649596996030498
@@ -9147,6 +10149,7 @@ START_TEST(test_truncate_ok1002) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1003) {
   // 7033970046697049902273.0934353
@@ -9156,6 +10159,7 @@ START_TEST(test_truncate_ok1003) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1004) {
   // -7033970046697049902273.0934353
@@ -9165,6 +10169,7 @@ START_TEST(test_truncate_ok1004) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1005) {
   // 49326179389907.080515603920193
@@ -9174,6 +10179,7 @@ START_TEST(test_truncate_ok1005) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1006) {
   // -49326179389907.080515603920193
@@ -9183,6 +10189,7 @@ START_TEST(test_truncate_ok1006) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1007) {
   // -15588824774156734894220.621836
@@ -9192,6 +10199,7 @@ START_TEST(test_truncate_ok1007) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1008) {
   // 15588824774156734894220.621836
@@ -9201,6 +10209,7 @@ START_TEST(test_truncate_ok1008) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1009) {
   // 326102205602944283462484921.49
@@ -9210,6 +10219,7 @@ START_TEST(test_truncate_ok1009) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1010) {
   // -326102205602944283462484921.49
@@ -9219,6 +10229,7 @@ START_TEST(test_truncate_ok1010) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1011) {
   // -78829919.639878877119137613007
@@ -9228,6 +10239,7 @@ START_TEST(test_truncate_ok1011) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1012) {
   // 78829919.639878877119137613007
@@ -9237,6 +10249,7 @@ START_TEST(test_truncate_ok1012) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1013) {
   // -6436090.8162131382309171482727
@@ -9246,6 +10259,7 @@ START_TEST(test_truncate_ok1013) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1014) {
   // 6436090.8162131382309171482727
@@ -9255,6 +10269,7 @@ START_TEST(test_truncate_ok1014) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1015) {
   // -17024844397833208357931845.4
@@ -9264,6 +10279,7 @@ START_TEST(test_truncate_ok1015) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1016) {
   // 17024844397833208357931845.4
@@ -9273,6 +10289,7 @@ START_TEST(test_truncate_ok1016) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1017) {
   // -3306.6596212280347416372581915
@@ -9282,6 +10299,7 @@ START_TEST(test_truncate_ok1017) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1018) {
   // 3306.6596212280347416372581915
@@ -9291,6 +10309,7 @@ START_TEST(test_truncate_ok1018) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1019) {
   // 5574480338.8062228364817330784
@@ -9300,6 +10319,7 @@ START_TEST(test_truncate_ok1019) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 START_TEST(test_truncate_ok1020) {
   // -5574480338.8062228364817330784
@@ -9309,6 +10329,7 @@ START_TEST(test_truncate_ok1020) {
 
   test_truncate(decimal, decimal_check);
 }
+END_TEST
 
 Suite *truncate_suite1(void) {
   Suite *s;
@@ -10389,22 +11410,6 @@ void test_truncate(s21_decimal decimal, s21_decimal decimal_check) {
   int code = s21_truncate(decimal, &result);
   int sign_check = decimal_check.exponent.bits.sign;
   int sign_result = result.exponent.bits.sign;
-
-#if defined(__DEBUG)
-  printf("---------------------------------\n");
-  printf("\n\nTests:\n");
-  s21_print_decimal_bits(decimal);
-  s21_print_decimal_string(decimal);
-  printf("\ncheck:\n");
-  s21_print_decimal_bits(decimal_check);
-  s21_print_decimal_string(decimal_check);
-  printf("sign = %d\n", sign_check);
-  printf("\nres:\n");
-  s21_print_decimal_bits(result);
-  s21_print_decimal_string(result);
-  printf("sign = %d\n", sign_result);
-  printf("---------------------------------\n\n\n\n");
-#endif
 
   ck_assert_int_eq(code, ok);
   ck_assert_int_eq(s21_is_equal(result, decimal_check), 1);

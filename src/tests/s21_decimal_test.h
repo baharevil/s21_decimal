@@ -25,6 +25,49 @@ void test_add(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
 void test_add_fail(s21_decimal decimal1, s21_decimal decimal2, int check);
 void run_tests_s21_add(void);
 
+// S21_SUB_TEST
+Suite *sub_suite0(void);
+Suite *sub_suite1(void);
+Suite *sub_suite2(void);
+Suite *sub_suite3(void);
+Suite *sub_suite4(void);
+Suite *sub_suite5(void);
+Suite *sub_suite6(void);
+Suite *sub_suite7(void);
+Suite *sub_suite8(void);
+Suite *sub_suite9(void);
+
+void test_sub(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
+void test_sub_fail(s21_decimal decimal1, s21_decimal decimal2, int check);
+void run_tests_s21_sub(void);
+
+// S21_MUL_TEST
+Suite *mul_suite0(void);
+Suite *mul_suite1(void);
+Suite *mul_suite2(void);
+Suite *mul_suite3(void);
+Suite *mul_suite4(void);
+Suite *mul_suite5(void);
+Suite *mul_suite6(void);
+Suite *mul_suite7(void);
+Suite *mul_suite8(void);
+Suite *mul_suite9(void);
+Suite *mul_suite10(void);
+Suite *mul_suite11(void);
+Suite *mul_suite12(void);
+Suite *mul_suite13(void);
+Suite *mul_suite14(void);
+Suite *mul_suite15(void);
+Suite *mul_suite16(void);
+Suite *mul_suite17(void);
+Suite *mul_suite18(void);
+
+void test_mul_fail1(s21_decimal decimal1, s21_decimal decimal2, int code_check);
+void test_mul_fail2(s21_decimal decimal1, s21_decimal decimal2,
+                    s21_decimal decimal_check, int code_check);
+void test_mul(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
+void run_tests_s21_mul(void);
+
 // S21_DIV_TEST
 Suite *div_suite0(void);
 Suite *div_suite1(void);
@@ -53,30 +96,20 @@ void test_div_fail2(s21_decimal decimal1, s21_decimal decimal2,
 void run_tests_s21_div(void);
 
 // S21_MOD_TEST
+Suite *mod_suite0(void);
+Suite *mod_suite1(void);
+Suite *mod_suite2(void);
+Suite *mod_suite3(void);
+Suite *mod_suite4(void);
+Suite *mod_suite5(void);
+Suite *mod_suite6(void);
+Suite *mod_suite7(void);
+Suite *mod_suite8(void);
+Suite *mod_suite9(void);
+
 void test_mod(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
 void test_mod_fail(s21_decimal decimal1, s21_decimal decimal2, int code_check);
-
-// S21_MUL_TEST
-void test_mul_fail2(s21_decimal decimal1, s21_decimal decimal2,
-                    s21_decimal decimal_check, int code_check);
-void test_mul_fail1(s21_decimal decimal1, s21_decimal decimal2, int code_check);
-void test_mul(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
-
-// S21_SUB_TEST
-Suite *sub_suite0(void);
-Suite *sub_suite1(void);
-Suite *sub_suite2(void);
-Suite *sub_suite3(void);
-Suite *sub_suite4(void);
-Suite *sub_suite5(void);
-Suite *sub_suite6(void);
-Suite *sub_suite7(void);
-Suite *sub_suite8(void);
-Suite *sub_suite9(void);
-
-void test_sub(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
-void test_sub_fail(s21_decimal decimal1, s21_decimal decimal2, int check);
-void run_tests_s21_sub(void);
+void run_tests_s21_mod(void);
 
 /**************************************************************************
                     Compare
