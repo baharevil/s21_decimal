@@ -3,7 +3,7 @@ CC 					= gcc
 CFLAGS 				= -Wall -Werror -Wextra -std=c11 -I. -pedantic
 DEBUG 				= -g
 VALFLAGS			= --tool=memcheck --leak-check=yes --leak-check=full --show-leak-kinds=all --track-origins=yes -s
-LDFLAGS 			:= $(if $(filter Linux, $(OS)),$(shell pkg-config --libs check),-lcheck)
+LDFLAGS 			:= $(if $(filter Linux, $(OS)),$(shell pkg-config --libs check),-lcheck) -lm
 OPEN_CMD 			:= $(if $(filter Linux, $(OS)),xdg-open,open)
 
 project_name 		= s21_decimal
