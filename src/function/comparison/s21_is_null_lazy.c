@@ -13,6 +13,7 @@ uint8_t s21_is_null_lazy(s21_decimal_lazy *lazy) {
   s21_decimal_lazy null_lazy = {0};
 
   s21_lazy_init(&null_lazy, &null);
+  null_lazy.sign = lazy->sign;
   result = (s21_is_equal_lazy(lazy, &null_lazy) == 0);
   s21_lazy_destroy(&null_lazy);
 

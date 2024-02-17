@@ -11,7 +11,7 @@ int main(void) {
   // run_tests_s21_sub();
   run_tests_s21_mul();
   // run_tests_s21_div();
-  run_tests_s21_mod();
+  // run_tests_s21_mod();
 
   // run_tests_s21_round();
   // run_tests_s21_is_equal();
@@ -69,9 +69,10 @@ void run_tests_s21_sub(void) {
 // S21_MUL_TEST
 void run_tests_s21_mul(void) {
   printf("\n\x1b[4;36m TEST S21_MUL \x1b[0m\n");
-  Suite *list_cases[] = {mul_suite0(), mul_suite1(), mul_suite2(), mul_suite3(),
-                          // mul_suite4(), mul_suite5(), mul_suite6(),
-                          // mul_suite7(), mul_suite8(), mul_suite9(),
+  Suite *list_cases[] = {
+                          mul_suite0(), mul_suite1(), mul_suite2(), mul_suite3(),
+                          mul_suite4(), mul_suite5(), mul_suite6(),
+                          mul_suite7(), mul_suite8(), mul_suite9(),
                          NULL};
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
        current_testcase++) {

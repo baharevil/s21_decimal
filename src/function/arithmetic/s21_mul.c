@@ -28,7 +28,12 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     error |= s21_lazy_init(&res, NULL);
   }
 
-  if (!error) error = s21_mul_lazy(&lazy1, &lazy2, &res);
+  int cmp = (s21_is_null(&value_1) - 2 * s21_is_null(&value_2));
+  if (!error && cmp)
+    error = s21_from_lazy_to_decimal(&res, result);
+  else
+    error = s21_mul_lazy(&lazy1, &lazy2, &res);
+  
   if (!error) error = s21_from_lazy_to_decimal(&res, result);
 
   s21_lazy_destroy(&lazy1);

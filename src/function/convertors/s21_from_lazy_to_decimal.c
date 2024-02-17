@@ -15,7 +15,7 @@
   @return 0 - ок, 1 - ошибка
 */
 int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
-  int error = 0, cmp = -1;  //, rank = 0;
+  int error = 0, cmp = -1, small = 0;
 
   uint8_t dec_size = 0, size = 0;
   s21_decimal_lazy carry = {0}, tmp_v = {0};
@@ -47,13 +47,13 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
     error |= s21_lazy_normalization(&tmp_v, tmp_v.exponent - 1);
 
   // check error
-  if (!error && (tmp_v.size > dec_size)) {
+  if (!error && (tmp_v.size > dec_size))
     error = inf + tmp_v.sign;
-  }
 
   // ? мб и не надо
   if (!error && tmp_v.exponent > 28) {
     error |= s21_lazy_normalization(&tmp_v, 28);
+    small = !s21_is_null_lazy(src);
   }
 
   /*
@@ -75,7 +75,8 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
   // rounding
   if (!error && tmp_v.exponent != src->exponent) {
     // вычесляем остаток
-    error = s21_sub_lazy(src, &tmp_v, &carry);
+    s21_sub_lazy(src, &tmp_v, &carry);
+    
     if (tmp_v.exponent) lazy_five.exponent = tmp_v.exponent + 1;
     lazy_one.exponent = tmp_v.exponent;
     lazy_one.sign = tmp_v.sign;
@@ -118,6 +119,8 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
     if (!error && size != dec_size)
       memset(dest->mantissa.bytes + size, 0, dec_size - size);
   }
+
+  if (!error && small) error = 2 * s21_is_null_lazy(&tmp_v);
 
   s21_lazy_destroy(&tmp_v);
   s21_lazy_destroy(&carry);

@@ -23,9 +23,7 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   error |= ((uint8_t)exp2f(src) > 155);
 
   if (!error) error |= !s21_decimal_is_valid(dst);
-
   if (!error) error |= s21_lazy_init(&tmp, NULL);
-
   if (!error) error |= s21_lazy_init(&result, NULL);
 
   if (!error) {
@@ -38,19 +36,16 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
     double mantissa = frexpf(src, &exp);
     // Место сброса целых чисел мантиссы
     double devnull = 0;
-    // Мантисса всегда exp == 1
-    result.exponent = 1;
 
     // Переводим мантиссу в результат, экспонента считается сама
     while (!error && mantissa) {
       mantissa *= 10.0;
+      error |= s21_mul_lazy_to_10(&result);
       tmp.exponent = result.exponent;
       error |= s21_from_int_to_lazy((int)mantissa, &tmp);
       mantissa = modf(mantissa, &devnull);
       error |= s21_add_lazy(&tmp, &result, &result);
-      error |= s21_mul_lazy_to_10(&result);
     }
-    error |= s21_div_lazy_to_10(&result);
   }
 
   if (!error) {
@@ -71,17 +66,16 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
       exp *= -1;
     }
 
-    // Возводим 2 в степень exp
-    while (!error && (exp-- > 0)) error |= s21_mul_lazy(&tmp, &two, &tmp);
-
     int (*func)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *) =
     ((int (*)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *))(
         (direction >= 0) * (uintptr_t)s21_mul_lazy +
-    //! @bug Функция деления не растит остаток
         (direction < 0) * (uintptr_t)s21_div_lazy));
 
+    // Возводим 2 в степень exp
+    while (!error && (exp-- > 0)) error |= func(&tmp, &two, &tmp);
+
     // Умножаем/делим мантиссу на порядок в результате
-    error |= func(&result, &tmp, &result);
+    error |= s21_mul_lazy(&result, &tmp, &result);
 
     // Освобождаем память
     s21_lazy_destroy(&two);
@@ -105,11 +99,10 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   }
   
   // А потом округляем стандартно (в т.ч. банковским, правильно ли это?)
-  if (!error) {
-    // uint16_t exp = result.exponent;
-    result.exponent = 8;
+  if (!error && result.exponent > 7) {
+    result.exponent -= 7;
     error |= s21_round_lazy(&result, &result);
-    result.exponent = 7;
+    result.exponent += 7;
   }
   
   if (!error) {

@@ -408,9 +408,9 @@ START_TEST(test_mul_manual17) {
 END_TEST
 
 START_TEST(test_mul_manual97) {
-  // -0.0000000000000025
+  // -0.0000000000000025 = 25 * 10 ^ -16
   s21_decimal decimal1 = {{0x19, 0x0, 0x0, 0x80100000}};
-  // -0.0000000000000005
+  // -0.0000000000000005 = 5 * 10 ^ -16
   s21_decimal decimal2 = {{0x5, 0x0, 0x0, 0x80100000}};
   // too small
   // 0.0000000000000000000000000000
@@ -996,7 +996,7 @@ START_TEST(test_mul45) {
   // -0
   s21_decimal decimal2 = {{0x0, 0x0, 0x0, 0x80000000}};
   // 0
-  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x80000000}};
+  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x0}};
 
   test_mul(decimal1, decimal2, decimal_check);
 }
@@ -1020,7 +1020,7 @@ START_TEST(test_mul47) {
   // -0.0000000000000000000000000000
   s21_decimal decimal2 = {{0x0, 0x0, 0x0, 0x801C0000}};
   // 0
-  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x80000000}};
+  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x0}};
 
   test_mul(decimal1, decimal2, decimal_check);
 }

@@ -89,18 +89,19 @@ int main() {
 
   */
 
+   // -0.0000000000000005
+  s21_decimal decimal1 = {{0x5, 0x0, 0x0, 0x80100000}};
   // 26409387504754779197847983445
-  s21_decimal decimal1 = {{0x55555555, 0x55555555, 0x55555555, 0x0}};
-  // -0
-  s21_decimal decimal2 = {{0x0, 0x0, 0x0, 0x80000000}};
-  // 0
-  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x0}};
+  s21_decimal decimal2 = {{0x55555555, 0x55555555, 0x55555555, 0x0}};
+  // -13204693752377.389598923991722
+  s21_decimal decimal_check = {
+      {0xAAAAAAAA, 0xAAAAAAAA, 0x2AAAAAAA, 0x800F0000}};
   s21_decimal result = {{0}};
 
-  int error = 0;
+  int error = 0, code_check = 0;
   error = s21_mul(decimal1, decimal2, &result);
 
-  printf("error: %d\n", error);
+  printf("error: %d, code_check: %d\n", error, code_check);
   s21_decimal_print(&result, "result: ");
   s21_decimal_print(&decimal_check, " check: ");
 
