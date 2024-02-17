@@ -996,7 +996,7 @@ START_TEST(test_mul45) {
   // -0
   s21_decimal decimal2 = {{0x0, 0x0, 0x0, 0x80000000}};
   // 0
-  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x0}};
+  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x80000000}};
 
   test_mul(decimal1, decimal2, decimal_check);
 }
@@ -1020,7 +1020,7 @@ START_TEST(test_mul47) {
   // -0.0000000000000000000000000000
   s21_decimal decimal2 = {{0x0, 0x0, 0x0, 0x801C0000}};
   // 0
-  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x0}};
+  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x80000000}};
 
   test_mul(decimal1, decimal2, decimal_check);
 }
@@ -41542,7 +41542,7 @@ Suite *mul_suite1(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul1");
+  s = suite_create("\x1b[1;33m-=S21_MUL_1=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul1);
   tcase_add_test(tc_core, test_mul2);
@@ -41953,7 +41953,7 @@ Suite *mul_suite2(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul2");
+  s = suite_create("\x1b[1;33m-=S21_MUL_2=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul401);
   tcase_add_test(tc_core, test_mul402);
@@ -42364,7 +42364,7 @@ Suite *mul_suite3(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul3");
+  s = suite_create("\x1b[1;33m-=S21_MUL_3=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul801);
   tcase_add_test(tc_core, test_mul802);
@@ -42775,7 +42775,7 @@ Suite *mul_suite4(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul4");
+  s = suite_create("\x1b[1;33m-=S21_MUL_4=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul1201);
   tcase_add_test(tc_core, test_mul1202);
@@ -43186,7 +43186,7 @@ Suite *mul_suite5(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul5");
+  s = suite_create("\x1b[1;33m-=S21_MUL_5=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul1601);
   tcase_add_test(tc_core, test_mul1602);
@@ -43597,7 +43597,7 @@ Suite *mul_suite6(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul6");
+  s = suite_create("\x1b[1;33m-=S21_MUL_6=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul2001);
   tcase_add_test(tc_core, test_mul2002);
@@ -44008,7 +44008,7 @@ Suite *mul_suite7(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul7");
+  s = suite_create("\x1b[1;33m-=S21_MUL_7=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul2401);
   tcase_add_test(tc_core, test_mul2402);
@@ -44419,7 +44419,7 @@ Suite *mul_suite8(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul8");
+  s = suite_create("\x1b[1;33m-=S21_MUL_8=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul2801);
   tcase_add_test(tc_core, test_mul2802);
@@ -44830,7 +44830,7 @@ Suite *mul_suite9(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul9");
+  s = suite_create("\x1b[1;33m-=S21_MUL_9=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul3201);
   tcase_add_test(tc_core, test_mul3202);
@@ -45005,7 +45005,7 @@ Suite *mul_suite0(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("mul0");
+  s = suite_create("\x1b[1;33m-=S21_MUL_0=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_mul_fail_manual1);
   tcase_add_test(tc_core, test_mul_fail_manual2);
@@ -45052,7 +45052,7 @@ Suite *mul_suite0(void) {
 }
 
 void test_mul(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check) {
-  s21_decimal result;
+  s21_decimal result = {{0}};
   int code = s21_mul(decimal1, decimal2, &result);
   ck_assert_int_eq(s21_is_equal(result, check), 1);
   ck_assert_int_eq(code, arifm_ok);
@@ -45060,14 +45060,14 @@ void test_mul(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check) {
 
 void test_mul_fail1(s21_decimal decimal1, s21_decimal decimal2,
                     int code_check) {
-  s21_decimal result;
+  s21_decimal result = {{0}};
   int code = s21_mul(decimal1, decimal2, &result);
   ck_assert_int_eq(code, code_check);
 }
 
 void test_mul_fail2(s21_decimal decimal1, s21_decimal decimal2,
                     s21_decimal decimal_check, int code_check) {
-  s21_decimal result;
+  s21_decimal result = {{0}};
   int code = s21_mul(decimal1, decimal2, &result);
   ck_assert_int_eq(code, code_check);
   ck_assert_int_eq(s21_is_equal(result, decimal_check), 1);

@@ -2,8 +2,6 @@
 
 #include "s21_decimal.h"
 
-/// @todo передача по значению для облегчения работы функций
-
 /*!
   @ingroup ArifmeticOperators Арифметические операторы
   @brief Функция вычитания s21_decimal_lazy.
@@ -17,7 +15,7 @@
 */
 int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
-  int error = 0;
+  int error = 0, done = 0;
   uint16_t result_size = 0;
   s21_decimal_lazy tmp = {0}, tmp_res = {0};
 
@@ -32,8 +30,8 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     error |= s21_lazy_resize(&tmp_res, result_size);
     error |= s21_lazy_resize(result, result_size);
   }
-
-  if (!error) {
+  
+  if (!error && !done) {
     uint16_t res = 0;
     uint8_t carry = 0;
 

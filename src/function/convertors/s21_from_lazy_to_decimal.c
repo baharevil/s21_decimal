@@ -50,6 +50,12 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
   if (!error && (tmp_v.size > dec_size)) {
     error = inf + tmp_v.sign;
   }
+
+  // ? мб и не надо
+  if (!error && tmp_v.exponent > 28) {
+    error |= s21_lazy_normalization(&tmp_v, 28);
+  }
+
   /*
     Если tmp_v.exponent != 0, значит работаем с дробной частью
     и нужно выравнять значение 5 в нужный ранг.
