@@ -30,7 +30,7 @@ int s21_mul_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     error |= s21_lazy_resize(&tmp_res, result_size);
     error |= s21_lazy_resize(result, result_size);
   }
-  
+
   if (!error && !done) {
     uint16_t res = 0;
     uint8_t carry = 0;

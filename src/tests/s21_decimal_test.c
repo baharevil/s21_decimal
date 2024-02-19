@@ -69,11 +69,9 @@ void run_tests_s21_sub(void) {
 // S21_MUL_TEST
 void run_tests_s21_mul(void) {
   printf("\n\x1b[4;36m TEST S21_MUL \x1b[0m\n");
-  Suite *list_cases[] = {
-                          mul_suite0(), mul_suite1(), mul_suite2(), mul_suite3(),
-                          mul_suite4(), mul_suite5(), mul_suite6(),
-                          mul_suite7(), mul_suite8(), mul_suite9(),
-                         NULL};
+  Suite *list_cases[] = {mul_suite0(), mul_suite1(), mul_suite2(), mul_suite3(),
+                         mul_suite4(), mul_suite5(), mul_suite6(), mul_suite7(),
+                         mul_suite8(), mul_suite9(), NULL};
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
        current_testcase++) {
     run_testcase(*current_testcase);
@@ -100,11 +98,11 @@ void run_tests_s21_div(void) {
 void run_tests_s21_mod(void) {
   printf("\n\x1b[4;36m TEST S21_MOD \x1b[0m\n");
   Suite *list_cases[] = {mod_suite0(), mod_suite1(), mod_suite2(), mod_suite3(),
-                          // mod_suite4(), mod_suite5(), mod_suite6(),
-                          // mod_suite7(), mod_suite8(), mod_suite9(),
-                          // mod_suite10(), mod_suite11(), mod_suite12(),
-                          // mod_suite13(), mod_suite14(), mod_suite15(),
-                          // mod_suite16(), mod_suite17(), mod_suite18(),
+                         // mod_suite4(), mod_suite5(), mod_suite6(),
+                         // mod_suite7(), mod_suite8(), mod_suite9(),
+                         // mod_suite10(), mod_suite11(), mod_suite12(),
+                         // mod_suite13(), mod_suite14(), mod_suite15(),
+                         // mod_suite16(), mod_suite17(), mod_suite18(),
                          NULL};
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
        current_testcase++) {

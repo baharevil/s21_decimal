@@ -47,8 +47,7 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
     error |= s21_lazy_normalization(&tmp_v, tmp_v.exponent - 1);
 
   // check error
-  if (!error && (tmp_v.size > dec_size))
-    error = inf + tmp_v.sign;
+  if (!error && (tmp_v.size > dec_size)) error = inf + tmp_v.sign;
 
   // ? мб и не надо
   if (!error && tmp_v.exponent > 28) {
@@ -76,7 +75,7 @@ int s21_from_lazy_to_decimal(s21_decimal_lazy *src, s21_decimal *dest) {
   if (!error && tmp_v.exponent != src->exponent) {
     // вычесляем остаток
     s21_sub_lazy(src, &tmp_v, &carry);
-    
+
     if (tmp_v.exponent) lazy_five.exponent = tmp_v.exponent + 1;
     lazy_one.exponent = tmp_v.exponent;
     lazy_one.sign = tmp_v.sign;

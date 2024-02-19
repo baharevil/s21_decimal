@@ -67,9 +67,9 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
     }
 
     int (*func)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *) =
-    ((int (*)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *))(
-        (direction >= 0) * (uintptr_t)s21_mul_lazy +
-        (direction < 0) * (uintptr_t)s21_div_lazy));
+        ((int (*)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *))(
+            (direction >= 0) * (uintptr_t)s21_mul_lazy +
+            (direction < 0) * (uintptr_t)s21_div_lazy));
 
     // Возводим 2 в степень exp
     while (!error && (exp-- > 0)) error |= func(&tmp, &two, &tmp);
@@ -80,7 +80,7 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
     // Освобождаем память
     s21_lazy_destroy(&two);
   }
-  
+
   // Сначала проверяем то, что у нас получилось на +-inf
   if (!error) {
     s21_decimal_lazy null = {0};
@@ -92,19 +92,18 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
       s21_from_lazy_to_decimal(&null, dst);
     }
 
-    if (error != arifm_ok)
-      error = conv_false;
-    
+    if (error != arifm_ok) error = conv_false;
+
     s21_lazy_destroy(&null);
   }
-  
+
   // А потом округляем стандартно (в т.ч. банковским, правильно ли это?)
   if (!error && result.exponent > 7) {
     result.exponent -= 7;
     error |= s21_round_lazy(&result, &result);
     result.exponent += 7;
   }
-  
+
   if (!error) {
     error = s21_from_lazy_to_decimal(&result, dst);
   }

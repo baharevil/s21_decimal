@@ -19,7 +19,13 @@ int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
   result = -2 * (value_1 == NULL || value_1->mantissa == NULL);
   result = -2 * (value_2 == NULL || value_2->mantissa == NULL);
 
-  if (!result && value_1->sign == value_2->sign) {
+  // check zero
+  if (!result && !s21_search_msb_lazy(value_1) &&
+      !s21_search_msb_lazy(value_2)) {
+    result = 0;
+  }
+
+  else if (!result && value_1->sign == value_2->sign) {
     s21_decimal_lazy lvalue = {0}, rvalue = {0};
     result |= s21_lazy_to_lazy_cp(value_1, &lvalue);
     result |= s21_lazy_to_lazy_cp(value_2, &rvalue);
@@ -40,7 +46,9 @@ int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
 
     s21_lazy_destroy(&lvalue);
     s21_lazy_destroy(&rvalue);
-  } else
+  } 
+  
+  else
     result = (value_2->sign) - (value_1->sign);
 
   return result;
