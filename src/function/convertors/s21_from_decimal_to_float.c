@@ -37,9 +37,12 @@ int s21_from_decimal_to_float(s21_decimal src, float *dst) {
       d += *(tmp.mantissa + i);
     }
 
-    // Приведение экспоненты
-    if (tmp.exponent)
-      d *= pow(10, (double) -(tmp.exponent));
+    // Приведение экспоненты -1
+    d *= pow(10, (double) -(tmp.exponent - 1));
+    if (!fmod(d, 2.0))
+      d = floor(d + 0.51);
+    // Нормализация
+    d *= pow(10, (double) -1);
 
     // Обработка знаков
     if (tmp.sign)
