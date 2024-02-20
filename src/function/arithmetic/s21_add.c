@@ -20,7 +20,7 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 
   error |= !s21_decimal_ptr_is_valid(&value_1);
   error |= !s21_decimal_ptr_is_valid(&value_2);
-  error |= !s21_decimal_ptr_is_valid(result);
+  error |= (result == NULL);
 
   if (!error) {
     error |= s21_lazy_init(&lazy1, &value_1);

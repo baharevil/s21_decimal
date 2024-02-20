@@ -7,19 +7,19 @@
 #include "s21_decimal_test.h"
 
 int main(void) {
-  // run_tests_s21_add();
-  // run_tests_s21_sub();
+  run_tests_s21_add();
+  run_tests_s21_sub();
   run_tests_s21_mul();
   // run_tests_s21_div();
-  // run_tests_s21_mod();
+
+  run_tests_s21_is_less();
+  run_tests_s21_is_less_or_equal();
+  run_tests_s21_is_greater();
+  run_tests_s21_is_greater_or_equal();
+  run_tests_s21_is_equal();
+  run_tests_s21_is_not_equal();
 
   // run_tests_s21_round();
-  // run_tests_s21_is_equal();
-  // run_tests_s21_is_not_equal();
-  // run_tests_s21_is_greater();
-  // run_tests_s21_is_greater_or_equal();
-  // run_tests_s21_is_less();
-  // run_tests_s21_is_less_or_equal();
   return 0;
 }
 
@@ -31,8 +31,7 @@ void run_testcase(Suite *testcase) {
   counter_testcase++;
   SRunner *sr = srunner_create(testcase);
 
-  // srunner_set_fork_status(sr, CK_NOFORK);
-  srunner_set_fork_status(sr, CK_FORK);
+  srunner_set_fork_status(sr, CK_NOFORK);
   srunner_run_all(sr, CK_NORMAL);
 
   srunner_free(sr);
@@ -81,29 +80,11 @@ void run_tests_s21_mul(void) {
 // S21_DIV_TEST
 void run_tests_s21_div(void) {
   printf("\n\x1b[4;36m TEST S21_DIV \x1b[0m\n");
-  Suite *list_cases[] = {div_suite0(), div_suite1(), div_suite2(), div_suite3(),
-                         //  div_suite4(), div_suite5(), div_suite6(),
-                         //  div_suite7(), div_suite8(), div_suite9(),
-                         //  div_suite10(), div_suite11(), div_suite12(),
-                         //  div_suite13(), div_suite14(), div_suite15(),
-                         //  div_suite16(), div_suite17(), div_suite18(),
-                         NULL};
-  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
-       current_testcase++) {
-    run_testcase(*current_testcase);
-  }
-}
-
-// S21_MOD_TEST
-void run_tests_s21_mod(void) {
-  printf("\n\x1b[4;36m TEST S21_MOD \x1b[0m\n");
-  Suite *list_cases[] = {mod_suite0(), mod_suite1(), mod_suite2(), mod_suite3(),
-                         // mod_suite4(), mod_suite5(), mod_suite6(),
-                         // mod_suite7(), mod_suite8(), mod_suite9(),
-                         // mod_suite10(), mod_suite11(), mod_suite12(),
-                         // mod_suite13(), mod_suite14(), mod_suite15(),
-                         // mod_suite16(), mod_suite17(), mod_suite18(),
-                         NULL};
+  Suite *list_cases[] = {
+      div_suite0(),  div_suite1(),  div_suite2(),  div_suite3(),  div_suite4(),
+      div_suite5(),  div_suite6(),  div_suite7(),  div_suite8(),  div_suite9(),
+      div_suite10(), div_suite11(), div_suite12(), div_suite13(), div_suite14(),
+      div_suite15(), div_suite16(), div_suite17(), div_suite18(), NULL};
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
        current_testcase++) {
     run_testcase(*current_testcase);
@@ -114,51 +95,26 @@ void run_tests_s21_mod(void) {
                     Compare
  *************************************************************************/
 
-// S21_IS_EQUAL_TEST
-void run_tests_s21_is_equal(void) {
-  printf("\n\x1b[4;36m TEST S21_IS_EQUAL \x1b[0m\n");
-  Suite *list_cases[] = {equal_suite0(), equal_suite1(), NULL};
-  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
-       current_testcase++) {
-    run_testcase(*current_testcase);
-  }
-}
-
-// S21_IS_NOT_EQUAL_TEST
-void run_tests_s21_is_not_equal(void) {
-  printf("\n\x1b[4;36m TEST S21_IS_NOT_EQUAL \x1b[0m\n");
-  Suite *list_cases[] = {not_equal_suite0(), not_equal_suite1(), NULL};
-  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
-       current_testcase++) {
-    run_testcase(*current_testcase);
-  }
-}
-
-// S21_IS_GREATER_TEST
-void run_tests_s21_is_greater(void) {
-  printf("\n\x1b[4;36m TEST S21_IS_GREATER \x1b[0m\n");
-  Suite *list_cases[] = {greater_suite0(), greater_suite1(), NULL};
-  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
-       current_testcase++) {
-    run_testcase(*current_testcase);
-  }
-}
-
-// S21_IS_GREATER_OR_EQUAL_TEST
-void run_tests_s21_is_greater_or_equal(void) {
-  printf("\n\x1b[4;36m TEST S21_IS_GREATER_OR_EQUAL \x1b[0m\n");
-  Suite *list_cases[] = {greater_or_equal_suite0(), greater_or_equal_suite1(),
-                         NULL};
-  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
-       current_testcase++) {
-    run_testcase(*current_testcase);
-  }
-}
-
 // S21_IS_LESS_TEST
 void run_tests_s21_is_less(void) {
   printf("\n\x1b[4;36m TEST S21_IS_LESS \x1b[0m\n");
-  Suite *list_cases[] = {less_suite0(), less_suite1(), NULL};
+  Suite *list_cases[] = {is_less_suite1(),
+                         is_less_suite2(),
+                         is_less_suite3(),
+                         is_less_suite4(),
+                         is_less_suite5(),
+                         is_less_suite6(),
+                         is_less_suite7(),
+                         is_less_suite8(),
+                         is_less_suite9(),
+                         is_less_suite10(),
+                         is_less_suite11(),
+                         is_less_suite12(),
+                         is_less_suite13(),
+                         is_less_suite14(),
+                         is_less_suite15(),
+                         is_less_suite16(),
+                         NULL};
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
        current_testcase++) {
     run_testcase(*current_testcase);
@@ -168,12 +124,136 @@ void run_tests_s21_is_less(void) {
 // S21_IS_LESS_OR_EQUAL_TEST
 void run_tests_s21_is_less_or_equal(void) {
   printf("\n\x1b[4;36m TEST S21_IS_LESS_OR_EQUAL \x1b[0m\n");
-  Suite *list_cases[] = {less_or_equal_suite0(), less_or_equal_suite1(), NULL};
+  Suite *list_cases[] = {is_less_or_equal_suite1(),
+                         is_less_or_equal_suite2(),
+                         is_less_or_equal_suite3(),
+                         is_less_or_equal_suite4(),
+                         is_less_or_equal_suite5(),
+                         is_less_or_equal_suite6(),
+                         is_less_or_equal_suite7(),
+                         is_less_or_equal_suite8(),
+                         is_less_or_equal_suite9(),
+                         is_less_or_equal_suite10(),
+                         is_less_or_equal_suite11(),
+                         is_less_or_equal_suite12(),
+                         is_less_or_equal_suite13(),
+                         is_less_or_equal_suite14(),
+                         is_less_or_equal_suite15(),
+                         is_less_or_equal_suite16(),
+                         NULL};
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
        current_testcase++) {
     run_testcase(*current_testcase);
   }
 }
+
+// S21_IS_GREATER_TEST
+void run_tests_s21_is_greater(void) {
+  printf("\n\x1b[4;36m TEST S21_IS_GREATER \x1b[0m\n");
+  Suite *list_cases[] = {is_greater_suite1(),
+                         is_greater_suite2(),
+                         is_greater_suite3(),
+                         is_greater_suite4(),
+                         is_greater_suite5(),
+                         is_greater_suite6(),
+                         is_greater_suite7(),
+                         is_greater_suite8(),
+                         is_greater_suite9(),
+                         is_greater_suite10(),
+                         is_greater_suite11(),
+                         is_greater_suite12(),
+                         is_greater_suite13(),
+                         is_greater_suite14(),
+                         is_greater_suite15(),
+                         is_greater_suite16(),
+                         NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
+
+// S21_IS_GREATER_OR_EQUAL_TEST
+void run_tests_s21_is_greater_or_equal(void) {
+  printf("\n\x1b[4;36m TEST S21_IS_GREATER_OR_EQUAL \x1b[0m\n");
+  Suite *list_cases[] = {is_greater_or_equal_suite1(),
+                         is_greater_or_equal_suite2(),
+                         is_greater_or_equal_suite3(),
+                         is_greater_or_equal_suite4(),
+                         is_greater_or_equal_suite5(),
+                         is_greater_or_equal_suite6(),
+                         is_greater_or_equal_suite7(),
+                         is_greater_or_equal_suite8(),
+                         is_greater_or_equal_suite9(),
+                         is_greater_or_equal_suite10(),
+                         is_greater_or_equal_suite11(),
+                         is_greater_or_equal_suite12(),
+                         is_greater_or_equal_suite13(),
+                         is_greater_or_equal_suite14(),
+                         is_greater_or_equal_suite15(),
+                         is_greater_or_equal_suite16(),
+                         NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
+
+// S21_IS_EQUAL_TEST
+void run_tests_s21_is_equal(void) {
+  printf("\n\x1b[4;36m TEST S21_IS_EQUAL \x1b[0m\n");
+  Suite *list_cases[] = {is_equal_suite1(),
+                         is_equal_suite2(),
+                         is_equal_suite3(),
+                         is_equal_suite4(),
+                         is_equal_suite5(),
+                         is_equal_suite6(),
+                         is_equal_suite7(),
+                         is_equal_suite8(),
+                         is_equal_suite9(),
+                         is_equal_suite10(),
+                         is_equal_suite11(),
+                         is_equal_suite12(),
+                         is_equal_suite13(),
+                         is_equal_suite14(),
+                         is_equal_suite15(),
+                         is_equal_suite16(),
+                         NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
+
+// S21_IS_NOT_EQUAL_TEST
+void run_tests_s21_is_not_equal(void) {
+  printf("\n\x1b[4;36m TEST S21_IS_NOT_EQUAL \x1b[0m\n");
+  Suite *list_cases[] = {is_not_equal_suite1(),
+                         is_not_equal_suite2(),
+                         is_not_equal_suite3(),
+                         is_not_equal_suite4(),
+                         is_not_equal_suite5(),
+                         is_not_equal_suite6(),
+                         is_not_equal_suite7(),
+                         is_not_equal_suite8(),
+                         is_not_equal_suite9(),
+                         is_not_equal_suite10(),
+                         is_not_equal_suite11(),
+                         is_not_equal_suite12(),
+                         is_not_equal_suite13(),
+                         is_not_equal_suite14(),
+                         is_not_equal_suite15(),
+                         is_not_equal_suite16(),
+                         NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
+
+/**************************************************************************
+                    Another
+ *************************************************************************/
 
 // S21_ROUND_TEST
 void run_tests_s21_round(void) {

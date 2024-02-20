@@ -24,44 +24,26 @@ uint8_t s21_lazy_normalization(s21_decimal_lazy *lazy, uint8_t exp) {
   s21_decimal_lazy tmp_value = {0};  //, carry = {0};
 
   // Напраление изменения стпени. Если 1 -> увеличиваем, -1 -> уменьшаем
-  int8_t direction = 0, res_exp = 0;
+  int8_t direction = 0;
 
   // Первичная проверка
   error = (lazy == NULL);
 
   if (!error) {
     direction = (exp > lazy->exponent) - (exp < lazy->exponent);
-    res_exp = (direction >= 0) * (exp - lazy->exponent) +
-              (direction < 0) * (-exp + lazy->exponent);
 
     // Инициализация переменных
     error |= s21_lazy_to_lazy_cp(lazy, &tmp_value);
     error |= s21_lazy_init(&l_ten, &ten);
   }
 
-  /*
-    Метод расчета домножение мантиссы на 10^|exp - lazy->exponent|
-
-    Подгоняем 10 сначала в геометрической прогрессии,
-    потом обыным домножением на 10.
-  */
-  while (!error && l_ten.exponent * 2 <= res_exp)
-    error |= s21_mul_lazy(&l_ten, &l_ten, &l_ten);
-
-  while (!error && l_ten.exponent < res_exp)
-    error |= s21_mul_lazy_to_10(&l_ten);
-
-  // если |exp - lazy->exponent| == 0, то нужно вызвать функцию со значением 1
-  if (!error && res_exp == 0) error |= s21_div_lazy_to_10(&l_ten);
-
   // Выбор функции и расчет остатка в случае уменьшения экспоненты вниз
   if (!error) {
-    int (*func)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *) =
-        ((int (*)(s21_decimal_lazy *, s21_decimal_lazy *, s21_decimal_lazy *))(
-            (direction >= 0) * (uintptr_t)s21_mul_lazy +
-            (direction < 0) * (uintptr_t)s21_mod_lazy));
+    uint8_t (*func)(s21_decimal_lazy *) = ((uint8_t(*)(s21_decimal_lazy *))(
+        (direction >= 0) * (uintptr_t)s21_mul_lazy_to_10 +
+        (direction < 0) * (uintptr_t)s21_div_lazy_to_10));
 
-    error |= func(&tmp_value, &l_ten, &tmp_value);
+    while (tmp_value.exponent != exp) error |= func(&tmp_value);
   }
 
   // Заменяем исходник новым значением

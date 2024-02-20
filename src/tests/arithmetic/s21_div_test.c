@@ -93933,7 +93933,7 @@ Suite *div_suite0(void) {
 }
 
 void test_div(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check) {
-  s21_decimal result = {{0x0, 0x0, 0x0, 0x0}};
+  s21_decimal result = {{0}};
   int code = s21_div(decimal1, decimal2, &result);
   ck_assert_int_eq(s21_is_equal(result, check), 1);
   ck_assert_int_eq(code, arifm_ok);
@@ -93941,14 +93941,14 @@ void test_div(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check) {
 
 void test_div_fail1(s21_decimal decimal1, s21_decimal decimal2,
                     int code_check) {
-  s21_decimal result = {{0x0, 0x0, 0x0, 0x0}};
+  s21_decimal result = {{0}};
   int code = s21_div(decimal1, decimal2, &result);
   ck_assert_int_eq(code, code_check);
 }
 
 void test_div_fail2(s21_decimal decimal1, s21_decimal decimal2,
                     s21_decimal decimal_check, int code_check) {
-  s21_decimal result = {{0x0, 0x0, 0x0, 0x0}};
+  s21_decimal result = {{0}};
   int code = s21_div(decimal1, decimal2, &result);
   ck_assert_int_eq(code, code_check);
   ck_assert_int_eq(s21_is_equal(result, decimal_check), 1);

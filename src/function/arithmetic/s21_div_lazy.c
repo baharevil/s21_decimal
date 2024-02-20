@@ -74,7 +74,10 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   int error = 0;
 
   s21_decimal ten = {{0xa, 0x0, 0x0, 0x0}};
-  s21_decimal_lazy lazy_ten = {0};
+  s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
+  s21_decimal five = {{0x5, 0x0, 0x0, 0x0}};
+  s21_decimal_lazy lazy_ten = {0}, lazy_one = {0}, lazy_five = {0};
+
   s21_decimal_lazy carry = {0}, divider = {0}, res_temp = {0}, tmp = {0};
 
   // Первичная валидация
@@ -83,7 +86,7 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   error |= !s21_lazy_ptr_is_valid(result);
 
   // Вторичная валидация
-  if (!error && s21_is_null_lazy(value_2)) error = 2;
+  if (!error && s21_is_null_lazy(value_2)) error = div_by_0;
 
   // Инициализация переменных
   if (!error) {
@@ -91,6 +94,8 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     error |= s21_lazy_init(&carry, NULL);
     error |= s21_lazy_init(&divider, NULL);
     error |= s21_lazy_init(&res_temp, NULL);
+    error |= s21_lazy_init(&lazy_one, &one);
+    error |= s21_lazy_init(&lazy_five, &five);
     error |= s21_lazy_init(&lazy_ten, &ten);
   }
 
@@ -119,7 +124,10 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     error |= s21_add_lazy(&res_temp, &tmp, &res_temp);
   }
 
-  /// @todo Округление
+  if (!error && s21_is_equal_lazy(&carry, &lazy_five) >= 0) {
+    lazy_one.exponent = res_temp.exponent;
+    error |= s21_add_lazy(&res_temp, &lazy_one, &res_temp);
+  }
 
   // Копирование результата + Расчет знака
   if (!error) {
@@ -132,6 +140,8 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   s21_lazy_destroy(&carry);
   s21_lazy_destroy(&divider);
   s21_lazy_destroy(&res_temp);
+  s21_lazy_destroy(&lazy_one);
+  s21_lazy_destroy(&lazy_five);
   s21_lazy_destroy(&lazy_ten);
 
   return error;

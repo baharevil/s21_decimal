@@ -95,49 +95,136 @@ void test_div_fail2(s21_decimal decimal1, s21_decimal decimal2,
                     s21_decimal decimal_check, int code_check);
 void run_tests_s21_div(void);
 
-// S21_MOD_TEST
-Suite *mod_suite0(void);
-Suite *mod_suite1(void);
-Suite *mod_suite2(void);
-Suite *mod_suite3(void);
-Suite *mod_suite4(void);
-Suite *mod_suite5(void);
-Suite *mod_suite6(void);
-Suite *mod_suite7(void);
-Suite *mod_suite8(void);
-Suite *mod_suite9(void);
-
-void test_mod(s21_decimal decimal1, s21_decimal decimal2, s21_decimal check);
-void test_mod_fail(s21_decimal decimal1, s21_decimal decimal2, int code_check);
-void run_tests_s21_mod(void);
-
 /**************************************************************************
                     Compare
  *************************************************************************/
-
-// S21_IS_EQUAL_TEST
-Suite *equal_suite0(void);
-Suite *equal_suite1(void);
-
-// S21_IS_NOT_EQUAL_TEST
-Suite *not_equal_suite0(void);
-Suite *not_equal_suite1(void);
-
-// S21_IS_GREATER_TEST
-Suite *greater_suite0(void);
-Suite *greater_suite1(void);
-
-// S21_IS_GREATER_OR_EQUAL_TEST
-Suite *greater_or_equal_suite0(void);
-Suite *greater_or_equal_suite1(void);
-
 // S21_IS_LESS_TEST
-Suite *less_suite0(void);
-Suite *less_suite1(void);
+Suite *is_less_suite1(void);
+Suite *is_less_suite2(void);
+Suite *is_less_suite3(void);
+Suite *is_less_suite4(void);
+Suite *is_less_suite5(void);
+Suite *is_less_suite6(void);
+Suite *is_less_suite7(void);
+Suite *is_less_suite8(void);
+Suite *is_less_suite9(void);
+Suite *is_less_suite10(void);
+Suite *is_less_suite11(void);
+Suite *is_less_suite12(void);
+Suite *is_less_suite13(void);
+Suite *is_less_suite14(void);
+Suite *is_less_suite15(void);
+Suite *is_less_suite16(void);
+
+void test_is_less(s21_decimal decimal1, s21_decimal decimal2, int check);
+void run_tests_s21_is_less(void);
 
 // S21_IS_LESS_OR_EQUAL_TEST
-Suite *less_or_equal_suite0(void);
-Suite *less_or_equal_suite1(void);
+Suite *is_less_or_equal_suite1(void);
+Suite *is_less_or_equal_suite2(void);
+Suite *is_less_or_equal_suite3(void);
+Suite *is_less_or_equal_suite4(void);
+Suite *is_less_or_equal_suite5(void);
+Suite *is_less_or_equal_suite6(void);
+Suite *is_less_or_equal_suite7(void);
+Suite *is_less_or_equal_suite8(void);
+Suite *is_less_or_equal_suite9(void);
+Suite *is_less_or_equal_suite10(void);
+Suite *is_less_or_equal_suite11(void);
+Suite *is_less_or_equal_suite12(void);
+Suite *is_less_or_equal_suite13(void);
+Suite *is_less_or_equal_suite14(void);
+Suite *is_less_or_equal_suite15(void);
+Suite *is_less_or_equal_suite16(void);
+
+void test_is_less_or_equal(s21_decimal decimal1, s21_decimal decimal2,
+                           int check);
+void run_tests_s21_is_less_or_equal(void);
+
+// S21_IS_GREATER_TEST
+Suite *is_greater_suite1(void);
+Suite *is_greater_suite2(void);
+Suite *is_greater_suite3(void);
+Suite *is_greater_suite4(void);
+Suite *is_greater_suite5(void);
+Suite *is_greater_suite6(void);
+Suite *is_greater_suite7(void);
+Suite *is_greater_suite8(void);
+Suite *is_greater_suite9(void);
+Suite *is_greater_suite10(void);
+Suite *is_greater_suite11(void);
+Suite *is_greater_suite12(void);
+Suite *is_greater_suite13(void);
+Suite *is_greater_suite14(void);
+Suite *is_greater_suite15(void);
+Suite *is_greater_suite16(void);
+
+void test_is_greater(s21_decimal decimal1, s21_decimal decimal2, int check);
+void run_tests_s21_is_greater(void);
+
+// S21_IS_GREATER_OR_EQUAL_TEST
+Suite *is_greater_or_equal_suite1(void);
+Suite *is_greater_or_equal_suite2(void);
+Suite *is_greater_or_equal_suite3(void);
+Suite *is_greater_or_equal_suite4(void);
+Suite *is_greater_or_equal_suite5(void);
+Suite *is_greater_or_equal_suite6(void);
+Suite *is_greater_or_equal_suite7(void);
+Suite *is_greater_or_equal_suite8(void);
+Suite *is_greater_or_equal_suite9(void);
+Suite *is_greater_or_equal_suite10(void);
+Suite *is_greater_or_equal_suite11(void);
+Suite *is_greater_or_equal_suite12(void);
+Suite *is_greater_or_equal_suite13(void);
+Suite *is_greater_or_equal_suite14(void);
+Suite *is_greater_or_equal_suite15(void);
+Suite *is_greater_or_equal_suite16(void);
+
+void test_is_greater_or_equal(s21_decimal decimal1, s21_decimal decimal2,
+                              int check);
+void run_tests_s21_is_greater_or_equal(void);
+
+// S21_IS_EQUAL_TEST
+Suite *is_equal_suite1(void);
+Suite *is_equal_suite2(void);
+Suite *is_equal_suite3(void);
+Suite *is_equal_suite4(void);
+Suite *is_equal_suite5(void);
+Suite *is_equal_suite6(void);
+Suite *is_equal_suite7(void);
+Suite *is_equal_suite8(void);
+Suite *is_equal_suite9(void);
+Suite *is_equal_suite10(void);
+Suite *is_equal_suite11(void);
+Suite *is_equal_suite12(void);
+Suite *is_equal_suite13(void);
+Suite *is_equal_suite14(void);
+Suite *is_equal_suite15(void);
+Suite *is_equal_suite16(void);
+
+void test_is_equal(s21_decimal decimal1, s21_decimal decimal2, int check);
+void run_tests_s21_is_equal(void);
+
+// S21_IS_NOT_EQUAL_TEST
+Suite *is_not_equal_suite1(void);
+Suite *is_not_equal_suite2(void);
+Suite *is_not_equal_suite3(void);
+Suite *is_not_equal_suite4(void);
+Suite *is_not_equal_suite5(void);
+Suite *is_not_equal_suite6(void);
+Suite *is_not_equal_suite7(void);
+Suite *is_not_equal_suite8(void);
+Suite *is_not_equal_suite9(void);
+Suite *is_not_equal_suite10(void);
+Suite *is_not_equal_suite11(void);
+Suite *is_not_equal_suite12(void);
+Suite *is_not_equal_suite13(void);
+Suite *is_not_equal_suite14(void);
+Suite *is_not_equal_suite15(void);
+Suite *is_not_equal_suite16(void);
+
+void test_is_not_equal(s21_decimal decimal1, s21_decimal decimal2, int check);
+void run_tests_s21_is_not_equal(void);
 
 /**************************************************************************
                     another

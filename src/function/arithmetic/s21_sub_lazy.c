@@ -70,7 +70,7 @@ int s21_sub_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
       error |= s21_lazy_to_lazy_cp(&lvalue, &tmp);
       error |= s21_lazy_to_lazy_cp(&rvalue, &lvalue);
       error |= s21_lazy_to_lazy_cp(&tmp, &rvalue);
-      result->sign = !value_1->sign;
+      result->sign = !(value_1->sign && (s21_search_msb_lazy(value_1) != 0));
     } else
       result->sign = value_1->sign;
   }

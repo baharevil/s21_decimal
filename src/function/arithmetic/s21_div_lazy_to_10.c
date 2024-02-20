@@ -11,28 +11,21 @@
   @return Код ошибки: 0 - ОК, 1 - ошибка
 */
 uint8_t s21_div_lazy_to_10(s21_decimal_lazy *lazy) {
-  uint8_t error = 0;
-  s21_decimal ten = {{0xa, 0x0, 0x0, 0x0}};
-
-  s21_decimal_lazy ten_lazy = {0};
-  s21_decimal_lazy result = {0};
+  uint8_t error = 0, carry = 0;
+  int16_t count = lazy->size - 1, tmp = 0;
 
   error |= !s21_lazy_ptr_is_valid(lazy);
 
-  if (!error) {
-    error |= s21_lazy_init(&ten_lazy, &ten);
-    error |= s21_lazy_init(&result, NULL);
+  // Идем по существующим байтам и умножаем их с переносом старших бит
+  while (!error && count >= 0) {
+    tmp = (lazy->mantissa[count] + carry * 256) / 10;
+    carry = lazy->mantissa[count] - 10 * tmp;
+    lazy->mantissa[count] = tmp;
+    count--;
   }
 
-  if (!error) error = s21_mod_lazy(lazy, &ten_lazy, &result);
-
-  if (!error) {
-    result.exponent = lazy->exponent - 1;
-    error |= s21_lazy_to_lazy_cp(&result, lazy);
-  }
-
-  s21_lazy_destroy(&ten_lazy);
-  s21_lazy_destroy(&result);
+  // Уменьшаем экспоненту на 1, снаружи этого делать не надо
+  if (!error) lazy->exponent -= (lazy->exponent != 0);
 
   return error;
 }

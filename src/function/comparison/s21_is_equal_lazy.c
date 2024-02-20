@@ -46,8 +46,8 @@ int s21_is_equal_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2) {
 
     s21_lazy_destroy(&lvalue);
     s21_lazy_destroy(&rvalue);
-  } 
-  
+  }
+
   else
     result = (value_2->sign) - (value_1->sign);
 
