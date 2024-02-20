@@ -112,12 +112,12 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   }
 
   if (!error) {
-    carry.exponent = carry.sign = 0;
-    divider.exponent = divider.sign = 0;
+    carry.sign = 0;
+    divider.sign = 0;
   }
 
   // Расчет дробной части
-  while (!error && !s21_is_null_lazy(&carry) && res_temp.exponent < 30) {
+  while (!error && !s21_is_null_lazy(&carry) && res_temp.exponent < 29) {
     error |= s21_mul_lazy(&lazy_ten, &carry, &carry);
     error |= s21_mul_lazy_to_10(&res_temp);
     error |= s21_div_lazy_core(&carry, &divider, &tmp);

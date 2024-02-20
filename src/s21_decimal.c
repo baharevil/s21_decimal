@@ -107,21 +107,35 @@ int main() {
 
   */
 
-  s21_decimal result = {{0}};
+  // s21_decimal result = {{0}};
 
-  // 0.9
-  s21_decimal decimal = {{0x9, 0x0, 0x0, 0x10000}};
-  // 1
-  s21_decimal decimal_check = {{0x1, 0x0, 0x0, 0x0}};
+  // // 2
+  // s21_decimal decimal1 = {{0x2, 0x0, 0x0, 0x0}};
+  // // 1.2640938749860586450804312205
+  // s21_decimal decimal2 = {{0x1888888D, 0xBE250261, 0x28D856E6, 0x1C0000}};
+  // // 1.5821609767882606564463392905
+  // s21_decimal check = {{0x8B80B889, 0x20B8279E, 0x331F5430, 0x1C0000}};
 
-  int error = 0, code_check = 0;
-  error = s21_round(decimal, &result);
+  // int error = 0, code_check = 0;
+  // error = s21_div(decimal1, decimal2, &result);
 
-  printf("error: %d, code_check: %d\n", error, code_check);
-  printf("is_equal: %d\n", s21_is_equal(result, decimal_check));
+  // printf("error: %d, code_check: %d\n", error, code_check);
+  // printf("is_equal: %d\n", s21_is_equal(result, check));
 
-  s21_decimal_print(&result, "result: ");
-  s21_decimal_print(&decimal_check, " check: ");
+  // s21_decimal_print(&result, "result: ");
+  // s21_decimal_print(&check, " check: ");
+
+  // -2147483648
+  s21_decimal decimal = {{0x80000000, 0x0, 0x0, 0x80000000}};
+  int check = -2147483648, result = 0;
+  int error = 0;
+  
+  error = s21_from_decimal_to_int(decimal, &result);
+
+  printf("error:  %d\n", error);
+  printf("is_equal: %d\n", check == result);
+  printf("check:  %d\n", check);
+  printf("result: %d\n", result);
 
   return 0;
 }

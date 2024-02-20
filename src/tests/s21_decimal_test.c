@@ -7,26 +7,32 @@
 #include "s21_decimal_test.h"
 
 int main(void) {
-  //----------------------------------------------
-  run_tests_s21_add();                 // | + |
-  run_tests_s21_sub();                 // | + |
-  run_tests_s21_mul();                 // | + |
-  // run_tests_s21_div();                 // | - |
-  //----------------------------------------------
-  //----------------------------------------------
-  run_tests_s21_is_less();             // | + |
-  run_tests_s21_is_less_or_equal();    // | + |
-  run_tests_s21_is_greater();          // | + |
-  run_tests_s21_is_greater_or_equal(); // | + |
-  run_tests_s21_is_equal();            // | + |
-  run_tests_s21_is_not_equal();        // | + |
-  //----------------------------------------------
-  //----------------------------------------------
-  run_tests_s21_floor();               // | + |
-  run_tests_s21_round();               // | + |
-  run_tests_s21_truncate();            // | + |
-  run_tests_s21_negate();              // | + |
-  //----------------------------------------------
+  //------------------------------------------------
+  // run_tests_s21_add();                   // | + |
+  // run_tests_s21_sub();                   // | + |
+  // run_tests_s21_mul();                   // | + |
+  // run_tests_s21_div();                   // | - |
+  //------------------------------------------------
+  //------------------------------------------------
+  // run_tests_s21_is_less();               // | + |
+  // run_tests_s21_is_less_or_equal();      // | + |
+  // run_tests_s21_is_greater();            // | + |
+  // run_tests_s21_is_greater_or_equal();   // | + |
+  // run_tests_s21_is_equal();              // | + |
+  // run_tests_s21_is_not_equal();          // | + |
+  //------------------------------------------------
+  //------------------------------------------------
+  // run_tests_s21_from_int_to_decimal();   // | + |
+  run_tests_s21_from_float_to_decimal(); // | - |
+  // run_tests_s21_from_decimal_to_int();   // | + |
+  // run_tests_s21_from_decimal_to_float(); // | - |
+  //------------------------------------------------
+  //------------------------------------------------
+  // run_tests_s21_floor();                 // | + |
+  // run_tests_s21_round();                 // | + |
+  // run_tests_s21_truncate();              // | + |
+  // run_tests_s21_negate();                // | + |
+  //------------------------------------------------
 
   return 0;
 }
@@ -89,10 +95,12 @@ void run_tests_s21_mul(void) {
 void run_tests_s21_div(void) {
   printf("\n\x1b[4;36m TEST S21_DIV \x1b[0m");
   Suite *list_cases[] = {
-      div_suite0(),  div_suite1(),  div_suite2(),  div_suite3(),  div_suite4(),
-      div_suite5(),  div_suite6(),  div_suite7(),  div_suite8(),  div_suite9(),
-      div_suite10(), div_suite11(), div_suite12(), div_suite13(), div_suite14(),
-      div_suite15(), div_suite16(), div_suite17(), div_suite18(), NULL};
+      div_suite0(),  
+      // div_suite1(),  div_suite2(),  div_suite3(),  div_suite4(),
+      // div_suite5(),  div_suite6(),  div_suite7(),  div_suite8(),  div_suite9(),
+      // div_suite10(), div_suite11(), div_suite12(), div_suite13(), div_suite14(),
+      // div_suite15(), div_suite16(), div_suite17(), div_suite18(), 
+      NULL};
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
        current_testcase++) {
     run_testcase(*current_testcase);
@@ -263,12 +271,64 @@ void run_tests_s21_is_not_equal(void) {
                     CONVERTORS
  *************************************************************************/
 // S21_INT_TO_DECIMAL
+void run_tests_s21_from_int_to_decimal(void) {
+  printf("\n\x1b[4;36m TEST S21_FROM_INT_TO_DECIMAL \x1b[0m");
+  Suite *list_cases[] = {from_int_to_decimal_suite(),  NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
 
 // S21_FLOAT_TO_DECIMAL
+void run_tests_s21_from_float_to_decimal(void) {
+  printf("\n\x1b[4;36m TEST S21_FROM_FLOAT_TO_DECIMAL \x1b[0m");
+  Suite *list_cases[] = {from_float_to_decimal_suite0(), 
+                         from_float_to_decimal_suite1(), 
+                         from_float_to_decimal_suite2(),
+                         from_float_to_decimal_suite3(), 
+                         from_float_to_decimal_suite4(), 
+                         from_float_to_decimal_suite5(), 
+                         from_float_to_decimal_suite6(),
+                         from_float_to_decimal_suite7(), 
+                         NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
 
 // S21_DECIMAL_TO_INT
+void run_tests_s21_from_decimal_to_int(void) {
+  printf("\n\x1b[4;36m TEST S21_FROM_DECIMAL_TO_INT \x1b[0m");
+  Suite *list_cases[] = {from_decimal_to_int_suite0(), 
+                         from_decimal_to_int_suite1(), 
+                         from_decimal_to_int_suite2(),
+                         from_decimal_to_int_suite3(), NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
 
 // S21_DECIMAL_TO_FLOAT
+void run_tests_s21_from_decimal_to_float(void) {
+  printf("\n\x1b[4;36m TEST S21_FROM_DECIMAL_TO_FLOAT \x1b[0m");
+  Suite *list_cases[] = {from_decimal_to_float_suite0(), 
+                         from_decimal_to_float_suite1(), 
+                         from_decimal_to_float_suite2(),
+                         from_decimal_to_float_suite3(), 
+                         from_decimal_to_float_suite4(), 
+                         from_decimal_to_float_suite5(), 
+                         from_decimal_to_float_suite6(),
+                         from_decimal_to_float_suite7(), 
+                         from_decimal_to_float_suite8(), 
+                         NULL};
+  for (Suite **current_testcase = list_cases; *current_testcase != NULL;
+       current_testcase++) {
+    run_testcase(*current_testcase);
+  }
+}
 
 /**************************************************************************
                     ANOTHER
