@@ -15,8 +15,8 @@
 int s21_round(s21_decimal value, s21_decimal *result) {
   int error = ok;
 
-  error |= !s21_decimal_is_valid(&value);
-  error |= !s21_decimal_is_valid(result);
+  error |= !s21_decimal_ptr_is_valid(&value);
+  error |= (result == NULL);
 
   if (!error) {
     s21_decimal_lazy lazy_value = {0}, lazy_result = {0};

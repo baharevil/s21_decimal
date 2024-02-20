@@ -94,14 +94,14 @@ int main() {
     -----------======TIME======-----------
 
     ---------======VALGRIND======---------
-      HEAP SUMMARY: 
-      in use 
+      HEAP SUMMARY:
+      in use
       at exit:       0 bytes in 0 blocks
-      total 
-      heap usage:    4,288,793 allocs, 
-                     4,288,793 frees, 
+      total
+      heap usage:    4,288,793 allocs,
+                     4,288,793 frees,
                      665,801,084 bytes
-      ERROR SUMMARY: 0 errors from 0 contexts 
+      ERROR SUMMARY: 0 errors from 0 contexts
                      (suppressed: 0 from 0)
     ---------======VALGRIND======---------
 
@@ -109,21 +109,19 @@ int main() {
 
   s21_decimal result = {{0}};
 
-  // 7.922816251426433759354395034
-  s21_decimal decimal1 = {{0x9999999A, 0x99999999, 0x19999999, 0x1B0000}};
-  // 3.9614081257132168796771975168
-  s21_decimal decimal2 = {{0x0, 0x0, 0x80000000, 0x1C0000}};
-  // 11.884224377139650639031592551
-  s21_decimal check = {{0x66666667, 0x66666666, 0x26666666, 0x1B0000}};
+  // 0.9
+  s21_decimal decimal = {{0x9, 0x0, 0x0, 0x10000}};
+  // 1
+  s21_decimal decimal_check = {{0x1, 0x0, 0x0, 0x0}};
 
   int error = 0, code_check = 0;
-  error = s21_add(decimal1, decimal2, &result);
+  error = s21_round(decimal, &result);
 
   printf("error: %d, code_check: %d\n", error, code_check);
-  printf("is_equal: %d\n", s21_is_equal(result, check));
+  printf("is_equal: %d\n", s21_is_equal(result, decimal_check));
 
   s21_decimal_print(&result, "result: ");
-  s21_decimal_print(&check, " check: ");
+  s21_decimal_print(&decimal_check, " check: ");
 
   return 0;
 }

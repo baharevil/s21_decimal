@@ -10335,7 +10335,7 @@ Suite *truncate_suite1(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("truncate_suite1");
+  s = suite_create("\x1b[1;33m-=S21_TRUNCATE_1=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_truncate_ok1);
   tcase_add_test(tc_core, test_truncate_ok2);
@@ -10746,7 +10746,7 @@ Suite *truncate_suite2(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("truncate_suite2");
+  s = suite_create("\x1b[1;33m-=S21_TRUNCATE_2=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_truncate_ok401);
   tcase_add_test(tc_core, test_truncate_ok402);
@@ -11157,7 +11157,7 @@ Suite *truncate_suite3(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("truncate_suite3");
+  s = suite_create("\x1b[1;33m-=S21_TRUNCATE_3=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_truncate_ok801);
   tcase_add_test(tc_core, test_truncate_ok802);
@@ -11388,7 +11388,7 @@ Suite *truncate_suite0(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("truncate_suite0");
+  s = suite_create("\x1b[1;33m-=S21_TRUNCATE_0=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_truncate_fail1);
   tcase_add_test(tc_core, test_truncate_fail2);
@@ -11405,7 +11405,7 @@ Suite *truncate_suite0(void) {
 }
 
 void test_truncate(s21_decimal decimal, s21_decimal decimal_check) {
-  s21_decimal result;
+  s21_decimal result = {{0}};
 
   int code = s21_truncate(decimal, &result);
   int sign_check = decimal_check.exponent.bits.sign;

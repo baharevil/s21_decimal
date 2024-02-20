@@ -10340,7 +10340,7 @@ Suite *floor_suite1(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("floor_suite1");
+  s = suite_create("\x1b[1;33m-=S21_FLOOR_1=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_floor_ok1);
   tcase_add_test(tc_core, test_floor_ok2);
@@ -10751,7 +10751,7 @@ Suite *floor_suite2(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("floor_suite2");
+  s = suite_create("\x1b[1;33m-=S21_FLOOR_2=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_floor_ok401);
   tcase_add_test(tc_core, test_floor_ok402);
@@ -11162,7 +11162,7 @@ Suite *floor_suite3(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("floor_suite3");
+  s = suite_create("\x1b[1;33m-=S21_FLOOR_3=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_floor_ok801);
   tcase_add_test(tc_core, test_floor_ok802);
@@ -11393,7 +11393,7 @@ Suite *floor_suite0(void) {
   Suite *s;
   TCase *tc_core;
 
-  s = suite_create("floor_suite0");
+  s = suite_create("\x1b[1;33m-=S21_FLOOR_0=-\x1b[0m");
   tc_core = tcase_create("Core");
   tcase_add_test(tc_core, test_floor_fail1);
   tcase_add_test(tc_core, test_floor_fail2);
@@ -11410,27 +11410,11 @@ Suite *floor_suite0(void) {
 }
 
 void test_floor(s21_decimal decimal, s21_decimal decimal_check) {
-  s21_decimal result;
+  s21_decimal result = {{0}};
 
   int code = s21_floor(decimal, &result);
   int sign_check = decimal_check.exponent.bits.sign;
   int sign_result = result.exponent.bits.sign;
-
-#if defined(__DEBUG)
-  printf("---------------------------------\n");
-  printf("\n\nTests:\n");
-  s21_print_decimal_bits(decimal);
-  s21_print_decimal_string(decimal);
-  printf("\ncheck:\n");
-  s21_print_decimal_bits(decimal_check);
-  s21_print_decimal_string(decimal_check);
-  printf("sign = %d\n", sign_check);
-  printf("\nres:\n");
-  s21_print_decimal_bits(result);
-  s21_print_decimal_string(result);
-  printf("sign = %d\n", sign_result);
-  printf("---------------------------------\n\n\n\n");
-#endif
 
   ck_assert_int_eq(code, ok);
   ck_assert_int_eq(s21_is_equal(result, decimal_check), 1);

@@ -6,7 +6,7 @@
 #include "s21_decimal.h"
 
 /**************************************************************************
-                    Arifmetic
+                    ARITHMETIC
  *************************************************************************/
 
 // S21_ADD_TEST
@@ -96,7 +96,7 @@ void test_div_fail2(s21_decimal decimal1, s21_decimal decimal2,
 void run_tests_s21_div(void);
 
 /**************************************************************************
-                    Compare
+                    COMPARISON
  *************************************************************************/
 // S21_IS_LESS_TEST
 Suite *is_less_suite1(void);
@@ -227,21 +227,54 @@ void test_is_not_equal(s21_decimal decimal1, s21_decimal decimal2, int check);
 void run_tests_s21_is_not_equal(void);
 
 /**************************************************************************
-                    another
+                    CONVERTORS
+ *************************************************************************/
+// S21_INT_TO_DECIMAL
+
+// S21_FLOAT_TO_DECIMAL
+
+// S21_DECIMAL_TO_INT
+
+// S21_DECIMAL_TO_FLOAT
+
+/**************************************************************************
+                    ANOTHER
  *************************************************************************/
 
 // S21_FLOOR_TEST
+Suite *floor_suite0(void);
+Suite *floor_suite1(void);
+Suite *floor_suite2(void);
+Suite *floor_suite3(void);
+
+void run_tests_s21_floor(void);
 void test_floor(s21_decimal decimal, s21_decimal decimal_check);
-
-// S21_NEGATE_TEST
-void test_negate(s21_decimal decimal, s21_decimal decimal_check);
-
-// S21_TRUNCATE_TEST
-void test_truncate(s21_decimal decimal, s21_decimal decimal_check);
 
 // S21_ROUND_TEST
 Suite *round_suite0(void);
-// Suite *round_suite1(void);
+Suite *round_suite1(void);
+Suite *round_suite2(void);
+Suite *round_suite3(void);
+
+void run_tests_s21_round(void);
 void s21_test_round(s21_decimal decimal, s21_decimal decimal_check);
+
+// S21_TRUNCATE_TEST
+Suite *truncate_suite0(void);
+Suite *truncate_suite1(void);
+Suite *truncate_suite2(void);
+Suite *truncate_suite3(void);
+
+void run_tests_s21_truncate(void);
+void test_truncate(s21_decimal decimal, s21_decimal decimal_check);
+
+// S21_NEGATE_TEST
+Suite *negate_suite0(void);
+Suite *negate_suite1(void);
+Suite *negate_suite2(void);
+Suite *negate_suite3(void);
+
+void run_tests_s21_negate(void);
+void test_negate(s21_decimal decimal, s21_decimal decimal_check);
 
 #endif

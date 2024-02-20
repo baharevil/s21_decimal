@@ -13,6 +13,7 @@
 int s21_negate(s21_decimal value, s21_decimal *result) {
   int error = ok;
 
+  error |= !s21_decimal_ptr_is_valid(&value);
   error |= (result == NULL);
 
   if (!error) {

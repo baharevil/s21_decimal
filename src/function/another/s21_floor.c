@@ -13,18 +13,20 @@
 */
 int s21_floor(s21_decimal value, s21_decimal *result) {
   int error = 0;
+  s21_decimal_lazy lazy_result = {0}, lazy_value = {0};
 
+  error |= !s21_decimal_ptr_is_valid(&value);
   error |= (result == NULL);
 
   if (!error) {
-    s21_decimal_lazy lazy_result;
+    error |= s21_lazy_init(&lazy_value, &value);
+    error |= s21_lazy_init(&lazy_result, result);
+  } 
+  if (!error) error |= s21_floor_lazy(&lazy_value, &lazy_result);
+  if (!error) error |= s21_from_lazy_to_decimal(&lazy_result, result);
 
-    if (!error) error |= s21_lazy_init(&lazy_result, &value);
-    if (!error) error |= s21_floor_lazy(&lazy_result, &lazy_result);
-    if (!error) error |= s21_from_lazy_to_decimal(&lazy_result, result);
-
-    s21_lazy_destroy(&lazy_result);
-  }
+  s21_lazy_destroy(&lazy_value);
+  s21_lazy_destroy(&lazy_result);
 
   return error;
 }
