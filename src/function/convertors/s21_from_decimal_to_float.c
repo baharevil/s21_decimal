@@ -18,6 +18,14 @@ int s21_from_decimal_to_float(s21_decimal src, float *dst) {
   // Первичная валидация
   if (!dst) error = conv_false;
 
+  // Вторичная валидация
+  if (!s21_decimal_is_valid(&src))
+    error = conv_false;
+
+  if (!error && src.exponent.bits.exponent > 28)
+    error = conv_false;
+
+
   //Инициализация переменных
   if (!error)
     error |= s21_lazy_init(&tmp, &src);
