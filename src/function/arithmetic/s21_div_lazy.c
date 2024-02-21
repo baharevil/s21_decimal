@@ -28,6 +28,7 @@ int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     s21_decimal_lazy lazy_two = {0}, lazy_one = {0}, tmp = {0}, tmp_res = {0};
     error |= s21_from_int_to_lazy(1, &lazy_one);
     error |= s21_from_int_to_lazy(2, &lazy_two);
+    
     error |= s21_lazy_init(&tmp, NULL);
     error |= s21_lazy_init(&tmp_res, NULL);
     error |= s21_lazy_upsize(value_1, value_2);
@@ -99,8 +100,10 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
     error |= s21_lazy_init(&lazy_ten, &ten);
   }
 
+  if (!error) s21_lazy_to_lazy_cp(value_1, &carry);
+
   // Расчет целой части от деления
-  if (!error) error = s21_mod_lazy(value_1, value_2, result);
+  if (!error) error = s21_mod_lazy(&carry, value_2, result);
   // Расчет остатка от деления
   if (!error) error = s21_mul_lazy(result, value_2, &res_temp);
   if (!error) error = s21_sub_lazy(value_1, &res_temp, &carry);
@@ -118,20 +121,19 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   }
 
   // Расчет дробной части
-  while (!error && !s21_is_null_lazy(&carry) && exp < 29) {
+  while (!error && !s21_is_null_lazy(&carry) && exp < 32) {
     error |= s21_mul_lazy(&lazy_ten, &carry, &carry);
     error |= s21_mul_lazy(&lazy_ten, &res_temp, &res_temp);
-    // error |= s21_mul_lazy_to_10(&res_temp);
     error |= s21_div_lazy_core(&carry, &divider, &tmp);
     tmp.sign = res_temp.sign;
     error |= s21_add_lazy(&res_temp, &tmp, &res_temp);
     exp++;
   }
 
-  // if (!error && s21_is_equal_lazy(&carry, &lazy_five) >= 0) {
-  //   lazy_one.exponent = res_temp.exponent;
-  //   error |= s21_add_lazy(&res_temp, &lazy_one, &res_temp);
-  // }
+  if (!error && s21_is_equal_lazy(&carry, &lazy_five) >= 0) {
+    lazy_one.exponent = res_temp.exponent;
+    error |= s21_add_lazy(&res_temp, &lazy_one, &res_temp);
+  }
 
   // Копирование результата + Расчет знака
   if (!error) {
