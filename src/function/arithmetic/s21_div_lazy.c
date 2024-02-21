@@ -71,7 +71,7 @@ int s21_div_lazy_core(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
 */
 int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
                  s21_decimal_lazy *result) {
-  int error = 0;
+  int error = 0, exp = 0;
 
   s21_decimal ten = {{0xa, 0x0, 0x0, 0x0}};
   s21_decimal one = {{0x1, 0x0, 0x0, 0x0}};
@@ -112,28 +112,35 @@ int s21_div_lazy(s21_decimal_lazy *value_1, s21_decimal_lazy *value_2,
   }
 
   if (!error) {
-    carry.sign = 0;
-    divider.sign = 0;
+    carry.exponent = carry.sign = 0;
+    divider.exponent = divider.sign = 0;
+    res_temp.exponent = 0;
   }
 
   // Расчет дробной части
-  while (!error && !s21_is_null_lazy(&carry) && res_temp.exponent < 29) {
+  while (!error && !s21_is_null_lazy(&carry) && exp < 29) {
     error |= s21_mul_lazy(&lazy_ten, &carry, &carry);
-    error |= s21_mul_lazy_to_10(&res_temp);
+    error |= s21_mul_lazy(&lazy_ten, &res_temp, &res_temp);
+    // error |= s21_mul_lazy_to_10(&res_temp);
     error |= s21_div_lazy_core(&carry, &divider, &tmp);
+    tmp.sign = res_temp.sign;
     error |= s21_add_lazy(&res_temp, &tmp, &res_temp);
+    exp++;
   }
 
-  if (!error && s21_is_equal_lazy(&carry, &lazy_five) >= 0) {
-    lazy_one.exponent = res_temp.exponent;
-    error |= s21_add_lazy(&res_temp, &lazy_one, &res_temp);
-  }
+  // if (!error && s21_is_equal_lazy(&carry, &lazy_five) >= 0) {
+  //   lazy_one.exponent = res_temp.exponent;
+  //   error |= s21_add_lazy(&res_temp, &lazy_one, &res_temp);
+  // }
 
   // Копирование результата + Расчет знака
   if (!error) {
+    res_temp.exponent = result->exponent + exp;
     error = s21_lazy_to_lazy_cp(&res_temp, result);
     result->sign = (value_1->sign != value_2->sign);
   }
+  
+  if (!error) error = 2 * s21_is_null_lazy(&res_temp) * !s21_is_null_lazy(value_1);
 
   // Уничножение переменных
   s21_lazy_destroy(&tmp);

@@ -10,7 +10,7 @@ OPEN_CMD 				:= $(if $(filter Linux, $(OS)),xdg-open,open)
 project_name 		 = s21_decimal
 report_dir			 = gcovr-report
 func_dir 				 = function
-test_dir 				 = tests
+test_dir 				 = .
 
 lib_name 				:= $(addsuffix .a, $(project_name))
 test_lib_name		:= $(addprefix  $(test_dir)/, $(addsuffix _test.a, $(project_name)))

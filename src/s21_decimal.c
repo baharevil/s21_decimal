@@ -107,35 +107,23 @@ int main() {
 
   */
 
-  // s21_decimal result = {{0}};
+  s21_decimal result = {{0}};
 
-  // // 2
-  // s21_decimal decimal1 = {{0x2, 0x0, 0x0, 0x0}};
-  // // 1.2640938749860586450804312205
-  // s21_decimal decimal2 = {{0x1888888D, 0xBE250261, 0x28D856E6, 0x1C0000}};
-  // // 1.5821609767882606564463392905
-  // s21_decimal check = {{0x8B80B889, 0x20B8279E, 0x331F5430, 0x1C0000}};
+  // -26409387504754779197847983445
+  s21_decimal decimal1 = {{0x55555555, 0x55555555, 0x55555555, 0x80000000}};
+  // 156064767525876035022225408
+  s21_decimal decimal2 = {{0x0, 0x0, 0x811800, 0x0}};
+  // -169.22068909868474138626644073
+  s21_decimal check = {{0x8C085869, 0xC05E68BD, 0x36AD9B79, 0x801A0000}};
 
-  // int error = 0, code_check = 0;
-  // error = s21_div(decimal1, decimal2, &result);
+  int error = 0, code_check = 0;
+  error = s21_div(decimal1, decimal2, &result);
 
-  // printf("error: %d, code_check: %d\n", error, code_check);
-  // printf("is_equal: %d\n", s21_is_equal(result, check));
+  printf("error: %d, code_check: %d\n", error, code_check);
+  printf("is_equal: %d\n", s21_is_equal(result, check));
 
-  // s21_decimal_print(&result, "result: ");
-  // s21_decimal_print(&check, " check: ");
-
-  // -2147483648
-  s21_decimal decimal = {{0x80000000, 0x0, 0x0, 0x80000000}};
-  int check = -2147483648, result = 0;
-  int error = 0;
-  
-  error = s21_from_decimal_to_int(decimal, &result);
-
-  printf("error:  %d\n", error);
-  printf("is_equal: %d\n", check == result);
-  printf("check:  %d\n", check);
-  printf("result: %d\n", result);
+  s21_decimal_print(&result, "result: ");
+  s21_decimal_print(&check, " check: ");
 
   return 0;
 }
