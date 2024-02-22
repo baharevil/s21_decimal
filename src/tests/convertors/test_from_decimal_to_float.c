@@ -12,6 +12,7 @@ START_TEST(test_from_decimal_to_float_fail_manual1) {
 
     ck_assert_int_eq(code, conv_false);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_fail_manual2) {
     // степень 154 (показатель степени должен быть от 0 до 28)
@@ -106,6 +107,7 @@ START_TEST(test_from_decimal_to_float_ok1) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2) {
     // -79228162514264337593543950335
@@ -114,6 +116,7 @@ START_TEST(test_from_decimal_to_float_ok2) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok3) {
     // 7922816251426433759354395033.5
@@ -122,6 +125,7 @@ START_TEST(test_from_decimal_to_float_ok3) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok4) {
     // -7922816251426433759354395033.5
@@ -130,6 +134,7 @@ START_TEST(test_from_decimal_to_float_ok4) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok5) {
     // 20995463066280049462289146839
@@ -138,6 +143,7 @@ START_TEST(test_from_decimal_to_float_ok5) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok6) {
     // -20995463066280049462289146839
@@ -146,6 +152,7 @@ START_TEST(test_from_decimal_to_float_ok6) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok7) {
     // 792281625142643375935439503.35
@@ -154,6 +161,7 @@ START_TEST(test_from_decimal_to_float_ok7) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok8) {
     // -792281625142643375935439503.35
@@ -162,6 +170,7 @@ START_TEST(test_from_decimal_to_float_ok8) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok9) {
     // 2099546306628004946228914683.9
@@ -170,6 +179,7 @@ START_TEST(test_from_decimal_to_float_ok9) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok10) {
     // -2099546306628004946228914683.9
@@ -178,6 +188,7 @@ START_TEST(test_from_decimal_to_float_ok10) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok11) {
     // 79228162514264337593543950.335
@@ -186,6 +197,7 @@ START_TEST(test_from_decimal_to_float_ok11) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok12) {
     // -79228162514264337593543950.335
@@ -194,6 +206,7 @@ START_TEST(test_from_decimal_to_float_ok12) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok13) {
     // 209954630662800494622891468.39
@@ -202,6 +215,7 @@ START_TEST(test_from_decimal_to_float_ok13) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok14) {
     // -209954630662800494622891468.39
@@ -210,6 +224,7 @@ START_TEST(test_from_decimal_to_float_ok14) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok15) {
     // 7922816251426433759354395.0335
@@ -218,6 +233,7 @@ START_TEST(test_from_decimal_to_float_ok15) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok16) {
     // -7922816251426433759354395.0335
@@ -226,6 +242,7 @@ START_TEST(test_from_decimal_to_float_ok16) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok17) {
     // 20995463066280049462289146.839
@@ -234,6 +251,7 @@ START_TEST(test_from_decimal_to_float_ok17) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok18) {
     // -20995463066280049462289146.839
@@ -242,6 +260,7 @@ START_TEST(test_from_decimal_to_float_ok18) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok19) {
     // 792281625142643375935439.50335
@@ -250,6 +269,7 @@ START_TEST(test_from_decimal_to_float_ok19) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok20) {
     // -792281625142643375935439.50335
@@ -258,6 +278,7 @@ START_TEST(test_from_decimal_to_float_ok20) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok21) {
     // 2099546306628004946228914.6839
@@ -266,6 +287,7 @@ START_TEST(test_from_decimal_to_float_ok21) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok22) {
     // -2099546306628004946228914.6839
@@ -274,6 +296,7 @@ START_TEST(test_from_decimal_to_float_ok22) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok23) {
     // 79228162514264337593543.950335
@@ -282,6 +305,7 @@ START_TEST(test_from_decimal_to_float_ok23) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok24) {
     // -79228162514264337593543.950335
@@ -290,6 +314,7 @@ START_TEST(test_from_decimal_to_float_ok24) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok25) {
     // 209954630662800494622891.46839
@@ -298,6 +323,7 @@ START_TEST(test_from_decimal_to_float_ok25) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok26) {
     // -209954630662800494622891.46839
@@ -306,6 +332,7 @@ START_TEST(test_from_decimal_to_float_ok26) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok27) {
     // 7922816251426433759354.3950335
@@ -314,6 +341,7 @@ START_TEST(test_from_decimal_to_float_ok27) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok28) {
     // -7922816251426433759354.3950335
@@ -322,6 +350,7 @@ START_TEST(test_from_decimal_to_float_ok28) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok29) {
     // 20995463066280049462289.146839
@@ -330,6 +359,7 @@ START_TEST(test_from_decimal_to_float_ok29) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok30) {
     // -20995463066280049462289.146839
@@ -338,6 +368,7 @@ START_TEST(test_from_decimal_to_float_ok30) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok31) {
     // 792281625142643375935.43950335
@@ -346,6 +377,7 @@ START_TEST(test_from_decimal_to_float_ok31) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok32) {
     // -792281625142643375935.43950335
@@ -354,6 +386,7 @@ START_TEST(test_from_decimal_to_float_ok32) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok33) {
     // 2099546306628004946228.9146839
@@ -362,6 +395,7 @@ START_TEST(test_from_decimal_to_float_ok33) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok34) {
     // -2099546306628004946228.9146839
@@ -370,6 +404,7 @@ START_TEST(test_from_decimal_to_float_ok34) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok35) {
     // 79228162514264337593.543950335
@@ -378,6 +413,7 @@ START_TEST(test_from_decimal_to_float_ok35) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok36) {
     // -79228162514264337593.543950335
@@ -386,6 +422,7 @@ START_TEST(test_from_decimal_to_float_ok36) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok37) {
     // 209954630662800494622.89146839
@@ -394,6 +431,7 @@ START_TEST(test_from_decimal_to_float_ok37) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok38) {
     // -209954630662800494622.89146839
@@ -402,6 +440,7 @@ START_TEST(test_from_decimal_to_float_ok38) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok39) {
     // 7922816251426433759.3543950335
@@ -410,6 +449,7 @@ START_TEST(test_from_decimal_to_float_ok39) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok40) {
     // -7922816251426433759.3543950335
@@ -418,6 +458,7 @@ START_TEST(test_from_decimal_to_float_ok40) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok41) {
     // 20995463066280049462.289146839
@@ -426,6 +467,7 @@ START_TEST(test_from_decimal_to_float_ok41) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok42) {
     // -20995463066280049462.289146839
@@ -434,6 +476,7 @@ START_TEST(test_from_decimal_to_float_ok42) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok43) {
     // 792281625142643375.93543950335
@@ -442,6 +485,7 @@ START_TEST(test_from_decimal_to_float_ok43) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok44) {
     // -792281625142643375.93543950335
@@ -450,6 +494,7 @@ START_TEST(test_from_decimal_to_float_ok44) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok45) {
     // 2099546306628004946.2289146839
@@ -458,6 +503,7 @@ START_TEST(test_from_decimal_to_float_ok45) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok46) {
     // -2099546306628004946.2289146839
@@ -466,6 +512,7 @@ START_TEST(test_from_decimal_to_float_ok46) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok47) {
     // 79228162514264337.593543950335
@@ -474,6 +521,7 @@ START_TEST(test_from_decimal_to_float_ok47) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok48) {
     // -79228162514264337.593543950335
@@ -482,6 +530,7 @@ START_TEST(test_from_decimal_to_float_ok48) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok49) {
     // 209954630662800494.62289146839
@@ -490,6 +539,7 @@ START_TEST(test_from_decimal_to_float_ok49) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok50) {
     // -209954630662800494.62289146839
@@ -498,6 +548,7 @@ START_TEST(test_from_decimal_to_float_ok50) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok51) {
     // 7922816251426433.7593543950335
@@ -506,6 +557,7 @@ START_TEST(test_from_decimal_to_float_ok51) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok52) {
     // -7922816251426433.7593543950335
@@ -514,6 +566,7 @@ START_TEST(test_from_decimal_to_float_ok52) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok53) {
     // 20995463066280049.462289146839
@@ -522,6 +575,7 @@ START_TEST(test_from_decimal_to_float_ok53) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok54) {
     // -20995463066280049.462289146839
@@ -530,6 +584,7 @@ START_TEST(test_from_decimal_to_float_ok54) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok55) {
     // 792281625142643.37593543950335
@@ -538,6 +593,7 @@ START_TEST(test_from_decimal_to_float_ok55) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok56) {
     // -792281625142643.37593543950335
@@ -546,6 +602,7 @@ START_TEST(test_from_decimal_to_float_ok56) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok57) {
     // 2099546306628004.9462289146839
@@ -554,6 +611,7 @@ START_TEST(test_from_decimal_to_float_ok57) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok58) {
     // -2099546306628004.9462289146839
@@ -562,6 +620,7 @@ START_TEST(test_from_decimal_to_float_ok58) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok59) {
     // 79228162514264.337593543950335
@@ -570,6 +629,7 @@ START_TEST(test_from_decimal_to_float_ok59) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok60) {
     // -79228162514264.337593543950335
@@ -578,6 +638,7 @@ START_TEST(test_from_decimal_to_float_ok60) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok61) {
     // 209954630662800.49462289146839
@@ -586,6 +647,7 @@ START_TEST(test_from_decimal_to_float_ok61) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok62) {
     // -209954630662800.49462289146839
@@ -594,6 +656,7 @@ START_TEST(test_from_decimal_to_float_ok62) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok63) {
     // 7922816251426.4337593543950335
@@ -602,6 +665,7 @@ START_TEST(test_from_decimal_to_float_ok63) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok64) {
     // -7922816251426.4337593543950335
@@ -610,6 +674,7 @@ START_TEST(test_from_decimal_to_float_ok64) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok65) {
     // 20995463066280.049462289146839
@@ -618,6 +683,7 @@ START_TEST(test_from_decimal_to_float_ok65) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok66) {
     // -20995463066280.049462289146839
@@ -626,6 +692,7 @@ START_TEST(test_from_decimal_to_float_ok66) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok67) {
     // 792281625142.64337593543950335
@@ -634,6 +701,7 @@ START_TEST(test_from_decimal_to_float_ok67) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok68) {
     // -792281625142.64337593543950335
@@ -642,6 +710,7 @@ START_TEST(test_from_decimal_to_float_ok68) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok69) {
     // 2099546306628.0049462289146839
@@ -650,6 +719,7 @@ START_TEST(test_from_decimal_to_float_ok69) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok70) {
     // -2099546306628.0049462289146839
@@ -658,6 +728,7 @@ START_TEST(test_from_decimal_to_float_ok70) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok71) {
     // 79228162514.264337593543950335
@@ -666,6 +737,7 @@ START_TEST(test_from_decimal_to_float_ok71) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok72) {
     // -79228162514.264337593543950335
@@ -674,6 +746,7 @@ START_TEST(test_from_decimal_to_float_ok72) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok73) {
     // 209954630662.80049462289146839
@@ -682,6 +755,7 @@ START_TEST(test_from_decimal_to_float_ok73) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok74) {
     // -209954630662.80049462289146839
@@ -690,6 +764,7 @@ START_TEST(test_from_decimal_to_float_ok74) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok75) {
     // 7922816251.4264337593543950335
@@ -698,6 +773,7 @@ START_TEST(test_from_decimal_to_float_ok75) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok76) {
     // -7922816251.4264337593543950335
@@ -706,6 +782,7 @@ START_TEST(test_from_decimal_to_float_ok76) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok77) {
     // 20995463066.280049462289146839
@@ -714,6 +791,7 @@ START_TEST(test_from_decimal_to_float_ok77) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok78) {
     // -20995463066.280049462289146839
@@ -722,6 +800,7 @@ START_TEST(test_from_decimal_to_float_ok78) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok79) {
     // 792281625.14264337593543950335
@@ -730,6 +809,7 @@ START_TEST(test_from_decimal_to_float_ok79) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok80) {
     // -792281625.14264337593543950335
@@ -738,6 +818,7 @@ START_TEST(test_from_decimal_to_float_ok80) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok81) {
     // 2099546306.6280049462289146839
@@ -746,6 +827,7 @@ START_TEST(test_from_decimal_to_float_ok81) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok82) {
     // -2099546306.6280049462289146839
@@ -754,6 +836,7 @@ START_TEST(test_from_decimal_to_float_ok82) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok83) {
     // 79228162.514264337593543950335
@@ -762,6 +845,7 @@ START_TEST(test_from_decimal_to_float_ok83) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok84) {
     // -79228162.514264337593543950335
@@ -770,6 +854,7 @@ START_TEST(test_from_decimal_to_float_ok84) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok85) {
     // 209954630.66280049462289146839
@@ -778,6 +863,7 @@ START_TEST(test_from_decimal_to_float_ok85) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok86) {
     // -209954630.66280049462289146839
@@ -786,6 +872,7 @@ START_TEST(test_from_decimal_to_float_ok86) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok87) {
     // 7922816.2514264337593543950335
@@ -794,6 +881,7 @@ START_TEST(test_from_decimal_to_float_ok87) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok88) {
     // -7922816.2514264337593543950335
@@ -802,6 +890,7 @@ START_TEST(test_from_decimal_to_float_ok88) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok89) {
     // 20995463.066280049462289146839
@@ -810,6 +899,7 @@ START_TEST(test_from_decimal_to_float_ok89) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok90) {
     // -20995463.066280049462289146839
@@ -818,6 +908,7 @@ START_TEST(test_from_decimal_to_float_ok90) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok91) {
     // 792281.62514264337593543950335
@@ -826,6 +917,7 @@ START_TEST(test_from_decimal_to_float_ok91) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok92) {
     // -792281.62514264337593543950335
@@ -834,6 +926,7 @@ START_TEST(test_from_decimal_to_float_ok92) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok93) {
     // 2099546.3066280049462289146839
@@ -842,6 +935,7 @@ START_TEST(test_from_decimal_to_float_ok93) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok94) {
     // -2099546.3066280049462289146839
@@ -850,6 +944,7 @@ START_TEST(test_from_decimal_to_float_ok94) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok95) {
     // 79228.162514264337593543950335
@@ -858,6 +953,7 @@ START_TEST(test_from_decimal_to_float_ok95) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok96) {
     // -79228.162514264337593543950335
@@ -866,6 +962,7 @@ START_TEST(test_from_decimal_to_float_ok96) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok97) {
     // 209954.63066280049462289146839
@@ -874,6 +971,7 @@ START_TEST(test_from_decimal_to_float_ok97) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok98) {
     // -209954.63066280049462289146839
@@ -882,6 +980,7 @@ START_TEST(test_from_decimal_to_float_ok98) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok99) {
     // 7922.8162514264337593543950335
@@ -890,6 +989,7 @@ START_TEST(test_from_decimal_to_float_ok99) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok100) {
     // -7922.8162514264337593543950335
@@ -898,6 +998,7 @@ START_TEST(test_from_decimal_to_float_ok100) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok101) {
     // 20995.463066280049462289146839
@@ -906,6 +1007,7 @@ START_TEST(test_from_decimal_to_float_ok101) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok102) {
     // -20995.463066280049462289146839
@@ -914,6 +1016,7 @@ START_TEST(test_from_decimal_to_float_ok102) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok103) {
     // 792.28162514264337593543950335
@@ -922,6 +1025,7 @@ START_TEST(test_from_decimal_to_float_ok103) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok104) {
     // -792.28162514264337593543950335
@@ -930,6 +1034,7 @@ START_TEST(test_from_decimal_to_float_ok104) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok105) {
     // 2099.5463066280049462289146839
@@ -938,6 +1043,7 @@ START_TEST(test_from_decimal_to_float_ok105) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok106) {
     // -2099.5463066280049462289146839
@@ -946,6 +1052,7 @@ START_TEST(test_from_decimal_to_float_ok106) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok107) {
     // 79.228162514264337593543950335
@@ -954,6 +1061,7 @@ START_TEST(test_from_decimal_to_float_ok107) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok108) {
     // -79.228162514264337593543950335
@@ -962,6 +1070,7 @@ START_TEST(test_from_decimal_to_float_ok108) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok109) {
     // 209.95463066280049462289146839
@@ -970,6 +1079,7 @@ START_TEST(test_from_decimal_to_float_ok109) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok110) {
     // -209.95463066280049462289146839
@@ -978,6 +1088,7 @@ START_TEST(test_from_decimal_to_float_ok110) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok111) {
     // 7.9228162514264337593543950335
@@ -986,6 +1097,7 @@ START_TEST(test_from_decimal_to_float_ok111) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok112) {
     // -7.9228162514264337593543950335
@@ -994,6 +1106,7 @@ START_TEST(test_from_decimal_to_float_ok112) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok113) {
     // 20.995463066280049462289146839
@@ -1002,6 +1115,7 @@ START_TEST(test_from_decimal_to_float_ok113) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok114) {
     // -20.995463066280049462289146839
@@ -1010,6 +1124,7 @@ START_TEST(test_from_decimal_to_float_ok114) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok115) {
     // 79228162514264337593543950334
@@ -1018,6 +1133,7 @@ START_TEST(test_from_decimal_to_float_ok115) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok116) {
     // -79228162514264337593543950334
@@ -1026,6 +1142,7 @@ START_TEST(test_from_decimal_to_float_ok116) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok117) {
     // 7922816251426433759354395033.4
@@ -1034,6 +1151,7 @@ START_TEST(test_from_decimal_to_float_ok117) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok118) {
     // -7922816251426433759354395033.4
@@ -1042,6 +1160,7 @@ START_TEST(test_from_decimal_to_float_ok118) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok119) {
     // 20995463066280049462289146839
@@ -1050,6 +1169,7 @@ START_TEST(test_from_decimal_to_float_ok119) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok120) {
     // -20995463066280049462289146839
@@ -1058,6 +1178,7 @@ START_TEST(test_from_decimal_to_float_ok120) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok121) {
     // 792281625142643375935439503.34
@@ -1066,6 +1187,7 @@ START_TEST(test_from_decimal_to_float_ok121) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok122) {
     // -792281625142643375935439503.34
@@ -1074,6 +1196,7 @@ START_TEST(test_from_decimal_to_float_ok122) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok123) {
     // 2099546306628004946228914683.9
@@ -1082,6 +1205,7 @@ START_TEST(test_from_decimal_to_float_ok123) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok124) {
     // -2099546306628004946228914683.9
@@ -1090,6 +1214,7 @@ START_TEST(test_from_decimal_to_float_ok124) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok125) {
     // 79228162514264337593543950.334
@@ -1098,6 +1223,7 @@ START_TEST(test_from_decimal_to_float_ok125) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok126) {
     // -79228162514264337593543950.334
@@ -1106,6 +1232,7 @@ START_TEST(test_from_decimal_to_float_ok126) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok127) {
     // 209954630662800494622891468.39
@@ -1114,6 +1241,7 @@ START_TEST(test_from_decimal_to_float_ok127) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok128) {
     // -209954630662800494622891468.39
@@ -1122,6 +1250,7 @@ START_TEST(test_from_decimal_to_float_ok128) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok129) {
     // 7922816251426433759354395.0334
@@ -1130,6 +1259,7 @@ START_TEST(test_from_decimal_to_float_ok129) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok130) {
     // -7922816251426433759354395.0334
@@ -1138,6 +1268,7 @@ START_TEST(test_from_decimal_to_float_ok130) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok131) {
     // 20995463066280049462289146.839
@@ -1146,6 +1277,7 @@ START_TEST(test_from_decimal_to_float_ok131) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok132) {
     // -20995463066280049462289146.839
@@ -1154,6 +1286,7 @@ START_TEST(test_from_decimal_to_float_ok132) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok133) {
     // 792281625142643375935439.50334
@@ -1162,6 +1295,7 @@ START_TEST(test_from_decimal_to_float_ok133) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok134) {
     // -792281625142643375935439.50334
@@ -1170,6 +1304,7 @@ START_TEST(test_from_decimal_to_float_ok134) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok135) {
     // 2099546306628004946228914.6839
@@ -1178,6 +1313,7 @@ START_TEST(test_from_decimal_to_float_ok135) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok136) {
     // -2099546306628004946228914.6839
@@ -1186,6 +1322,7 @@ START_TEST(test_from_decimal_to_float_ok136) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok137) {
     // 79228162514264337593543.950334
@@ -1194,6 +1331,7 @@ START_TEST(test_from_decimal_to_float_ok137) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok138) {
     // -79228162514264337593543.950334
@@ -1202,6 +1340,7 @@ START_TEST(test_from_decimal_to_float_ok138) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok139) {
     // 209954630662800494622891.46839
@@ -1210,6 +1349,7 @@ START_TEST(test_from_decimal_to_float_ok139) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok140) {
     // -209954630662800494622891.46839
@@ -1218,6 +1358,7 @@ START_TEST(test_from_decimal_to_float_ok140) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok141) {
     // 7922816251426433759354.3950334
@@ -1226,6 +1367,7 @@ START_TEST(test_from_decimal_to_float_ok141) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok142) {
     // -7922816251426433759354.3950334
@@ -1234,6 +1376,7 @@ START_TEST(test_from_decimal_to_float_ok142) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok143) {
     // 20995463066280049462289.146839
@@ -1242,6 +1385,7 @@ START_TEST(test_from_decimal_to_float_ok143) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok144) {
     // -20995463066280049462289.146839
@@ -1250,6 +1394,7 @@ START_TEST(test_from_decimal_to_float_ok144) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok145) {
     // 792281625142643375935.43950334
@@ -1258,6 +1403,7 @@ START_TEST(test_from_decimal_to_float_ok145) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok146) {
     // -792281625142643375935.43950334
@@ -1266,6 +1412,7 @@ START_TEST(test_from_decimal_to_float_ok146) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok147) {
     // 2099546306628004946228.9146839
@@ -1274,6 +1421,7 @@ START_TEST(test_from_decimal_to_float_ok147) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok148) {
     // -2099546306628004946228.9146839
@@ -1282,6 +1430,7 @@ START_TEST(test_from_decimal_to_float_ok148) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok149) {
     // 79228162514264337593.543950334
@@ -1290,6 +1439,7 @@ START_TEST(test_from_decimal_to_float_ok149) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok150) {
     // -79228162514264337593.543950334
@@ -1298,6 +1448,7 @@ START_TEST(test_from_decimal_to_float_ok150) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok151) {
     // 209954630662800494622.89146839
@@ -1306,6 +1457,7 @@ START_TEST(test_from_decimal_to_float_ok151) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok152) {
     // -209954630662800494622.89146839
@@ -1314,6 +1466,7 @@ START_TEST(test_from_decimal_to_float_ok152) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok153) {
     // 7922816251426433759.3543950334
@@ -1322,6 +1475,7 @@ START_TEST(test_from_decimal_to_float_ok153) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok154) {
     // -7922816251426433759.3543950334
@@ -1330,6 +1484,7 @@ START_TEST(test_from_decimal_to_float_ok154) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok155) {
     // 20995463066280049462.289146839
@@ -1338,6 +1493,7 @@ START_TEST(test_from_decimal_to_float_ok155) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok156) {
     // -20995463066280049462.289146839
@@ -1346,6 +1502,7 @@ START_TEST(test_from_decimal_to_float_ok156) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok157) {
     // 792281625142643375.93543950334
@@ -1354,6 +1511,7 @@ START_TEST(test_from_decimal_to_float_ok157) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok158) {
     // -792281625142643375.93543950334
@@ -1362,6 +1520,7 @@ START_TEST(test_from_decimal_to_float_ok158) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok159) {
     // 2099546306628004946.2289146839
@@ -1370,6 +1529,7 @@ START_TEST(test_from_decimal_to_float_ok159) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok160) {
     // -2099546306628004946.2289146839
@@ -1378,6 +1538,7 @@ START_TEST(test_from_decimal_to_float_ok160) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok161) {
     // 79228162514264337.593543950334
@@ -1386,6 +1547,7 @@ START_TEST(test_from_decimal_to_float_ok161) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok162) {
     // -79228162514264337.593543950334
@@ -1394,6 +1556,7 @@ START_TEST(test_from_decimal_to_float_ok162) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok163) {
     // 209954630662800494.62289146839
@@ -1402,6 +1565,7 @@ START_TEST(test_from_decimal_to_float_ok163) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok164) {
     // -209954630662800494.62289146839
@@ -1410,6 +1574,7 @@ START_TEST(test_from_decimal_to_float_ok164) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok165) {
     // 7922816251426433.7593543950334
@@ -1418,6 +1583,7 @@ START_TEST(test_from_decimal_to_float_ok165) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok166) {
     // -7922816251426433.7593543950334
@@ -1426,6 +1592,7 @@ START_TEST(test_from_decimal_to_float_ok166) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok167) {
     // 20995463066280049.462289146839
@@ -1434,6 +1601,7 @@ START_TEST(test_from_decimal_to_float_ok167) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok168) {
     // -20995463066280049.462289146839
@@ -1442,6 +1610,7 @@ START_TEST(test_from_decimal_to_float_ok168) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok169) {
     // 792281625142643.37593543950334
@@ -1450,6 +1619,7 @@ START_TEST(test_from_decimal_to_float_ok169) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok170) {
     // -792281625142643.37593543950334
@@ -1458,6 +1628,7 @@ START_TEST(test_from_decimal_to_float_ok170) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok171) {
     // 2099546306628004.9462289146839
@@ -1466,6 +1637,7 @@ START_TEST(test_from_decimal_to_float_ok171) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok172) {
     // -2099546306628004.9462289146839
@@ -1474,6 +1646,7 @@ START_TEST(test_from_decimal_to_float_ok172) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok173) {
     // 79228162514264.337593543950334
@@ -1482,6 +1655,7 @@ START_TEST(test_from_decimal_to_float_ok173) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok174) {
     // -79228162514264.337593543950334
@@ -1490,6 +1664,7 @@ START_TEST(test_from_decimal_to_float_ok174) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok175) {
     // 209954630662800.49462289146839
@@ -1498,6 +1673,7 @@ START_TEST(test_from_decimal_to_float_ok175) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok176) {
     // -209954630662800.49462289146839
@@ -1506,6 +1682,7 @@ START_TEST(test_from_decimal_to_float_ok176) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok177) {
     // 7922816251426.4337593543950334
@@ -1514,6 +1691,7 @@ START_TEST(test_from_decimal_to_float_ok177) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok178) {
     // -7922816251426.4337593543950334
@@ -1522,6 +1700,7 @@ START_TEST(test_from_decimal_to_float_ok178) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok179) {
     // 20995463066280.049462289146839
@@ -1530,6 +1709,7 @@ START_TEST(test_from_decimal_to_float_ok179) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok180) {
     // -20995463066280.049462289146839
@@ -1538,6 +1718,7 @@ START_TEST(test_from_decimal_to_float_ok180) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok181) {
     // 792281625142.64337593543950334
@@ -1546,6 +1727,7 @@ START_TEST(test_from_decimal_to_float_ok181) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok182) {
     // -792281625142.64337593543950334
@@ -1554,6 +1736,7 @@ START_TEST(test_from_decimal_to_float_ok182) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok183) {
     // 2099546306628.0049462289146839
@@ -1562,6 +1745,7 @@ START_TEST(test_from_decimal_to_float_ok183) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok184) {
     // -2099546306628.0049462289146839
@@ -1570,6 +1754,7 @@ START_TEST(test_from_decimal_to_float_ok184) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok185) {
     // 79228162514.264337593543950334
@@ -1578,6 +1763,7 @@ START_TEST(test_from_decimal_to_float_ok185) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok186) {
     // -79228162514.264337593543950334
@@ -1586,6 +1772,7 @@ START_TEST(test_from_decimal_to_float_ok186) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok187) {
     // 209954630662.80049462289146839
@@ -1594,6 +1781,7 @@ START_TEST(test_from_decimal_to_float_ok187) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok188) {
     // -209954630662.80049462289146839
@@ -1602,6 +1790,7 @@ START_TEST(test_from_decimal_to_float_ok188) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok189) {
     // 7922816251.4264337593543950334
@@ -1610,6 +1799,7 @@ START_TEST(test_from_decimal_to_float_ok189) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok190) {
     // -7922816251.4264337593543950334
@@ -1618,6 +1808,7 @@ START_TEST(test_from_decimal_to_float_ok190) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok191) {
     // 20995463066.280049462289146839
@@ -1626,6 +1817,7 @@ START_TEST(test_from_decimal_to_float_ok191) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok192) {
     // -20995463066.280049462289146839
@@ -1634,6 +1826,7 @@ START_TEST(test_from_decimal_to_float_ok192) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok193) {
     // 792281625.14264337593543950334
@@ -1642,6 +1835,7 @@ START_TEST(test_from_decimal_to_float_ok193) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok194) {
     // -792281625.14264337593543950334
@@ -1650,6 +1844,7 @@ START_TEST(test_from_decimal_to_float_ok194) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok195) {
     // 2099546306.6280049462289146839
@@ -1658,6 +1853,7 @@ START_TEST(test_from_decimal_to_float_ok195) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok196) {
     // -2099546306.6280049462289146839
@@ -1666,6 +1862,7 @@ START_TEST(test_from_decimal_to_float_ok196) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok197) {
     // 79228162.514264337593543950334
@@ -1674,6 +1871,7 @@ START_TEST(test_from_decimal_to_float_ok197) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok198) {
     // -79228162.514264337593543950334
@@ -1682,6 +1880,7 @@ START_TEST(test_from_decimal_to_float_ok198) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok199) {
     // 209954630.66280049462289146839
@@ -1690,6 +1889,7 @@ START_TEST(test_from_decimal_to_float_ok199) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok200) {
     // -209954630.66280049462289146839
@@ -1698,6 +1898,7 @@ START_TEST(test_from_decimal_to_float_ok200) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok201) {
     // 7922816.2514264337593543950334
@@ -1706,6 +1907,7 @@ START_TEST(test_from_decimal_to_float_ok201) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok202) {
     // -7922816.2514264337593543950334
@@ -1714,6 +1916,7 @@ START_TEST(test_from_decimal_to_float_ok202) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok203) {
     // 20995463.066280049462289146839
@@ -1722,6 +1925,7 @@ START_TEST(test_from_decimal_to_float_ok203) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok204) {
     // -20995463.066280049462289146839
@@ -1730,6 +1934,7 @@ START_TEST(test_from_decimal_to_float_ok204) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok205) {
     // 792281.62514264337593543950334
@@ -1738,6 +1943,7 @@ START_TEST(test_from_decimal_to_float_ok205) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok206) {
     // -792281.62514264337593543950334
@@ -1746,6 +1952,7 @@ START_TEST(test_from_decimal_to_float_ok206) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok207) {
     // 2099546.3066280049462289146839
@@ -1754,6 +1961,7 @@ START_TEST(test_from_decimal_to_float_ok207) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok208) {
     // -2099546.3066280049462289146839
@@ -1762,6 +1970,7 @@ START_TEST(test_from_decimal_to_float_ok208) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok209) {
     // 79228.162514264337593543950334
@@ -1770,6 +1979,7 @@ START_TEST(test_from_decimal_to_float_ok209) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok210) {
     // -79228.162514264337593543950334
@@ -1778,6 +1988,7 @@ START_TEST(test_from_decimal_to_float_ok210) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok211) {
     // 209954.63066280049462289146839
@@ -1786,6 +1997,7 @@ START_TEST(test_from_decimal_to_float_ok211) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok212) {
     // -209954.63066280049462289146839
@@ -1794,6 +2006,7 @@ START_TEST(test_from_decimal_to_float_ok212) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok213) {
     // 7922.8162514264337593543950334
@@ -1802,6 +2015,7 @@ START_TEST(test_from_decimal_to_float_ok213) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok214) {
     // -7922.8162514264337593543950334
@@ -1810,6 +2024,7 @@ START_TEST(test_from_decimal_to_float_ok214) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok215) {
     // 20995.463066280049462289146839
@@ -1818,6 +2033,7 @@ START_TEST(test_from_decimal_to_float_ok215) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok216) {
     // -20995.463066280049462289146839
@@ -1826,6 +2042,7 @@ START_TEST(test_from_decimal_to_float_ok216) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok217) {
     // 792.28162514264337593543950334
@@ -1834,6 +2051,7 @@ START_TEST(test_from_decimal_to_float_ok217) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok218) {
     // -792.28162514264337593543950334
@@ -1842,6 +2060,7 @@ START_TEST(test_from_decimal_to_float_ok218) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok219) {
     // 2099.5463066280049462289146839
@@ -1850,6 +2069,7 @@ START_TEST(test_from_decimal_to_float_ok219) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok220) {
     // -2099.5463066280049462289146839
@@ -1858,6 +2078,7 @@ START_TEST(test_from_decimal_to_float_ok220) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok221) {
     // 79.228162514264337593543950334
@@ -1866,6 +2087,7 @@ START_TEST(test_from_decimal_to_float_ok221) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok222) {
     // -79.228162514264337593543950334
@@ -1874,6 +2096,7 @@ START_TEST(test_from_decimal_to_float_ok222) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok223) {
     // 209.95463066280049462289146839
@@ -1882,6 +2105,7 @@ START_TEST(test_from_decimal_to_float_ok223) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok224) {
     // -209.95463066280049462289146839
@@ -1890,6 +2114,7 @@ START_TEST(test_from_decimal_to_float_ok224) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok225) {
     // 7.9228162514264337593543950334
@@ -1898,6 +2123,7 @@ START_TEST(test_from_decimal_to_float_ok225) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok226) {
     // -7.9228162514264337593543950334
@@ -1906,6 +2132,7 @@ START_TEST(test_from_decimal_to_float_ok226) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok227) {
     // 20.995463066280049462289146839
@@ -1914,6 +2141,7 @@ START_TEST(test_from_decimal_to_float_ok227) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok228) {
     // -20.995463066280049462289146839
@@ -1922,6 +2150,7 @@ START_TEST(test_from_decimal_to_float_ok228) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok229) {
     // 52818775009509558395695966890
@@ -1930,6 +2159,7 @@ START_TEST(test_from_decimal_to_float_ok229) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok230) {
     // -52818775009509558395695966890
@@ -1938,6 +2168,7 @@ START_TEST(test_from_decimal_to_float_ok230) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok231) {
     // 5281877500950955839569596689.0
@@ -1946,6 +2177,7 @@ START_TEST(test_from_decimal_to_float_ok231) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok232) {
     // -5281877500950955839569596689.0
@@ -1954,6 +2186,7 @@ START_TEST(test_from_decimal_to_float_ok232) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok233) {
     // 13996975377520032974859431226
@@ -1962,6 +2195,7 @@ START_TEST(test_from_decimal_to_float_ok233) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok234) {
     // -13996975377520032974859431226
@@ -1970,6 +2204,7 @@ START_TEST(test_from_decimal_to_float_ok234) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok235) {
     // 528187750.09509558395695966890
@@ -1978,6 +2213,7 @@ START_TEST(test_from_decimal_to_float_ok235) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok236) {
     // -528187750.09509558395695966890
@@ -1986,6 +2222,7 @@ START_TEST(test_from_decimal_to_float_ok236) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok237) {
     // 1399697537.7520032974859431226
@@ -1994,6 +2231,7 @@ START_TEST(test_from_decimal_to_float_ok237) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok238) {
     // -1399697537.7520032974859431226
@@ -2002,6 +2240,7 @@ START_TEST(test_from_decimal_to_float_ok238) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok239) {
     // 5.2818775009509558395695966890
@@ -2010,6 +2249,7 @@ START_TEST(test_from_decimal_to_float_ok239) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok240) {
     // -5.2818775009509558395695966890
@@ -2018,6 +2258,7 @@ START_TEST(test_from_decimal_to_float_ok240) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok241) {
     // 13.996975377520032974859431226
@@ -2026,6 +2267,7 @@ START_TEST(test_from_decimal_to_float_ok241) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok242) {
     // -13.996975377520032974859431226
@@ -2034,6 +2276,7 @@ START_TEST(test_from_decimal_to_float_ok242) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok243) {
     // 52818775009509558392832655360
@@ -2042,6 +2285,7 @@ START_TEST(test_from_decimal_to_float_ok243) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok244) {
     // -52818775009509558392832655360
@@ -2050,6 +2294,7 @@ START_TEST(test_from_decimal_to_float_ok244) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok245) {
     // 5281877500950955839283265536.0
@@ -2058,6 +2303,7 @@ START_TEST(test_from_decimal_to_float_ok245) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok246) {
     // -5281877500950955839283265536.0
@@ -2066,6 +2312,7 @@ START_TEST(test_from_decimal_to_float_ok246) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok247) {
     // 13996975377520032974100653670
@@ -2074,6 +2321,7 @@ START_TEST(test_from_decimal_to_float_ok247) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok248) {
     // -13996975377520032974100653670
@@ -2082,6 +2330,7 @@ START_TEST(test_from_decimal_to_float_ok248) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok249) {
     // 528187750.09509558392832655360
@@ -2090,6 +2339,7 @@ START_TEST(test_from_decimal_to_float_ok249) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok250) {
     // -528187750.09509558392832655360
@@ -2098,6 +2348,7 @@ START_TEST(test_from_decimal_to_float_ok250) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok251) {
     // 1399697537.7520032974100653670
@@ -2106,6 +2357,7 @@ START_TEST(test_from_decimal_to_float_ok251) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok252) {
     // -1399697537.7520032974100653670
@@ -2114,6 +2366,7 @@ START_TEST(test_from_decimal_to_float_ok252) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok253) {
     // 5.2818775009509558392832655360
@@ -2122,6 +2375,7 @@ START_TEST(test_from_decimal_to_float_ok253) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok254) {
     // -5.2818775009509558392832655360
@@ -2130,6 +2384,7 @@ START_TEST(test_from_decimal_to_float_ok254) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok255) {
     // 13.996975377520032974100653670
@@ -2138,6 +2393,7 @@ START_TEST(test_from_decimal_to_float_ok255) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok256) {
     // -13.996975377520032974100653670
@@ -2146,6 +2402,7 @@ START_TEST(test_from_decimal_to_float_ok256) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok257) {
     // 52818774997211729016086244010
@@ -2154,6 +2411,7 @@ START_TEST(test_from_decimal_to_float_ok257) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok258) {
     // -52818774997211729016086244010
@@ -2162,6 +2420,7 @@ START_TEST(test_from_decimal_to_float_ok258) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok259) {
     // 5281877499721172901608624401.0
@@ -2170,6 +2429,7 @@ START_TEST(test_from_decimal_to_float_ok259) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok260) {
     // -5281877499721172901608624401.0
@@ -2178,6 +2438,7 @@ START_TEST(test_from_decimal_to_float_ok260) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok261) {
     // 13996975374261108189262854663
@@ -2186,6 +2447,7 @@ START_TEST(test_from_decimal_to_float_ok261) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok262) {
     // -13996975374261108189262854663
@@ -2194,6 +2456,7 @@ START_TEST(test_from_decimal_to_float_ok262) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok263) {
     // 528187749.97211729016086244010
@@ -2202,6 +2465,7 @@ START_TEST(test_from_decimal_to_float_ok263) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok264) {
     // -528187749.97211729016086244010
@@ -2210,6 +2474,7 @@ START_TEST(test_from_decimal_to_float_ok264) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok265) {
     // 1399697537.4261108189262854663
@@ -2218,6 +2483,7 @@ START_TEST(test_from_decimal_to_float_ok265) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok266) {
     // -1399697537.4261108189262854663
@@ -2226,6 +2492,7 @@ START_TEST(test_from_decimal_to_float_ok266) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok267) {
     // 5.2818774997211729016086244010
@@ -2234,6 +2501,7 @@ START_TEST(test_from_decimal_to_float_ok267) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok268) {
     // -5.2818774997211729016086244010
@@ -2242,6 +2510,7 @@ START_TEST(test_from_decimal_to_float_ok268) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok269) {
     // 13.996975374261108189262854663
@@ -2250,6 +2519,7 @@ START_TEST(test_from_decimal_to_float_ok269) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok270) {
     // -13.996975374261108189262854663
@@ -2258,6 +2528,7 @@ START_TEST(test_from_decimal_to_float_ok270) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok271) {
     // 52818774997211729013222932480
@@ -2266,6 +2537,7 @@ START_TEST(test_from_decimal_to_float_ok271) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok272) {
     // -52818774997211729013222932480
@@ -2274,6 +2546,7 @@ START_TEST(test_from_decimal_to_float_ok272) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok273) {
     // 5281877499721172901322293248.0
@@ -2282,6 +2555,7 @@ START_TEST(test_from_decimal_to_float_ok273) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok274) {
     // -5281877499721172901322293248.0
@@ -2290,6 +2564,7 @@ START_TEST(test_from_decimal_to_float_ok274) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok275) {
     // 13996975374261108188504077107
@@ -2298,6 +2573,7 @@ START_TEST(test_from_decimal_to_float_ok275) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok276) {
     // -13996975374261108188504077107
@@ -2306,6 +2582,7 @@ START_TEST(test_from_decimal_to_float_ok276) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok277) {
     // 528187749.97211729013222932480
@@ -2314,6 +2591,7 @@ START_TEST(test_from_decimal_to_float_ok277) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok278) {
     // -528187749.97211729013222932480
@@ -2322,6 +2600,7 @@ START_TEST(test_from_decimal_to_float_ok278) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok279) {
     // 1399697537.4261108188504077107
@@ -2330,6 +2609,7 @@ START_TEST(test_from_decimal_to_float_ok279) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok280) {
     // -1399697537.4261108188504077107
@@ -2338,6 +2618,7 @@ START_TEST(test_from_decimal_to_float_ok280) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok281) {
     // 5.2818774997211729013222932480
@@ -2346,6 +2627,7 @@ START_TEST(test_from_decimal_to_float_ok281) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok282) {
     // -5.2818774997211729013222932480
@@ -2354,6 +2636,7 @@ START_TEST(test_from_decimal_to_float_ok282) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok283) {
     // 13.996975374261108188504077107
@@ -2362,6 +2645,7 @@ START_TEST(test_from_decimal_to_float_ok283) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok284) {
     // -13.996975374261108188504077107
@@ -2370,6 +2654,7 @@ START_TEST(test_from_decimal_to_float_ok284) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok285) {
     // 12297829382473034410
@@ -2378,6 +2663,7 @@ START_TEST(test_from_decimal_to_float_ok285) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok286) {
     // -12297829382473034410
@@ -2386,6 +2672,7 @@ START_TEST(test_from_decimal_to_float_ok286) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok287) {
     // 32589247863553541186.50
@@ -2394,6 +2681,7 @@ START_TEST(test_from_decimal_to_float_ok287) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok288) {
     // -32589247863553541186.50
@@ -2402,6 +2690,7 @@ START_TEST(test_from_decimal_to_float_ok288) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok289) {
     // 1229782938247303441.0
@@ -2410,6 +2699,7 @@ START_TEST(test_from_decimal_to_float_ok289) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok290) {
     // -1229782938247303441.0
@@ -2418,6 +2708,7 @@ START_TEST(test_from_decimal_to_float_ok290) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok291) {
     // 3258924786355354118.650
@@ -2426,6 +2717,7 @@ START_TEST(test_from_decimal_to_float_ok291) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok292) {
     // -3258924786355354118.650
@@ -2434,6 +2726,7 @@ START_TEST(test_from_decimal_to_float_ok292) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok293) {
     // 122978293.82473034410
@@ -2442,6 +2735,7 @@ START_TEST(test_from_decimal_to_float_ok293) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok294) {
     // -122978293.82473034410
@@ -2450,6 +2744,7 @@ START_TEST(test_from_decimal_to_float_ok294) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok295) {
     // 325892478.6355354118650
@@ -2458,6 +2753,7 @@ START_TEST(test_from_decimal_to_float_ok295) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok296) {
     // -325892478.6355354118650
@@ -2466,6 +2762,7 @@ START_TEST(test_from_decimal_to_float_ok296) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok297) {
     // 1.2297829382473034410
@@ -2474,6 +2771,7 @@ START_TEST(test_from_decimal_to_float_ok297) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok298) {
     // -1.2297829382473034410
@@ -2482,6 +2780,7 @@ START_TEST(test_from_decimal_to_float_ok298) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok299) {
     // 3.258924786355354118650
@@ -2490,6 +2789,7 @@ START_TEST(test_from_decimal_to_float_ok299) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok300) {
     // -3.258924786355354118650
@@ -2498,6 +2798,7 @@ START_TEST(test_from_decimal_to_float_ok300) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok301) {
     // 12297829379609722880
@@ -2506,6 +2807,7 @@ START_TEST(test_from_decimal_to_float_ok301) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok302) {
     // -12297829379609722880
@@ -2514,6 +2816,7 @@ START_TEST(test_from_decimal_to_float_ok302) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok303) {
     // 32589247855965765632.00
@@ -2522,6 +2825,7 @@ START_TEST(test_from_decimal_to_float_ok303) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok304) {
     // -32589247855965765632.00
@@ -2530,6 +2834,7 @@ START_TEST(test_from_decimal_to_float_ok304) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok305) {
     // 1229782937960972288.0
@@ -2538,6 +2843,7 @@ START_TEST(test_from_decimal_to_float_ok305) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok306) {
     // -1229782937960972288.0
@@ -2546,6 +2852,7 @@ START_TEST(test_from_decimal_to_float_ok306) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok307) {
     // 3258924785596576563.200
@@ -2554,6 +2861,7 @@ START_TEST(test_from_decimal_to_float_ok307) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok308) {
     // -3258924785596576563.200
@@ -2562,6 +2870,7 @@ START_TEST(test_from_decimal_to_float_ok308) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok309) {
     // 122978293.79609722880
@@ -2570,6 +2879,7 @@ START_TEST(test_from_decimal_to_float_ok309) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok310) {
     // -122978293.79609722880
@@ -2578,6 +2888,7 @@ START_TEST(test_from_decimal_to_float_ok310) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok311) {
     // 325892478.5596576563200
@@ -2586,6 +2897,7 @@ START_TEST(test_from_decimal_to_float_ok311) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok312) {
     // -325892478.5596576563200
@@ -2594,6 +2906,7 @@ START_TEST(test_from_decimal_to_float_ok312) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok313) {
     // 1.2297829379609722880
@@ -2602,6 +2915,7 @@ START_TEST(test_from_decimal_to_float_ok313) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok314) {
     // -1.2297829379609722880
@@ -2610,6 +2924,7 @@ START_TEST(test_from_decimal_to_float_ok314) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok315) {
     // 3.258924785596576563200
@@ -2618,6 +2933,7 @@ START_TEST(test_from_decimal_to_float_ok315) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok316) {
     // -3.258924785596576563200
@@ -2626,6 +2942,7 @@ START_TEST(test_from_decimal_to_float_ok316) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok317) {
     // 2863311530
@@ -2634,6 +2951,7 @@ START_TEST(test_from_decimal_to_float_ok317) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok318) {
     // -2863311530
@@ -2642,6 +2960,7 @@ START_TEST(test_from_decimal_to_float_ok318) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok319) {
     // 7587775554.50
@@ -2650,6 +2969,7 @@ START_TEST(test_from_decimal_to_float_ok319) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok320) {
     // -7587775554.50
@@ -2658,6 +2978,7 @@ START_TEST(test_from_decimal_to_float_ok320) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok321) {
     // 286331153.0
@@ -2666,6 +2987,7 @@ START_TEST(test_from_decimal_to_float_ok321) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok322) {
     // -286331153.0
@@ -2674,6 +2996,7 @@ START_TEST(test_from_decimal_to_float_ok322) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok323) {
     // 758777555.450
@@ -2682,6 +3005,7 @@ START_TEST(test_from_decimal_to_float_ok323) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok324) {
     // -758777555.450
@@ -2690,6 +3014,7 @@ START_TEST(test_from_decimal_to_float_ok324) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok325) {
     // 286331.1530
@@ -2698,6 +3023,7 @@ START_TEST(test_from_decimal_to_float_ok325) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok326) {
     // -286331.1530
@@ -2706,6 +3032,7 @@ START_TEST(test_from_decimal_to_float_ok326) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok327) {
     // 758777.555450
@@ -2714,6 +3041,7 @@ START_TEST(test_from_decimal_to_float_ok327) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok328) {
     // -758777.555450
@@ -2722,6 +3050,7 @@ START_TEST(test_from_decimal_to_float_ok328) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok329) {
     // 2.863311530
@@ -2730,6 +3059,7 @@ START_TEST(test_from_decimal_to_float_ok329) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok330) {
     // -2.863311530
@@ -2738,6 +3068,7 @@ START_TEST(test_from_decimal_to_float_ok330) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok331) {
     // 7.58777555450
@@ -2746,6 +3077,7 @@ START_TEST(test_from_decimal_to_float_ok331) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok332) {
     // -7.58777555450
@@ -2754,6 +3086,7 @@ START_TEST(test_from_decimal_to_float_ok332) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok333) {
     // 26409387504754779197847983445
@@ -2762,6 +3095,7 @@ START_TEST(test_from_decimal_to_float_ok333) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok334) {
     // -26409387504754779197847983445
@@ -2770,6 +3104,7 @@ START_TEST(test_from_decimal_to_float_ok334) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok335) {
     // 2640938750475477919784798344.5
@@ -2778,6 +3113,7 @@ START_TEST(test_from_decimal_to_float_ok335) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok336) {
     // -2640938750475477919784798344.5
@@ -2786,6 +3122,7 @@ START_TEST(test_from_decimal_to_float_ok336) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok337) {
     // 6998487688760016487429715612.9
@@ -2794,6 +3131,7 @@ START_TEST(test_from_decimal_to_float_ok337) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok338) {
     // -6998487688760016487429715612.9
@@ -2802,6 +3140,7 @@ START_TEST(test_from_decimal_to_float_ok338) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok339) {
     // 264093875.04754779197847983445
@@ -2810,6 +3149,7 @@ START_TEST(test_from_decimal_to_float_ok339) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok340) {
     // -264093875.04754779197847983445
@@ -2818,6 +3158,7 @@ START_TEST(test_from_decimal_to_float_ok340) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok341) {
     // 699848768.87600164874297156129
@@ -2826,6 +3167,7 @@ START_TEST(test_from_decimal_to_float_ok341) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok342) {
     // -699848768.87600164874297156129
@@ -2834,6 +3176,7 @@ START_TEST(test_from_decimal_to_float_ok342) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok343) {
     // 2.6409387504754779197847983445
@@ -2842,6 +3185,7 @@ START_TEST(test_from_decimal_to_float_ok343) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok344) {
     // -2.6409387504754779197847983445
@@ -2850,6 +3194,7 @@ START_TEST(test_from_decimal_to_float_ok344) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok345) {
     // 6.9984876887600164874297156129
@@ -2858,6 +3203,7 @@ START_TEST(test_from_decimal_to_float_ok345) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok346) {
     // -6.9984876887600164874297156129
@@ -2866,6 +3212,7 @@ START_TEST(test_from_decimal_to_float_ok346) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok347) {
     // 26409387504754779196416327680
@@ -2874,6 +3221,7 @@ START_TEST(test_from_decimal_to_float_ok347) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok348) {
     // -26409387504754779196416327680
@@ -2882,6 +3230,7 @@ START_TEST(test_from_decimal_to_float_ok348) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok349) {
     // 69984876887600164870503268352
@@ -2890,6 +3239,7 @@ START_TEST(test_from_decimal_to_float_ok349) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok350) {
     // -69984876887600164870503268352
@@ -2898,6 +3248,7 @@ START_TEST(test_from_decimal_to_float_ok350) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok351) {
     // 2640938750475477919641632768.0
@@ -2906,6 +3257,7 @@ START_TEST(test_from_decimal_to_float_ok351) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok352) {
     // -2640938750475477919641632768.0
@@ -2914,6 +3266,7 @@ START_TEST(test_from_decimal_to_float_ok352) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok353) {
     // 6998487688760016487050326835.2
@@ -2922,6 +3275,7 @@ START_TEST(test_from_decimal_to_float_ok353) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok354) {
     // -6998487688760016487050326835.2
@@ -2930,6 +3284,7 @@ START_TEST(test_from_decimal_to_float_ok354) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok355) {
     // 264093875.04754779196416327680
@@ -2938,6 +3293,7 @@ START_TEST(test_from_decimal_to_float_ok355) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok356) {
     // -264093875.04754779196416327680
@@ -2946,6 +3302,7 @@ START_TEST(test_from_decimal_to_float_ok356) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok357) {
     // 699848768.87600164870503268352
@@ -2954,6 +3311,7 @@ START_TEST(test_from_decimal_to_float_ok357) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok358) {
     // -699848768.87600164870503268352
@@ -2962,6 +3320,7 @@ START_TEST(test_from_decimal_to_float_ok358) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok359) {
     // 2.6409387504754779196416327680
@@ -2970,6 +3329,7 @@ START_TEST(test_from_decimal_to_float_ok359) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok360) {
     // -2.6409387504754779196416327680
@@ -2978,6 +3338,7 @@ START_TEST(test_from_decimal_to_float_ok360) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok361) {
     // 6.9984876887600164870503268352
@@ -2986,6 +3347,7 @@ START_TEST(test_from_decimal_to_float_ok361) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok362) {
     // -6.9984876887600164870503268352
@@ -2994,6 +3356,7 @@ START_TEST(test_from_decimal_to_float_ok362) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok363) {
     // 26409387498605864508043122005
@@ -3002,6 +3365,7 @@ START_TEST(test_from_decimal_to_float_ok363) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok364) {
     // -26409387498605864508043122005
@@ -3010,6 +3374,7 @@ START_TEST(test_from_decimal_to_float_ok364) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok365) {
     // 69984876871305540946314273313
@@ -3018,6 +3383,7 @@ START_TEST(test_from_decimal_to_float_ok365) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok366) {
     // -69984876871305540946314273313
@@ -3026,6 +3392,7 @@ START_TEST(test_from_decimal_to_float_ok366) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok367) {
     // 2640938749860586450804312200.5
@@ -3034,6 +3401,7 @@ START_TEST(test_from_decimal_to_float_ok367) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok368) {
     // -2640938749860586450804312200.5
@@ -3042,6 +3410,7 @@ START_TEST(test_from_decimal_to_float_ok368) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok369) {
     // 6998487687130554094631427331.3
@@ -3050,6 +3419,7 @@ START_TEST(test_from_decimal_to_float_ok369) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok370) {
     // -6998487687130554094631427331.3
@@ -3058,6 +3428,7 @@ START_TEST(test_from_decimal_to_float_ok370) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok371) {
     // 264093874.98605864508043122005
@@ -3066,6 +3437,7 @@ START_TEST(test_from_decimal_to_float_ok371) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok372) {
     // -264093874.98605864508043122005
@@ -3074,6 +3446,7 @@ START_TEST(test_from_decimal_to_float_ok372) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok373) {
     // 699848768.71305540946314273313
@@ -3082,6 +3455,7 @@ START_TEST(test_from_decimal_to_float_ok373) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok374) {
     // -699848768.71305540946314273313
@@ -3090,6 +3464,7 @@ START_TEST(test_from_decimal_to_float_ok374) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok375) {
     // 2.6409387498605864508043122005
@@ -3098,6 +3473,7 @@ START_TEST(test_from_decimal_to_float_ok375) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok376) {
     // -2.6409387498605864508043122005
@@ -3106,6 +3482,7 @@ START_TEST(test_from_decimal_to_float_ok376) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok377) {
     // 6.9984876871305540946314273313
@@ -3114,6 +3491,7 @@ START_TEST(test_from_decimal_to_float_ok377) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok378) {
     // -6.9984876871305540946314273313
@@ -3122,6 +3500,7 @@ START_TEST(test_from_decimal_to_float_ok378) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok379) {
     // 26409387498605864506611466240
@@ -3130,6 +3509,7 @@ START_TEST(test_from_decimal_to_float_ok379) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok380) {
     // -26409387498605864506611466240
@@ -3138,6 +3518,7 @@ START_TEST(test_from_decimal_to_float_ok380) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok381) {
     // 69984876871305540942520385536
@@ -3146,6 +3527,7 @@ START_TEST(test_from_decimal_to_float_ok381) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok382) {
     // -69984876871305540942520385536
@@ -3154,6 +3536,7 @@ START_TEST(test_from_decimal_to_float_ok382) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok383) {
     // 2640938749860586450661146624.0
@@ -3162,6 +3545,7 @@ START_TEST(test_from_decimal_to_float_ok383) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok384) {
     // -2640938749860586450661146624.0
@@ -3170,6 +3554,7 @@ START_TEST(test_from_decimal_to_float_ok384) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok385) {
     // 6998487687130554094252038553.6
@@ -3178,6 +3563,7 @@ START_TEST(test_from_decimal_to_float_ok385) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok386) {
     // -6998487687130554094252038553.6
@@ -3186,6 +3572,7 @@ START_TEST(test_from_decimal_to_float_ok386) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok387) {
     // 264093874.98605864506611466240
@@ -3194,6 +3581,7 @@ START_TEST(test_from_decimal_to_float_ok387) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok388) {
     // -264093874.98605864506611466240
@@ -3202,6 +3590,7 @@ START_TEST(test_from_decimal_to_float_ok388) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok389) {
     // 699848768.71305540942520385536
@@ -3210,6 +3599,7 @@ START_TEST(test_from_decimal_to_float_ok389) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok390) {
     // -699848768.71305540942520385536
@@ -3218,6 +3608,7 @@ START_TEST(test_from_decimal_to_float_ok390) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok391) {
     // 2.6409387498605864506611466240
@@ -3226,6 +3617,7 @@ START_TEST(test_from_decimal_to_float_ok391) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok392) {
     // -2.6409387498605864506611466240
@@ -3234,6 +3626,7 @@ START_TEST(test_from_decimal_to_float_ok392) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok393) {
     // 6.9984876871305540942520385536
@@ -3242,6 +3635,7 @@ START_TEST(test_from_decimal_to_float_ok393) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok394) {
     // -6.9984876871305540942520385536
@@ -3250,6 +3644,7 @@ START_TEST(test_from_decimal_to_float_ok394) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok395) {
     // 6148914691236517205
@@ -3258,6 +3653,7 @@ START_TEST(test_from_decimal_to_float_ok395) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok396) {
     // -6148914691236517205
@@ -3266,6 +3662,7 @@ START_TEST(test_from_decimal_to_float_ok396) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok397) {
     // 16294623931776770593.25
@@ -3274,6 +3671,7 @@ START_TEST(test_from_decimal_to_float_ok397) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok398) {
     // -16294623931776770593.25
@@ -3282,6 +3680,7 @@ START_TEST(test_from_decimal_to_float_ok398) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok399) {
     // 614891469123651720.5
@@ -3290,6 +3689,7 @@ START_TEST(test_from_decimal_to_float_ok399) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok400) {
     // -614891469123651720.5
@@ -3298,6 +3698,7 @@ START_TEST(test_from_decimal_to_float_ok400) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok401) {
     // 1629462393177677059.325
@@ -3306,6 +3707,7 @@ START_TEST(test_from_decimal_to_float_ok401) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok402) {
     // -1629462393177677059.325
@@ -3314,6 +3716,7 @@ START_TEST(test_from_decimal_to_float_ok402) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok403) {
     // 6148914.691236517205
@@ -3322,6 +3725,7 @@ START_TEST(test_from_decimal_to_float_ok403) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok404) {
     // -6148914.691236517205
@@ -3330,6 +3734,7 @@ START_TEST(test_from_decimal_to_float_ok404) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok405) {
     // 16294623.93177677059325
@@ -3338,6 +3743,7 @@ START_TEST(test_from_decimal_to_float_ok405) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok406) {
     // -16294623.93177677059325
@@ -3346,6 +3752,7 @@ START_TEST(test_from_decimal_to_float_ok406) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok407) {
     // 6.148914691236517205
@@ -3354,6 +3761,7 @@ START_TEST(test_from_decimal_to_float_ok407) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok408) {
     // -6.148914691236517205
@@ -3362,6 +3770,7 @@ START_TEST(test_from_decimal_to_float_ok408) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok409) {
     // 16.29462393177677059325
@@ -3370,6 +3779,7 @@ START_TEST(test_from_decimal_to_float_ok409) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok410) {
     // -16.29462393177677059325
@@ -3378,6 +3788,7 @@ START_TEST(test_from_decimal_to_float_ok410) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok411) {
     // 6148914689804861440
@@ -3386,6 +3797,7 @@ START_TEST(test_from_decimal_to_float_ok411) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok412) {
     // -6148914689804861440
@@ -3394,6 +3806,7 @@ START_TEST(test_from_decimal_to_float_ok412) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok413) {
     // 16294623927982882816.00
@@ -3402,6 +3815,7 @@ START_TEST(test_from_decimal_to_float_ok413) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok414) {
     // -16294623927982882816.00
@@ -3410,6 +3824,7 @@ START_TEST(test_from_decimal_to_float_ok414) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok415) {
     // 614891468980486144.0
@@ -3418,6 +3833,7 @@ START_TEST(test_from_decimal_to_float_ok415) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok416) {
     // -614891468980486144.0
@@ -3426,6 +3842,7 @@ START_TEST(test_from_decimal_to_float_ok416) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok417) {
     // 1629462392798288281.600
@@ -3434,6 +3851,7 @@ START_TEST(test_from_decimal_to_float_ok417) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok418) {
     // -1629462392798288281.600
@@ -3442,6 +3860,7 @@ START_TEST(test_from_decimal_to_float_ok418) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok419) {
     // 6148914.689804861440
@@ -3450,6 +3869,7 @@ START_TEST(test_from_decimal_to_float_ok419) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok420) {
     // -6148914.689804861440
@@ -3458,6 +3878,7 @@ START_TEST(test_from_decimal_to_float_ok420) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok421) {
     // 16294623.92798288281600
@@ -3466,6 +3887,7 @@ START_TEST(test_from_decimal_to_float_ok421) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok422) {
     // -16294623.92798288281600
@@ -3474,6 +3896,7 @@ START_TEST(test_from_decimal_to_float_ok422) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok423) {
     // 6.148914689804861440
@@ -3482,6 +3905,7 @@ START_TEST(test_from_decimal_to_float_ok423) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok424) {
     // -6.148914689804861440
@@ -3490,6 +3914,7 @@ START_TEST(test_from_decimal_to_float_ok424) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok425) {
     // 16.29462392798288281600
@@ -3498,6 +3923,7 @@ START_TEST(test_from_decimal_to_float_ok425) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok426) {
     // -16.29462392798288281600
@@ -3506,6 +3932,7 @@ START_TEST(test_from_decimal_to_float_ok426) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok427) {
     // 1431655765
@@ -3514,6 +3941,7 @@ START_TEST(test_from_decimal_to_float_ok427) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok428) {
     // -1431655765
@@ -3522,6 +3950,7 @@ START_TEST(test_from_decimal_to_float_ok428) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok429) {
     // 3793887777.25
@@ -3530,6 +3959,7 @@ START_TEST(test_from_decimal_to_float_ok429) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok430) {
     // -3793887777.25
@@ -3538,6 +3968,7 @@ START_TEST(test_from_decimal_to_float_ok430) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok431) {
     // 143165576.5
@@ -3546,6 +3977,7 @@ START_TEST(test_from_decimal_to_float_ok431) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok432) {
     // -143165576.5
@@ -3554,6 +3986,7 @@ START_TEST(test_from_decimal_to_float_ok432) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok433) {
     // 379388777.725
@@ -3562,6 +3995,7 @@ START_TEST(test_from_decimal_to_float_ok433) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok434) {
     // -379388777.725
@@ -3570,6 +4004,7 @@ START_TEST(test_from_decimal_to_float_ok434) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok435) {
     // 143165.5765
@@ -3578,6 +4013,7 @@ START_TEST(test_from_decimal_to_float_ok435) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok436) {
     // -143165.5765
@@ -3586,6 +4022,7 @@ START_TEST(test_from_decimal_to_float_ok436) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok437) {
     // 379388.777725
@@ -3594,6 +4031,7 @@ START_TEST(test_from_decimal_to_float_ok437) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok438) {
     // -379388.777725
@@ -3602,6 +4040,7 @@ START_TEST(test_from_decimal_to_float_ok438) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok439) {
     // 1.431655765
@@ -3610,6 +4049,7 @@ START_TEST(test_from_decimal_to_float_ok439) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok440) {
     // -1.431655765
@@ -3618,6 +4058,7 @@ START_TEST(test_from_decimal_to_float_ok440) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok441) {
     // 3.79388777725
@@ -3626,6 +4067,7 @@ START_TEST(test_from_decimal_to_float_ok441) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok442) {
     // -3.79388777725
@@ -3634,6 +4076,7 @@ START_TEST(test_from_decimal_to_float_ok442) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok443) {
     // 18446744078004518913
@@ -3642,6 +4085,7 @@ START_TEST(test_from_decimal_to_float_ok443) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok444) {
     // -18446744078004518913
@@ -3650,6 +4094,7 @@ START_TEST(test_from_decimal_to_float_ok444) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok445) {
     // 48883871806711975119.45
@@ -3658,6 +4103,7 @@ START_TEST(test_from_decimal_to_float_ok445) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok446) {
     // -48883871806711975119.45
@@ -3666,6 +4112,7 @@ START_TEST(test_from_decimal_to_float_ok446) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok447) {
     // 1844674407800451891.3
@@ -3674,6 +4121,7 @@ START_TEST(test_from_decimal_to_float_ok447) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok448) {
     // -1844674407800451891.3
@@ -3682,6 +4130,7 @@ START_TEST(test_from_decimal_to_float_ok448) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok449) {
     // 4888387180671197511.945
@@ -3690,6 +4139,7 @@ START_TEST(test_from_decimal_to_float_ok449) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok450) {
     // -4888387180671197511.945
@@ -3698,6 +4148,7 @@ START_TEST(test_from_decimal_to_float_ok450) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok451) {
     // 184467440.78004518913
@@ -3706,6 +4157,7 @@ START_TEST(test_from_decimal_to_float_ok451) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok452) {
     // -184467440.78004518913
@@ -3714,6 +4166,7 @@ START_TEST(test_from_decimal_to_float_ok452) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok453) {
     // 488838718.0671197511945
@@ -3722,6 +4175,7 @@ START_TEST(test_from_decimal_to_float_ok453) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok454) {
     // -488838718.0671197511945
@@ -3730,6 +4184,7 @@ START_TEST(test_from_decimal_to_float_ok454) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok455) {
     // 1.8446744078004518913
@@ -3738,6 +4193,7 @@ START_TEST(test_from_decimal_to_float_ok455) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok456) {
     // -1.8446744078004518913
@@ -3746,6 +4202,7 @@ START_TEST(test_from_decimal_to_float_ok456) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok457) {
     // 4.888387180671197511945
@@ -3754,6 +4211,7 @@ START_TEST(test_from_decimal_to_float_ok457) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok458) {
     // -4.888387180671197511945
@@ -3762,6 +4220,7 @@ START_TEST(test_from_decimal_to_float_ok458) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok459) {
     // 18446744078004518912
@@ -3770,6 +4229,7 @@ START_TEST(test_from_decimal_to_float_ok459) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok460) {
     // -18446744078004518912
@@ -3778,6 +4238,7 @@ START_TEST(test_from_decimal_to_float_ok460) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok461) {
     // 48883871806711975116.80
@@ -3786,6 +4247,7 @@ START_TEST(test_from_decimal_to_float_ok461) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok462) {
     // -48883871806711975116.80
@@ -3794,6 +4256,7 @@ START_TEST(test_from_decimal_to_float_ok462) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok463) {
     // 1844674407800451891.2
@@ -3802,6 +4265,7 @@ START_TEST(test_from_decimal_to_float_ok463) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok464) {
     // -1844674407800451891.2
@@ -3810,6 +4274,7 @@ START_TEST(test_from_decimal_to_float_ok464) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok465) {
     // 4888387180671197511.680
@@ -3818,6 +4283,7 @@ START_TEST(test_from_decimal_to_float_ok465) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok466) {
     // -4888387180671197511.680
@@ -3826,6 +4292,7 @@ START_TEST(test_from_decimal_to_float_ok466) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok467) {
     // 18446744.078004518912
@@ -3834,6 +4301,7 @@ START_TEST(test_from_decimal_to_float_ok467) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok468) {
     // -18446744.078004518912
@@ -3842,6 +4310,7 @@ START_TEST(test_from_decimal_to_float_ok468) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok469) {
     // 48883871.80671197511680
@@ -3850,6 +4319,7 @@ START_TEST(test_from_decimal_to_float_ok469) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok470) {
     // -48883871.80671197511680
@@ -3858,6 +4328,7 @@ START_TEST(test_from_decimal_to_float_ok470) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok471) {
     // 1.8446744078004518912
@@ -3866,6 +4337,7 @@ START_TEST(test_from_decimal_to_float_ok471) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok472) {
     // -1.8446744078004518912
@@ -3874,6 +4346,7 @@ START_TEST(test_from_decimal_to_float_ok472) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok473) {
     // 4.888387180671197511680
@@ -3882,6 +4355,7 @@ START_TEST(test_from_decimal_to_float_ok473) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok474) {
     // -4.888387180671197511680
@@ -3890,6 +4364,7 @@ START_TEST(test_from_decimal_to_float_ok474) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok475) {
     // 18446744073709551617
@@ -3898,6 +4373,7 @@ START_TEST(test_from_decimal_to_float_ok475) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok476) {
     // -18446744073709551617
@@ -3906,6 +4382,7 @@ START_TEST(test_from_decimal_to_float_ok476) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok477) {
     // 48883871795330311785.05
@@ -3914,6 +4391,7 @@ START_TEST(test_from_decimal_to_float_ok477) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok478) {
     // -48883871795330311785.05
@@ -3922,6 +4400,7 @@ START_TEST(test_from_decimal_to_float_ok478) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok479) {
     // 1844674407370955161.7
@@ -3930,6 +4409,7 @@ START_TEST(test_from_decimal_to_float_ok479) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok480) {
     // -1844674407370955161.7
@@ -3938,6 +4418,7 @@ START_TEST(test_from_decimal_to_float_ok480) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok481) {
     // 4888387179533031178.505
@@ -3946,6 +4427,7 @@ START_TEST(test_from_decimal_to_float_ok481) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok482) {
     // -4888387179533031178.505
@@ -3954,6 +4436,7 @@ START_TEST(test_from_decimal_to_float_ok482) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok483) {
     // 1844674.4073709551617
@@ -3962,6 +4445,7 @@ START_TEST(test_from_decimal_to_float_ok483) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok484) {
     // -1844674.4073709551617
@@ -3970,6 +4454,7 @@ START_TEST(test_from_decimal_to_float_ok484) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok485) {
     // 4888387.179533031178505
@@ -3978,6 +4463,7 @@ START_TEST(test_from_decimal_to_float_ok485) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok486) {
     // -4888387.179533031178505
@@ -3986,6 +4472,7 @@ START_TEST(test_from_decimal_to_float_ok486) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok487) {
     // 1.8446744073709551617
@@ -3994,6 +4481,7 @@ START_TEST(test_from_decimal_to_float_ok487) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok488) {
     // -1.8446744073709551617
@@ -4002,6 +4490,7 @@ START_TEST(test_from_decimal_to_float_ok488) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok489) {
     // 4.888387179533031178505
@@ -4010,6 +4499,7 @@ START_TEST(test_from_decimal_to_float_ok489) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok490) {
     // -4.888387179533031178505
@@ -4018,6 +4508,7 @@ START_TEST(test_from_decimal_to_float_ok490) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok491) {
     // 18446744073709551616
@@ -4026,6 +4517,7 @@ START_TEST(test_from_decimal_to_float_ok491) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok492) {
     // -18446744073709551616
@@ -4034,6 +4526,7 @@ START_TEST(test_from_decimal_to_float_ok492) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok493) {
     // 48883871795330311782.40
@@ -4042,6 +4535,7 @@ START_TEST(test_from_decimal_to_float_ok493) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok494) {
     // -48883871795330311782.40
@@ -4050,6 +4544,7 @@ START_TEST(test_from_decimal_to_float_ok494) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok495) {
     // 1844674407370955161.6
@@ -4058,6 +4553,7 @@ START_TEST(test_from_decimal_to_float_ok495) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok496) {
     // -1844674407370955161.6
@@ -4066,6 +4562,7 @@ START_TEST(test_from_decimal_to_float_ok496) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok497) {
     // 4888387179533031178.240
@@ -4074,6 +4571,7 @@ START_TEST(test_from_decimal_to_float_ok497) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok498) {
     // -4888387179533031178.240
@@ -4082,6 +4580,7 @@ START_TEST(test_from_decimal_to_float_ok498) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok499) {
     // 184467.44073709551616
@@ -4090,6 +4589,7 @@ START_TEST(test_from_decimal_to_float_ok499) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok500) {
     // -184467.44073709551616
@@ -4098,6 +4598,7 @@ START_TEST(test_from_decimal_to_float_ok500) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok501) {
     // 488838.7179533031178240
@@ -4106,6 +4607,7 @@ START_TEST(test_from_decimal_to_float_ok501) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok502) {
     // -488838.7179533031178240
@@ -4114,6 +4616,7 @@ START_TEST(test_from_decimal_to_float_ok502) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok503) {
     // 1.8446744073709551616
@@ -4122,6 +4625,7 @@ START_TEST(test_from_decimal_to_float_ok503) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok504) {
     // -1.8446744073709551616
@@ -4130,6 +4634,7 @@ START_TEST(test_from_decimal_to_float_ok504) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok505) {
     // 4.888387179533031178240
@@ -4138,6 +4643,7 @@ START_TEST(test_from_decimal_to_float_ok505) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok506) {
     // -4.888387179533031178240
@@ -4146,6 +4652,7 @@ START_TEST(test_from_decimal_to_float_ok506) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok507) {
     // 4294967297
@@ -4154,6 +4661,7 @@ START_TEST(test_from_decimal_to_float_ok507) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok508) {
     // -4294967297
@@ -4162,6 +4670,7 @@ START_TEST(test_from_decimal_to_float_ok508) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok509) {
     // 11381663337.05
@@ -4170,6 +4679,7 @@ START_TEST(test_from_decimal_to_float_ok509) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok510) {
     // -11381663337.05
@@ -4178,6 +4688,7 @@ START_TEST(test_from_decimal_to_float_ok510) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok511) {
     // 429496729.7
@@ -4186,6 +4697,7 @@ START_TEST(test_from_decimal_to_float_ok511) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok512) {
     // -429496729.7
@@ -4194,6 +4706,7 @@ START_TEST(test_from_decimal_to_float_ok512) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok513) {
     // 1138166333.705
@@ -4202,6 +4715,7 @@ START_TEST(test_from_decimal_to_float_ok513) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok514) {
     // -1138166333.705
@@ -4210,6 +4724,7 @@ START_TEST(test_from_decimal_to_float_ok514) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok515) {
     // 42949672.97
@@ -4218,6 +4733,7 @@ START_TEST(test_from_decimal_to_float_ok515) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok516) {
     // -42949672.97
@@ -4226,6 +4742,7 @@ START_TEST(test_from_decimal_to_float_ok516) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok517) {
     // 113816633.3705
@@ -4234,6 +4751,7 @@ START_TEST(test_from_decimal_to_float_ok517) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok518) {
     // -113816633.3705
@@ -4242,6 +4760,7 @@ START_TEST(test_from_decimal_to_float_ok518) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok519) {
     // 429496.7297
@@ -4250,6 +4769,7 @@ START_TEST(test_from_decimal_to_float_ok519) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok520) {
     // -429496.7297
@@ -4258,6 +4778,7 @@ START_TEST(test_from_decimal_to_float_ok520) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok521) {
     // 1138166.333705
@@ -4266,6 +4787,7 @@ START_TEST(test_from_decimal_to_float_ok521) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok522) {
     // -1138166.333705
@@ -4274,6 +4796,7 @@ START_TEST(test_from_decimal_to_float_ok522) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok523) {
     // 4.294967297
@@ -4282,6 +4805,7 @@ START_TEST(test_from_decimal_to_float_ok523) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok524) {
     // -4.294967297
@@ -4290,6 +4814,7 @@ START_TEST(test_from_decimal_to_float_ok524) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok525) {
     // 11.38166333705
@@ -4298,6 +4823,7 @@ START_TEST(test_from_decimal_to_float_ok525) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok526) {
     // -11.38166333705
@@ -4306,6 +4832,7 @@ START_TEST(test_from_decimal_to_float_ok526) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok527) {
     // 42.94967297
@@ -4314,6 +4841,7 @@ START_TEST(test_from_decimal_to_float_ok527) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok528) {
     // -42.94967297
@@ -4322,6 +4850,7 @@ START_TEST(test_from_decimal_to_float_ok528) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok529) {
     // 113.8166333705
@@ -4330,6 +4859,7 @@ START_TEST(test_from_decimal_to_float_ok529) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok530) {
     // -113.8166333705
@@ -4338,6 +4868,7 @@ START_TEST(test_from_decimal_to_float_ok530) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok531) {
     // 4294967296
@@ -4346,6 +4877,7 @@ START_TEST(test_from_decimal_to_float_ok531) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok532) {
     // -4294967296
@@ -4354,6 +4886,7 @@ START_TEST(test_from_decimal_to_float_ok532) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok533) {
     // 11381663334.40
@@ -4362,6 +4895,7 @@ START_TEST(test_from_decimal_to_float_ok533) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok534) {
     // -11381663334.40
@@ -4370,6 +4904,7 @@ START_TEST(test_from_decimal_to_float_ok534) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok535) {
     // 429496729.6
@@ -4378,6 +4913,7 @@ START_TEST(test_from_decimal_to_float_ok535) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok536) {
     // -429496729.6
@@ -4386,6 +4922,7 @@ START_TEST(test_from_decimal_to_float_ok536) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok537) {
     // 1138166333.440
@@ -4394,6 +4931,7 @@ START_TEST(test_from_decimal_to_float_ok537) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok538) {
     // -1138166333.440
@@ -4402,6 +4940,7 @@ START_TEST(test_from_decimal_to_float_ok538) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok539) {
     // 42949672.96
@@ -4410,6 +4949,7 @@ START_TEST(test_from_decimal_to_float_ok539) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok540) {
     // -42949672.96
@@ -4418,6 +4958,7 @@ START_TEST(test_from_decimal_to_float_ok540) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok541) {
     // 113816633.3440
@@ -4426,6 +4967,7 @@ START_TEST(test_from_decimal_to_float_ok541) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok542) {
     // -113816633.3440
@@ -4434,6 +4976,7 @@ START_TEST(test_from_decimal_to_float_ok542) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok543) {
     // 4294967.296
@@ -4442,6 +4985,7 @@ START_TEST(test_from_decimal_to_float_ok543) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok544) {
     // -4294967.296
@@ -4450,6 +4994,7 @@ START_TEST(test_from_decimal_to_float_ok544) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok545) {
     // 11381663.33440
@@ -4458,6 +5003,7 @@ START_TEST(test_from_decimal_to_float_ok545) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok546) {
     // -11381663.33440
@@ -4466,6 +5012,7 @@ START_TEST(test_from_decimal_to_float_ok546) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok547) {
     // 4.294967296
@@ -4474,6 +5021,7 @@ START_TEST(test_from_decimal_to_float_ok547) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok548) {
     // -4.294967296
@@ -4482,6 +5030,7 @@ START_TEST(test_from_decimal_to_float_ok548) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok549) {
     // 11.38166333440
@@ -4490,6 +5039,7 @@ START_TEST(test_from_decimal_to_float_ok549) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok550) {
     // -11.38166333440
@@ -4498,6 +5048,7 @@ START_TEST(test_from_decimal_to_float_ok550) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok551) {
     // 42.94967296
@@ -4506,6 +5057,7 @@ START_TEST(test_from_decimal_to_float_ok551) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok552) {
     // -42.94967296
@@ -4514,6 +5066,7 @@ START_TEST(test_from_decimal_to_float_ok552) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok553) {
     // 113.8166333440
@@ -4522,6 +5075,7 @@ START_TEST(test_from_decimal_to_float_ok553) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok554) {
     // -113.8166333440
@@ -4530,6 +5084,7 @@ START_TEST(test_from_decimal_to_float_ok554) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok555) {
     // 0.1
@@ -4538,6 +5093,7 @@ START_TEST(test_from_decimal_to_float_ok555) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok556) {
     // -0.1
@@ -4546,6 +5102,7 @@ START_TEST(test_from_decimal_to_float_ok556) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok557) {
     // 0.265
@@ -4554,6 +5111,7 @@ START_TEST(test_from_decimal_to_float_ok557) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok558) {
     // -0.265
@@ -4562,6 +5120,7 @@ START_TEST(test_from_decimal_to_float_ok558) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok559) {
     // 0.0000000000001
@@ -4570,6 +5129,7 @@ START_TEST(test_from_decimal_to_float_ok559) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok560) {
     // -0.0000000000001
@@ -4578,6 +5138,7 @@ START_TEST(test_from_decimal_to_float_ok560) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok561) {
     // 0.000000000000265
@@ -4586,6 +5147,7 @@ START_TEST(test_from_decimal_to_float_ok561) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok562) {
     // -0.000000000000265
@@ -4594,6 +5156,7 @@ START_TEST(test_from_decimal_to_float_ok562) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok563) {
     // 0.00000000000001
@@ -4602,6 +5165,7 @@ START_TEST(test_from_decimal_to_float_ok563) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok564) {
     // -0.00000000000001
@@ -4610,6 +5174,7 @@ START_TEST(test_from_decimal_to_float_ok564) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok565) {
     // 0.0000000000000265
@@ -4618,6 +5183,7 @@ START_TEST(test_from_decimal_to_float_ok565) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok566) {
     // -0.0000000000000265
@@ -4626,6 +5192,7 @@ START_TEST(test_from_decimal_to_float_ok566) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok567) {
     // 0.000000000000000000000000001
@@ -4634,6 +5201,7 @@ START_TEST(test_from_decimal_to_float_ok567) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok568) {
     // -0.000000000000000000000000001
@@ -4642,6 +5210,7 @@ START_TEST(test_from_decimal_to_float_ok568) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok569) {
     // 0.0000000000000000000000000026
@@ -4650,6 +5219,7 @@ START_TEST(test_from_decimal_to_float_ok569) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok570) {
     // -0.0000000000000000000000000026
@@ -4658,6 +5228,7 @@ START_TEST(test_from_decimal_to_float_ok570) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok571) {
     // 0.0000000000000000000000000001
@@ -4666,6 +5237,7 @@ START_TEST(test_from_decimal_to_float_ok571) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok572) {
     // -0.0000000000000000000000000001
@@ -4674,6 +5246,7 @@ START_TEST(test_from_decimal_to_float_ok572) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok573) {
     // 0.0000000000000000000000000003
@@ -4682,6 +5255,7 @@ START_TEST(test_from_decimal_to_float_ok573) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok574) {
     // -0.0000000000000000000000000003
@@ -4690,6 +5264,7 @@ START_TEST(test_from_decimal_to_float_ok574) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok575) {
     // 39614081266355540835774234624
@@ -4698,6 +5273,7 @@ START_TEST(test_from_decimal_to_float_ok575) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok576) {
     // -39614081266355540835774234624
@@ -4706,6 +5282,7 @@ START_TEST(test_from_decimal_to_float_ok576) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok577) {
     // 3961408126635554083577423462.4
@@ -4714,6 +5291,7 @@ START_TEST(test_from_decimal_to_float_ok577) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok578) {
     // -3961408126635554083577423462.4
@@ -4722,6 +5300,7 @@ START_TEST(test_from_decimal_to_float_ok578) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok579) {
     // 10497731535584218321480172175
@@ -4730,6 +5309,7 @@ START_TEST(test_from_decimal_to_float_ok579) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok580) {
     // -10497731535584218321480172175
@@ -4738,6 +5318,7 @@ START_TEST(test_from_decimal_to_float_ok580) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok581) {
     // 396140812.66355540835774234624
@@ -4746,6 +5327,7 @@ START_TEST(test_from_decimal_to_float_ok581) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok582) {
     // -396140812.66355540835774234624
@@ -4754,6 +5336,7 @@ START_TEST(test_from_decimal_to_float_ok582) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok583) {
     // 1049773153.5584218321480172175
@@ -4762,6 +5345,7 @@ START_TEST(test_from_decimal_to_float_ok583) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok584) {
     // -1049773153.5584218321480172175
@@ -4770,6 +5354,7 @@ START_TEST(test_from_decimal_to_float_ok584) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok585) {
     // 3.9614081266355540835774234624
@@ -4778,6 +5363,7 @@ START_TEST(test_from_decimal_to_float_ok585) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok586) {
     // -3.9614081266355540835774234624
@@ -4786,6 +5372,7 @@ START_TEST(test_from_decimal_to_float_ok586) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok587) {
     // 10.497731535584218321480172175
@@ -4794,6 +5381,7 @@ START_TEST(test_from_decimal_to_float_ok587) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok588) {
     // -10.497731535584218321480172175
@@ -4802,6 +5390,7 @@ START_TEST(test_from_decimal_to_float_ok588) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok589) {
     // 39614081266355540833626750976
@@ -4810,6 +5399,7 @@ START_TEST(test_from_decimal_to_float_ok589) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok590) {
     // -39614081266355540833626750976
@@ -4818,6 +5408,7 @@ START_TEST(test_from_decimal_to_float_ok590) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok591) {
     // 3961408126635554083362675097.6
@@ -4826,6 +5417,7 @@ START_TEST(test_from_decimal_to_float_ok591) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok592) {
     // -3961408126635554083362675097.6
@@ -4834,6 +5426,7 @@ START_TEST(test_from_decimal_to_float_ok592) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok593) {
     // 10497731535584218320911089009
@@ -4842,6 +5435,7 @@ START_TEST(test_from_decimal_to_float_ok593) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok594) {
     // -10497731535584218320911089009
@@ -4850,6 +5444,7 @@ START_TEST(test_from_decimal_to_float_ok594) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok595) {
     // 39614081.266355540833626750976
@@ -4858,6 +5453,7 @@ START_TEST(test_from_decimal_to_float_ok595) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok596) {
     // -39614081.266355540833626750976
@@ -4866,6 +5462,7 @@ START_TEST(test_from_decimal_to_float_ok596) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok597) {
     // 104977315.35584218320911089009
@@ -4874,6 +5471,7 @@ START_TEST(test_from_decimal_to_float_ok597) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok598) {
     // -104977315.35584218320911089009
@@ -4882,6 +5480,7 @@ START_TEST(test_from_decimal_to_float_ok598) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok599) {
     // 3.9614081266355540833626750976
@@ -4890,6 +5489,7 @@ START_TEST(test_from_decimal_to_float_ok599) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok600) {
     // -3.9614081266355540833626750976
@@ -4898,6 +5498,7 @@ START_TEST(test_from_decimal_to_float_ok600) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok601) {
     // 10.497731535584218320911089009
@@ -4906,6 +5507,7 @@ START_TEST(test_from_decimal_to_float_ok601) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok602) {
     // -10.497731535584218320911089009
@@ -4914,6 +5516,7 @@ START_TEST(test_from_decimal_to_float_ok602) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok603) {
     // 39614081257132168798919458816
@@ -4922,6 +5525,7 @@ START_TEST(test_from_decimal_to_float_ok603) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok604) {
     // -39614081257132168798919458816
@@ -4930,6 +5534,7 @@ START_TEST(test_from_decimal_to_float_ok604) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok605) {
     // 3961408125713216879891945881.6
@@ -4938,6 +5543,7 @@ START_TEST(test_from_decimal_to_float_ok605) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok606) {
     // -3961408125713216879891945881.6
@@ -4946,6 +5552,7 @@ START_TEST(test_from_decimal_to_float_ok606) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok607) {
     // 10497731533140024731713656586
@@ -4954,6 +5561,7 @@ START_TEST(test_from_decimal_to_float_ok607) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok608) {
     // -10497731533140024731713656586
@@ -4962,6 +5570,7 @@ START_TEST(test_from_decimal_to_float_ok608) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok609) {
     // 3961408.1257132168798919458816
@@ -4970,6 +5579,7 @@ START_TEST(test_from_decimal_to_float_ok609) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok610) {
     // -3961408.1257132168798919458816
@@ -4978,6 +5588,7 @@ START_TEST(test_from_decimal_to_float_ok610) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok611) {
     // 10497731.533140024731713656586
@@ -4986,6 +5597,7 @@ START_TEST(test_from_decimal_to_float_ok611) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok612) {
     // -10497731.533140024731713656586
@@ -4994,6 +5606,7 @@ START_TEST(test_from_decimal_to_float_ok612) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok613) {
     // 3.9614081257132168798919458816
@@ -5002,6 +5615,7 @@ START_TEST(test_from_decimal_to_float_ok613) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok614) {
     // -3.9614081257132168798919458816
@@ -5010,6 +5624,7 @@ START_TEST(test_from_decimal_to_float_ok614) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok615) {
     // 10.497731533140024731713656586
@@ -5018,6 +5633,7 @@ START_TEST(test_from_decimal_to_float_ok615) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok616) {
     // -10.497731533140024731713656586
@@ -5026,6 +5642,7 @@ START_TEST(test_from_decimal_to_float_ok616) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok617) {
     // 39614081257132168796771975168
@@ -5034,6 +5651,7 @@ START_TEST(test_from_decimal_to_float_ok617) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok618) {
     // -39614081257132168796771975168
@@ -5042,6 +5660,7 @@ START_TEST(test_from_decimal_to_float_ok618) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok619) {
     // 3961408125713216879677197516.8
@@ -5050,6 +5669,7 @@ START_TEST(test_from_decimal_to_float_ok619) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok620) {
     // -3961408125713216879677197516.8
@@ -5058,6 +5678,7 @@ START_TEST(test_from_decimal_to_float_ok620) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok621) {
     // 10497731533140024731144573420
@@ -5066,6 +5687,7 @@ START_TEST(test_from_decimal_to_float_ok621) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok622) {
     // -10497731533140024731144573420
@@ -5074,6 +5696,7 @@ START_TEST(test_from_decimal_to_float_ok622) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok623) {
     // 396140.81257132168796771975168
@@ -5082,6 +5705,7 @@ START_TEST(test_from_decimal_to_float_ok623) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok624) {
     // -396140.81257132168796771975168
@@ -5090,6 +5714,7 @@ START_TEST(test_from_decimal_to_float_ok624) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok625) {
     // 1049773.1533140024731144573420
@@ -5098,6 +5723,7 @@ START_TEST(test_from_decimal_to_float_ok625) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok626) {
     // -1049773.1533140024731144573420
@@ -5106,6 +5732,7 @@ START_TEST(test_from_decimal_to_float_ok626) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok627) {
     // 3.9614081257132168796771975168
@@ -5114,6 +5741,7 @@ START_TEST(test_from_decimal_to_float_ok627) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok628) {
     // -3.9614081257132168796771975168
@@ -5122,6 +5750,7 @@ START_TEST(test_from_decimal_to_float_ok628) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok629) {
     // 10.497731533140024731144573420
@@ -5130,6 +5759,7 @@ START_TEST(test_from_decimal_to_float_ok629) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok630) {
     // -10.497731533140024731144573420
@@ -5138,6 +5768,7 @@ START_TEST(test_from_decimal_to_float_ok630) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok631) {
     // 9223372039002259456
@@ -5146,6 +5777,7 @@ START_TEST(test_from_decimal_to_float_ok631) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok632) {
     // -9223372039002259456
@@ -5154,6 +5786,7 @@ START_TEST(test_from_decimal_to_float_ok632) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok633) {
     // 24441935903355987558.40
@@ -5162,6 +5795,7 @@ START_TEST(test_from_decimal_to_float_ok633) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok634) {
     // -24441935903355987558.40
@@ -5170,6 +5804,7 @@ START_TEST(test_from_decimal_to_float_ok634) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok635) {
     // 922337203900225945.6
@@ -5178,6 +5813,7 @@ START_TEST(test_from_decimal_to_float_ok635) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok636) {
     // -922337203900225945.6
@@ -5186,6 +5822,7 @@ START_TEST(test_from_decimal_to_float_ok636) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok637) {
     // 2444193590335598755.840
@@ -5194,6 +5831,7 @@ START_TEST(test_from_decimal_to_float_ok637) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok638) {
     // -2444193590335598755.840
@@ -5202,6 +5840,7 @@ START_TEST(test_from_decimal_to_float_ok638) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok639) {
     // 922337203.9002259456
@@ -5210,6 +5849,7 @@ START_TEST(test_from_decimal_to_float_ok639) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok640) {
     // -922337203.9002259456
@@ -5218,6 +5858,7 @@ START_TEST(test_from_decimal_to_float_ok640) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok641) {
     // 2444193590.335598755840
@@ -5226,6 +5867,7 @@ START_TEST(test_from_decimal_to_float_ok641) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok642) {
     // -2444193590.335598755840
@@ -5234,6 +5876,7 @@ START_TEST(test_from_decimal_to_float_ok642) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok643) {
     // 9.223372039002259456
@@ -5242,6 +5885,7 @@ START_TEST(test_from_decimal_to_float_ok643) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok644) {
     // -9.223372039002259456
@@ -5250,6 +5894,7 @@ START_TEST(test_from_decimal_to_float_ok644) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok645) {
     // 24.44193590335598755840
@@ -5258,6 +5903,7 @@ START_TEST(test_from_decimal_to_float_ok645) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok646) {
     // -24.44193590335598755840
@@ -5266,6 +5912,7 @@ START_TEST(test_from_decimal_to_float_ok646) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok647) {
     // 9223372036854775808
@@ -5274,6 +5921,7 @@ START_TEST(test_from_decimal_to_float_ok647) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok648) {
     // -9223372036854775808
@@ -5282,6 +5930,7 @@ START_TEST(test_from_decimal_to_float_ok648) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok649) {
     // 24441935897665155891.20
@@ -5290,6 +5939,7 @@ START_TEST(test_from_decimal_to_float_ok649) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok650) {
     // -24441935897665155891.20
@@ -5298,6 +5948,7 @@ START_TEST(test_from_decimal_to_float_ok650) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok651) {
     // 922337203685477580.8
@@ -5306,6 +5957,7 @@ START_TEST(test_from_decimal_to_float_ok651) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok652) {
     // -922337203685477580.8
@@ -5314,6 +5966,7 @@ START_TEST(test_from_decimal_to_float_ok652) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok653) {
     // 2444193589766515589.120
@@ -5322,6 +5975,7 @@ START_TEST(test_from_decimal_to_float_ok653) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok654) {
     // -2444193589766515589.120
@@ -5330,6 +5984,7 @@ START_TEST(test_from_decimal_to_float_ok654) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok655) {
     // 92233720.36854775808
@@ -5338,6 +5993,7 @@ START_TEST(test_from_decimal_to_float_ok655) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok656) {
     // -92233720.36854775808
@@ -5346,6 +6002,7 @@ START_TEST(test_from_decimal_to_float_ok656) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok657) {
     // 244419358.9766515589120
@@ -5354,6 +6011,7 @@ START_TEST(test_from_decimal_to_float_ok657) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok658) {
     // -244419358.9766515589120
@@ -5362,6 +6020,7 @@ START_TEST(test_from_decimal_to_float_ok658) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok659) {
     // 9.223372036854775808
@@ -5370,6 +6029,7 @@ START_TEST(test_from_decimal_to_float_ok659) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok660) {
     // -9.223372036854775808
@@ -5378,6 +6038,7 @@ START_TEST(test_from_decimal_to_float_ok660) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok661) {
     // 24.44193589766515589120
@@ -5386,6 +6047,7 @@ START_TEST(test_from_decimal_to_float_ok661) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok662) {
     // -24.44193589766515589120
@@ -5394,6 +6056,7 @@ START_TEST(test_from_decimal_to_float_ok662) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok663) {
     // 2147483648
@@ -5402,6 +6065,7 @@ START_TEST(test_from_decimal_to_float_ok663) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok664) {
     // -2147483648
@@ -5410,6 +6074,7 @@ START_TEST(test_from_decimal_to_float_ok664) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok665) {
     // 5690831667.20
@@ -5418,6 +6083,7 @@ START_TEST(test_from_decimal_to_float_ok665) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok666) {
     // -5690831667.20
@@ -5426,6 +6092,7 @@ START_TEST(test_from_decimal_to_float_ok666) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok667) {
     // 214748364.8
@@ -5434,6 +6101,7 @@ START_TEST(test_from_decimal_to_float_ok667) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok668) {
     // -214748364.8
@@ -5442,6 +6110,7 @@ START_TEST(test_from_decimal_to_float_ok668) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok669) {
     // 569083166.720
@@ -5450,6 +6119,7 @@ START_TEST(test_from_decimal_to_float_ok669) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok670) {
     // -569083166.720
@@ -5458,6 +6128,7 @@ START_TEST(test_from_decimal_to_float_ok670) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok671) {
     // 21474836.48
@@ -5466,6 +6137,7 @@ START_TEST(test_from_decimal_to_float_ok671) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok672) {
     // -21474836.48
@@ -5474,6 +6146,7 @@ START_TEST(test_from_decimal_to_float_ok672) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok673) {
     // 56908316.6720
@@ -5482,6 +6155,7 @@ START_TEST(test_from_decimal_to_float_ok673) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok674) {
     // -56908316.6720
@@ -5490,6 +6164,7 @@ START_TEST(test_from_decimal_to_float_ok674) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok675) {
     // 214748.3648
@@ -5498,6 +6173,7 @@ START_TEST(test_from_decimal_to_float_ok675) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok676) {
     // -214748.3648
@@ -5506,6 +6182,7 @@ START_TEST(test_from_decimal_to_float_ok676) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok677) {
     // 569083.166720
@@ -5514,6 +6191,7 @@ START_TEST(test_from_decimal_to_float_ok677) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok678) {
     // -569083.166720
@@ -5522,6 +6200,7 @@ START_TEST(test_from_decimal_to_float_ok678) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok679) {
     // 21.47483648
@@ -5530,6 +6209,7 @@ START_TEST(test_from_decimal_to_float_ok679) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok680) {
     // -21.47483648
@@ -5538,6 +6218,7 @@ START_TEST(test_from_decimal_to_float_ok680) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok681) {
     // 56.9083166720
@@ -5546,6 +6227,7 @@ START_TEST(test_from_decimal_to_float_ok681) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok682) {
     // -56.9083166720
@@ -5554,6 +6236,7 @@ START_TEST(test_from_decimal_to_float_ok682) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok683) {
     // 2.147483648
@@ -5562,6 +6245,7 @@ START_TEST(test_from_decimal_to_float_ok683) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok684) {
     // -2.147483648
@@ -5570,6 +6254,7 @@ START_TEST(test_from_decimal_to_float_ok684) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok685) {
     // 5.69083166720
@@ -5578,6 +6263,7 @@ START_TEST(test_from_decimal_to_float_ok685) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok686) {
     // -5.69083166720
@@ -5586,6 +6272,7 @@ START_TEST(test_from_decimal_to_float_ok686) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok687) {
     // 156064767562212695305426944
@@ -5594,6 +6281,7 @@ START_TEST(test_from_decimal_to_float_ok687) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok688) {
     // -156064767562212695305426944
@@ -5602,6 +6290,7 @@ START_TEST(test_from_decimal_to_float_ok688) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok689) {
     // 413571634039863642559381401.60
@@ -5610,6 +6299,7 @@ START_TEST(test_from_decimal_to_float_ok689) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok690) {
     // -413571634039863642559381401.60
@@ -5618,6 +6308,7 @@ START_TEST(test_from_decimal_to_float_ok690) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok691) {
     // 15606476756221269530542694.4
@@ -5626,6 +6317,7 @@ START_TEST(test_from_decimal_to_float_ok691) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok692) {
     // -15606476756221269530542694.4
@@ -5634,6 +6326,7 @@ START_TEST(test_from_decimal_to_float_ok692) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok693) {
     // 41357163403986364255938140.160
@@ -5642,6 +6335,7 @@ START_TEST(test_from_decimal_to_float_ok693) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok694) {
     // -41357163403986364255938140.160
@@ -5650,6 +6344,7 @@ START_TEST(test_from_decimal_to_float_ok694) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok695) {
     // 1560647.67562212695305426944
@@ -5658,6 +6353,7 @@ START_TEST(test_from_decimal_to_float_ok695) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok696) {
     // -1560647.67562212695305426944
@@ -5666,6 +6362,7 @@ START_TEST(test_from_decimal_to_float_ok696) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok697) {
     // 4135716.3403986364255938140160
@@ -5674,6 +6371,7 @@ START_TEST(test_from_decimal_to_float_ok697) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok698) {
     // -4135716.3403986364255938140160
@@ -5682,6 +6380,7 @@ START_TEST(test_from_decimal_to_float_ok698) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok699) {
     // 1.56064767562212695305426944
@@ -5690,6 +6389,7 @@ START_TEST(test_from_decimal_to_float_ok699) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok700) {
     // -1.56064767562212695305426944
@@ -5698,6 +6398,7 @@ START_TEST(test_from_decimal_to_float_ok700) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok701) {
     // 4.1357163403986364255938140160
@@ -5706,6 +6407,7 @@ START_TEST(test_from_decimal_to_float_ok701) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok702) {
     // -4.1357163403986364255938140160
@@ -5714,6 +6416,7 @@ START_TEST(test_from_decimal_to_float_ok702) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok703) {
     // 156064767562212695296966656
@@ -5722,6 +6425,7 @@ START_TEST(test_from_decimal_to_float_ok703) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok704) {
     // -156064767562212695296966656
@@ -5730,6 +6434,7 @@ START_TEST(test_from_decimal_to_float_ok704) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok705) {
     // 413571634039863642536961638.40
@@ -5738,6 +6443,7 @@ START_TEST(test_from_decimal_to_float_ok705) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok706) {
     // -413571634039863642536961638.40
@@ -5746,6 +6452,7 @@ START_TEST(test_from_decimal_to_float_ok706) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok707) {
     // 15606476756221269529696665.6
@@ -5754,6 +6461,7 @@ START_TEST(test_from_decimal_to_float_ok707) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok708) {
     // -15606476756221269529696665.6
@@ -5762,6 +6470,7 @@ START_TEST(test_from_decimal_to_float_ok708) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok709) {
     // 41357163403986364253696163.840
@@ -5770,6 +6479,7 @@ START_TEST(test_from_decimal_to_float_ok709) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok710) {
     // -41357163403986364253696163.840
@@ -5778,6 +6488,7 @@ START_TEST(test_from_decimal_to_float_ok710) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok711) {
     // 15606476.7562212695296966656
@@ -5786,6 +6497,7 @@ START_TEST(test_from_decimal_to_float_ok711) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok712) {
     // -15606476.7562212695296966656
@@ -5794,6 +6506,7 @@ START_TEST(test_from_decimal_to_float_ok712) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok713) {
     // 41357163.403986364253696163840
@@ -5802,6 +6515,7 @@ START_TEST(test_from_decimal_to_float_ok713) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok714) {
     // -41357163.403986364253696163840
@@ -5810,6 +6524,7 @@ START_TEST(test_from_decimal_to_float_ok714) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok715) {
     // 1.56064767562212695296966656
@@ -5818,6 +6533,7 @@ START_TEST(test_from_decimal_to_float_ok715) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok716) {
     // -1.56064767562212695296966656
@@ -5826,6 +6542,7 @@ START_TEST(test_from_decimal_to_float_ok716) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok717) {
     // 4.1357163403986364253696163840
@@ -5834,6 +6551,7 @@ START_TEST(test_from_decimal_to_float_ok717) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok718) {
     // -4.1357163403986364253696163840
@@ -5842,6 +6560,7 @@ START_TEST(test_from_decimal_to_float_ok718) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok719) {
     // 156064767525876035030685696
@@ -5850,6 +6569,7 @@ START_TEST(test_from_decimal_to_float_ok719) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok720) {
     // -156064767525876035030685696
@@ -5858,6 +6578,7 @@ START_TEST(test_from_decimal_to_float_ok720) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok721) {
     // 413571633943571492831317094.40
@@ -5866,6 +6587,7 @@ START_TEST(test_from_decimal_to_float_ok721) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok722) {
     // -413571633943571492831317094.40
@@ -5874,6 +6596,7 @@ START_TEST(test_from_decimal_to_float_ok722) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok723) {
     // 15606476752587603503068569.6
@@ -5882,6 +6605,7 @@ START_TEST(test_from_decimal_to_float_ok723) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok724) {
     // -15606476752587603503068569.6
@@ -5890,6 +6614,7 @@ START_TEST(test_from_decimal_to_float_ok724) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok725) {
     // 41357163394357149283131709.440
@@ -5898,6 +6623,7 @@ START_TEST(test_from_decimal_to_float_ok725) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok726) {
     // -41357163394357149283131709.440
@@ -5906,6 +6632,7 @@ START_TEST(test_from_decimal_to_float_ok726) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok727) {
     // 156064.767525876035030685696
@@ -5914,6 +6641,7 @@ START_TEST(test_from_decimal_to_float_ok727) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok728) {
     // -156064.767525876035030685696
@@ -5922,6 +6650,7 @@ START_TEST(test_from_decimal_to_float_ok728) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok729) {
     // 413571.63394357149283131709440
@@ -5930,6 +6659,7 @@ START_TEST(test_from_decimal_to_float_ok729) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok730) {
     // -413571.63394357149283131709440
@@ -5938,6 +6668,7 @@ START_TEST(test_from_decimal_to_float_ok730) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok731) {
     // 1.56064767525876035030685696
@@ -5946,6 +6677,7 @@ START_TEST(test_from_decimal_to_float_ok731) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok732) {
     // -1.56064767525876035030685696
@@ -5954,6 +6686,7 @@ START_TEST(test_from_decimal_to_float_ok732) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok733) {
     // 4.1357163394357149283131709440
@@ -5962,6 +6695,7 @@ START_TEST(test_from_decimal_to_float_ok733) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok734) {
     // -4.1357163394357149283131709440
@@ -5970,6 +6704,7 @@ START_TEST(test_from_decimal_to_float_ok734) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok735) {
     // 156064767525876035022225408
@@ -5978,6 +6713,7 @@ START_TEST(test_from_decimal_to_float_ok735) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok736) {
     // -156064767525876035022225408
@@ -5986,6 +6722,7 @@ START_TEST(test_from_decimal_to_float_ok736) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok737) {
     // 413571633943571492808897331.20
@@ -5994,6 +6731,7 @@ START_TEST(test_from_decimal_to_float_ok737) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok738) {
     // -413571633943571492808897331.20
@@ -6002,6 +6740,7 @@ START_TEST(test_from_decimal_to_float_ok738) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok739) {
     // 15606476752587603502222540.8
@@ -6010,6 +6749,7 @@ START_TEST(test_from_decimal_to_float_ok739) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok740) {
     // -15606476752587603502222540.8
@@ -6018,6 +6758,7 @@ START_TEST(test_from_decimal_to_float_ok740) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok741) {
     // 41357163394357149280889733.120
@@ -6026,6 +6767,7 @@ START_TEST(test_from_decimal_to_float_ok741) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok742) {
     // -41357163394357149280889733.120
@@ -6034,6 +6776,7 @@ START_TEST(test_from_decimal_to_float_ok742) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok743) {
     // 15606.4767525876035022225408
@@ -6042,6 +6785,7 @@ START_TEST(test_from_decimal_to_float_ok743) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok744) {
     // -15606.4767525876035022225408
@@ -6050,6 +6794,7 @@ START_TEST(test_from_decimal_to_float_ok744) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok745) {
     // 41357.163394357149280889733120
@@ -6058,6 +6803,7 @@ START_TEST(test_from_decimal_to_float_ok745) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok746) {
     // -41357.163394357149280889733120
@@ -6066,6 +6812,7 @@ START_TEST(test_from_decimal_to_float_ok746) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok747) {
     // 1.56064767525876035022225408
@@ -6074,6 +6821,7 @@ START_TEST(test_from_decimal_to_float_ok747) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok748) {
     // -1.56064767525876035022225408
@@ -6082,6 +6830,7 @@ START_TEST(test_from_decimal_to_float_ok748) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok749) {
     // 4.1357163394357149280889733120
@@ -6090,6 +6839,7 @@ START_TEST(test_from_decimal_to_float_ok749) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok750) {
     // -4.1357163394357149280889733120
@@ -6098,6 +6848,7 @@ START_TEST(test_from_decimal_to_float_ok750) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok751) {
     // 36336660283201536
@@ -6106,6 +6857,7 @@ START_TEST(test_from_decimal_to_float_ok751) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok752) {
     // -36336660283201536
@@ -6114,6 +6866,7 @@ START_TEST(test_from_decimal_to_float_ok752) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok753) {
     // 96292149750484070.40
@@ -6122,6 +6875,7 @@ START_TEST(test_from_decimal_to_float_ok753) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok754) {
     // -96292149750484070.40
@@ -6130,6 +6884,7 @@ START_TEST(test_from_decimal_to_float_ok754) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok755) {
     // 3633666028320153.6
@@ -6138,6 +6893,7 @@ START_TEST(test_from_decimal_to_float_ok755) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok756) {
     // -3633666028320153.6
@@ -6146,6 +6902,7 @@ START_TEST(test_from_decimal_to_float_ok756) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok757) {
     // 9629214975048407.040
@@ -6154,6 +6911,7 @@ START_TEST(test_from_decimal_to_float_ok757) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok758) {
     // -9629214975048407.040
@@ -6162,6 +6920,7 @@ START_TEST(test_from_decimal_to_float_ok758) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok759) {
     // 363366602.83201536
@@ -6170,6 +6929,7 @@ START_TEST(test_from_decimal_to_float_ok759) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok760) {
     // -363366602.83201536
@@ -6178,6 +6938,7 @@ START_TEST(test_from_decimal_to_float_ok760) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok761) {
     // 962921497.5048407040
@@ -6186,6 +6947,7 @@ START_TEST(test_from_decimal_to_float_ok761) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok762) {
     // -962921497.5048407040
@@ -6194,6 +6956,7 @@ START_TEST(test_from_decimal_to_float_ok762) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok763) {
     // 3.6336660283201536
@@ -6202,6 +6965,7 @@ START_TEST(test_from_decimal_to_float_ok763) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok764) {
     // -3.6336660283201536
@@ -6210,6 +6974,7 @@ START_TEST(test_from_decimal_to_float_ok764) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok765) {
     // 9.629214975048407040
@@ -6218,6 +6983,7 @@ START_TEST(test_from_decimal_to_float_ok765) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok766) {
     // -9.629214975048407040
@@ -6226,6 +6992,7 @@ START_TEST(test_from_decimal_to_float_ok766) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok767) {
     // 36336660274741248
@@ -6234,6 +7001,7 @@ START_TEST(test_from_decimal_to_float_ok767) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok768) {
     // -36336660274741248
@@ -6242,6 +7010,7 @@ START_TEST(test_from_decimal_to_float_ok768) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok769) {
     // 96292149728064307.20
@@ -6250,6 +7019,7 @@ START_TEST(test_from_decimal_to_float_ok769) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok770) {
     // -96292149728064307.20
@@ -6258,6 +7028,7 @@ START_TEST(test_from_decimal_to_float_ok770) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok771) {
     // 3633666027474124.8
@@ -6266,6 +7037,7 @@ START_TEST(test_from_decimal_to_float_ok771) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok772) {
     // -3633666027474124.8
@@ -6274,6 +7046,7 @@ START_TEST(test_from_decimal_to_float_ok772) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok773) {
     // 9629214972806430.720
@@ -6282,6 +7055,7 @@ START_TEST(test_from_decimal_to_float_ok773) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok774) {
     // -9629214972806430.720
@@ -6290,6 +7064,7 @@ START_TEST(test_from_decimal_to_float_ok774) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok775) {
     // 3633666.0274741248
@@ -6298,6 +7073,7 @@ START_TEST(test_from_decimal_to_float_ok775) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok776) {
     // -3633666.0274741248
@@ -6306,6 +7082,7 @@ START_TEST(test_from_decimal_to_float_ok776) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok777) {
     // 9629214.972806430720
@@ -6314,6 +7091,7 @@ START_TEST(test_from_decimal_to_float_ok777) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok778) {
     // -9629214.972806430720
@@ -6322,6 +7100,7 @@ START_TEST(test_from_decimal_to_float_ok778) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok779) {
     // 363366602.74741248
@@ -6330,6 +7109,7 @@ START_TEST(test_from_decimal_to_float_ok779) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok780) {
     // -363366602.74741248
@@ -6338,6 +7118,7 @@ START_TEST(test_from_decimal_to_float_ok780) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok781) {
     // 962921497.2806430720
@@ -6346,6 +7127,7 @@ START_TEST(test_from_decimal_to_float_ok781) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok782) {
     // -962921497.2806430720
@@ -6354,6 +7136,7 @@ START_TEST(test_from_decimal_to_float_ok782) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok783) {
     // 36.336660274741248
@@ -6362,6 +7145,7 @@ START_TEST(test_from_decimal_to_float_ok783) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok784) {
     // -36.336660274741248
@@ -6370,6 +7154,7 @@ START_TEST(test_from_decimal_to_float_ok784) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok785) {
     // 96.29214972806430720
@@ -6378,6 +7163,7 @@ START_TEST(test_from_decimal_to_float_ok785) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok786) {
     // -96.29214972806430720
@@ -6386,6 +7172,7 @@ START_TEST(test_from_decimal_to_float_ok786) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok787) {
     // 3.6336660274741248
@@ -6394,6 +7181,7 @@ START_TEST(test_from_decimal_to_float_ok787) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok788) {
     // -3.6336660274741248
@@ -6402,6 +7190,7 @@ START_TEST(test_from_decimal_to_float_ok788) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok789) {
     // 9.629214972806430720
@@ -6410,6 +7199,7 @@ START_TEST(test_from_decimal_to_float_ok789) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok790) {
     // -9.629214972806430720
@@ -6418,6 +7208,7 @@ START_TEST(test_from_decimal_to_float_ok790) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok791) {
     // 8460288
@@ -6426,6 +7217,7 @@ START_TEST(test_from_decimal_to_float_ok791) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok792) {
     // -8460288
@@ -6434,6 +7226,7 @@ START_TEST(test_from_decimal_to_float_ok792) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok793) {
     // 22419763.20
@@ -6442,6 +7235,7 @@ START_TEST(test_from_decimal_to_float_ok793) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok794) {
     // -22419763.20
@@ -6450,6 +7244,7 @@ START_TEST(test_from_decimal_to_float_ok794) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok795) {
     // 846028.8
@@ -6458,6 +7253,7 @@ START_TEST(test_from_decimal_to_float_ok795) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok796) {
     // -846028.8
@@ -6466,6 +7262,7 @@ START_TEST(test_from_decimal_to_float_ok796) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok797) {
     // 2241976.320
@@ -6474,6 +7271,7 @@ START_TEST(test_from_decimal_to_float_ok797) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok798) {
     // -2241976.320
@@ -6482,6 +7280,7 @@ START_TEST(test_from_decimal_to_float_ok798) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok799) {
     // 84602.88
@@ -6490,6 +7289,7 @@ START_TEST(test_from_decimal_to_float_ok799) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok800) {
     // -84602.88
@@ -6498,6 +7298,7 @@ START_TEST(test_from_decimal_to_float_ok800) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok801) {
     // 224197.6320
@@ -6506,6 +7307,7 @@ START_TEST(test_from_decimal_to_float_ok801) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok802) {
     // -224197.6320
@@ -6514,6 +7316,7 @@ START_TEST(test_from_decimal_to_float_ok802) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok803) {
     // 8460.288
@@ -6522,6 +7325,7 @@ START_TEST(test_from_decimal_to_float_ok803) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok804) {
     // -8460.288
@@ -6530,6 +7334,7 @@ START_TEST(test_from_decimal_to_float_ok804) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok805) {
     // 22419.76320
@@ -6538,6 +7343,7 @@ START_TEST(test_from_decimal_to_float_ok805) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok806) {
     // -22419.76320
@@ -6546,6 +7352,7 @@ START_TEST(test_from_decimal_to_float_ok806) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok807) {
     // 84.60288
@@ -6554,6 +7361,7 @@ START_TEST(test_from_decimal_to_float_ok807) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok808) {
     // -84.60288
@@ -6562,6 +7370,7 @@ START_TEST(test_from_decimal_to_float_ok808) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok809) {
     // 224.1976320
@@ -6570,6 +7379,7 @@ START_TEST(test_from_decimal_to_float_ok809) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok810) {
     // -224.1976320
@@ -6578,6 +7388,7 @@ START_TEST(test_from_decimal_to_float_ok810) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok811) {
     // 8.460288
@@ -6586,6 +7397,7 @@ START_TEST(test_from_decimal_to_float_ok811) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok812) {
     // -8.460288
@@ -6594,6 +7406,7 @@ START_TEST(test_from_decimal_to_float_ok812) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok813) {
     // 22.41976320
@@ -6602,6 +7415,7 @@ START_TEST(test_from_decimal_to_float_ok813) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok814) {
     // -22.41976320
@@ -6610,6 +7424,7 @@ START_TEST(test_from_decimal_to_float_ok814) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok815) {
     // 79228162514264337593543950335
@@ -6618,6 +7433,7 @@ START_TEST(test_from_decimal_to_float_ok815) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok816) {
     // -79228162514264337593543950335
@@ -6626,6 +7442,7 @@ START_TEST(test_from_decimal_to_float_ok816) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok817) {
     // 7922816251426433759354395033.5
@@ -6634,6 +7451,7 @@ START_TEST(test_from_decimal_to_float_ok817) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok818) {
     // -7922816251426433759354395033.5
@@ -6642,6 +7460,7 @@ START_TEST(test_from_decimal_to_float_ok818) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok819) {
     // 20995463066280049462289146839
@@ -6650,6 +7469,7 @@ START_TEST(test_from_decimal_to_float_ok819) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok820) {
     // -20995463066280049462289146839
@@ -6658,6 +7478,7 @@ START_TEST(test_from_decimal_to_float_ok820) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok821) {
     // 792281625.14264337593543950335
@@ -6666,6 +7487,7 @@ START_TEST(test_from_decimal_to_float_ok821) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok822) {
     // -792281625.14264337593543950335
@@ -6674,6 +7496,7 @@ START_TEST(test_from_decimal_to_float_ok822) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok823) {
     // 2099546306.6280049462289146839
@@ -6682,6 +7505,7 @@ START_TEST(test_from_decimal_to_float_ok823) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok824) {
     // -2099546306.6280049462289146839
@@ -6690,6 +7514,7 @@ START_TEST(test_from_decimal_to_float_ok824) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok825) {
     // 7.9228162514264337593543950335
@@ -6698,6 +7523,7 @@ START_TEST(test_from_decimal_to_float_ok825) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok826) {
     // -7.9228162514264337593543950335
@@ -6706,6 +7532,7 @@ START_TEST(test_from_decimal_to_float_ok826) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok827) {
     // 20.995463066280049462289146839
@@ -6714,6 +7541,7 @@ START_TEST(test_from_decimal_to_float_ok827) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok828) {
     // -20.995463066280049462289146839
@@ -6722,6 +7550,7 @@ START_TEST(test_from_decimal_to_float_ok828) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok829) {
     // 79228162514264337589248983040
@@ -6730,6 +7559,7 @@ START_TEST(test_from_decimal_to_float_ok829) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok830) {
     // -79228162514264337589248983040
@@ -6738,6 +7568,7 @@ START_TEST(test_from_decimal_to_float_ok830) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok831) {
     // 7922816251426433758924898304.0
@@ -6746,6 +7577,7 @@ START_TEST(test_from_decimal_to_float_ok831) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok832) {
     // -7922816251426433758924898304.0
@@ -6754,6 +7586,7 @@ START_TEST(test_from_decimal_to_float_ok832) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok833) {
     // 20995463066280049461150980506
@@ -6762,6 +7595,7 @@ START_TEST(test_from_decimal_to_float_ok833) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok834) {
     // -20995463066280049461150980506
@@ -6770,6 +7604,7 @@ START_TEST(test_from_decimal_to_float_ok834) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok835) {
     // 79228162.514264337589248983040
@@ -6778,6 +7613,7 @@ START_TEST(test_from_decimal_to_float_ok835) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok836) {
     // -79228162.514264337589248983040
@@ -6786,6 +7622,7 @@ START_TEST(test_from_decimal_to_float_ok836) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok837) {
     // 209954630.66280049461150980506
@@ -6794,6 +7631,7 @@ START_TEST(test_from_decimal_to_float_ok837) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok838) {
     // -209954630.66280049461150980506
@@ -6802,6 +7640,7 @@ START_TEST(test_from_decimal_to_float_ok838) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok839) {
     // 7.9228162514264337589248983040
@@ -6810,6 +7649,7 @@ START_TEST(test_from_decimal_to_float_ok839) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok840) {
     // -7.9228162514264337589248983040
@@ -6818,6 +7658,7 @@ START_TEST(test_from_decimal_to_float_ok840) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok841) {
     // 20.995463066280049461150980506
@@ -6826,6 +7667,7 @@ START_TEST(test_from_decimal_to_float_ok841) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok842) {
     // -20.995463066280049461150980506
@@ -6834,6 +7676,7 @@ START_TEST(test_from_decimal_to_float_ok842) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok843) {
     // 79228162495817593524129366015
@@ -6842,6 +7685,7 @@ START_TEST(test_from_decimal_to_float_ok843) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok844) {
     // -79228162495817593524129366015
@@ -6850,6 +7694,7 @@ START_TEST(test_from_decimal_to_float_ok844) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok845) {
     // 7922816249581759352412936601.5
@@ -6858,6 +7703,7 @@ START_TEST(test_from_decimal_to_float_ok845) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok846) {
     // -7922816249581759352412936601.5
@@ -6866,6 +7712,7 @@ START_TEST(test_from_decimal_to_float_ok846) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok847) {
     // 20995463061391662283894281994
@@ -6874,6 +7721,7 @@ START_TEST(test_from_decimal_to_float_ok847) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok848) {
     // -20995463061391662283894281994
@@ -6882,6 +7730,7 @@ START_TEST(test_from_decimal_to_float_ok848) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok849) {
     // 7922816.2495817593524129366015
@@ -6890,6 +7739,7 @@ START_TEST(test_from_decimal_to_float_ok849) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok850) {
     // -7922816.2495817593524129366015
@@ -6898,6 +7748,7 @@ START_TEST(test_from_decimal_to_float_ok850) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok851) {
     // 20995463.061391662283894281994
@@ -6906,6 +7757,7 @@ START_TEST(test_from_decimal_to_float_ok851) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok852) {
     // -20995463.061391662283894281994
@@ -6914,6 +7766,7 @@ START_TEST(test_from_decimal_to_float_ok852) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok853) {
     // 7.9228162495817593524129366015
@@ -6922,6 +7775,7 @@ START_TEST(test_from_decimal_to_float_ok853) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok854) {
     // -7.9228162495817593524129366015
@@ -6930,6 +7784,7 @@ START_TEST(test_from_decimal_to_float_ok854) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok855) {
     // 20.995463061391662283894281994
@@ -6938,6 +7793,7 @@ START_TEST(test_from_decimal_to_float_ok855) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok856) {
     // -20.995463061391662283894281994
@@ -6946,6 +7802,7 @@ START_TEST(test_from_decimal_to_float_ok856) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok857) {
     // 79228162495817593519834398720
@@ -6954,6 +7811,7 @@ START_TEST(test_from_decimal_to_float_ok857) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok858) {
     // -79228162495817593519834398720
@@ -6962,6 +7820,7 @@ START_TEST(test_from_decimal_to_float_ok858) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok859) {
     // 7922816249581759351983439872.0
@@ -6970,6 +7829,7 @@ START_TEST(test_from_decimal_to_float_ok859) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok860) {
     // -7922816249581759351983439872.0
@@ -6978,6 +7838,7 @@ START_TEST(test_from_decimal_to_float_ok860) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok861) {
     // 20995463061391662282756115661
@@ -6986,6 +7847,7 @@ START_TEST(test_from_decimal_to_float_ok861) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok862) {
     // -20995463061391662282756115661
@@ -6994,6 +7856,7 @@ START_TEST(test_from_decimal_to_float_ok862) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok863) {
     // 792281.62495817593519834398720
@@ -7002,6 +7865,7 @@ START_TEST(test_from_decimal_to_float_ok863) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok864) {
     // -792281.62495817593519834398720
@@ -7010,6 +7874,7 @@ START_TEST(test_from_decimal_to_float_ok864) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok865) {
     // 2099546.3061391662282756115661
@@ -7018,6 +7883,7 @@ START_TEST(test_from_decimal_to_float_ok865) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok866) {
     // -2099546.3061391662282756115661
@@ -7026,6 +7892,7 @@ START_TEST(test_from_decimal_to_float_ok866) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok867) {
     // 7.9228162495817593519834398720
@@ -7034,6 +7901,7 @@ START_TEST(test_from_decimal_to_float_ok867) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok868) {
     // -7.9228162495817593519834398720
@@ -7042,6 +7910,7 @@ START_TEST(test_from_decimal_to_float_ok868) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok869) {
     // 20.995463061391662282756115661
@@ -7050,6 +7919,7 @@ START_TEST(test_from_decimal_to_float_ok869) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok870) {
     // -20.995463061391662282756115661
@@ -7058,6 +7928,7 @@ START_TEST(test_from_decimal_to_float_ok870) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok871) {
     // 18446744073709551615
@@ -7066,6 +7937,7 @@ START_TEST(test_from_decimal_to_float_ok871) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok872) {
     // -18446744073709551615
@@ -7074,6 +7946,7 @@ START_TEST(test_from_decimal_to_float_ok872) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok873) {
     // 48883871795330311779.75
@@ -7082,6 +7955,7 @@ START_TEST(test_from_decimal_to_float_ok873) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok874) {
     // -48883871795330311779.75
@@ -7090,6 +7964,7 @@ START_TEST(test_from_decimal_to_float_ok874) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok875) {
     // 1844674407370955161.5
@@ -7098,6 +7973,7 @@ START_TEST(test_from_decimal_to_float_ok875) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok876) {
     // -1844674407370955161.5
@@ -7106,6 +7982,7 @@ START_TEST(test_from_decimal_to_float_ok876) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok877) {
     // 4888387179533031177.975
@@ -7114,6 +7991,7 @@ START_TEST(test_from_decimal_to_float_ok877) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok878) {
     // -4888387179533031177.975
@@ -7122,6 +8000,7 @@ START_TEST(test_from_decimal_to_float_ok878) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok879) {
     // 18446744073709551.615
@@ -7130,6 +8009,7 @@ START_TEST(test_from_decimal_to_float_ok879) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok880) {
     // -18446744073709551.615
@@ -7138,6 +8018,7 @@ START_TEST(test_from_decimal_to_float_ok880) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok881) {
     // 48883871795330311.77975
@@ -7146,6 +8027,7 @@ START_TEST(test_from_decimal_to_float_ok881) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok882) {
     // -48883871795330311.77975
@@ -7154,6 +8036,7 @@ START_TEST(test_from_decimal_to_float_ok882) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok883) {
     // 184467440.73709551615
@@ -7162,6 +8045,7 @@ START_TEST(test_from_decimal_to_float_ok883) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok884) {
     // -184467440.73709551615
@@ -7170,6 +8054,7 @@ START_TEST(test_from_decimal_to_float_ok884) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok885) {
     // 488838717.9533031177975
@@ -7178,6 +8063,7 @@ START_TEST(test_from_decimal_to_float_ok885) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok886) {
     // -488838717.9533031177975
@@ -7186,6 +8072,7 @@ START_TEST(test_from_decimal_to_float_ok886) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok887) {
     // 184.46744073709551615
@@ -7194,6 +8081,7 @@ START_TEST(test_from_decimal_to_float_ok887) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok888) {
     // -184.46744073709551615
@@ -7202,6 +8090,7 @@ START_TEST(test_from_decimal_to_float_ok888) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok889) {
     // 488.8387179533031177975
@@ -7210,6 +8099,7 @@ START_TEST(test_from_decimal_to_float_ok889) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok890) {
     // -488.8387179533031177975
@@ -7218,6 +8108,7 @@ START_TEST(test_from_decimal_to_float_ok890) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok891) {
     // 1.8446744073709551615
@@ -7226,6 +8117,7 @@ START_TEST(test_from_decimal_to_float_ok891) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok892) {
     // -1.8446744073709551615
@@ -7234,6 +8126,7 @@ START_TEST(test_from_decimal_to_float_ok892) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok893) {
     // 4.888387179533031177975
@@ -7242,6 +8135,7 @@ START_TEST(test_from_decimal_to_float_ok893) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok894) {
     // -4.888387179533031177975
@@ -7250,6 +8144,7 @@ START_TEST(test_from_decimal_to_float_ok894) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok895) {
     // 18446744069414584320
@@ -7258,6 +8153,7 @@ START_TEST(test_from_decimal_to_float_ok895) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok896) {
     // -18446744069414584320
@@ -7266,6 +8162,7 @@ START_TEST(test_from_decimal_to_float_ok896) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok897) {
     // 48883871783948648448.00
@@ -7274,6 +8171,7 @@ START_TEST(test_from_decimal_to_float_ok897) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok898) {
     // -48883871783948648448.00
@@ -7282,6 +8180,7 @@ START_TEST(test_from_decimal_to_float_ok898) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok899) {
     // 1844674406941458432.0
@@ -7290,6 +8189,7 @@ START_TEST(test_from_decimal_to_float_ok899) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok900) {
     // -1844674406941458432.0
@@ -7298,6 +8198,7 @@ START_TEST(test_from_decimal_to_float_ok900) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok901) {
     // 4888387178394864844.800
@@ -7306,6 +8207,7 @@ START_TEST(test_from_decimal_to_float_ok901) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok902) {
     // -4888387178394864844.800
@@ -7314,6 +8216,7 @@ START_TEST(test_from_decimal_to_float_ok902) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok903) {
     // 18446744069414584.320
@@ -7322,6 +8225,7 @@ START_TEST(test_from_decimal_to_float_ok903) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok904) {
     // -18446744069414584.320
@@ -7330,6 +8234,7 @@ START_TEST(test_from_decimal_to_float_ok904) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok905) {
     // 48883871783948648.44800
@@ -7338,6 +8243,7 @@ START_TEST(test_from_decimal_to_float_ok905) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok906) {
     // -48883871783948648.44800
@@ -7346,6 +8252,7 @@ START_TEST(test_from_decimal_to_float_ok906) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok907) {
     // 18446744.069414584320
@@ -7354,6 +8261,7 @@ START_TEST(test_from_decimal_to_float_ok907) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok908) {
     // -18446744.069414584320
@@ -7362,6 +8270,7 @@ START_TEST(test_from_decimal_to_float_ok908) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok909) {
     // 48883871.78394864844800
@@ -7370,6 +8279,7 @@ START_TEST(test_from_decimal_to_float_ok909) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok910) {
     // -48883871.78394864844800
@@ -7378,6 +8288,7 @@ START_TEST(test_from_decimal_to_float_ok910) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok911) {
     // 184.46744069414584320
@@ -7386,6 +8297,7 @@ START_TEST(test_from_decimal_to_float_ok911) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok912) {
     // -184.46744069414584320
@@ -7394,6 +8306,7 @@ START_TEST(test_from_decimal_to_float_ok912) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok913) {
     // 488.8387178394864844800
@@ -7402,6 +8315,7 @@ START_TEST(test_from_decimal_to_float_ok913) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok914) {
     // -488.8387178394864844800
@@ -7410,6 +8324,7 @@ START_TEST(test_from_decimal_to_float_ok914) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok915) {
     // 1.8446744069414584320
@@ -7418,6 +8333,7 @@ START_TEST(test_from_decimal_to_float_ok915) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok916) {
     // -1.8446744069414584320
@@ -7426,6 +8342,7 @@ START_TEST(test_from_decimal_to_float_ok916) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok917) {
     // 4.888387178394864844800
@@ -7434,6 +8351,7 @@ START_TEST(test_from_decimal_to_float_ok917) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok918) {
     // -4.888387178394864844800
@@ -7442,6 +8360,7 @@ START_TEST(test_from_decimal_to_float_ok918) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok919) {
     // 4294967295
@@ -7450,6 +8369,7 @@ START_TEST(test_from_decimal_to_float_ok919) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok920) {
     // -4294967295
@@ -7458,6 +8378,7 @@ START_TEST(test_from_decimal_to_float_ok920) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok921) {
     // 11381663331.75
@@ -7466,6 +8387,7 @@ START_TEST(test_from_decimal_to_float_ok921) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok922) {
     // -11381663331.75
@@ -7474,6 +8396,7 @@ START_TEST(test_from_decimal_to_float_ok922) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok923) {
     // 429496729.5
@@ -7482,6 +8405,7 @@ START_TEST(test_from_decimal_to_float_ok923) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok924) {
     // -429496729.5
@@ -7490,6 +8414,7 @@ START_TEST(test_from_decimal_to_float_ok924) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok925) {
     // 1138166333.175
@@ -7498,6 +8423,7 @@ START_TEST(test_from_decimal_to_float_ok925) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok926) {
     // -1138166333.175
@@ -7506,6 +8432,7 @@ START_TEST(test_from_decimal_to_float_ok926) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok927) {
     // 42949672.95
@@ -7514,6 +8441,7 @@ START_TEST(test_from_decimal_to_float_ok927) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok928) {
     // -42949672.95
@@ -7522,6 +8450,7 @@ START_TEST(test_from_decimal_to_float_ok928) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok929) {
     // 113816633.3175
@@ -7530,6 +8459,7 @@ START_TEST(test_from_decimal_to_float_ok929) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok930) {
     // -113816633.3175
@@ -7538,6 +8468,7 @@ START_TEST(test_from_decimal_to_float_ok930) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok931) {
     // 42949.67295
@@ -7546,6 +8477,7 @@ START_TEST(test_from_decimal_to_float_ok931) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok932) {
     // -42949.67295
@@ -7554,6 +8486,7 @@ START_TEST(test_from_decimal_to_float_ok932) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok933) {
     // 113816.6333175
@@ -7562,6 +8495,7 @@ START_TEST(test_from_decimal_to_float_ok933) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok934) {
     // -113816.6333175
@@ -7570,6 +8504,7 @@ START_TEST(test_from_decimal_to_float_ok934) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok935) {
     // 42.94967295
@@ -7578,6 +8513,7 @@ START_TEST(test_from_decimal_to_float_ok935) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok936) {
     // -42.94967295
@@ -7586,6 +8522,7 @@ START_TEST(test_from_decimal_to_float_ok936) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok937) {
     // 113.8166333175
@@ -7594,6 +8531,7 @@ START_TEST(test_from_decimal_to_float_ok937) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok938) {
     // -113.8166333175
@@ -7602,6 +8540,7 @@ START_TEST(test_from_decimal_to_float_ok938) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok939) {
     // 4.294967295
@@ -7610,6 +8549,7 @@ START_TEST(test_from_decimal_to_float_ok939) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok940) {
     // -4.294967295
@@ -7618,6 +8558,7 @@ START_TEST(test_from_decimal_to_float_ok940) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok941) {
     // 11.38166333175
@@ -7626,6 +8567,7 @@ START_TEST(test_from_decimal_to_float_ok941) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok942) {
     // -11.38166333175
@@ -7634,6 +8576,7 @@ START_TEST(test_from_decimal_to_float_ok942) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok943) {
     // 1
@@ -7642,6 +8585,7 @@ START_TEST(test_from_decimal_to_float_ok943) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok944) {
     // -1
@@ -7650,6 +8594,7 @@ START_TEST(test_from_decimal_to_float_ok944) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok945) {
     // 2.65
@@ -7658,6 +8603,7 @@ START_TEST(test_from_decimal_to_float_ok945) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok946) {
     // -2.65
@@ -7666,6 +8612,7 @@ START_TEST(test_from_decimal_to_float_ok946) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok947) {
     // 1.0
@@ -7674,6 +8621,7 @@ START_TEST(test_from_decimal_to_float_ok947) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok948) {
     // -1.0
@@ -7682,6 +8630,7 @@ START_TEST(test_from_decimal_to_float_ok948) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok949) {
     // 2.650
@@ -7690,6 +8639,7 @@ START_TEST(test_from_decimal_to_float_ok949) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok950) {
     // -2.650
@@ -7698,6 +8648,7 @@ START_TEST(test_from_decimal_to_float_ok950) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok951) {
     // 1.00
@@ -7706,6 +8657,7 @@ START_TEST(test_from_decimal_to_float_ok951) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok952) {
     // -1.00
@@ -7714,6 +8666,7 @@ START_TEST(test_from_decimal_to_float_ok952) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok953) {
     // 2.6500
@@ -7722,6 +8675,7 @@ START_TEST(test_from_decimal_to_float_ok953) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok954) {
     // -2.6500
@@ -7730,6 +8684,7 @@ START_TEST(test_from_decimal_to_float_ok954) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok955) {
     // 1.000
@@ -7738,6 +8693,7 @@ START_TEST(test_from_decimal_to_float_ok955) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok956) {
     // -1.000
@@ -7746,6 +8702,7 @@ START_TEST(test_from_decimal_to_float_ok956) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok957) {
     // 2.65000
@@ -7754,6 +8711,7 @@ START_TEST(test_from_decimal_to_float_ok957) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok958) {
     // -2.65000
@@ -7762,6 +8720,7 @@ START_TEST(test_from_decimal_to_float_ok958) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok959) {
     // 1.0000000000
@@ -7770,6 +8729,7 @@ START_TEST(test_from_decimal_to_float_ok959) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok960) {
     // -1.0000000000
@@ -7778,6 +8738,7 @@ START_TEST(test_from_decimal_to_float_ok960) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok961) {
     // 2.650000000000
@@ -7786,6 +8747,7 @@ START_TEST(test_from_decimal_to_float_ok961) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok962) {
     // -2.650000000000
@@ -7794,6 +8756,7 @@ START_TEST(test_from_decimal_to_float_ok962) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok963) {
     // 1.0000000000000000
@@ -7802,6 +8765,7 @@ START_TEST(test_from_decimal_to_float_ok963) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok964) {
     // -1.0000000000000000
@@ -7810,6 +8774,7 @@ START_TEST(test_from_decimal_to_float_ok964) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok965) {
     // 2.650000000000000000
@@ -7818,6 +8783,7 @@ START_TEST(test_from_decimal_to_float_ok965) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok966) {
     // -2.650000000000000000
@@ -7826,6 +8792,7 @@ START_TEST(test_from_decimal_to_float_ok966) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok967) {
     // 1.00000000000000000000000
@@ -7834,6 +8801,7 @@ START_TEST(test_from_decimal_to_float_ok967) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok968) {
     // -1.00000000000000000000000
@@ -7842,6 +8810,7 @@ START_TEST(test_from_decimal_to_float_ok968) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok969) {
     // 2.6500000000000000000000000
@@ -7850,6 +8819,7 @@ START_TEST(test_from_decimal_to_float_ok969) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok970) {
     // -2.6500000000000000000000000
@@ -7858,6 +8828,7 @@ START_TEST(test_from_decimal_to_float_ok970) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok971) {
     // 1.000000000000000000000000000
@@ -7866,6 +8837,7 @@ START_TEST(test_from_decimal_to_float_ok971) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok972) {
     // -1.000000000000000000000000000
@@ -7874,6 +8846,7 @@ START_TEST(test_from_decimal_to_float_ok972) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok973) {
     // 2.6500000000000000000000000000
@@ -7882,6 +8855,7 @@ START_TEST(test_from_decimal_to_float_ok973) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok974) {
     // -2.6500000000000000000000000000
@@ -7890,6 +8864,7 @@ START_TEST(test_from_decimal_to_float_ok974) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok975) {
     // 1.0000000000000000000000000000
@@ -7898,6 +8873,7 @@ START_TEST(test_from_decimal_to_float_ok975) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok976) {
     // -1.0000000000000000000000000000
@@ -7906,6 +8882,7 @@ START_TEST(test_from_decimal_to_float_ok976) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok977) {
     // 2.6500000000000000000000000000
@@ -7914,6 +8891,7 @@ START_TEST(test_from_decimal_to_float_ok977) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok978) {
     // -2.6500000000000000000000000000
@@ -7922,6 +8900,7 @@ START_TEST(test_from_decimal_to_float_ok978) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok979) {
     // 1.1
@@ -7930,6 +8909,7 @@ START_TEST(test_from_decimal_to_float_ok979) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok980) {
     // -1.1
@@ -7938,6 +8918,7 @@ START_TEST(test_from_decimal_to_float_ok980) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok981) {
     // 2.915
@@ -7946,6 +8927,7 @@ START_TEST(test_from_decimal_to_float_ok981) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok982) {
     // -2.915
@@ -7954,6 +8936,7 @@ START_TEST(test_from_decimal_to_float_ok982) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok983) {
     // 12.12
@@ -7962,6 +8945,7 @@ START_TEST(test_from_decimal_to_float_ok983) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok984) {
     // -12.12
@@ -7970,6 +8954,7 @@ START_TEST(test_from_decimal_to_float_ok984) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok985) {
     // 32.1180
@@ -7978,6 +8963,7 @@ START_TEST(test_from_decimal_to_float_ok985) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok986) {
     // -32.1180
@@ -7986,6 +8972,7 @@ START_TEST(test_from_decimal_to_float_ok986) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok987) {
     // 123.123
@@ -7994,6 +8981,7 @@ START_TEST(test_from_decimal_to_float_ok987) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok988) {
     // -123.123
@@ -8002,6 +8990,7 @@ START_TEST(test_from_decimal_to_float_ok988) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok989) {
     // 326.27595
@@ -8010,6 +8999,7 @@ START_TEST(test_from_decimal_to_float_ok989) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok990) {
     // -326.27595
@@ -8018,6 +9008,7 @@ START_TEST(test_from_decimal_to_float_ok990) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok991) {
     // 1234.1234
@@ -8026,6 +9017,7 @@ START_TEST(test_from_decimal_to_float_ok991) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok992) {
     // -1234.1234
@@ -8034,6 +9026,7 @@ START_TEST(test_from_decimal_to_float_ok992) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok993) {
     // 3270.427010
@@ -8042,6 +9035,7 @@ START_TEST(test_from_decimal_to_float_ok993) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok994) {
     // -3270.427010
@@ -8050,6 +9044,7 @@ START_TEST(test_from_decimal_to_float_ok994) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok995) {
     // 12345.12345
@@ -8058,6 +9053,7 @@ START_TEST(test_from_decimal_to_float_ok995) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok996) {
     // -12345.12345
@@ -8066,6 +9062,7 @@ START_TEST(test_from_decimal_to_float_ok996) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok997) {
     // 32714.5771425
@@ -8074,6 +9071,7 @@ START_TEST(test_from_decimal_to_float_ok997) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok998) {
     // -32714.5771425
@@ -8082,6 +9080,7 @@ START_TEST(test_from_decimal_to_float_ok998) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok999) {
     // 123456.123456
@@ -8090,6 +9089,7 @@ START_TEST(test_from_decimal_to_float_ok999) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1000) {
     // -123456.123456
@@ -8098,6 +9098,7 @@ START_TEST(test_from_decimal_to_float_ok1000) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1001) {
     // 327158.72715840
@@ -8106,6 +9107,7 @@ START_TEST(test_from_decimal_to_float_ok1001) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1002) {
     // -327158.72715840
@@ -8114,6 +9116,7 @@ START_TEST(test_from_decimal_to_float_ok1002) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1003) {
     // 1234567.1234567
@@ -8122,6 +9125,7 @@ START_TEST(test_from_decimal_to_float_ok1003) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1004) {
     // -1234567.1234567
@@ -8130,6 +9134,7 @@ START_TEST(test_from_decimal_to_float_ok1004) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1005) {
     // 3271602.877160255
@@ -8138,6 +9143,7 @@ START_TEST(test_from_decimal_to_float_ok1005) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1006) {
     // -3271602.877160255
@@ -8146,6 +9152,7 @@ START_TEST(test_from_decimal_to_float_ok1006) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1007) {
     // 1234567890.1234567890
@@ -8154,6 +9161,7 @@ START_TEST(test_from_decimal_to_float_ok1007) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1008) {
     // -1234567890.1234567890
@@ -8162,6 +9170,7 @@ START_TEST(test_from_decimal_to_float_ok1008) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1009) {
     // 3271604908.827160490850
@@ -8170,6 +9179,7 @@ START_TEST(test_from_decimal_to_float_ok1009) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1010) {
     // -3271604908.827160490850
@@ -8178,6 +9188,7 @@ START_TEST(test_from_decimal_to_float_ok1010) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1011) {
     // 12345678901234.12345678901234
@@ -8186,6 +9197,7 @@ START_TEST(test_from_decimal_to_float_ok1011) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1012) {
     // -12345678901234.12345678901234
@@ -8194,6 +9206,7 @@ START_TEST(test_from_decimal_to_float_ok1012) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1013) {
     // 32716049088270.427160490882701
@@ -8202,6 +9215,7 @@ START_TEST(test_from_decimal_to_float_ok1013) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1014) {
     // -32716049088270.427160490882701
@@ -8210,6 +9224,7 @@ START_TEST(test_from_decimal_to_float_ok1014) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1015) {
     // 99
@@ -8218,6 +9233,7 @@ START_TEST(test_from_decimal_to_float_ok1015) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1016) {
     // -99
@@ -8226,6 +9242,7 @@ START_TEST(test_from_decimal_to_float_ok1016) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1017) {
     // 262.35
@@ -8234,6 +9251,7 @@ START_TEST(test_from_decimal_to_float_ok1017) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1018) {
     // -262.35
@@ -8242,6 +9260,7 @@ START_TEST(test_from_decimal_to_float_ok1018) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1019) {
     // 9.9
@@ -8250,6 +9269,7 @@ START_TEST(test_from_decimal_to_float_ok1019) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1020) {
     // -9.9
@@ -8258,6 +9278,7 @@ START_TEST(test_from_decimal_to_float_ok1020) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1021) {
     // 26.235
@@ -8266,6 +9287,7 @@ START_TEST(test_from_decimal_to_float_ok1021) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1022) {
     // -26.235
@@ -8274,6 +9296,7 @@ START_TEST(test_from_decimal_to_float_ok1022) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1023) {
     // 99.99
@@ -8282,6 +9305,7 @@ START_TEST(test_from_decimal_to_float_ok1023) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1024) {
     // -99.99
@@ -8290,6 +9314,7 @@ START_TEST(test_from_decimal_to_float_ok1024) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1025) {
     // 264.9735
@@ -8298,6 +9323,7 @@ START_TEST(test_from_decimal_to_float_ok1025) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1026) {
     // -264.9735
@@ -8306,6 +9332,7 @@ START_TEST(test_from_decimal_to_float_ok1026) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1027) {
     // 999.999
@@ -8314,6 +9341,7 @@ START_TEST(test_from_decimal_to_float_ok1027) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1028) {
     // -999.999
@@ -8322,6 +9350,7 @@ START_TEST(test_from_decimal_to_float_ok1028) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1029) {
     // 2649.99735
@@ -8330,6 +9359,7 @@ START_TEST(test_from_decimal_to_float_ok1029) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1030) {
     // -2649.99735
@@ -8338,6 +9368,7 @@ START_TEST(test_from_decimal_to_float_ok1030) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1031) {
     // 9999.9999
@@ -8346,6 +9377,7 @@ START_TEST(test_from_decimal_to_float_ok1031) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1032) {
     // -9999.9999
@@ -8354,6 +9386,7 @@ START_TEST(test_from_decimal_to_float_ok1032) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1033) {
     // 26499.999735
@@ -8362,6 +9395,7 @@ START_TEST(test_from_decimal_to_float_ok1033) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1034) {
     // -26499.999735
@@ -8370,6 +9404,7 @@ START_TEST(test_from_decimal_to_float_ok1034) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1035) {
     // 99999.99999
@@ -8378,6 +9413,7 @@ START_TEST(test_from_decimal_to_float_ok1035) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1036) {
     // -99999.99999
@@ -8386,6 +9422,7 @@ START_TEST(test_from_decimal_to_float_ok1036) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1037) {
     // 264999.9999735
@@ -8394,6 +9431,7 @@ START_TEST(test_from_decimal_to_float_ok1037) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1038) {
     // -264999.9999735
@@ -8402,6 +9440,7 @@ START_TEST(test_from_decimal_to_float_ok1038) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1039) {
     // 999999.999999
@@ -8410,6 +9449,7 @@ START_TEST(test_from_decimal_to_float_ok1039) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1040) {
     // -999999.999999
@@ -8418,6 +9458,7 @@ START_TEST(test_from_decimal_to_float_ok1040) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1041) {
     // 2649999.99999735
@@ -8426,6 +9467,7 @@ START_TEST(test_from_decimal_to_float_ok1041) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1042) {
     // -2649999.99999735
@@ -8434,6 +9476,7 @@ START_TEST(test_from_decimal_to_float_ok1042) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1043) {
     // 9999999.9999999
@@ -8442,6 +9485,7 @@ START_TEST(test_from_decimal_to_float_ok1043) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1044) {
     // -9999999.9999999
@@ -8450,6 +9494,7 @@ START_TEST(test_from_decimal_to_float_ok1044) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1045) {
     // 26499999.999999735
@@ -8458,6 +9503,7 @@ START_TEST(test_from_decimal_to_float_ok1045) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1046) {
     // -26499999.999999735
@@ -8466,6 +9512,7 @@ START_TEST(test_from_decimal_to_float_ok1046) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1047) {
     // 99999999.99999999
@@ -8474,6 +9521,7 @@ START_TEST(test_from_decimal_to_float_ok1047) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1048) {
     // -99999999.99999999
@@ -8482,6 +9530,7 @@ START_TEST(test_from_decimal_to_float_ok1048) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1049) {
     // 264999999.9999999735
@@ -8490,6 +9539,7 @@ START_TEST(test_from_decimal_to_float_ok1049) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1050) {
     // -264999999.9999999735
@@ -8498,6 +9548,7 @@ START_TEST(test_from_decimal_to_float_ok1050) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1051) {
     // 999999999.999999999
@@ -8506,6 +9557,7 @@ START_TEST(test_from_decimal_to_float_ok1051) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1052) {
     // -999999999.999999999
@@ -8514,6 +9566,7 @@ START_TEST(test_from_decimal_to_float_ok1052) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1053) {
     // 2649999999.99999999735
@@ -8522,6 +9575,7 @@ START_TEST(test_from_decimal_to_float_ok1053) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1054) {
     // -2649999999.99999999735
@@ -8530,6 +9584,7 @@ START_TEST(test_from_decimal_to_float_ok1054) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1055) {
     // 9999999999.9999999999
@@ -8538,6 +9593,7 @@ START_TEST(test_from_decimal_to_float_ok1055) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1056) {
     // -9999999999.9999999999
@@ -8546,6 +9602,7 @@ START_TEST(test_from_decimal_to_float_ok1056) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1057) {
     // 26499999999.999999999735
@@ -8554,6 +9611,7 @@ START_TEST(test_from_decimal_to_float_ok1057) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1058) {
     // -26499999999.999999999735
@@ -8562,6 +9620,7 @@ START_TEST(test_from_decimal_to_float_ok1058) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1059) {
     // 9
@@ -8570,6 +9629,7 @@ START_TEST(test_from_decimal_to_float_ok1059) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1060) {
     // -9
@@ -8578,6 +9638,7 @@ START_TEST(test_from_decimal_to_float_ok1060) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1061) {
     // 23.85
@@ -8586,6 +9647,7 @@ START_TEST(test_from_decimal_to_float_ok1061) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1062) {
     // -23.85
@@ -8594,6 +9656,7 @@ START_TEST(test_from_decimal_to_float_ok1062) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1063) {
     // 0.9
@@ -8602,6 +9665,7 @@ START_TEST(test_from_decimal_to_float_ok1063) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1064) {
     // -0.9
@@ -8610,6 +9674,7 @@ START_TEST(test_from_decimal_to_float_ok1064) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1065) {
     // 2.385
@@ -8618,6 +9683,7 @@ START_TEST(test_from_decimal_to_float_ok1065) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1066) {
     // -2.385
@@ -8626,6 +9692,7 @@ START_TEST(test_from_decimal_to_float_ok1066) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1067) {
     // 0.99
@@ -8634,6 +9701,7 @@ START_TEST(test_from_decimal_to_float_ok1067) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1068) {
     // -0.99
@@ -8642,6 +9710,7 @@ START_TEST(test_from_decimal_to_float_ok1068) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1069) {
     // 2.6235
@@ -8650,6 +9719,7 @@ START_TEST(test_from_decimal_to_float_ok1069) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1070) {
     // -2.6235
@@ -8658,6 +9728,7 @@ START_TEST(test_from_decimal_to_float_ok1070) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1071) {
     // 0.999
@@ -8666,6 +9737,7 @@ START_TEST(test_from_decimal_to_float_ok1071) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1072) {
     // -0.999
@@ -8674,6 +9746,7 @@ START_TEST(test_from_decimal_to_float_ok1072) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1073) {
     // 2.64735
@@ -8682,6 +9755,7 @@ START_TEST(test_from_decimal_to_float_ok1073) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1074) {
     // -2.64735
@@ -8690,6 +9764,7 @@ START_TEST(test_from_decimal_to_float_ok1074) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1075) {
     // 0.9999
@@ -8698,6 +9773,7 @@ START_TEST(test_from_decimal_to_float_ok1075) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1076) {
     // -0.9999
@@ -8706,6 +9782,7 @@ START_TEST(test_from_decimal_to_float_ok1076) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1077) {
     // 2.649735
@@ -8714,6 +9791,7 @@ START_TEST(test_from_decimal_to_float_ok1077) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1078) {
     // -2.649735
@@ -8722,6 +9800,7 @@ START_TEST(test_from_decimal_to_float_ok1078) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1079) {
     // 0.99999
@@ -8730,6 +9809,7 @@ START_TEST(test_from_decimal_to_float_ok1079) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1080) {
     // -0.99999
@@ -8738,6 +9818,7 @@ START_TEST(test_from_decimal_to_float_ok1080) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1081) {
     // 2.6499735
@@ -8746,6 +9827,7 @@ START_TEST(test_from_decimal_to_float_ok1081) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1082) {
     // -2.6499735
@@ -8754,6 +9836,7 @@ START_TEST(test_from_decimal_to_float_ok1082) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1083) {
     // 0.999999
@@ -8762,6 +9845,7 @@ START_TEST(test_from_decimal_to_float_ok1083) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1084) {
     // -0.999999
@@ -8770,6 +9854,7 @@ START_TEST(test_from_decimal_to_float_ok1084) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1085) {
     // 2.64999735
@@ -8778,6 +9863,7 @@ START_TEST(test_from_decimal_to_float_ok1085) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1086) {
     // -2.64999735
@@ -8786,6 +9872,7 @@ START_TEST(test_from_decimal_to_float_ok1086) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1087) {
     // 0.9999999
@@ -8794,6 +9881,7 @@ START_TEST(test_from_decimal_to_float_ok1087) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1088) {
     // -0.9999999
@@ -8802,6 +9890,7 @@ START_TEST(test_from_decimal_to_float_ok1088) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1089) {
     // 2.649999735
@@ -8810,6 +9899,7 @@ START_TEST(test_from_decimal_to_float_ok1089) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1090) {
     // -2.649999735
@@ -8818,6 +9908,7 @@ START_TEST(test_from_decimal_to_float_ok1090) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1091) {
     // 0.99999999
@@ -8826,6 +9917,7 @@ START_TEST(test_from_decimal_to_float_ok1091) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1092) {
     // -0.99999999
@@ -8834,6 +9926,7 @@ START_TEST(test_from_decimal_to_float_ok1092) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1093) {
     // 2.6499999735
@@ -8842,6 +9935,7 @@ START_TEST(test_from_decimal_to_float_ok1093) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1094) {
     // -2.6499999735
@@ -8850,6 +9944,7 @@ START_TEST(test_from_decimal_to_float_ok1094) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1095) {
     // 0.999999999
@@ -8858,6 +9953,7 @@ START_TEST(test_from_decimal_to_float_ok1095) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1096) {
     // -0.999999999
@@ -8866,6 +9962,7 @@ START_TEST(test_from_decimal_to_float_ok1096) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1097) {
     // 2.64999999735
@@ -8874,6 +9971,7 @@ START_TEST(test_from_decimal_to_float_ok1097) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1098) {
     // -2.64999999735
@@ -8882,6 +9980,7 @@ START_TEST(test_from_decimal_to_float_ok1098) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1099) {
     // 0.9999999999
@@ -8890,6 +9989,7 @@ START_TEST(test_from_decimal_to_float_ok1099) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1100) {
     // -0.9999999999
@@ -8898,6 +9998,7 @@ START_TEST(test_from_decimal_to_float_ok1100) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1101) {
     // 2.649999999735
@@ -8906,6 +10007,7 @@ START_TEST(test_from_decimal_to_float_ok1101) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1102) {
     // -2.649999999735
@@ -8914,6 +10016,7 @@ START_TEST(test_from_decimal_to_float_ok1102) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1103) {
     // 0.99999999999999999999
@@ -8922,6 +10025,7 @@ START_TEST(test_from_decimal_to_float_ok1103) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1104) {
     // -0.99999999999999999999
@@ -8930,6 +10034,7 @@ START_TEST(test_from_decimal_to_float_ok1104) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1105) {
     // 2.6499999999999999999735
@@ -8938,6 +10043,7 @@ START_TEST(test_from_decimal_to_float_ok1105) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1106) {
     // -2.6499999999999999999735
@@ -8946,6 +10052,7 @@ START_TEST(test_from_decimal_to_float_ok1106) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1107) {
     // -0
@@ -8954,6 +10061,7 @@ START_TEST(test_from_decimal_to_float_ok1107) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1108) {
     // 0
@@ -8962,6 +10070,7 @@ START_TEST(test_from_decimal_to_float_ok1108) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1109) {
     // -0.0
@@ -8970,6 +10079,7 @@ START_TEST(test_from_decimal_to_float_ok1109) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1110) {
     // 0.0
@@ -8978,6 +10088,7 @@ START_TEST(test_from_decimal_to_float_ok1110) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1111) {
     // -0.00
@@ -8986,6 +10097,7 @@ START_TEST(test_from_decimal_to_float_ok1111) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1112) {
     // 0.00
@@ -8994,6 +10106,7 @@ START_TEST(test_from_decimal_to_float_ok1112) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1113) {
     // -0.00000000000000
@@ -9002,6 +10115,7 @@ START_TEST(test_from_decimal_to_float_ok1113) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1114) {
     // 0.00000000000000
@@ -9010,6 +10124,7 @@ START_TEST(test_from_decimal_to_float_ok1114) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1115) {
     // -0.000000000000000000000000000
@@ -9018,6 +10133,7 @@ START_TEST(test_from_decimal_to_float_ok1115) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1116) {
     // 0.000000000000000000000000000
@@ -9026,6 +10142,7 @@ START_TEST(test_from_decimal_to_float_ok1116) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1117) {
     // -0.0000000000000000000000000000
@@ -9034,6 +10151,7 @@ START_TEST(test_from_decimal_to_float_ok1117) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1118) {
     // 0.0000000000000000000000000000
@@ -9042,6 +10160,7 @@ START_TEST(test_from_decimal_to_float_ok1118) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1119) {
     // 2147483646
@@ -9050,6 +10169,7 @@ START_TEST(test_from_decimal_to_float_ok1119) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1120) {
     // -2147483646
@@ -9058,6 +10178,7 @@ START_TEST(test_from_decimal_to_float_ok1120) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1121) {
     // 5690831661.90
@@ -9066,6 +10187,7 @@ START_TEST(test_from_decimal_to_float_ok1121) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1122) {
     // -5690831661.90
@@ -9074,6 +10196,7 @@ START_TEST(test_from_decimal_to_float_ok1122) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1123) {
     // 2147483646.00
@@ -9082,6 +10205,7 @@ START_TEST(test_from_decimal_to_float_ok1123) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1124) {
     // -2147483646.00
@@ -9090,6 +10214,7 @@ START_TEST(test_from_decimal_to_float_ok1124) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1125) {
     // 5690831661.9000
@@ -9098,6 +10223,7 @@ START_TEST(test_from_decimal_to_float_ok1125) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1126) {
     // -5690831661.9000
@@ -9106,6 +10232,7 @@ START_TEST(test_from_decimal_to_float_ok1126) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1127) {
     // 2147483646.99
@@ -9114,6 +10241,7 @@ START_TEST(test_from_decimal_to_float_ok1127) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1128) {
     // -2147483646.99
@@ -9122,6 +10250,7 @@ START_TEST(test_from_decimal_to_float_ok1128) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1129) {
     // 5690831664.5235
@@ -9130,6 +10259,7 @@ START_TEST(test_from_decimal_to_float_ok1129) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1130) {
     // -5690831664.5235
@@ -9138,6 +10268,7 @@ START_TEST(test_from_decimal_to_float_ok1130) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1131) {
     // 2147483646.999999999999999999
@@ -9146,6 +10277,7 @@ START_TEST(test_from_decimal_to_float_ok1131) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1132) {
     // -2147483646.999999999999999999
@@ -9154,6 +10286,7 @@ START_TEST(test_from_decimal_to_float_ok1132) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1133) {
     // 5690831664.5499999999999999974
@@ -9162,6 +10295,7 @@ START_TEST(test_from_decimal_to_float_ok1133) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1134) {
     // -5690831664.5499999999999999974
@@ -9170,6 +10304,7 @@ START_TEST(test_from_decimal_to_float_ok1134) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1135) {
     // 21474836.46
@@ -9178,6 +10313,7 @@ START_TEST(test_from_decimal_to_float_ok1135) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1136) {
     // -21474836.46
@@ -9186,6 +10322,7 @@ START_TEST(test_from_decimal_to_float_ok1136) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1137) {
     // 56908316.6190
@@ -9194,6 +10331,7 @@ START_TEST(test_from_decimal_to_float_ok1137) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1138) {
     // -56908316.6190
@@ -9202,6 +10340,7 @@ START_TEST(test_from_decimal_to_float_ok1138) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1139) {
     // 214.7483646
@@ -9210,6 +10349,7 @@ START_TEST(test_from_decimal_to_float_ok1139) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1140) {
     // -214.7483646
@@ -9218,6 +10358,7 @@ START_TEST(test_from_decimal_to_float_ok1140) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1141) {
     // 569.083166190
@@ -9226,6 +10367,7 @@ START_TEST(test_from_decimal_to_float_ok1141) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1142) {
     // -569.083166190
@@ -9234,6 +10376,7 @@ START_TEST(test_from_decimal_to_float_ok1142) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1143) {
     // 2.147483646
@@ -9242,6 +10385,7 @@ START_TEST(test_from_decimal_to_float_ok1143) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1144) {
     // -2.147483646
@@ -9250,6 +10394,7 @@ START_TEST(test_from_decimal_to_float_ok1144) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1145) {
     // 5.69083166190
@@ -9258,6 +10403,7 @@ START_TEST(test_from_decimal_to_float_ok1145) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1146) {
     // -5.69083166190
@@ -9266,6 +10412,7 @@ START_TEST(test_from_decimal_to_float_ok1146) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1147) {
     // 0.2147483646
@@ -9274,6 +10421,7 @@ START_TEST(test_from_decimal_to_float_ok1147) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1148) {
     // -0.2147483646
@@ -9282,6 +10430,7 @@ START_TEST(test_from_decimal_to_float_ok1148) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1149) {
     // 0.569083166190
@@ -9290,6 +10439,7 @@ START_TEST(test_from_decimal_to_float_ok1149) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1150) {
     // -0.569083166190
@@ -9298,6 +10448,7 @@ START_TEST(test_from_decimal_to_float_ok1150) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1151) {
     // 0.0000000000000000002147483646
@@ -9306,6 +10457,7 @@ START_TEST(test_from_decimal_to_float_ok1151) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1152) {
     // -0.0000000000000000002147483646
@@ -9314,6 +10466,7 @@ START_TEST(test_from_decimal_to_float_ok1152) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1153) {
     // 0.0000000000000000005690831662
@@ -9322,6 +10475,7 @@ START_TEST(test_from_decimal_to_float_ok1153) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1154) {
     // -0.0000000000000000005690831662
@@ -9330,6 +10484,7 @@ START_TEST(test_from_decimal_to_float_ok1154) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1155) {
     // 2147483647
@@ -9338,6 +10493,7 @@ START_TEST(test_from_decimal_to_float_ok1155) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1156) {
     // -2147483647
@@ -9346,6 +10502,7 @@ START_TEST(test_from_decimal_to_float_ok1156) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1157) {
     // 5690831664.55
@@ -9354,6 +10511,7 @@ START_TEST(test_from_decimal_to_float_ok1157) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1158) {
     // -5690831664.55
@@ -9362,6 +10520,7 @@ START_TEST(test_from_decimal_to_float_ok1158) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1159) {
     // 2147483647.00
@@ -9370,6 +10529,7 @@ START_TEST(test_from_decimal_to_float_ok1159) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1160) {
     // -2147483647.00
@@ -9378,6 +10538,7 @@ START_TEST(test_from_decimal_to_float_ok1160) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1161) {
     // 5690831664.5500
@@ -9386,6 +10547,7 @@ START_TEST(test_from_decimal_to_float_ok1161) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1162) {
     // -5690831664.5500
@@ -9394,6 +10556,7 @@ START_TEST(test_from_decimal_to_float_ok1162) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1163) {
     // 2147483647.99
@@ -9402,6 +10565,7 @@ START_TEST(test_from_decimal_to_float_ok1163) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1164) {
     // -2147483647.99
@@ -9410,6 +10574,7 @@ START_TEST(test_from_decimal_to_float_ok1164) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1165) {
     // 5690831667.1735
@@ -9418,6 +10583,7 @@ START_TEST(test_from_decimal_to_float_ok1165) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1166) {
     // -5690831667.1735
@@ -9426,6 +10592,7 @@ START_TEST(test_from_decimal_to_float_ok1166) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1167) {
     // 2147483647.999999999999999999
@@ -9434,6 +10601,7 @@ START_TEST(test_from_decimal_to_float_ok1167) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1168) {
     // -2147483647.999999999999999999
@@ -9442,6 +10610,7 @@ START_TEST(test_from_decimal_to_float_ok1168) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1169) {
     // 5690831667.1999999999999999974
@@ -9450,6 +10619,7 @@ START_TEST(test_from_decimal_to_float_ok1169) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1170) {
     // -5690831667.1999999999999999974
@@ -9458,6 +10628,7 @@ START_TEST(test_from_decimal_to_float_ok1170) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1171) {
     // 21474836.47
@@ -9466,6 +10637,7 @@ START_TEST(test_from_decimal_to_float_ok1171) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1172) {
     // -21474836.47
@@ -9474,6 +10646,7 @@ START_TEST(test_from_decimal_to_float_ok1172) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1173) {
     // 56908316.6455
@@ -9482,6 +10655,7 @@ START_TEST(test_from_decimal_to_float_ok1173) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1174) {
     // -56908316.6455
@@ -9490,6 +10664,7 @@ START_TEST(test_from_decimal_to_float_ok1174) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1175) {
     // 214.7483647
@@ -9498,6 +10673,7 @@ START_TEST(test_from_decimal_to_float_ok1175) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1176) {
     // -214.7483647
@@ -9506,6 +10682,7 @@ START_TEST(test_from_decimal_to_float_ok1176) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1177) {
     // 569.083166455
@@ -9514,6 +10691,7 @@ START_TEST(test_from_decimal_to_float_ok1177) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1178) {
     // -569.083166455
@@ -9522,6 +10700,7 @@ START_TEST(test_from_decimal_to_float_ok1178) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1179) {
     // 2.147483647
@@ -9530,6 +10709,7 @@ START_TEST(test_from_decimal_to_float_ok1179) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1180) {
     // -2.147483647
@@ -9538,6 +10718,7 @@ START_TEST(test_from_decimal_to_float_ok1180) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1181) {
     // 5.69083166455
@@ -9546,6 +10727,7 @@ START_TEST(test_from_decimal_to_float_ok1181) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1182) {
     // -5.69083166455
@@ -9554,6 +10736,7 @@ START_TEST(test_from_decimal_to_float_ok1182) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1183) {
     // 0.2147483647
@@ -9562,6 +10745,7 @@ START_TEST(test_from_decimal_to_float_ok1183) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1184) {
     // -0.2147483647
@@ -9570,6 +10754,7 @@ START_TEST(test_from_decimal_to_float_ok1184) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1185) {
     // 0.569083166455
@@ -9578,6 +10763,7 @@ START_TEST(test_from_decimal_to_float_ok1185) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1186) {
     // -0.569083166455
@@ -9586,6 +10772,7 @@ START_TEST(test_from_decimal_to_float_ok1186) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1187) {
     // 0.0000000000000000002147483647
@@ -9594,6 +10781,7 @@ START_TEST(test_from_decimal_to_float_ok1187) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1188) {
     // -0.0000000000000000002147483647
@@ -9602,6 +10790,7 @@ START_TEST(test_from_decimal_to_float_ok1188) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1189) {
     // 0.0000000000000000005690831665
@@ -9610,6 +10799,7 @@ START_TEST(test_from_decimal_to_float_ok1189) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1190) {
     // -0.0000000000000000005690831665
@@ -9618,6 +10808,7 @@ START_TEST(test_from_decimal_to_float_ok1190) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1191) {
     // 2147483648
@@ -9626,6 +10817,7 @@ START_TEST(test_from_decimal_to_float_ok1191) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1192) {
     // -2147483648
@@ -9634,6 +10826,7 @@ START_TEST(test_from_decimal_to_float_ok1192) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1193) {
     // 5690831667.20
@@ -9642,6 +10835,7 @@ START_TEST(test_from_decimal_to_float_ok1193) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1194) {
     // -5690831667.20
@@ -9650,6 +10844,7 @@ START_TEST(test_from_decimal_to_float_ok1194) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1195) {
     // 2147483648.00
@@ -9658,6 +10853,7 @@ START_TEST(test_from_decimal_to_float_ok1195) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1196) {
     // -2147483648.00
@@ -9666,6 +10862,7 @@ START_TEST(test_from_decimal_to_float_ok1196) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1197) {
     // 5690831667.2000
@@ -9674,6 +10871,7 @@ START_TEST(test_from_decimal_to_float_ok1197) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1198) {
     // -5690831667.2000
@@ -9682,6 +10880,7 @@ START_TEST(test_from_decimal_to_float_ok1198) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1199) {
     // 2147483648.99
@@ -9690,6 +10889,7 @@ START_TEST(test_from_decimal_to_float_ok1199) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1200) {
     // -2147483648.99
@@ -9698,6 +10898,7 @@ START_TEST(test_from_decimal_to_float_ok1200) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1201) {
     // 5690831669.8235
@@ -9706,6 +10907,7 @@ START_TEST(test_from_decimal_to_float_ok1201) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1202) {
     // -5690831669.8235
@@ -9714,6 +10916,7 @@ START_TEST(test_from_decimal_to_float_ok1202) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1203) {
     // 2147483648.999999999999999999
@@ -9722,6 +10925,7 @@ START_TEST(test_from_decimal_to_float_ok1203) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1204) {
     // -2147483648.999999999999999999
@@ -9730,6 +10934,7 @@ START_TEST(test_from_decimal_to_float_ok1204) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1205) {
     // 5690831669.8499999999999999974
@@ -9738,6 +10943,7 @@ START_TEST(test_from_decimal_to_float_ok1205) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1206) {
     // -5690831669.8499999999999999974
@@ -9746,6 +10952,7 @@ START_TEST(test_from_decimal_to_float_ok1206) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1207) {
     // 21474836.48
@@ -9754,6 +10961,7 @@ START_TEST(test_from_decimal_to_float_ok1207) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1208) {
     // -21474836.48
@@ -9762,6 +10970,7 @@ START_TEST(test_from_decimal_to_float_ok1208) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1209) {
     // 56908316.6720
@@ -9770,6 +10979,7 @@ START_TEST(test_from_decimal_to_float_ok1209) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1210) {
     // -56908316.6720
@@ -9778,6 +10988,7 @@ START_TEST(test_from_decimal_to_float_ok1210) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1211) {
     // 214.7483648
@@ -9786,6 +10997,7 @@ START_TEST(test_from_decimal_to_float_ok1211) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1212) {
     // -214.7483648
@@ -9794,6 +11006,7 @@ START_TEST(test_from_decimal_to_float_ok1212) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1213) {
     // 569.083166720
@@ -9802,6 +11015,7 @@ START_TEST(test_from_decimal_to_float_ok1213) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1214) {
     // -569.083166720
@@ -9810,6 +11024,7 @@ START_TEST(test_from_decimal_to_float_ok1214) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1215) {
     // 2.147483648
@@ -9818,6 +11033,7 @@ START_TEST(test_from_decimal_to_float_ok1215) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1216) {
     // -2.147483648
@@ -9826,6 +11042,7 @@ START_TEST(test_from_decimal_to_float_ok1216) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1217) {
     // 5.69083166720
@@ -9834,6 +11051,7 @@ START_TEST(test_from_decimal_to_float_ok1217) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1218) {
     // -5.69083166720
@@ -9842,6 +11060,7 @@ START_TEST(test_from_decimal_to_float_ok1218) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1219) {
     // 0.2147483648
@@ -9850,6 +11069,7 @@ START_TEST(test_from_decimal_to_float_ok1219) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1220) {
     // -0.2147483648
@@ -9858,6 +11078,7 @@ START_TEST(test_from_decimal_to_float_ok1220) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1221) {
     // 0.569083166720
@@ -9866,6 +11087,7 @@ START_TEST(test_from_decimal_to_float_ok1221) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1222) {
     // -0.569083166720
@@ -9874,6 +11096,7 @@ START_TEST(test_from_decimal_to_float_ok1222) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1223) {
     // 0.0000000000000000002147483648
@@ -9882,6 +11105,7 @@ START_TEST(test_from_decimal_to_float_ok1223) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1224) {
     // -0.0000000000000000002147483648
@@ -9890,6 +11114,7 @@ START_TEST(test_from_decimal_to_float_ok1224) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1225) {
     // 0.0000000000000000005690831667
@@ -9898,6 +11123,7 @@ START_TEST(test_from_decimal_to_float_ok1225) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1226) {
     // -0.0000000000000000005690831667
@@ -9906,6 +11132,7 @@ START_TEST(test_from_decimal_to_float_ok1226) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1227) {
     // 1.0000000596046412226769461995
@@ -9914,6 +11141,7 @@ START_TEST(test_from_decimal_to_float_ok1227) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1228) {
     // -1.0000000596046412226769461995
@@ -9922,6 +11150,7 @@ START_TEST(test_from_decimal_to_float_ok1228) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1229) {
     // 2.6500001579522992400939074287
@@ -9930,6 +11159,7 @@ START_TEST(test_from_decimal_to_float_ok1229) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1230) {
     // -2.6500001579522992400939074287
@@ -9938,6 +11168,7 @@ START_TEST(test_from_decimal_to_float_ok1230) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1231) {
     // 1.0000001788139307734581961995
@@ -9946,6 +11177,7 @@ START_TEST(test_from_decimal_to_float_ok1231) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1232) {
     // -1.0000001788139307734581961995
@@ -9954,6 +11186,7 @@ START_TEST(test_from_decimal_to_float_ok1232) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1233) {
     // 2.6500004738569165496642199287
@@ -9962,6 +11195,7 @@ START_TEST(test_from_decimal_to_float_ok1233) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1234) {
     // -2.6500004738569165496642199287
@@ -9970,6 +11204,7 @@ START_TEST(test_from_decimal_to_float_ok1234) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1235) {
     // 1.0000000596046429989337921142
@@ -9978,6 +11213,7 @@ START_TEST(test_from_decimal_to_float_ok1235) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1236) {
     // -1.0000000596046429989337921142
@@ -9986,6 +11222,7 @@ START_TEST(test_from_decimal_to_float_ok1236) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1237) {
     // 2.6500001579523039471745491026
@@ -9994,6 +11231,7 @@ START_TEST(test_from_decimal_to_float_ok1237) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1238) {
     // -2.6500001579523039471745491026
@@ -10002,6 +11240,7 @@ START_TEST(test_from_decimal_to_float_ok1238) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1239) {
     // 1.0000001788139325497150421142
@@ -10010,6 +11249,7 @@ START_TEST(test_from_decimal_to_float_ok1239) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1240) {
     // -1.0000001788139325497150421142
@@ -10018,6 +11258,7 @@ START_TEST(test_from_decimal_to_float_ok1240) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1241) {
     // 2.6500004738569212567448616026
@@ -10026,6 +11267,7 @@ START_TEST(test_from_decimal_to_float_ok1241) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1242) {
     // -2.6500004738569212567448616026
@@ -10034,6 +11276,7 @@ START_TEST(test_from_decimal_to_float_ok1242) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1243) {
     // 1.0000000596046429990530014038
@@ -10042,6 +11285,7 @@ START_TEST(test_from_decimal_to_float_ok1243) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1244) {
     // -1.0000000596046429990530014038
@@ -10050,6 +11294,7 @@ START_TEST(test_from_decimal_to_float_ok1244) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1245) {
     // 2.6500001579523039474904537201
@@ -10058,6 +11303,7 @@ START_TEST(test_from_decimal_to_float_ok1245) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1246) {
     // -2.6500001579523039474904537201
@@ -10066,6 +11312,7 @@ START_TEST(test_from_decimal_to_float_ok1246) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1247) {
     // 1.0000001788139325498342514038
@@ -10074,6 +11321,7 @@ START_TEST(test_from_decimal_to_float_ok1247) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1248) {
     // -1.0000001788139325498342514038
@@ -10082,6 +11330,7 @@ START_TEST(test_from_decimal_to_float_ok1248) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1249) {
     // 2.6500004738569212570607662201
@@ -10090,6 +11339,7 @@ START_TEST(test_from_decimal_to_float_ok1249) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1250) {
     // -2.6500004738569212570607662201
@@ -10098,6 +11348,7 @@ START_TEST(test_from_decimal_to_float_ok1250) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1251) {
     // 1.000000059604644775390625
@@ -10106,6 +11357,7 @@ START_TEST(test_from_decimal_to_float_ok1251) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1252) {
     // -1.000000059604644775390625
@@ -10114,6 +11366,7 @@ START_TEST(test_from_decimal_to_float_ok1252) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1253) {
     // 2.65000015795230865478515625
@@ -10122,6 +11375,7 @@ START_TEST(test_from_decimal_to_float_ok1253) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1254) {
     // -2.65000015795230865478515625
@@ -10130,6 +11384,7 @@ START_TEST(test_from_decimal_to_float_ok1254) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1255) {
     // 1.000000178813934326171875
@@ -10138,6 +11393,7 @@ START_TEST(test_from_decimal_to_float_ok1255) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1256) {
     // -1.000000178813934326171875
@@ -10146,6 +11402,7 @@ START_TEST(test_from_decimal_to_float_ok1256) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1257) {
     // 2.65000047385692596435546875
@@ -10154,6 +11411,7 @@ START_TEST(test_from_decimal_to_float_ok1257) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1258) {
     // -2.65000047385692596435546875
@@ -10162,6 +11420,7 @@ START_TEST(test_from_decimal_to_float_ok1258) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1259) {
     // 1.0000000596046483280658721924
@@ -10170,6 +11429,7 @@ START_TEST(test_from_decimal_to_float_ok1259) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1260) {
     // -1.0000000596046483280658721924
@@ -10178,6 +11438,7 @@ START_TEST(test_from_decimal_to_float_ok1260) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1261) {
     // 2.6500001579523180693745613099
@@ -10186,6 +11447,7 @@ START_TEST(test_from_decimal_to_float_ok1261) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1262) {
     // -2.6500001579523180693745613099
@@ -10194,6 +11456,7 @@ START_TEST(test_from_decimal_to_float_ok1262) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1263) {
     // 1.0000001788139378788471221924
@@ -10202,6 +11465,7 @@ START_TEST(test_from_decimal_to_float_ok1263) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1264) {
     // -1.0000001788139378788471221924
@@ -10210,6 +11474,7 @@ START_TEST(test_from_decimal_to_float_ok1264) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1265) {
     // 2.6500004738569353789448738099
@@ -10218,6 +11483,7 @@ START_TEST(test_from_decimal_to_float_ok1265) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1266) {
     // -2.6500004738569353789448738099
@@ -10226,6 +11492,7 @@ START_TEST(test_from_decimal_to_float_ok1266) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1267) {
     // 1.000000059604651880817982601
@@ -10234,6 +11501,7 @@ START_TEST(test_from_decimal_to_float_ok1267) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1268) {
     // -1.000000059604651880817982601
@@ -10242,6 +11510,7 @@ START_TEST(test_from_decimal_to_float_ok1268) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1269) {
     // 2.6500001579523274841676538926
@@ -10250,6 +11519,7 @@ START_TEST(test_from_decimal_to_float_ok1269) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1270) {
     // -2.6500001579523274841676538926
@@ -10258,6 +11528,7 @@ START_TEST(test_from_decimal_to_float_ok1270) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1271) {
     // 1.000000178813941431599232601
@@ -10266,6 +11537,7 @@ START_TEST(test_from_decimal_to_float_ok1271) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1272) {
     // -1.000000178813941431599232601
@@ -10274,6 +11546,7 @@ START_TEST(test_from_decimal_to_float_ok1272) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1273) {
     // 2.6500004738569447937379663926
@@ -10282,6 +11555,7 @@ START_TEST(test_from_decimal_to_float_ok1273) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1274) {
     // -2.6500004738569447937379663926
@@ -10290,6 +11564,7 @@ START_TEST(test_from_decimal_to_float_ok1274) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1275) {
     // 1.0000000596046483281850814820
@@ -10298,6 +11573,7 @@ START_TEST(test_from_decimal_to_float_ok1275) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1276) {
     // -1.0000000596046483281850814820
@@ -10306,6 +11582,7 @@ START_TEST(test_from_decimal_to_float_ok1276) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1277) {
     // 2.6500001579523180696904659273
@@ -10314,6 +11591,7 @@ START_TEST(test_from_decimal_to_float_ok1277) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1278) {
     // -2.6500001579523180696904659273
@@ -10322,6 +11600,7 @@ START_TEST(test_from_decimal_to_float_ok1278) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1279) {
     // 1.0000001788139378789663314820
@@ -10330,6 +11609,7 @@ START_TEST(test_from_decimal_to_float_ok1279) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1280) {
     // -1.0000001788139378789663314820
@@ -10338,6 +11618,7 @@ START_TEST(test_from_decimal_to_float_ok1280) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1281) {
     // 2.6500004738569353792607784273
@@ -10346,6 +11627,7 @@ START_TEST(test_from_decimal_to_float_ok1281) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1282) {
     // -2.6500004738569353792607784273
@@ -10354,6 +11636,7 @@ START_TEST(test_from_decimal_to_float_ok1282) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1283) {
     // 1.0000001788139343261718750
@@ -10362,6 +11645,7 @@ START_TEST(test_from_decimal_to_float_ok1283) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1284) {
     // -1.0000001788139343261718750
@@ -10370,6 +11654,7 @@ START_TEST(test_from_decimal_to_float_ok1284) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1285) {
     // 2.650000473856925964355468750
@@ -10378,6 +11663,7 @@ START_TEST(test_from_decimal_to_float_ok1285) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1286) {
     // -2.650000473856925964355468750
@@ -10386,6 +11672,7 @@ START_TEST(test_from_decimal_to_float_ok1286) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1287) {
     // 27670118309587582976
@@ -10394,6 +11681,7 @@ START_TEST(test_from_decimal_to_float_ok1287) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1288) {
     // -27670118309587582976
@@ -10402,6 +11690,7 @@ START_TEST(test_from_decimal_to_float_ok1288) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1289) {
     // 73325813520407094886.40
@@ -10410,6 +11699,7 @@ START_TEST(test_from_decimal_to_float_ok1289) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1290) {
     // -73325813520407094886.40
@@ -10418,6 +11708,7 @@ START_TEST(test_from_decimal_to_float_ok1290) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1291) {
     // 27670117210075957249
@@ -10426,6 +11717,7 @@ START_TEST(test_from_decimal_to_float_ok1291) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1292) {
     // -27670117210075957249
@@ -10434,6 +11726,7 @@ START_TEST(test_from_decimal_to_float_ok1292) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1293) {
     // 73325810606701286709.85
@@ -10442,6 +11735,7 @@ START_TEST(test_from_decimal_to_float_ok1293) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1294) {
     // -73325810606701286709.85
@@ -10450,6 +11744,7 @@ START_TEST(test_from_decimal_to_float_ok1294) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1295) {
     // 27670117210075957248
@@ -10458,6 +11753,7 @@ START_TEST(test_from_decimal_to_float_ok1295) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1296) {
     // -27670117210075957248
@@ -10466,6 +11762,7 @@ START_TEST(test_from_decimal_to_float_ok1296) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1297) {
     // 73325810606701286707.20
@@ -10474,6 +11771,7 @@ START_TEST(test_from_decimal_to_float_ok1297) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1298) {
     // -73325810606701286707.20
@@ -10482,6 +11780,7 @@ START_TEST(test_from_decimal_to_float_ok1298) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1299) {
     // 27670116110564327424
@@ -10490,6 +11789,7 @@ START_TEST(test_from_decimal_to_float_ok1299) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1300) {
     // -27670116110564327424
@@ -10498,6 +11798,7 @@ START_TEST(test_from_decimal_to_float_ok1300) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1301) {
     // 73325807692995467673.60
@@ -10506,6 +11807,7 @@ START_TEST(test_from_decimal_to_float_ok1301) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1302) {
     // -73325807692995467673.60
@@ -10514,6 +11816,7 @@ START_TEST(test_from_decimal_to_float_ok1302) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1303) {
     // 87381.3359375
@@ -10522,6 +11825,7 @@ START_TEST(test_from_decimal_to_float_ok1303) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1304) {
     // -87381.3359375
@@ -10530,6 +11834,7 @@ START_TEST(test_from_decimal_to_float_ok1304) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1305) {
     // 231560.540234375
@@ -10538,6 +11843,7 @@ START_TEST(test_from_decimal_to_float_ok1305) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1306) {
     // -231560.540234375
@@ -10546,6 +11852,7 @@ START_TEST(test_from_decimal_to_float_ok1306) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1307) {
     // 87381.33203126
@@ -10554,6 +11861,7 @@ START_TEST(test_from_decimal_to_float_ok1307) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1308) {
     // -87381.33203126
@@ -10562,6 +11870,7 @@ START_TEST(test_from_decimal_to_float_ok1308) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1309) {
     // 231560.5298828390
@@ -10570,6 +11879,7 @@ START_TEST(test_from_decimal_to_float_ok1309) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1310) {
     // -231560.5298828390
@@ -10578,6 +11888,7 @@ START_TEST(test_from_decimal_to_float_ok1310) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1311) {
     // 87381.33203125
@@ -10586,6 +11897,7 @@ START_TEST(test_from_decimal_to_float_ok1311) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1312) {
     // -87381.33203125
@@ -10594,6 +11906,7 @@ START_TEST(test_from_decimal_to_float_ok1312) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1313) {
     // 231560.5298828125
@@ -10602,6 +11915,7 @@ START_TEST(test_from_decimal_to_float_ok1313) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1314) {
     // -231560.5298828125
@@ -10610,6 +11924,7 @@ START_TEST(test_from_decimal_to_float_ok1314) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1315) {
     // 87381.328125
@@ -10618,6 +11933,7 @@ START_TEST(test_from_decimal_to_float_ok1315) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1316) {
     // -87381.328125
@@ -10626,6 +11942,7 @@ START_TEST(test_from_decimal_to_float_ok1316) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1317) {
     // 231560.51953125
@@ -10634,6 +11951,7 @@ START_TEST(test_from_decimal_to_float_ok1317) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1318) {
     // -231560.51953125
@@ -10642,6 +11960,7 @@ START_TEST(test_from_decimal_to_float_ok1318) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1319) {
     // 32.000003814697265625
@@ -10650,6 +11969,7 @@ START_TEST(test_from_decimal_to_float_ok1319) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1320) {
     // -32.000003814697265625
@@ -10658,6 +11978,7 @@ START_TEST(test_from_decimal_to_float_ok1320) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1321) {
     // 84.80001010894775390625
@@ -10666,6 +11987,7 @@ START_TEST(test_from_decimal_to_float_ok1321) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1322) {
     // -84.80001010894775390625
@@ -10674,6 +11996,7 @@ START_TEST(test_from_decimal_to_float_ok1322) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1323) {
     // 32.0000019074
@@ -10682,6 +12005,7 @@ START_TEST(test_from_decimal_to_float_ok1323) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1324) {
     // -32.0000019074
@@ -10690,6 +12014,7 @@ START_TEST(test_from_decimal_to_float_ok1324) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1325) {
     // 84.800005054610
@@ -10698,6 +12023,7 @@ START_TEST(test_from_decimal_to_float_ok1325) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1326) {
     // -84.800005054610
@@ -10706,6 +12032,7 @@ START_TEST(test_from_decimal_to_float_ok1326) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1327) {
     // 32.000001907348636365213678801
@@ -10714,6 +12041,7 @@ START_TEST(test_from_decimal_to_float_ok1327) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1328) {
     // -32.000001907348636365213678801
@@ -10722,6 +12050,7 @@ START_TEST(test_from_decimal_to_float_ok1328) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1329) {
     // 84.80000505447388636781624882
@@ -10730,6 +12059,7 @@ START_TEST(test_from_decimal_to_float_ok1329) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1330) {
     // -84.80000505447388636781624882
@@ -10738,6 +12068,7 @@ START_TEST(test_from_decimal_to_float_ok1330) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1331) {
     // 32.000001907348636365213678800
@@ -10746,6 +12077,7 @@ START_TEST(test_from_decimal_to_float_ok1331) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1332) {
     // -32.000001907348636365213678800
@@ -10754,6 +12086,7 @@ START_TEST(test_from_decimal_to_float_ok1332) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1333) {
     // 84.80000505447388636781624882
@@ -10762,6 +12095,7 @@ START_TEST(test_from_decimal_to_float_ok1333) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1334) {
     // -84.80000505447388636781624882
@@ -10770,6 +12104,7 @@ START_TEST(test_from_decimal_to_float_ok1334) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1335) {
     // 32.0000019073
@@ -10778,6 +12113,7 @@ START_TEST(test_from_decimal_to_float_ok1335) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1336) {
     // -32.0000019073
@@ -10786,6 +12122,7 @@ START_TEST(test_from_decimal_to_float_ok1336) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1337) {
     // 84.800005054345
@@ -10794,6 +12131,7 @@ START_TEST(test_from_decimal_to_float_ok1337) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1338) {
     // -84.800005054345
@@ -10802,6 +12140,7 @@ START_TEST(test_from_decimal_to_float_ok1338) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1339) {
     // 32.0000000000
@@ -10810,6 +12149,7 @@ START_TEST(test_from_decimal_to_float_ok1339) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1340) {
     // -32.0000000000
@@ -10818,6 +12158,7 @@ START_TEST(test_from_decimal_to_float_ok1340) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1341) {
     // 84.800000000000
@@ -10826,6 +12167,7 @@ START_TEST(test_from_decimal_to_float_ok1341) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1342) {
     // -84.800000000000
@@ -10834,6 +12176,7 @@ START_TEST(test_from_decimal_to_float_ok1342) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1343) {
     // 79228160153081096158721343489
@@ -10842,6 +12185,7 @@ START_TEST(test_from_decimal_to_float_ok1343) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1344) {
     // -79228160153081096158721343489
@@ -10850,6 +12194,7 @@ START_TEST(test_from_decimal_to_float_ok1344) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1345) {
     // 79228160153081096158721343488
@@ -10858,6 +12203,7 @@ START_TEST(test_from_decimal_to_float_ok1345) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1346) {
     // -79228160153081096158721343488
@@ -10866,6 +12212,7 @@ START_TEST(test_from_decimal_to_float_ok1346) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1347) {
     // 79228160153081096158721343487
@@ -10874,6 +12221,7 @@ START_TEST(test_from_decimal_to_float_ok1347) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1348) {
     // -79228160153081096158721343487
@@ -10882,6 +12230,7 @@ START_TEST(test_from_decimal_to_float_ok1348) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1349) {
     // 79228160153081091760674832384
@@ -10890,6 +12239,7 @@ START_TEST(test_from_decimal_to_float_ok1349) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1350) {
     // -79228160153081091760674832384
@@ -10898,6 +12248,7 @@ START_TEST(test_from_decimal_to_float_ok1350) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1351) {
     // 79228160153081091760674832383
@@ -10906,6 +12257,7 @@ START_TEST(test_from_decimal_to_float_ok1351) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1352) {
     // -79228160153081091760674832383
@@ -10914,6 +12266,7 @@ START_TEST(test_from_decimal_to_float_ok1352) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1353) {
     // 79228157791897854723898736699
@@ -10922,6 +12275,7 @@ START_TEST(test_from_decimal_to_float_ok1353) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1354) {
     // -79228157791897854723898736699
@@ -10930,6 +12284,7 @@ START_TEST(test_from_decimal_to_float_ok1354) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1355) {
     // 79228157791897854723898736641
@@ -10938,6 +12293,7 @@ START_TEST(test_from_decimal_to_float_ok1355) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1356) {
     // -79228157791897854723898736641
@@ -10946,6 +12302,7 @@ START_TEST(test_from_decimal_to_float_ok1356) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1357) {
     // 79228157791897854723898736640
@@ -10954,6 +12311,7 @@ START_TEST(test_from_decimal_to_float_ok1357) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1358) {
     // -79228157791897854723898736640
@@ -10962,6 +12320,7 @@ START_TEST(test_from_decimal_to_float_ok1358) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1359) {
     // 79228153069531371854253522944
@@ -10970,6 +12329,7 @@ START_TEST(test_from_decimal_to_float_ok1359) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1360) {
     // -79228153069531371854253522944
@@ -10978,6 +12338,7 @@ START_TEST(test_from_decimal_to_float_ok1360) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1361) {
     // 79228148347164888984608309248
@@ -10986,6 +12347,7 @@ START_TEST(test_from_decimal_to_float_ok1361) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1362) {
     // -79228148347164888984608309248
@@ -10994,6 +12356,7 @@ START_TEST(test_from_decimal_to_float_ok1362) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1363) {
     // 79228143624798406114963095552
@@ -11002,6 +12365,7 @@ START_TEST(test_from_decimal_to_float_ok1363) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1364) {
     // -79228143624798406114963095552
@@ -11010,6 +12374,7 @@ START_TEST(test_from_decimal_to_float_ok1364) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1365) {
     // 79228138902431923245317881856
@@ -11018,6 +12383,7 @@ START_TEST(test_from_decimal_to_float_ok1365) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1366) {
     // -79228138902431923245317881856
@@ -11026,6 +12392,7 @@ START_TEST(test_from_decimal_to_float_ok1366) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1367) {
     // 79228134180065440375672668160
@@ -11034,6 +12401,7 @@ START_TEST(test_from_decimal_to_float_ok1367) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1368) {
     // -79228134180065440375672668160
@@ -11042,6 +12410,7 @@ START_TEST(test_from_decimal_to_float_ok1368) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1369) {
     // 79228129457698957506027454464
@@ -11050,6 +12419,7 @@ START_TEST(test_from_decimal_to_float_ok1369) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1370) {
     // -79228129457698957506027454464
@@ -11058,6 +12428,7 @@ START_TEST(test_from_decimal_to_float_ok1370) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1371) {
     // 79228124735332474636382240768
@@ -11066,6 +12437,7 @@ START_TEST(test_from_decimal_to_float_ok1371) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1372) {
     // -79228124735332474636382240768
@@ -11074,6 +12446,7 @@ START_TEST(test_from_decimal_to_float_ok1372) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1373) {
     // 79228086956400611679220531200
@@ -11082,6 +12455,7 @@ START_TEST(test_from_decimal_to_float_ok1373) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1374) {
     // -79228086956400611679220531200
@@ -11090,6 +12464,7 @@ START_TEST(test_from_decimal_to_float_ok1374) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1375) {
     // 79228011398536885764897112064
@@ -11098,6 +12473,7 @@ START_TEST(test_from_decimal_to_float_ok1375) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1376) {
     // -79228011398536885764897112064
@@ -11106,6 +12482,7 @@ START_TEST(test_from_decimal_to_float_ok1376) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1377) {
     // 79227860282809433936250273792
@@ -11114,6 +12491,7 @@ START_TEST(test_from_decimal_to_float_ok1377) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1378) {
     // -79227860282809433936250273792
@@ -11122,6 +12500,7 @@ START_TEST(test_from_decimal_to_float_ok1378) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1379) {
     // 66023467187764787038071554048
@@ -11130,6 +12509,7 @@ START_TEST(test_from_decimal_to_float_ok1379) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1380) {
     // -66023467187764787038071554048
@@ -11138,6 +12518,7 @@ START_TEST(test_from_decimal_to_float_ok1380) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1381) {
     // 59421121885698253195157962752
@@ -11146,6 +12527,7 @@ START_TEST(test_from_decimal_to_float_ok1381) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1382) {
     // -59421121885698253195157962752
@@ -11154,6 +12536,7 @@ START_TEST(test_from_decimal_to_float_ok1382) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1383) {
     // 52818771861265236482599157760
@@ -11162,6 +12545,7 @@ START_TEST(test_from_decimal_to_float_ok1383) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1384) {
     // -52818771861265236482599157760
@@ -11170,6 +12554,7 @@ START_TEST(test_from_decimal_to_float_ok1384) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1385) {
     // 39614081257132168796771975168
@@ -11178,6 +12563,7 @@ START_TEST(test_from_decimal_to_float_ok1385) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1386) {
     // -39614081257132168796771975168
@@ -11186,6 +12572,7 @@ START_TEST(test_from_decimal_to_float_ok1386) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1387) {
     // 16505866796941196759517888512
@@ -11194,6 +12581,7 @@ START_TEST(test_from_decimal_to_float_ok1387) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1388) {
     // -16505866796941196759517888512
@@ -11202,6 +12590,7 @@ START_TEST(test_from_decimal_to_float_ok1388) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1389) {
     // 43740547011894171412722404557
@@ -11210,6 +12599,7 @@ START_TEST(test_from_decimal_to_float_ok1389) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1390) {
     // -43740547011894171412722404557
@@ -11218,6 +12608,7 @@ START_TEST(test_from_decimal_to_float_ok1390) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1391) {
     // 13204692965316309120649789440
@@ -11226,6 +12617,7 @@ START_TEST(test_from_decimal_to_float_ok1391) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1392) {
     // -13204692965316309120649789440
@@ -11234,6 +12626,7 @@ START_TEST(test_from_decimal_to_float_ok1392) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1393) {
     // 34992436358088219169721942016
@@ -11242,6 +12635,7 @@ START_TEST(test_from_decimal_to_float_ok1393) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1394) {
     // -34992436358088219169721942016
@@ -11250,6 +12644,7 @@ START_TEST(test_from_decimal_to_float_ok1394) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1395) {
     // 1031616674808824797469868032.0
@@ -11258,6 +12653,7 @@ START_TEST(test_from_decimal_to_float_ok1395) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1396) {
     // -1031616674808824797469868032.0
@@ -11266,6 +12662,7 @@ START_TEST(test_from_decimal_to_float_ok1396) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1397) {
     // 2733784188243385713295150284.8
@@ -11274,6 +12671,7 @@ START_TEST(test_from_decimal_to_float_ok1397) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1398) {
     // -2733784188243385713295150284.8
@@ -11282,6 +12680,7 @@ START_TEST(test_from_decimal_to_float_ok1398) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1399) {
     // 1031616674808824797469868032
@@ -11290,6 +12689,7 @@ START_TEST(test_from_decimal_to_float_ok1399) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1400) {
     // -1031616674808824797469868032
@@ -11298,6 +12698,7 @@ START_TEST(test_from_decimal_to_float_ok1400) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1401) {
     // 2733784188243385713295150284.8
@@ -11306,6 +12707,7 @@ START_TEST(test_from_decimal_to_float_ok1401) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1402) {
     // -2733784188243385713295150284.8
@@ -11314,6 +12716,7 @@ START_TEST(test_from_decimal_to_float_ok1402) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1403) {
     // 825293310332269320040611840.0
@@ -11322,6 +12725,7 @@ START_TEST(test_from_decimal_to_float_ok1403) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1404) {
     // -825293310332269320040611840.0
@@ -11330,6 +12734,7 @@ START_TEST(test_from_decimal_to_float_ok1404) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1405) {
     // 2187027272380513698107621376.0
@@ -11338,6 +12743,7 @@ START_TEST(test_from_decimal_to_float_ok1405) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1406) {
     // -2187027272380513698107621376.0
@@ -11346,6 +12752,7 @@ START_TEST(test_from_decimal_to_float_ok1406) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1407) {
     // 825293310332269320040611840
@@ -11354,6 +12761,7 @@ START_TEST(test_from_decimal_to_float_ok1407) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1408) {
     // -825293310332269320040611840
@@ -11362,6 +12770,7 @@ START_TEST(test_from_decimal_to_float_ok1408) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1409) {
     // 2187027272380513698107621376.0
@@ -11370,6 +12779,7 @@ START_TEST(test_from_decimal_to_float_ok1409) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1410) {
     // -2187027272380513698107621376.0
@@ -11378,6 +12788,7 @@ START_TEST(test_from_decimal_to_float_ok1410) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1411) {
     // 4029752635971971865116672.0000
@@ -11386,6 +12797,7 @@ START_TEST(test_from_decimal_to_float_ok1411) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1412) {
     // -4029752635971971865116672.0000
@@ -11394,6 +12806,7 @@ START_TEST(test_from_decimal_to_float_ok1412) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1413) {
     // 10678844485325725442559180.800
@@ -11402,6 +12815,7 @@ START_TEST(test_from_decimal_to_float_ok1413) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1414) {
     // -10678844485325725442559180.800
@@ -11410,6 +12824,7 @@ START_TEST(test_from_decimal_to_float_ok1414) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1415) {
     // 4029752635971971865116672
@@ -11418,6 +12833,7 @@ START_TEST(test_from_decimal_to_float_ok1415) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1416) {
     // -4029752635971971865116672
@@ -11426,6 +12842,7 @@ START_TEST(test_from_decimal_to_float_ok1416) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1417) {
     // 10678844485325725442559180.80
@@ -11434,6 +12851,7 @@ START_TEST(test_from_decimal_to_float_ok1417) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1418) {
     // -10678844485325725442559180.80
@@ -11442,6 +12860,7 @@ START_TEST(test_from_decimal_to_float_ok1418) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1419) {
     // 2417851639229258349412352
@@ -11450,6 +12869,7 @@ START_TEST(test_from_decimal_to_float_ok1419) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1420) {
     // -2417851639229258349412352
@@ -11458,6 +12878,7 @@ START_TEST(test_from_decimal_to_float_ok1420) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1421) {
     // 6407306843957534625942732.80
@@ -11466,6 +12887,7 @@ START_TEST(test_from_decimal_to_float_ok1421) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1422) {
     // -6407306843957534625942732.80
@@ -11474,6 +12896,7 @@ START_TEST(test_from_decimal_to_float_ok1422) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1423) {
     // 2417851495114070273556480.0000
@@ -11482,6 +12905,7 @@ START_TEST(test_from_decimal_to_float_ok1423) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1424) {
     // -2417851495114070273556480.0000
@@ -11490,6 +12914,7 @@ START_TEST(test_from_decimal_to_float_ok1424) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1425) {
     // 6407306462052286224924672.0000
@@ -11498,6 +12923,7 @@ START_TEST(test_from_decimal_to_float_ok1425) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1426) {
     // -6407306462052286224924672.0000
@@ -11506,6 +12932,7 @@ START_TEST(test_from_decimal_to_float_ok1426) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1427) {
     // 2417851495114070273556480
@@ -11514,6 +12941,7 @@ START_TEST(test_from_decimal_to_float_ok1427) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1428) {
     // -2417851495114070273556480
@@ -11522,6 +12950,7 @@ START_TEST(test_from_decimal_to_float_ok1428) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1429) {
     // 6407306462052286224924672.00
@@ -11530,6 +12959,7 @@ START_TEST(test_from_decimal_to_float_ok1429) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1430) {
     // -6407306462052286224924672.00
@@ -11538,6 +12968,7 @@ START_TEST(test_from_decimal_to_float_ok1430) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1431) {
     // 2417851350998882197700608.0000
@@ -11546,6 +12977,7 @@ START_TEST(test_from_decimal_to_float_ok1431) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1432) {
     // -2417851350998882197700608.0000
@@ -11554,6 +12986,7 @@ START_TEST(test_from_decimal_to_float_ok1432) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1433) {
     // 6407306080147037823906611.2000
@@ -11562,6 +12995,7 @@ START_TEST(test_from_decimal_to_float_ok1433) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1434) {
     // -6407306080147037823906611.2000
@@ -11570,6 +13004,7 @@ START_TEST(test_from_decimal_to_float_ok1434) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1435) {
     // 2417851350998882197700608
@@ -11578,6 +13013,7 @@ START_TEST(test_from_decimal_to_float_ok1435) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1436) {
     // -2417851350998882197700608
@@ -11586,6 +13022,7 @@ START_TEST(test_from_decimal_to_float_ok1436) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1437) {
     // 6407306080147037823906611.20
@@ -11594,6 +13031,7 @@ START_TEST(test_from_decimal_to_float_ok1437) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1438) {
     // -6407306080147037823906611.20
@@ -11602,6 +13040,7 @@ START_TEST(test_from_decimal_to_float_ok1438) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1439) {
     // 3223801993485427031408640.0000
@@ -11610,6 +13049,7 @@ START_TEST(test_from_decimal_to_float_ok1439) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1440) {
     // -3223801993485427031408640.0000
@@ -11618,6 +13058,7 @@ START_TEST(test_from_decimal_to_float_ok1440) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1441) {
     // 8543075282736381633232896.000
@@ -11626,6 +13067,7 @@ START_TEST(test_from_decimal_to_float_ok1441) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1442) {
     // -8543075282736381633232896.000
@@ -11634,6 +13076,7 @@ START_TEST(test_from_decimal_to_float_ok1442) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1443) {
     // 3223801993485427031408640
@@ -11642,6 +13085,7 @@ START_TEST(test_from_decimal_to_float_ok1443) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1444) {
     // -3223801993485427031408640
@@ -11650,6 +13094,7 @@ START_TEST(test_from_decimal_to_float_ok1444) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1445) {
     // 8543075282736381633232896.00
@@ -11658,6 +13103,7 @@ START_TEST(test_from_decimal_to_float_ok1445) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1446) {
     // -8543075282736381633232896.00
@@ -11666,6 +13112,7 @@ START_TEST(test_from_decimal_to_float_ok1446) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1447) {
     // 2014876317985985932558336.0000
@@ -11674,6 +13121,7 @@ START_TEST(test_from_decimal_to_float_ok1447) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1448) {
     // -2014876317985985932558336.0000
@@ -11682,6 +13130,7 @@ START_TEST(test_from_decimal_to_float_ok1448) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1449) {
     // 5339422242662862721279590.4000
@@ -11690,6 +13139,7 @@ START_TEST(test_from_decimal_to_float_ok1449) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1450) {
     // -5339422242662862721279590.4000
@@ -11698,6 +13148,7 @@ START_TEST(test_from_decimal_to_float_ok1450) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1451) {
     // 2014876317985985932558336
@@ -11706,6 +13157,7 @@ START_TEST(test_from_decimal_to_float_ok1451) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1452) {
     // -2014876317985985932558336
@@ -11714,6 +13166,7 @@ START_TEST(test_from_decimal_to_float_ok1452) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1453) {
     // 5339422242662862721279590.40
@@ -11722,6 +13175,7 @@ START_TEST(test_from_decimal_to_float_ok1453) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1454) {
     // -5339422242662862721279590.40
@@ -11730,6 +13184,7 @@ START_TEST(test_from_decimal_to_float_ok1454) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1455) {
     // 1611900996742713515704320.0000
@@ -11738,6 +13193,7 @@ START_TEST(test_from_decimal_to_float_ok1455) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1456) {
     // -1611900996742713515704320.0000
@@ -11746,6 +13202,7 @@ START_TEST(test_from_decimal_to_float_ok1456) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1457) {
     // 4271537641368190816616448.0000
@@ -11754,6 +13211,7 @@ START_TEST(test_from_decimal_to_float_ok1457) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1458) {
     // -4271537641368190816616448.0000
@@ -11762,6 +13220,7 @@ START_TEST(test_from_decimal_to_float_ok1458) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1459) {
     // 1611900996742713515704320
@@ -11770,6 +13229,7 @@ START_TEST(test_from_decimal_to_float_ok1459) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1460) {
     // -1611900996742713515704320
@@ -11778,6 +13238,7 @@ START_TEST(test_from_decimal_to_float_ok1460) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1461) {
     // 4271537641368190816616448.00
@@ -11786,6 +13247,7 @@ START_TEST(test_from_decimal_to_float_ok1461) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1462) {
     // -4271537641368190816616448.00
@@ -11794,6 +13256,7 @@ START_TEST(test_from_decimal_to_float_ok1462) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1463) {
     // 9444732965739290427392
@@ -11802,6 +13265,7 @@ START_TEST(test_from_decimal_to_float_ok1463) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1464) {
     // -9444732965739290427392
@@ -11810,6 +13274,7 @@ START_TEST(test_from_decimal_to_float_ok1464) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1465) {
     // 25028542359209119632588.80
@@ -11818,6 +13283,7 @@ START_TEST(test_from_decimal_to_float_ok1465) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1466) {
     // -25028542359209119632588.80
@@ -11826,6 +13292,7 @@ START_TEST(test_from_decimal_to_float_ok1466) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1467) {
     // 9444732402789337006080.000000
@@ -11834,6 +13301,7 @@ START_TEST(test_from_decimal_to_float_ok1467) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1468) {
     // -9444732402789337006080.000000
@@ -11842,6 +13310,7 @@ START_TEST(test_from_decimal_to_float_ok1468) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1469) {
     // 25028540867391743066112.000000
@@ -11850,6 +13319,7 @@ START_TEST(test_from_decimal_to_float_ok1469) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1470) {
     // -25028540867391743066112.000000
@@ -11858,6 +13328,7 @@ START_TEST(test_from_decimal_to_float_ok1470) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1471) {
     // 9444732402789337006080
@@ -11866,6 +13337,7 @@ START_TEST(test_from_decimal_to_float_ok1471) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1472) {
     // -9444732402789337006080
@@ -11874,6 +13346,7 @@ START_TEST(test_from_decimal_to_float_ok1472) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1473) {
     // 25028540867391743066112.00
@@ -11882,6 +13355,7 @@ START_TEST(test_from_decimal_to_float_ok1473) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1474) {
     // -25028540867391743066112.00
@@ -11890,6 +13364,7 @@ START_TEST(test_from_decimal_to_float_ok1474) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1475) {
     // 9444731839839383584768.000000
@@ -11898,6 +13373,7 @@ START_TEST(test_from_decimal_to_float_ok1475) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1476) {
     // -9444731839839383584768.000000
@@ -11906,6 +13382,7 @@ START_TEST(test_from_decimal_to_float_ok1476) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1477) {
     // 25028539375574366499635.200000
@@ -11914,6 +13391,7 @@ START_TEST(test_from_decimal_to_float_ok1477) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1478) {
     // -25028539375574366499635.200000
@@ -11922,6 +13400,7 @@ START_TEST(test_from_decimal_to_float_ok1478) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1479) {
     // 9444731839839383584768
@@ -11930,6 +13409,7 @@ START_TEST(test_from_decimal_to_float_ok1479) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1480) {
     // -9444731839839383584768
@@ -11938,6 +13418,7 @@ START_TEST(test_from_decimal_to_float_ok1480) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1481) {
     // 25028539375574366499635.20
@@ -11946,6 +13427,7 @@ START_TEST(test_from_decimal_to_float_ok1481) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1482) {
     // -25028539375574366499635.20
@@ -11954,6 +13436,7 @@ START_TEST(test_from_decimal_to_float_ok1482) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1483) {
     // 7870610617132757549056.0000000
@@ -11962,6 +13445,7 @@ START_TEST(test_from_decimal_to_float_ok1483) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1484) {
     // -7870610617132757549056.0000000
@@ -11970,6 +13454,7 @@ START_TEST(test_from_decimal_to_float_ok1484) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1485) {
     // 20857118135401807504998.400000
@@ -11978,6 +13463,7 @@ START_TEST(test_from_decimal_to_float_ok1485) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1486) {
     // -20857118135401807504998.400000
@@ -11986,6 +13472,7 @@ START_TEST(test_from_decimal_to_float_ok1486) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1487) {
     // 7870610617132757549056
@@ -11994,6 +13481,7 @@ START_TEST(test_from_decimal_to_float_ok1487) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1488) {
     // -7870610617132757549056
@@ -12002,6 +13490,7 @@ START_TEST(test_from_decimal_to_float_ok1488) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1489) {
     // 20857118135401807504998.40
@@ -12010,6 +13499,7 @@ START_TEST(test_from_decimal_to_float_ok1489) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1490) {
     // -20857118135401807504998.40
@@ -12018,6 +13508,7 @@ START_TEST(test_from_decimal_to_float_ok1490) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1491) {
     // 6296488268526224670720.0000000
@@ -12026,6 +13517,7 @@ START_TEST(test_from_decimal_to_float_ok1491) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1492) {
     // -6296488268526224670720.0000000
@@ -12034,6 +13526,7 @@ START_TEST(test_from_decimal_to_float_ok1492) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1493) {
     // 16685693911594495377408.000000
@@ -12042,6 +13535,7 @@ START_TEST(test_from_decimal_to_float_ok1493) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1494) {
     // -16685693911594495377408.000000
@@ -12050,6 +13544,7 @@ START_TEST(test_from_decimal_to_float_ok1494) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1495) {
     // 6296488268526224670720
@@ -12058,6 +13553,7 @@ START_TEST(test_from_decimal_to_float_ok1495) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1496) {
     // -6296488268526224670720
@@ -12066,6 +13562,7 @@ START_TEST(test_from_decimal_to_float_ok1496) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1497) {
     // 16685693911594495377408.00
@@ -12074,6 +13571,7 @@ START_TEST(test_from_decimal_to_float_ok1497) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1498) {
     // -16685693911594495377408.00
@@ -12082,6 +13580,7 @@ START_TEST(test_from_decimal_to_float_ok1498) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1499) {
     // 590295810358705651712
@@ -12090,6 +13589,7 @@ START_TEST(test_from_decimal_to_float_ok1499) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1500) {
     // -590295810358705651712
@@ -12098,6 +13598,7 @@ START_TEST(test_from_decimal_to_float_ok1500) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1501) {
     // 1564283897450569977036.80
@@ -12106,6 +13607,7 @@ START_TEST(test_from_decimal_to_float_ok1501) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1502) {
     // -1564283897450569977036.80
@@ -12114,6 +13616,7 @@ START_TEST(test_from_decimal_to_float_ok1502) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1503) {
     // 590295775174333562880.00000000
@@ -12122,6 +13625,7 @@ START_TEST(test_from_decimal_to_float_ok1503) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1504) {
     // -590295775174333562880.00000000
@@ -12130,6 +13634,7 @@ START_TEST(test_from_decimal_to_float_ok1504) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1505) {
     // 1564283804211983941632.0000000
@@ -12138,6 +13643,7 @@ START_TEST(test_from_decimal_to_float_ok1505) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1506) {
     // -1564283804211983941632.0000000
@@ -12146,6 +13652,7 @@ START_TEST(test_from_decimal_to_float_ok1506) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1507) {
     // 590295775174333562880
@@ -12154,6 +13661,7 @@ START_TEST(test_from_decimal_to_float_ok1507) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1508) {
     // -590295775174333562880
@@ -12162,6 +13670,7 @@ START_TEST(test_from_decimal_to_float_ok1508) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1509) {
     // 1564283804211983941632.00
@@ -12170,6 +13679,7 @@ START_TEST(test_from_decimal_to_float_ok1509) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1510) {
     // -1564283804211983941632.00
@@ -12178,6 +13688,7 @@ START_TEST(test_from_decimal_to_float_ok1510) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1511) {
     // 590295739989961474048.00000000
@@ -12186,6 +13697,7 @@ START_TEST(test_from_decimal_to_float_ok1511) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1512) {
     // -590295739989961474048.00000000
@@ -12194,6 +13706,7 @@ START_TEST(test_from_decimal_to_float_ok1512) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1513) {
     // 1564283710973397906227.2000000
@@ -12202,6 +13715,7 @@ START_TEST(test_from_decimal_to_float_ok1513) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1514) {
     // -1564283710973397906227.2000000
@@ -12210,6 +13724,7 @@ START_TEST(test_from_decimal_to_float_ok1514) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1515) {
     // 590295739989961474048
@@ -12218,6 +13733,7 @@ START_TEST(test_from_decimal_to_float_ok1515) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1516) {
     // -590295739989961474048
@@ -12226,6 +13742,7 @@ START_TEST(test_from_decimal_to_float_ok1516) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1517) {
     // 1564283710973397906227.20
@@ -12234,6 +13751,7 @@ START_TEST(test_from_decimal_to_float_ok1517) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1518) {
     // -1564283710973397906227.20
@@ -12242,6 +13760,7 @@ START_TEST(test_from_decimal_to_float_ok1518) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1519) {
     // 491913163570797346816.00000000
@@ -12250,6 +13769,7 @@ START_TEST(test_from_decimal_to_float_ok1519) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1520) {
     // -491913163570797346816.00000000
@@ -12258,6 +13778,7 @@ START_TEST(test_from_decimal_to_float_ok1520) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1521) {
     // 1303569883462612969062.4000000
@@ -12266,6 +13787,7 @@ START_TEST(test_from_decimal_to_float_ok1521) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1522) {
     // -1303569883462612969062.4000000
@@ -12274,6 +13796,7 @@ START_TEST(test_from_decimal_to_float_ok1522) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1523) {
     // 491913163570797346816
@@ -12282,6 +13805,7 @@ START_TEST(test_from_decimal_to_float_ok1523) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1524) {
     // -491913163570797346816
@@ -12290,6 +13814,7 @@ START_TEST(test_from_decimal_to_float_ok1524) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1525) {
     // 1303569883462612969062.40
@@ -12298,6 +13823,7 @@ START_TEST(test_from_decimal_to_float_ok1525) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1526) {
     // -1303569883462612969062.40
@@ -12306,6 +13832,7 @@ START_TEST(test_from_decimal_to_float_ok1526) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1527) {
     // 393530516782889041920.00000000
@@ -12314,6 +13841,7 @@ START_TEST(test_from_decimal_to_float_ok1527) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1528) {
     // -393530516782889041920.00000000
@@ -12322,6 +13850,7 @@ START_TEST(test_from_decimal_to_float_ok1528) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1529) {
     // 1042855869474655961088.0000000
@@ -12330,6 +13859,7 @@ START_TEST(test_from_decimal_to_float_ok1529) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1530) {
     // -1042855869474655961088.0000000
@@ -12338,6 +13868,7 @@ START_TEST(test_from_decimal_to_float_ok1530) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1531) {
     // 393530516782889041920
@@ -12346,6 +13877,7 @@ START_TEST(test_from_decimal_to_float_ok1531) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1532) {
     // -393530516782889041920
@@ -12354,6 +13886,7 @@ START_TEST(test_from_decimal_to_float_ok1532) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1533) {
     // 1042855869474655961088.00
@@ -12362,6 +13895,7 @@ START_TEST(test_from_decimal_to_float_ok1533) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1534) {
     // -1042855869474655961088.00
@@ -12370,6 +13904,7 @@ START_TEST(test_from_decimal_to_float_ok1534) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1535) {
     // 147573952589676412928
@@ -12378,6 +13913,7 @@ START_TEST(test_from_decimal_to_float_ok1535) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1536) {
     // -147573952589676412928
@@ -12386,6 +13922,7 @@ START_TEST(test_from_decimal_to_float_ok1536) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1537) {
     // 391070974362642494259.20
@@ -12394,6 +13931,7 @@ START_TEST(test_from_decimal_to_float_ok1537) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1538) {
     // -391070974362642494259.20
@@ -12402,6 +13940,7 @@ START_TEST(test_from_decimal_to_float_ok1538) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1539) {
     // 147573943793583390720.00000000
@@ -12410,6 +13949,7 @@ START_TEST(test_from_decimal_to_float_ok1539) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1540) {
     // -147573943793583390720.00000000
@@ -12418,6 +13958,7 @@ START_TEST(test_from_decimal_to_float_ok1540) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1541) {
     // 391070951052995985408.00000000
@@ -12426,6 +13967,7 @@ START_TEST(test_from_decimal_to_float_ok1541) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1542) {
     // -391070951052995985408.00000000
@@ -12434,6 +13976,7 @@ START_TEST(test_from_decimal_to_float_ok1542) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1543) {
     // 147573943793583390720
@@ -12442,6 +13985,7 @@ START_TEST(test_from_decimal_to_float_ok1543) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1544) {
     // -147573943793583390720
@@ -12450,6 +13994,7 @@ START_TEST(test_from_decimal_to_float_ok1544) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1545) {
     // 391070951052995985408.00
@@ -12458,6 +14003,7 @@ START_TEST(test_from_decimal_to_float_ok1545) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1546) {
     // -391070951052995985408.00
@@ -12466,6 +14012,7 @@ START_TEST(test_from_decimal_to_float_ok1546) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1547) {
     // 147573934997490368512.00000000
@@ -12474,6 +14021,7 @@ START_TEST(test_from_decimal_to_float_ok1547) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1548) {
     // -147573934997490368512.00000000
@@ -12482,6 +14030,7 @@ START_TEST(test_from_decimal_to_float_ok1548) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1549) {
     // 391070927743349476556.80000000
@@ -12490,6 +14039,7 @@ START_TEST(test_from_decimal_to_float_ok1549) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1550) {
     // -391070927743349476556.80000000
@@ -12498,6 +14048,7 @@ START_TEST(test_from_decimal_to_float_ok1550) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1551) {
     // 147573934997490368512
@@ -12506,6 +14057,7 @@ START_TEST(test_from_decimal_to_float_ok1551) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1552) {
     // -147573934997490368512
@@ -12514,6 +14066,7 @@ START_TEST(test_from_decimal_to_float_ok1552) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1553) {
     // 391070927743349476556.80
@@ -12522,6 +14075,7 @@ START_TEST(test_from_decimal_to_float_ok1553) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1554) {
     // -391070927743349476556.80
@@ -12530,6 +14084,7 @@ START_TEST(test_from_decimal_to_float_ok1554) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1555) {
     // 122978290892699336704.00000000
@@ -12538,6 +14093,7 @@ START_TEST(test_from_decimal_to_float_ok1555) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1556) {
     // -122978290892699336704.00000000
@@ -12546,6 +14102,7 @@ START_TEST(test_from_decimal_to_float_ok1556) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1557) {
     // 325892470865653242265.60000000
@@ -12554,6 +14111,7 @@ START_TEST(test_from_decimal_to_float_ok1557) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1558) {
     // -325892470865653242265.60000000
@@ -12562,6 +14120,7 @@ START_TEST(test_from_decimal_to_float_ok1558) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1559) {
     // 122978290892699336704
@@ -12570,6 +14129,7 @@ START_TEST(test_from_decimal_to_float_ok1559) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1560) {
     // -122978290892699336704
@@ -12578,6 +14138,7 @@ START_TEST(test_from_decimal_to_float_ok1560) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1561) {
     // 325892470865653242265.60
@@ -12586,6 +14147,7 @@ START_TEST(test_from_decimal_to_float_ok1561) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1562) {
     // -325892470865653242265.60
@@ -12594,6 +14156,7 @@ START_TEST(test_from_decimal_to_float_ok1562) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1563) {
     // 98382629195722260480.00000000
@@ -12602,6 +14165,7 @@ START_TEST(test_from_decimal_to_float_ok1563) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1564) {
     // -98382629195722260480.00000000
@@ -12610,6 +14174,7 @@ START_TEST(test_from_decimal_to_float_ok1564) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1565) {
     // 260713967368663990272.00000000
@@ -12618,6 +14183,7 @@ START_TEST(test_from_decimal_to_float_ok1565) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1566) {
     // -260713967368663990272.00000000
@@ -12626,6 +14192,7 @@ START_TEST(test_from_decimal_to_float_ok1566) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1567) {
     // 98382629195722260480
@@ -12634,6 +14201,7 @@ START_TEST(test_from_decimal_to_float_ok1567) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1568) {
     // -98382629195722260480
@@ -12642,6 +14210,7 @@ START_TEST(test_from_decimal_to_float_ok1568) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1569) {
     // 260713967368663990272.00
@@ -12650,6 +14219,7 @@ START_TEST(test_from_decimal_to_float_ok1569) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1570) {
     // -260713967368663990272.00
@@ -12658,6 +14228,7 @@ START_TEST(test_from_decimal_to_float_ok1570) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1571) {
     // 61489145446349668352.000000000
@@ -12666,6 +14237,7 @@ START_TEST(test_from_decimal_to_float_ok1571) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1572) {
     // -61489145446349668352.000000000
@@ -12674,6 +14246,7 @@ START_TEST(test_from_decimal_to_float_ok1572) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1573) {
     // 162946235432826621132.80000000
@@ -12682,6 +14255,7 @@ START_TEST(test_from_decimal_to_float_ok1573) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1574) {
     // -162946235432826621132.80000000
@@ -12690,6 +14264,7 @@ START_TEST(test_from_decimal_to_float_ok1574) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1575) {
     // 61489145446349668352
@@ -12698,6 +14273,7 @@ START_TEST(test_from_decimal_to_float_ok1575) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1576) {
     // -61489145446349668352
@@ -12706,6 +14282,7 @@ START_TEST(test_from_decimal_to_float_ok1576) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1577) {
     // 162946235432826621132.80
@@ -12714,6 +14291,7 @@ START_TEST(test_from_decimal_to_float_ok1577) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1578) {
     // -162946235432826621132.80
@@ -12722,6 +14300,7 @@ START_TEST(test_from_decimal_to_float_ok1578) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1579) {
     // 36893488147419103232
@@ -12730,6 +14309,7 @@ START_TEST(test_from_decimal_to_float_ok1579) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1580) {
     // -36893488147419103232
@@ -12738,6 +14318,7 @@ START_TEST(test_from_decimal_to_float_ok1580) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1581) {
     // 97767743590660623564.80
@@ -12746,6 +14327,7 @@ START_TEST(test_from_decimal_to_float_ok1581) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1582) {
     // -97767743590660623564.80
@@ -12754,6 +14336,7 @@ START_TEST(test_from_decimal_to_float_ok1582) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1583) {
     // 36893485948395847680.000000000
@@ -12762,6 +14345,7 @@ START_TEST(test_from_decimal_to_float_ok1583) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1584) {
     // -36893485948395847680.000000000
@@ -12770,6 +14354,7 @@ START_TEST(test_from_decimal_to_float_ok1584) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1585) {
     // 97767737763248996352.00000000
@@ -12778,6 +14363,7 @@ START_TEST(test_from_decimal_to_float_ok1585) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1586) {
     // -97767737763248996352.00000000
@@ -12786,6 +14372,7 @@ START_TEST(test_from_decimal_to_float_ok1586) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1587) {
     // 36893485948395847680
@@ -12794,6 +14381,7 @@ START_TEST(test_from_decimal_to_float_ok1587) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1588) {
     // -36893485948395847680
@@ -12802,6 +14390,7 @@ START_TEST(test_from_decimal_to_float_ok1588) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1589) {
     // 97767737763248996352.00
@@ -12810,6 +14399,7 @@ START_TEST(test_from_decimal_to_float_ok1589) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1590) {
     // -97767737763248996352.00
@@ -12818,6 +14408,7 @@ START_TEST(test_from_decimal_to_float_ok1590) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1591) {
     // 36893483749372592128.000000000
@@ -12826,6 +14417,7 @@ START_TEST(test_from_decimal_to_float_ok1591) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1592) {
     // -36893483749372592128.000000000
@@ -12834,6 +14426,7 @@ START_TEST(test_from_decimal_to_float_ok1592) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1593) {
     // 97767731935837369139.20000000
@@ -12842,6 +14435,7 @@ START_TEST(test_from_decimal_to_float_ok1593) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1594) {
     // -97767731935837369139.20000000
@@ -12850,6 +14444,7 @@ START_TEST(test_from_decimal_to_float_ok1594) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1595) {
     // 36893483749372592128
@@ -12858,6 +14453,7 @@ START_TEST(test_from_decimal_to_float_ok1595) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1596) {
     // -36893483749372592128
@@ -12866,6 +14462,7 @@ START_TEST(test_from_decimal_to_float_ok1596) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1597) {
     // 97767731935837369139.20
@@ -12874,6 +14471,7 @@ START_TEST(test_from_decimal_to_float_ok1597) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1598) {
     // -97767731935837369139.20
@@ -12882,6 +14480,7 @@ START_TEST(test_from_decimal_to_float_ok1598) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1599) {
     // 30744572723174834176.000000000
@@ -12890,6 +14489,7 @@ START_TEST(test_from_decimal_to_float_ok1599) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1600) {
     // -30744572723174834176.000000000
@@ -12898,6 +14498,7 @@ START_TEST(test_from_decimal_to_float_ok1600) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1601) {
     // 81473117716413310566.40000000
@@ -12906,6 +14507,7 @@ START_TEST(test_from_decimal_to_float_ok1601) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1602) {
     // -81473117716413310566.40000000
@@ -12914,6 +14516,7 @@ START_TEST(test_from_decimal_to_float_ok1602) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1603) {
     // 30744572723174834176
@@ -12922,6 +14525,7 @@ START_TEST(test_from_decimal_to_float_ok1603) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1604) {
     // -30744572723174834176
@@ -12930,6 +14534,7 @@ START_TEST(test_from_decimal_to_float_ok1604) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1605) {
     // 81473117716413310566.40
@@ -12938,6 +14543,7 @@ START_TEST(test_from_decimal_to_float_ok1605) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1606) {
     // -81473117716413310566.40
@@ -12946,6 +14552,7 @@ START_TEST(test_from_decimal_to_float_ok1606) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1607) {
     // 27670116110564327424.0
@@ -12954,6 +14561,7 @@ START_TEST(test_from_decimal_to_float_ok1607) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1608) {
     // -27670116110564327424.0
@@ -12962,6 +14570,7 @@ START_TEST(test_from_decimal_to_float_ok1608) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1609) {
     // 73325807692995467673.600
@@ -12970,6 +14579,7 @@ START_TEST(test_from_decimal_to_float_ok1609) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1610) {
     // -73325807692995467673.600
@@ -12978,6 +14588,7 @@ START_TEST(test_from_decimal_to_float_ok1610) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1611) {
     // 27670116110564327424
@@ -12986,6 +14597,7 @@ START_TEST(test_from_decimal_to_float_ok1611) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1612) {
     // -27670116110564327424
@@ -12994,6 +14606,7 @@ START_TEST(test_from_decimal_to_float_ok1612) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1613) {
     // 73325807692995467673.60
@@ -13002,6 +14615,7 @@ START_TEST(test_from_decimal_to_float_ok1613) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1614) {
     // -73325807692995467673.60
@@ -13010,6 +14624,7 @@ START_TEST(test_from_decimal_to_float_ok1614) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1615) {
     // 24595657298930565120.000000000
@@ -13018,6 +14633,7 @@ START_TEST(test_from_decimal_to_float_ok1615) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1616) {
     // -24595657298930565120.000000000
@@ -13026,6 +14642,7 @@ START_TEST(test_from_decimal_to_float_ok1616) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1617) {
     // 65178491842165997568.000000000
@@ -13034,6 +14651,7 @@ START_TEST(test_from_decimal_to_float_ok1617) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1618) {
     // -65178491842165997568.000000000
@@ -13042,6 +14660,7 @@ START_TEST(test_from_decimal_to_float_ok1618) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1619) {
     // 24595657298930565120
@@ -13050,6 +14669,7 @@ START_TEST(test_from_decimal_to_float_ok1619) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1620) {
     // -24595657298930565120
@@ -13058,6 +14678,7 @@ START_TEST(test_from_decimal_to_float_ok1620) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1621) {
     // 65178491842165997568.00
@@ -13066,6 +14687,7 @@ START_TEST(test_from_decimal_to_float_ok1621) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1622) {
     // -65178491842165997568.00
@@ -13074,6 +14696,7 @@ START_TEST(test_from_decimal_to_float_ok1622) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1623) {
     // 8589934592
@@ -13082,6 +14705,7 @@ START_TEST(test_from_decimal_to_float_ok1623) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1624) {
     // -8589934592
@@ -13090,6 +14714,7 @@ START_TEST(test_from_decimal_to_float_ok1624) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1625) {
     // 22763326668.80
@@ -13098,6 +14723,7 @@ START_TEST(test_from_decimal_to_float_ok1625) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1626) {
     // -22763326668.80
@@ -13106,6 +14732,7 @@ START_TEST(test_from_decimal_to_float_ok1626) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1627) {
     // 8589934080.000000000000000000
@@ -13114,6 +14741,7 @@ START_TEST(test_from_decimal_to_float_ok1627) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1628) {
     // -8589934080.000000000000000000
@@ -13122,6 +14750,7 @@ START_TEST(test_from_decimal_to_float_ok1628) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1629) {
     // 22763325312.000000000000000000
@@ -13130,6 +14759,7 @@ START_TEST(test_from_decimal_to_float_ok1629) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1630) {
     // -22763325312.000000000000000000
@@ -13138,6 +14768,7 @@ START_TEST(test_from_decimal_to_float_ok1630) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1631) {
     // 8589934080
@@ -13146,6 +14777,7 @@ START_TEST(test_from_decimal_to_float_ok1631) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1632) {
     // -8589934080
@@ -13154,6 +14786,7 @@ START_TEST(test_from_decimal_to_float_ok1632) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1633) {
     // 22763325312.00
@@ -13162,6 +14795,7 @@ START_TEST(test_from_decimal_to_float_ok1633) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1634) {
     // -22763325312.00
@@ -13170,6 +14804,7 @@ START_TEST(test_from_decimal_to_float_ok1634) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1635) {
     // 8589933568.000000000000000000
@@ -13178,6 +14813,7 @@ START_TEST(test_from_decimal_to_float_ok1635) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1636) {
     // -8589933568.000000000000000000
@@ -13186,6 +14822,7 @@ START_TEST(test_from_decimal_to_float_ok1636) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1637) {
     // 22763323955.200000000000000000
@@ -13194,6 +14831,7 @@ START_TEST(test_from_decimal_to_float_ok1637) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1638) {
     // -22763323955.200000000000000000
@@ -13202,6 +14840,7 @@ START_TEST(test_from_decimal_to_float_ok1638) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1639) {
     // 8589933568
@@ -13210,6 +14849,7 @@ START_TEST(test_from_decimal_to_float_ok1639) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1640) {
     // -8589933568
@@ -13218,6 +14858,7 @@ START_TEST(test_from_decimal_to_float_ok1640) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1641) {
     // 22763323955.20
@@ -13226,6 +14867,7 @@ START_TEST(test_from_decimal_to_float_ok1641) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1642) {
     // -22763323955.20
@@ -13234,6 +14876,7 @@ START_TEST(test_from_decimal_to_float_ok1642) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1643) {
     // 7158278656.0000000000000000000
@@ -13242,6 +14885,7 @@ START_TEST(test_from_decimal_to_float_ok1643) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1644) {
     // -7158278656.0000000000000000000
@@ -13250,6 +14894,7 @@ START_TEST(test_from_decimal_to_float_ok1644) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1645) {
     // 18969438438.400000000000000000
@@ -13258,6 +14903,7 @@ START_TEST(test_from_decimal_to_float_ok1645) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1646) {
     // -18969438438.400000000000000000
@@ -13266,6 +14912,7 @@ START_TEST(test_from_decimal_to_float_ok1646) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1647) {
     // 7158278656
@@ -13274,6 +14921,7 @@ START_TEST(test_from_decimal_to_float_ok1647) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1648) {
     // -7158278656
@@ -13282,6 +14930,7 @@ START_TEST(test_from_decimal_to_float_ok1648) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1649) {
     // 18969438438.40
@@ -13290,6 +14939,7 @@ START_TEST(test_from_decimal_to_float_ok1649) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1650) {
     // -18969438438.40
@@ -13298,6 +14948,7 @@ START_TEST(test_from_decimal_to_float_ok1650) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1651) {
     // 6442450944.0
@@ -13306,6 +14957,7 @@ START_TEST(test_from_decimal_to_float_ok1651) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1652) {
     // -6442450944.0
@@ -13314,6 +14966,7 @@ START_TEST(test_from_decimal_to_float_ok1652) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1653) {
     // 17072495001.600
@@ -13322,6 +14975,7 @@ START_TEST(test_from_decimal_to_float_ok1653) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1654) {
     // -17072495001.600
@@ -13330,6 +14984,7 @@ START_TEST(test_from_decimal_to_float_ok1654) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1655) {
     // 6442450944
@@ -13338,6 +14993,7 @@ START_TEST(test_from_decimal_to_float_ok1655) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1656) {
     // -6442450944
@@ -13346,6 +15002,7 @@ START_TEST(test_from_decimal_to_float_ok1656) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1657) {
     // 17072495001.60
@@ -13354,6 +15011,7 @@ START_TEST(test_from_decimal_to_float_ok1657) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1658) {
     // -17072495001.60
@@ -13362,6 +15020,7 @@ START_TEST(test_from_decimal_to_float_ok1658) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1659) {
     // 5726622720.0000000000000000000
@@ -13370,6 +15029,7 @@ START_TEST(test_from_decimal_to_float_ok1659) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1660) {
     // -5726622720.0000000000000000000
@@ -13378,6 +15038,7 @@ START_TEST(test_from_decimal_to_float_ok1660) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1661) {
     // 15175550208.000000000000000000
@@ -13386,6 +15047,7 @@ START_TEST(test_from_decimal_to_float_ok1661) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1662) {
     // -15175550208.000000000000000000
@@ -13394,6 +15056,7 @@ START_TEST(test_from_decimal_to_float_ok1662) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1663) {
     // 5726622720
@@ -13402,6 +15065,7 @@ START_TEST(test_from_decimal_to_float_ok1663) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1664) {
     // -5726622720
@@ -13410,6 +15074,7 @@ START_TEST(test_from_decimal_to_float_ok1664) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1665) {
     // 15175550208.00
@@ -13418,6 +15083,7 @@ START_TEST(test_from_decimal_to_float_ok1665) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1666) {
     // -15175550208.00
@@ -13426,6 +15092,7 @@ START_TEST(test_from_decimal_to_float_ok1666) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1667) {
     // 5131067.5000000000000000000000
@@ -13434,6 +15101,7 @@ START_TEST(test_from_decimal_to_float_ok1667) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1668) {
     // -5131067.5000000000000000000000
@@ -13442,6 +15110,7 @@ START_TEST(test_from_decimal_to_float_ok1668) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1669) {
     // 13597328.875000000000000000000
@@ -13450,6 +15119,7 @@ START_TEST(test_from_decimal_to_float_ok1669) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1670) {
     // -13597328.875000000000000000000
@@ -13458,6 +15128,7 @@ START_TEST(test_from_decimal_to_float_ok1670) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1671) {
     // 5131067.5
@@ -13466,6 +15137,7 @@ START_TEST(test_from_decimal_to_float_ok1671) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1672) {
     // -5131067.5
@@ -13474,6 +15146,7 @@ START_TEST(test_from_decimal_to_float_ok1672) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1673) {
     // 13597328.875
@@ -13482,6 +15155,7 @@ START_TEST(test_from_decimal_to_float_ok1673) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1674) {
     // -13597328.875
@@ -13490,6 +15164,7 @@ START_TEST(test_from_decimal_to_float_ok1674) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1675) {
     // 5131067.0000000000000000000000
@@ -13498,6 +15173,7 @@ START_TEST(test_from_decimal_to_float_ok1675) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1676) {
     // -5131067.0000000000000000000000
@@ -13506,6 +15182,7 @@ START_TEST(test_from_decimal_to_float_ok1676) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1677) {
     // 13597327.550000000000000000000
@@ -13514,6 +15191,7 @@ START_TEST(test_from_decimal_to_float_ok1677) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1678) {
     // -13597327.550000000000000000000
@@ -13522,6 +15200,7 @@ START_TEST(test_from_decimal_to_float_ok1678) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1679) {
     // 5131067
@@ -13530,6 +15209,7 @@ START_TEST(test_from_decimal_to_float_ok1679) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1680) {
     // -5131067
@@ -13538,6 +15218,7 @@ START_TEST(test_from_decimal_to_float_ok1680) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1681) {
     // 13597327.55
@@ -13546,6 +15227,7 @@ START_TEST(test_from_decimal_to_float_ok1681) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1682) {
     // -13597327.55
@@ -13554,6 +15236,7 @@ START_TEST(test_from_decimal_to_float_ok1682) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1683) {
     // 5131066.5000000000000000000000
@@ -13562,6 +15245,7 @@ START_TEST(test_from_decimal_to_float_ok1683) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1684) {
     // -5131066.5000000000000000000000
@@ -13570,6 +15254,7 @@ START_TEST(test_from_decimal_to_float_ok1684) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1685) {
     // 13597326.225000000000000000000
@@ -13578,6 +15263,7 @@ START_TEST(test_from_decimal_to_float_ok1685) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1686) {
     // -13597326.225000000000000000000
@@ -13586,6 +15272,7 @@ START_TEST(test_from_decimal_to_float_ok1686) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1687) {
     // 5131066.5
@@ -13594,6 +15281,7 @@ START_TEST(test_from_decimal_to_float_ok1687) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1688) {
     // -5131066.5
@@ -13602,6 +15290,7 @@ START_TEST(test_from_decimal_to_float_ok1688) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1689) {
     // 13597326.225
@@ -13610,6 +15299,7 @@ START_TEST(test_from_decimal_to_float_ok1689) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1690) {
     // -13597326.225
@@ -13618,6 +15308,7 @@ START_TEST(test_from_decimal_to_float_ok1690) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1691) {
     // 1131071.1250000000000000000000
@@ -13626,6 +15317,7 @@ START_TEST(test_from_decimal_to_float_ok1691) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1692) {
     // -1131071.1250000000000000000000
@@ -13634,6 +15326,7 @@ START_TEST(test_from_decimal_to_float_ok1692) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1693) {
     // 2997338.4812500000000000000000
@@ -13642,6 +15335,7 @@ START_TEST(test_from_decimal_to_float_ok1693) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1694) {
     // -2997338.4812500000000000000000
@@ -13650,6 +15344,7 @@ START_TEST(test_from_decimal_to_float_ok1694) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1695) {
     // 1131071.125
@@ -13658,6 +15353,7 @@ START_TEST(test_from_decimal_to_float_ok1695) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1696) {
     // -1131071.125
@@ -13666,6 +15362,7 @@ START_TEST(test_from_decimal_to_float_ok1696) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1697) {
     // 2997338.48125
@@ -13674,6 +15371,7 @@ START_TEST(test_from_decimal_to_float_ok1697) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1698) {
     // -2997338.48125
@@ -13682,6 +15380,7 @@ START_TEST(test_from_decimal_to_float_ok1698) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1699) {
     // 1131071.00000000000000000000
@@ -13690,6 +15389,7 @@ START_TEST(test_from_decimal_to_float_ok1699) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1700) {
     // -1131071.00000000000000000000
@@ -13698,6 +15398,7 @@ START_TEST(test_from_decimal_to_float_ok1700) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1701) {
     // 2997338.1500000000000000000000
@@ -13706,6 +15407,7 @@ START_TEST(test_from_decimal_to_float_ok1701) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1702) {
     // -2997338.1500000000000000000000
@@ -13714,6 +15416,7 @@ START_TEST(test_from_decimal_to_float_ok1702) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1703) {
     // 1131071
@@ -13722,6 +15425,7 @@ START_TEST(test_from_decimal_to_float_ok1703) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1704) {
     // -1131071
@@ -13730,6 +15434,7 @@ START_TEST(test_from_decimal_to_float_ok1704) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1705) {
     // 2997338.15
@@ -13738,6 +15443,7 @@ START_TEST(test_from_decimal_to_float_ok1705) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1706) {
     // -2997338.15
@@ -13746,6 +15452,7 @@ START_TEST(test_from_decimal_to_float_ok1706) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1707) {
     // 1131070.8750000000000000000000
@@ -13754,6 +15461,7 @@ START_TEST(test_from_decimal_to_float_ok1707) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1708) {
     // -1131070.8750000000000000000000
@@ -13762,6 +15470,7 @@ START_TEST(test_from_decimal_to_float_ok1708) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1709) {
     // 2997337.8187500000000000000000
@@ -13770,6 +15479,7 @@ START_TEST(test_from_decimal_to_float_ok1709) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1710) {
     // -2997337.8187500000000000000000
@@ -13778,6 +15488,7 @@ START_TEST(test_from_decimal_to_float_ok1710) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1711) {
     // 1131070.875
@@ -13786,6 +15497,7 @@ START_TEST(test_from_decimal_to_float_ok1711) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1712) {
     // -1131070.875
@@ -13794,6 +15506,7 @@ START_TEST(test_from_decimal_to_float_ok1712) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1713) {
     // 2997337.81875
@@ -13802,6 +15515,7 @@ START_TEST(test_from_decimal_to_float_ok1713) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1714) {
     // -2997337.81875
@@ -13810,6 +15524,7 @@ START_TEST(test_from_decimal_to_float_ok1714) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1715) {
     // 131071.99218750000000000000000
@@ -13818,6 +15533,7 @@ START_TEST(test_from_decimal_to_float_ok1715) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1716) {
     // -131071.99218750000000000000000
@@ -13826,6 +15542,7 @@ START_TEST(test_from_decimal_to_float_ok1716) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1717) {
     // 347340.77929687500000000000000
@@ -13834,6 +15551,7 @@ START_TEST(test_from_decimal_to_float_ok1717) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1718) {
     // -347340.77929687500000000000000
@@ -13842,6 +15560,7 @@ START_TEST(test_from_decimal_to_float_ok1718) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1719) {
     // 131071.9921875
@@ -13850,6 +15569,7 @@ START_TEST(test_from_decimal_to_float_ok1719) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1720) {
     // -131071.9921875
@@ -13858,6 +15578,7 @@ START_TEST(test_from_decimal_to_float_ok1720) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1721) {
     // 347340.779296875
@@ -13866,6 +15587,7 @@ START_TEST(test_from_decimal_to_float_ok1721) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1722) {
     // -347340.779296875
@@ -13874,6 +15596,7 @@ START_TEST(test_from_decimal_to_float_ok1722) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1723) {
     // 131071.00781250000000000000000
@@ -13882,6 +15605,7 @@ START_TEST(test_from_decimal_to_float_ok1723) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1724) {
     // -131071.00781250000000000000000
@@ -13890,6 +15614,7 @@ START_TEST(test_from_decimal_to_float_ok1724) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1725) {
     // 347338.17070312500000000000000
@@ -13898,6 +15623,7 @@ START_TEST(test_from_decimal_to_float_ok1725) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1726) {
     // -347338.17070312500000000000000
@@ -13906,6 +15632,7 @@ START_TEST(test_from_decimal_to_float_ok1726) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1727) {
     // 131071.0078125
@@ -13914,6 +15641,7 @@ START_TEST(test_from_decimal_to_float_ok1727) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1728) {
     // -131071.0078125
@@ -13922,6 +15650,7 @@ START_TEST(test_from_decimal_to_float_ok1728) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1729) {
     // 347338.170703125
@@ -13930,6 +15659,7 @@ START_TEST(test_from_decimal_to_float_ok1729) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1730) {
     // -347338.170703125
@@ -13938,6 +15668,7 @@ START_TEST(test_from_decimal_to_float_ok1730) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1731) {
     // 131071.0000000000000000
@@ -13946,6 +15677,7 @@ START_TEST(test_from_decimal_to_float_ok1731) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1732) {
     // -131071.0000000000000000
@@ -13954,6 +15686,7 @@ START_TEST(test_from_decimal_to_float_ok1732) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1733) {
     // 347338.150000000000000000
@@ -13962,6 +15695,7 @@ START_TEST(test_from_decimal_to_float_ok1733) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1734) {
     // -347338.150000000000000000
@@ -13970,6 +15704,7 @@ START_TEST(test_from_decimal_to_float_ok1734) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1735) {
     // 131071
@@ -13978,6 +15713,7 @@ START_TEST(test_from_decimal_to_float_ok1735) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1736) {
     // -131071
@@ -13986,6 +15722,7 @@ START_TEST(test_from_decimal_to_float_ok1736) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1737) {
     // 347338.15
@@ -13994,6 +15731,7 @@ START_TEST(test_from_decimal_to_float_ok1737) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1738) {
     // -347338.15
@@ -14002,6 +15740,7 @@ START_TEST(test_from_decimal_to_float_ok1738) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1739) {
     // 131070.99218750000000000000000
@@ -14010,6 +15749,7 @@ START_TEST(test_from_decimal_to_float_ok1739) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1740) {
     // -131070.99218750000000000000000
@@ -14018,6 +15758,7 @@ START_TEST(test_from_decimal_to_float_ok1740) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1741) {
     // 347338.12929687500000000000000
@@ -14026,6 +15767,7 @@ START_TEST(test_from_decimal_to_float_ok1741) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1742) {
     // -347338.12929687500000000000000
@@ -14034,6 +15776,7 @@ START_TEST(test_from_decimal_to_float_ok1742) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1743) {
     // 131070.9921875
@@ -14042,6 +15785,7 @@ START_TEST(test_from_decimal_to_float_ok1743) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1744) {
     // -131070.9921875
@@ -14050,6 +15794,7 @@ START_TEST(test_from_decimal_to_float_ok1744) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1745) {
     // 347338.129296875
@@ -14058,6 +15803,7 @@ START_TEST(test_from_decimal_to_float_ok1745) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1746) {
     // -347338.129296875
@@ -14066,6 +15812,7 @@ START_TEST(test_from_decimal_to_float_ok1746) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1747) {
     // 109226.66406250000000000000000
@@ -14074,6 +15821,7 @@ START_TEST(test_from_decimal_to_float_ok1747) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1748) {
     // -109226.66406250000000000000000
@@ -14082,6 +15830,7 @@ START_TEST(test_from_decimal_to_float_ok1748) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1749) {
     // 289450.65976562500000000000000
@@ -14090,6 +15839,7 @@ START_TEST(test_from_decimal_to_float_ok1749) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1750) {
     // -289450.65976562500000000000000
@@ -14098,6 +15848,7 @@ START_TEST(test_from_decimal_to_float_ok1750) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1751) {
     // 109226.6640625
@@ -14106,6 +15857,7 @@ START_TEST(test_from_decimal_to_float_ok1751) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1752) {
     // -109226.6640625
@@ -14114,6 +15866,7 @@ START_TEST(test_from_decimal_to_float_ok1752) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1753) {
     // 289450.659765625
@@ -14122,6 +15875,7 @@ START_TEST(test_from_decimal_to_float_ok1753) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1754) {
     // -289450.659765625
@@ -14130,6 +15884,7 @@ START_TEST(test_from_decimal_to_float_ok1754) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1755) {
     // 98304.00781250000000000000000
@@ -14138,6 +15893,7 @@ START_TEST(test_from_decimal_to_float_ok1755) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1756) {
     // -98304.00781250000000000000000
@@ -14146,6 +15902,7 @@ START_TEST(test_from_decimal_to_float_ok1756) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1757) {
     // 260505.62070312500000000000000
@@ -14154,6 +15911,7 @@ START_TEST(test_from_decimal_to_float_ok1757) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1758) {
     // -260505.62070312500000000000000
@@ -14162,6 +15920,7 @@ START_TEST(test_from_decimal_to_float_ok1758) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1759) {
     // 98304.0078125
@@ -14170,6 +15929,7 @@ START_TEST(test_from_decimal_to_float_ok1759) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1760) {
     // -98304.0078125
@@ -14178,6 +15938,7 @@ START_TEST(test_from_decimal_to_float_ok1760) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1761) {
     // 260505.620703125
@@ -14186,6 +15947,7 @@ START_TEST(test_from_decimal_to_float_ok1761) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1762) {
     // -260505.620703125
@@ -14194,6 +15956,7 @@ START_TEST(test_from_decimal_to_float_ok1762) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1763) {
     // 98304.0
@@ -14202,6 +15965,7 @@ START_TEST(test_from_decimal_to_float_ok1763) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1764) {
     // -98304.0
@@ -14210,6 +15974,7 @@ START_TEST(test_from_decimal_to_float_ok1764) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1765) {
     // 260505.600
@@ -14218,6 +15983,7 @@ START_TEST(test_from_decimal_to_float_ok1765) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1766) {
     // -260505.600
@@ -14226,6 +15992,7 @@ START_TEST(test_from_decimal_to_float_ok1766) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1767) {
     // 98304
@@ -14234,6 +16001,7 @@ START_TEST(test_from_decimal_to_float_ok1767) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1768) {
     // -98304
@@ -14242,6 +16010,7 @@ START_TEST(test_from_decimal_to_float_ok1768) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1769) {
     // 260505.60
@@ -14250,6 +16019,7 @@ START_TEST(test_from_decimal_to_float_ok1769) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1770) {
     // -260505.60
@@ -14258,6 +16028,7 @@ START_TEST(test_from_decimal_to_float_ok1770) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1771) {
     // 98303.99218750000000000000000
@@ -14266,6 +16037,7 @@ START_TEST(test_from_decimal_to_float_ok1771) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1772) {
     // -98303.99218750000000000000000
@@ -14274,6 +16046,7 @@ START_TEST(test_from_decimal_to_float_ok1772) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1773) {
     // 260505.57929687500000000000000
@@ -14282,6 +16055,7 @@ START_TEST(test_from_decimal_to_float_ok1773) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1774) {
     // -260505.57929687500000000000000
@@ -14290,6 +16064,7 @@ START_TEST(test_from_decimal_to_float_ok1774) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1775) {
     // 98303.9921875
@@ -14298,6 +16073,7 @@ START_TEST(test_from_decimal_to_float_ok1775) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1776) {
     // -98303.9921875
@@ -14306,6 +16082,7 @@ START_TEST(test_from_decimal_to_float_ok1776) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1777) {
     // 260505.579296875
@@ -14314,6 +16091,7 @@ START_TEST(test_from_decimal_to_float_ok1777) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1778) {
     // -260505.579296875
@@ -14322,6 +16100,7 @@ START_TEST(test_from_decimal_to_float_ok1778) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1779) {
     // 87381.3281250000000000000000
@@ -14330,6 +16109,7 @@ START_TEST(test_from_decimal_to_float_ok1779) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1780) {
     // -87381.3281250000000000000000
@@ -14338,6 +16118,7 @@ START_TEST(test_from_decimal_to_float_ok1780) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1781) {
     // 231560.51953125000000000000000
@@ -14346,6 +16127,7 @@ START_TEST(test_from_decimal_to_float_ok1781) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1782) {
     // -231560.51953125000000000000000
@@ -14354,6 +16136,7 @@ START_TEST(test_from_decimal_to_float_ok1782) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1783) {
     // 87381.00781250000000000000000
@@ -14362,6 +16145,7 @@ START_TEST(test_from_decimal_to_float_ok1783) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1784) {
     // -87381.00781250000000000000000
@@ -14370,6 +16154,7 @@ START_TEST(test_from_decimal_to_float_ok1784) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1785) {
     // 231559.67070312500000000000000
@@ -14378,6 +16163,7 @@ START_TEST(test_from_decimal_to_float_ok1785) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1786) {
     // -231559.67070312500000000000000
@@ -14386,6 +16172,7 @@ START_TEST(test_from_decimal_to_float_ok1786) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1787) {
     // 87381.0078125
@@ -14394,6 +16181,7 @@ START_TEST(test_from_decimal_to_float_ok1787) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1788) {
     // -87381.0078125
@@ -14402,6 +16190,7 @@ START_TEST(test_from_decimal_to_float_ok1788) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1789) {
     // 231559.670703125
@@ -14410,6 +16199,7 @@ START_TEST(test_from_decimal_to_float_ok1789) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1790) {
     // -231559.670703125
@@ -14418,6 +16208,7 @@ START_TEST(test_from_decimal_to_float_ok1790) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1791) {
     // 87381.0000000000000000
@@ -14426,6 +16217,7 @@ START_TEST(test_from_decimal_to_float_ok1791) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1792) {
     // -87381.0000000000000000
@@ -14434,6 +16226,7 @@ START_TEST(test_from_decimal_to_float_ok1792) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1793) {
     // 231559.650000000000000000
@@ -14442,6 +16235,7 @@ START_TEST(test_from_decimal_to_float_ok1793) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1794) {
     // -231559.650000000000000000
@@ -14450,6 +16244,7 @@ START_TEST(test_from_decimal_to_float_ok1794) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1795) {
     // 87381
@@ -14458,6 +16253,7 @@ START_TEST(test_from_decimal_to_float_ok1795) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1796) {
     // -87381
@@ -14466,6 +16262,7 @@ START_TEST(test_from_decimal_to_float_ok1796) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1797) {
     // 231559.65
@@ -14474,6 +16271,7 @@ START_TEST(test_from_decimal_to_float_ok1797) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1798) {
     // -231559.65
@@ -14482,6 +16280,7 @@ START_TEST(test_from_decimal_to_float_ok1798) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1799) {
     // 87380.99218750000000000000000
@@ -14490,6 +16289,7 @@ START_TEST(test_from_decimal_to_float_ok1799) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1800) {
     // -87380.99218750000000000000000
@@ -14498,6 +16298,7 @@ START_TEST(test_from_decimal_to_float_ok1800) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1801) {
     // 231559.62929687500000000000000
@@ -14506,6 +16307,7 @@ START_TEST(test_from_decimal_to_float_ok1801) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1802) {
     // -231559.62929687500000000000000
@@ -14514,6 +16316,7 @@ START_TEST(test_from_decimal_to_float_ok1802) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1803) {
     // 87380.9921875
@@ -14522,6 +16325,7 @@ START_TEST(test_from_decimal_to_float_ok1803) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1804) {
     // -87380.9921875
@@ -14530,6 +16334,7 @@ START_TEST(test_from_decimal_to_float_ok1804) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1805) {
     // 231559.629296875
@@ -14538,6 +16343,7 @@ START_TEST(test_from_decimal_to_float_ok1805) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1806) {
     // -231559.629296875
@@ -14546,6 +16352,7 @@ START_TEST(test_from_decimal_to_float_ok1806) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1807) {
     // 50000.00390625000000000000000
@@ -14554,6 +16361,7 @@ START_TEST(test_from_decimal_to_float_ok1807) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1808) {
     // -50000.00390625000000000000000
@@ -14562,6 +16370,7 @@ START_TEST(test_from_decimal_to_float_ok1808) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1809) {
     // 132500.01035156250000000000000
@@ -14570,6 +16379,7 @@ START_TEST(test_from_decimal_to_float_ok1809) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1810) {
     // -132500.01035156250000000000000
@@ -14578,6 +16388,7 @@ START_TEST(test_from_decimal_to_float_ok1810) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1811) {
     // 50000.00390625
@@ -14586,6 +16397,7 @@ START_TEST(test_from_decimal_to_float_ok1811) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1812) {
     // -50000.00390625
@@ -14594,6 +16406,7 @@ START_TEST(test_from_decimal_to_float_ok1812) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1813) {
     // 132500.0103515625
@@ -14602,6 +16415,7 @@ START_TEST(test_from_decimal_to_float_ok1813) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1814) {
     // -132500.0103515625
@@ -14610,6 +16424,7 @@ START_TEST(test_from_decimal_to_float_ok1814) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1815) {
     // 50000.00000000000
@@ -14618,6 +16433,7 @@ START_TEST(test_from_decimal_to_float_ok1815) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1816) {
     // -50000.00000000000
@@ -14626,6 +16442,7 @@ START_TEST(test_from_decimal_to_float_ok1816) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1817) {
     // 132500.0000000000000
@@ -14634,6 +16451,7 @@ START_TEST(test_from_decimal_to_float_ok1817) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1818) {
     // -132500.0000000000000
@@ -14642,6 +16460,7 @@ START_TEST(test_from_decimal_to_float_ok1818) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1819) {
     // 50000
@@ -14650,6 +16469,7 @@ START_TEST(test_from_decimal_to_float_ok1819) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1820) {
     // -50000
@@ -14658,6 +16478,7 @@ START_TEST(test_from_decimal_to_float_ok1820) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1821) {
     // 132500.00
@@ -14666,6 +16487,7 @@ START_TEST(test_from_decimal_to_float_ok1821) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1822) {
     // -132500.00
@@ -14674,6 +16496,7 @@ START_TEST(test_from_decimal_to_float_ok1822) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1823) {
     // 49999.99609375000000000000000
@@ -14682,6 +16505,7 @@ START_TEST(test_from_decimal_to_float_ok1823) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1824) {
     // -49999.99609375000000000000000
@@ -14690,6 +16514,7 @@ START_TEST(test_from_decimal_to_float_ok1824) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1825) {
     // 132499.98964843750000000000000
@@ -14698,6 +16523,7 @@ START_TEST(test_from_decimal_to_float_ok1825) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1826) {
     // -132499.98964843750000000000000
@@ -14706,6 +16532,7 @@ START_TEST(test_from_decimal_to_float_ok1826) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1827) {
     // 49999.99609375
@@ -14714,6 +16541,7 @@ START_TEST(test_from_decimal_to_float_ok1827) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1828) {
     // -49999.99609375
@@ -14722,6 +16550,7 @@ START_TEST(test_from_decimal_to_float_ok1828) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1829) {
     // 132499.9896484375
@@ -14730,6 +16559,7 @@ START_TEST(test_from_decimal_to_float_ok1829) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1830) {
     // -132499.9896484375
@@ -14738,6 +16568,7 @@ START_TEST(test_from_decimal_to_float_ok1830) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1831) {
     // 32000.00195312500000000000000
@@ -14746,6 +16577,7 @@ START_TEST(test_from_decimal_to_float_ok1831) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1832) {
     // -32000.00195312500000000000000
@@ -14754,6 +16586,7 @@ START_TEST(test_from_decimal_to_float_ok1832) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1833) {
     // 84800.00517578125000000000000
@@ -14762,6 +16595,7 @@ START_TEST(test_from_decimal_to_float_ok1833) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1834) {
     // -84800.00517578125000000000000
@@ -14770,6 +16604,7 @@ START_TEST(test_from_decimal_to_float_ok1834) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1835) {
     // 32000.001953125
@@ -14778,6 +16613,7 @@ START_TEST(test_from_decimal_to_float_ok1835) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1836) {
     // -32000.001953125
@@ -14786,6 +16622,7 @@ START_TEST(test_from_decimal_to_float_ok1836) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1837) {
     // 84800.00517578125
@@ -14794,6 +16631,7 @@ START_TEST(test_from_decimal_to_float_ok1837) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1838) {
     // -84800.00517578125
@@ -14802,6 +16640,7 @@ START_TEST(test_from_decimal_to_float_ok1838) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1839) {
     // 32000.000000
@@ -14810,6 +16649,7 @@ START_TEST(test_from_decimal_to_float_ok1839) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1840) {
     // -32000.000000
@@ -14818,6 +16658,7 @@ START_TEST(test_from_decimal_to_float_ok1840) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1841) {
     // 84800.00000000
@@ -14826,6 +16667,7 @@ START_TEST(test_from_decimal_to_float_ok1841) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1842) {
     // -84800.00000000
@@ -14834,6 +16676,7 @@ START_TEST(test_from_decimal_to_float_ok1842) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1843) {
     // 32000
@@ -14842,6 +16685,7 @@ START_TEST(test_from_decimal_to_float_ok1843) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1844) {
     // -32000
@@ -14850,6 +16694,7 @@ START_TEST(test_from_decimal_to_float_ok1844) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1845) {
     // 84800.00
@@ -14858,6 +16703,7 @@ START_TEST(test_from_decimal_to_float_ok1845) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1846) {
     // -84800.00
@@ -14866,6 +16712,7 @@ START_TEST(test_from_decimal_to_float_ok1846) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1847) {
     // 31999.99804687500000000000000
@@ -14874,6 +16721,7 @@ START_TEST(test_from_decimal_to_float_ok1847) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1848) {
     // -31999.99804687500000000000000
@@ -14882,6 +16730,7 @@ START_TEST(test_from_decimal_to_float_ok1848) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1849) {
     // 84799.99482421875000000000000
@@ -14890,6 +16739,7 @@ START_TEST(test_from_decimal_to_float_ok1849) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1850) {
     // -84799.99482421875000000000000
@@ -14898,6 +16748,7 @@ START_TEST(test_from_decimal_to_float_ok1850) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1851) {
     // 31999.998046875
@@ -14906,6 +16757,7 @@ START_TEST(test_from_decimal_to_float_ok1851) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1852) {
     // -31999.998046875
@@ -14914,6 +16766,7 @@ START_TEST(test_from_decimal_to_float_ok1852) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1853) {
     // 84799.99482421875
@@ -14922,6 +16775,7 @@ START_TEST(test_from_decimal_to_float_ok1853) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1854) {
     // -84799.99482421875
@@ -14930,6 +16784,7 @@ START_TEST(test_from_decimal_to_float_ok1854) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1855) {
     // 1024.00012207031250000000000
@@ -14938,6 +16793,7 @@ START_TEST(test_from_decimal_to_float_ok1855) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1856) {
     // -1024.00012207031250000000000
@@ -14946,6 +16802,7 @@ START_TEST(test_from_decimal_to_float_ok1856) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1857) {
     // 2713.6003234863281250000000000
@@ -14954,6 +16811,7 @@ START_TEST(test_from_decimal_to_float_ok1857) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1858) {
     // -2713.6003234863281250000000000
@@ -14962,6 +16820,7 @@ START_TEST(test_from_decimal_to_float_ok1858) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1859) {
     // 1024.0001220703125
@@ -14970,6 +16829,7 @@ START_TEST(test_from_decimal_to_float_ok1859) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1860) {
     // -1024.0001220703125
@@ -14978,6 +16838,7 @@ START_TEST(test_from_decimal_to_float_ok1860) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1861) {
     // 2713.600323486328125
@@ -14986,6 +16847,7 @@ START_TEST(test_from_decimal_to_float_ok1861) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1862) {
     // -2713.600323486328125
@@ -14994,6 +16856,7 @@ START_TEST(test_from_decimal_to_float_ok1862) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1863) {
     // 1024
@@ -15002,6 +16865,7 @@ START_TEST(test_from_decimal_to_float_ok1863) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1864) {
     // -1024
@@ -15010,6 +16874,7 @@ START_TEST(test_from_decimal_to_float_ok1864) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1865) {
     // 2713.60
@@ -15018,6 +16883,7 @@ START_TEST(test_from_decimal_to_float_ok1865) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1866) {
     // -2713.60
@@ -15026,6 +16892,7 @@ START_TEST(test_from_decimal_to_float_ok1866) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1867) {
     // 1023.99993896484375000000000
@@ -15034,6 +16901,7 @@ START_TEST(test_from_decimal_to_float_ok1867) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1868) {
     // -1023.99993896484375000000000
@@ -15042,6 +16910,7 @@ START_TEST(test_from_decimal_to_float_ok1868) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1869) {
     // 2713.5998382568359375000000000
@@ -15050,6 +16919,7 @@ START_TEST(test_from_decimal_to_float_ok1869) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1870) {
     // -2713.5998382568359375000000000
@@ -15058,6 +16928,7 @@ START_TEST(test_from_decimal_to_float_ok1870) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1871) {
     // 1023.99993896484375
@@ -15066,6 +16937,7 @@ START_TEST(test_from_decimal_to_float_ok1871) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1872) {
     // -1023.99993896484375
@@ -15074,6 +16946,7 @@ START_TEST(test_from_decimal_to_float_ok1872) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1873) {
     // 2713.5998382568359375
@@ -15082,6 +16955,7 @@ START_TEST(test_from_decimal_to_float_ok1873) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1874) {
     // -2713.5998382568359375
@@ -15090,6 +16964,7 @@ START_TEST(test_from_decimal_to_float_ok1874) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1875) {
     // 512.00006103515625000000000
@@ -15098,6 +16973,7 @@ START_TEST(test_from_decimal_to_float_ok1875) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1876) {
     // -512.00006103515625000000000
@@ -15106,6 +16982,7 @@ START_TEST(test_from_decimal_to_float_ok1876) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1877) {
     // 1356.8001617431640625000000000
@@ -15114,6 +16991,7 @@ START_TEST(test_from_decimal_to_float_ok1877) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1878) {
     // -1356.8001617431640625000000000
@@ -15122,6 +17000,7 @@ START_TEST(test_from_decimal_to_float_ok1878) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1879) {
     // 512.00006103515625
@@ -15130,6 +17009,7 @@ START_TEST(test_from_decimal_to_float_ok1879) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1880) {
     // -512.00006103515625
@@ -15138,6 +17018,7 @@ START_TEST(test_from_decimal_to_float_ok1880) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1881) {
     // 1356.8001617431640625
@@ -15146,6 +17027,7 @@ START_TEST(test_from_decimal_to_float_ok1881) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1882) {
     // -1356.8001617431640625
@@ -15154,6 +17036,7 @@ START_TEST(test_from_decimal_to_float_ok1882) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1883) {
     // 512
@@ -15162,6 +17045,7 @@ START_TEST(test_from_decimal_to_float_ok1883) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1884) {
     // -512
@@ -15170,6 +17054,7 @@ START_TEST(test_from_decimal_to_float_ok1884) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1885) {
     // 1356.80
@@ -15178,6 +17063,7 @@ START_TEST(test_from_decimal_to_float_ok1885) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1886) {
     // -1356.80
@@ -15186,6 +17072,7 @@ START_TEST(test_from_decimal_to_float_ok1886) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1887) {
     // 511.99996948242187500000000
@@ -15194,6 +17081,7 @@ START_TEST(test_from_decimal_to_float_ok1887) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1888) {
     // -511.99996948242187500000000
@@ -15202,6 +17090,7 @@ START_TEST(test_from_decimal_to_float_ok1888) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1889) {
     // 1356.7999191284179687500000000
@@ -15210,6 +17099,7 @@ START_TEST(test_from_decimal_to_float_ok1889) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1890) {
     // -1356.7999191284179687500000000
@@ -15218,6 +17108,7 @@ START_TEST(test_from_decimal_to_float_ok1890) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1891) {
     // 511.999969482421875
@@ -15226,6 +17117,7 @@ START_TEST(test_from_decimal_to_float_ok1891) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1892) {
     // -511.999969482421875
@@ -15234,6 +17126,7 @@ START_TEST(test_from_decimal_to_float_ok1892) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1893) {
     // 1356.79991912841796875
@@ -15242,6 +17135,7 @@ START_TEST(test_from_decimal_to_float_ok1893) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1894) {
     // -1356.79991912841796875
@@ -15250,6 +17144,7 @@ START_TEST(test_from_decimal_to_float_ok1894) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1895) {
     // 511.9999389648437500000000
@@ -15258,6 +17153,7 @@ START_TEST(test_from_decimal_to_float_ok1895) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1896) {
     // -511.9999389648437500000000
@@ -15266,6 +17162,7 @@ START_TEST(test_from_decimal_to_float_ok1896) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1897) {
     // 1356.799838256835937500000000
@@ -15274,6 +17171,7 @@ START_TEST(test_from_decimal_to_float_ok1897) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1898) {
     // -1356.799838256835937500000000
@@ -15282,6 +17180,7 @@ START_TEST(test_from_decimal_to_float_ok1898) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1899) {
     // 511.99993896484375
@@ -15290,6 +17189,7 @@ START_TEST(test_from_decimal_to_float_ok1899) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1900) {
     // -511.99993896484375
@@ -15298,6 +17198,7 @@ START_TEST(test_from_decimal_to_float_ok1900) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1901) {
     // 1356.7998382568359375
@@ -15306,6 +17207,7 @@ START_TEST(test_from_decimal_to_float_ok1901) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1902) {
     // -1356.7998382568359375
@@ -15314,6 +17216,7 @@ START_TEST(test_from_decimal_to_float_ok1902) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1903) {
     // 426.66665649414062500000000
@@ -15322,6 +17225,7 @@ START_TEST(test_from_decimal_to_float_ok1903) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1904) {
     // -426.66665649414062500000000
@@ -15330,6 +17234,7 @@ START_TEST(test_from_decimal_to_float_ok1904) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1905) {
     // 1130.6666397094726562500000000
@@ -15338,6 +17243,7 @@ START_TEST(test_from_decimal_to_float_ok1905) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1906) {
     // -1130.6666397094726562500000000
@@ -15346,6 +17252,7 @@ START_TEST(test_from_decimal_to_float_ok1906) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1907) {
     // 426.666656494140625
@@ -15354,6 +17261,7 @@ START_TEST(test_from_decimal_to_float_ok1907) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1908) {
     // -426.666656494140625
@@ -15362,6 +17270,7 @@ START_TEST(test_from_decimal_to_float_ok1908) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1909) {
     // 1130.66663970947265625
@@ -15370,6 +17279,7 @@ START_TEST(test_from_decimal_to_float_ok1909) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1910) {
     // -1130.66663970947265625
@@ -15378,6 +17288,7 @@ START_TEST(test_from_decimal_to_float_ok1910) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1911) {
     // 384.0
@@ -15386,6 +17297,7 @@ START_TEST(test_from_decimal_to_float_ok1911) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1912) {
     // -384.0
@@ -15394,6 +17306,7 @@ START_TEST(test_from_decimal_to_float_ok1912) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1913) {
     // 1017.600
@@ -15402,6 +17315,7 @@ START_TEST(test_from_decimal_to_float_ok1913) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1914) {
     // -1017.600
@@ -15410,6 +17324,7 @@ START_TEST(test_from_decimal_to_float_ok1914) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1915) {
     // 384
@@ -15418,6 +17333,7 @@ START_TEST(test_from_decimal_to_float_ok1915) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1916) {
     // -384
@@ -15426,6 +17342,7 @@ START_TEST(test_from_decimal_to_float_ok1916) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1917) {
     // 1017.60
@@ -15434,6 +17351,7 @@ START_TEST(test_from_decimal_to_float_ok1917) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1918) {
     // -1017.60
@@ -15442,6 +17360,7 @@ START_TEST(test_from_decimal_to_float_ok1918) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1919) {
     // 341.3333129882812500000000
@@ -15450,6 +17369,7 @@ START_TEST(test_from_decimal_to_float_ok1919) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1920) {
     // -341.3333129882812500000000
@@ -15458,6 +17378,7 @@ START_TEST(test_from_decimal_to_float_ok1920) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1921) {
     // 904.533279418945312500000000
@@ -15466,6 +17387,7 @@ START_TEST(test_from_decimal_to_float_ok1921) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1922) {
     // -904.533279418945312500000000
@@ -15474,6 +17396,7 @@ START_TEST(test_from_decimal_to_float_ok1922) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1923) {
     // 341.33331298828125
@@ -15482,6 +17405,7 @@ START_TEST(test_from_decimal_to_float_ok1923) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1924) {
     // -341.33331298828125
@@ -15490,6 +17414,7 @@ START_TEST(test_from_decimal_to_float_ok1924) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1925) {
     // 904.5332794189453125
@@ -15498,6 +17423,7 @@ START_TEST(test_from_decimal_to_float_ok1925) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1926) {
     // -904.5332794189453125
@@ -15506,6 +17432,7 @@ START_TEST(test_from_decimal_to_float_ok1926) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1927) {
     // 64.00000762939453125000000
@@ -15514,6 +17441,7 @@ START_TEST(test_from_decimal_to_float_ok1927) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1928) {
     // -64.00000762939453125000000
@@ -15522,6 +17450,7 @@ START_TEST(test_from_decimal_to_float_ok1928) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1929) {
     // 169.6000202178955078125000000
@@ -15530,6 +17459,7 @@ START_TEST(test_from_decimal_to_float_ok1929) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1930) {
     // -169.6000202178955078125000000
@@ -15538,6 +17468,7 @@ START_TEST(test_from_decimal_to_float_ok1930) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1931) {
     // 64.00000762939453125
@@ -15546,6 +17477,7 @@ START_TEST(test_from_decimal_to_float_ok1931) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1932) {
     // -64.00000762939453125
@@ -15554,6 +17486,7 @@ START_TEST(test_from_decimal_to_float_ok1932) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1933) {
     // 169.6000202178955078125
@@ -15562,6 +17495,7 @@ START_TEST(test_from_decimal_to_float_ok1933) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1934) {
     // -169.6000202178955078125
@@ -15570,6 +17504,7 @@ START_TEST(test_from_decimal_to_float_ok1934) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1935) {
     // 64
@@ -15578,6 +17513,7 @@ START_TEST(test_from_decimal_to_float_ok1935) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1936) {
     // -64
@@ -15586,6 +17522,7 @@ START_TEST(test_from_decimal_to_float_ok1936) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1937) {
     // 169.60
@@ -15594,6 +17531,7 @@ START_TEST(test_from_decimal_to_float_ok1937) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1938) {
     // -169.60
@@ -15602,6 +17540,7 @@ START_TEST(test_from_decimal_to_float_ok1938) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1939) {
     // 63.99999618530273437500000
@@ -15610,6 +17549,7 @@ START_TEST(test_from_decimal_to_float_ok1939) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1940) {
     // -63.99999618530273437500000
@@ -15618,6 +17558,7 @@ START_TEST(test_from_decimal_to_float_ok1940) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1941) {
     // 169.5999898910522460937500000
@@ -15626,6 +17567,7 @@ START_TEST(test_from_decimal_to_float_ok1941) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1942) {
     // -169.5999898910522460937500000
@@ -15634,6 +17576,7 @@ START_TEST(test_from_decimal_to_float_ok1942) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1943) {
     // 63.999996185302734375
@@ -15642,6 +17585,7 @@ START_TEST(test_from_decimal_to_float_ok1943) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1944) {
     // -63.999996185302734375
@@ -15650,6 +17594,7 @@ START_TEST(test_from_decimal_to_float_ok1944) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1945) {
     // 169.59998989105224609375
@@ -15658,6 +17603,7 @@ START_TEST(test_from_decimal_to_float_ok1945) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1946) {
     // -169.59998989105224609375
@@ -15666,6 +17612,7 @@ START_TEST(test_from_decimal_to_float_ok1946) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1947) {
     // 32
@@ -15674,6 +17621,7 @@ START_TEST(test_from_decimal_to_float_ok1947) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1948) {
     // -32
@@ -15682,6 +17630,7 @@ START_TEST(test_from_decimal_to_float_ok1948) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1949) {
     // 84.80
@@ -15690,6 +17639,7 @@ START_TEST(test_from_decimal_to_float_ok1949) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1950) {
     // -84.80
@@ -15698,6 +17648,7 @@ START_TEST(test_from_decimal_to_float_ok1950) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1951) {
     // 31.99999809265136718750000
@@ -15706,6 +17657,7 @@ START_TEST(test_from_decimal_to_float_ok1951) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1952) {
     // -31.99999809265136718750000
@@ -15714,6 +17666,7 @@ START_TEST(test_from_decimal_to_float_ok1952) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1953) {
     // 84.7999949455261230468750000
@@ -15722,6 +17675,7 @@ START_TEST(test_from_decimal_to_float_ok1953) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1954) {
     // -84.7999949455261230468750000
@@ -15730,6 +17684,7 @@ START_TEST(test_from_decimal_to_float_ok1954) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1955) {
     // 31.9999980926513671875
@@ -15738,6 +17693,7 @@ START_TEST(test_from_decimal_to_float_ok1955) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1956) {
     // -31.9999980926513671875
@@ -15746,6 +17702,7 @@ START_TEST(test_from_decimal_to_float_ok1956) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1957) {
     // 84.799994945526123046875
@@ -15754,6 +17711,7 @@ START_TEST(test_from_decimal_to_float_ok1957) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1958) {
     // -84.799994945526123046875
@@ -15762,6 +17720,7 @@ START_TEST(test_from_decimal_to_float_ok1958) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1959) {
     // 31.9999961853027343750000
@@ -15770,6 +17729,7 @@ START_TEST(test_from_decimal_to_float_ok1959) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1960) {
     // -31.9999961853027343750000
@@ -15778,6 +17738,7 @@ START_TEST(test_from_decimal_to_float_ok1960) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1961) {
     // 84.799989891052246093750000
@@ -15786,6 +17747,7 @@ START_TEST(test_from_decimal_to_float_ok1961) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1962) {
     // -84.799989891052246093750000
@@ -15794,6 +17756,7 @@ START_TEST(test_from_decimal_to_float_ok1962) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1963) {
     // 31.999996185302734375
@@ -15802,6 +17765,7 @@ START_TEST(test_from_decimal_to_float_ok1963) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1964) {
     // -31.999996185302734375
@@ -15810,6 +17774,7 @@ START_TEST(test_from_decimal_to_float_ok1964) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1965) {
     // 84.79998989105224609375
@@ -15818,6 +17783,7 @@ START_TEST(test_from_decimal_to_float_ok1965) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1966) {
     // -84.79998989105224609375
@@ -15826,6 +17792,7 @@ START_TEST(test_from_decimal_to_float_ok1966) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1967) {
     // 26.66666603088378906250000
@@ -15834,6 +17801,7 @@ START_TEST(test_from_decimal_to_float_ok1967) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1968) {
     // -26.66666603088378906250000
@@ -15842,6 +17810,7 @@ START_TEST(test_from_decimal_to_float_ok1968) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1969) {
     // 70.6666649818420410156250000
@@ -15850,6 +17819,7 @@ START_TEST(test_from_decimal_to_float_ok1969) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1970) {
     // -70.6666649818420410156250000
@@ -15858,6 +17828,7 @@ START_TEST(test_from_decimal_to_float_ok1970) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1971) {
     // 26.6666660308837890625
@@ -15866,6 +17837,7 @@ START_TEST(test_from_decimal_to_float_ok1971) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1972) {
     // -26.6666660308837890625
@@ -15874,6 +17846,7 @@ START_TEST(test_from_decimal_to_float_ok1972) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1973) {
     // 70.666664981842041015625
@@ -15882,6 +17855,7 @@ START_TEST(test_from_decimal_to_float_ok1973) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1974) {
     // -70.666664981842041015625
@@ -15890,6 +17864,7 @@ START_TEST(test_from_decimal_to_float_ok1974) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1975) {
     // 24.0
@@ -15898,6 +17873,7 @@ START_TEST(test_from_decimal_to_float_ok1975) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1976) {
     // -24.0
@@ -15906,6 +17882,7 @@ START_TEST(test_from_decimal_to_float_ok1976) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1977) {
     // 63.600
@@ -15914,6 +17891,7 @@ START_TEST(test_from_decimal_to_float_ok1977) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1978) {
     // -63.600
@@ -15922,6 +17900,7 @@ START_TEST(test_from_decimal_to_float_ok1978) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1979) {
     // 24
@@ -15930,6 +17909,7 @@ START_TEST(test_from_decimal_to_float_ok1979) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1980) {
     // -24
@@ -15938,6 +17918,7 @@ START_TEST(test_from_decimal_to_float_ok1980) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1981) {
     // 63.60
@@ -15946,6 +17927,7 @@ START_TEST(test_from_decimal_to_float_ok1981) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1982) {
     // -63.60
@@ -15954,6 +17936,7 @@ START_TEST(test_from_decimal_to_float_ok1982) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1983) {
     // 21.3333320617675781250000
@@ -15962,6 +17945,7 @@ START_TEST(test_from_decimal_to_float_ok1983) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1984) {
     // -21.3333320617675781250000
@@ -15970,6 +17954,7 @@ START_TEST(test_from_decimal_to_float_ok1984) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1985) {
     // 56.533329963684082031250000
@@ -15978,6 +17963,7 @@ START_TEST(test_from_decimal_to_float_ok1985) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1986) {
     // -56.533329963684082031250000
@@ -15986,6 +17972,7 @@ START_TEST(test_from_decimal_to_float_ok1986) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1987) {
     // 21.333332061767578125
@@ -15994,6 +17981,7 @@ START_TEST(test_from_decimal_to_float_ok1987) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1988) {
     // -21.333332061767578125
@@ -16002,6 +17990,7 @@ START_TEST(test_from_decimal_to_float_ok1988) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1989) {
     // 56.53332996368408203125
@@ -16010,6 +17999,7 @@ START_TEST(test_from_decimal_to_float_ok1989) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1990) {
     // -56.53332996368408203125
@@ -16018,6 +18008,7 @@ START_TEST(test_from_decimal_to_float_ok1990) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1991) {
     // 16.00000190734863281250000
@@ -16026,6 +18017,7 @@ START_TEST(test_from_decimal_to_float_ok1991) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1992) {
     // -16.00000190734863281250000
@@ -16034,6 +18026,7 @@ START_TEST(test_from_decimal_to_float_ok1992) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1993) {
     // 42.4000050544738769531250000
@@ -16042,6 +18035,7 @@ START_TEST(test_from_decimal_to_float_ok1993) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1994) {
     // -42.4000050544738769531250000
@@ -16050,6 +18044,7 @@ START_TEST(test_from_decimal_to_float_ok1994) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1995) {
     // 16.0000019073486328125
@@ -16058,6 +18053,7 @@ START_TEST(test_from_decimal_to_float_ok1995) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1996) {
     // -16.0000019073486328125
@@ -16066,6 +18062,7 @@ START_TEST(test_from_decimal_to_float_ok1996) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1997) {
     // 42.400005054473876953125
@@ -16074,6 +18071,7 @@ START_TEST(test_from_decimal_to_float_ok1997) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1998) {
     // -42.400005054473876953125
@@ -16082,6 +18080,7 @@ START_TEST(test_from_decimal_to_float_ok1998) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok1999) {
     // 16
@@ -16090,6 +18089,7 @@ START_TEST(test_from_decimal_to_float_ok1999) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2000) {
     // -16
@@ -16098,6 +18098,7 @@ START_TEST(test_from_decimal_to_float_ok2000) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2001) {
     // 42.40
@@ -16106,6 +18107,7 @@ START_TEST(test_from_decimal_to_float_ok2001) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2002) {
     // -42.40
@@ -16114,6 +18116,7 @@ START_TEST(test_from_decimal_to_float_ok2002) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2003) {
     // 15.99999904632568359375000
@@ -16122,6 +18125,7 @@ START_TEST(test_from_decimal_to_float_ok2003) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2004) {
     // -15.99999904632568359375000
@@ -16130,6 +18134,7 @@ START_TEST(test_from_decimal_to_float_ok2004) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2005) {
     // 42.3999974727630615234375000
@@ -16138,6 +18143,7 @@ START_TEST(test_from_decimal_to_float_ok2005) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2006) {
     // -42.3999974727630615234375000
@@ -16146,6 +18152,7 @@ START_TEST(test_from_decimal_to_float_ok2006) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2007) {
     // 15.99999904632568359375
@@ -16154,6 +18161,7 @@ START_TEST(test_from_decimal_to_float_ok2007) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2008) {
     // -15.99999904632568359375
@@ -16162,6 +18170,7 @@ START_TEST(test_from_decimal_to_float_ok2008) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2009) {
     // 42.3999974727630615234375
@@ -16170,6 +18179,7 @@ START_TEST(test_from_decimal_to_float_ok2009) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2010) {
     // -42.3999974727630615234375
@@ -16178,6 +18188,7 @@ START_TEST(test_from_decimal_to_float_ok2010) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2011) {
     // 10.98035526275634765625000
@@ -16186,6 +18197,7 @@ START_TEST(test_from_decimal_to_float_ok2011) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2012) {
     // -10.98035526275634765625000
@@ -16194,6 +18206,7 @@ START_TEST(test_from_decimal_to_float_ok2012) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2013) {
     // 29.0979414463043212890625000
@@ -16202,6 +18215,7 @@ START_TEST(test_from_decimal_to_float_ok2013) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2014) {
     // -29.0979414463043212890625000
@@ -16210,6 +18224,7 @@ START_TEST(test_from_decimal_to_float_ok2014) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2015) {
     // 10.98035526275634765625
@@ -16218,6 +18233,7 @@ START_TEST(test_from_decimal_to_float_ok2015) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2016) {
     // -10.98035526275634765625
@@ -16226,6 +18242,7 @@ START_TEST(test_from_decimal_to_float_ok2016) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2017) {
     // 29.0979414463043212890625
@@ -16234,6 +18251,7 @@ START_TEST(test_from_decimal_to_float_ok2017) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2018) {
     // -29.0979414463043212890625
@@ -16242,6 +18260,7 @@ START_TEST(test_from_decimal_to_float_ok2018) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2019) {
     // 9.00000095367431640625000
@@ -16250,6 +18269,7 @@ START_TEST(test_from_decimal_to_float_ok2019) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2020) {
     // -9.00000095367431640625000
@@ -16258,6 +18278,7 @@ START_TEST(test_from_decimal_to_float_ok2020) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2021) {
     // 23.8500025272369384765625000
@@ -16266,6 +18287,7 @@ START_TEST(test_from_decimal_to_float_ok2021) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2022) {
     // -23.8500025272369384765625000
@@ -16274,6 +18296,7 @@ START_TEST(test_from_decimal_to_float_ok2022) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2023) {
     // 9.00000095367431640625
@@ -16282,6 +18305,7 @@ START_TEST(test_from_decimal_to_float_ok2023) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2024) {
     // -9.00000095367431640625
@@ -16290,6 +18314,7 @@ START_TEST(test_from_decimal_to_float_ok2024) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2025) {
     // 23.8500025272369384765625
@@ -16298,6 +18323,7 @@ START_TEST(test_from_decimal_to_float_ok2025) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2026) {
     // -23.8500025272369384765625
@@ -16306,6 +18332,7 @@ START_TEST(test_from_decimal_to_float_ok2026) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2027) {
     // 9.000
@@ -16314,6 +18341,7 @@ START_TEST(test_from_decimal_to_float_ok2027) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2028) {
     // -9.000
@@ -16322,6 +18350,7 @@ START_TEST(test_from_decimal_to_float_ok2028) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2029) {
     // 23.85000
@@ -16330,6 +18359,7 @@ START_TEST(test_from_decimal_to_float_ok2029) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2030) {
     // -23.85000
@@ -16338,6 +18368,7 @@ START_TEST(test_from_decimal_to_float_ok2030) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2031) {
     // 9
@@ -16346,6 +18377,7 @@ START_TEST(test_from_decimal_to_float_ok2031) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2032) {
     // -9
@@ -16354,6 +18386,7 @@ START_TEST(test_from_decimal_to_float_ok2032) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2033) {
     // 23.85
@@ -16362,6 +18395,7 @@ START_TEST(test_from_decimal_to_float_ok2033) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2034) {
     // -23.85
@@ -16370,6 +18404,7 @@ START_TEST(test_from_decimal_to_float_ok2034) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2035) {
     // 8.99999904632568359375000
@@ -16378,6 +18413,7 @@ START_TEST(test_from_decimal_to_float_ok2035) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2036) {
     // -8.99999904632568359375000
@@ -16386,6 +18422,7 @@ START_TEST(test_from_decimal_to_float_ok2036) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2037) {
     // 23.8499974727630615234375000
@@ -16394,6 +18431,7 @@ START_TEST(test_from_decimal_to_float_ok2037) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2038) {
     // -23.8499974727630615234375000
@@ -16402,6 +18440,7 @@ START_TEST(test_from_decimal_to_float_ok2038) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2039) {
     // 8.99999904632568359375
@@ -16410,6 +18449,7 @@ START_TEST(test_from_decimal_to_float_ok2039) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2040) {
     // -8.99999904632568359375
@@ -16418,6 +18458,7 @@ START_TEST(test_from_decimal_to_float_ok2040) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2041) {
     // 23.8499974727630615234375
@@ -16426,6 +18467,7 @@ START_TEST(test_from_decimal_to_float_ok2041) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2042) {
     // -23.8499974727630615234375
@@ -16434,6 +18476,7 @@ START_TEST(test_from_decimal_to_float_ok2042) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2043) {
     // 8
@@ -16442,6 +18485,7 @@ START_TEST(test_from_decimal_to_float_ok2043) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2044) {
     // -8
@@ -16450,6 +18494,7 @@ START_TEST(test_from_decimal_to_float_ok2044) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2045) {
     // 21.20
@@ -16458,6 +18503,7 @@ START_TEST(test_from_decimal_to_float_ok2045) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2046) {
     // -21.20
@@ -16466,6 +18512,7 @@ START_TEST(test_from_decimal_to_float_ok2046) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2047) {
     // 7.99999952316284179687500
@@ -16474,6 +18521,7 @@ START_TEST(test_from_decimal_to_float_ok2047) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2048) {
     // -7.99999952316284179687500
@@ -16482,6 +18530,7 @@ START_TEST(test_from_decimal_to_float_ok2048) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2049) {
     // 21.1999987363815307617187500
@@ -16490,6 +18539,7 @@ START_TEST(test_from_decimal_to_float_ok2049) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2050) {
     // -21.1999987363815307617187500
@@ -16498,6 +18548,7 @@ START_TEST(test_from_decimal_to_float_ok2050) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2051) {
     // 7.999999523162841796875
@@ -16506,6 +18557,7 @@ START_TEST(test_from_decimal_to_float_ok2051) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2052) {
     // -7.999999523162841796875
@@ -16514,6 +18566,7 @@ START_TEST(test_from_decimal_to_float_ok2052) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2053) {
     // 21.19999873638153076171875
@@ -16522,6 +18575,7 @@ START_TEST(test_from_decimal_to_float_ok2053) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2054) {
     // -21.19999873638153076171875
@@ -16530,6 +18584,7 @@ START_TEST(test_from_decimal_to_float_ok2054) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2055) {
     // 6.66666650772094726562500
@@ -16538,6 +18593,7 @@ START_TEST(test_from_decimal_to_float_ok2055) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2056) {
     // -6.66666650772094726562500
@@ -16546,6 +18602,7 @@ START_TEST(test_from_decimal_to_float_ok2056) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2057) {
     // 17.6666662454605102539062500
@@ -16554,6 +18611,7 @@ START_TEST(test_from_decimal_to_float_ok2057) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2058) {
     // -17.6666662454605102539062500
@@ -16562,6 +18620,7 @@ START_TEST(test_from_decimal_to_float_ok2058) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2059) {
     // 6.666666507720947265625
@@ -16570,6 +18629,7 @@ START_TEST(test_from_decimal_to_float_ok2059) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2060) {
     // -6.666666507720947265625
@@ -16578,6 +18638,7 @@ START_TEST(test_from_decimal_to_float_ok2060) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2061) {
     // 17.66666624546051025390625
@@ -16586,6 +18647,7 @@ START_TEST(test_from_decimal_to_float_ok2061) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2062) {
     // -17.66666624546051025390625
@@ -16594,6 +18656,7 @@ START_TEST(test_from_decimal_to_float_ok2062) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2063) {
     // 6.0
@@ -16602,6 +18665,7 @@ START_TEST(test_from_decimal_to_float_ok2063) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2064) {
     // -6.0
@@ -16610,6 +18674,7 @@ START_TEST(test_from_decimal_to_float_ok2064) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2065) {
     // 15.900
@@ -16618,6 +18683,7 @@ START_TEST(test_from_decimal_to_float_ok2065) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2066) {
     // -15.900
@@ -16626,6 +18692,7 @@ START_TEST(test_from_decimal_to_float_ok2066) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2067) {
     // 6
@@ -16634,6 +18701,7 @@ START_TEST(test_from_decimal_to_float_ok2067) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2068) {
     // -6
@@ -16642,6 +18710,7 @@ START_TEST(test_from_decimal_to_float_ok2068) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2069) {
     // 15.90
@@ -16650,6 +18719,7 @@ START_TEST(test_from_decimal_to_float_ok2069) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2070) {
     // -15.90
@@ -16658,6 +18728,7 @@ START_TEST(test_from_decimal_to_float_ok2070) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2071) {
     // 5.3333330154418945312500
@@ -16666,6 +18737,7 @@ START_TEST(test_from_decimal_to_float_ok2071) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2072) {
     // -5.3333330154418945312500
@@ -16674,6 +18746,7 @@ START_TEST(test_from_decimal_to_float_ok2072) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2073) {
     // 14.133332490921020507812500
@@ -16682,6 +18755,7 @@ START_TEST(test_from_decimal_to_float_ok2073) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2074) {
     // -14.133332490921020507812500
@@ -16690,6 +18764,7 @@ START_TEST(test_from_decimal_to_float_ok2074) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2075) {
     // 5.33333301544189453125
@@ -16698,6 +18773,7 @@ START_TEST(test_from_decimal_to_float_ok2075) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2076) {
     // -5.33333301544189453125
@@ -16706,6 +18782,7 @@ START_TEST(test_from_decimal_to_float_ok2076) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2077) {
     // 14.1333324909210205078125
@@ -16714,6 +18791,7 @@ START_TEST(test_from_decimal_to_float_ok2077) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2078) {
     // -14.1333324909210205078125
@@ -16722,6 +18800,7 @@ START_TEST(test_from_decimal_to_float_ok2078) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2079) {
     // 4
@@ -16730,6 +18809,7 @@ START_TEST(test_from_decimal_to_float_ok2079) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2080) {
     // -4
@@ -16738,6 +18818,7 @@ START_TEST(test_from_decimal_to_float_ok2080) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2081) {
     // 10.60
@@ -16746,6 +18827,7 @@ START_TEST(test_from_decimal_to_float_ok2081) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2082) {
     // -10.60
@@ -16754,6 +18836,7 @@ START_TEST(test_from_decimal_to_float_ok2082) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2083) {
     // 3.99999976158142089843750
@@ -16762,6 +18845,7 @@ START_TEST(test_from_decimal_to_float_ok2083) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2084) {
     // -3.99999976158142089843750
@@ -16770,6 +18854,7 @@ START_TEST(test_from_decimal_to_float_ok2084) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2085) {
     // 10.5999993681907653808593750
@@ -16778,6 +18863,7 @@ START_TEST(test_from_decimal_to_float_ok2085) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2086) {
     // -10.5999993681907653808593750
@@ -16786,6 +18872,7 @@ START_TEST(test_from_decimal_to_float_ok2086) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2087) {
     // 3.9999997615814208984375
@@ -16794,6 +18881,7 @@ START_TEST(test_from_decimal_to_float_ok2087) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2088) {
     // -3.9999997615814208984375
@@ -16802,6 +18890,7 @@ START_TEST(test_from_decimal_to_float_ok2088) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2089) {
     // 10.599999368190765380859375
@@ -16810,6 +18899,7 @@ START_TEST(test_from_decimal_to_float_ok2089) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2090) {
     // -10.599999368190765380859375
@@ -16818,6 +18908,7 @@ START_TEST(test_from_decimal_to_float_ok2090) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2091) {
     // 3.9999995231628417968750
@@ -16826,6 +18917,7 @@ START_TEST(test_from_decimal_to_float_ok2091) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2092) {
     // -3.9999995231628417968750
@@ -16834,6 +18926,7 @@ START_TEST(test_from_decimal_to_float_ok2092) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2093) {
     // 10.599998736381530761718750
@@ -16842,6 +18935,7 @@ START_TEST(test_from_decimal_to_float_ok2093) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2094) {
     // -10.599998736381530761718750
@@ -16850,6 +18944,7 @@ START_TEST(test_from_decimal_to_float_ok2094) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2095) {
     // 3.999999523162841796875
@@ -16858,6 +18953,7 @@ START_TEST(test_from_decimal_to_float_ok2095) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2096) {
     // -3.999999523162841796875
@@ -16866,6 +18962,7 @@ START_TEST(test_from_decimal_to_float_ok2096) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2097) {
     // 10.59999873638153076171875
@@ -16874,6 +18971,7 @@ START_TEST(test_from_decimal_to_float_ok2097) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2098) {
     // -10.59999873638153076171875
@@ -16882,6 +18980,7 @@ START_TEST(test_from_decimal_to_float_ok2098) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2099) {
     // 3.33333325386047363281250
@@ -16890,6 +18989,7 @@ START_TEST(test_from_decimal_to_float_ok2099) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2100) {
     // -3.33333325386047363281250
@@ -16898,6 +18998,7 @@ START_TEST(test_from_decimal_to_float_ok2100) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2101) {
     // 8.8333331227302551269531250
@@ -16906,6 +19007,7 @@ START_TEST(test_from_decimal_to_float_ok2101) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2102) {
     // -8.8333331227302551269531250
@@ -16914,6 +19016,7 @@ START_TEST(test_from_decimal_to_float_ok2102) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2103) {
     // 3.3333332538604736328125
@@ -16922,6 +19025,7 @@ START_TEST(test_from_decimal_to_float_ok2103) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2104) {
     // -3.3333332538604736328125
@@ -16930,6 +19034,7 @@ START_TEST(test_from_decimal_to_float_ok2104) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2105) {
     // 8.833333122730255126953125
@@ -16938,6 +19043,7 @@ START_TEST(test_from_decimal_to_float_ok2105) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2106) {
     // -8.833333122730255126953125
@@ -16946,6 +19052,7 @@ START_TEST(test_from_decimal_to_float_ok2106) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2107) {
     // 3.0
@@ -16954,6 +19061,7 @@ START_TEST(test_from_decimal_to_float_ok2107) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2108) {
     // -3.0
@@ -16962,6 +19070,7 @@ START_TEST(test_from_decimal_to_float_ok2108) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2109) {
     // 7.950
@@ -16970,6 +19079,7 @@ START_TEST(test_from_decimal_to_float_ok2109) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2110) {
     // -7.950
@@ -16978,6 +19088,7 @@ START_TEST(test_from_decimal_to_float_ok2110) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2111) {
     // 3
@@ -16986,6 +19097,7 @@ START_TEST(test_from_decimal_to_float_ok2111) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2112) {
     // -3
@@ -16994,6 +19106,7 @@ START_TEST(test_from_decimal_to_float_ok2112) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2113) {
     // 7.95
@@ -17002,6 +19115,7 @@ START_TEST(test_from_decimal_to_float_ok2113) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2114) {
     // -7.95
@@ -17010,6 +19124,7 @@ START_TEST(test_from_decimal_to_float_ok2114) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2115) {
     // 2.6666665077209472656250
@@ -17018,6 +19133,7 @@ START_TEST(test_from_decimal_to_float_ok2115) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2116) {
     // -2.6666665077209472656250
@@ -17026,6 +19142,7 @@ START_TEST(test_from_decimal_to_float_ok2116) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2117) {
     // 7.066666245460510253906250
@@ -17034,6 +19151,7 @@ START_TEST(test_from_decimal_to_float_ok2117) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2118) {
     // -7.066666245460510253906250
@@ -17042,6 +19160,7 @@ START_TEST(test_from_decimal_to_float_ok2118) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2119) {
     // 2.666666507720947265625
@@ -17050,6 +19169,7 @@ START_TEST(test_from_decimal_to_float_ok2119) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2120) {
     // -2.666666507720947265625
@@ -17058,6 +19178,7 @@ START_TEST(test_from_decimal_to_float_ok2120) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2121) {
     // 7.06666624546051025390625
@@ -17066,6 +19187,7 @@ START_TEST(test_from_decimal_to_float_ok2121) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2122) {
     // -7.06666624546051025390625
@@ -17074,6 +19196,7 @@ START_TEST(test_from_decimal_to_float_ok2122) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2123) {
     // 2.00000023841857910156250
@@ -17082,6 +19205,7 @@ START_TEST(test_from_decimal_to_float_ok2123) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2124) {
     // -2.00000023841857910156250
@@ -17090,6 +19214,7 @@ START_TEST(test_from_decimal_to_float_ok2124) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2125) {
     // 5.3000006318092346191406250
@@ -17098,6 +19223,7 @@ START_TEST(test_from_decimal_to_float_ok2125) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2126) {
     // -5.3000006318092346191406250
@@ -17106,6 +19232,7 @@ START_TEST(test_from_decimal_to_float_ok2126) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2127) {
     // 2.0000002384185791015625
@@ -17114,6 +19241,7 @@ START_TEST(test_from_decimal_to_float_ok2127) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2128) {
     // -2.0000002384185791015625
@@ -17122,6 +19250,7 @@ START_TEST(test_from_decimal_to_float_ok2128) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2129) {
     // 5.300000631809234619140625
@@ -17130,6 +19259,7 @@ START_TEST(test_from_decimal_to_float_ok2129) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2130) {
     // -5.300000631809234619140625
@@ -17138,6 +19268,7 @@ START_TEST(test_from_decimal_to_float_ok2130) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2131) {
     // 2
@@ -17146,6 +19277,7 @@ START_TEST(test_from_decimal_to_float_ok2131) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2132) {
     // -2
@@ -17154,6 +19286,7 @@ START_TEST(test_from_decimal_to_float_ok2132) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2133) {
     // 5.30
@@ -17162,6 +19295,7 @@ START_TEST(test_from_decimal_to_float_ok2133) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2134) {
     // -5.30
@@ -17170,6 +19304,7 @@ START_TEST(test_from_decimal_to_float_ok2134) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2135) {
     // 1.99999988079071044921875
@@ -17178,6 +19313,7 @@ START_TEST(test_from_decimal_to_float_ok2135) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2136) {
     // -1.99999988079071044921875
@@ -17186,6 +19322,7 @@ START_TEST(test_from_decimal_to_float_ok2136) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2137) {
     // 5.2999996840953826904296875
@@ -17194,6 +19331,7 @@ START_TEST(test_from_decimal_to_float_ok2137) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2138) {
     // -5.2999996840953826904296875
@@ -17202,6 +19340,7 @@ START_TEST(test_from_decimal_to_float_ok2138) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2139) {
     // 1.50000011920928955078125
@@ -17210,6 +19349,7 @@ START_TEST(test_from_decimal_to_float_ok2139) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2140) {
     // -1.50000011920928955078125
@@ -17218,6 +19358,7 @@ START_TEST(test_from_decimal_to_float_ok2140) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2141) {
     // 3.9750003159046173095703125
@@ -17226,6 +19367,7 @@ START_TEST(test_from_decimal_to_float_ok2141) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2142) {
     // -3.9750003159046173095703125
@@ -17234,6 +19376,7 @@ START_TEST(test_from_decimal_to_float_ok2142) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2143) {
     // 1.5
@@ -17242,6 +19385,7 @@ START_TEST(test_from_decimal_to_float_ok2143) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2144) {
     // -1.5
@@ -17250,6 +19394,7 @@ START_TEST(test_from_decimal_to_float_ok2144) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2145) {
     // 3.975
@@ -17258,6 +19403,7 @@ START_TEST(test_from_decimal_to_float_ok2145) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2146) {
     // -3.975
@@ -17266,6 +19412,7 @@ START_TEST(test_from_decimal_to_float_ok2146) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2147) {
     // 1.49999988079071044921875
@@ -17274,6 +19421,7 @@ START_TEST(test_from_decimal_to_float_ok2147) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2148) {
     // -1.49999988079071044921875
@@ -17282,6 +19430,7 @@ START_TEST(test_from_decimal_to_float_ok2148) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2149) {
     // 3.9749996840953826904296875
@@ -17290,6 +19439,7 @@ START_TEST(test_from_decimal_to_float_ok2149) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2150) {
     // -3.9749996840953826904296875
@@ -17298,6 +19448,7 @@ START_TEST(test_from_decimal_to_float_ok2150) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2151) {
     // 1
@@ -17306,6 +19457,7 @@ START_TEST(test_from_decimal_to_float_ok2151) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2152) {
     // -1
@@ -17314,6 +19466,7 @@ START_TEST(test_from_decimal_to_float_ok2152) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2153) {
     // 2.65
@@ -17322,6 +19475,7 @@ START_TEST(test_from_decimal_to_float_ok2153) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2154) {
     // -2.65
@@ -17330,6 +19484,7 @@ START_TEST(test_from_decimal_to_float_ok2154) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2155) {
     // 0.15625
@@ -17338,6 +19493,7 @@ START_TEST(test_from_decimal_to_float_ok2155) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2156) {
     // -0.15625
@@ -17346,6 +19502,7 @@ START_TEST(test_from_decimal_to_float_ok2156) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2157) {
     // 0.4140625
@@ -17354,6 +19511,7 @@ START_TEST(test_from_decimal_to_float_ok2157) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2158) {
     // -0.4140625
@@ -17362,6 +19520,7 @@ START_TEST(test_from_decimal_to_float_ok2158) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2159) {
     // 0.999999940395355224609375
@@ -17370,6 +19529,7 @@ START_TEST(test_from_decimal_to_float_ok2159) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2160) {
     // -0.999999940395355224609375
@@ -17378,6 +19538,7 @@ START_TEST(test_from_decimal_to_float_ok2160) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2161) {
     // 2.64999984204769134521484375
@@ -17386,6 +19547,7 @@ START_TEST(test_from_decimal_to_float_ok2161) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2162) {
     // -2.64999984204769134521484375
@@ -17394,6 +19556,7 @@ START_TEST(test_from_decimal_to_float_ok2162) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2163) {
     // 0.24999998509883880615234375
@@ -17402,6 +19565,7 @@ START_TEST(test_from_decimal_to_float_ok2163) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2164) {
     // -0.24999998509883880615234375
@@ -17410,6 +19574,7 @@ START_TEST(test_from_decimal_to_float_ok2164) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2165) {
     // 0.6624999605119228363037109375
@@ -17418,6 +19583,7 @@ START_TEST(test_from_decimal_to_float_ok2165) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2166) {
     // -0.6624999605119228363037109375
@@ -17426,6 +19592,7 @@ START_TEST(test_from_decimal_to_float_ok2166) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2167) {
     // 0.0156249990686774253845214844
@@ -17434,6 +19601,7 @@ START_TEST(test_from_decimal_to_float_ok2167) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2168) {
     // -0.0156249990686774253845214844
@@ -17442,6 +19610,7 @@ START_TEST(test_from_decimal_to_float_ok2168) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2169) {
     // 0.0414062475319951772689819337
@@ -17450,6 +19619,7 @@ START_TEST(test_from_decimal_to_float_ok2169) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2170) {
     // -0.0414062475319951772689819337
@@ -17458,6 +19628,7 @@ START_TEST(test_from_decimal_to_float_ok2170) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2171) {
     // 0.0000610351526120211929082870
@@ -17466,6 +19637,7 @@ START_TEST(test_from_decimal_to_float_ok2171) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2172) {
     // -0.0000610351526120211929082870
@@ -17474,6 +19646,7 @@ START_TEST(test_from_decimal_to_float_ok2172) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2173) {
     // 0.0001617431544218561612069606
@@ -17482,6 +19655,7 @@ START_TEST(test_from_decimal_to_float_ok2173) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2174) {
     // -0.0001617431544218561612069606
@@ -17490,6 +19664,7 @@ START_TEST(test_from_decimal_to_float_ok2174) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2175) {
     // 0.000061035152612021192908287
@@ -17498,6 +19673,7 @@ START_TEST(test_from_decimal_to_float_ok2175) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2176) {
     // -0.000061035152612021192908287
@@ -17506,6 +19682,7 @@ START_TEST(test_from_decimal_to_float_ok2176) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2177) {
     // 0.0001617431544218561612069606
@@ -17514,6 +19691,7 @@ START_TEST(test_from_decimal_to_float_ok2177) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2178) {
     // -0.0001617431544218561612069606
@@ -17522,6 +19700,7 @@ START_TEST(test_from_decimal_to_float_ok2178) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2179) {
     // 0.0000000009313225191043272844
@@ -17530,6 +19709,7 @@ START_TEST(test_from_decimal_to_float_ok2179) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2180) {
     // -0.0000000009313225191043272844
@@ -17538,6 +19718,7 @@ START_TEST(test_from_decimal_to_float_ok2180) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2181) {
     // 0.0000000024680046756264673037
@@ -17546,6 +19727,7 @@ START_TEST(test_from_decimal_to_float_ok2181) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2182) {
     // -0.0000000024680046756264673037
@@ -17554,6 +19736,7 @@ START_TEST(test_from_decimal_to_float_ok2182) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2183) {
     // 0.0000000000000000002168404216
@@ -17562,6 +19745,7 @@ START_TEST(test_from_decimal_to_float_ok2183) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2184) {
     // -0.0000000000000000002168404216
@@ -17570,6 +19754,7 @@ START_TEST(test_from_decimal_to_float_ok2184) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2185) {
     // 0.0000000000000000005746271172
@@ -17578,6 +19763,7 @@ START_TEST(test_from_decimal_to_float_ok2185) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2186) {
     // -0.0000000000000000005746271172
@@ -17586,6 +19772,7 @@ START_TEST(test_from_decimal_to_float_ok2186) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2187) {
     // 0.0000000000000000001084202108
@@ -17594,6 +19781,7 @@ START_TEST(test_from_decimal_to_float_ok2187) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2188) {
     // -0.0000000000000000001084202108
@@ -17602,6 +19790,7 @@ START_TEST(test_from_decimal_to_float_ok2188) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2189) {
     // 0.0000000000000000002873135586
@@ -17610,6 +19799,7 @@ START_TEST(test_from_decimal_to_float_ok2189) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2190) {
     // -0.0000000000000000002873135586
@@ -17618,6 +19808,7 @@ START_TEST(test_from_decimal_to_float_ok2190) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2191) {
     // 0.0000000000000000000542101054
@@ -17626,6 +19817,7 @@ START_TEST(test_from_decimal_to_float_ok2191) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2192) {
     // -0.0000000000000000000542101054
@@ -17634,6 +19826,7 @@ START_TEST(test_from_decimal_to_float_ok2192) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2193) {
     // 0.0000000000000000001436567793
@@ -17642,6 +19835,7 @@ START_TEST(test_from_decimal_to_float_ok2193) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2194) {
     // -0.0000000000000000001436567793
@@ -17650,6 +19844,7 @@ START_TEST(test_from_decimal_to_float_ok2194) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2195) {
     // 0.0000000000000000000135525263
@@ -17658,6 +19853,7 @@ START_TEST(test_from_decimal_to_float_ok2195) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2196) {
     // -0.0000000000000000000135525263
@@ -17666,6 +19862,7 @@ START_TEST(test_from_decimal_to_float_ok2196) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2197) {
     // 0.0000000000000000000359141947
@@ -17674,6 +19871,7 @@ START_TEST(test_from_decimal_to_float_ok2197) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2198) {
     // -0.0000000000000000000359141947
@@ -17682,6 +19880,7 @@ START_TEST(test_from_decimal_to_float_ok2198) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2199) {
     // 0.0000000000000000000008470329
@@ -17690,6 +19889,7 @@ START_TEST(test_from_decimal_to_float_ok2199) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2200) {
     // -0.0000000000000000000008470329
@@ -17698,6 +19898,7 @@ START_TEST(test_from_decimal_to_float_ok2200) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2201) {
     // 0.0000000000000000000022446372
@@ -17706,6 +19907,7 @@ START_TEST(test_from_decimal_to_float_ok2201) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2202) {
     // -0.0000000000000000000022446372
@@ -17714,6 +19916,7 @@ START_TEST(test_from_decimal_to_float_ok2202) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2203) {
     // 0.0000000000000000000000033087
@@ -17722,6 +19925,7 @@ START_TEST(test_from_decimal_to_float_ok2203) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2204) {
     // -0.0000000000000000000000033087
@@ -17730,6 +19934,7 @@ START_TEST(test_from_decimal_to_float_ok2204) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2205) {
     // 0.0000000000000000000000087681
@@ -17738,6 +19943,7 @@ START_TEST(test_from_decimal_to_float_ok2205) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2206) {
     // -0.0000000000000000000000087681
@@ -17746,6 +19952,7 @@ START_TEST(test_from_decimal_to_float_ok2206) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2207) {
     // 0.0000000000000000000000000001
@@ -17754,6 +19961,7 @@ START_TEST(test_from_decimal_to_float_ok2207) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2208) {
     // -0.0000000000000000000000000001
@@ -17762,6 +19970,7 @@ START_TEST(test_from_decimal_to_float_ok2208) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2209) {
     // 0.0000000000000000000000000003
@@ -17770,6 +19979,7 @@ START_TEST(test_from_decimal_to_float_ok2209) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2210) {
     // -0.0000000000000000000000000003
@@ -17778,6 +19988,7 @@ START_TEST(test_from_decimal_to_float_ok2210) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2211) {
     // 0.0000000000000000000000000004
@@ -17786,6 +19997,7 @@ START_TEST(test_from_decimal_to_float_ok2211) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2212) {
     // -0.0000000000000000000000000004
@@ -17794,6 +20006,7 @@ START_TEST(test_from_decimal_to_float_ok2212) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2213) {
     // 0.0000000000000000000000000011
@@ -17802,6 +20015,7 @@ START_TEST(test_from_decimal_to_float_ok2213) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2214) {
     // -0.0000000000000000000000000011
@@ -17810,6 +20024,7 @@ START_TEST(test_from_decimal_to_float_ok2214) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2215) {
     // 0.0000000000000000000000000065
@@ -17818,6 +20033,7 @@ START_TEST(test_from_decimal_to_float_ok2215) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2216) {
     // -0.0000000000000000000000000065
@@ -17826,6 +20042,7 @@ START_TEST(test_from_decimal_to_float_ok2216) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2217) {
     // 0.0000000000000000000000000172
@@ -17834,6 +20051,7 @@ START_TEST(test_from_decimal_to_float_ok2217) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2218) {
     // -0.0000000000000000000000000172
@@ -17842,6 +20060,7 @@ START_TEST(test_from_decimal_to_float_ok2218) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2219) {
     // 0.0000000000000000000000016544
@@ -17850,6 +20069,7 @@ START_TEST(test_from_decimal_to_float_ok2219) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2220) {
     // -0.0000000000000000000000016544
@@ -17858,6 +20078,7 @@ START_TEST(test_from_decimal_to_float_ok2220) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2221) {
     // 0.0000000000000000000000043842
@@ -17866,6 +20087,7 @@ START_TEST(test_from_decimal_to_float_ok2221) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2222) {
     // -0.0000000000000000000000043842
@@ -17874,6 +20096,7 @@ START_TEST(test_from_decimal_to_float_ok2222) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2223) {
     // 1.3333332538604736328125
@@ -17882,6 +20105,7 @@ START_TEST(test_from_decimal_to_float_ok2223) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2224) {
     // -1.3333332538604736328125
@@ -17890,6 +20114,7 @@ START_TEST(test_from_decimal_to_float_ok2224) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2225) {
     // 3.533333122730255126953125
@@ -17898,6 +20123,7 @@ START_TEST(test_from_decimal_to_float_ok2225) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2226) {
     // -3.533333122730255126953125
@@ -17906,6 +20132,7 @@ START_TEST(test_from_decimal_to_float_ok2226) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2227) {
     // 0.66666662693023681640625
@@ -17914,6 +20141,7 @@ START_TEST(test_from_decimal_to_float_ok2227) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2228) {
     // -0.66666662693023681640625
@@ -17922,6 +20150,7 @@ START_TEST(test_from_decimal_to_float_ok2228) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2229) {
     // 1.7666665613651275634765625
@@ -17930,6 +20159,7 @@ START_TEST(test_from_decimal_to_float_ok2229) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2230) {
     // -1.7666665613651275634765625
@@ -17938,6 +20168,7 @@ START_TEST(test_from_decimal_to_float_ok2230) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2231) {
     // 0.1666666567325592041015625
@@ -17946,6 +20177,7 @@ START_TEST(test_from_decimal_to_float_ok2231) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2232) {
     // -0.1666666567325592041015625
@@ -17954,6 +20186,7 @@ START_TEST(test_from_decimal_to_float_ok2232) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2233) {
     // 0.441666640341281890869140625
@@ -17962,6 +20195,7 @@ START_TEST(test_from_decimal_to_float_ok2233) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2234) {
     // -0.441666640341281890869140625
@@ -17970,6 +20204,7 @@ START_TEST(test_from_decimal_to_float_ok2234) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2235) {
     // 0.0104166660457849502563476562
@@ -17978,6 +20213,7 @@ START_TEST(test_from_decimal_to_float_ok2235) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2236) {
     // -0.0104166660457849502563476562
@@ -17986,6 +20222,7 @@ START_TEST(test_from_decimal_to_float_ok2236) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2237) {
     // 0.0276041650213301181793212889
@@ -17994,6 +20231,7 @@ START_TEST(test_from_decimal_to_float_ok2237) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2238) {
     // -0.0276041650213301181793212889
@@ -18002,6 +20240,7 @@ START_TEST(test_from_decimal_to_float_ok2238) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2239) {
     // 0.0000406901017413474619388580
@@ -18010,6 +20249,7 @@ START_TEST(test_from_decimal_to_float_ok2239) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2240) {
     // -0.0000406901017413474619388580
@@ -18018,6 +20258,7 @@ START_TEST(test_from_decimal_to_float_ok2240) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2241) {
     // 0.0001078287696145707741379737
@@ -18026,6 +20267,7 @@ START_TEST(test_from_decimal_to_float_ok2241) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2242) {
     // -0.0001078287696145707741379737
@@ -18034,6 +20276,7 @@ START_TEST(test_from_decimal_to_float_ok2242) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2243) {
     // 0.000040690101741347461938858
@@ -18042,6 +20285,7 @@ START_TEST(test_from_decimal_to_float_ok2243) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2244) {
     // -0.000040690101741347461938858
@@ -18050,6 +20294,7 @@ START_TEST(test_from_decimal_to_float_ok2244) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2245) {
     // 0.0001078287696145707741379737
@@ -18058,6 +20303,7 @@ START_TEST(test_from_decimal_to_float_ok2245) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2246) {
     // -0.0001078287696145707741379737
@@ -18066,6 +20312,7 @@ START_TEST(test_from_decimal_to_float_ok2246) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2247) {
     // 0.0000000006208816794028848562
@@ -18074,6 +20321,7 @@ START_TEST(test_from_decimal_to_float_ok2247) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2248) {
     // -0.0000000006208816794028848562
@@ -18082,6 +20330,7 @@ START_TEST(test_from_decimal_to_float_ok2248) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2249) {
     // 0.0000000016453364504176448689
@@ -18090,6 +20339,7 @@ START_TEST(test_from_decimal_to_float_ok2249) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2250) {
     // -0.0000000016453364504176448689
@@ -18098,6 +20348,7 @@ START_TEST(test_from_decimal_to_float_ok2250) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2251) {
     // 0.0000000001552204198507212141
@@ -18106,6 +20357,7 @@ START_TEST(test_from_decimal_to_float_ok2251) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2252) {
     // -0.0000000001552204198507212141
@@ -18114,6 +20366,7 @@ START_TEST(test_from_decimal_to_float_ok2252) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2253) {
     // 0.0000000004113341126044112174
@@ -18122,6 +20375,7 @@ START_TEST(test_from_decimal_to_float_ok2253) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2254) {
     // -0.0000000004113341126044112174
@@ -18130,6 +20384,7 @@ START_TEST(test_from_decimal_to_float_ok2254) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2255) {
     // 0.0000000000388051049626803035
@@ -18138,6 +20393,7 @@ START_TEST(test_from_decimal_to_float_ok2255) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2256) {
     // -0.0000000000388051049626803035
@@ -18146,6 +20402,7 @@ START_TEST(test_from_decimal_to_float_ok2256) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2257) {
     // 0.0000000001028335281511028043
@@ -18154,6 +20411,7 @@ START_TEST(test_from_decimal_to_float_ok2257) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2258) {
     // -0.0000000001028335281511028043
@@ -18162,6 +20420,7 @@ START_TEST(test_from_decimal_to_float_ok2258) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2259) {
     // 0.0000000000024253190601675190
@@ -18170,6 +20429,7 @@ START_TEST(test_from_decimal_to_float_ok2259) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2260) {
     // -0.0000000000024253190601675190
@@ -18178,6 +20438,7 @@ START_TEST(test_from_decimal_to_float_ok2260) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2261) {
     // 0.0000000000064270955094439254
@@ -18186,6 +20447,7 @@ START_TEST(test_from_decimal_to_float_ok2261) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2262) {
     // -0.0000000000064270955094439254
@@ -18194,6 +20456,7 @@ START_TEST(test_from_decimal_to_float_ok2262) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2263) {
     // 0.000000000002425319060167519
@@ -18202,6 +20465,7 @@ START_TEST(test_from_decimal_to_float_ok2263) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2264) {
     // -0.000000000002425319060167519
@@ -18210,6 +20474,7 @@ START_TEST(test_from_decimal_to_float_ok2264) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2265) {
     // 0.0000000000064270955094439254
@@ -18218,6 +20483,7 @@ START_TEST(test_from_decimal_to_float_ok2265) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2266) {
     // -0.0000000000064270955094439254
@@ -18226,6 +20492,7 @@ START_TEST(test_from_decimal_to_float_ok2266) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2267) {
     // 0.0000000000000094739025787794
@@ -18234,6 +20501,7 @@ START_TEST(test_from_decimal_to_float_ok2267) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2268) {
     // -0.0000000000000094739025787794
@@ -18242,6 +20510,7 @@ START_TEST(test_from_decimal_to_float_ok2268) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2269) {
     // 0.0000000000000251058418337654
@@ -18250,6 +20519,7 @@ START_TEST(test_from_decimal_to_float_ok2269) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2270) {
     // -0.0000000000000251058418337654
@@ -18258,6 +20528,7 @@ START_TEST(test_from_decimal_to_float_ok2270) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2271) {
     // 0.0000000000000047369512893897
@@ -18266,6 +20537,7 @@ START_TEST(test_from_decimal_to_float_ok2271) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2272) {
     // -0.0000000000000047369512893897
@@ -18274,6 +20546,7 @@ START_TEST(test_from_decimal_to_float_ok2272) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2273) {
     // 0.0000000000000125529209168827
@@ -18282,6 +20555,7 @@ START_TEST(test_from_decimal_to_float_ok2273) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2274) {
     // -0.0000000000000125529209168827
@@ -18290,6 +20564,7 @@ START_TEST(test_from_decimal_to_float_ok2274) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2275) {
     // 0.0000000000000000185037159742
@@ -18298,6 +20573,7 @@ START_TEST(test_from_decimal_to_float_ok2275) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2276) {
     // -0.0000000000000000185037159742
@@ -18306,6 +20582,7 @@ START_TEST(test_from_decimal_to_float_ok2276) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2277) {
     // 0.0000000000000000490348473316
@@ -18314,6 +20591,7 @@ START_TEST(test_from_decimal_to_float_ok2277) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2278) {
     // -0.0000000000000000490348473316
@@ -18322,6 +20600,7 @@ START_TEST(test_from_decimal_to_float_ok2278) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2279) {
     // 0.0000000000000000011564822484
@@ -18330,6 +20609,7 @@ START_TEST(test_from_decimal_to_float_ok2279) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2280) {
     // -0.0000000000000000011564822484
@@ -18338,6 +20618,7 @@ START_TEST(test_from_decimal_to_float_ok2280) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2281) {
     // 0.0000000000000000030646779583
@@ -18346,6 +20627,7 @@ START_TEST(test_from_decimal_to_float_ok2281) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2282) {
     // -0.0000000000000000030646779583
@@ -18354,6 +20636,7 @@ START_TEST(test_from_decimal_to_float_ok2282) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2283) {
     // 0.0000000000000000001445602810
@@ -18362,6 +20645,7 @@ START_TEST(test_from_decimal_to_float_ok2283) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2284) {
     // -0.0000000000000000001445602810
@@ -18370,6 +20654,7 @@ START_TEST(test_from_decimal_to_float_ok2284) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2285) {
     // 0.0000000000000000003830847446
@@ -18378,6 +20663,7 @@ START_TEST(test_from_decimal_to_float_ok2285) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2286) {
     // -0.0000000000000000003830847446
@@ -18386,6 +20672,7 @@ START_TEST(test_from_decimal_to_float_ok2286) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2287) {
     // 0.000000000000000000144560281
@@ -18394,6 +20681,7 @@ START_TEST(test_from_decimal_to_float_ok2287) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2288) {
     // -0.000000000000000000144560281
@@ -18402,6 +20690,7 @@ START_TEST(test_from_decimal_to_float_ok2288) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2289) {
     // 0.0000000000000000003830847446
@@ -18410,6 +20699,7 @@ START_TEST(test_from_decimal_to_float_ok2289) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2290) {
     // -0.0000000000000000003830847446
@@ -18418,6 +20708,7 @@ START_TEST(test_from_decimal_to_float_ok2290) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2291) {
     // 0.0000000000000000000722801405
@@ -18426,6 +20717,7 @@ START_TEST(test_from_decimal_to_float_ok2291) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2292) {
     // -0.0000000000000000000722801405
@@ -18434,6 +20726,7 @@ START_TEST(test_from_decimal_to_float_ok2292) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2293) {
     // 0.0000000000000000001915423723
@@ -18442,6 +20735,7 @@ START_TEST(test_from_decimal_to_float_ok2293) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2294) {
     // -0.0000000000000000001915423723
@@ -18450,6 +20744,7 @@ START_TEST(test_from_decimal_to_float_ok2294) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2295) {
     // 0.0000000000000000000361400703
@@ -18458,6 +20753,7 @@ START_TEST(test_from_decimal_to_float_ok2295) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2296) {
     // -0.0000000000000000000361400703
@@ -18466,6 +20762,7 @@ START_TEST(test_from_decimal_to_float_ok2296) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2297) {
     // 0.0000000000000000000957711863
@@ -18474,6 +20771,7 @@ START_TEST(test_from_decimal_to_float_ok2297) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2298) {
     // -0.0000000000000000000957711863
@@ -18482,6 +20780,7 @@ START_TEST(test_from_decimal_to_float_ok2298) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2299) {
     // 0.0000000000000000000090350176
@@ -18490,6 +20789,7 @@ START_TEST(test_from_decimal_to_float_ok2299) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2300) {
     // -0.0000000000000000000090350176
@@ -18498,6 +20798,7 @@ START_TEST(test_from_decimal_to_float_ok2300) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2301) {
     // 0.0000000000000000000239427966
@@ -18506,6 +20807,7 @@ START_TEST(test_from_decimal_to_float_ok2301) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2302) {
     // -0.0000000000000000000239427966
@@ -18514,6 +20816,7 @@ START_TEST(test_from_decimal_to_float_ok2302) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2303) {
     // 0.0000000000000000000005646886
@@ -18522,6 +20825,7 @@ START_TEST(test_from_decimal_to_float_ok2303) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2304) {
     // -0.0000000000000000000005646886
@@ -18530,6 +20834,7 @@ START_TEST(test_from_decimal_to_float_ok2304) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2305) {
     // 0.0000000000000000000014964248
@@ -18538,6 +20843,7 @@ START_TEST(test_from_decimal_to_float_ok2305) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2306) {
     // -0.0000000000000000000014964248
@@ -18546,6 +20852,7 @@ START_TEST(test_from_decimal_to_float_ok2306) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2307) {
     // 0.0000000000000000000000022058
@@ -18554,6 +20861,7 @@ START_TEST(test_from_decimal_to_float_ok2307) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2308) {
     // -0.0000000000000000000000022058
@@ -18562,6 +20870,7 @@ START_TEST(test_from_decimal_to_float_ok2308) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2309) {
     // 0.0000000000000000000000058454
@@ -18570,6 +20879,7 @@ START_TEST(test_from_decimal_to_float_ok2309) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2310) {
     // -0.0000000000000000000000058454
@@ -18578,6 +20888,7 @@ START_TEST(test_from_decimal_to_float_ok2310) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2311) {
     // 0.0000000000000000000000005515
@@ -18586,6 +20897,7 @@ START_TEST(test_from_decimal_to_float_ok2311) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2312) {
     // -0.0000000000000000000000005515
@@ -18594,6 +20906,7 @@ START_TEST(test_from_decimal_to_float_ok2312) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2313) {
     // 0.0000000000000000000000014615
@@ -18602,6 +20915,7 @@ START_TEST(test_from_decimal_to_float_ok2313) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2314) {
     // -0.0000000000000000000000014615
@@ -18610,6 +20924,7 @@ START_TEST(test_from_decimal_to_float_ok2314) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2315) {
     // 0.0000000000000000000000000172
@@ -18618,6 +20933,7 @@ START_TEST(test_from_decimal_to_float_ok2315) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2316) {
     // -0.0000000000000000000000000172
@@ -18626,6 +20942,7 @@ START_TEST(test_from_decimal_to_float_ok2316) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2317) {
     // 0.0000000000000000000000000456
@@ -18634,6 +20951,7 @@ START_TEST(test_from_decimal_to_float_ok2317) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2318) {
     // -0.0000000000000000000000000456
@@ -18642,6 +20960,7 @@ START_TEST(test_from_decimal_to_float_ok2318) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2319) {
     // 0.0000000000000000000000000043
@@ -18650,6 +20969,7 @@ START_TEST(test_from_decimal_to_float_ok2319) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2320) {
     // -0.0000000000000000000000000043
@@ -18658,6 +20978,7 @@ START_TEST(test_from_decimal_to_float_ok2320) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2321) {
     // 0.0000000000000000000000000114
@@ -18666,6 +20987,7 @@ START_TEST(test_from_decimal_to_float_ok2321) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2322) {
     // -0.0000000000000000000000000114
@@ -18674,6 +20996,7 @@ START_TEST(test_from_decimal_to_float_ok2322) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2323) {
     // 0.0000000000000000000000000003
@@ -18682,6 +21005,7 @@ START_TEST(test_from_decimal_to_float_ok2323) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2324) {
     // -0.0000000000000000000000000003
@@ -18690,6 +21014,7 @@ START_TEST(test_from_decimal_to_float_ok2324) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2325) {
     // 0.0000000000000000000000000008
@@ -18698,6 +21023,7 @@ START_TEST(test_from_decimal_to_float_ok2325) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2326) {
     // -0.0000000000000000000000000008
@@ -18706,6 +21032,7 @@ START_TEST(test_from_decimal_to_float_ok2326) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2327) {
     // 1.66666662693023681640625
@@ -18714,6 +21041,7 @@ START_TEST(test_from_decimal_to_float_ok2327) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2328) {
     // -1.66666662693023681640625
@@ -18722,6 +21050,7 @@ START_TEST(test_from_decimal_to_float_ok2328) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2329) {
     // 4.4166665613651275634765625
@@ -18730,6 +21059,7 @@ START_TEST(test_from_decimal_to_float_ok2329) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2330) {
     // -4.4166665613651275634765625
@@ -18738,6 +21068,7 @@ START_TEST(test_from_decimal_to_float_ok2330) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2331) {
     // 0.833333313465118408203125
@@ -18746,6 +21077,7 @@ START_TEST(test_from_decimal_to_float_ok2331) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2332) {
     // -0.833333313465118408203125
@@ -18754,6 +21086,7 @@ START_TEST(test_from_decimal_to_float_ok2332) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2333) {
     // 2.20833328068256378173828125
@@ -18762,6 +21095,7 @@ START_TEST(test_from_decimal_to_float_ok2333) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2334) {
     // -2.20833328068256378173828125
@@ -18770,6 +21104,7 @@ START_TEST(test_from_decimal_to_float_ok2334) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2335) {
     // 0.20833332836627960205078125
@@ -18778,6 +21113,7 @@ START_TEST(test_from_decimal_to_float_ok2335) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2336) {
     // -0.20833332836627960205078125
@@ -18786,6 +21122,7 @@ START_TEST(test_from_decimal_to_float_ok2336) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2337) {
     // 0.5520833201706409454345703125
@@ -18794,6 +21131,7 @@ START_TEST(test_from_decimal_to_float_ok2337) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2338) {
     // -0.5520833201706409454345703125
@@ -18802,6 +21140,7 @@ START_TEST(test_from_decimal_to_float_ok2338) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2339) {
     // 0.0130208330228924751281738281
@@ -18810,6 +21149,7 @@ START_TEST(test_from_decimal_to_float_ok2339) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2340) {
     // -0.0130208330228924751281738281
@@ -18818,6 +21158,7 @@ START_TEST(test_from_decimal_to_float_ok2340) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2341) {
     // 0.0345052075106650590896606445
@@ -18826,6 +21167,7 @@ START_TEST(test_from_decimal_to_float_ok2341) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2342) {
     // -0.0345052075106650590896606445
@@ -18834,6 +21176,7 @@ START_TEST(test_from_decimal_to_float_ok2342) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2343) {
     // 0.0000508626289956737309694290
@@ -18842,6 +21185,7 @@ START_TEST(test_from_decimal_to_float_ok2343) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2344) {
     // -0.0000508626289956737309694290
@@ -18850,6 +21194,7 @@ START_TEST(test_from_decimal_to_float_ok2344) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2345) {
     // 0.0001347859668385353870689868
@@ -18858,6 +21203,7 @@ START_TEST(test_from_decimal_to_float_ok2345) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2346) {
     // -0.0001347859668385353870689868
@@ -18866,6 +21212,7 @@ START_TEST(test_from_decimal_to_float_ok2346) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2347) {
     // 0.000050862628995673730969429
@@ -18874,6 +21221,7 @@ START_TEST(test_from_decimal_to_float_ok2347) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2348) {
     // -0.000050862628995673730969429
@@ -18882,6 +21230,7 @@ START_TEST(test_from_decimal_to_float_ok2348) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2349) {
     // 0.0001347859668385353870689868
@@ -18890,6 +21239,7 @@ START_TEST(test_from_decimal_to_float_ok2349) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2350) {
     // -0.0001347859668385353870689868
@@ -18898,6 +21248,7 @@ START_TEST(test_from_decimal_to_float_ok2350) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2351) {
     // 0.0000000007761021270091816859
@@ -18906,6 +21257,7 @@ START_TEST(test_from_decimal_to_float_ok2351) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2352) {
     // -0.0000000007761021270091816859
@@ -18914,6 +21266,7 @@ START_TEST(test_from_decimal_to_float_ok2352) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2353) {
     // 0.0000000020566706365743314676
@@ -18922,6 +21275,7 @@ START_TEST(test_from_decimal_to_float_ok2353) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2354) {
     // -0.0000000020566706365743314676
@@ -18930,6 +21284,7 @@ START_TEST(test_from_decimal_to_float_ok2354) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2355) {
     // 0.0000000001940255317522954215
@@ -18938,6 +21293,7 @@ START_TEST(test_from_decimal_to_float_ok2355) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2356) {
     // -0.0000000001940255317522954215
@@ -18946,6 +21302,7 @@ START_TEST(test_from_decimal_to_float_ok2356) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2357) {
     // 0.0000000005141676591435828670
@@ -18954,6 +21311,7 @@ START_TEST(test_from_decimal_to_float_ok2357) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2358) {
     // -0.0000000005141676591435828670
@@ -18962,6 +21320,7 @@ START_TEST(test_from_decimal_to_float_ok2358) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2359) {
     // 0.0000000000485063829380738554
@@ -18970,6 +21329,7 @@ START_TEST(test_from_decimal_to_float_ok2359) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2360) {
     // -0.0000000000485063829380738554
@@ -18978,6 +21338,7 @@ START_TEST(test_from_decimal_to_float_ok2360) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2361) {
     // 0.0000000001285419147858957168
@@ -18986,6 +21347,7 @@ START_TEST(test_from_decimal_to_float_ok2361) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2362) {
     // -0.0000000001285419147858957168
@@ -18994,6 +21356,7 @@ START_TEST(test_from_decimal_to_float_ok2362) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2363) {
     // 0.0000000000030316489336296160
@@ -19002,6 +21365,7 @@ START_TEST(test_from_decimal_to_float_ok2363) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2364) {
     // -0.0000000000030316489336296160
@@ -19010,6 +21374,7 @@ START_TEST(test_from_decimal_to_float_ok2364) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2365) {
     // 0.0000000000080338696741184824
@@ -19018,6 +21383,7 @@ START_TEST(test_from_decimal_to_float_ok2365) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2366) {
     // -0.0000000000080338696741184824
@@ -19026,6 +21392,7 @@ START_TEST(test_from_decimal_to_float_ok2366) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2367) {
     // 0.000000000003031648933629616
@@ -19034,6 +21401,7 @@ START_TEST(test_from_decimal_to_float_ok2367) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2368) {
     // -0.000000000003031648933629616
@@ -19042,6 +21410,7 @@ START_TEST(test_from_decimal_to_float_ok2368) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2369) {
     // 0.0000000000080338696741184824
@@ -19050,6 +21419,7 @@ START_TEST(test_from_decimal_to_float_ok2369) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2370) {
     // -0.0000000000080338696741184824
@@ -19058,6 +21428,7 @@ START_TEST(test_from_decimal_to_float_ok2370) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2371) {
     // 0.0000000000000118423786469907
@@ -19066,6 +21437,7 @@ START_TEST(test_from_decimal_to_float_ok2371) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2372) {
     // -0.0000000000000118423786469907
@@ -19074,6 +21446,7 @@ START_TEST(test_from_decimal_to_float_ok2372) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2373) {
     // 0.0000000000000313823034145254
@@ -19082,6 +21455,7 @@ START_TEST(test_from_decimal_to_float_ok2373) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2374) {
     // -0.0000000000000313823034145254
@@ -19090,6 +21464,7 @@ START_TEST(test_from_decimal_to_float_ok2374) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2375) {
     // 0.0000000000000059211893234953
@@ -19098,6 +21473,7 @@ START_TEST(test_from_decimal_to_float_ok2375) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2376) {
     // -0.0000000000000059211893234953
@@ -19106,6 +21482,7 @@ START_TEST(test_from_decimal_to_float_ok2376) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2377) {
     // 0.0000000000000156911517072625
@@ -19114,6 +21491,7 @@ START_TEST(test_from_decimal_to_float_ok2377) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2378) {
     // -0.0000000000000156911517072625
@@ -19122,6 +21500,7 @@ START_TEST(test_from_decimal_to_float_ok2378) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2379) {
     // 0.0000000000000007401486654369
@@ -19130,6 +21509,7 @@ START_TEST(test_from_decimal_to_float_ok2379) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2380) {
     // -0.0000000000000007401486654369
@@ -19138,6 +21518,7 @@ START_TEST(test_from_decimal_to_float_ok2380) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2381) {
     // 0.0000000000000019613939634078
@@ -19146,6 +21527,7 @@ START_TEST(test_from_decimal_to_float_ok2381) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2382) {
     // -0.0000000000000019613939634078
@@ -19154,6 +21536,7 @@ START_TEST(test_from_decimal_to_float_ok2382) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2383) {
     // 0.0000000000000000231296457949
@@ -19162,6 +21545,7 @@ START_TEST(test_from_decimal_to_float_ok2383) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2384) {
     // -0.0000000000000000231296457949
@@ -19170,6 +21554,7 @@ START_TEST(test_from_decimal_to_float_ok2384) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2385) {
     // 0.0000000000000000612935613565
@@ -19178,6 +21563,7 @@ START_TEST(test_from_decimal_to_float_ok2385) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2386) {
     // -0.0000000000000000612935613565
@@ -19186,6 +21572,7 @@ START_TEST(test_from_decimal_to_float_ok2386) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2387) {
     // 0.0000000000000000014456028622
@@ -19194,6 +21581,7 @@ START_TEST(test_from_decimal_to_float_ok2387) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2388) {
     // -0.0000000000000000014456028622
@@ -19202,6 +21590,7 @@ START_TEST(test_from_decimal_to_float_ok2388) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2389) {
     // 0.0000000000000000038308475848
@@ -19210,6 +21599,7 @@ START_TEST(test_from_decimal_to_float_ok2389) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2390) {
     // -0.0000000000000000038308475848
@@ -19218,6 +21608,7 @@ START_TEST(test_from_decimal_to_float_ok2390) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2391) {
     // 0.0000000000000000003614007155
@@ -19226,6 +21617,7 @@ START_TEST(test_from_decimal_to_float_ok2391) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2392) {
     // -0.0000000000000000003614007155
@@ -19234,6 +21626,7 @@ START_TEST(test_from_decimal_to_float_ok2392) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2393) {
     // 0.0000000000000000009577118961
@@ -19242,6 +21635,7 @@ START_TEST(test_from_decimal_to_float_ok2393) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2394) {
     // -0.0000000000000000009577118961
@@ -19250,6 +21644,7 @@ START_TEST(test_from_decimal_to_float_ok2394) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2395) {
     // 0.0000000000000000001807003578
@@ -19258,6 +21653,7 @@ START_TEST(test_from_decimal_to_float_ok2395) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2396) {
     // -0.0000000000000000001807003578
@@ -19266,6 +21662,7 @@ START_TEST(test_from_decimal_to_float_ok2396) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2397) {
     // 0.0000000000000000004788559482
@@ -19274,6 +21671,7 @@ START_TEST(test_from_decimal_to_float_ok2397) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2398) {
     // -0.0000000000000000004788559482
@@ -19282,6 +21680,7 @@ START_TEST(test_from_decimal_to_float_ok2398) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2399) {
     // 0.0000000000000000000903501789
@@ -19290,6 +21689,7 @@ START_TEST(test_from_decimal_to_float_ok2399) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2400) {
     // -0.0000000000000000000903501789
@@ -19298,6 +21698,7 @@ START_TEST(test_from_decimal_to_float_ok2400) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2401) {
     // 0.0000000000000000002394279741
@@ -19306,6 +21707,7 @@ START_TEST(test_from_decimal_to_float_ok2401) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2402) {
     // -0.0000000000000000002394279741
@@ -19314,6 +21716,7 @@ START_TEST(test_from_decimal_to_float_ok2402) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2403) {
     // 0.0000000000000000000451750894
@@ -19322,6 +21725,7 @@ START_TEST(test_from_decimal_to_float_ok2403) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2404) {
     // -0.0000000000000000000451750894
@@ -19330,6 +21734,7 @@ START_TEST(test_from_decimal_to_float_ok2404) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2405) {
     // 0.0000000000000000001197139869
@@ -19338,6 +21743,7 @@ START_TEST(test_from_decimal_to_float_ok2405) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2406) {
     // -0.0000000000000000001197139869
@@ -19346,6 +21752,7 @@ START_TEST(test_from_decimal_to_float_ok2406) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2407) {
     // 0.0000000000000000000112937724
@@ -19354,6 +21761,7 @@ START_TEST(test_from_decimal_to_float_ok2407) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2408) {
     // -0.0000000000000000000112937724
@@ -19362,6 +21770,7 @@ START_TEST(test_from_decimal_to_float_ok2408) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2409) {
     // 0.0000000000000000000299284969
@@ -19370,6 +21779,7 @@ START_TEST(test_from_decimal_to_float_ok2409) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2410) {
     // -0.0000000000000000000299284969
@@ -19378,6 +21788,7 @@ START_TEST(test_from_decimal_to_float_ok2410) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2411) {
     // 0.0000000000000000000007058608
@@ -19386,6 +21797,7 @@ START_TEST(test_from_decimal_to_float_ok2411) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2412) {
     // -0.0000000000000000000007058608
@@ -19394,6 +21806,7 @@ START_TEST(test_from_decimal_to_float_ok2412) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2413) {
     // 0.0000000000000000000018705311
@@ -19402,6 +21815,7 @@ START_TEST(test_from_decimal_to_float_ok2413) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2414) {
     // -0.0000000000000000000018705311
@@ -19410,6 +21824,7 @@ START_TEST(test_from_decimal_to_float_ok2414) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2415) {
     // 0.0000000000000000000000027573
@@ -19418,6 +21833,7 @@ START_TEST(test_from_decimal_to_float_ok2415) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2416) {
     // -0.0000000000000000000000027573
@@ -19426,6 +21842,7 @@ START_TEST(test_from_decimal_to_float_ok2416) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2417) {
     // 0.0000000000000000000000073068
@@ -19434,6 +21851,7 @@ START_TEST(test_from_decimal_to_float_ok2417) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2418) {
     // -0.0000000000000000000000073068
@@ -19442,6 +21860,7 @@ START_TEST(test_from_decimal_to_float_ok2418) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2419) {
     // 0.0000000000000000000000013786
@@ -19450,6 +21869,7 @@ START_TEST(test_from_decimal_to_float_ok2419) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2420) {
     // -0.0000000000000000000000013786
@@ -19458,6 +21878,7 @@ START_TEST(test_from_decimal_to_float_ok2420) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2421) {
     // 0.0000000000000000000000036533
@@ -19466,6 +21887,7 @@ START_TEST(test_from_decimal_to_float_ok2421) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2422) {
     // -0.0000000000000000000000036533
@@ -19474,6 +21896,7 @@ START_TEST(test_from_decimal_to_float_ok2422) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2423) {
     // 0.0000000000000000000000006893
@@ -19482,6 +21905,7 @@ START_TEST(test_from_decimal_to_float_ok2423) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2424) {
     // -0.0000000000000000000000006893
@@ -19490,6 +21914,7 @@ START_TEST(test_from_decimal_to_float_ok2424) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2425) {
     // 0.0000000000000000000000018266
@@ -19498,6 +21923,7 @@ START_TEST(test_from_decimal_to_float_ok2425) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2426) {
     // -0.0000000000000000000000018266
@@ -19506,6 +21932,7 @@ START_TEST(test_from_decimal_to_float_ok2426) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2427) {
     // 0.0000000000000000000000001723
@@ -19514,6 +21941,7 @@ START_TEST(test_from_decimal_to_float_ok2427) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2428) {
     // -0.0000000000000000000000001723
@@ -19522,6 +21950,7 @@ START_TEST(test_from_decimal_to_float_ok2428) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2429) {
     // 0.0000000000000000000000004566
@@ -19530,6 +21959,7 @@ START_TEST(test_from_decimal_to_float_ok2429) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2430) {
     // -0.0000000000000000000000004566
@@ -19538,6 +21968,7 @@ START_TEST(test_from_decimal_to_float_ok2430) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2431) {
     // 0.0000000000000000000000000054
@@ -19546,6 +21977,7 @@ START_TEST(test_from_decimal_to_float_ok2431) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2432) {
     // -0.0000000000000000000000000054
@@ -19554,6 +21986,7 @@ START_TEST(test_from_decimal_to_float_ok2432) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2433) {
     // 0.0000000000000000000000000143
@@ -19562,6 +21995,7 @@ START_TEST(test_from_decimal_to_float_ok2433) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2434) {
     // -0.0000000000000000000000000143
@@ -19570,6 +22004,7 @@ START_TEST(test_from_decimal_to_float_ok2434) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2435) {
     // 0.75
@@ -19578,6 +22013,7 @@ START_TEST(test_from_decimal_to_float_ok2435) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2436) {
     // -0.75
@@ -19586,6 +22022,7 @@ START_TEST(test_from_decimal_to_float_ok2436) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2437) {
     // 1.9875
@@ -19594,6 +22031,7 @@ START_TEST(test_from_decimal_to_float_ok2437) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2438) {
     // -1.9875
@@ -19602,6 +22040,7 @@ START_TEST(test_from_decimal_to_float_ok2438) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2439) {
     // 0.5
@@ -19610,6 +22049,7 @@ START_TEST(test_from_decimal_to_float_ok2439) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2440) {
     // -0.5
@@ -19618,6 +22058,7 @@ START_TEST(test_from_decimal_to_float_ok2440) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2441) {
     // 1.325
@@ -19626,6 +22067,7 @@ START_TEST(test_from_decimal_to_float_ok2441) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2442) {
     // -1.325
@@ -19634,6 +22076,7 @@ START_TEST(test_from_decimal_to_float_ok2442) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2443) {
     // 0.1875
@@ -19642,6 +22085,7 @@ START_TEST(test_from_decimal_to_float_ok2443) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2444) {
     // -0.1875
@@ -19650,6 +22094,7 @@ START_TEST(test_from_decimal_to_float_ok2444) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2445) {
     // 0.496875
@@ -19658,6 +22103,7 @@ START_TEST(test_from_decimal_to_float_ok2445) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2446) {
     // -0.496875
@@ -19666,6 +22112,7 @@ START_TEST(test_from_decimal_to_float_ok2446) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2447) {
     // 0.125
@@ -19674,6 +22121,7 @@ START_TEST(test_from_decimal_to_float_ok2447) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2448) {
     // -0.125
@@ -19682,6 +22130,7 @@ START_TEST(test_from_decimal_to_float_ok2448) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2449) {
     // 0.33125
@@ -19690,6 +22139,7 @@ START_TEST(test_from_decimal_to_float_ok2449) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2450) {
     // -0.33125
@@ -19698,6 +22148,7 @@ START_TEST(test_from_decimal_to_float_ok2450) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2451) {
     // 0.0625
@@ -19706,6 +22157,7 @@ START_TEST(test_from_decimal_to_float_ok2451) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2452) {
     // -0.0625
@@ -19714,6 +22166,7 @@ START_TEST(test_from_decimal_to_float_ok2452) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2453) {
     // 0.165625
@@ -19722,6 +22175,7 @@ START_TEST(test_from_decimal_to_float_ok2453) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2454) {
     // -0.165625
@@ -19730,6 +22184,7 @@ START_TEST(test_from_decimal_to_float_ok2454) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2455) {
     // 0.015625
@@ -19738,6 +22193,7 @@ START_TEST(test_from_decimal_to_float_ok2455) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2456) {
     // -0.015625
@@ -19746,6 +22202,7 @@ START_TEST(test_from_decimal_to_float_ok2456) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2457) {
     // 0.04140625
@@ -19754,6 +22211,7 @@ START_TEST(test_from_decimal_to_float_ok2457) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2458) {
     // -0.04140625
@@ -19762,6 +22220,7 @@ START_TEST(test_from_decimal_to_float_ok2458) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2459) {
     // 0.01171875
@@ -19770,6 +22229,7 @@ START_TEST(test_from_decimal_to_float_ok2459) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2460) {
     // -0.01171875
@@ -19778,6 +22238,7 @@ START_TEST(test_from_decimal_to_float_ok2460) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2461) {
     // 0.0310546875
@@ -19786,6 +22247,7 @@ START_TEST(test_from_decimal_to_float_ok2461) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2462) {
     // -0.0310546875
@@ -19794,6 +22256,7 @@ START_TEST(test_from_decimal_to_float_ok2462) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2463) {
     // 0.0078125
@@ -19802,6 +22265,7 @@ START_TEST(test_from_decimal_to_float_ok2463) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2464) {
     // -0.0078125
@@ -19810,6 +22274,7 @@ START_TEST(test_from_decimal_to_float_ok2464) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2465) {
     // 0.020703125
@@ -19818,6 +22283,7 @@ START_TEST(test_from_decimal_to_float_ok2465) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2466) {
     // -0.020703125
@@ -19826,6 +22292,7 @@ START_TEST(test_from_decimal_to_float_ok2466) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2467) {
     // 0.00390625
@@ -19834,6 +22301,7 @@ START_TEST(test_from_decimal_to_float_ok2467) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2468) {
     // -0.00390625
@@ -19842,6 +22310,7 @@ START_TEST(test_from_decimal_to_float_ok2468) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2469) {
     // 0.0103515625
@@ -19850,6 +22319,7 @@ START_TEST(test_from_decimal_to_float_ok2469) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2470) {
     // -0.0103515625
@@ -19858,6 +22328,7 @@ START_TEST(test_from_decimal_to_float_ok2470) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2471) {
     // 0.000244140625
@@ -19866,6 +22337,7 @@ START_TEST(test_from_decimal_to_float_ok2471) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2472) {
     // -0.000244140625
@@ -19874,6 +22346,7 @@ START_TEST(test_from_decimal_to_float_ok2472) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2473) {
     // 0.00064697265625
@@ -19882,6 +22355,7 @@ START_TEST(test_from_decimal_to_float_ok2473) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2474) {
     // -0.00064697265625
@@ -19890,6 +22364,7 @@ START_TEST(test_from_decimal_to_float_ok2474) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2475) {
     // 0.0000457763671875
@@ -19898,6 +22373,7 @@ START_TEST(test_from_decimal_to_float_ok2475) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2476) {
     // -0.0000457763671875
@@ -19906,6 +22382,7 @@ START_TEST(test_from_decimal_to_float_ok2476) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2477) {
     // 0.000121307373046875
@@ -19914,6 +22391,7 @@ START_TEST(test_from_decimal_to_float_ok2477) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2478) {
     // -0.000121307373046875
@@ -19922,6 +22400,7 @@ START_TEST(test_from_decimal_to_float_ok2478) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2479) {
     // 0.000030517578125
@@ -19930,6 +22409,7 @@ START_TEST(test_from_decimal_to_float_ok2479) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2480) {
     // -0.000030517578125
@@ -19938,6 +22418,7 @@ START_TEST(test_from_decimal_to_float_ok2480) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2481) {
     // 0.00008087158203125
@@ -19946,6 +22427,7 @@ START_TEST(test_from_decimal_to_float_ok2481) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2482) {
     // -0.00008087158203125
@@ -19954,6 +22436,7 @@ START_TEST(test_from_decimal_to_float_ok2482) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2483) {
     // 0.0000152587890625
@@ -19962,6 +22445,7 @@ START_TEST(test_from_decimal_to_float_ok2483) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2484) {
     // -0.0000152587890625
@@ -19970,6 +22454,7 @@ START_TEST(test_from_decimal_to_float_ok2484) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2485) {
     // 0.000040435791015625
@@ -19978,6 +22463,7 @@ START_TEST(test_from_decimal_to_float_ok2485) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2486) {
     // -0.000040435791015625
@@ -19986,6 +22472,7 @@ START_TEST(test_from_decimal_to_float_ok2486) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2487) {
     // 0.0000000004656612873077392578
@@ -19994,6 +22481,7 @@ START_TEST(test_from_decimal_to_float_ok2487) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2488) {
     // -0.0000000004656612873077392578
@@ -20002,6 +22490,7 @@ START_TEST(test_from_decimal_to_float_ok2488) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2489) {
     // 0.0000000012340024113655090332
@@ -20010,6 +22499,7 @@ START_TEST(test_from_decimal_to_float_ok2489) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2490) {
     // -0.0000000012340024113655090332
@@ -20018,6 +22508,7 @@ START_TEST(test_from_decimal_to_float_ok2490) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2491) {
     // 0.0000000006984919309616088867
@@ -20026,6 +22517,7 @@ START_TEST(test_from_decimal_to_float_ok2491) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2492) {
     // -0.0000000006984919309616088867
@@ -20034,6 +22526,7 @@ START_TEST(test_from_decimal_to_float_ok2492) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2493) {
     // 0.0000000018510036170482635498
@@ -20042,6 +22535,7 @@ START_TEST(test_from_decimal_to_float_ok2493) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2494) {
     // -0.0000000018510036170482635498
@@ -20050,6 +22544,7 @@ START_TEST(test_from_decimal_to_float_ok2494) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2495) {
     // 0.0000000000000000001084202172
@@ -20058,6 +22553,7 @@ START_TEST(test_from_decimal_to_float_ok2495) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2496) {
     // -0.0000000000000000001084202172
@@ -20066,6 +22562,7 @@ START_TEST(test_from_decimal_to_float_ok2496) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2497) {
     // 0.0000000000000000002873135756
@@ -20074,6 +22571,7 @@ START_TEST(test_from_decimal_to_float_ok2497) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2498) {
     // -0.0000000000000000002873135756
@@ -20082,6 +22580,7 @@ START_TEST(test_from_decimal_to_float_ok2498) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2499) {
     // 0.100000001490116119384765625
@@ -20090,6 +22589,7 @@ START_TEST(test_from_decimal_to_float_ok2499) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2500) {
     // -0.100000001490116119384765625
@@ -20098,6 +22598,7 @@ START_TEST(test_from_decimal_to_float_ok2500) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2501) {
     // 0.2650000039488077163696289062
@@ -20106,6 +22607,7 @@ START_TEST(test_from_decimal_to_float_ok2501) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2502) {
     // -0.2650000039488077163696289062
@@ -20114,6 +22616,7 @@ START_TEST(test_from_decimal_to_float_ok2502) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2503) {
     // 0.999000012874603271484375
@@ -20122,6 +22625,7 @@ START_TEST(test_from_decimal_to_float_ok2503) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2504) {
     // -0.999000012874603271484375
@@ -20130,6 +22634,7 @@ START_TEST(test_from_decimal_to_float_ok2504) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2505) {
     // 2.64735003411769866943359375
@@ -20138,6 +22643,7 @@ START_TEST(test_from_decimal_to_float_ok2505) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2506) {
     // -2.64735003411769866943359375
@@ -20146,6 +22652,7 @@ START_TEST(test_from_decimal_to_float_ok2506) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2507) {
     // 0.89999997615814208984375
@@ -20154,6 +22661,7 @@ START_TEST(test_from_decimal_to_float_ok2507) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2508) {
     // -0.89999997615814208984375
@@ -20162,6 +22670,7 @@ START_TEST(test_from_decimal_to_float_ok2508) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2509) {
     // 2.3849999368190765380859375
@@ -20170,6 +22679,7 @@ START_TEST(test_from_decimal_to_float_ok2509) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2510) {
     // -2.3849999368190765380859375
@@ -20178,6 +22688,7 @@ START_TEST(test_from_decimal_to_float_ok2510) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2511) {
     // 0.099899999797344207763671875
@@ -20186,6 +22697,7 @@ START_TEST(test_from_decimal_to_float_ok2511) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2512) {
     // -0.099899999797344207763671875
@@ -20194,6 +22706,7 @@ START_TEST(test_from_decimal_to_float_ok2512) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2513) {
     // 0.2647349994629621505737304688
@@ -20202,6 +22715,7 @@ START_TEST(test_from_decimal_to_float_ok2513) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2514) {
     // -0.2647349994629621505737304688
@@ -20210,6 +22724,7 @@ START_TEST(test_from_decimal_to_float_ok2514) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2515) {
     // 0.0099900001659989356994628906
@@ -20218,6 +22733,7 @@ START_TEST(test_from_decimal_to_float_ok2515) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2516) {
     // -0.0099900001659989356994628906
@@ -20226,6 +22742,7 @@ START_TEST(test_from_decimal_to_float_ok2516) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2517) {
     // 0.0264735004398971796035766601
@@ -20234,6 +22751,7 @@ START_TEST(test_from_decimal_to_float_ok2517) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2518) {
     // -0.0264735004398971796035766601
@@ -20242,6 +22760,7 @@ START_TEST(test_from_decimal_to_float_ok2518) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2519) {
     // 0.0009990000398829579353332520
@@ -20250,6 +22769,7 @@ START_TEST(test_from_decimal_to_float_ok2519) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2520) {
     // -0.0009990000398829579353332520
@@ -20258,6 +22778,7 @@ START_TEST(test_from_decimal_to_float_ok2520) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2521) {
     // 0.0026473501056898385286331178
@@ -20266,6 +22787,7 @@ START_TEST(test_from_decimal_to_float_ok2521) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2522) {
     // -0.0026473501056898385286331178
@@ -20274,6 +22796,7 @@ START_TEST(test_from_decimal_to_float_ok2522) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2523) {
     // 0.000999000039882957935333252
@@ -20282,6 +22805,7 @@ START_TEST(test_from_decimal_to_float_ok2523) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2524) {
     // -0.000999000039882957935333252
@@ -20290,6 +22814,7 @@ START_TEST(test_from_decimal_to_float_ok2524) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2525) {
     // 0.0026473501056898385286331178
@@ -20298,6 +22823,7 @@ START_TEST(test_from_decimal_to_float_ok2525) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2526) {
     // -0.0026473501056898385286331178
@@ -20306,6 +22832,7 @@ START_TEST(test_from_decimal_to_float_ok2526) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2527) {
     // 0.0000998999967123381793498993
@@ -20314,6 +22841,7 @@ START_TEST(test_from_decimal_to_float_ok2527) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2528) {
     // -0.0000998999967123381793498993
@@ -20322,6 +22850,7 @@ START_TEST(test_from_decimal_to_float_ok2528) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2529) {
     // 0.0002647349912876961752772331
@@ -20330,6 +22859,7 @@ START_TEST(test_from_decimal_to_float_ok2529) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2530) {
     // -0.0002647349912876961752772331
@@ -20338,6 +22868,7 @@ START_TEST(test_from_decimal_to_float_ok2530) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2531) {
     // 0.0000099899998531327582895756
@@ -20346,6 +22877,7 @@ START_TEST(test_from_decimal_to_float_ok2531) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2532) {
     // -0.0000099899998531327582895756
@@ -20354,6 +22886,7 @@ START_TEST(test_from_decimal_to_float_ok2532) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2533) {
     // 0.0000264734996108018094673753
@@ -20362,6 +22895,7 @@ START_TEST(test_from_decimal_to_float_ok2533) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2534) {
     // -0.0000264734996108018094673753
@@ -20370,6 +22904,7 @@ START_TEST(test_from_decimal_to_float_ok2534) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2535) {
     // 0.0000009990000080506433732808
@@ -20378,6 +22913,7 @@ START_TEST(test_from_decimal_to_float_ok2535) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2536) {
     // -0.0000009990000080506433732808
@@ -20386,6 +22922,7 @@ START_TEST(test_from_decimal_to_float_ok2536) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2537) {
     // 0.0000026473500213342049391941
@@ -20394,6 +22931,7 @@ START_TEST(test_from_decimal_to_float_ok2537) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2538) {
     // -0.0000026473500213342049391941
@@ -20402,6 +22940,7 @@ START_TEST(test_from_decimal_to_float_ok2538) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2539) {
     // 0.0000000998999993839788658079
@@ -20410,6 +22949,7 @@ START_TEST(test_from_decimal_to_float_ok2539) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2540) {
     // -0.0000000998999993839788658079
@@ -20418,6 +22958,7 @@ START_TEST(test_from_decimal_to_float_ok2540) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2541) {
     // 0.0000002647349983675439943909
@@ -20426,6 +22967,7 @@ START_TEST(test_from_decimal_to_float_ok2541) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2542) {
     // -0.0000002647349983675439943909
@@ -20434,6 +22976,7 @@ START_TEST(test_from_decimal_to_float_ok2542) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2543) {
     // 0.0000000099899999383978865808
@@ -20442,6 +22985,7 @@ START_TEST(test_from_decimal_to_float_ok2543) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2544) {
     // -0.0000000099899999383978865808
@@ -20450,6 +22994,7 @@ START_TEST(test_from_decimal_to_float_ok2544) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2545) {
     // 0.0000000264734998367543994391
@@ -20458,6 +23003,7 @@ START_TEST(test_from_decimal_to_float_ok2545) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2546) {
     // -0.0000000264734998367543994391
@@ -20466,6 +23012,7 @@ START_TEST(test_from_decimal_to_float_ok2546) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2547) {
     // 0.0000000009989999938397886581
@@ -20474,6 +23021,7 @@ START_TEST(test_from_decimal_to_float_ok2547) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2548) {
     // -0.0000000009989999938397886581
@@ -20482,6 +23030,7 @@ START_TEST(test_from_decimal_to_float_ok2548) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2549) {
     // 0.0000000026473499836754399440
@@ -20490,6 +23039,7 @@ START_TEST(test_from_decimal_to_float_ok2549) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2550) {
     // -0.0000000026473499836754399440
@@ -20498,6 +23048,7 @@ START_TEST(test_from_decimal_to_float_ok2550) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2551) {
     // 0.0000000000998999979962000850
@@ -20506,6 +23057,7 @@ START_TEST(test_from_decimal_to_float_ok2551) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2552) {
     // -0.0000000000998999979962000850
@@ -20514,6 +23066,7 @@ START_TEST(test_from_decimal_to_float_ok2552) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2553) {
     // 0.0000000002647349946899302252
@@ -20522,6 +23075,7 @@ START_TEST(test_from_decimal_to_float_ok2553) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2554) {
     // -0.0000000002647349946899302252
@@ -20530,6 +23084,7 @@ START_TEST(test_from_decimal_to_float_ok2554) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2555) {
     // 0.000000000099899997996200085
@@ -20538,6 +23093,7 @@ START_TEST(test_from_decimal_to_float_ok2555) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2556) {
     // -0.000000000099899997996200085
@@ -20546,6 +23102,7 @@ START_TEST(test_from_decimal_to_float_ok2556) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2557) {
     // 0.0000000002647349946899302252
@@ -20554,6 +23111,7 @@ START_TEST(test_from_decimal_to_float_ok2557) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2558) {
     // -0.0000000002647349946899302252
@@ -20562,6 +23120,7 @@ START_TEST(test_from_decimal_to_float_ok2558) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2559) {
     // 0.0000000000099900001465647037
@@ -20570,6 +23129,7 @@ START_TEST(test_from_decimal_to_float_ok2559) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2560) {
     // -0.0000000000099900001465647037
@@ -20578,6 +23138,7 @@ START_TEST(test_from_decimal_to_float_ok2560) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2561) {
     // 0.0000000000264735003883964648
@@ -20586,6 +23147,7 @@ START_TEST(test_from_decimal_to_float_ok2561) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2562) {
     // -0.0000000000264735003883964648
@@ -20594,6 +23156,7 @@ START_TEST(test_from_decimal_to_float_ok2562) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2563) {
     // 0.0000000000009990000363405138
@@ -20602,6 +23165,7 @@ START_TEST(test_from_decimal_to_float_ok2563) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2564) {
     // -0.0000000000009990000363405138
@@ -20610,6 +23174,7 @@ START_TEST(test_from_decimal_to_float_ok2564) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2565) {
     // 0.0000000000026473500963023616
@@ -20618,6 +23183,7 @@ START_TEST(test_from_decimal_to_float_ok2565) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2566) {
     // -0.0000000000026473500963023616
@@ -20626,6 +23192,7 @@ START_TEST(test_from_decimal_to_float_ok2566) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2567) {
     // 0.0000000000000999000009235460
@@ -20634,6 +23201,7 @@ START_TEST(test_from_decimal_to_float_ok2567) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2568) {
     // -0.0000000000000999000009235460
@@ -20642,6 +23210,7 @@ START_TEST(test_from_decimal_to_float_ok2568) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2569) {
     // 0.0000000000002647350024473969
@@ -20650,6 +23219,7 @@ START_TEST(test_from_decimal_to_float_ok2569) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2570) {
     // -0.0000000000002647350024473969
@@ -20658,6 +23228,7 @@ START_TEST(test_from_decimal_to_float_ok2570) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2571) {
     // 0.000000000000099900000923546
@@ -20666,6 +23237,7 @@ START_TEST(test_from_decimal_to_float_ok2571) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2572) {
     // -0.000000000000099900000923546
@@ -20674,6 +23246,7 @@ START_TEST(test_from_decimal_to_float_ok2572) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2573) {
     // 0.0000000000002647350024473969
@@ -20682,6 +23255,7 @@ START_TEST(test_from_decimal_to_float_ok2573) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2574) {
     // -0.0000000000002647350024473969
@@ -20690,6 +23264,7 @@ START_TEST(test_from_decimal_to_float_ok2574) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2575) {
     // 0.0000000000000091534479919764
@@ -20698,6 +23273,7 @@ START_TEST(test_from_decimal_to_float_ok2575) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2576) {
     // -0.0000000000000091534479919764
@@ -20706,6 +23282,7 @@ START_TEST(test_from_decimal_to_float_ok2576) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2577) {
     // 0.0000000000000242566371787375
@@ -20714,6 +23291,7 @@ START_TEST(test_from_decimal_to_float_ok2577) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2578) {
     // -0.0000000000000242566371787375
@@ -20722,6 +23300,7 @@ START_TEST(test_from_decimal_to_float_ok2578) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2579) {
     // 0.0000000000000001153448307064
@@ -20730,6 +23309,7 @@ START_TEST(test_from_decimal_to_float_ok2579) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2580) {
     // -0.0000000000000001153448307064
@@ -20738,6 +23318,7 @@ START_TEST(test_from_decimal_to_float_ok2580) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2581) {
     // 0.0000000000000003056638013720
@@ -20746,6 +23327,7 @@ START_TEST(test_from_decimal_to_float_ok2581) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2582) {
     // -0.0000000000000003056638013720
@@ -20754,6 +23336,7 @@ START_TEST(test_from_decimal_to_float_ok2582) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2583) {
     // 0.0000000000000000115344827398
@@ -20762,6 +23345,7 @@ START_TEST(test_from_decimal_to_float_ok2583) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2584) {
     // -0.0000000000000000115344827398
@@ -20770,6 +23354,7 @@ START_TEST(test_from_decimal_to_float_ok2584) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2585) {
     // 0.0000000000000000305663792605
@@ -20778,6 +23363,7 @@ START_TEST(test_from_decimal_to_float_ok2585) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2586) {
     // -0.0000000000000000305663792605
@@ -20786,6 +23372,7 @@ START_TEST(test_from_decimal_to_float_ok2586) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2587) {
     // 0.0000000000000000011534482533
@@ -20794,6 +23381,7 @@ START_TEST(test_from_decimal_to_float_ok2587) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2588) {
     // -0.0000000000000000011534482533
@@ -20802,6 +23390,7 @@ START_TEST(test_from_decimal_to_float_ok2588) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2589) {
     // 0.0000000000000000030566378712
@@ -20810,6 +23399,7 @@ START_TEST(test_from_decimal_to_float_ok2589) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2590) {
     // -0.0000000000000000030566378712
@@ -20818,6 +23408,7 @@ START_TEST(test_from_decimal_to_float_ok2590) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2591) {
     // 0.0000000000000000001626303259
@@ -20826,6 +23417,7 @@ START_TEST(test_from_decimal_to_float_ok2591) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2592) {
     // -0.0000000000000000001626303259
@@ -20834,6 +23426,7 @@ START_TEST(test_from_decimal_to_float_ok2592) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2593) {
     // 0.0000000000000000004309703636
@@ -20842,6 +23435,7 @@ START_TEST(test_from_decimal_to_float_ok2593) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2594) {
     // -0.0000000000000000004309703636
@@ -20850,6 +23444,7 @@ START_TEST(test_from_decimal_to_float_ok2594) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2595) {
     // 0.0000000000000000001153448305
@@ -20858,6 +23453,7 @@ START_TEST(test_from_decimal_to_float_ok2595) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2596) {
     // -0.0000000000000000001153448305
@@ -20866,6 +23462,7 @@ START_TEST(test_from_decimal_to_float_ok2596) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2597) {
     // 0.0000000000000000003056638008
@@ -20874,6 +23471,7 @@ START_TEST(test_from_decimal_to_float_ok2597) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2598) {
     // -0.0000000000000000003056638008
@@ -20882,6 +23480,7 @@ START_TEST(test_from_decimal_to_float_ok2598) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2599) {
     // 0.0000000000000000000115344827
@@ -20890,6 +23489,7 @@ START_TEST(test_from_decimal_to_float_ok2599) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2600) {
     // -0.0000000000000000000115344827
@@ -20898,6 +23498,7 @@ START_TEST(test_from_decimal_to_float_ok2600) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2601) {
     // 0.0000000000000000000305663792
@@ -20906,6 +23507,7 @@ START_TEST(test_from_decimal_to_float_ok2601) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2602) {
     // -0.0000000000000000000305663792
@@ -20914,6 +23516,7 @@ START_TEST(test_from_decimal_to_float_ok2602) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2603) {
     // 0.0000000000000000000071534482
@@ -20922,6 +23525,7 @@ START_TEST(test_from_decimal_to_float_ok2603) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2604) {
     // -0.0000000000000000000071534482
@@ -20930,6 +23534,7 @@ START_TEST(test_from_decimal_to_float_ok2604) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2605) {
     // 0.0000000000000000000189566377
@@ -20938,6 +23543,7 @@ START_TEST(test_from_decimal_to_float_ok2605) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2606) {
     // -0.0000000000000000000189566377
@@ -20946,6 +23552,7 @@ START_TEST(test_from_decimal_to_float_ok2606) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2607) {
     // 0.0000000000000000000071534474
@@ -20954,6 +23561,7 @@ START_TEST(test_from_decimal_to_float_ok2607) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2608) {
     // -0.0000000000000000000071534474
@@ -20962,6 +23570,7 @@ START_TEST(test_from_decimal_to_float_ok2608) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2609) {
     // 0.0000000000000000000189566356
@@ -20970,6 +23579,7 @@ START_TEST(test_from_decimal_to_float_ok2609) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2610) {
     // -0.0000000000000000000189566356
@@ -20978,6 +23588,7 @@ START_TEST(test_from_decimal_to_float_ok2610) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2611) {
     // 0.0000000000000000000007534475
@@ -20986,6 +23597,7 @@ START_TEST(test_from_decimal_to_float_ok2611) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2612) {
     // -0.0000000000000000000007534475
@@ -20994,6 +23606,7 @@ START_TEST(test_from_decimal_to_float_ok2612) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2613) {
     // 0.0000000000000000000019966359
@@ -21002,6 +23615,7 @@ START_TEST(test_from_decimal_to_float_ok2613) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2614) {
     // -0.0000000000000000000019966359
@@ -21010,6 +23624,7 @@ START_TEST(test_from_decimal_to_float_ok2614) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2615) {
     // 0.0000000000000000000007534474
@@ -21018,6 +23633,7 @@ START_TEST(test_from_decimal_to_float_ok2615) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2616) {
     // -0.0000000000000000000007534474
@@ -21026,6 +23642,7 @@ START_TEST(test_from_decimal_to_float_ok2616) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2617) {
     // 0.0000000000000000000019966356
@@ -21034,6 +23651,7 @@ START_TEST(test_from_decimal_to_float_ok2617) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2618) {
     // -0.0000000000000000000019966356
@@ -21042,6 +23660,7 @@ START_TEST(test_from_decimal_to_float_ok2618) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2619) {
     // 0.0000000000000000000000754475
@@ -21050,6 +23669,7 @@ START_TEST(test_from_decimal_to_float_ok2619) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2620) {
     // -0.0000000000000000000000754475
@@ -21058,6 +23678,7 @@ START_TEST(test_from_decimal_to_float_ok2620) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2621) {
     // 0.0000000000000000000001999359
@@ -21066,6 +23687,7 @@ START_TEST(test_from_decimal_to_float_ok2621) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2622) {
     // -0.0000000000000000000001999359
@@ -21074,6 +23696,7 @@ START_TEST(test_from_decimal_to_float_ok2622) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2623) {
     // 0.0000000000000000000000754474
@@ -21082,6 +23705,7 @@ START_TEST(test_from_decimal_to_float_ok2623) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2624) {
     // -0.0000000000000000000000754474
@@ -21090,6 +23714,7 @@ START_TEST(test_from_decimal_to_float_ok2624) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2625) {
     // 0.0000000000000000000001999356
@@ -21098,6 +23723,7 @@ START_TEST(test_from_decimal_to_float_ok2625) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2626) {
     // -0.0000000000000000000001999356
@@ -21106,6 +23732,7 @@ START_TEST(test_from_decimal_to_float_ok2626) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2627) {
     // 0.0000000000000000000000095448
@@ -21114,6 +23741,7 @@ START_TEST(test_from_decimal_to_float_ok2627) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2628) {
     // -0.0000000000000000000000095448
@@ -21122,6 +23750,7 @@ START_TEST(test_from_decimal_to_float_ok2628) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2629) {
     // 0.0000000000000000000000252937
@@ -21130,6 +23759,7 @@ START_TEST(test_from_decimal_to_float_ok2629) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2630) {
     // -0.0000000000000000000000252937
@@ -21138,6 +23768,7 @@ START_TEST(test_from_decimal_to_float_ok2630) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2631) {
     // 0.0000000000000000000000095447
@@ -21146,6 +23777,7 @@ START_TEST(test_from_decimal_to_float_ok2631) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2632) {
     // -0.0000000000000000000000095447
@@ -21154,6 +23786,7 @@ START_TEST(test_from_decimal_to_float_ok2632) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2633) {
     // 0.0000000000000000000000252935
@@ -21162,6 +23795,7 @@ START_TEST(test_from_decimal_to_float_ok2633) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2634) {
     // -0.0000000000000000000000252935
@@ -21170,6 +23804,7 @@ START_TEST(test_from_decimal_to_float_ok2634) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2635) {
     // 0.0000000000000000000000000545
@@ -21178,6 +23813,7 @@ START_TEST(test_from_decimal_to_float_ok2635) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2636) {
     // -0.0000000000000000000000000545
@@ -21186,6 +23822,7 @@ START_TEST(test_from_decimal_to_float_ok2636) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2637) {
     // 0.0000000000000000000000001444
@@ -21194,6 +23831,7 @@ START_TEST(test_from_decimal_to_float_ok2637) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2638) {
     // -0.0000000000000000000000001444
@@ -21202,6 +23840,7 @@ START_TEST(test_from_decimal_to_float_ok2638) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2639) {
     // 0.0000000000000000000000000544
@@ -21210,6 +23849,7 @@ START_TEST(test_from_decimal_to_float_ok2639) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2640) {
     // -0.0000000000000000000000000544
@@ -21218,6 +23858,7 @@ START_TEST(test_from_decimal_to_float_ok2640) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2641) {
     // 0.0000000000000000000000001442
@@ -21226,6 +23867,7 @@ START_TEST(test_from_decimal_to_float_ok2641) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2642) {
     // -0.0000000000000000000000001442
@@ -21234,6 +23876,7 @@ START_TEST(test_from_decimal_to_float_ok2642) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2643) {
     // 0.0000000000000000000000000145
@@ -21242,6 +23885,7 @@ START_TEST(test_from_decimal_to_float_ok2643) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2644) {
     // -0.0000000000000000000000000145
@@ -21250,6 +23894,7 @@ START_TEST(test_from_decimal_to_float_ok2644) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2645) {
     // 0.0000000000000000000000000384
@@ -21258,6 +23903,7 @@ START_TEST(test_from_decimal_to_float_ok2645) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2646) {
     // -0.0000000000000000000000000384
@@ -21266,6 +23912,7 @@ START_TEST(test_from_decimal_to_float_ok2646) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2647) {
     // 0.0000000000000000000000000144
@@ -21274,6 +23921,7 @@ START_TEST(test_from_decimal_to_float_ok2647) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2648) {
     // -0.0000000000000000000000000144
@@ -21282,6 +23930,7 @@ START_TEST(test_from_decimal_to_float_ok2648) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2649) {
     // 0.0000000000000000000000000382
@@ -21290,6 +23939,7 @@ START_TEST(test_from_decimal_to_float_ok2649) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2650) {
     // -0.0000000000000000000000000382
@@ -21298,6 +23948,7 @@ START_TEST(test_from_decimal_to_float_ok2650) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2651) {
     // 0.0000000000000000000000000015
@@ -21306,6 +23957,7 @@ START_TEST(test_from_decimal_to_float_ok2651) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2652) {
     // -0.0000000000000000000000000015
@@ -21314,6 +23966,7 @@ START_TEST(test_from_decimal_to_float_ok2652) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2653) {
     // 0.0000000000000000000000000040
@@ -21322,6 +23975,7 @@ START_TEST(test_from_decimal_to_float_ok2653) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2654) {
     // -0.0000000000000000000000000040
@@ -21330,6 +23984,7 @@ START_TEST(test_from_decimal_to_float_ok2654) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2655) {
     // 0.0000000000000000000000000014
@@ -21338,6 +23993,7 @@ START_TEST(test_from_decimal_to_float_ok2655) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2656) {
     // -0.0000000000000000000000000014
@@ -21346,6 +24002,7 @@ START_TEST(test_from_decimal_to_float_ok2656) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2657) {
     // 0.0000000000000000000000000037
@@ -21354,6 +24011,7 @@ START_TEST(test_from_decimal_to_float_ok2657) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2658) {
     // -0.0000000000000000000000000037
@@ -21362,6 +24020,7 @@ START_TEST(test_from_decimal_to_float_ok2658) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2659) {
     // 0.0000000000000000000000000012
@@ -21370,6 +24029,7 @@ START_TEST(test_from_decimal_to_float_ok2659) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2660) {
     // -0.0000000000000000000000000012
@@ -21378,6 +24038,7 @@ START_TEST(test_from_decimal_to_float_ok2660) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2661) {
     // 0.0000000000000000000000000032
@@ -21386,6 +24047,7 @@ START_TEST(test_from_decimal_to_float_ok2661) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2662) {
     // -0.0000000000000000000000000032
@@ -21394,6 +24056,7 @@ START_TEST(test_from_decimal_to_float_ok2662) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2663) {
     // 0.0000000000000000000000000011
@@ -21402,6 +24065,7 @@ START_TEST(test_from_decimal_to_float_ok2663) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2664) {
     // -0.0000000000000000000000000011
@@ -21410,6 +24074,7 @@ START_TEST(test_from_decimal_to_float_ok2664) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2665) {
     // 0.0000000000000000000000000029
@@ -21418,6 +24083,7 @@ START_TEST(test_from_decimal_to_float_ok2665) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2666) {
     // -0.0000000000000000000000000029
@@ -21426,6 +24092,7 @@ START_TEST(test_from_decimal_to_float_ok2666) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2667) {
     // 0.0000000000000000000000000010
@@ -21434,6 +24101,7 @@ START_TEST(test_from_decimal_to_float_ok2667) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2668) {
     // -0.0000000000000000000000000010
@@ -21442,6 +24110,7 @@ START_TEST(test_from_decimal_to_float_ok2668) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2669) {
     // 0.0000000000000000000000000026
@@ -21450,6 +24119,7 @@ START_TEST(test_from_decimal_to_float_ok2669) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2670) {
     // -0.0000000000000000000000000026
@@ -21458,6 +24128,7 @@ START_TEST(test_from_decimal_to_float_ok2670) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2671) {
     // 0.000000000000000000000000001
@@ -21466,6 +24137,7 @@ START_TEST(test_from_decimal_to_float_ok2671) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2672) {
     // -0.000000000000000000000000001
@@ -21474,6 +24146,7 @@ START_TEST(test_from_decimal_to_float_ok2672) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2673) {
     // 0.0000000000000000000000000026
@@ -21482,6 +24155,7 @@ START_TEST(test_from_decimal_to_float_ok2673) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2674) {
     // -0.0000000000000000000000000026
@@ -21490,6 +24164,7 @@ START_TEST(test_from_decimal_to_float_ok2674) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2675) {
     // 0.0000000000000000000000000009
@@ -21498,6 +24173,7 @@ START_TEST(test_from_decimal_to_float_ok2675) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2676) {
     // -0.0000000000000000000000000009
@@ -21506,6 +24182,7 @@ START_TEST(test_from_decimal_to_float_ok2676) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2677) {
     // 0.0000000000000000000000000024
@@ -21514,6 +24191,7 @@ START_TEST(test_from_decimal_to_float_ok2677) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2678) {
     // -0.0000000000000000000000000024
@@ -21522,6 +24200,7 @@ START_TEST(test_from_decimal_to_float_ok2678) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2679) {
     // 0.0000000000000000000000000008
@@ -21530,6 +24209,7 @@ START_TEST(test_from_decimal_to_float_ok2679) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2680) {
     // -0.0000000000000000000000000008
@@ -21538,6 +24218,7 @@ START_TEST(test_from_decimal_to_float_ok2680) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2681) {
     // 0.0000000000000000000000000021
@@ -21546,6 +24227,7 @@ START_TEST(test_from_decimal_to_float_ok2681) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2682) {
     // -0.0000000000000000000000000021
@@ -21554,6 +24236,7 @@ START_TEST(test_from_decimal_to_float_ok2682) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2683) {
     // 0.0000000000000000000000000007
@@ -21562,6 +24245,7 @@ START_TEST(test_from_decimal_to_float_ok2683) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2684) {
     // -0.0000000000000000000000000007
@@ -21570,6 +24254,7 @@ START_TEST(test_from_decimal_to_float_ok2684) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2685) {
     // 0.0000000000000000000000000019
@@ -21578,6 +24263,7 @@ START_TEST(test_from_decimal_to_float_ok2685) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2686) {
     // -0.0000000000000000000000000019
@@ -21586,6 +24272,7 @@ START_TEST(test_from_decimal_to_float_ok2686) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2687) {
     // 0.0000000000000000000000000006
@@ -21594,6 +24281,7 @@ START_TEST(test_from_decimal_to_float_ok2687) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2688) {
     // -0.0000000000000000000000000006
@@ -21602,6 +24290,7 @@ START_TEST(test_from_decimal_to_float_ok2688) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2689) {
     // 0.0000000000000000000000000016
@@ -21610,6 +24299,7 @@ START_TEST(test_from_decimal_to_float_ok2689) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2690) {
     // -0.0000000000000000000000000016
@@ -21618,6 +24308,7 @@ START_TEST(test_from_decimal_to_float_ok2690) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2691) {
     // 0.0000000000000000000000000005
@@ -21626,6 +24317,7 @@ START_TEST(test_from_decimal_to_float_ok2691) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2692) {
     // -0.0000000000000000000000000005
@@ -21634,6 +24326,7 @@ START_TEST(test_from_decimal_to_float_ok2692) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2693) {
     // 0.0000000000000000000000000013
@@ -21642,6 +24335,7 @@ START_TEST(test_from_decimal_to_float_ok2693) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2694) {
     // -0.0000000000000000000000000013
@@ -21650,6 +24344,7 @@ START_TEST(test_from_decimal_to_float_ok2694) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2695) {
     // 0.0000000000000000000000000002
@@ -21658,6 +24353,7 @@ START_TEST(test_from_decimal_to_float_ok2695) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2696) {
     // -0.0000000000000000000000000002
@@ -21666,6 +24362,7 @@ START_TEST(test_from_decimal_to_float_ok2696) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2697) {
     // 0.0000000000000000000000000005
@@ -21674,6 +24371,7 @@ START_TEST(test_from_decimal_to_float_ok2697) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2698) {
     // -0.0000000000000000000000000005
@@ -21682,6 +24380,7 @@ START_TEST(test_from_decimal_to_float_ok2698) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2699) {
     // -74.480137439345584702087388557
@@ -21690,6 +24389,7 @@ START_TEST(test_from_decimal_to_float_ok2699) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2700) {
     // 74.480137439345584702087388557
@@ -21698,6 +24398,7 @@ START_TEST(test_from_decimal_to_float_ok2700) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2701) {
     // -707216354327705.20499672958519
@@ -21706,6 +24407,7 @@ START_TEST(test_from_decimal_to_float_ok2701) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2702) {
     // 707216354327705.20499672958519
@@ -21714,6 +24416,7 @@ START_TEST(test_from_decimal_to_float_ok2702) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2703) {
     // -30113499574338076073415.593135
@@ -21722,6 +24425,7 @@ START_TEST(test_from_decimal_to_float_ok2703) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2704) {
     // 30113499574338076073415.593135
@@ -21730,6 +24434,7 @@ START_TEST(test_from_decimal_to_float_ok2704) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2705) {
     // 3767815455364659.0595421514999
@@ -21738,6 +24443,7 @@ START_TEST(test_from_decimal_to_float_ok2705) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2706) {
     // -3767815455364659.0595421514999
@@ -21746,6 +24452,7 @@ START_TEST(test_from_decimal_to_float_ok2706) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2707) {
     // 9984710956716346.507786701475
@@ -21754,6 +24461,7 @@ START_TEST(test_from_decimal_to_float_ok2707) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2708) {
     // -9984710956716346.507786701475
@@ -21762,6 +24470,7 @@ START_TEST(test_from_decimal_to_float_ok2708) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2709) {
     // -1588853424175384174481932210.4
@@ -21770,6 +24479,7 @@ START_TEST(test_from_decimal_to_float_ok2709) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2710) {
     // 1588853424175384174481932210.4
@@ -21778,6 +24488,7 @@ START_TEST(test_from_decimal_to_float_ok2710) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2711) {
     // 75.858218060473456186462972172
@@ -21786,6 +24497,7 @@ START_TEST(test_from_decimal_to_float_ok2711) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2712) {
     // -75.858218060473456186462972172
@@ -21794,6 +24506,7 @@ START_TEST(test_from_decimal_to_float_ok2712) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2713) {
     // 201.02427786025465889412687626
@@ -21802,6 +24515,7 @@ START_TEST(test_from_decimal_to_float_ok2713) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2714) {
     // -201.02427786025465889412687626
@@ -21810,6 +24524,7 @@ START_TEST(test_from_decimal_to_float_ok2714) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2715) {
     // -6546090126670298629346063.8085
@@ -21818,6 +24533,7 @@ START_TEST(test_from_decimal_to_float_ok2715) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2716) {
     // 6546090126670298629346063.8085
@@ -21826,6 +24542,7 @@ START_TEST(test_from_decimal_to_float_ok2716) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2717) {
     // 618063.20108048776360152382822
@@ -21834,6 +24551,7 @@ START_TEST(test_from_decimal_to_float_ok2717) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2718) {
     // -618063.20108048776360152382822
@@ -21842,6 +24560,7 @@ START_TEST(test_from_decimal_to_float_ok2718) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2719) {
     // 1637867.4828632925735440381448
@@ -21850,6 +24569,7 @@ START_TEST(test_from_decimal_to_float_ok2719) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2720) {
     // -1637867.4828632925735440381448
@@ -21858,6 +24578,7 @@ START_TEST(test_from_decimal_to_float_ok2720) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2721) {
     // -180846.47423381952561032357389
@@ -21866,6 +24587,7 @@ START_TEST(test_from_decimal_to_float_ok2721) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2722) {
     // 180846.47423381952561032357389
@@ -21874,6 +24596,7 @@ START_TEST(test_from_decimal_to_float_ok2722) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2723) {
     // -14421680709913804744028474.300
@@ -21882,6 +24605,7 @@ START_TEST(test_from_decimal_to_float_ok2723) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2724) {
     // 14421680709913804744028474.300
@@ -21890,6 +24614,7 @@ START_TEST(test_from_decimal_to_float_ok2724) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2725) {
     // 6253.774726481492680847149443
@@ -21898,6 +24623,7 @@ START_TEST(test_from_decimal_to_float_ok2725) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2726) {
     // -6253.774726481492680847149443
@@ -21906,6 +24632,7 @@ START_TEST(test_from_decimal_to_float_ok2726) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2727) {
     // 16572.503025175955604244946024
@@ -21914,6 +24641,7 @@ START_TEST(test_from_decimal_to_float_ok2727) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2728) {
     // -16572.503025175955604244946024
@@ -21922,6 +24650,7 @@ START_TEST(test_from_decimal_to_float_ok2728) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2729) {
     // -7082196176400442549658.3176822
@@ -21930,6 +24659,7 @@ START_TEST(test_from_decimal_to_float_ok2729) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2730) {
     // 7082196176400442549658.3176822
@@ -21938,6 +24668,7 @@ START_TEST(test_from_decimal_to_float_ok2730) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2731) {
     // -488509.53221043611578833938254
@@ -21946,6 +24677,7 @@ START_TEST(test_from_decimal_to_float_ok2731) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2732) {
     // 488509.53221043611578833938254
@@ -21954,6 +24686,7 @@ START_TEST(test_from_decimal_to_float_ok2732) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2733) {
     // 172953407582118818652219.19146
@@ -21962,6 +24695,7 @@ START_TEST(test_from_decimal_to_float_ok2733) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2734) {
     // -172953407582118818652219.19146
@@ -21970,6 +24704,7 @@ START_TEST(test_from_decimal_to_float_ok2734) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2735) {
     // 458326530092614869428380.85737
@@ -21978,6 +24713,7 @@ START_TEST(test_from_decimal_to_float_ok2735) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2736) {
     // -458326530092614869428380.85737
@@ -21986,6 +24722,7 @@ START_TEST(test_from_decimal_to_float_ok2736) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2737) {
     // 3787100776879547504704301.8964
@@ -21994,6 +24731,7 @@ START_TEST(test_from_decimal_to_float_ok2737) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2738) {
     // -3787100776879547504704301.8964
@@ -22002,6 +24740,7 @@ START_TEST(test_from_decimal_to_float_ok2738) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2739) {
     // 10035817058730800887466400.025
@@ -22010,6 +24749,7 @@ START_TEST(test_from_decimal_to_float_ok2739) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2740) {
     // -10035817058730800887466400.025
@@ -22018,6 +24758,7 @@ START_TEST(test_from_decimal_to_float_ok2740) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2741) {
     // -223547467983110812587687797.56
@@ -22026,6 +24767,7 @@ START_TEST(test_from_decimal_to_float_ok2741) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2742) {
     // 223547467983110812587687797.56
@@ -22034,6 +24776,7 @@ START_TEST(test_from_decimal_to_float_ok2742) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2743) {
     // 6.5158415616965485085895604306
@@ -22042,6 +24785,7 @@ START_TEST(test_from_decimal_to_float_ok2743) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2744) {
     // -6.5158415616965485085895604306
@@ -22050,6 +24794,7 @@ START_TEST(test_from_decimal_to_float_ok2744) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2745) {
     // 17.266980138495853547762335141
@@ -22058,6 +24803,7 @@ START_TEST(test_from_decimal_to_float_ok2745) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2746) {
     // -17.266980138495853547762335141
@@ -22066,6 +24812,7 @@ START_TEST(test_from_decimal_to_float_ok2746) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2747) {
     // 4394437465006129733366081911.8
@@ -22074,6 +24821,7 @@ START_TEST(test_from_decimal_to_float_ok2747) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2748) {
     // -4394437465006129733366081911.8
@@ -22082,6 +24830,7 @@ START_TEST(test_from_decimal_to_float_ok2748) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2749) {
     // 11645259282266243793420117066
@@ -22090,6 +24839,7 @@ START_TEST(test_from_decimal_to_float_ok2749) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2750) {
     // -11645259282266243793420117066
@@ -22098,6 +24848,7 @@ START_TEST(test_from_decimal_to_float_ok2750) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2751) {
     // 61280349830122.184433173492445
@@ -22106,6 +24857,7 @@ START_TEST(test_from_decimal_to_float_ok2751) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2752) {
     // -61280349830122.184433173492445
@@ -22114,6 +24866,7 @@ START_TEST(test_from_decimal_to_float_ok2752) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2753) {
     // 162392927049823.78874790975498
@@ -22122,6 +24875,7 @@ START_TEST(test_from_decimal_to_float_ok2753) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2754) {
     // -162392927049823.78874790975498
@@ -22130,6 +24884,7 @@ START_TEST(test_from_decimal_to_float_ok2754) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2755) {
     // -2399091857700314230.3617516599
@@ -22138,6 +24893,7 @@ START_TEST(test_from_decimal_to_float_ok2755) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2756) {
     // 2399091857700314230.3617516599
@@ -22146,6 +24902,7 @@ START_TEST(test_from_decimal_to_float_ok2756) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2757) {
     // 68347782095756730979673567.960
@@ -22154,6 +24911,7 @@ START_TEST(test_from_decimal_to_float_ok2757) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2758) {
     // -68347782095756730979673567.960
@@ -22162,6 +24920,7 @@ START_TEST(test_from_decimal_to_float_ok2758) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2759) {
     // 181121622553755337096134955.09
@@ -22170,6 +24929,7 @@ START_TEST(test_from_decimal_to_float_ok2759) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2760) {
     // -181121622553755337096134955.09
@@ -22178,6 +24938,7 @@ START_TEST(test_from_decimal_to_float_ok2760) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2761) {
     // -1402964867039366655439841.1693
@@ -22186,6 +24947,7 @@ START_TEST(test_from_decimal_to_float_ok2761) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2762) {
     // 1402964867039366655439841.1693
@@ -22194,6 +24956,7 @@ START_TEST(test_from_decimal_to_float_ok2762) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2763) {
     // -715487.39597650549753497694441
@@ -22202,6 +24965,7 @@ START_TEST(test_from_decimal_to_float_ok2763) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2764) {
     // 715487.39597650549753497694441
@@ -22210,6 +24974,7 @@ START_TEST(test_from_decimal_to_float_ok2764) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2765) {
     // -34833868388725931168844804.53
@@ -22218,6 +24983,7 @@ START_TEST(test_from_decimal_to_float_ok2765) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2766) {
     // 34833868388725931168844804.53
@@ -22226,6 +24992,7 @@ START_TEST(test_from_decimal_to_float_ok2766) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2767) {
     // -298.08658136171840829973070601
@@ -22234,6 +25001,7 @@ START_TEST(test_from_decimal_to_float_ok2767) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2768) {
     // 298.08658136171840829973070601
@@ -22242,6 +25010,7 @@ START_TEST(test_from_decimal_to_float_ok2768) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2769) {
     // -3042.250815899088171280535601
@@ -22250,6 +25019,7 @@ START_TEST(test_from_decimal_to_float_ok2769) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2770) {
     // 3042.250815899088171280535601
@@ -22258,6 +25028,7 @@ START_TEST(test_from_decimal_to_float_ok2770) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2771) {
     // -37746384098941345.5879658514
@@ -22266,6 +25037,7 @@ START_TEST(test_from_decimal_to_float_ok2771) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2772) {
     // 37746384098941345.5879658514
@@ -22274,6 +25046,7 @@ START_TEST(test_from_decimal_to_float_ok2772) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2773) {
     // 386186822993185716.24860550905
@@ -22282,6 +25055,7 @@ START_TEST(test_from_decimal_to_float_ok2773) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2774) {
     // -386186822993185716.24860550905
@@ -22290,6 +25064,7 @@ START_TEST(test_from_decimal_to_float_ok2774) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2775) {
     // 1023395080931942148.0588045990
@@ -22298,6 +25073,7 @@ START_TEST(test_from_decimal_to_float_ok2775) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2776) {
     // -1023395080931942148.0588045990
@@ -22306,6 +25082,7 @@ START_TEST(test_from_decimal_to_float_ok2776) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2777) {
     // 46580658162365506.641916242469
@@ -22314,6 +25091,7 @@ START_TEST(test_from_decimal_to_float_ok2777) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2778) {
     // -46580658162365506.641916242469
@@ -22322,6 +25100,7 @@ START_TEST(test_from_decimal_to_float_ok2778) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2779) {
     // 123438744130268592.60107804254
@@ -22330,6 +25109,7 @@ START_TEST(test_from_decimal_to_float_ok2779) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2780) {
     // -123438744130268592.60107804254
@@ -22338,6 +25118,7 @@ START_TEST(test_from_decimal_to_float_ok2780) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2781) {
     // -16185631917239.487054135249187
@@ -22346,6 +25127,7 @@ START_TEST(test_from_decimal_to_float_ok2781) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2782) {
     // 16185631917239.487054135249187
@@ -22354,6 +25136,7 @@ START_TEST(test_from_decimal_to_float_ok2782) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2783) {
     // 27163012.072470913874254638039
@@ -22362,6 +25145,7 @@ START_TEST(test_from_decimal_to_float_ok2783) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2784) {
     // -27163012.072470913874254638039
@@ -22370,6 +25154,7 @@ START_TEST(test_from_decimal_to_float_ok2784) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2785) {
     // 71981981.992047921766774790803
@@ -22378,6 +25163,7 @@ START_TEST(test_from_decimal_to_float_ok2785) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2786) {
     // -71981981.992047921766774790803
@@ -22386,6 +25172,7 @@ START_TEST(test_from_decimal_to_float_ok2786) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2787) {
     // -9495785847899.104520209877024
@@ -22394,6 +25181,7 @@ START_TEST(test_from_decimal_to_float_ok2787) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2788) {
     // 9495785847899.104520209877024
@@ -22402,6 +25190,7 @@ START_TEST(test_from_decimal_to_float_ok2788) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2789) {
     // -500954892511564861677201924.19
@@ -22410,6 +25199,7 @@ START_TEST(test_from_decimal_to_float_ok2789) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2790) {
     // 500954892511564861677201924.19
@@ -22418,6 +25208,7 @@ START_TEST(test_from_decimal_to_float_ok2790) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2791) {
     // -44.35535595279154023262239660
@@ -22426,6 +25217,7 @@ START_TEST(test_from_decimal_to_float_ok2791) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2792) {
     // 44.35535595279154023262239660
@@ -22434,6 +25226,7 @@ START_TEST(test_from_decimal_to_float_ok2792) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2793) {
     // -43745439936342314133550.935623
@@ -22442,6 +25235,7 @@ START_TEST(test_from_decimal_to_float_ok2793) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2794) {
     // 43745439936342314133550.935623
@@ -22450,6 +25244,7 @@ START_TEST(test_from_decimal_to_float_ok2794) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2795) {
     // -100458361276723384827922.59486
@@ -22458,6 +25253,7 @@ START_TEST(test_from_decimal_to_float_ok2795) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2796) {
     // 100458361276723384827922.59486
@@ -22466,6 +25262,7 @@ START_TEST(test_from_decimal_to_float_ok2796) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2797) {
     // 30812421697105527295135.665140
@@ -22474,6 +25271,7 @@ START_TEST(test_from_decimal_to_float_ok2797) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2798) {
     // -30812421697105527295135.665140
@@ -22482,6 +25280,7 @@ START_TEST(test_from_decimal_to_float_ok2798) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2799) {
     // 81652917497329647332109.51262
@@ -22490,6 +25289,7 @@ START_TEST(test_from_decimal_to_float_ok2799) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2800) {
     // -81652917497329647332109.51262
@@ -22498,6 +25298,7 @@ START_TEST(test_from_decimal_to_float_ok2800) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2801) {
     // 121.77569675231889723724755461
@@ -22506,6 +25307,7 @@ START_TEST(test_from_decimal_to_float_ok2801) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2802) {
     // -121.77569675231889723724755461
@@ -22514,6 +25316,7 @@ START_TEST(test_from_decimal_to_float_ok2802) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2803) {
     // 322.70559639364507767870601972
@@ -22522,6 +25325,7 @@ START_TEST(test_from_decimal_to_float_ok2803) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2804) {
     // -322.70559639364507767870601972
@@ -22530,6 +25334,7 @@ START_TEST(test_from_decimal_to_float_ok2804) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2805) {
     // -275458677.30462452136441601574
@@ -22538,6 +25343,7 @@ START_TEST(test_from_decimal_to_float_ok2805) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2806) {
     // 275458677.30462452136441601574
@@ -22546,6 +25352,7 @@ START_TEST(test_from_decimal_to_float_ok2806) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2807) {
     // -3726351096.2403836362110384387
@@ -22554,6 +25361,7 @@ START_TEST(test_from_decimal_to_float_ok2807) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2808) {
     // 3726351096.2403836362110384387
@@ -22562,6 +25370,7 @@ START_TEST(test_from_decimal_to_float_ok2808) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2809) {
     // 2930121585227883079.2083551099
@@ -22570,6 +25379,7 @@ START_TEST(test_from_decimal_to_float_ok2809) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2810) {
     // -2930121585227883079.2083551099
@@ -22578,6 +25388,7 @@ START_TEST(test_from_decimal_to_float_ok2810) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2811) {
     // 7764822200853890159.9021410412
@@ -22586,6 +25397,7 @@ START_TEST(test_from_decimal_to_float_ok2811) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2812) {
     // -7764822200853890159.9021410412
@@ -22594,6 +25406,7 @@ START_TEST(test_from_decimal_to_float_ok2812) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2813) {
     // -6222144677359834986820649.7317
@@ -22602,6 +25415,7 @@ START_TEST(test_from_decimal_to_float_ok2813) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2814) {
     // 6222144677359834986820649.7317
@@ -22610,6 +25424,7 @@ START_TEST(test_from_decimal_to_float_ok2814) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2815) {
     // -2437705867.5690297391042587265
@@ -22618,6 +25433,7 @@ START_TEST(test_from_decimal_to_float_ok2815) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2816) {
     // 2437705867.5690297391042587265
@@ -22626,6 +25442,7 @@ START_TEST(test_from_decimal_to_float_ok2816) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2817) {
     // 72797.929876778195904824940162
@@ -22634,6 +25451,7 @@ START_TEST(test_from_decimal_to_float_ok2817) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2818) {
     // -72797.929876778195904824940162
@@ -22642,6 +25460,7 @@ START_TEST(test_from_decimal_to_float_ok2818) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2819) {
     // 192914.51417346221914778609143
@@ -22650,6 +25469,7 @@ START_TEST(test_from_decimal_to_float_ok2819) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2820) {
     // -192914.51417346221914778609143
@@ -22658,6 +25478,7 @@ START_TEST(test_from_decimal_to_float_ok2820) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2821) {
     // 5958093606.2409953034437696105
@@ -22666,6 +25487,7 @@ START_TEST(test_from_decimal_to_float_ok2821) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2822) {
     // -5958093606.2409953034437696105
@@ -22674,6 +25496,7 @@ START_TEST(test_from_decimal_to_float_ok2822) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2823) {
     // 15788948056.538637554125989468
@@ -22682,6 +25505,7 @@ START_TEST(test_from_decimal_to_float_ok2823) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2824) {
     // -15788948056.538637554125989468
@@ -22690,6 +25514,7 @@ START_TEST(test_from_decimal_to_float_ok2824) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2825) {
     // -23986580783.570224924782735419
@@ -22698,6 +25523,7 @@ START_TEST(test_from_decimal_to_float_ok2825) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2826) {
     // 23986580783.570224924782735419
@@ -22706,6 +25532,7 @@ START_TEST(test_from_decimal_to_float_ok2826) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2827) {
     // 4006759048403747138004987.5864
@@ -22714,6 +25541,7 @@ START_TEST(test_from_decimal_to_float_ok2827) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2828) {
     // -4006759048403747138004987.5864
@@ -22722,6 +25550,7 @@ START_TEST(test_from_decimal_to_float_ok2828) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2829) {
     // 10617911478269929915713217.104
@@ -22730,6 +25559,7 @@ START_TEST(test_from_decimal_to_float_ok2829) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2830) {
     // -10617911478269929915713217.104
@@ -22738,6 +25568,7 @@ START_TEST(test_from_decimal_to_float_ok2830) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2831) {
     // 576525604034759079.72203094345
@@ -22746,6 +25577,7 @@ START_TEST(test_from_decimal_to_float_ok2831) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2832) {
     // -576525604034759079.72203094345
@@ -22754,6 +25586,7 @@ START_TEST(test_from_decimal_to_float_ok2832) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2833) {
     // 1527792850692111561.2633820001
@@ -22762,6 +25595,7 @@ START_TEST(test_from_decimal_to_float_ok2833) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2834) {
     // -1527792850692111561.2633820001
@@ -22770,6 +25604,7 @@ START_TEST(test_from_decimal_to_float_ok2834) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2835) {
     // 7910449843962760716.8098314806
@@ -22778,6 +25613,7 @@ START_TEST(test_from_decimal_to_float_ok2835) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2836) {
     // -7910449843962760716.8098314806
@@ -22786,6 +25622,7 @@ START_TEST(test_from_decimal_to_float_ok2836) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2837) {
     // 20962692086501315899.546053424
@@ -22794,6 +25631,7 @@ START_TEST(test_from_decimal_to_float_ok2837) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2838) {
     // -20962692086501315899.546053424
@@ -22802,6 +25640,7 @@ START_TEST(test_from_decimal_to_float_ok2838) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2839) {
     // -3660.7158872771885767716774831
@@ -22810,6 +25649,7 @@ START_TEST(test_from_decimal_to_float_ok2839) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2840) {
     // 3660.7158872771885767716774831
@@ -22818,6 +25658,7 @@ START_TEST(test_from_decimal_to_float_ok2840) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2841) {
     // 21990562900090841.565937502928
@@ -22826,6 +25667,7 @@ START_TEST(test_from_decimal_to_float_ok2841) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2842) {
     // -21990562900090841.565937502928
@@ -22834,6 +25676,7 @@ START_TEST(test_from_decimal_to_float_ok2842) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2843) {
     // 58274991685240730.149734382759
@@ -22842,6 +25685,7 @@ START_TEST(test_from_decimal_to_float_ok2843) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2844) {
     // -58274991685240730.149734382759
@@ -22850,6 +25694,7 @@ START_TEST(test_from_decimal_to_float_ok2844) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2845) {
     // 172.6044129979876740801891049
@@ -22858,6 +25703,7 @@ START_TEST(test_from_decimal_to_float_ok2845) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2846) {
     // -172.6044129979876740801891049
@@ -22866,6 +25712,7 @@ START_TEST(test_from_decimal_to_float_ok2846) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2847) {
     // 457.40169444466733631250112798
@@ -22874,6 +25721,7 @@ START_TEST(test_from_decimal_to_float_ok2847) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2848) {
     // -457.40169444466733631250112798
@@ -22882,6 +25730,7 @@ START_TEST(test_from_decimal_to_float_ok2848) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2849) {
     // -7191528565507.8550312060321276
@@ -22890,6 +25739,7 @@ START_TEST(test_from_decimal_to_float_ok2849) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2850) {
     // 7191528565507.8550312060321276
@@ -22898,6 +25748,7 @@ START_TEST(test_from_decimal_to_float_ok2850) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2851) {
     // 2960337636779957076325512.6284
@@ -22906,6 +25757,7 @@ START_TEST(test_from_decimal_to_float_ok2851) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2852) {
     // -2960337636779957076325512.6284
@@ -22914,6 +25766,7 @@ START_TEST(test_from_decimal_to_float_ok2852) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2853) {
     // 7844894737466886252262608.4653
@@ -22922,6 +25775,7 @@ START_TEST(test_from_decimal_to_float_ok2853) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2854) {
     // -7844894737466886252262608.4653
@@ -22930,6 +25784,7 @@ START_TEST(test_from_decimal_to_float_ok2854) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2855) {
     // 16527972740465756100208598072
@@ -22938,6 +25793,7 @@ START_TEST(test_from_decimal_to_float_ok2855) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2856) {
     // -16527972740465756100208598072
@@ -22946,6 +25802,7 @@ START_TEST(test_from_decimal_to_float_ok2856) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2857) {
     // 43799127762234253665552784891
@@ -22954,6 +25811,7 @@ START_TEST(test_from_decimal_to_float_ok2857) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2858) {
     // -43799127762234253665552784891
@@ -22962,6 +25820,7 @@ START_TEST(test_from_decimal_to_float_ok2858) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2859) {
     // -46575427744442408129160.071313
@@ -22970,6 +25829,7 @@ START_TEST(test_from_decimal_to_float_ok2859) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2860) {
     // 46575427744442408129160.071313
@@ -22978,6 +25838,7 @@ START_TEST(test_from_decimal_to_float_ok2860) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2861) {
     // 6499015486794033125888006738.3
@@ -22986,6 +25847,7 @@ START_TEST(test_from_decimal_to_float_ok2861) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2862) {
     // -6499015486794033125888006738.3
@@ -22994,6 +25856,7 @@ START_TEST(test_from_decimal_to_float_ok2862) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2863) {
     // 17222391040004187783603217856
@@ -23002,6 +25865,7 @@ START_TEST(test_from_decimal_to_float_ok2863) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2864) {
     // -17222391040004187783603217856
@@ -23010,6 +25874,7 @@ START_TEST(test_from_decimal_to_float_ok2864) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2865) {
     // 5115906754.9553556149517655662
@@ -23018,6 +25883,7 @@ START_TEST(test_from_decimal_to_float_ok2865) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2866) {
     // -5115906754.9553556149517655662
@@ -23026,6 +25892,7 @@ START_TEST(test_from_decimal_to_float_ok2866) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2867) {
     // 13557152900.631692379622178750
@@ -23034,6 +25901,7 @@ START_TEST(test_from_decimal_to_float_ok2867) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2868) {
     // -13557152900.631692379622178750
@@ -23042,6 +25910,7 @@ START_TEST(test_from_decimal_to_float_ok2868) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2869) {
     // 167153540609732172335693777.50
@@ -23050,6 +25919,7 @@ START_TEST(test_from_decimal_to_float_ok2869) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2870) {
     // -167153540609732172335693777.50
@@ -23058,6 +25928,7 @@ START_TEST(test_from_decimal_to_float_ok2870) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2871) {
     // 442956882615790256689588510.38
@@ -23066,6 +25937,7 @@ START_TEST(test_from_decimal_to_float_ok2871) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2872) {
     // -442956882615790256689588510.38
@@ -23074,6 +25946,7 @@ START_TEST(test_from_decimal_to_float_ok2872) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2873) {
     // -64760211094.907863771535427066
@@ -23082,6 +25955,7 @@ START_TEST(test_from_decimal_to_float_ok2873) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2874) {
     // 64760211094.907863771535427066
@@ -23090,6 +25964,7 @@ START_TEST(test_from_decimal_to_float_ok2874) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2875) {
     // 24851896091615706619276474652
@@ -23098,6 +25973,7 @@ START_TEST(test_from_decimal_to_float_ok2875) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2876) {
     // -24851896091615706619276474652
@@ -23106,6 +25982,7 @@ START_TEST(test_from_decimal_to_float_ok2876) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2877) {
     // 65857524642781622541082657828
@@ -23114,6 +25991,7 @@ START_TEST(test_from_decimal_to_float_ok2877) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2878) {
     // -65857524642781622541082657828
@@ -23122,6 +26000,7 @@ START_TEST(test_from_decimal_to_float_ok2878) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2879) {
     // 667485227162257682865844.26974
@@ -23130,6 +26009,7 @@ START_TEST(test_from_decimal_to_float_ok2879) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2880) {
     // -667485227162257682865844.26974
@@ -23138,6 +26018,7 @@ START_TEST(test_from_decimal_to_float_ok2880) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2881) {
     // 1768835851979982859594487.3148
@@ -23146,6 +26027,7 @@ START_TEST(test_from_decimal_to_float_ok2881) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2882) {
     // -1768835851979982859594487.3148
@@ -23154,6 +26036,7 @@ START_TEST(test_from_decimal_to_float_ok2882) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2883) {
     // 6392704529.0652472098245201586
@@ -23162,6 +26045,7 @@ START_TEST(test_from_decimal_to_float_ok2883) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2884) {
     // -6392704529.0652472098245201586
@@ -23170,6 +26054,7 @@ START_TEST(test_from_decimal_to_float_ok2884) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2885) {
     // 16940667002.022905106034978420
@@ -23178,6 +26063,7 @@ START_TEST(test_from_decimal_to_float_ok2885) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2886) {
     // -16940667002.022905106034978420
@@ -23186,6 +26072,7 @@ START_TEST(test_from_decimal_to_float_ok2886) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2887) {
     // 2883274749238465983.7304435580
@@ -23194,6 +26081,7 @@ START_TEST(test_from_decimal_to_float_ok2887) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2888) {
     // -2883274749238465983.7304435580
@@ -23202,6 +26090,7 @@ START_TEST(test_from_decimal_to_float_ok2888) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2889) {
     // 7640678085481934856.8856754287
@@ -23210,6 +26099,7 @@ START_TEST(test_from_decimal_to_float_ok2889) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2890) {
     // -7640678085481934856.8856754287
@@ -23218,6 +26108,7 @@ START_TEST(test_from_decimal_to_float_ok2890) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2891) {
     // -26.59156610430788307663258919
@@ -23226,6 +26117,7 @@ START_TEST(test_from_decimal_to_float_ok2891) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2892) {
     // 26.59156610430788307663258919
@@ -23234,6 +26126,7 @@ START_TEST(test_from_decimal_to_float_ok2892) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2893) {
     // 181861329104367322871.89908616
@@ -23242,6 +26135,7 @@ START_TEST(test_from_decimal_to_float_ok2893) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2894) {
     // -181861329104367322871.89908616
@@ -23250,6 +26144,7 @@ START_TEST(test_from_decimal_to_float_ok2894) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2895) {
     // 481932522126573405610.53257832
@@ -23258,6 +26153,7 @@ START_TEST(test_from_decimal_to_float_ok2895) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2896) {
     // -481932522126573405610.53257832
@@ -23266,6 +26162,7 @@ START_TEST(test_from_decimal_to_float_ok2896) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2897) {
     // 238209951023789175.1316618262
@@ -23274,6 +26171,7 @@ START_TEST(test_from_decimal_to_float_ok2897) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2898) {
     // -238209951023789175.1316618262
@@ -23282,6 +26180,7 @@ START_TEST(test_from_decimal_to_float_ok2898) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2899) {
     // 631256370213041314.09890383943
@@ -23290,6 +26189,7 @@ START_TEST(test_from_decimal_to_float_ok2899) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2900) {
     // -631256370213041314.09890383943
@@ -23298,6 +26198,7 @@ START_TEST(test_from_decimal_to_float_ok2900) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2901) {
     // 774102779503145193955720017.98
@@ -23306,6 +26207,7 @@ START_TEST(test_from_decimal_to_float_ok2901) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2902) {
     // -774102779503145193955720017.98
@@ -23314,6 +26216,7 @@ START_TEST(test_from_decimal_to_float_ok2902) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2903) {
     // 2051372365683334763982658047.6
@@ -23322,6 +26225,7 @@ START_TEST(test_from_decimal_to_float_ok2903) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2904) {
     // -2051372365683334763982658047.6
@@ -23330,6 +26234,7 @@ START_TEST(test_from_decimal_to_float_ok2904) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2905) {
     // 214943.56939676903858970942958
@@ -23338,6 +26243,7 @@ START_TEST(test_from_decimal_to_float_ok2905) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2906) {
     // -214943.56939676903858970942958
@@ -23346,6 +26252,7 @@ START_TEST(test_from_decimal_to_float_ok2906) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2907) {
     // 569600.45890143795226272998839
@@ -23354,6 +26261,7 @@ START_TEST(test_from_decimal_to_float_ok2907) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2908) {
     // -569600.45890143795226272998839
@@ -23362,6 +26270,7 @@ START_TEST(test_from_decimal_to_float_ok2908) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2909) {
     // -125.50633141010857506240965055
@@ -23370,6 +26279,7 @@ START_TEST(test_from_decimal_to_float_ok2909) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2910) {
     // 125.50633141010857506240965055
@@ -23378,6 +26288,7 @@ START_TEST(test_from_decimal_to_float_ok2910) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2911) {
     // 4141348044.3103393189303501369
@@ -23386,6 +26297,7 @@ START_TEST(test_from_decimal_to_float_ok2911) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2912) {
     // -4141348044.3103393189303501369
@@ -23394,6 +26306,7 @@ START_TEST(test_from_decimal_to_float_ok2912) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2913) {
     // 10974572317.422399195165427863
@@ -23402,6 +26315,7 @@ START_TEST(test_from_decimal_to_float_ok2913) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2914) {
     // -10974572317.422399195165427863
@@ -23410,6 +26324,7 @@ START_TEST(test_from_decimal_to_float_ok2914) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2915) {
     // -5304328.4233962111155102960519
@@ -23418,6 +26333,7 @@ START_TEST(test_from_decimal_to_float_ok2915) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2916) {
     // 5304328.4233962111155102960519
@@ -23426,6 +26342,7 @@ START_TEST(test_from_decimal_to_float_ok2916) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2917) {
     // 62814155103982795562.748931359
@@ -23434,6 +26351,7 @@ START_TEST(test_from_decimal_to_float_ok2917) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2918) {
     // -62814155103982795562.748931359
@@ -23442,6 +26360,7 @@ START_TEST(test_from_decimal_to_float_ok2918) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2919) {
     // 166457511025554408241.28466810
@@ -23450,6 +26369,7 @@ START_TEST(test_from_decimal_to_float_ok2919) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2920) {
     // -166457511025554408241.28466810
@@ -23458,6 +26378,7 @@ START_TEST(test_from_decimal_to_float_ok2920) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2921) {
     // 382003.04832947347589213408121
@@ -23466,6 +26387,7 @@ START_TEST(test_from_decimal_to_float_ok2921) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2922) {
     // -382003.04832947347589213408121
@@ -23474,6 +26396,7 @@ START_TEST(test_from_decimal_to_float_ok2922) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2923) {
     // 1012308.0780731047111141553152
@@ -23482,6 +26405,7 @@ START_TEST(test_from_decimal_to_float_ok2923) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2924) {
     // -1012308.0780731047111141553152
@@ -23490,6 +26414,7 @@ START_TEST(test_from_decimal_to_float_ok2924) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2925) {
     // 7324236675322028995990496058.1
@@ -23498,6 +26423,7 @@ START_TEST(test_from_decimal_to_float_ok2925) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2926) {
     // -7324236675322028995990496058.1
@@ -23506,6 +26432,7 @@ START_TEST(test_from_decimal_to_float_ok2926) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2927) {
     // 19409227189603376839374814554
@@ -23514,6 +26441,7 @@ START_TEST(test_from_decimal_to_float_ok2927) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2928) {
     // -19409227189603376839374814554
@@ -23522,6 +26450,7 @@ START_TEST(test_from_decimal_to_float_ok2928) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2929) {
     // 7100.4442399135243583507830677
@@ -23530,6 +26459,7 @@ START_TEST(test_from_decimal_to_float_ok2929) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2930) {
     // -7100.4442399135243583507830677
@@ -23538,6 +26468,7 @@ START_TEST(test_from_decimal_to_float_ok2930) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2931) {
     // 18816.177235770839549629575129
@@ -23546,6 +26477,7 @@ START_TEST(test_from_decimal_to_float_ok2931) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2932) {
     // -18816.177235770839549629575129
@@ -23554,6 +26486,7 @@ START_TEST(test_from_decimal_to_float_ok2932) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2933) {
     // -388685.46966452281385992039031
@@ -23562,6 +26495,7 @@ START_TEST(test_from_decimal_to_float_ok2933) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2934) {
     // 388685.46966452281385992039031
@@ -23570,6 +26504,7 @@ START_TEST(test_from_decimal_to_float_ok2934) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2935) {
     // -59298.420110173734583282687825
@@ -23578,6 +26513,7 @@ START_TEST(test_from_decimal_to_float_ok2935) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2936) {
     // 59298.420110173734583282687825
@@ -23586,6 +26522,7 @@ START_TEST(test_from_decimal_to_float_ok2936) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2937) {
     // 193637924652.9518719720512598
@@ -23594,6 +26531,7 @@ START_TEST(test_from_decimal_to_float_ok2937) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2938) {
     // -193637924652.9518719720512598
@@ -23602,6 +26540,7 @@ START_TEST(test_from_decimal_to_float_ok2938) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2939) {
     // 513140500330.32246072593583847
@@ -23610,6 +26549,7 @@ START_TEST(test_from_decimal_to_float_ok2939) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2940) {
     // -513140500330.32246072593583847
@@ -23618,6 +26558,7 @@ START_TEST(test_from_decimal_to_float_ok2940) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2941) {
     // 22985891230.286628444002574701
@@ -23626,6 +26567,7 @@ START_TEST(test_from_decimal_to_float_ok2941) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2942) {
     // -22985891230.286628444002574701
@@ -23634,6 +26576,7 @@ START_TEST(test_from_decimal_to_float_ok2942) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2943) {
     // 60912611760.259565376606822958
@@ -23642,6 +26585,7 @@ START_TEST(test_from_decimal_to_float_ok2943) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2944) {
     // -60912611760.259565376606822958
@@ -23650,6 +26594,7 @@ START_TEST(test_from_decimal_to_float_ok2944) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2945) {
     // -2223897579307571762450.2781231
@@ -23658,6 +26603,7 @@ START_TEST(test_from_decimal_to_float_ok2945) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2946) {
     // 2223897579307571762450.2781231
@@ -23666,6 +26612,7 @@ START_TEST(test_from_decimal_to_float_ok2946) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2947) {
     // 425018566.63775585139358453614
@@ -23674,6 +26621,7 @@ START_TEST(test_from_decimal_to_float_ok2947) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2948) {
     // -425018566.63775585139358453614
@@ -23682,6 +26630,7 @@ START_TEST(test_from_decimal_to_float_ok2948) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2949) {
     // 1126299201.5900530061929990208
@@ -23690,6 +26639,7 @@ START_TEST(test_from_decimal_to_float_ok2949) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2950) {
     // -1126299201.5900530061929990208
@@ -23698,6 +26648,7 @@ START_TEST(test_from_decimal_to_float_ok2950) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2951) {
     // -1116577040805.9696921400824500
@@ -23706,6 +26657,7 @@ START_TEST(test_from_decimal_to_float_ok2951) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2952) {
     // 1116577040805.9696921400824500
@@ -23714,6 +26666,7 @@ START_TEST(test_from_decimal_to_float_ok2952) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2953) {
     // -38905301871769420489788179.649
@@ -23722,6 +26675,7 @@ START_TEST(test_from_decimal_to_float_ok2953) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2954) {
     // 38905301871769420489788179.649
@@ -23730,6 +26684,7 @@ START_TEST(test_from_decimal_to_float_ok2954) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2955) {
     // 23002594240149661603.969415370
@@ -23738,6 +26693,7 @@ START_TEST(test_from_decimal_to_float_ok2955) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2956) {
     // -23002594240149661603.969415370
@@ -23746,6 +26702,7 @@ START_TEST(test_from_decimal_to_float_ok2956) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2957) {
     // 60956874736396603250.518950730
@@ -23754,6 +26711,7 @@ START_TEST(test_from_decimal_to_float_ok2957) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2958) {
     // -60956874736396603250.518950730
@@ -23762,6 +26720,7 @@ START_TEST(test_from_decimal_to_float_ok2958) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2959) {
     // -1336680634144334.0566723074386
@@ -23770,6 +26729,7 @@ START_TEST(test_from_decimal_to_float_ok2959) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2960) {
     // 1336680634144334.0566723074386
@@ -23778,6 +26738,7 @@ START_TEST(test_from_decimal_to_float_ok2960) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2961) {
     // 453174373267952.24546121170341
@@ -23786,6 +26747,7 @@ START_TEST(test_from_decimal_to_float_ok2961) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2962) {
     // -453174373267952.24546121170341
@@ -23794,6 +26756,7 @@ START_TEST(test_from_decimal_to_float_ok2962) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2963) {
     // 1200912089160073.4504722110140
@@ -23802,6 +26765,7 @@ START_TEST(test_from_decimal_to_float_ok2963) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2964) {
     // -1200912089160073.4504722110140
@@ -23810,6 +26774,7 @@ START_TEST(test_from_decimal_to_float_ok2964) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2965) {
     // 293283322329544799329742.32741
@@ -23818,6 +26783,7 @@ START_TEST(test_from_decimal_to_float_ok2965) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2966) {
     // -293283322329544799329742.32741
@@ -23826,6 +26792,7 @@ START_TEST(test_from_decimal_to_float_ok2966) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2967) {
     // 777200804173293718223817.16764
@@ -23834,6 +26801,7 @@ START_TEST(test_from_decimal_to_float_ok2967) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2968) {
     // -777200804173293718223817.16764
@@ -23842,6 +26810,7 @@ START_TEST(test_from_decimal_to_float_ok2968) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2969) {
     // 5615907368745.0822245538007510
@@ -23850,6 +26819,7 @@ START_TEST(test_from_decimal_to_float_ok2969) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2970) {
     // -5615907368745.0822245538007510
@@ -23858,6 +26828,7 @@ START_TEST(test_from_decimal_to_float_ok2970) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2971) {
     // 14882154527174.467895067571990
@@ -23866,6 +26837,7 @@ START_TEST(test_from_decimal_to_float_ok2971) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2972) {
     // -14882154527174.467895067571990
@@ -23874,6 +26846,7 @@ START_TEST(test_from_decimal_to_float_ok2972) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2973) {
     // 214781745268902.04161140991749
@@ -23882,6 +26855,7 @@ START_TEST(test_from_decimal_to_float_ok2973) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2974) {
     // -214781745268902.04161140991749
@@ -23890,6 +26864,7 @@ START_TEST(test_from_decimal_to_float_ok2974) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2975) {
     // 569171624962590.41027023628135
@@ -23898,6 +26873,7 @@ START_TEST(test_from_decimal_to_float_ok2975) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2976) {
     // -569171624962590.41027023628135
@@ -23906,6 +26882,7 @@ START_TEST(test_from_decimal_to_float_ok2976) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2977) {
     // 4671415995485005124052227.1164
@@ -23914,6 +26891,7 @@ START_TEST(test_from_decimal_to_float_ok2977) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2978) {
     // -4671415995485005124052227.1164
@@ -23922,6 +26900,7 @@ START_TEST(test_from_decimal_to_float_ok2978) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2979) {
     // 12379252388035263578738401.858
@@ -23930,6 +26909,7 @@ START_TEST(test_from_decimal_to_float_ok2979) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2980) {
     // -12379252388035263578738401.858
@@ -23938,6 +26918,7 @@ START_TEST(test_from_decimal_to_float_ok2980) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2981) {
     // -3615789679216901074498830.9263
@@ -23946,6 +26927,7 @@ START_TEST(test_from_decimal_to_float_ok2981) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2982) {
     // 3615789679216901074498830.9263
@@ -23954,6 +26936,7 @@ START_TEST(test_from_decimal_to_float_ok2982) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2983) {
     // 53060.163621706810617317876158
@@ -23962,6 +26945,7 @@ START_TEST(test_from_decimal_to_float_ok2983) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2984) {
     // -53060.163621706810617317876158
@@ -23970,6 +26954,7 @@ START_TEST(test_from_decimal_to_float_ok2984) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2985) {
     // 140609.43359752304813589237182
@@ -23978,6 +26963,7 @@ START_TEST(test_from_decimal_to_float_ok2985) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2986) {
     // -140609.43359752304813589237182
@@ -23986,6 +26972,7 @@ START_TEST(test_from_decimal_to_float_ok2986) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2987) {
     // -1143616309268907668.7985196707
@@ -23994,6 +26981,7 @@ START_TEST(test_from_decimal_to_float_ok2987) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2988) {
     // 1143616309268907668.7985196707
@@ -24002,6 +26990,7 @@ START_TEST(test_from_decimal_to_float_ok2988) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2989) {
     // 713368761496294.21933911102069
@@ -24010,6 +26999,7 @@ START_TEST(test_from_decimal_to_float_ok2989) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2990) {
     // -713368761496294.21933911102069
@@ -24018,6 +27008,7 @@ START_TEST(test_from_decimal_to_float_ok2990) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2991) {
     // 1890427217965179.6812486442048
@@ -24026,6 +27017,7 @@ START_TEST(test_from_decimal_to_float_ok2991) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2992) {
     // -1890427217965179.6812486442048
@@ -24034,6 +27026,7 @@ START_TEST(test_from_decimal_to_float_ok2992) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2993) {
     // -2158357433499389766186328.4132
@@ -24042,6 +27035,7 @@ START_TEST(test_from_decimal_to_float_ok2993) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2994) {
     // 2158357433499389766186328.4132
@@ -24050,6 +27044,7 @@ START_TEST(test_from_decimal_to_float_ok2994) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2995) {
     // 362283595485430158141813.86527
@@ -24058,6 +27053,7 @@ START_TEST(test_from_decimal_to_float_ok2995) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2996) {
     // -362283595485430158141813.86527
@@ -24066,6 +27062,7 @@ START_TEST(test_from_decimal_to_float_ok2996) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2997) {
     // 960051528036389919075806.7430
@@ -24074,6 +27071,7 @@ START_TEST(test_from_decimal_to_float_ok2997) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2998) {
     // -960051528036389919075806.7430
@@ -24082,6 +27080,7 @@ START_TEST(test_from_decimal_to_float_ok2998) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok2999) {
     // -22854256882663.873911833232686
@@ -24090,6 +27089,7 @@ START_TEST(test_from_decimal_to_float_ok2999) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok3000) {
     // 22854256882663.873911833232686
@@ -24098,6 +27098,7 @@ START_TEST(test_from_decimal_to_float_ok3000) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok3001) {
     // -74983988059193276255107203.251
@@ -24106,6 +27107,7 @@ START_TEST(test_from_decimal_to_float_ok3001) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok3002) {
     // 74983988059193276255107203.251
@@ -24114,6 +27116,7 @@ START_TEST(test_from_decimal_to_float_ok3002) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok3003) {
     // -5957215456517204.3656388264094
@@ -24122,6 +27125,7 @@ START_TEST(test_from_decimal_to_float_ok3003) {
 
     test_from_decimal_to_float(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_float_ok3004) {
     // 5957215456517204.3656388264094
@@ -24130,7 +27134,7 @@ START_TEST(test_from_decimal_to_float_ok3004) {
 
     test_from_decimal_to_float(decimal, check);
 }
-
+END_TEST
 
 Suite *from_decimal_to_float_suite1(void) {
     Suite *s;

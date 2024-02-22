@@ -29,6 +29,7 @@ START_TEST(test_from_int_to_decimal_ok1) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok2) {
     int number = -2147483647;
@@ -37,6 +38,7 @@ START_TEST(test_from_int_to_decimal_ok2) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok3) {
     int number = -214748364;
@@ -45,6 +47,7 @@ START_TEST(test_from_int_to_decimal_ok3) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok4) {
     int number = -214748;
@@ -53,6 +56,7 @@ START_TEST(test_from_int_to_decimal_ok4) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok5) {
     int number = -1000;
@@ -61,6 +65,7 @@ START_TEST(test_from_int_to_decimal_ok5) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok6) {
     int number = -1;
@@ -69,6 +74,7 @@ START_TEST(test_from_int_to_decimal_ok6) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok7) {
     int number = 0;
@@ -77,6 +83,7 @@ START_TEST(test_from_int_to_decimal_ok7) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok8) {
     int number = 1;
@@ -85,6 +92,7 @@ START_TEST(test_from_int_to_decimal_ok8) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok9) {
     int number = 1000;
@@ -93,6 +101,7 @@ START_TEST(test_from_int_to_decimal_ok9) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok10) {
     int number = 214748;
@@ -101,6 +110,7 @@ START_TEST(test_from_int_to_decimal_ok10) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok11) {
     int number = 214748364;
@@ -109,6 +119,7 @@ START_TEST(test_from_int_to_decimal_ok11) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok12) {
     int number = 2147483646;
@@ -117,6 +128,7 @@ START_TEST(test_from_int_to_decimal_ok12) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 START_TEST(test_from_int_to_decimal_ok13) {
     int number = 2147483647;
@@ -125,6 +137,7 @@ START_TEST(test_from_int_to_decimal_ok13) {
 
     test_from_int_to_decimal(number, decimal_check);
 }
+END_TEST
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Тесты на рандомные данные

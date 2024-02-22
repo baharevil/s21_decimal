@@ -12,6 +12,7 @@ START_TEST(test_from_decimal_to_int_fail_manual1) {
 
     ck_assert_int_eq(code, conv_false);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail_manual2) {
     // степень 154 (показатель степени должен быть от 0 до 28)
@@ -106,6 +107,7 @@ START_TEST(test_from_decimal_to_int_ok1) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok2) {
     // -792281625.14264337593543950335
@@ -114,6 +116,7 @@ START_TEST(test_from_decimal_to_int_ok2) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok3) {
     // 79228162.514264337593543950335
@@ -122,6 +125,7 @@ START_TEST(test_from_decimal_to_int_ok3) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok4) {
     // -79228162.514264337593543950335
@@ -130,6 +134,7 @@ START_TEST(test_from_decimal_to_int_ok4) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok5) {
     // 7922816.2514264337593543950335
@@ -138,6 +143,7 @@ START_TEST(test_from_decimal_to_int_ok5) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok6) {
     // -7922816.2514264337593543950335
@@ -146,6 +152,7 @@ START_TEST(test_from_decimal_to_int_ok6) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok7) {
     // 792281.62514264337593543950335
@@ -154,6 +161,7 @@ START_TEST(test_from_decimal_to_int_ok7) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok8) {
     // -792281.62514264337593543950335
@@ -162,6 +170,7 @@ START_TEST(test_from_decimal_to_int_ok8) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok9) {
     // 79228.162514264337593543950335
@@ -170,6 +179,7 @@ START_TEST(test_from_decimal_to_int_ok9) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok10) {
     // -79228.162514264337593543950335
@@ -178,6 +188,7 @@ START_TEST(test_from_decimal_to_int_ok10) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok11) {
     // 7922.8162514264337593543950335
@@ -186,6 +197,7 @@ START_TEST(test_from_decimal_to_int_ok11) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok12) {
     // -7922.8162514264337593543950335
@@ -194,6 +206,7 @@ START_TEST(test_from_decimal_to_int_ok12) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok13) {
     // 792.28162514264337593543950335
@@ -202,6 +215,7 @@ START_TEST(test_from_decimal_to_int_ok13) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok14) {
     // -792.28162514264337593543950335
@@ -210,6 +224,7 @@ START_TEST(test_from_decimal_to_int_ok14) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok15) {
     // 79.228162514264337593543950335
@@ -218,6 +233,7 @@ START_TEST(test_from_decimal_to_int_ok15) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok16) {
     // -79.228162514264337593543950335
@@ -226,6 +242,7 @@ START_TEST(test_from_decimal_to_int_ok16) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok17) {
     // 7.9228162514264337593543950335
@@ -234,6 +251,7 @@ START_TEST(test_from_decimal_to_int_ok17) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok18) {
     // -7.9228162514264337593543950335
@@ -242,6 +260,7 @@ START_TEST(test_from_decimal_to_int_ok18) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok19) {
     // 792281625.14264337593543950334
@@ -250,6 +269,7 @@ START_TEST(test_from_decimal_to_int_ok19) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok20) {
     // -792281625.14264337593543950334
@@ -258,6 +278,7 @@ START_TEST(test_from_decimal_to_int_ok20) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok21) {
     // 79228162.514264337593543950334
@@ -266,6 +287,7 @@ START_TEST(test_from_decimal_to_int_ok21) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok22) {
     // -79228162.514264337593543950334
@@ -274,6 +296,7 @@ START_TEST(test_from_decimal_to_int_ok22) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok23) {
     // 7922816.2514264337593543950334
@@ -282,6 +305,7 @@ START_TEST(test_from_decimal_to_int_ok23) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok24) {
     // -7922816.2514264337593543950334
@@ -290,6 +314,7 @@ START_TEST(test_from_decimal_to_int_ok24) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok25) {
     // 792281.62514264337593543950334
@@ -298,6 +323,7 @@ START_TEST(test_from_decimal_to_int_ok25) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok26) {
     // -792281.62514264337593543950334
@@ -306,6 +332,7 @@ START_TEST(test_from_decimal_to_int_ok26) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok27) {
     // 79228.162514264337593543950334
@@ -314,6 +341,7 @@ START_TEST(test_from_decimal_to_int_ok27) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok28) {
     // -79228.162514264337593543950334
@@ -322,6 +350,7 @@ START_TEST(test_from_decimal_to_int_ok28) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok29) {
     // 7922.8162514264337593543950334
@@ -330,6 +359,7 @@ START_TEST(test_from_decimal_to_int_ok29) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok30) {
     // -7922.8162514264337593543950334
@@ -338,6 +368,7 @@ START_TEST(test_from_decimal_to_int_ok30) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok31) {
     // 792.28162514264337593543950334
@@ -346,6 +377,7 @@ START_TEST(test_from_decimal_to_int_ok31) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok32) {
     // -792.28162514264337593543950334
@@ -354,6 +386,7 @@ START_TEST(test_from_decimal_to_int_ok32) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok33) {
     // 79.228162514264337593543950334
@@ -362,6 +395,7 @@ START_TEST(test_from_decimal_to_int_ok33) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok34) {
     // -79.228162514264337593543950334
@@ -370,6 +404,7 @@ START_TEST(test_from_decimal_to_int_ok34) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok35) {
     // 7.9228162514264337593543950334
@@ -378,6 +413,7 @@ START_TEST(test_from_decimal_to_int_ok35) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok36) {
     // -7.9228162514264337593543950334
@@ -386,6 +422,7 @@ START_TEST(test_from_decimal_to_int_ok36) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok37) {
     // 528187750.09509558395695966890
@@ -394,6 +431,7 @@ START_TEST(test_from_decimal_to_int_ok37) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok38) {
     // -528187750.09509558395695966890
@@ -402,6 +440,7 @@ START_TEST(test_from_decimal_to_int_ok38) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok39) {
     // 5.2818775009509558395695966890
@@ -410,6 +449,7 @@ START_TEST(test_from_decimal_to_int_ok39) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok40) {
     // -5.2818775009509558395695966890
@@ -418,6 +458,7 @@ START_TEST(test_from_decimal_to_int_ok40) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok41) {
     // 528187750.09509558392832655360
@@ -426,6 +467,7 @@ START_TEST(test_from_decimal_to_int_ok41) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok42) {
     // -528187750.09509558392832655360
@@ -434,6 +476,7 @@ START_TEST(test_from_decimal_to_int_ok42) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok43) {
     // 5.2818775009509558392832655360
@@ -442,6 +485,7 @@ START_TEST(test_from_decimal_to_int_ok43) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok44) {
     // -5.2818775009509558392832655360
@@ -450,6 +494,7 @@ START_TEST(test_from_decimal_to_int_ok44) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok45) {
     // 528187749.97211729016086244010
@@ -458,6 +503,7 @@ START_TEST(test_from_decimal_to_int_ok45) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok46) {
     // -528187749.97211729016086244010
@@ -466,6 +512,7 @@ START_TEST(test_from_decimal_to_int_ok46) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok47) {
     // 5.2818774997211729016086244010
@@ -474,6 +521,7 @@ START_TEST(test_from_decimal_to_int_ok47) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok48) {
     // -5.2818774997211729016086244010
@@ -482,6 +530,7 @@ START_TEST(test_from_decimal_to_int_ok48) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok49) {
     // 528187749.97211729013222932480
@@ -490,6 +539,7 @@ START_TEST(test_from_decimal_to_int_ok49) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok50) {
     // -528187749.97211729013222932480
@@ -498,6 +548,7 @@ START_TEST(test_from_decimal_to_int_ok50) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok51) {
     // 5.2818774997211729013222932480
@@ -506,6 +557,7 @@ START_TEST(test_from_decimal_to_int_ok51) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok52) {
     // -5.2818774997211729013222932480
@@ -514,6 +566,7 @@ START_TEST(test_from_decimal_to_int_ok52) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok53) {
     // 122978293.82473034410
@@ -522,6 +575,7 @@ START_TEST(test_from_decimal_to_int_ok53) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok54) {
     // -122978293.82473034410
@@ -530,6 +584,7 @@ START_TEST(test_from_decimal_to_int_ok54) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok55) {
     // 1.2297829382473034410
@@ -538,6 +593,7 @@ START_TEST(test_from_decimal_to_int_ok55) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok56) {
     // -1.2297829382473034410
@@ -546,6 +602,7 @@ START_TEST(test_from_decimal_to_int_ok56) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok57) {
     // 122978293.79609722880
@@ -554,6 +611,7 @@ START_TEST(test_from_decimal_to_int_ok57) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok58) {
     // -122978293.79609722880
@@ -562,6 +620,7 @@ START_TEST(test_from_decimal_to_int_ok58) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok59) {
     // 1.2297829379609722880
@@ -570,6 +629,7 @@ START_TEST(test_from_decimal_to_int_ok59) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok60) {
     // -1.2297829379609722880
@@ -578,6 +638,7 @@ START_TEST(test_from_decimal_to_int_ok60) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok61) {
     // 286331153.0
@@ -586,6 +647,7 @@ START_TEST(test_from_decimal_to_int_ok61) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok62) {
     // -286331153.0
@@ -594,6 +656,7 @@ START_TEST(test_from_decimal_to_int_ok62) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok63) {
     // 286331.1530
@@ -602,6 +665,7 @@ START_TEST(test_from_decimal_to_int_ok63) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok64) {
     // -286331.1530
@@ -610,6 +674,7 @@ START_TEST(test_from_decimal_to_int_ok64) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok65) {
     // 2.863311530
@@ -618,6 +683,7 @@ START_TEST(test_from_decimal_to_int_ok65) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok66) {
     // -2.863311530
@@ -626,6 +692,7 @@ START_TEST(test_from_decimal_to_int_ok66) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok67) {
     // 264093875.04754779197847983445
@@ -634,6 +701,7 @@ START_TEST(test_from_decimal_to_int_ok67) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok68) {
     // -264093875.04754779197847983445
@@ -642,6 +710,7 @@ START_TEST(test_from_decimal_to_int_ok68) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok69) {
     // 2.6409387504754779197847983445
@@ -650,6 +719,7 @@ START_TEST(test_from_decimal_to_int_ok69) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok70) {
     // -2.6409387504754779197847983445
@@ -658,6 +728,7 @@ START_TEST(test_from_decimal_to_int_ok70) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok71) {
     // 264093875.04754779196416327680
@@ -666,6 +737,7 @@ START_TEST(test_from_decimal_to_int_ok71) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok72) {
     // -264093875.04754779196416327680
@@ -674,6 +746,7 @@ START_TEST(test_from_decimal_to_int_ok72) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok73) {
     // 2.6409387504754779196416327680
@@ -682,6 +755,7 @@ START_TEST(test_from_decimal_to_int_ok73) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok74) {
     // -2.6409387504754779196416327680
@@ -690,6 +764,7 @@ START_TEST(test_from_decimal_to_int_ok74) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok75) {
     // 264093874.98605864508043122005
@@ -698,6 +773,7 @@ START_TEST(test_from_decimal_to_int_ok75) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok76) {
     // -264093874.98605864508043122005
@@ -706,6 +782,7 @@ START_TEST(test_from_decimal_to_int_ok76) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok77) {
     // 2.6409387498605864508043122005
@@ -714,6 +791,7 @@ START_TEST(test_from_decimal_to_int_ok77) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok78) {
     // -2.6409387498605864508043122005
@@ -722,6 +800,7 @@ START_TEST(test_from_decimal_to_int_ok78) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok79) {
     // 264093874.98605864506611466240
@@ -730,6 +809,7 @@ START_TEST(test_from_decimal_to_int_ok79) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok80) {
     // -264093874.98605864506611466240
@@ -738,6 +818,7 @@ START_TEST(test_from_decimal_to_int_ok80) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok81) {
     // 2.6409387498605864506611466240
@@ -746,6 +827,7 @@ START_TEST(test_from_decimal_to_int_ok81) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok82) {
     // -2.6409387498605864506611466240
@@ -754,6 +836,7 @@ START_TEST(test_from_decimal_to_int_ok82) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok83) {
     // 6148914.691236517205
@@ -762,6 +845,7 @@ START_TEST(test_from_decimal_to_int_ok83) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok84) {
     // -6148914.691236517205
@@ -770,6 +854,7 @@ START_TEST(test_from_decimal_to_int_ok84) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok85) {
     // 6.148914691236517205
@@ -778,6 +863,7 @@ START_TEST(test_from_decimal_to_int_ok85) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok86) {
     // -6.148914691236517205
@@ -786,6 +872,7 @@ START_TEST(test_from_decimal_to_int_ok86) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok87) {
     // 6148914.689804861440
@@ -794,6 +881,7 @@ START_TEST(test_from_decimal_to_int_ok87) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok88) {
     // -6148914.689804861440
@@ -802,6 +890,7 @@ START_TEST(test_from_decimal_to_int_ok88) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok89) {
     // 6.148914689804861440
@@ -810,6 +899,7 @@ START_TEST(test_from_decimal_to_int_ok89) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok90) {
     // -6.148914689804861440
@@ -818,6 +908,7 @@ START_TEST(test_from_decimal_to_int_ok90) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok91) {
     // 1431655765
@@ -826,6 +917,7 @@ START_TEST(test_from_decimal_to_int_ok91) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok92) {
     // -1431655765
@@ -834,6 +926,7 @@ START_TEST(test_from_decimal_to_int_ok92) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok93) {
     // 143165576.5
@@ -842,6 +935,7 @@ START_TEST(test_from_decimal_to_int_ok93) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok94) {
     // -143165576.5
@@ -850,6 +944,7 @@ START_TEST(test_from_decimal_to_int_ok94) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok95) {
     // 143165.5765
@@ -858,6 +953,7 @@ START_TEST(test_from_decimal_to_int_ok95) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok96) {
     // -143165.5765
@@ -866,6 +962,7 @@ START_TEST(test_from_decimal_to_int_ok96) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok97) {
     // 1.431655765
@@ -874,6 +971,7 @@ START_TEST(test_from_decimal_to_int_ok97) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok98) {
     // -1.431655765
@@ -882,6 +980,7 @@ START_TEST(test_from_decimal_to_int_ok98) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok99) {
     // 184467440.78004518913
@@ -890,6 +989,7 @@ START_TEST(test_from_decimal_to_int_ok99) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok100) {
     // -184467440.78004518913
@@ -898,6 +998,7 @@ START_TEST(test_from_decimal_to_int_ok100) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok101) {
     // 1.8446744078004518913
@@ -906,6 +1007,7 @@ START_TEST(test_from_decimal_to_int_ok101) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok102) {
     // -1.8446744078004518913
@@ -914,6 +1016,7 @@ START_TEST(test_from_decimal_to_int_ok102) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok103) {
     // 18446744.078004518912
@@ -922,6 +1025,7 @@ START_TEST(test_from_decimal_to_int_ok103) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok104) {
     // -18446744.078004518912
@@ -930,6 +1034,7 @@ START_TEST(test_from_decimal_to_int_ok104) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok105) {
     // 1.8446744078004518912
@@ -938,6 +1043,7 @@ START_TEST(test_from_decimal_to_int_ok105) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok106) {
     // -1.8446744078004518912
@@ -946,6 +1052,7 @@ START_TEST(test_from_decimal_to_int_ok106) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok107) {
     // 1844674.4073709551617
@@ -954,6 +1061,7 @@ START_TEST(test_from_decimal_to_int_ok107) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok108) {
     // -1844674.4073709551617
@@ -962,6 +1070,7 @@ START_TEST(test_from_decimal_to_int_ok108) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok109) {
     // 1.8446744073709551617
@@ -970,6 +1079,7 @@ START_TEST(test_from_decimal_to_int_ok109) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok110) {
     // -1.8446744073709551617
@@ -978,6 +1088,7 @@ START_TEST(test_from_decimal_to_int_ok110) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok111) {
     // 184467.44073709551616
@@ -986,6 +1097,7 @@ START_TEST(test_from_decimal_to_int_ok111) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok112) {
     // -184467.44073709551616
@@ -994,6 +1106,7 @@ START_TEST(test_from_decimal_to_int_ok112) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok113) {
     // 1.8446744073709551616
@@ -1002,6 +1115,7 @@ START_TEST(test_from_decimal_to_int_ok113) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok114) {
     // -1.8446744073709551616
@@ -1010,6 +1124,7 @@ START_TEST(test_from_decimal_to_int_ok114) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok115) {
     // 429496729.7
@@ -1018,6 +1133,7 @@ START_TEST(test_from_decimal_to_int_ok115) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok116) {
     // -429496729.7
@@ -1026,6 +1142,7 @@ START_TEST(test_from_decimal_to_int_ok116) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok117) {
     // 42949672.97
@@ -1034,6 +1151,7 @@ START_TEST(test_from_decimal_to_int_ok117) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok118) {
     // -42949672.97
@@ -1042,6 +1160,7 @@ START_TEST(test_from_decimal_to_int_ok118) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok119) {
     // 429496.7297
@@ -1050,6 +1169,7 @@ START_TEST(test_from_decimal_to_int_ok119) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok120) {
     // -429496.7297
@@ -1058,6 +1178,7 @@ START_TEST(test_from_decimal_to_int_ok120) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok121) {
     // 4.294967297
@@ -1066,6 +1187,7 @@ START_TEST(test_from_decimal_to_int_ok121) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok122) {
     // -4.294967297
@@ -1074,6 +1196,7 @@ START_TEST(test_from_decimal_to_int_ok122) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok123) {
     // 42.94967297
@@ -1082,6 +1205,7 @@ START_TEST(test_from_decimal_to_int_ok123) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok124) {
     // -42.94967297
@@ -1090,6 +1214,7 @@ START_TEST(test_from_decimal_to_int_ok124) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok125) {
     // 429496729.6
@@ -1098,6 +1223,7 @@ START_TEST(test_from_decimal_to_int_ok125) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok126) {
     // -429496729.6
@@ -1106,6 +1232,7 @@ START_TEST(test_from_decimal_to_int_ok126) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok127) {
     // 42949672.96
@@ -1114,6 +1241,7 @@ START_TEST(test_from_decimal_to_int_ok127) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok128) {
     // -42949672.96
@@ -1122,6 +1250,7 @@ START_TEST(test_from_decimal_to_int_ok128) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok129) {
     // 4294967.296
@@ -1130,6 +1259,7 @@ START_TEST(test_from_decimal_to_int_ok129) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok130) {
     // -4294967.296
@@ -1138,6 +1268,7 @@ START_TEST(test_from_decimal_to_int_ok130) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok131) {
     // 4.294967296
@@ -1146,6 +1277,7 @@ START_TEST(test_from_decimal_to_int_ok131) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok132) {
     // -4.294967296
@@ -1154,6 +1286,7 @@ START_TEST(test_from_decimal_to_int_ok132) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok133) {
     // 42.94967296
@@ -1162,6 +1295,7 @@ START_TEST(test_from_decimal_to_int_ok133) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok134) {
     // -42.94967296
@@ -1170,6 +1304,7 @@ START_TEST(test_from_decimal_to_int_ok134) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok135) {
     // 1
@@ -1178,6 +1313,7 @@ START_TEST(test_from_decimal_to_int_ok135) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok136) {
     // -1
@@ -1186,6 +1322,7 @@ START_TEST(test_from_decimal_to_int_ok136) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok137) {
     // 0.1
@@ -1194,6 +1331,7 @@ START_TEST(test_from_decimal_to_int_ok137) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok138) {
     // -0.1
@@ -1202,6 +1340,7 @@ START_TEST(test_from_decimal_to_int_ok138) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok139) {
     // 0.0000000000001
@@ -1210,6 +1349,7 @@ START_TEST(test_from_decimal_to_int_ok139) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok140) {
     // -0.0000000000001
@@ -1218,6 +1358,7 @@ START_TEST(test_from_decimal_to_int_ok140) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok141) {
     // 0.00000000000001
@@ -1226,6 +1367,7 @@ START_TEST(test_from_decimal_to_int_ok141) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok142) {
     // -0.00000000000001
@@ -1234,6 +1376,7 @@ START_TEST(test_from_decimal_to_int_ok142) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok143) {
     // 0.000000000000000000000000001
@@ -1242,6 +1385,7 @@ START_TEST(test_from_decimal_to_int_ok143) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok144) {
     // -0.000000000000000000000000001
@@ -1250,6 +1394,7 @@ START_TEST(test_from_decimal_to_int_ok144) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok145) {
     // 0.0000000000000000000000000001
@@ -1258,6 +1403,7 @@ START_TEST(test_from_decimal_to_int_ok145) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok146) {
     // -0.0000000000000000000000000001
@@ -1266,6 +1412,7 @@ START_TEST(test_from_decimal_to_int_ok146) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok147) {
     // 396140812.66355540835774234624
@@ -1274,6 +1421,7 @@ START_TEST(test_from_decimal_to_int_ok147) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok148) {
     // -396140812.66355540835774234624
@@ -1282,6 +1430,7 @@ START_TEST(test_from_decimal_to_int_ok148) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok149) {
     // 3.9614081266355540835774234624
@@ -1290,6 +1439,7 @@ START_TEST(test_from_decimal_to_int_ok149) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok150) {
     // -3.9614081266355540835774234624
@@ -1298,6 +1448,7 @@ START_TEST(test_from_decimal_to_int_ok150) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok151) {
     // 39614081.266355540833626750976
@@ -1306,6 +1457,7 @@ START_TEST(test_from_decimal_to_int_ok151) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok152) {
     // -39614081.266355540833626750976
@@ -1314,6 +1466,7 @@ START_TEST(test_from_decimal_to_int_ok152) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok153) {
     // 3.9614081266355540833626750976
@@ -1322,6 +1475,7 @@ START_TEST(test_from_decimal_to_int_ok153) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok154) {
     // -3.9614081266355540833626750976
@@ -1330,6 +1484,7 @@ START_TEST(test_from_decimal_to_int_ok154) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok155) {
     // 3961408.1257132168798919458816
@@ -1338,6 +1493,7 @@ START_TEST(test_from_decimal_to_int_ok155) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok156) {
     // -3961408.1257132168798919458816
@@ -1346,6 +1502,7 @@ START_TEST(test_from_decimal_to_int_ok156) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok157) {
     // 3.9614081257132168798919458816
@@ -1354,6 +1511,7 @@ START_TEST(test_from_decimal_to_int_ok157) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok158) {
     // -3.9614081257132168798919458816
@@ -1362,6 +1520,7 @@ START_TEST(test_from_decimal_to_int_ok158) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok159) {
     // 396140.81257132168796771975168
@@ -1370,6 +1529,7 @@ START_TEST(test_from_decimal_to_int_ok159) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok160) {
     // -396140.81257132168796771975168
@@ -1378,6 +1538,7 @@ START_TEST(test_from_decimal_to_int_ok160) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok161) {
     // 3.9614081257132168796771975168
@@ -1386,6 +1547,7 @@ START_TEST(test_from_decimal_to_int_ok161) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok162) {
     // -3.9614081257132168796771975168
@@ -1394,6 +1556,7 @@ START_TEST(test_from_decimal_to_int_ok162) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok163) {
     // 922337203.9002259456
@@ -1402,6 +1565,7 @@ START_TEST(test_from_decimal_to_int_ok163) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok164) {
     // -922337203.9002259456
@@ -1410,6 +1574,7 @@ START_TEST(test_from_decimal_to_int_ok164) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok165) {
     // 9.223372039002259456
@@ -1418,6 +1583,7 @@ START_TEST(test_from_decimal_to_int_ok165) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok166) {
     // -9.223372039002259456
@@ -1426,6 +1592,7 @@ START_TEST(test_from_decimal_to_int_ok166) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok167) {
     // 92233720.36854775808
@@ -1434,6 +1601,7 @@ START_TEST(test_from_decimal_to_int_ok167) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok168) {
     // -92233720.36854775808
@@ -1442,6 +1610,7 @@ START_TEST(test_from_decimal_to_int_ok168) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok169) {
     // 9.223372036854775808
@@ -1450,6 +1619,7 @@ START_TEST(test_from_decimal_to_int_ok169) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok170) {
     // -9.223372036854775808
@@ -1458,6 +1628,7 @@ START_TEST(test_from_decimal_to_int_ok170) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok171) {
     // -2147483648
@@ -1466,6 +1637,7 @@ START_TEST(test_from_decimal_to_int_ok171) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok172) {
     // 214748364.8
@@ -1474,6 +1646,7 @@ START_TEST(test_from_decimal_to_int_ok172) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok173) {
     // -214748364.8
@@ -1482,6 +1655,7 @@ START_TEST(test_from_decimal_to_int_ok173) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok174) {
     // 21474836.48
@@ -1490,6 +1664,7 @@ START_TEST(test_from_decimal_to_int_ok174) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok175) {
     // -21474836.48
@@ -1498,6 +1673,7 @@ START_TEST(test_from_decimal_to_int_ok175) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok176) {
     // 214748.3648
@@ -1506,6 +1682,7 @@ START_TEST(test_from_decimal_to_int_ok176) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok177) {
     // -214748.3648
@@ -1514,6 +1691,7 @@ START_TEST(test_from_decimal_to_int_ok177) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok178) {
     // 21.47483648
@@ -1522,6 +1700,7 @@ START_TEST(test_from_decimal_to_int_ok178) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok179) {
     // -21.47483648
@@ -1530,6 +1709,7 @@ START_TEST(test_from_decimal_to_int_ok179) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok180) {
     // 2.147483648
@@ -1538,6 +1718,7 @@ START_TEST(test_from_decimal_to_int_ok180) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok181) {
     // -2.147483648
@@ -1546,6 +1727,7 @@ START_TEST(test_from_decimal_to_int_ok181) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok182) {
     // 1560647.67562212695305426944
@@ -1554,6 +1736,7 @@ START_TEST(test_from_decimal_to_int_ok182) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok183) {
     // -1560647.67562212695305426944
@@ -1562,6 +1745,7 @@ START_TEST(test_from_decimal_to_int_ok183) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok184) {
     // 1.56064767562212695305426944
@@ -1570,6 +1754,7 @@ START_TEST(test_from_decimal_to_int_ok184) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok185) {
     // -1.56064767562212695305426944
@@ -1578,6 +1763,7 @@ START_TEST(test_from_decimal_to_int_ok185) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok186) {
     // 15606476.7562212695296966656
@@ -1586,6 +1772,7 @@ START_TEST(test_from_decimal_to_int_ok186) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok187) {
     // -15606476.7562212695296966656
@@ -1594,6 +1781,7 @@ START_TEST(test_from_decimal_to_int_ok187) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok188) {
     // 1.56064767562212695296966656
@@ -1602,6 +1790,7 @@ START_TEST(test_from_decimal_to_int_ok188) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok189) {
     // -1.56064767562212695296966656
@@ -1610,6 +1799,7 @@ START_TEST(test_from_decimal_to_int_ok189) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok190) {
     // 156064.767525876035030685696
@@ -1618,6 +1808,7 @@ START_TEST(test_from_decimal_to_int_ok190) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok191) {
     // -156064.767525876035030685696
@@ -1626,6 +1817,7 @@ START_TEST(test_from_decimal_to_int_ok191) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok192) {
     // 1.56064767525876035030685696
@@ -1634,6 +1826,7 @@ START_TEST(test_from_decimal_to_int_ok192) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok193) {
     // -1.56064767525876035030685696
@@ -1642,6 +1835,7 @@ START_TEST(test_from_decimal_to_int_ok193) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok194) {
     // 15606.4767525876035022225408
@@ -1650,6 +1844,7 @@ START_TEST(test_from_decimal_to_int_ok194) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok195) {
     // -15606.4767525876035022225408
@@ -1658,6 +1853,7 @@ START_TEST(test_from_decimal_to_int_ok195) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok196) {
     // 1.56064767525876035022225408
@@ -1666,6 +1862,7 @@ START_TEST(test_from_decimal_to_int_ok196) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok197) {
     // -1.56064767525876035022225408
@@ -1674,6 +1871,7 @@ START_TEST(test_from_decimal_to_int_ok197) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok198) {
     // 363366602.83201536
@@ -1682,6 +1880,7 @@ START_TEST(test_from_decimal_to_int_ok198) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok199) {
     // -363366602.83201536
@@ -1690,6 +1889,7 @@ START_TEST(test_from_decimal_to_int_ok199) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok200) {
     // 3.6336660283201536
@@ -1698,6 +1898,7 @@ START_TEST(test_from_decimal_to_int_ok200) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok201) {
     // -3.6336660283201536
@@ -1706,6 +1907,7 @@ START_TEST(test_from_decimal_to_int_ok201) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok202) {
     // 3633666.0274741248
@@ -1714,6 +1916,7 @@ START_TEST(test_from_decimal_to_int_ok202) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok203) {
     // -3633666.0274741248
@@ -1722,6 +1925,7 @@ START_TEST(test_from_decimal_to_int_ok203) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok204) {
     // 363366602.74741248
@@ -1730,6 +1934,7 @@ START_TEST(test_from_decimal_to_int_ok204) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok205) {
     // -363366602.74741248
@@ -1738,6 +1943,7 @@ START_TEST(test_from_decimal_to_int_ok205) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok206) {
     // 36.336660274741248
@@ -1746,6 +1952,7 @@ START_TEST(test_from_decimal_to_int_ok206) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok207) {
     // -36.336660274741248
@@ -1754,6 +1961,7 @@ START_TEST(test_from_decimal_to_int_ok207) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok208) {
     // 3.6336660274741248
@@ -1762,6 +1970,7 @@ START_TEST(test_from_decimal_to_int_ok208) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok209) {
     // -3.6336660274741248
@@ -1770,6 +1979,7 @@ START_TEST(test_from_decimal_to_int_ok209) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok210) {
     // 8460288
@@ -1778,6 +1988,7 @@ START_TEST(test_from_decimal_to_int_ok210) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok211) {
     // -8460288
@@ -1786,6 +1997,7 @@ START_TEST(test_from_decimal_to_int_ok211) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok212) {
     // 846028.8
@@ -1794,6 +2006,7 @@ START_TEST(test_from_decimal_to_int_ok212) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok213) {
     // -846028.8
@@ -1802,6 +2015,7 @@ START_TEST(test_from_decimal_to_int_ok213) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok214) {
     // 84602.88
@@ -1810,6 +2024,7 @@ START_TEST(test_from_decimal_to_int_ok214) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok215) {
     // -84602.88
@@ -1818,6 +2033,7 @@ START_TEST(test_from_decimal_to_int_ok215) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok216) {
     // 8460.288
@@ -1826,6 +2042,7 @@ START_TEST(test_from_decimal_to_int_ok216) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok217) {
     // -8460.288
@@ -1834,6 +2051,7 @@ START_TEST(test_from_decimal_to_int_ok217) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok218) {
     // 84.60288
@@ -1842,6 +2060,7 @@ START_TEST(test_from_decimal_to_int_ok218) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok219) {
     // -84.60288
@@ -1850,6 +2069,7 @@ START_TEST(test_from_decimal_to_int_ok219) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok220) {
     // 8.460288
@@ -1858,6 +2078,7 @@ START_TEST(test_from_decimal_to_int_ok220) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok221) {
     // -8.460288
@@ -1866,6 +2087,7 @@ START_TEST(test_from_decimal_to_int_ok221) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok222) {
     // 792281625.14264337593543950335
@@ -1874,6 +2096,7 @@ START_TEST(test_from_decimal_to_int_ok222) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok223) {
     // -792281625.14264337593543950335
@@ -1882,6 +2105,7 @@ START_TEST(test_from_decimal_to_int_ok223) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok224) {
     // 7.9228162514264337593543950335
@@ -1890,6 +2114,7 @@ START_TEST(test_from_decimal_to_int_ok224) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok225) {
     // -7.9228162514264337593543950335
@@ -1898,6 +2123,7 @@ START_TEST(test_from_decimal_to_int_ok225) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok226) {
     // 79228162.514264337589248983040
@@ -1906,6 +2132,7 @@ START_TEST(test_from_decimal_to_int_ok226) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok227) {
     // -79228162.514264337589248983040
@@ -1914,6 +2141,7 @@ START_TEST(test_from_decimal_to_int_ok227) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok228) {
     // 7.9228162514264337589248983040
@@ -1922,6 +2150,7 @@ START_TEST(test_from_decimal_to_int_ok228) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok229) {
     // -7.9228162514264337589248983040
@@ -1930,6 +2159,7 @@ START_TEST(test_from_decimal_to_int_ok229) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok230) {
     // 7922816.2495817593524129366015
@@ -1938,6 +2168,7 @@ START_TEST(test_from_decimal_to_int_ok230) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok231) {
     // -7922816.2495817593524129366015
@@ -1946,6 +2177,7 @@ START_TEST(test_from_decimal_to_int_ok231) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok232) {
     // 7.9228162495817593524129366015
@@ -1954,6 +2186,7 @@ START_TEST(test_from_decimal_to_int_ok232) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok233) {
     // -7.9228162495817593524129366015
@@ -1962,6 +2195,7 @@ START_TEST(test_from_decimal_to_int_ok233) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok234) {
     // 792281.62495817593519834398720
@@ -1970,6 +2204,7 @@ START_TEST(test_from_decimal_to_int_ok234) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok235) {
     // -792281.62495817593519834398720
@@ -1978,6 +2213,7 @@ START_TEST(test_from_decimal_to_int_ok235) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok236) {
     // 7.9228162495817593519834398720
@@ -1986,6 +2222,7 @@ START_TEST(test_from_decimal_to_int_ok236) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok237) {
     // -7.9228162495817593519834398720
@@ -1994,6 +2231,7 @@ START_TEST(test_from_decimal_to_int_ok237) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok238) {
     // 184467440.73709551615
@@ -2002,6 +2240,7 @@ START_TEST(test_from_decimal_to_int_ok238) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok239) {
     // -184467440.73709551615
@@ -2010,6 +2249,7 @@ START_TEST(test_from_decimal_to_int_ok239) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok240) {
     // 184.46744073709551615
@@ -2018,6 +2258,7 @@ START_TEST(test_from_decimal_to_int_ok240) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok241) {
     // -184.46744073709551615
@@ -2026,6 +2267,7 @@ START_TEST(test_from_decimal_to_int_ok241) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok242) {
     // 1.8446744073709551615
@@ -2034,6 +2276,7 @@ START_TEST(test_from_decimal_to_int_ok242) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok243) {
     // -1.8446744073709551615
@@ -2042,6 +2285,7 @@ START_TEST(test_from_decimal_to_int_ok243) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok244) {
     // 18446744.069414584320
@@ -2050,6 +2294,7 @@ START_TEST(test_from_decimal_to_int_ok244) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok245) {
     // -18446744.069414584320
@@ -2058,6 +2303,7 @@ START_TEST(test_from_decimal_to_int_ok245) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok246) {
     // 184.46744069414584320
@@ -2066,6 +2312,7 @@ START_TEST(test_from_decimal_to_int_ok246) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok247) {
     // -184.46744069414584320
@@ -2074,6 +2321,7 @@ START_TEST(test_from_decimal_to_int_ok247) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok248) {
     // 1.8446744069414584320
@@ -2082,6 +2330,7 @@ START_TEST(test_from_decimal_to_int_ok248) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok249) {
     // -1.8446744069414584320
@@ -2090,6 +2339,7 @@ START_TEST(test_from_decimal_to_int_ok249) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok250) {
     // 429496729.5
@@ -2098,6 +2348,7 @@ START_TEST(test_from_decimal_to_int_ok250) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok251) {
     // -429496729.5
@@ -2106,6 +2357,7 @@ START_TEST(test_from_decimal_to_int_ok251) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok252) {
     // 42949672.95
@@ -2114,6 +2366,7 @@ START_TEST(test_from_decimal_to_int_ok252) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok253) {
     // -42949672.95
@@ -2122,6 +2375,7 @@ START_TEST(test_from_decimal_to_int_ok253) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok254) {
     // 42949.67295
@@ -2130,6 +2384,7 @@ START_TEST(test_from_decimal_to_int_ok254) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok255) {
     // -42949.67295
@@ -2138,6 +2393,7 @@ START_TEST(test_from_decimal_to_int_ok255) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok256) {
     // 42.94967295
@@ -2146,6 +2402,7 @@ START_TEST(test_from_decimal_to_int_ok256) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok257) {
     // -42.94967295
@@ -2154,6 +2411,7 @@ START_TEST(test_from_decimal_to_int_ok257) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok258) {
     // 4.294967295
@@ -2162,6 +2420,7 @@ START_TEST(test_from_decimal_to_int_ok258) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok259) {
     // -4.294967295
@@ -2170,6 +2429,7 @@ START_TEST(test_from_decimal_to_int_ok259) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok260) {
     // 1.0
@@ -2178,6 +2438,7 @@ START_TEST(test_from_decimal_to_int_ok260) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok261) {
     // -1.0
@@ -2186,6 +2447,7 @@ START_TEST(test_from_decimal_to_int_ok261) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok262) {
     // 1.00
@@ -2194,6 +2456,7 @@ START_TEST(test_from_decimal_to_int_ok262) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok263) {
     // -1.00
@@ -2202,6 +2465,7 @@ START_TEST(test_from_decimal_to_int_ok263) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok264) {
     // 1.000
@@ -2210,6 +2474,7 @@ START_TEST(test_from_decimal_to_int_ok264) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok265) {
     // -1.000
@@ -2218,6 +2483,7 @@ START_TEST(test_from_decimal_to_int_ok265) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok266) {
     // 1.0000000000
@@ -2226,6 +2492,7 @@ START_TEST(test_from_decimal_to_int_ok266) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok267) {
     // -1.0000000000
@@ -2234,6 +2501,7 @@ START_TEST(test_from_decimal_to_int_ok267) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok268) {
     // 1.0000000000000000
@@ -2242,6 +2510,7 @@ START_TEST(test_from_decimal_to_int_ok268) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok269) {
     // -1.0000000000000000
@@ -2250,6 +2519,7 @@ START_TEST(test_from_decimal_to_int_ok269) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok270) {
     // 1.00000000000000000000000
@@ -2258,6 +2528,7 @@ START_TEST(test_from_decimal_to_int_ok270) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok271) {
     // -1.00000000000000000000000
@@ -2266,6 +2537,7 @@ START_TEST(test_from_decimal_to_int_ok271) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok272) {
     // 1.000000000000000000000000000
@@ -2274,6 +2546,7 @@ START_TEST(test_from_decimal_to_int_ok272) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok273) {
     // -1.000000000000000000000000000
@@ -2282,6 +2555,7 @@ START_TEST(test_from_decimal_to_int_ok273) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok274) {
     // 1.0000000000000000000000000000
@@ -2290,6 +2564,7 @@ START_TEST(test_from_decimal_to_int_ok274) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok275) {
     // -1.0000000000000000000000000000
@@ -2298,6 +2573,7 @@ START_TEST(test_from_decimal_to_int_ok275) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok276) {
     // 1.1
@@ -2306,6 +2582,7 @@ START_TEST(test_from_decimal_to_int_ok276) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok277) {
     // -1.1
@@ -2314,6 +2591,7 @@ START_TEST(test_from_decimal_to_int_ok277) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok278) {
     // 12.12
@@ -2322,6 +2600,7 @@ START_TEST(test_from_decimal_to_int_ok278) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok279) {
     // -12.12
@@ -2330,6 +2609,7 @@ START_TEST(test_from_decimal_to_int_ok279) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok280) {
     // 123.123
@@ -2338,6 +2618,7 @@ START_TEST(test_from_decimal_to_int_ok280) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok281) {
     // -123.123
@@ -2346,6 +2627,7 @@ START_TEST(test_from_decimal_to_int_ok281) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok282) {
     // 1234.1234
@@ -2354,6 +2636,7 @@ START_TEST(test_from_decimal_to_int_ok282) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok283) {
     // -1234.1234
@@ -2362,6 +2645,7 @@ START_TEST(test_from_decimal_to_int_ok283) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok284) {
     // 12345.12345
@@ -2370,6 +2654,7 @@ START_TEST(test_from_decimal_to_int_ok284) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok285) {
     // -12345.12345
@@ -2378,6 +2663,7 @@ START_TEST(test_from_decimal_to_int_ok285) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok286) {
     // 123456.123456
@@ -2386,6 +2672,7 @@ START_TEST(test_from_decimal_to_int_ok286) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok287) {
     // -123456.123456
@@ -2394,6 +2681,7 @@ START_TEST(test_from_decimal_to_int_ok287) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok288) {
     // 1234567.1234567
@@ -2402,6 +2690,7 @@ START_TEST(test_from_decimal_to_int_ok288) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok289) {
     // -1234567.1234567
@@ -2410,6 +2699,7 @@ START_TEST(test_from_decimal_to_int_ok289) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok290) {
     // 1234567890.1234567890
@@ -2418,6 +2708,7 @@ START_TEST(test_from_decimal_to_int_ok290) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok291) {
     // -1234567890.1234567890
@@ -2426,6 +2717,7 @@ START_TEST(test_from_decimal_to_int_ok291) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok292) {
     // 99
@@ -2434,6 +2726,7 @@ START_TEST(test_from_decimal_to_int_ok292) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok293) {
     // -99
@@ -2442,6 +2735,7 @@ START_TEST(test_from_decimal_to_int_ok293) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok294) {
     // 9.9
@@ -2450,6 +2744,7 @@ START_TEST(test_from_decimal_to_int_ok294) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok295) {
     // -9.9
@@ -2458,6 +2753,7 @@ START_TEST(test_from_decimal_to_int_ok295) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok296) {
     // 99.99
@@ -2466,6 +2762,7 @@ START_TEST(test_from_decimal_to_int_ok296) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok297) {
     // -99.99
@@ -2474,6 +2771,7 @@ START_TEST(test_from_decimal_to_int_ok297) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok298) {
     // 999.999
@@ -2482,6 +2780,7 @@ START_TEST(test_from_decimal_to_int_ok298) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok299) {
     // -999.999
@@ -2490,6 +2789,7 @@ START_TEST(test_from_decimal_to_int_ok299) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok300) {
     // 9999.9999
@@ -2498,6 +2798,7 @@ START_TEST(test_from_decimal_to_int_ok300) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok301) {
     // -9999.9999
@@ -2506,6 +2807,7 @@ START_TEST(test_from_decimal_to_int_ok301) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok302) {
     // 99999.99999
@@ -2514,6 +2816,7 @@ START_TEST(test_from_decimal_to_int_ok302) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok303) {
     // -99999.99999
@@ -2522,6 +2825,7 @@ START_TEST(test_from_decimal_to_int_ok303) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok304) {
     // 999999.999999
@@ -2530,6 +2834,7 @@ START_TEST(test_from_decimal_to_int_ok304) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok305) {
     // -999999.999999
@@ -2538,6 +2843,7 @@ START_TEST(test_from_decimal_to_int_ok305) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok306) {
     // 9999999.9999999
@@ -2546,6 +2852,7 @@ START_TEST(test_from_decimal_to_int_ok306) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok307) {
     // -9999999.9999999
@@ -2554,6 +2861,7 @@ START_TEST(test_from_decimal_to_int_ok307) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok308) {
     // 99999999.99999999
@@ -2562,6 +2870,7 @@ START_TEST(test_from_decimal_to_int_ok308) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok309) {
     // -99999999.99999999
@@ -2570,6 +2879,7 @@ START_TEST(test_from_decimal_to_int_ok309) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok310) {
     // 999999999.999999999
@@ -2578,6 +2888,7 @@ START_TEST(test_from_decimal_to_int_ok310) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok311) {
     // -999999999.999999999
@@ -2586,6 +2897,7 @@ START_TEST(test_from_decimal_to_int_ok311) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok312) {
     // 9
@@ -2594,6 +2906,7 @@ START_TEST(test_from_decimal_to_int_ok312) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok313) {
     // -9
@@ -2602,6 +2915,7 @@ START_TEST(test_from_decimal_to_int_ok313) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok314) {
     // 0.9
@@ -2610,6 +2924,7 @@ START_TEST(test_from_decimal_to_int_ok314) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok315) {
     // -0.9
@@ -2618,6 +2933,7 @@ START_TEST(test_from_decimal_to_int_ok315) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok316) {
     // 0.99
@@ -2626,6 +2942,7 @@ START_TEST(test_from_decimal_to_int_ok316) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok317) {
     // -0.99
@@ -2634,6 +2951,7 @@ START_TEST(test_from_decimal_to_int_ok317) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok318) {
     // 0.999
@@ -2642,6 +2960,7 @@ START_TEST(test_from_decimal_to_int_ok318) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok319) {
     // -0.999
@@ -2650,6 +2969,7 @@ START_TEST(test_from_decimal_to_int_ok319) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok320) {
     // 0.9999
@@ -2658,6 +2978,7 @@ START_TEST(test_from_decimal_to_int_ok320) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok321) {
     // -0.9999
@@ -2666,6 +2987,7 @@ START_TEST(test_from_decimal_to_int_ok321) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok322) {
     // 0.99999
@@ -2674,6 +2996,7 @@ START_TEST(test_from_decimal_to_int_ok322) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok323) {
     // -0.99999
@@ -2682,6 +3005,7 @@ START_TEST(test_from_decimal_to_int_ok323) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok324) {
     // 0.999999
@@ -2690,6 +3014,7 @@ START_TEST(test_from_decimal_to_int_ok324) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok325) {
     // -0.999999
@@ -2698,6 +3023,7 @@ START_TEST(test_from_decimal_to_int_ok325) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok326) {
     // 0.9999999
@@ -2706,6 +3032,7 @@ START_TEST(test_from_decimal_to_int_ok326) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok327) {
     // -0.9999999
@@ -2714,6 +3041,7 @@ START_TEST(test_from_decimal_to_int_ok327) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok328) {
     // 0.99999999
@@ -2722,6 +3050,7 @@ START_TEST(test_from_decimal_to_int_ok328) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok329) {
     // -0.99999999
@@ -2730,6 +3059,7 @@ START_TEST(test_from_decimal_to_int_ok329) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok330) {
     // 0.999999999
@@ -2738,6 +3068,7 @@ START_TEST(test_from_decimal_to_int_ok330) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok331) {
     // -0.999999999
@@ -2746,6 +3077,7 @@ START_TEST(test_from_decimal_to_int_ok331) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok332) {
     // 0.9999999999
@@ -2754,6 +3086,7 @@ START_TEST(test_from_decimal_to_int_ok332) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok333) {
     // -0.9999999999
@@ -2762,6 +3095,7 @@ START_TEST(test_from_decimal_to_int_ok333) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok334) {
     // 0.99999999999999999999
@@ -2770,6 +3104,7 @@ START_TEST(test_from_decimal_to_int_ok334) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok335) {
     // -0.99999999999999999999
@@ -2778,6 +3113,7 @@ START_TEST(test_from_decimal_to_int_ok335) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok336) {
     // -0
@@ -2786,6 +3122,7 @@ START_TEST(test_from_decimal_to_int_ok336) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok337) {
     // 0
@@ -2794,6 +3131,7 @@ START_TEST(test_from_decimal_to_int_ok337) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok338) {
     // -0.0
@@ -2802,6 +3140,7 @@ START_TEST(test_from_decimal_to_int_ok338) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok339) {
     // 0.0
@@ -2810,6 +3149,7 @@ START_TEST(test_from_decimal_to_int_ok339) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok340) {
     // -0.00
@@ -2818,6 +3158,7 @@ START_TEST(test_from_decimal_to_int_ok340) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok341) {
     // 0.00
@@ -2826,6 +3167,7 @@ START_TEST(test_from_decimal_to_int_ok341) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok342) {
     // -0.00000000000000
@@ -2834,6 +3176,7 @@ START_TEST(test_from_decimal_to_int_ok342) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok343) {
     // 0.00000000000000
@@ -2842,6 +3185,7 @@ START_TEST(test_from_decimal_to_int_ok343) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok344) {
     // -0.000000000000000000000000000
@@ -2850,6 +3194,7 @@ START_TEST(test_from_decimal_to_int_ok344) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok345) {
     // 0.000000000000000000000000000
@@ -2858,6 +3203,7 @@ START_TEST(test_from_decimal_to_int_ok345) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok346) {
     // -0.0000000000000000000000000000
@@ -2866,6 +3212,7 @@ START_TEST(test_from_decimal_to_int_ok346) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok347) {
     // 0.0000000000000000000000000000
@@ -2874,6 +3221,7 @@ START_TEST(test_from_decimal_to_int_ok347) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok348) {
     // 2147483646
@@ -2882,6 +3230,7 @@ START_TEST(test_from_decimal_to_int_ok348) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok349) {
     // -2147483646
@@ -2890,6 +3239,7 @@ START_TEST(test_from_decimal_to_int_ok349) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok350) {
     // 2147483646.00
@@ -2898,6 +3248,7 @@ START_TEST(test_from_decimal_to_int_ok350) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok351) {
     // -2147483646.00
@@ -2906,6 +3257,7 @@ START_TEST(test_from_decimal_to_int_ok351) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok352) {
     // 2147483646.99
@@ -2914,6 +3266,7 @@ START_TEST(test_from_decimal_to_int_ok352) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok353) {
     // -2147483646.99
@@ -2922,6 +3275,7 @@ START_TEST(test_from_decimal_to_int_ok353) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok354) {
     // 2147483646.999999999999999999
@@ -2930,6 +3284,7 @@ START_TEST(test_from_decimal_to_int_ok354) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok355) {
     // -2147483646.999999999999999999
@@ -2938,6 +3293,7 @@ START_TEST(test_from_decimal_to_int_ok355) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok356) {
     // 21474836.46
@@ -2946,6 +3302,7 @@ START_TEST(test_from_decimal_to_int_ok356) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok357) {
     // -21474836.46
@@ -2954,6 +3311,7 @@ START_TEST(test_from_decimal_to_int_ok357) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok358) {
     // 214.7483646
@@ -2962,6 +3320,7 @@ START_TEST(test_from_decimal_to_int_ok358) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok359) {
     // -214.7483646
@@ -2970,6 +3329,7 @@ START_TEST(test_from_decimal_to_int_ok359) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok360) {
     // 2.147483646
@@ -2978,6 +3338,7 @@ START_TEST(test_from_decimal_to_int_ok360) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok361) {
     // -2.147483646
@@ -2986,6 +3347,7 @@ START_TEST(test_from_decimal_to_int_ok361) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok362) {
     // 0.2147483646
@@ -2994,6 +3356,7 @@ START_TEST(test_from_decimal_to_int_ok362) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok363) {
     // -0.2147483646
@@ -3002,6 +3365,7 @@ START_TEST(test_from_decimal_to_int_ok363) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok364) {
     // 0.0000000000000000002147483646
@@ -3010,6 +3374,7 @@ START_TEST(test_from_decimal_to_int_ok364) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok365) {
     // -0.0000000000000000002147483646
@@ -3018,6 +3383,7 @@ START_TEST(test_from_decimal_to_int_ok365) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok366) {
     // 2147483647
@@ -3026,6 +3392,7 @@ START_TEST(test_from_decimal_to_int_ok366) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok367) {
     // -2147483647
@@ -3034,6 +3401,7 @@ START_TEST(test_from_decimal_to_int_ok367) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok368) {
     // 2147483647.00
@@ -3042,6 +3410,7 @@ START_TEST(test_from_decimal_to_int_ok368) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok369) {
     // -2147483647.00
@@ -3050,6 +3419,7 @@ START_TEST(test_from_decimal_to_int_ok369) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok370) {
     // 2147483647.99
@@ -3058,6 +3428,7 @@ START_TEST(test_from_decimal_to_int_ok370) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok371) {
     // -2147483647.99
@@ -3066,6 +3437,7 @@ START_TEST(test_from_decimal_to_int_ok371) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok372) {
     // 2147483647.999999999999999999
@@ -3074,6 +3446,7 @@ START_TEST(test_from_decimal_to_int_ok372) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok373) {
     // -2147483647.999999999999999999
@@ -3082,6 +3455,7 @@ START_TEST(test_from_decimal_to_int_ok373) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok374) {
     // 21474836.47
@@ -3090,6 +3464,7 @@ START_TEST(test_from_decimal_to_int_ok374) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok375) {
     // -21474836.47
@@ -3098,6 +3473,7 @@ START_TEST(test_from_decimal_to_int_ok375) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok376) {
     // 214.7483647
@@ -3106,6 +3482,7 @@ START_TEST(test_from_decimal_to_int_ok376) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok377) {
     // -214.7483647
@@ -3114,6 +3491,7 @@ START_TEST(test_from_decimal_to_int_ok377) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok378) {
     // 2.147483647
@@ -3122,6 +3500,7 @@ START_TEST(test_from_decimal_to_int_ok378) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok379) {
     // -2.147483647
@@ -3130,6 +3509,7 @@ START_TEST(test_from_decimal_to_int_ok379) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok380) {
     // 0.2147483647
@@ -3138,6 +3518,7 @@ START_TEST(test_from_decimal_to_int_ok380) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok381) {
     // -0.2147483647
@@ -3146,6 +3527,7 @@ START_TEST(test_from_decimal_to_int_ok381) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok382) {
     // 0.0000000000000000002147483647
@@ -3154,6 +3536,7 @@ START_TEST(test_from_decimal_to_int_ok382) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok383) {
     // -0.0000000000000000002147483647
@@ -3162,6 +3545,7 @@ START_TEST(test_from_decimal_to_int_ok383) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok384) {
     // -2147483648
@@ -3170,6 +3554,7 @@ START_TEST(test_from_decimal_to_int_ok384) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok385) {
     // -2147483648.00
@@ -3178,6 +3563,7 @@ START_TEST(test_from_decimal_to_int_ok385) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok386) {
     // -2147483648.99
@@ -3186,6 +3572,7 @@ START_TEST(test_from_decimal_to_int_ok386) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok387) {
     // -2147483648.999999999999999999
@@ -3194,6 +3581,7 @@ START_TEST(test_from_decimal_to_int_ok387) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok388) {
     // 21474836.48
@@ -3202,6 +3590,7 @@ START_TEST(test_from_decimal_to_int_ok388) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok389) {
     // -21474836.48
@@ -3210,6 +3599,7 @@ START_TEST(test_from_decimal_to_int_ok389) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok390) {
     // 214.7483648
@@ -3218,6 +3608,7 @@ START_TEST(test_from_decimal_to_int_ok390) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok391) {
     // -214.7483648
@@ -3226,6 +3617,7 @@ START_TEST(test_from_decimal_to_int_ok391) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok392) {
     // 2.147483648
@@ -3234,6 +3626,7 @@ START_TEST(test_from_decimal_to_int_ok392) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok393) {
     // -2.147483648
@@ -3242,6 +3635,7 @@ START_TEST(test_from_decimal_to_int_ok393) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok394) {
     // 0.2147483648
@@ -3250,6 +3644,7 @@ START_TEST(test_from_decimal_to_int_ok394) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok395) {
     // -0.2147483648
@@ -3258,6 +3653,7 @@ START_TEST(test_from_decimal_to_int_ok395) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok396) {
     // 0.0000000000000000002147483648
@@ -3266,6 +3662,7 @@ START_TEST(test_from_decimal_to_int_ok396) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok397) {
     // -0.0000000000000000002147483648
@@ -3274,6 +3671,7 @@ START_TEST(test_from_decimal_to_int_ok397) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok398) {
     // -202378.6784
@@ -3282,6 +3680,7 @@ START_TEST(test_from_decimal_to_int_ok398) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok399) {
     // 202378.6784
@@ -3290,6 +3689,7 @@ START_TEST(test_from_decimal_to_int_ok399) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok400) {
     // 1157199323
@@ -3298,6 +3698,7 @@ START_TEST(test_from_decimal_to_int_ok400) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok401) {
     // -1157199323
@@ -3306,6 +3707,7 @@ START_TEST(test_from_decimal_to_int_ok401) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok402) {
     // -1047971123
@@ -3314,6 +3716,7 @@ START_TEST(test_from_decimal_to_int_ok402) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok403) {
     // 1047971123
@@ -3322,6 +3725,7 @@ START_TEST(test_from_decimal_to_int_ok403) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok404) {
     // 1635973982
@@ -3330,6 +3734,7 @@ START_TEST(test_from_decimal_to_int_ok404) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok405) {
     // -1635973982
@@ -3338,6 +3743,7 @@ START_TEST(test_from_decimal_to_int_ok405) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok406) {
     // 1664922502
@@ -3346,6 +3752,7 @@ START_TEST(test_from_decimal_to_int_ok406) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok407) {
     // -1664922502
@@ -3354,6 +3761,7 @@ START_TEST(test_from_decimal_to_int_ok407) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok408) {
     // -1562427032
@@ -3362,6 +3770,7 @@ START_TEST(test_from_decimal_to_int_ok408) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok409) {
     // 1562427032
@@ -3370,6 +3779,7 @@ START_TEST(test_from_decimal_to_int_ok409) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok410) {
     // 18415446
@@ -3378,6 +3788,7 @@ START_TEST(test_from_decimal_to_int_ok410) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok411) {
     // -18415446
@@ -3386,6 +3797,7 @@ START_TEST(test_from_decimal_to_int_ok411) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok412) {
     // 2043799125
@@ -3394,6 +3806,7 @@ START_TEST(test_from_decimal_to_int_ok412) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok413) {
     // -2043799125
@@ -3402,6 +3815,7 @@ START_TEST(test_from_decimal_to_int_ok413) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok414) {
     // -699081605
@@ -3410,6 +3824,7 @@ START_TEST(test_from_decimal_to_int_ok414) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok415) {
     // 699081605
@@ -3418,6 +3833,7 @@ START_TEST(test_from_decimal_to_int_ok415) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok416) {
     // 7206047.80
@@ -3426,6 +3842,7 @@ START_TEST(test_from_decimal_to_int_ok416) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok417) {
     // -7206047.80
@@ -3434,6 +3851,7 @@ START_TEST(test_from_decimal_to_int_ok417) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok418) {
     // -405011.4826
@@ -3442,6 +3860,7 @@ START_TEST(test_from_decimal_to_int_ok418) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok419) {
     // 405011.4826
@@ -3450,6 +3869,7 @@ START_TEST(test_from_decimal_to_int_ok419) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok420) {
     // 0.0000000002899686912
@@ -3458,6 +3878,7 @@ START_TEST(test_from_decimal_to_int_ok420) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok421) {
     // -0.0000000002899686912
@@ -3466,6 +3887,7 @@ START_TEST(test_from_decimal_to_int_ok421) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok422) {
     // -806251761
@@ -3474,6 +3896,7 @@ START_TEST(test_from_decimal_to_int_ok422) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok423) {
     // 806251761
@@ -3482,6 +3905,7 @@ START_TEST(test_from_decimal_to_int_ok423) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok424) {
     // -961415253
@@ -3490,6 +3914,7 @@ START_TEST(test_from_decimal_to_int_ok424) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok425) {
     // 961415253
@@ -3498,6 +3923,7 @@ START_TEST(test_from_decimal_to_int_ok425) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok426) {
     // 1362812644
@@ -3506,6 +3932,7 @@ START_TEST(test_from_decimal_to_int_ok426) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok427) {
     // -1362812644
@@ -3514,6 +3941,7 @@ START_TEST(test_from_decimal_to_int_ok427) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok428) {
     // 744018023
@@ -3522,6 +3950,7 @@ START_TEST(test_from_decimal_to_int_ok428) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok429) {
     // -744018023
@@ -3530,6 +3959,7 @@ START_TEST(test_from_decimal_to_int_ok429) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok430) {
     // -669134488
@@ -3538,6 +3968,7 @@ START_TEST(test_from_decimal_to_int_ok430) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok431) {
     // 669134488
@@ -3546,6 +3977,7 @@ START_TEST(test_from_decimal_to_int_ok431) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok432) {
     // 1135755779
@@ -3554,6 +3986,7 @@ START_TEST(test_from_decimal_to_int_ok432) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok433) {
     // -1135755779
@@ -3562,6 +3995,7 @@ START_TEST(test_from_decimal_to_int_ok433) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok434) {
     // -1066687460
@@ -3570,6 +4004,7 @@ START_TEST(test_from_decimal_to_int_ok434) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok435) {
     // 1066687460
@@ -3578,6 +4013,7 @@ START_TEST(test_from_decimal_to_int_ok435) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok436) {
     // 1775.200759
@@ -3586,6 +4022,7 @@ START_TEST(test_from_decimal_to_int_ok436) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok437) {
     // -1775.200759
@@ -3594,6 +4031,7 @@ START_TEST(test_from_decimal_to_int_ok437) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok438) {
     // 2049377039
@@ -3602,6 +4040,7 @@ START_TEST(test_from_decimal_to_int_ok438) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok439) {
     // -2049377039
@@ -3610,6 +4049,7 @@ START_TEST(test_from_decimal_to_int_ok439) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok440) {
     // 644156872
@@ -3618,6 +4058,7 @@ START_TEST(test_from_decimal_to_int_ok440) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok441) {
     // -644156872
@@ -3626,6 +4067,7 @@ START_TEST(test_from_decimal_to_int_ok441) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok442) {
     // 411899256
@@ -3634,6 +4076,7 @@ START_TEST(test_from_decimal_to_int_ok442) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok443) {
     // -411899256
@@ -3642,6 +4085,7 @@ START_TEST(test_from_decimal_to_int_ok443) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok444) {
     // -0.0000000000000000321044217
@@ -3650,6 +4094,7 @@ START_TEST(test_from_decimal_to_int_ok444) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok445) {
     // 0.0000000000000000321044217
@@ -3658,6 +4103,7 @@ START_TEST(test_from_decimal_to_int_ok445) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok446) {
     // 0.000000000000000003809359548
@@ -3666,6 +4112,7 @@ START_TEST(test_from_decimal_to_int_ok446) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok447) {
     // -0.000000000000000003809359548
@@ -3674,6 +4121,7 @@ START_TEST(test_from_decimal_to_int_ok447) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok448) {
     // -0.000000000002807144663
@@ -3682,6 +4130,7 @@ START_TEST(test_from_decimal_to_int_ok448) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok449) {
     // 0.000000000002807144663
@@ -3690,6 +4139,7 @@ START_TEST(test_from_decimal_to_int_ok449) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok450) {
     // 1802612012
@@ -3698,6 +4148,7 @@ START_TEST(test_from_decimal_to_int_ok450) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok451) {
     // -1802612012
@@ -3706,6 +4157,7 @@ START_TEST(test_from_decimal_to_int_ok451) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok452) {
     // 1498496264
@@ -3714,6 +4166,7 @@ START_TEST(test_from_decimal_to_int_ok452) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok453) {
     // -1498496264
@@ -3722,6 +4175,7 @@ START_TEST(test_from_decimal_to_int_ok453) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok454) {
     // 0.000000001060195434
@@ -3730,6 +4184,7 @@ START_TEST(test_from_decimal_to_int_ok454) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok455) {
     // -0.000000001060195434
@@ -3738,6 +4193,7 @@ START_TEST(test_from_decimal_to_int_ok455) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok456) {
     // -346.3980837
@@ -3746,6 +4202,7 @@ START_TEST(test_from_decimal_to_int_ok456) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok457) {
     // 346.3980837
@@ -3754,6 +4211,7 @@ START_TEST(test_from_decimal_to_int_ok457) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok458) {
     // -0.0000000000000000000791281307
@@ -3762,6 +4220,7 @@ START_TEST(test_from_decimal_to_int_ok458) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_ok459) {
     // 0.0000000000000000000791281307
@@ -3770,6 +4229,7 @@ START_TEST(test_from_decimal_to_int_ok459) {
 
     test_from_decimal_to_int(decimal, check);
 }
+END_TEST
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Tests for incorrect data (auto)
@@ -3781,6 +4241,7 @@ START_TEST(test_from_decimal_to_int_fail1) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail2) {
     // -79228162514264337593543950335
@@ -3788,6 +4249,7 @@ START_TEST(test_from_decimal_to_int_fail2) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail3) {
     // 7922816251426433759354395033.5
@@ -3795,6 +4257,7 @@ START_TEST(test_from_decimal_to_int_fail3) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail4) {
     // -7922816251426433759354395033.5
@@ -3802,6 +4265,7 @@ START_TEST(test_from_decimal_to_int_fail4) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail5) {
     // 792281625142643375935439503.35
@@ -3809,6 +4273,7 @@ START_TEST(test_from_decimal_to_int_fail5) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail6) {
     // -792281625142643375935439503.35
@@ -3816,6 +4281,7 @@ START_TEST(test_from_decimal_to_int_fail6) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail7) {
     // 79228162514264337593543950.335
@@ -3823,6 +4289,7 @@ START_TEST(test_from_decimal_to_int_fail7) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail8) {
     // -79228162514264337593543950.335
@@ -3830,6 +4297,7 @@ START_TEST(test_from_decimal_to_int_fail8) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail9) {
     // 7922816251426433759354395.0335
@@ -3837,6 +4305,7 @@ START_TEST(test_from_decimal_to_int_fail9) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail10) {
     // -7922816251426433759354395.0335
@@ -3844,6 +4313,7 @@ START_TEST(test_from_decimal_to_int_fail10) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail11) {
     // 792281625142643375935439.50335
@@ -3851,6 +4321,7 @@ START_TEST(test_from_decimal_to_int_fail11) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail12) {
     // -792281625142643375935439.50335
@@ -3858,6 +4329,7 @@ START_TEST(test_from_decimal_to_int_fail12) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail13) {
     // 79228162514264337593543.950335
@@ -3865,6 +4337,7 @@ START_TEST(test_from_decimal_to_int_fail13) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail14) {
     // -79228162514264337593543.950335
@@ -3872,6 +4345,7 @@ START_TEST(test_from_decimal_to_int_fail14) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail15) {
     // 7922816251426433759354.3950335
@@ -3879,6 +4353,7 @@ START_TEST(test_from_decimal_to_int_fail15) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail16) {
     // -7922816251426433759354.3950335
@@ -3886,6 +4361,7 @@ START_TEST(test_from_decimal_to_int_fail16) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail17) {
     // 792281625142643375935.43950335
@@ -3893,6 +4369,7 @@ START_TEST(test_from_decimal_to_int_fail17) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail18) {
     // -792281625142643375935.43950335
@@ -3900,6 +4377,7 @@ START_TEST(test_from_decimal_to_int_fail18) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail19) {
     // 79228162514264337593.543950335
@@ -3907,6 +4385,7 @@ START_TEST(test_from_decimal_to_int_fail19) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail20) {
     // -79228162514264337593.543950335
@@ -3914,6 +4393,7 @@ START_TEST(test_from_decimal_to_int_fail20) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail21) {
     // 7922816251426433759.3543950335
@@ -3921,6 +4401,7 @@ START_TEST(test_from_decimal_to_int_fail21) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail22) {
     // -7922816251426433759.3543950335
@@ -3928,6 +4409,7 @@ START_TEST(test_from_decimal_to_int_fail22) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail23) {
     // 792281625142643375.93543950335
@@ -3935,6 +4417,7 @@ START_TEST(test_from_decimal_to_int_fail23) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail24) {
     // -792281625142643375.93543950335
@@ -3942,6 +4425,7 @@ START_TEST(test_from_decimal_to_int_fail24) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail25) {
     // 79228162514264337.593543950335
@@ -3949,6 +4433,7 @@ START_TEST(test_from_decimal_to_int_fail25) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail26) {
     // -79228162514264337.593543950335
@@ -3956,6 +4441,7 @@ START_TEST(test_from_decimal_to_int_fail26) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail27) {
     // 7922816251426433.7593543950335
@@ -3963,6 +4449,7 @@ START_TEST(test_from_decimal_to_int_fail27) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail28) {
     // -7922816251426433.7593543950335
@@ -3970,6 +4457,7 @@ START_TEST(test_from_decimal_to_int_fail28) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail29) {
     // 792281625142643.37593543950335
@@ -3977,6 +4465,7 @@ START_TEST(test_from_decimal_to_int_fail29) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail30) {
     // -792281625142643.37593543950335
@@ -3984,6 +4473,7 @@ START_TEST(test_from_decimal_to_int_fail30) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail31) {
     // 79228162514264.337593543950335
@@ -3991,6 +4481,7 @@ START_TEST(test_from_decimal_to_int_fail31) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail32) {
     // -79228162514264.337593543950335
@@ -3998,6 +4489,7 @@ START_TEST(test_from_decimal_to_int_fail32) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail33) {
     // 7922816251426.4337593543950335
@@ -4005,6 +4497,7 @@ START_TEST(test_from_decimal_to_int_fail33) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail34) {
     // -7922816251426.4337593543950335
@@ -4012,6 +4505,7 @@ START_TEST(test_from_decimal_to_int_fail34) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail35) {
     // 792281625142.64337593543950335
@@ -4019,6 +4513,7 @@ START_TEST(test_from_decimal_to_int_fail35) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail36) {
     // -792281625142.64337593543950335
@@ -4026,6 +4521,7 @@ START_TEST(test_from_decimal_to_int_fail36) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail37) {
     // 79228162514.264337593543950335
@@ -4033,6 +4529,7 @@ START_TEST(test_from_decimal_to_int_fail37) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail38) {
     // -79228162514.264337593543950335
@@ -4040,6 +4537,7 @@ START_TEST(test_from_decimal_to_int_fail38) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail39) {
     // 7922816251.4264337593543950335
@@ -4047,6 +4545,7 @@ START_TEST(test_from_decimal_to_int_fail39) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail40) {
     // -7922816251.4264337593543950335
@@ -4054,6 +4553,7 @@ START_TEST(test_from_decimal_to_int_fail40) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail41) {
     // 79228162514264337593543950334
@@ -4061,6 +4561,7 @@ START_TEST(test_from_decimal_to_int_fail41) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail42) {
     // -79228162514264337593543950334
@@ -4068,6 +4569,7 @@ START_TEST(test_from_decimal_to_int_fail42) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail43) {
     // 7922816251426433759354395033.4
@@ -4075,6 +4577,7 @@ START_TEST(test_from_decimal_to_int_fail43) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail44) {
     // -7922816251426433759354395033.4
@@ -4082,6 +4585,7 @@ START_TEST(test_from_decimal_to_int_fail44) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail45) {
     // 792281625142643375935439503.34
@@ -4089,6 +4593,7 @@ START_TEST(test_from_decimal_to_int_fail45) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail46) {
     // -792281625142643375935439503.34
@@ -4096,6 +4601,7 @@ START_TEST(test_from_decimal_to_int_fail46) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail47) {
     // 79228162514264337593543950.334
@@ -4103,6 +4609,7 @@ START_TEST(test_from_decimal_to_int_fail47) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail48) {
     // -79228162514264337593543950.334
@@ -4110,6 +4617,7 @@ START_TEST(test_from_decimal_to_int_fail48) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail49) {
     // 7922816251426433759354395.0334
@@ -4117,6 +4625,7 @@ START_TEST(test_from_decimal_to_int_fail49) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail50) {
     // -7922816251426433759354395.0334
@@ -4124,6 +4633,7 @@ START_TEST(test_from_decimal_to_int_fail50) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail51) {
     // 792281625142643375935439.50334
@@ -4131,6 +4641,7 @@ START_TEST(test_from_decimal_to_int_fail51) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail52) {
     // -792281625142643375935439.50334
@@ -4138,6 +4649,7 @@ START_TEST(test_from_decimal_to_int_fail52) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail53) {
     // 79228162514264337593543.950334
@@ -4145,6 +4657,7 @@ START_TEST(test_from_decimal_to_int_fail53) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail54) {
     // -79228162514264337593543.950334
@@ -4152,6 +4665,7 @@ START_TEST(test_from_decimal_to_int_fail54) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail55) {
     // 7922816251426433759354.3950334
@@ -4159,6 +4673,7 @@ START_TEST(test_from_decimal_to_int_fail55) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail56) {
     // -7922816251426433759354.3950334
@@ -4166,6 +4681,7 @@ START_TEST(test_from_decimal_to_int_fail56) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail57) {
     // 792281625142643375935.43950334
@@ -4173,6 +4689,7 @@ START_TEST(test_from_decimal_to_int_fail57) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail58) {
     // -792281625142643375935.43950334
@@ -4180,6 +4697,7 @@ START_TEST(test_from_decimal_to_int_fail58) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail59) {
     // 79228162514264337593.543950334
@@ -4187,6 +4705,7 @@ START_TEST(test_from_decimal_to_int_fail59) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail60) {
     // -79228162514264337593.543950334
@@ -4194,6 +4713,7 @@ START_TEST(test_from_decimal_to_int_fail60) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail61) {
     // 7922816251426433759.3543950334
@@ -4201,6 +4721,7 @@ START_TEST(test_from_decimal_to_int_fail61) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail62) {
     // -7922816251426433759.3543950334
@@ -4208,6 +4729,7 @@ START_TEST(test_from_decimal_to_int_fail62) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail63) {
     // 792281625142643375.93543950334
@@ -4215,6 +4737,7 @@ START_TEST(test_from_decimal_to_int_fail63) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail64) {
     // -792281625142643375.93543950334
@@ -4222,6 +4745,7 @@ START_TEST(test_from_decimal_to_int_fail64) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail65) {
     // 79228162514264337.593543950334
@@ -4229,6 +4753,7 @@ START_TEST(test_from_decimal_to_int_fail65) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail66) {
     // -79228162514264337.593543950334
@@ -4236,6 +4761,7 @@ START_TEST(test_from_decimal_to_int_fail66) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail67) {
     // 7922816251426433.7593543950334
@@ -4243,6 +4769,7 @@ START_TEST(test_from_decimal_to_int_fail67) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail68) {
     // -7922816251426433.7593543950334
@@ -4250,6 +4777,7 @@ START_TEST(test_from_decimal_to_int_fail68) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail69) {
     // 792281625142643.37593543950334
@@ -4257,6 +4785,7 @@ START_TEST(test_from_decimal_to_int_fail69) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail70) {
     // -792281625142643.37593543950334
@@ -4264,6 +4793,7 @@ START_TEST(test_from_decimal_to_int_fail70) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail71) {
     // 79228162514264.337593543950334
@@ -4271,6 +4801,7 @@ START_TEST(test_from_decimal_to_int_fail71) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail72) {
     // -79228162514264.337593543950334
@@ -4278,6 +4809,7 @@ START_TEST(test_from_decimal_to_int_fail72) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail73) {
     // 7922816251426.4337593543950334
@@ -4285,6 +4817,7 @@ START_TEST(test_from_decimal_to_int_fail73) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail74) {
     // -7922816251426.4337593543950334
@@ -4292,6 +4825,7 @@ START_TEST(test_from_decimal_to_int_fail74) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail75) {
     // 792281625142.64337593543950334
@@ -4299,6 +4833,7 @@ START_TEST(test_from_decimal_to_int_fail75) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail76) {
     // -792281625142.64337593543950334
@@ -4306,6 +4841,7 @@ START_TEST(test_from_decimal_to_int_fail76) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail77) {
     // 79228162514.264337593543950334
@@ -4313,6 +4849,7 @@ START_TEST(test_from_decimal_to_int_fail77) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail78) {
     // -79228162514.264337593543950334
@@ -4320,6 +4857,7 @@ START_TEST(test_from_decimal_to_int_fail78) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail79) {
     // 7922816251.4264337593543950334
@@ -4327,6 +4865,7 @@ START_TEST(test_from_decimal_to_int_fail79) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail80) {
     // -7922816251.4264337593543950334
@@ -4334,6 +4873,7 @@ START_TEST(test_from_decimal_to_int_fail80) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail81) {
     // 52818775009509558395695966890
@@ -4341,6 +4881,7 @@ START_TEST(test_from_decimal_to_int_fail81) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail82) {
     // -52818775009509558395695966890
@@ -4348,6 +4889,7 @@ START_TEST(test_from_decimal_to_int_fail82) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail83) {
     // 5281877500950955839569596689.0
@@ -4355,6 +4897,7 @@ START_TEST(test_from_decimal_to_int_fail83) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail84) {
     // -5281877500950955839569596689.0
@@ -4362,6 +4905,7 @@ START_TEST(test_from_decimal_to_int_fail84) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail85) {
     // 52818775009509558392832655360
@@ -4369,6 +4913,7 @@ START_TEST(test_from_decimal_to_int_fail85) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail86) {
     // -52818775009509558392832655360
@@ -4376,6 +4921,7 @@ START_TEST(test_from_decimal_to_int_fail86) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail87) {
     // 5281877500950955839283265536.0
@@ -4383,6 +4929,7 @@ START_TEST(test_from_decimal_to_int_fail87) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail88) {
     // -5281877500950955839283265536.0
@@ -4390,6 +4937,7 @@ START_TEST(test_from_decimal_to_int_fail88) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail89) {
     // 52818774997211729016086244010
@@ -4397,6 +4945,7 @@ START_TEST(test_from_decimal_to_int_fail89) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail90) {
     // -52818774997211729016086244010
@@ -4404,6 +4953,7 @@ START_TEST(test_from_decimal_to_int_fail90) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail91) {
     // 5281877499721172901608624401.0
@@ -4411,6 +4961,7 @@ START_TEST(test_from_decimal_to_int_fail91) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail92) {
     // -5281877499721172901608624401.0
@@ -4418,6 +4969,7 @@ START_TEST(test_from_decimal_to_int_fail92) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail93) {
     // 52818774997211729013222932480
@@ -4425,6 +4977,7 @@ START_TEST(test_from_decimal_to_int_fail93) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail94) {
     // -52818774997211729013222932480
@@ -4432,6 +4985,7 @@ START_TEST(test_from_decimal_to_int_fail94) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail95) {
     // 5281877499721172901322293248.0
@@ -4439,6 +4993,7 @@ START_TEST(test_from_decimal_to_int_fail95) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail96) {
     // -5281877499721172901322293248.0
@@ -4446,6 +5001,7 @@ START_TEST(test_from_decimal_to_int_fail96) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail97) {
     // 12297829382473034410
@@ -4453,6 +5009,7 @@ START_TEST(test_from_decimal_to_int_fail97) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail98) {
     // -12297829382473034410
@@ -4460,6 +5017,7 @@ START_TEST(test_from_decimal_to_int_fail98) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail99) {
     // 1229782938247303441.0
@@ -4467,6 +5025,7 @@ START_TEST(test_from_decimal_to_int_fail99) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail100) {
     // -1229782938247303441.0
@@ -4474,6 +5033,7 @@ START_TEST(test_from_decimal_to_int_fail100) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail101) {
     // 12297829379609722880
@@ -4481,6 +5041,7 @@ START_TEST(test_from_decimal_to_int_fail101) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail102) {
     // -12297829379609722880
@@ -4488,6 +5049,7 @@ START_TEST(test_from_decimal_to_int_fail102) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail103) {
     // 1229782937960972288.0
@@ -4495,6 +5057,7 @@ START_TEST(test_from_decimal_to_int_fail103) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail104) {
     // -1229782937960972288.0
@@ -4502,6 +5065,7 @@ START_TEST(test_from_decimal_to_int_fail104) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail105) {
     // 2863311530
@@ -4509,6 +5073,7 @@ START_TEST(test_from_decimal_to_int_fail105) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail106) {
     // -2863311530
@@ -4516,6 +5081,7 @@ START_TEST(test_from_decimal_to_int_fail106) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail107) {
     // 26409387504754779197847983445
@@ -4523,6 +5089,7 @@ START_TEST(test_from_decimal_to_int_fail107) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail108) {
     // -26409387504754779197847983445
@@ -4530,6 +5097,7 @@ START_TEST(test_from_decimal_to_int_fail108) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail109) {
     // 2640938750475477919784798344.5
@@ -4537,6 +5105,7 @@ START_TEST(test_from_decimal_to_int_fail109) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail110) {
     // -2640938750475477919784798344.5
@@ -4544,6 +5113,7 @@ START_TEST(test_from_decimal_to_int_fail110) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail111) {
     // 26409387504754779196416327680
@@ -4551,6 +5121,7 @@ START_TEST(test_from_decimal_to_int_fail111) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail112) {
     // -26409387504754779196416327680
@@ -4558,6 +5129,7 @@ START_TEST(test_from_decimal_to_int_fail112) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail113) {
     // 2640938750475477919641632768.0
@@ -4565,6 +5137,7 @@ START_TEST(test_from_decimal_to_int_fail113) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail114) {
     // -2640938750475477919641632768.0
@@ -4572,6 +5145,7 @@ START_TEST(test_from_decimal_to_int_fail114) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail115) {
     // 26409387498605864508043122005
@@ -4579,6 +5153,7 @@ START_TEST(test_from_decimal_to_int_fail115) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail116) {
     // -26409387498605864508043122005
@@ -4586,6 +5161,7 @@ START_TEST(test_from_decimal_to_int_fail116) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail117) {
     // 2640938749860586450804312200.5
@@ -4593,6 +5169,7 @@ START_TEST(test_from_decimal_to_int_fail117) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail118) {
     // -2640938749860586450804312200.5
@@ -4600,6 +5177,7 @@ START_TEST(test_from_decimal_to_int_fail118) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail119) {
     // 26409387498605864506611466240
@@ -4607,6 +5185,7 @@ START_TEST(test_from_decimal_to_int_fail119) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail120) {
     // -26409387498605864506611466240
@@ -4614,6 +5193,7 @@ START_TEST(test_from_decimal_to_int_fail120) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail121) {
     // 2640938749860586450661146624.0
@@ -4621,6 +5201,7 @@ START_TEST(test_from_decimal_to_int_fail121) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail122) {
     // -2640938749860586450661146624.0
@@ -4628,6 +5209,7 @@ START_TEST(test_from_decimal_to_int_fail122) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail123) {
     // 6148914691236517205
@@ -4635,6 +5217,7 @@ START_TEST(test_from_decimal_to_int_fail123) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail124) {
     // -6148914691236517205
@@ -4642,6 +5225,7 @@ START_TEST(test_from_decimal_to_int_fail124) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail125) {
     // 614891469123651720.5
@@ -4649,6 +5233,7 @@ START_TEST(test_from_decimal_to_int_fail125) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail126) {
     // -614891469123651720.5
@@ -4656,6 +5241,7 @@ START_TEST(test_from_decimal_to_int_fail126) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail127) {
     // 6148914689804861440
@@ -4663,6 +5249,7 @@ START_TEST(test_from_decimal_to_int_fail127) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail128) {
     // -6148914689804861440
@@ -4670,6 +5257,7 @@ START_TEST(test_from_decimal_to_int_fail128) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail129) {
     // 614891468980486144.0
@@ -4677,6 +5265,7 @@ START_TEST(test_from_decimal_to_int_fail129) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail130) {
     // -614891468980486144.0
@@ -4684,6 +5273,7 @@ START_TEST(test_from_decimal_to_int_fail130) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail131) {
     // 18446744078004518913
@@ -4691,6 +5281,7 @@ START_TEST(test_from_decimal_to_int_fail131) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail132) {
     // -18446744078004518913
@@ -4698,6 +5289,7 @@ START_TEST(test_from_decimal_to_int_fail132) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail133) {
     // 1844674407800451891.3
@@ -4705,6 +5297,7 @@ START_TEST(test_from_decimal_to_int_fail133) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail134) {
     // -1844674407800451891.3
@@ -4712,6 +5305,7 @@ START_TEST(test_from_decimal_to_int_fail134) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail135) {
     // 18446744078004518912
@@ -4719,6 +5313,7 @@ START_TEST(test_from_decimal_to_int_fail135) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail136) {
     // -18446744078004518912
@@ -4726,6 +5321,7 @@ START_TEST(test_from_decimal_to_int_fail136) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail137) {
     // 1844674407800451891.2
@@ -4733,6 +5329,7 @@ START_TEST(test_from_decimal_to_int_fail137) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail138) {
     // -1844674407800451891.2
@@ -4740,6 +5337,7 @@ START_TEST(test_from_decimal_to_int_fail138) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail139) {
     // 18446744073709551617
@@ -4747,6 +5345,7 @@ START_TEST(test_from_decimal_to_int_fail139) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail140) {
     // -18446744073709551617
@@ -4754,6 +5353,7 @@ START_TEST(test_from_decimal_to_int_fail140) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail141) {
     // 1844674407370955161.7
@@ -4761,6 +5361,7 @@ START_TEST(test_from_decimal_to_int_fail141) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail142) {
     // -1844674407370955161.7
@@ -4768,6 +5369,7 @@ START_TEST(test_from_decimal_to_int_fail142) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail143) {
     // 18446744073709551616
@@ -4775,6 +5377,7 @@ START_TEST(test_from_decimal_to_int_fail143) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail144) {
     // -18446744073709551616
@@ -4782,6 +5385,7 @@ START_TEST(test_from_decimal_to_int_fail144) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail145) {
     // 1844674407370955161.6
@@ -4789,6 +5393,7 @@ START_TEST(test_from_decimal_to_int_fail145) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail146) {
     // -1844674407370955161.6
@@ -4796,6 +5401,7 @@ START_TEST(test_from_decimal_to_int_fail146) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail147) {
     // 4294967297
@@ -4803,6 +5409,7 @@ START_TEST(test_from_decimal_to_int_fail147) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail148) {
     // -4294967297
@@ -4810,6 +5417,7 @@ START_TEST(test_from_decimal_to_int_fail148) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail149) {
     // 4294967296
@@ -4817,6 +5425,7 @@ START_TEST(test_from_decimal_to_int_fail149) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail150) {
     // -4294967296
@@ -4824,6 +5433,7 @@ START_TEST(test_from_decimal_to_int_fail150) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail151) {
     // 39614081266355540835774234624
@@ -4831,6 +5441,7 @@ START_TEST(test_from_decimal_to_int_fail151) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail152) {
     // -39614081266355540835774234624
@@ -4838,6 +5449,7 @@ START_TEST(test_from_decimal_to_int_fail152) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail153) {
     // 3961408126635554083577423462.4
@@ -4845,6 +5457,7 @@ START_TEST(test_from_decimal_to_int_fail153) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail154) {
     // -3961408126635554083577423462.4
@@ -4852,6 +5465,7 @@ START_TEST(test_from_decimal_to_int_fail154) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail155) {
     // 39614081266355540833626750976
@@ -4859,6 +5473,7 @@ START_TEST(test_from_decimal_to_int_fail155) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail156) {
     // -39614081266355540833626750976
@@ -4866,6 +5481,7 @@ START_TEST(test_from_decimal_to_int_fail156) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail157) {
     // 3961408126635554083362675097.6
@@ -4873,6 +5489,7 @@ START_TEST(test_from_decimal_to_int_fail157) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail158) {
     // -3961408126635554083362675097.6
@@ -4880,6 +5497,7 @@ START_TEST(test_from_decimal_to_int_fail158) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail159) {
     // 39614081257132168798919458816
@@ -4887,6 +5505,7 @@ START_TEST(test_from_decimal_to_int_fail159) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail160) {
     // -39614081257132168798919458816
@@ -4894,6 +5513,7 @@ START_TEST(test_from_decimal_to_int_fail160) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail161) {
     // 3961408125713216879891945881.6
@@ -4901,6 +5521,7 @@ START_TEST(test_from_decimal_to_int_fail161) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail162) {
     // -3961408125713216879891945881.6
@@ -4908,6 +5529,7 @@ START_TEST(test_from_decimal_to_int_fail162) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail163) {
     // 39614081257132168796771975168
@@ -4915,6 +5537,7 @@ START_TEST(test_from_decimal_to_int_fail163) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail164) {
     // -39614081257132168796771975168
@@ -4922,6 +5545,7 @@ START_TEST(test_from_decimal_to_int_fail164) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail165) {
     // 3961408125713216879677197516.8
@@ -4929,6 +5553,7 @@ START_TEST(test_from_decimal_to_int_fail165) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail166) {
     // -3961408125713216879677197516.8
@@ -4936,6 +5561,7 @@ START_TEST(test_from_decimal_to_int_fail166) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail167) {
     // 9223372039002259456
@@ -4943,6 +5569,7 @@ START_TEST(test_from_decimal_to_int_fail167) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail168) {
     // -9223372039002259456
@@ -4950,6 +5577,7 @@ START_TEST(test_from_decimal_to_int_fail168) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail169) {
     // 922337203900225945.6
@@ -4957,6 +5585,7 @@ START_TEST(test_from_decimal_to_int_fail169) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail170) {
     // -922337203900225945.6
@@ -4964,6 +5593,7 @@ START_TEST(test_from_decimal_to_int_fail170) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail171) {
     // 9223372036854775808
@@ -4971,6 +5601,7 @@ START_TEST(test_from_decimal_to_int_fail171) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail172) {
     // -9223372036854775808
@@ -4978,6 +5609,7 @@ START_TEST(test_from_decimal_to_int_fail172) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail173) {
     // 922337203685477580.8
@@ -4985,6 +5617,7 @@ START_TEST(test_from_decimal_to_int_fail173) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail174) {
     // -922337203685477580.8
@@ -4992,6 +5625,7 @@ START_TEST(test_from_decimal_to_int_fail174) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail175) {
     // 2147483648
@@ -4999,6 +5633,7 @@ START_TEST(test_from_decimal_to_int_fail175) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail176) {
     // 156064767562212695305426944
@@ -5006,6 +5641,7 @@ START_TEST(test_from_decimal_to_int_fail176) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail177) {
     // -156064767562212695305426944
@@ -5013,6 +5649,7 @@ START_TEST(test_from_decimal_to_int_fail177) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail178) {
     // 15606476756221269530542694.4
@@ -5020,6 +5657,7 @@ START_TEST(test_from_decimal_to_int_fail178) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail179) {
     // -15606476756221269530542694.4
@@ -5027,6 +5665,7 @@ START_TEST(test_from_decimal_to_int_fail179) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail180) {
     // 156064767562212695296966656
@@ -5034,6 +5673,7 @@ START_TEST(test_from_decimal_to_int_fail180) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail181) {
     // -156064767562212695296966656
@@ -5041,6 +5681,7 @@ START_TEST(test_from_decimal_to_int_fail181) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail182) {
     // 15606476756221269529696665.6
@@ -5048,6 +5689,7 @@ START_TEST(test_from_decimal_to_int_fail182) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail183) {
     // -15606476756221269529696665.6
@@ -5055,6 +5697,7 @@ START_TEST(test_from_decimal_to_int_fail183) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail184) {
     // 156064767525876035030685696
@@ -5062,6 +5705,7 @@ START_TEST(test_from_decimal_to_int_fail184) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail185) {
     // -156064767525876035030685696
@@ -5069,6 +5713,7 @@ START_TEST(test_from_decimal_to_int_fail185) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail186) {
     // 15606476752587603503068569.6
@@ -5076,6 +5721,7 @@ START_TEST(test_from_decimal_to_int_fail186) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail187) {
     // -15606476752587603503068569.6
@@ -5083,6 +5729,7 @@ START_TEST(test_from_decimal_to_int_fail187) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail188) {
     // 156064767525876035022225408
@@ -5090,6 +5737,7 @@ START_TEST(test_from_decimal_to_int_fail188) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail189) {
     // -156064767525876035022225408
@@ -5097,6 +5745,7 @@ START_TEST(test_from_decimal_to_int_fail189) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail190) {
     // 15606476752587603502222540.8
@@ -5104,6 +5753,7 @@ START_TEST(test_from_decimal_to_int_fail190) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail191) {
     // -15606476752587603502222540.8
@@ -5111,6 +5761,7 @@ START_TEST(test_from_decimal_to_int_fail191) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail192) {
     // 36336660283201536
@@ -5118,6 +5769,7 @@ START_TEST(test_from_decimal_to_int_fail192) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail193) {
     // -36336660283201536
@@ -5125,6 +5777,7 @@ START_TEST(test_from_decimal_to_int_fail193) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail194) {
     // 3633666028320153.6
@@ -5132,6 +5785,7 @@ START_TEST(test_from_decimal_to_int_fail194) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail195) {
     // -3633666028320153.6
@@ -5139,6 +5793,7 @@ START_TEST(test_from_decimal_to_int_fail195) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail196) {
     // 36336660274741248
@@ -5146,6 +5801,7 @@ START_TEST(test_from_decimal_to_int_fail196) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail197) {
     // -36336660274741248
@@ -5153,6 +5809,7 @@ START_TEST(test_from_decimal_to_int_fail197) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail198) {
     // 3633666027474124.8
@@ -5160,6 +5817,7 @@ START_TEST(test_from_decimal_to_int_fail198) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail199) {
     // -3633666027474124.8
@@ -5167,6 +5825,7 @@ START_TEST(test_from_decimal_to_int_fail199) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail200) {
     // 79228162514264337593543950335
@@ -5174,6 +5833,7 @@ START_TEST(test_from_decimal_to_int_fail200) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail201) {
     // -79228162514264337593543950335
@@ -5181,6 +5841,7 @@ START_TEST(test_from_decimal_to_int_fail201) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail202) {
     // 7922816251426433759354395033.5
@@ -5188,6 +5849,7 @@ START_TEST(test_from_decimal_to_int_fail202) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail203) {
     // -7922816251426433759354395033.5
@@ -5195,6 +5857,7 @@ START_TEST(test_from_decimal_to_int_fail203) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail204) {
     // 79228162514264337589248983040
@@ -5202,6 +5865,7 @@ START_TEST(test_from_decimal_to_int_fail204) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail205) {
     // -79228162514264337589248983040
@@ -5209,6 +5873,7 @@ START_TEST(test_from_decimal_to_int_fail205) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail206) {
     // 7922816251426433758924898304.0
@@ -5216,6 +5881,7 @@ START_TEST(test_from_decimal_to_int_fail206) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail207) {
     // -7922816251426433758924898304.0
@@ -5223,6 +5889,7 @@ START_TEST(test_from_decimal_to_int_fail207) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail208) {
     // 79228162495817593524129366015
@@ -5230,6 +5897,7 @@ START_TEST(test_from_decimal_to_int_fail208) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail209) {
     // -79228162495817593524129366015
@@ -5237,6 +5905,7 @@ START_TEST(test_from_decimal_to_int_fail209) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail210) {
     // 7922816249581759352412936601.5
@@ -5244,6 +5913,7 @@ START_TEST(test_from_decimal_to_int_fail210) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail211) {
     // -7922816249581759352412936601.5
@@ -5251,6 +5921,7 @@ START_TEST(test_from_decimal_to_int_fail211) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail212) {
     // 79228162495817593519834398720
@@ -5258,6 +5929,7 @@ START_TEST(test_from_decimal_to_int_fail212) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail213) {
     // -79228162495817593519834398720
@@ -5265,6 +5937,7 @@ START_TEST(test_from_decimal_to_int_fail213) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail214) {
     // 7922816249581759351983439872.0
@@ -5272,6 +5945,7 @@ START_TEST(test_from_decimal_to_int_fail214) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail215) {
     // -7922816249581759351983439872.0
@@ -5279,6 +5953,7 @@ START_TEST(test_from_decimal_to_int_fail215) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail216) {
     // 18446744073709551615
@@ -5286,6 +5961,7 @@ START_TEST(test_from_decimal_to_int_fail216) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail217) {
     // -18446744073709551615
@@ -5293,6 +5969,7 @@ START_TEST(test_from_decimal_to_int_fail217) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail218) {
     // 1844674407370955161.5
@@ -5300,6 +5977,7 @@ START_TEST(test_from_decimal_to_int_fail218) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail219) {
     // -1844674407370955161.5
@@ -5307,6 +5985,7 @@ START_TEST(test_from_decimal_to_int_fail219) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail220) {
     // 18446744073709551.615
@@ -5314,6 +5993,7 @@ START_TEST(test_from_decimal_to_int_fail220) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail221) {
     // -18446744073709551.615
@@ -5321,6 +6001,7 @@ START_TEST(test_from_decimal_to_int_fail221) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail222) {
     // 18446744069414584320
@@ -5328,6 +6009,7 @@ START_TEST(test_from_decimal_to_int_fail222) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail223) {
     // -18446744069414584320
@@ -5335,6 +6017,7 @@ START_TEST(test_from_decimal_to_int_fail223) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail224) {
     // 1844674406941458432.0
@@ -5342,6 +6025,7 @@ START_TEST(test_from_decimal_to_int_fail224) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail225) {
     // -1844674406941458432.0
@@ -5349,6 +6033,7 @@ START_TEST(test_from_decimal_to_int_fail225) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail226) {
     // 18446744069414584.320
@@ -5356,6 +6041,7 @@ START_TEST(test_from_decimal_to_int_fail226) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail227) {
     // -18446744069414584.320
@@ -5363,6 +6049,7 @@ START_TEST(test_from_decimal_to_int_fail227) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail228) {
     // 4294967295
@@ -5370,6 +6057,7 @@ START_TEST(test_from_decimal_to_int_fail228) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail229) {
     // -4294967295
@@ -5377,6 +6065,7 @@ START_TEST(test_from_decimal_to_int_fail229) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail230) {
     // 12345678901234.12345678901234
@@ -5384,6 +6073,7 @@ START_TEST(test_from_decimal_to_int_fail230) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail231) {
     // -12345678901234.12345678901234
@@ -5391,6 +6081,7 @@ START_TEST(test_from_decimal_to_int_fail231) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail232) {
     // 9999999999.9999999999
@@ -5398,6 +6089,7 @@ START_TEST(test_from_decimal_to_int_fail232) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail233) {
     // -9999999999.9999999999
@@ -5405,6 +6097,7 @@ START_TEST(test_from_decimal_to_int_fail233) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail234) {
     // 2147483648
@@ -5412,6 +6105,7 @@ START_TEST(test_from_decimal_to_int_fail234) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail235) {
     // 2147483648.00
@@ -5419,6 +6113,7 @@ START_TEST(test_from_decimal_to_int_fail235) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail236) {
     // 2147483648.99
@@ -5426,6 +6121,7 @@ START_TEST(test_from_decimal_to_int_fail236) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail237) {
     // 2147483648.999999999999999999
@@ -5433,6 +6129,7 @@ START_TEST(test_from_decimal_to_int_fail237) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail238) {
     // 3436350754
@@ -5440,6 +6137,7 @@ START_TEST(test_from_decimal_to_int_fail238) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail239) {
     // -3436350754
@@ -5447,6 +6145,7 @@ START_TEST(test_from_decimal_to_int_fail239) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail240) {
     // -2467171175
@@ -5454,6 +6153,7 @@ START_TEST(test_from_decimal_to_int_fail240) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail241) {
     // 2467171175
@@ -5461,6 +6161,7 @@ START_TEST(test_from_decimal_to_int_fail241) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail242) {
     // -2296067528
@@ -5468,6 +6169,7 @@ START_TEST(test_from_decimal_to_int_fail242) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail243) {
     // 2296067528
@@ -5475,6 +6177,7 @@ START_TEST(test_from_decimal_to_int_fail243) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail244) {
     // 3848964437
@@ -5482,6 +6185,7 @@ START_TEST(test_from_decimal_to_int_fail244) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail245) {
     // -3848964437
@@ -5489,6 +6193,7 @@ START_TEST(test_from_decimal_to_int_fail245) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail246) {
     // -3182863462
@@ -5496,6 +6201,7 @@ START_TEST(test_from_decimal_to_int_fail246) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail247) {
     // 3182863462
@@ -5503,6 +6209,7 @@ START_TEST(test_from_decimal_to_int_fail247) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail248) {
     // -48847109575696535634899575831
@@ -5510,6 +6217,7 @@ START_TEST(test_from_decimal_to_int_fail248) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail249) {
     // 48847109575696535634899575831
@@ -5517,6 +6225,7 @@ START_TEST(test_from_decimal_to_int_fail249) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail250) {
     // -3318846837
@@ -5524,6 +6233,7 @@ START_TEST(test_from_decimal_to_int_fail250) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail251) {
     // 3318846837
@@ -5531,6 +6241,7 @@ START_TEST(test_from_decimal_to_int_fail251) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail252) {
     // -2313332038
@@ -5538,6 +6249,7 @@ START_TEST(test_from_decimal_to_int_fail252) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail253) {
     // 2313332038
@@ -5545,6 +6257,7 @@ START_TEST(test_from_decimal_to_int_fail253) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail254) {
     // 3374693184
@@ -5552,6 +6265,7 @@ START_TEST(test_from_decimal_to_int_fail254) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail255) {
     // -3374693184
@@ -5559,6 +6273,7 @@ START_TEST(test_from_decimal_to_int_fail255) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail256) {
     // 4020511056
@@ -5566,6 +6281,7 @@ START_TEST(test_from_decimal_to_int_fail256) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail257) {
     // -4020511056
@@ -5573,6 +6289,7 @@ START_TEST(test_from_decimal_to_int_fail257) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail258) {
     // 3004972040
@@ -5580,6 +6297,7 @@ START_TEST(test_from_decimal_to_int_fail258) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail259) {
     // -3004972040
@@ -5587,6 +6305,7 @@ START_TEST(test_from_decimal_to_int_fail259) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail260) {
     // -2859313295
@@ -5594,6 +6313,7 @@ START_TEST(test_from_decimal_to_int_fail260) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail261) {
     // 2859313295
@@ -5601,6 +6321,7 @@ START_TEST(test_from_decimal_to_int_fail261) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail262) {
     // 3559609781
@@ -5608,6 +6329,7 @@ START_TEST(test_from_decimal_to_int_fail262) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail263) {
     // -3559609781
@@ -5615,6 +6337,7 @@ START_TEST(test_from_decimal_to_int_fail263) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail264) {
     // -2633735568
@@ -5622,6 +6345,7 @@ START_TEST(test_from_decimal_to_int_fail264) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail265) {
     // 2633735568
@@ -5629,6 +6353,7 @@ START_TEST(test_from_decimal_to_int_fail265) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail266) {
     // 3849297796
@@ -5636,6 +6361,7 @@ START_TEST(test_from_decimal_to_int_fail266) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail267) {
     // -3849297796
@@ -5643,6 +6369,7 @@ START_TEST(test_from_decimal_to_int_fail267) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail268) {
     // -66249387729842137051875589617
@@ -5650,6 +6377,7 @@ START_TEST(test_from_decimal_to_int_fail268) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail269) {
     // 66249387729842137051875589617
@@ -5657,6 +6385,7 @@ START_TEST(test_from_decimal_to_int_fail269) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail270) {
     // 4000259692
@@ -5664,6 +6393,7 @@ START_TEST(test_from_decimal_to_int_fail270) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail271) {
     // -4000259692
@@ -5671,6 +6401,7 @@ START_TEST(test_from_decimal_to_int_fail271) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail272) {
     // 299970448737931080006163233.37
@@ -5678,6 +6409,7 @@ START_TEST(test_from_decimal_to_int_fail272) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail273) {
     // -299970448737931080006163233.37
@@ -5685,6 +6417,7 @@ START_TEST(test_from_decimal_to_int_fail273) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail274) {
     // -3238025630
@@ -5692,6 +6425,7 @@ START_TEST(test_from_decimal_to_int_fail274) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 START_TEST(test_from_decimal_to_int_fail275) {
     // 3238025630
@@ -5699,6 +6433,7 @@ START_TEST(test_from_decimal_to_int_fail275) {
 
     test_from_decimal_to_int_fail(decimal);
 }
+END_TEST
 
 Suite *from_decimal_to_int_suite1(void) {
     Suite *s;
