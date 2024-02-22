@@ -90,9 +90,9 @@ void run_tests_s21_div(void) {
   printf("\n\x1b[4;36m TEST S21_DIV \x1b[0m");
   Suite *list_cases[] = {
       div_suite0(),  div_suite1(),  div_suite2(),  div_suite3(),  div_suite4(),
-      // div_suite5(),  div_suite6(),  div_suite7(),  div_suite8(),  div_suite9(),
-      // div_suite10(), div_suite11(), div_suite12(), div_suite13(), div_suite14(),
-      // div_suite15(), div_suite16(), div_suite17(), div_suite18(), 
+      div_suite5(),  div_suite6(),  div_suite7(),  div_suite8(),  div_suite9(),
+      div_suite10(), div_suite11(), div_suite12(), div_suite13(), div_suite14(),
+      div_suite15(), div_suite16(), div_suite17(), div_suite18(), 
       NULL};
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
        current_testcase++) {
